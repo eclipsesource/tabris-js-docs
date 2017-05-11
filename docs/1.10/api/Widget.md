@@ -1,3 +1,5 @@
+---
+---
 # Widget
 
 Base class for all widgets

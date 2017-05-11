@@ -1,3 +1,5 @@
+---
+---
 # CollectionView
 
 A scrollable list that displays data items in cells, one per row. Cells are created on demand and filled with widgets in the *initializeCell* callback.

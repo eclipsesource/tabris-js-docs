@@ -1,3 +1,5 @@
+---
+---
 # Widget API
 API supported by all widgets.
 Includes [Events API](Events.md), [Properties API](Properties.md)

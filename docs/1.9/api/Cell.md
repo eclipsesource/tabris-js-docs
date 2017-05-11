@@ -1,3 +1,5 @@
+---
+---
 # Cell
 
 This widget represents a space in a *CollectionView* on which an item is displayed. Cell widgets are not created by the application but by the *CollectionView* widget.

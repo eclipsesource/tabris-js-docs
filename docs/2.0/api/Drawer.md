@@ -1,3 +1,5 @@
+---
+---
 # Drawer
 
 A drawer that can be swiped in from the left edge of the screen. There's only a single instance that can be accessed via `tabris.ui.drawer`. The drawer is locked by default. To use it in an application, set the property `locked` to `false`. The drawer can contain any kind of widgets.

@@ -1,3 +1,5 @@
+---
+---
 # Tab
 
 A container representing a single tab of a TabFolder widget.

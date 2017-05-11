@@ -1,3 +1,5 @@
+---
+---
 # NativeObject
 
 Base class for all objects with a native implementation.

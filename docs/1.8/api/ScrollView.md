@@ -1,3 +1,5 @@
+---
+---
 # ScrollView
 A composite that allows its content to overflow either vertically (default) or horizontally. Since the ScrollView does not compute its own size, the width and height must be defined by the respective layout properties (e.g. either `width` or `left` and `right` must be specified).
 Includes [Composite](Composite.md)

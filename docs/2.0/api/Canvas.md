@@ -1,3 +1,5 @@
+---
+---
 # Canvas
 
 Canvas is a widget that can be used to draw graphics using a [canvas context](./CanvasContext.md).

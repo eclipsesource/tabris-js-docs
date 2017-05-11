@@ -1,3 +1,5 @@
+---
+---
 # WidgetCollection
 A `WidgetCollection` is an array-like object representing a set of widgets, as returned by the widget methods `children` and `find`.
 Includes [Events API](Events.md), [Properties API](Properties.md)

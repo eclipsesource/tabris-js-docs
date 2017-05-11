@@ -1,3 +1,5 @@
+---
+---
 # Switch
 
 A switch widget that can be toggled.

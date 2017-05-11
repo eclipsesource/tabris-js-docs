@@ -1,3 +1,5 @@
+---
+---
 # Tabris.js Quickstart
 
 This a guide for the impatient who want to start developing right away and are fine with figuring out the details later. If you run into trouble, try the [getting started guide](getting-started.md) instead.

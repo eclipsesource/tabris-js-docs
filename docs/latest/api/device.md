@@ -1,3 +1,5 @@
+---
+---
 # device
 
 The object `tabris.device` provides information about the device that executes the application.

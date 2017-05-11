@@ -1,3 +1,5 @@
+---
+---
 # Selector API
 
 Modifying a widget usually requires having direct access the object. This may not always be the most convenient or efficient way to work with complex UIs. The Tabris.js selector API allows referencing widgets without using an instance, and even manipulating multiple widgets at once.

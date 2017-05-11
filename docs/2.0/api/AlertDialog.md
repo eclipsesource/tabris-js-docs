@@ -1,3 +1,5 @@
+---
+---
 # AlertDialog
 
 A `AlertDialog` represents a native dialog pop-up showing a message and up to three buttons. It is placed on top of any other API, but is not a widget itself.

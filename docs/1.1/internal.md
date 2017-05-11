@@ -1,3 +1,5 @@
+---
+---
 # Internal API
 
 ## tabris.registerType

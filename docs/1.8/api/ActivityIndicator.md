@@ -1,3 +1,5 @@
+---
+---
 # ActivityIndicator
 A widget representing a spinning indicator for indeterminate loading / processing time.
 Includes [Widget](Widget.md)

@@ -1,3 +1,5 @@
+---
+---
 # TabFolder
 A widget that can switch between [tabs](Tab).
 Includes [Widget](Widget.md)

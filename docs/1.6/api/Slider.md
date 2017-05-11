@@ -1,3 +1,5 @@
+---
+---
 # Slider
 A widget representing a numeric value as an movable indicator on a horizontal line.
 Includes [Widget API](Widget.md)

@@ -1,3 +1,5 @@
+---
+---
 # device
 The object `tabris.device` provides information about the device that executes the application. All properties are read-only.
 Includes [Events API](Events.md), [Properties API](Properties.md)

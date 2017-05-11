@@ -1,3 +1,5 @@
+---
+---
 # Widget
 Base class for all widgets
 Includes [Events API](Events.md), [Properties API](Properties.md)

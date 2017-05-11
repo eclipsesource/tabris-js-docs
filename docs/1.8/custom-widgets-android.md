@@ -1,3 +1,5 @@
+---
+---
 # Custom Widgets Android
 
 > <img align="left" src="img/note.png"> <i>The custom widget API is not final yet. It may change without prior notice!</i>

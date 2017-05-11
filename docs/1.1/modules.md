@@ -1,3 +1,5 @@
+---
+---
 # Modules
 
 All JavaScript files in a Tabris.js project, including the main script, are modules.

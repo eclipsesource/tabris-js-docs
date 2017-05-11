@@ -1,3 +1,5 @@
+---
+---
 # WebView
 
 A widget that can display a web page. Since this widget requires a lot of resources it's recommended to have no more than one instance at a time.

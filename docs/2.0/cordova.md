@@ -1,3 +1,5 @@
+---
+---
 # Cordova Plug-ins Support
 The Tabris.js API is primarily a UI/widget library, with some [additional browser-inspired APIs](w3c-api.md). To provide features not covered by either of these, Tabris.js can be extended with [Apache Cordova](http://cordova.apache.org/) plug-ins.
 

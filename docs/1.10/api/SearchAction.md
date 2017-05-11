@@ -1,3 +1,5 @@
+---
+---
 # SearchAction
 
 An action that displays a search text field with dynamic proposals when selected. Add a listener on *select* to implement the action. On *input*, you may set a list of *proposals*.

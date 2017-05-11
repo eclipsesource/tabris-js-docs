@@ -1,3 +1,5 @@
+---
+---
 # Page
 Pages contain an application's UI. Top-level pages are included in the application's main menu.
 Includes [Composite](Composite.md)

@@ -1,3 +1,5 @@
+---
+---
 # tabris.app
 The object `tabris.app` provides information about the application.
 Includes [Events API](Events.md)

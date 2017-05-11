@@ -1,3 +1,5 @@
+---
+---
 # Getting Started
 
 Welcome to Tabris.js, the framework for developing native cross-platform apps in JavaScript. This guide will help you start developing Tabris.js apps in minutes.

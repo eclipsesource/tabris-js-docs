@@ -1,3 +1,5 @@
+---
+---
 # Composite
 
 An empty widget that can contain other widgets.

@@ -1,3 +1,5 @@
+---
+---
 # tabris.ui
 The object `tabris.ui` is the root element for all widgets. This is the parent for all top-level pages, *actions* and the *drawer*.
 Includes [Events API](Events.md), [Properties API](Properties.md)

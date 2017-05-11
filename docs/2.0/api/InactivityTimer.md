@@ -1,3 +1,5 @@
+---
+---
 # InactivityTimer
 
 A timer that triggers when the app has not been interacted with for a configurable interval.

@@ -1,3 +1,5 @@
+---
+---
 # Getting Started
 Welcome to Tabris.js, the framework for developing native apps in JavaScript. Before you get started, you should be logged in to http://tabrisjs.com. This site provides you with documentation and integrates with the Tabris.js Developer App.
 

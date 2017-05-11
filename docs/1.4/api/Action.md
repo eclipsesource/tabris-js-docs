@@ -1,3 +1,5 @@
+---
+---
 # Action
 An executable item that is integrated in the application's navigation menu. Add a listener on *select* to implement the action.
 Includes [Widget API](Widget.md)

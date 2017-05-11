@@ -1,3 +1,5 @@
+---
+---
 # ui
 
 The object `tabris.ui` represents the top-level parent for all widgets. It provides access to the status bar, the navigation bar, the drawer and the content view.

@@ -1,3 +1,5 @@
+---
+---
 # Canvas
 Canvas is a widget which allows drawing on it using a canvas context. Canvas context is a subset of the HTML5 [CanvasRenderingContext2D](https://developer.mozilla.org/en/docs/Web/API/CanvasRenderingContext2D). 
 Includes [Composite](Composite.md)

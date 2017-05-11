@@ -1,3 +1,5 @@
+---
+---
 # NavigationBar
 
 The navigation bar is the onscreen area where *Back*, *Home* and similar buttons are displayed. The singleton instance can be accessed via `tabris.ui.navigationBar` and is only available on Android.

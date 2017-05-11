@@ -1,3 +1,5 @@
+---
+---
 # StatusBar
 
 The status bar is the area where notifications, status icons and device time are displayed. The singleton instance can be accessed via `tabris.ui.statusBar`.

@@ -1,3 +1,5 @@
+---
+---
 # Tab
 A container representing a single tab of the TabFolder widget.
 Includes [Composite](Composite.md)

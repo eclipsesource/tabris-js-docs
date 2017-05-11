@@ -1,3 +1,5 @@
+---
+---
 # window
 
 The object `window` is the global object. All fields of windows are also global variables and vice versa. For compatibility it is also known as `global` and `self`.
