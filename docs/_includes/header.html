@@ -2,110 +2,34 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="msapplication-TileColor" content="#00aba9">
-<meta name="msapplication-TileImage" content="/assets/img/favicon/mstile-144x144.png">
+<meta name="msapplication-TileImage" content="{{ site.baseurl }}/assets/img/favicon/mstile-144x144.png">
 
 <title>Tabris.js Documentation</title>
 
-<link rel="apple-touch-icon" sizes="57x57" href="/assets/img/favicon/apple-touch-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/assets/img/favicon/apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/assets/img/favicon/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/assets/img/favicon/apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/assets/img/favicon/apple-touch-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/assets/img/favicon/apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/assets/img/favicon/apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/assets/img/favicon/apple-touch-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon/apple-touch-icon-180x180.png">
-<link rel="icon" type="image/png" href="/assets/img/favicon/favicon-192x192.png" sizes="192x192">
-<link rel="icon" type="image/png" href="/assets/img/favicon/favicon-160x160.png" sizes="160x160">
-<link rel="icon" type="image/png" href="/assets/img/favicon/favicon-96x96.png" sizes="96x96">
-<link rel="icon" type="image/png" href="/assets/img/favicon/favicon-16x16.png" sizes="16x16">
-<link rel="icon" type="image/png" href="/assets/img/favicon/favicon-32x32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/favicon/apple-touch-icon-57x57.png" sizes="57x57" />
+<link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/favicon/apple-touch-icon-114x114.png" sizes="114x114" />
+<link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/favicon/apple-touch-icon-72x72.png" sizes="72x72" />
+<link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/favicon/apple-touch-icon-144x144.png" sizes="144x144" />
+<link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/favicon/apple-touch-icon-60x60.png" sizes="60x60" />
+<link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/favicon/apple-touch-icon-120x120.png" sizes="120x120" />
+<link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/favicon/apple-touch-icon-76x76.png" sizes="76x76" />
+<link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/favicon/apple-touch-icon-152x152.png" sizes="152x152" />
+<link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/img/favicon/apple-touch-icon-180x180.png" sizes="180x180" />
+<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/favicon/favicon-192x192.png" sizes="192x192" />
+<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/favicon/favicon-160x160.png" sizes="160x160" />
+<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/favicon/favicon-16x16.png" sizes="16x16" />
+<link rel="icon" type="image/png" href="{{ site.baseurl }}/assets/img/favicon/favicon-32x32.png" sizes="32x32" />
 
 <!-- bootstrap -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<link href="https://tabrisjs.com/assets/css/bootstrap/bootstrap-overrides.css" type="text/css" rel="stylesheet" />
 
 <!-- global styles -->
-<link rel="stylesheet" type="text/css" href="https://tabrisjs.com/assets/css/font-awesome.min.css" />
-<link rel="stylesheet" type="text/css" href="https://tabrisjs.com/assets/css/compiled/layout.css" />
-<link rel="stylesheet" type="text/css" href="https://tabrisjs.com/assets/css/compiled/elements.css" />
-<link rel="stylesheet" type="text/css" href="https://tabrisjs.com/assets/css/compiled/icons.css" />
-<link rel="stylesheet" type="text/css" href="https://tabrisjs.com/assets/css/octicons.css" />
-<link rel="stylesheet" type="text/css" href="https://tabrisjs.com/assets/css/icomoon.css" />
+<link type="text/css" rel="stylesheet" href="{{ site.baseurl }}/assets/css/bootstrap-overrides.css" />
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/layout.css" />
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/search.css" />
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/github-markdown.css" />
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/OpenSans.css" />
 
-<link rel="stylesheet" type="text/css" media="screen" href="https://tabrisjs.com/assets/css/github-markdown.css" />
-
-<link href='https://tabrisjs.com/assets/css/OpenSans.css' rel='stylesheet' type='text/css' />
-<link href='https://tabrisjs.com/assets/css/Lato.css' rel='stylesheet' type='text/css' />
-
-<!--[if lt IE 9]>
-  <script src="https://tabrisjs.com/assets/js/html5.js"></script>
-<![endif]-->
-<link rel="stylesheet" type="text/css" media="screen" href="/assets/css/compiled/ui-elements.css" />
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css" />
-
-<style>
-  #search-query {
-    border-bottom-right-radius: 4px;
-    border-top-right-radius: 4px;
-    border-bottom-left-radius: 0;
-    border-top-left-radius: 0;
-    height: 41px;
-  }
-
-  .algolia-docsearch-suggestion {
-    border-bottom-color: #0F8AB3;
-  }
-  /* Main category headers */
-  .algolia-docsearch-suggestion--category-header {
-    background-color: rgb(49, 77, 88);
-  }
-  /* Highlighted search terms */
-  .algolia-docsearch-suggestion--highlight {
-    color: #0F8AB3;
-  }
-  /* Highligted search terms in the main category headers */
-  .algolia-docsearch-suggestion--category-header .algolia-docsearch-suggestion--highlight  {
-    background-color: rgba(255, 250, 77, 0.73);
-    color: rgb(53, 53, 53);
-  }
-  /* Currently selected suggestion */
-  .aa-cursor .algolia-docsearch-suggestion--content {
-    color: #0C0F13;
-    background: #BCCFEC;
-  }
-  .aa-cursor .algolia-docsearch-suggestion {
-    background: #097EA5;
-  }
-
-  .aa-dropdown-menu{left: auto !important; right: 0px !important;}
-  .algolia-autocomplete{width:100%;}
-
-  /* For bigger screens, when displaying results in two columns */
-  @media (min-width: 768px) {
-    /* Bottom border of each suggestion */
-    .algolia-docsearch-suggestion {
-      border-bottom-color: #0F8AB3;
-    }
-    /* Left column, with secondary category header */
-    .algolia-docsearch-suggestion--subcategory-column {
-      border-right-color: #DAE3E9;
-      background-color: #F2F5F9;
-      color: #4E4726;
-    }
-  }
-
-  .aa-dropdown-menu {
-    border: 1px solid rgba(51, 51, 51, 0.45);
-
-    -webkit-box-shadow: -3px 3px 25px 0px rgba(0, 0, 0, 0.4);
-    -moz-box-shadow: -3px 3px 25px 0px rgba(0, 0, 0, 0.4);
-    box-shadow: -3px 3px 25px 0px rgba(0, 0, 0, 0.4);
-  }
-  .algolia-docsearch-footer {
-    border-top: 1px solid rgba(51, 51, 51, 0.45);
-  }
-</style>
