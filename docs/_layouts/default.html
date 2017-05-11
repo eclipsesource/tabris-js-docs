@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% include header.html %}
+  </head>
+  <body>
+    <!-- sidebar -->
+    <div id="sidebar-nav">
+    </div>
+
+    <!-- main container -->
+    <div class="content">
+      <div id="pad-wrapper">
+        <div class="row">
+
+          <!-- side right column -->
+          <div class="col-md-4 col-sm-12 col-xs-12 sidebar pull-right">
+            {% include sidebar.html %}
+          </div>
+
+          <div class="col-md-8 col-sm-12 col-xs-12 with-sidebar pull-left">
+            <div class="markdown-body" id="doc-body">
+              {{ content }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% include footer.html %}
+  </body>
+</html>
