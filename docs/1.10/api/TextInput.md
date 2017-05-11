@@ -1,0 +1,120 @@
+# TextInput
+
+A widget that allows to enter text.
+Includes [Widget](Widget.md)
+
+## Properties
+
+### alignment
+
+Type: *string*, supported values: `left`, `right`, `center`, default: `left`
+
+The horizontal alignment of the text.
+
+### autoCapitalize
+
+Type: *boolean*, default: `false`
+
+Automatically switch to capital letters after every key pressed.
+
+### autoCorrect
+
+Type: *boolean*, default: `false`
+
+Enables the spell checker and auto-correction feature.
+
+### editable
+
+Type: *boolean*
+
+Whether the text can be edited or not.
+
+### focused
+
+Type: *boolean*
+
+Reflects whether this widget has the keyboard focus. Setting this property to `true` will focus the widget and open the virtual keyboard, setting it to `false` will remove the focus and hide the virtual keyboard.
+
+### keyboard
+
+Type: *string*, supported values: `ascii`, `decimal`, `email`, `number`, `numbersAndPunctuation`, `phone`, `url`, `default`, default: `default`
+
+Selects the keyboard type to use for editing this widget. Has no effect when `type` is set to `multiline`.
+
+### message
+
+Type: *string*
+
+A hint text that is displayed when the input field is empty. Does not apply on iOS when `type` is set to `multiline`.
+
+### text
+
+Type: *string*
+
+The text in the input field.
+
+### type
+
+Type: *string*, supported values: `default`, `password`, `search`, `multiline`, default: `default`
+
+The type of the text widget.<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
+
+
+## Events
+
+### "accept" (widget, text, options)
+
+**Parameters:** 
+
+- widget: *this*
+- text: *string*, the current value of *[text](#text)*.
+- options: *any*
+
+Fired when a text input has been finished by pressing the keyboard's Enter key. The label of this key may vary depending on the platform and locale.
+
+
+### "blur" (widget)
+
+**Parameters:** 
+
+- widget: *this*
+
+Fired when the widget lost focus.
+
+
+### "change:text" (widget, text, options)
+
+**Parameters:** 
+
+- widget: *this*
+- text: *string*, the new value of *[text](#text)*.
+- options: *any*
+
+Fired when the text property changes.
+
+
+### "focus" (widget)
+
+**Parameters:** 
+
+- widget: *this*
+
+Fired when the widget gains focus.
+
+
+### "input" (widget, text, options)
+
+**Parameters:** 
+
+- widget: *this*
+- text: *string*, the new value of *[text](#text)*.
+- options: *any*
+
+Fired when the text was changed by the user.
+
+
+
+## See also
+
+- [Simple TextInput snippet](https://github.com/eclipsesource/tabris-js/tree/v1.10.0/snippets/textinput/textinput.js)
+- [Example with Text and other input controls](https://github.com/eclipsesource/tabris-js/tree/v1.10.0/examples/input/input.js)
