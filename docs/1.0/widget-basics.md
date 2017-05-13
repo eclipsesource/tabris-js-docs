@@ -4,11 +4,11 @@
 
 ## Creating Native Widgets
 
-In Tabris.js, widgets are created using the `tabris.create` method. The resulting object represents a native widget with properties, events, parents and children. Most methods on the widget return the widget itself, allowing method chaining. 
+In Tabris.js, widgets are created using the `tabris.create` method. The resulting object represents a native widget with properties, events, parents and children. Most methods on the widget return the widget itself, allowing method chaining.
 
 ### tabris.create(type)
 
-**Parameters:** 
+**Parameters:**
 
 - type: *string*, the [type](index.md#widgets) of the widget to create.
 
@@ -24,14 +24,14 @@ button.set("text", "OK");
 
 ### tabris.create(type, properties)
 
-**Parameters:** 
+**Parameters:**
 
 - type: *string*, the type of the widget to create.
 - properties: *Object*, a map of initial properties to set
 
 **Returns:** *[Widget](api/Widget.md)*
 
-This creates a native widget of a given type, sets the given properties, and then returns its reference. Some special properties can only be set with the `create` method. 
+This creates a native widget of a given type, sets the given properties, and then returns its reference. Some special properties can only be set with the `create` method.
 
 Example:
 ```javascript
@@ -61,13 +61,13 @@ button.set({
 });
 ```
 
-Even if a property is not explicitly supported by the widget it can still be set. This can be used to attach arbitrary data to a widget. If the property is supported, but the given value is of the wrong type, the value will either be converted (if boolean or string are expected), or ignored with a printed warning. 
+Even if a property is not explicitly supported by the widget it can still be set. This can be used to attach arbitrary data to a widget. If the property is supported, but the given value is of the wrong type, the value will either be converted (if boolean or string are expected), or ignored with a printed warning.
 
 ## Events
 
-Widgets can fire a number of events, e.g. on touch or on modification. Event listeners can be added using the [event API](api/Events.md) methods `on` and `once`, and removed using `off`. 
+Widgets can fire a number of events, e.g. on touch or on modification. Event listeners can be added using the [event API](api/Events.md) methods `on` and `once`, and removed using `off`.
 
-Example: 
+Example:
 
 ```javascript
 var selectionHandler = function(button) {
@@ -76,7 +76,7 @@ var selectionHandler = function(button) {
 button.on("select", selectionHandler);
 ```
 
-Note that event types are case sensitive. All Tabris.js event types are lowercase. Depending on the event type the listener function is called with a list of parameter, where the first parameter is usually the widget itself. 
+Note that event types are case sensitive. All Tabris.js event types are lowercase. Depending on the event type the listener function is called with a list of parameter, where the first parameter is usually the widget itself.
 
 An "context" object may be given as the third `on` parameter. This object will then be available as `this` inside the listener function.
 
@@ -155,7 +155,7 @@ var button = tabris.create("Button", {
 }).appendTo(page);
 ```
 
-If the widget already has a parent, it is de-registered from the actual parent and registered with the new one. Triggers an *addchild* event on the parent. 
+If the widget already has a parent, it is de-registered from the actual parent and registered with the new one. Triggers an *addchild* event on the parent.
 
 It's also possible to add any number of widgets to the same parent using `append`:
 
@@ -166,7 +166,8 @@ page.append(okButton, cancelButton);
 ### Traversing
 See also: [Selector API](selector.md)
 
-The current parent of a widget is returned by the [`parent`](api/Widget.md#parent) method, and the children by the [`children`](api/Widget.md#children) method. 
+The current parent of a widget is returned by the [`parent`](api/Widget.md#parent) method,
+and the children by the [`children`](api/Widget.md#children) method.
 
 Example:
 

@@ -34,7 +34,7 @@ public class CalendarOperator implements TabrisOperator {
 }
 ```
 
-The snippet above shows two important aspects of a `TabrisOperator`: The class _has to have_ a two argument constructor `CalendarOperator(<Activity>, <TabrisContext>)` and the method `getType()` has to return the name of the custom widget as registered on the [JavaScript side](custom-widgets.js).
+The snippet above shows two important aspects of a `TabrisOperator`: The class _has to have_ a two argument constructor `CalendarOperator(<Activity>, <TabrisContext>)` and the method `getType()` has to return the name of the custom widget as registered on the [JavaScript side](custom-widgets.md).
 
 ## Registering an operator
 

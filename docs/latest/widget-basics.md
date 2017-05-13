@@ -20,7 +20,7 @@ Widgets have methods to modify their properties, be notified of events, and appe
 
 ## Widget Properties
 
-Every native widget supports a set of properties (e.g. a text or a color). These properties can be read and written using the [property API](api/Properties.md) methods `get` and `set`, respectively. Widget's properties can also be written or read by directly accessing fields on the widget object. For example, `var text = widget.text;` is the same as `var text = widget.get("text");` and `widget.text = "foo";` is the same as `widget.set("text", "foo");`. If the property is supported, but the given value is of the wrong type, the value will either be converted (if boolean or string are expected), or ignored with a printed warning.
+Every native widget supports a set of properties (e.g. a text or a color). These properties can be read and written using the methods `get` and `set`, respectively. Widget's properties can also be written or read by directly accessing fields on the widget object. For example, `var text = widget.text;` is the same as `var text = widget.get("text");` and `widget.text = "foo";` is the same as `widget.set("text", "foo");`. If the property is supported, but the given value is of the wrong type, the value will either be converted (if boolean or string are expected), or ignored with a printed warning.
 
 Example with `get` and `set`:
 
@@ -45,7 +45,7 @@ button.set({
 });
 ```
 
-Even if a property is not explicitly supported by the widget it can still be set and fire appropriate change events. This can be used to attach arbitrary data to a widget. *Note that this does only work using `set` and `get`.* Using direct field access with properties unkown to Tabris.js will not work correctly unless you also define a JavaScript property that redirects to `set` and `get` using [Object.defineProperty](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Example:
+Even if a property is not explicitly supported by the widget it can still be set and fire appropriate change events. This can be used to attach arbitrary data to a widget. *Note that this does only work using `set` and `get`.* Using direct field access with properties unknown to Tabris.js will not work correctly unless you also define a JavaScript property that redirects to `set` and `get` using [Object.defineProperty](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty). Example:
 
 ```js
 Object.defineProperty(myCustomComponent, 'foo', {
@@ -62,7 +62,7 @@ Where `myCustomComponent` can be either an instance of a Tabris.js widget, or an
 
 ## Events
 
-Widgets can fire a number of events, e.g. on touch or on modification. Event listeners can be added using the [event API](api/Events.md) methods `on` and `once`, and removed using `off`.
+Widgets can fire a number of events, e.g. on touch or on modification. Event listeners can be added using the methods `on` and `once`, and removed using `off`.
 
 Example:
 
@@ -166,7 +166,8 @@ page.append(okButton, cancelButton);
 ### Traversing
 See also: [Selector API](selector.md)
 
-The current parent of a widget is returned by the [`parent`](api/Widget.md#parent) method, and the children by the [`children`](api/Widget.md#children) method.
+The current parent of a widget is returned by the [`parent`](api/Widget.md#parent) method,
+and the children by the [`children`](api/Widget.md#children) method.
 
 Example:
 

@@ -4,7 +4,7 @@
 
 > <img align="left" src="img/note.png"> <i>The custom widget API is not final yet. It may change without prior notice!</i>
 
-A Tabris.js widget consists of a [JavaScript API](custom-widgets.js) and a native client side implementation. This document describes how to create the native implementation for a custom widget on the Android platform.
+A Tabris.js widget consists of a [JavaScript API](custom-widgets.md) and a native client side implementation. This document describes how to create the native implementation for a custom widget on the Android platform.
 
 In order to implement a custom widget you have to have access to the Tabris.js SDK, which is available as part of the [Pro](https://tabrisjs.com/pricing/) plan.
 
@@ -34,7 +34,7 @@ public class CalendarOperator implements TabrisOperator {
 }
 ```
 
-The snippet above shows two important aspects of a `TabrisOperator`: The class _has to have_ a two argument constructor `CalendarOperator(<Activity>, <TabrisContext>)` and the method `getType()` has to return the name of the custom widget as registered on the [JavaScript side](custom-widgets.js).
+The snippet above shows two important aspects of a `TabrisOperator`: The class _has to have_ a two argument constructor `CalendarOperator(<Activity>, <TabrisContext>)` and the method `getType()` has to return the name of the custom widget as registered on the [JavaScript side](custom-widgets.md).
 
 ## Registering an operator
 

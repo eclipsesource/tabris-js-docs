@@ -16,7 +16,7 @@ tabris.app.on("pause", function() {
 ### getResourceLocation(path)
 
 
-**Parameters:** 
+**Parameters:**
 
 - path: *string*, the path of a resource relative to the application root.
 
@@ -27,7 +27,7 @@ Returns the URL for a given resource that is bundled with the app. Can be used t
 ### installPatch(url, callback)
 
 
-**Parameters:** 
+**Parameters:**
 
 - url: *string*, the URL to fetch a patch from.
 - callback: *Function*, a callback function to be called when the installation has finished or failed. In case of a failure, the callback will receive a parameter `error` that contains an Error object. If the installation succeeds, this parameter will be `undefined` and a second parameter will contain the parsed content of the file `patch.json` from the installed patch.
@@ -40,7 +40,7 @@ Installs a patch from the given URL. When the patch is successfully installed, i
 ### reload()
 
 
-**Parameters:** 
+**Parameters:**
 
 
 
@@ -50,26 +50,26 @@ Forces the running application to reload the main module and start over.
 ## Events
 ### "backnavigation" (app, event)
 
-**Parameters:** 
+**Parameters:**
 
-- app: *[App](App.md)*
+- app: *[App](app.md)*
 - event: *Object*
 
 Fired when the back button is pressed on Android. To suppress the default back navigation behavior, call `event.preventDefault()`.
 
 ### "pause" (app)
 
-**Parameters:** 
+**Parameters:**
 
-- app: *[App](App.md)*
+- app: *[App](app.md)*
 
 Fired before the application goes into hibernation.
 
 ### "resume" (app)
 
-**Parameters:** 
+**Parameters:**
 
-- app: *[App](App.md)*
+- app: *[App](app.md)*
 
 Fired after the application returned from hibernation.
 

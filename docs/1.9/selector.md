@@ -72,11 +72,11 @@ page.apply({
 
 This will make all widgets within the page blue, except for the buttons, which are green, except for "#mybutton", which will be red.
 
-> <img align="left" src="img/note.png"> <i>The on-screen order of the properties in the object literal is meaningless. According to the EcmaScript standard the members of a JavaScript object do not have a defined order.</i> 
+> <img align="left" src="img/note.png"> <i>The on-screen order of the properties in the object literal is meaningless. According to the EcmaScript standard the members of a JavaScript object do not have a defined order.</i>
 
 ### How to use it
 
-While we used object literals in the above examples, the apply method can be very effectively used with [modules](module), allowing most or all property values (except ids) to be extracted from your code.
+While we used object literals in the above examples, the apply method can be very effectively used with [modules](modules.md), allowing most or all property values (except ids) to be extracted from your code.
 
 Imagine, for example, that you want to apply different texts to your widgets depending on your locale. You could do it like this:
 

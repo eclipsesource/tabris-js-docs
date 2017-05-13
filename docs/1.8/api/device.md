@@ -51,9 +51,9 @@ The platform version. On iOS it lools like this: `"8.1.1"`. On Android, the [ver
 ## Events
 ### "change:orientation" (device, orientation, options)
 
-**Parameters:** 
+**Parameters:**
 
-- device: *[Device](Device.md)*
+- device: *[Device](device.md)*
 - orientation: *string*
 - options: *Object*
 

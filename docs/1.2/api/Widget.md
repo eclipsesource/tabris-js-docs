@@ -8,7 +8,7 @@ Includes [Events API](Events.md), [Properties API](Properties.md)
 ### animate(properties, options)
 
 
-**Parameters:** 
+**Parameters:**
 
 - properties: *Object*, the properties and target values to animate.
 - options: *Object*, configures the animation itself.
@@ -25,7 +25,7 @@ Starts an animation that transforms the given properties from their current valu
 ### appendTo(parent)
 
 
-**Parameters:** 
+**Parameters:**
 
 - parent: *[Composite](Composite.md)*
 
@@ -36,7 +36,7 @@ Appends this widget to the given parent. The parent widget must support children
 ### apply(properties)
 
 
-**Parameters:** 
+**Parameters:**
 
 - properties: *Object*, an object in the format `{Selector: {property: value, property: value, ... }, Selector: ...}`
 
@@ -47,7 +47,7 @@ Applies the given properties to all descendants that match the associated select
 ### children()
 
 
-**Parameters:** 
+**Parameters:**
 
 
 
@@ -58,7 +58,7 @@ Returns a (possibly empty) collection of all children of this widget.
 ### children(selector)
 
 
-**Parameters:** 
+**Parameters:**
 
 - selector: *[Selector](../types.md#selector)*
 
@@ -69,7 +69,7 @@ Returns a (possibly empty) collection of all children of this widget that match 
 ### dispose()
 
 
-**Parameters:** 
+**Parameters:**
 
 
 
@@ -78,7 +78,7 @@ Removes this widget from its parent and destroys it. Also disposes of all its ch
 ### find()
 
 
-**Parameters:** 
+**Parameters:**
 
 
 
@@ -89,7 +89,7 @@ Returns a (possibly empty) collection of all descendants of this widget.
 ### find(selector)
 
 
-**Parameters:** 
+**Parameters:**
 
 - selector: *[Selector](../types.md#selector)*
 
@@ -100,7 +100,7 @@ Returns a (possibly empty) collection of all descendants of this widget that mat
 ### isDisposed()
 
 
-**Parameters:** 
+**Parameters:**
 
 
 
@@ -111,7 +111,7 @@ Returns `true` if the widget has been disposed, otherwise `false`.
 ### parent()
 
 
-**Parameters:** 
+**Parameters:**
 
 
 
@@ -223,31 +223,31 @@ The width of the widget.
 ## Events
 ### "animationend" (widget, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[Widget](Widget.md)*
 - options: *Object*, the *options* object given [when `animate` was called](#animateproperties-options).
 
 ### "animationstart" (widget, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[Widget](Widget.md)*
 - options: *Object*, the *options* object given [when `animate` was called](#animateproperties-options).
 
 ### "change:{property}" (widget, value, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[Widget](Widget.md)*
 - value: *mixed*, the new value of this given property.
 - options: *Object*, this is the options object given to the [`set`](#set) method.
 
-Fired when the given property has changed. Change events for specific properties will only be documented separately if they may be triggered without calling `set`. 
+Fired when the given property has changed. Change events for specific properties will only be documented separately if they may be triggered without calling `set`.
 
 ### "dispose" (widget)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[Widget](Widget.md)*
 
@@ -255,7 +255,7 @@ Fired when the widget is about to be disposed. At this point the widget and its 
 
 ### "longpress" (widget, gesture)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[Widget](Widget.md)*
 - gesture: *[GestureObject](../types.md#gestureobject)*
@@ -264,7 +264,7 @@ Fired after pressing a widget for a specific amount of time (about a second), an
 
 ### "pan" (widget, gesture)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[Widget](Widget.md)*
 - gesture: *[GestureObject](../types.md#gestureobject)*
@@ -273,7 +273,7 @@ Fired continuously after a finger touching the widget moved for a certain distan
 
 ### "pan:{direction}" (widget, gesture)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[Widget](Widget.md)*
 - gesture: *[GestureObject](../types.md#gestureobject)*
@@ -282,7 +282,7 @@ Fired when a finger starts moving in the given direction. Values for {direction}
 
 ### "resize" (widget, bounds, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[Widget](Widget.md)*
 - bounds: *[Bounds](../types.md#bounds)*, the new value of the [*bounds*](#bounds) property.
@@ -292,7 +292,7 @@ Fired when the widget's size has changed. You can use this event to apply new [*
 
 ### "swipe:{direction}" (widget, gesture)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[Widget](Widget.md)*
 - gesture: *[GestureObject](../types.md#gestureobject)*
@@ -301,7 +301,7 @@ Fired when a finger moves quickly in the given direction. Values for {direction}
 
 ### "tap" (widget, gesture)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[Widget](Widget.md)*
 - gesture: *[GestureObject](../types.md#gestureobject)*
@@ -310,7 +310,7 @@ Fired once when a finger briefly touched the widget.
 
 ### "touchcancel" (widget, gesture)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[Widget](Widget.md)*
 - gesture: *[TouchEvent](../types.md#touchevent)*
@@ -319,7 +319,7 @@ Fired instead of touchend when the touch ends on another widget than it started 
 
 ### "touchend" (widget, gesture)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[Widget](Widget.md)*
 - gesture: *[TouchEvent](../types.md#touchevent)*
@@ -328,7 +328,7 @@ Fired when a touch ends on the same widget than it started on.
 
 ### "touchmove" (widget, gesture)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[Widget](Widget.md)*
 - gesture: *[TouchEvent](../types.md#touchevent)*
@@ -337,7 +337,7 @@ Fired repeatedly while swiping across the screen.
 
 ### "touchstart" (widget, gesture)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[Widget](Widget.md)*
 - gesture: *[TouchEvent](../types.md#touchevent)*
@@ -346,5 +346,5 @@ Fired when a widget is touched. See [Touch Events](../touch.md).
 
 
 ## See also
-- [Understanding layouts in Tabris.js](layouts)
-- [Understanding gesture events in Tabris.js](touch)
+- [Understanding layouts in Tabris.js](../layout.md)
+- [Understanding gesture events in Tabris.js](../touch.md)

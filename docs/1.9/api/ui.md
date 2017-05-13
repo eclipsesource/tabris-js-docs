@@ -48,9 +48,9 @@ Whether the toolbars above and below pages are visible.
 
 ### "change:activePage" (ui, page, options)
 
-**Parameters:** 
+**Parameters:**
 
-- ui: *[UI](UI.md)*
+- ui: *[UI](ui.md)*
 - page: *[Page](Page.md)*, the page that is now active (visible).
 - options: *Object*
 
