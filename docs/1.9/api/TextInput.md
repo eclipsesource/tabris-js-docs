@@ -66,7 +66,7 @@ The type of the text widget.<br/>This property can only be set on widget creatio
 
 ### "accept" (widget, text, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *this*
 - text: *string*, the current value of *[text](#text)*.
@@ -77,7 +77,7 @@ Fired when a text input has been finished by pressing the keyboard's Enter key. 
 
 ### "blur" (widget)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *this*
 
@@ -86,7 +86,7 @@ Fired when the widget lost focus.
 
 ### "change:text" (widget, text, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *this*
 - text: *string*, the new value of *[text](#text)*.
@@ -97,7 +97,7 @@ Fired when the text property changes.
 
 ### "focus" (widget)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *this*
 
@@ -106,7 +106,7 @@ Fired when the widget gains focus.
 
 ### "input" (widget, text, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *this*
 - text: *string*, the new value of *[text](#text)*.
@@ -118,5 +118,5 @@ Fired when the text was changed by the user.
 
 ## See also
 
-- [Simple TextInput snippet](https://github.com/eclipsesource/tabris-js/blob/master/snippets/textinput/textinput.js)
-- [Example with Text and other input controls](https://github.com/eclipsesource/tabris-js/blob/master/examples/input/input.js)
+- [Simple TextInput snippet](https://github.com/eclipsesource/tabris-js/blob/v1.9.0/snippets/textinput/textinput.js)
+- [Example with Text and other input controls](https://github.com/eclipsesource/tabris-js/blob/v1.9.0/examples/input/input.js)

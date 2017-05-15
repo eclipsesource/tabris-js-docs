@@ -36,7 +36,7 @@ A color to change the image appearance. All opaque parts of the image will be ti
 
 ### "load" (widget, event)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *this*, the widget on which the event was triggered
 - event: *Object*, contains the final status of the loading process `{error: boolean}`
@@ -47,4 +47,4 @@ Fired when the image loading has finished. The event parameter contains informat
 
 ## See also
 
-- [Image example](https://github.com/eclipsesource/tabris-js/blob/master/examples/image/image.js)
+- [Image example](https://github.com/eclipsesource/tabris-js/blob/v1.9.0/examples/image/image.js)

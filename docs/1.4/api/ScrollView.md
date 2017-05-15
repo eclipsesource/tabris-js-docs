@@ -13,7 +13,7 @@ Specifies the scrolling direction of the scroll composite.<br/>This property can
 ## Events
 ### "scroll" (widget, offset)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[ScrollView](ScrollView.md)*
 - offset: *Object*, indicates the current scrolling position, e.g. `{x: number, y: number}`
@@ -22,5 +22,5 @@ Fired on scrolling.
 
 
 ## See also
-- [Simple ScrollView snippet](https://github.com/eclipsesource/tabris-js/blob/master/snippets/scrollview/scrollview.js)
-- [Example using a ScrollView](https://github.com/eclipsesource/tabris-js/blob/master/examples/parallax/parallax.js)
+- [Simple ScrollView snippet](https://github.com/eclipsesource/tabris-js/blob/v1.4.0/snippets/scrollview/scrollview.js)
+- [Example using a ScrollView](https://github.com/eclipsesource/tabris-js/blob/v1.4.0/examples/parallax/parallax.js)

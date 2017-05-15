@@ -13,4 +13,4 @@ Type: *string*, supported values: `auto`, `fit`, `fill`, `stretch`, `none`, defa
 
 
 ## See also
-- [Image example](https://github.com/eclipsesource/tabris-js/blob/master/examples/image/image.js)
+- [Image example](https://github.com/eclipsesource/tabris-js/blob/v1.3.0/examples/image/image.js)

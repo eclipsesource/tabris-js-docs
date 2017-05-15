@@ -49,7 +49,7 @@ tabris.create("Page", {
 });
 ```
 
-The [bookstore demo](https://github.com/eclipsesource/tabris-js/tree/master/examples/bookstore) is a good example for the use of top-level pages and stacked pages.
+The [bookstore demo](https://github.com/eclipsesource/tabris-js/tree/v1.3.0/examples/bookstore) is a good example for the use of top-level pages and stacked pages.
 
 ## Accessing Pages
 

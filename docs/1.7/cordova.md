@@ -19,7 +19,7 @@ While using the [Tabris.js Developer App](getting-started.md), your application 
 * [Google Analytics](http://plugins.cordova.io/#/package/com.cmackay.plugins.googleanalytics)
 * [Google Play Services](http://plugins.cordova.io/#/package/com.google.playservices)
 
-These plug-ins have tested with Tabris.js and a [demo](https://github.com/eclipsesource/tabris-js/tree/master/examples/cordova) can be found among the Tabris.js examples.
+These plug-ins have tested with Tabris.js and a [demo](https://github.com/eclipsesource/tabris-js/tree/v1.7.0/examples/cordova) can be found among the Tabris.js examples.
 
 Please note, default plug-ins are only included in the debug version of an app. If you want to use them in the release version, you should add them via `<plugin>` tags in the Cordova `config.xml` file: [Adding Plug-Ins](build.md#adding-plugins).
 

@@ -8,7 +8,7 @@ Includes [Widget API](Widget.md)
 ### insert(items)
 
 
-**Parameters:** 
+**Parameters:**
 
 - items: *Array*
 
@@ -17,17 +17,17 @@ Inserts the given items into this view. Items are added at the end. This operati
 ### insert(items, index)
 
 
-**Parameters:** 
+**Parameters:**
 
 - items: *Array*
-- index: *number*, the position to insert the items at. If a negative index is given, it is interpreted as relative to the end. If the given index is greater than the item count, new items will be appended at the end. 
+- index: *number*, the position to insert the items at. If a negative index is given, it is interpreted as relative to the end. If the given index is greater than the item count, new items will be appended at the end.
 
 Inserts the given items into this view at the given index. This operation will modify the *items* property.
 
 ### refresh()
 
 
-**Parameters:** 
+**Parameters:**
 
 
 
@@ -36,7 +36,7 @@ Triggers a refresh of all visible items. This will issue *change:item* events on
 ### refresh(index)
 
 
-**Parameters:** 
+**Parameters:**
 
 - index: *number*, the index of the item that was changed.
 
@@ -45,7 +45,7 @@ Triggers a refresh of the item with the given index. If the item is scrolled int
 ### remove(index)
 
 
-**Parameters:** 
+**Parameters:**
 
 - index: *number*, the index of the item to remove. If this is negative, it is interpreted as relative to the end.
 
@@ -54,7 +54,7 @@ Removes the item at the given index from this view. This operation will modify t
 ### remove(index, count)
 
 
-**Parameters:** 
+**Parameters:**
 
 - index: *number*, the index of the first item to remove. If this is negative, it is interpreted as relative to the end.
 - count: *number*, the number of items to remove.
@@ -64,7 +64,7 @@ Removes *count* items beginning with the given index from this view. This operat
 ### reveal(index)
 
 
-**Parameters:** 
+**Parameters:**
 
 - index: *number*, the index of the item to reveal. If this is negative, it is interpreted as relative to the end
 
@@ -104,7 +104,7 @@ The message text displayed together with the refresh indicator. Currently not su
 ## Events
 ### "refresh" (widget)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[CollectionView](CollectionView.md)*
 
@@ -112,7 +112,7 @@ Fired when the user requested a refresh. An event listener should reset the *ref
 
 ### "select" (widget, item, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[CollectionView](CollectionView.md)*
 - item: *mixed*, the item that was selected.
@@ -122,4 +122,4 @@ Fired when a collection item is selected.
 
 
 ## See also
-- [CollectionView example](https://github.com/eclipsesource/tabris-js/blob/master/snippets/collectionview/collectionview.js)
+- [CollectionView example](https://github.com/eclipsesource/tabris-js/blob/v1.3.0/snippets/collectionview/collectionview.js)

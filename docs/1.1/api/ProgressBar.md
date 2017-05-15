@@ -19,4 +19,4 @@ Type: *string*, supported values: `normal`, `paused`, `error`, default: `normal`
 
 
 ## See also
-- [Simple ProgressBar snippet](https://github.com/eclipsesource/tabris-js/blob/master/snippets/progressbar/progressbar.js)
+- [Simple ProgressBar snippet](https://github.com/eclipsesource/tabris-js/blob/v1.1.0/snippets/progressbar/progressbar.js)

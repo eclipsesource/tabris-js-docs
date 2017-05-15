@@ -30,7 +30,7 @@ The text to be displayed for the action.
 
 ### "select" (widget)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *this*
 
@@ -40,5 +40,5 @@ Fired when the action is invoked.
 
 ## See also
 
-- [Snippet for creating actions](https://github.com/eclipsesource/tabris-js/blob/master/snippets/action/action.js)
-- [Actions - placement priorities](https://github.com/eclipsesource/tabris-js/blob/master/snippets/action-placement-priority/action-placement-priority.js)
+- [Snippet for creating actions](https://github.com/eclipsesource/tabris-js/blob/v1.9.0/snippets/action/action.js)
+- [Actions - placement priorities](https://github.com/eclipsesource/tabris-js/blob/v1.9.0/snippets/action-placement-priority/action-placement-priority.js)

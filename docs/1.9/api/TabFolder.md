@@ -30,7 +30,7 @@ The placement of the tab titles. When set to `"hidden"`, the tab bar will not be
 
 ### "change:selection" (widget, selection, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *this*
 - selection: *[Tab](Tab.md)*, the new value of *selection*.
@@ -41,7 +41,7 @@ Fired when the selection property changes.
 
 ### "select" (widget, selection, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *this*
 - selection: *[Tab](Tab.md)*, the new value of *selection*.
@@ -53,4 +53,4 @@ Fired when the selection property changes by user interaction.
 
 ## See also
 
-- [Snippet with a TabFolder and Tabs](https://github.com/eclipsesource/tabris-js/blob/master/snippets/tabfolder/tabfolder.js)
+- [Snippet with a TabFolder and Tabs](https://github.com/eclipsesource/tabris-js/blob/v1.9.0/snippets/tabfolder/tabfolder.js)

@@ -24,7 +24,7 @@ The index of the item that is currently represented by this cell. This property 
 
 ### "change:item" (widget, item, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *this*
 - item: *any*, the new value of *[item](#item)*.
@@ -35,7 +35,7 @@ Fired when a collection item is assigned to this cell. Use this event to configu
 
 ### "change:itemIndex" (widget, itemIndex, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *this*
 - itemIndex: *number*, the new value of *[itemIndex](#indexindex)*.
@@ -47,4 +47,4 @@ Fired when the index of the assigned item changes, either by assigning a new ite
 
 ## See also
 
-- [CollectionView example](https://github.com/eclipsesource/tabris-js/blob/master/snippets/collectionview/collectionview.js)
+- [CollectionView example](https://github.com/eclipsesource/tabris-js/blob/v1.9.0/snippets/collectionview/collectionview.js)

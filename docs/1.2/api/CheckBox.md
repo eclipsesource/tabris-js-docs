@@ -17,7 +17,7 @@ The label text of the check box.
 ## Events
 ### "change:selection" (widget, selection, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[CheckBox](CheckBox.md)*
 - selection: *boolean*, the new value of *[selection](#selection)*.
@@ -27,7 +27,7 @@ Fired when the check box is checked or unchecked.
 
 ### "select" (widget, selection, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[CheckBox](CheckBox.md)*
 - selection: *boolean*, the new value of *[selection](#selection)*.
@@ -37,4 +37,4 @@ Fired when the check box is checked or unchecked by the user.
 
 
 ## See also
-- [Simple Checkbox snippet](https://github.com/eclipsesource/tabris-js/blob/master/snippets/checkbox/checkbox.js)
+- [Simple Checkbox snippet](https://github.com/eclipsesource/tabris-js/blob/v1.2.0/snippets/checkbox/checkbox.js)

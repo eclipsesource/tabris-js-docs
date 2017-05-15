@@ -18,7 +18,7 @@ Type: *number*
 ## Events
 ### "change:selection" (widget, selection, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[Picker](Picker.md)*
 - selection: *string*, the new value of *[selection](#selection)*.
@@ -28,7 +28,7 @@ Fired when the selection property changes.
 
 ### "change:selectionIndex" (widget, selectionIndex, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[Picker](Picker.md)*
 - selectionIndex: *number*, the new value of *[selectionIndex](#selectionIndex)*.
@@ -38,7 +38,7 @@ Fired when the selectionIndex property changes.
 
 ### "select" (widget, selection, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[Picker](Picker.md)*
 - selection: *string*, the new value of *[selection](#selection)*.
@@ -48,4 +48,4 @@ Fired an item was selected by the user.
 
 
 ## See also
-- [Simple Picker snippet](https://github.com/eclipsesource/tabris-js/blob/master/snippets/picker/picker.js)
+- [Simple Picker snippet](https://github.com/eclipsesource/tabris-js/blob/v1.1.0/snippets/picker/picker.js)

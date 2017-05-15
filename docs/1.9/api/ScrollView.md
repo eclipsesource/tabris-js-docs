@@ -30,7 +30,7 @@ The vertical scrolling position.
 
 ### "scroll" (widget, offset)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *this*
 - offset: *{x: number, y: number}*, indicates the current scrolling position, e.g. `{x: number, y: number}`
@@ -41,5 +41,5 @@ Fired on scrolling.
 
 ## See also
 
-- [Simple ScrollView snippet](https://github.com/eclipsesource/tabris-js/blob/master/snippets/scrollview/scrollview.js)
-- [Example using a ScrollView](https://github.com/eclipsesource/tabris-js/blob/master/examples/parallax/parallax.js)
+- [Simple ScrollView snippet](https://github.com/eclipsesource/tabris-js/blob/v1.9.0/snippets/scrollview/scrollview.js)
+- [Example using a ScrollView](https://github.com/eclipsesource/tabris-js/blob/v1.9.0/examples/parallax/parallax.js)

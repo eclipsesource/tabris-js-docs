@@ -21,4 +21,4 @@ How to scale the image.
 - `none` will not resize the image at all. The image will be displayed in its original size.
 
 ## See also
-- [Image example](https://github.com/eclipsesource/tabris-js/blob/master/examples/image/image.js)
+- [Image example](https://github.com/eclipsesource/tabris-js/blob/v1.7.0/examples/image/image.js)

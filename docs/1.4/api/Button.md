@@ -21,7 +21,7 @@ The button's label text.
 ## Events
 ### "select" (widget)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[Button](Button.md)*
 
@@ -29,4 +29,4 @@ Fired when the button is pressed.
 
 
 ## See also
-- [Simple Button snippet](https://github.com/eclipsesource/tabris-js/blob/master/snippets/button/button.js)
+- [Simple Button snippet](https://github.com/eclipsesource/tabris-js/blob/v1.4.0/snippets/button/button.js)

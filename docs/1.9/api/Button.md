@@ -30,7 +30,7 @@ The button's label text.
 
 ### "select" (widget)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *this*
 
@@ -40,4 +40,4 @@ Fired when the button is pressed.
 
 ## See also
 
-- [Simple Button snippet](https://github.com/eclipsesource/tabris-js/blob/master/snippets/button/button.js)
+- [Simple Button snippet](https://github.com/eclipsesource/tabris-js/blob/v1.9.0/snippets/button/button.js)

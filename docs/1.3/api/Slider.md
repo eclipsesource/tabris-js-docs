@@ -18,7 +18,7 @@ Type: *number*, default: `0`
 ## Events
 ### "change:selection" (widget, selection, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[SearchAction](SearchAction.md)*
 - selection: *number*, the new value of *[selection](#selection)*.
@@ -28,7 +28,7 @@ Fired when the selection property changes.
 
 ### "select" (widget, selection, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[SearchAction](SearchAction.md)*
 - selection: *number*, the new value of *[selection](#selection)*.
@@ -38,4 +38,4 @@ Fired when the selection property is changed by the user.
 
 
 ## See also
-- [Simple Slider snippet](https://github.com/eclipsesource/tabris-js/blob/master/snippets/slider/slider.js)
+- [Simple Slider snippet](https://github.com/eclipsesource/tabris-js/blob/v1.3.0/snippets/slider/slider.js)

@@ -17,7 +17,7 @@ The URL of the web page to display. Returns empty string when content from *html
 ## Events
 ### "load" (widget)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[WebView](WebView.md)*
 
@@ -25,4 +25,4 @@ Fired when the url has been loaded.
 
 
 ## See also
-- [Simple WebView snippet](https://github.com/eclipsesource/tabris-js/blob/master/snippets/webview/webview.js)
+- [Simple WebView snippet](https://github.com/eclipsesource/tabris-js/blob/v1.5.0/snippets/webview/webview.js)

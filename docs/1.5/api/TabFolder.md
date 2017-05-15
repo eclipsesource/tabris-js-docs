@@ -8,7 +8,7 @@ Includes [Widget API](Widget.md)
 ### append(child, child*)
 
 
-**Parameters:** 
+**Parameters:**
 
 - child: *[Tab](Tab.md)*
 - child*: *[Tab](Tab.md)*
@@ -34,7 +34,7 @@ The placement of the tab titles. When set to "hidden" the tab bar will not be vi
 ## Events
 ### "change:selection" (widget, selection, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[TabFolder](TabFolder.md)*
 - selection: *[Tab](Tab.md)*, the new value of *selection*.
@@ -44,7 +44,7 @@ Fired when the selection property changes.
 
 ### "select" (widget, selection, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[TabFolder](TabFolder.md)*
 - selection: *[Tab](Tab.md)*, the new value of *selection*.
@@ -54,4 +54,4 @@ Fired when the selection property changes by user interaction.
 
 
 ## See also
-- [Snippet with a TabFolder and Tabs](https://github.com/eclipsesource/tabris-js/blob/master/snippets/tabfolder/tabfolder.js)
+- [Snippet with a TabFolder and Tabs](https://github.com/eclipsesource/tabris-js/blob/v1.5.0/snippets/tabfolder/tabfolder.js)

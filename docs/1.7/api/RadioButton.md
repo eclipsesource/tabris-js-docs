@@ -17,7 +17,7 @@ The label text of the radio button.
 ## Events
 ### "change:selection" (widget, selection, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[RadioButton](RadioButton.md)*
 - selection: *boolean*, the new value of *[selection](#selection)*.
@@ -27,7 +27,7 @@ Fired when the selection property changes.
 
 ### "select" (widget, selection, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[RadioButton](RadioButton.md)*
 - selection: *boolean*, the new value of *[selection](#selection)*.
@@ -37,4 +37,4 @@ Fired when the radio button is selected or deselected by the user.
 
 
 ## See also
-- [Simple RadioButton snippet](https://github.com/eclipsesource/tabris-js/blob/master/snippets/radiobutton/radiobutton.js)
+- [Simple RadioButton snippet](https://github.com/eclipsesource/tabris-js/blob/v1.7.0/snippets/radiobutton/radiobutton.js)

@@ -56,7 +56,7 @@ The following `CanvasRenderingContext2D` properties are supported:
 ### getContext(contextType, width, height)
 
 
-**Parameters:** 
+**Parameters:**
 
 - contextType: *string*, the context identifier. Only `"2d"` is currently supported.
 - width: *number*, the width of the canvas context to create
@@ -68,4 +68,4 @@ Returns the drawing context with the given size.
 
 
 ## See also
-- [Example that shows animations and different shapes on a canvas](https://github.com/eclipsesource/tabris-js/tree/master/examples/canvas)
+- [Example that shows animations and different shapes on a canvas](https://github.com/eclipsesource/tabris-js/tree/v1.4.0/examples/canvas)

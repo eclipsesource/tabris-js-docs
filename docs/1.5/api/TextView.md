@@ -23,5 +23,5 @@ Type: *string*
 The text to display.
 
 ## See also
-- [Simple TextView snippet](https://github.com/eclipsesource/tabris-js/blob/master/snippets/textview/textview.js)
-- [Snippet for TextView with markup](https://github.com/eclipsesource/tabris-js/blob/master/snippets/textview-markup/textview-markup.js)
+- [Simple TextView snippet](https://github.com/eclipsesource/tabris-js/blob/v1.5.0/snippets/textview/textview.js)
+- [Snippet for TextView with markup](https://github.com/eclipsesource/tabris-js/blob/v1.5.0/snippets/textview-markup/textview-markup.js)

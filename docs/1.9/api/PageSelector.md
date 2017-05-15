@@ -7,4 +7,4 @@ Includes [CollectionView](CollectionView.md)
 
 ## See also
 
-- [Snippet that includes a PageSelector in the navigation drawer](https://github.com/eclipsesource/tabris-js/blob/master/snippets/drawer-pages/drawer-pages.js)
+- [Snippet that includes a PageSelector in the navigation drawer](https://github.com/eclipsesource/tabris-js/blob/v1.9.0/snippets/drawer-pages/drawer-pages.js)

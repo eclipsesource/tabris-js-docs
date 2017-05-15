@@ -17,7 +17,7 @@ The URL of the web page to display. Relative URLs are resolved relative to 'pack
 ## Events
 ### "load" (widget)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[WebView](WebView.md)*
 
@@ -25,7 +25,7 @@ Fired when the url has been loaded.
 
 ### "navigate" (widget, event)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[WebView](WebView.md)*
 - event: *Object*
@@ -34,4 +34,4 @@ Fired when the WebView is about to navigate to a new URL. Listeners can intercep
 
 
 ## See also
-- [Simple WebView snippet](https://github.com/eclipsesource/tabris-js/blob/master/snippets/webview/webview.js)
+- [Simple WebView snippet](https://github.com/eclipsesource/tabris-js/blob/v1.7.0/snippets/webview/webview.js)

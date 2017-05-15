@@ -34,4 +34,4 @@ This property affects the color of the progress indicator. Not supported on iOS.
 
 ## See also
 
-- [Simple ProgressBar snippet](https://github.com/eclipsesource/tabris-js/blob/master/snippets/progressbar/progressbar.js)
+- [Simple ProgressBar snippet](https://github.com/eclipsesource/tabris-js/blob/v1.9.0/snippets/progressbar/progressbar.js)

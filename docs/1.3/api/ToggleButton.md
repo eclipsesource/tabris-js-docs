@@ -25,7 +25,7 @@ The button's label text.
 ## Events
 ### "change:selection" (widget, selection, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[ToggleButton](ToggleButton.md)*
 - selection: *boolean*, the current value of *[selection](#selection)*.
@@ -35,7 +35,7 @@ Fired when the selection property changes.
 
 ### "select" (widget, selection, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[ToggleButton](ToggleButton.md)*
 - selection: *boolean*, the current value of *[selection](#selection)*.
@@ -45,4 +45,4 @@ Fired when the toggle button is selected or deselected by the user.
 
 
 ## See also
-- [Simple ToggleButton snippet](https://github.com/eclipsesource/tabris-js/blob/master/snippets/togglebutton/togglebutton.js)
+- [Simple ToggleButton snippet](https://github.com/eclipsesource/tabris-js/blob/v1.3.0/snippets/togglebutton/togglebutton.js)

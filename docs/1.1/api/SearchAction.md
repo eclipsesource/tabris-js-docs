@@ -21,7 +21,7 @@ The text in the search input field.
 ## Events
 ### "accept" (widget, text, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[SearchAction](SearchAction.md)*
 - text: *string*, the current value of *[text](#text)*.
@@ -31,7 +31,7 @@ Fired when a text input has been submitted by pressing the keyboard's search key
 
 ### "input" (widget, text, options)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *[SearchAction](SearchAction.md)*
 - text: *string*, the new value of *[text](#text)*.
@@ -41,4 +41,4 @@ Fired the user inputs text.
 
 
 ## See also
-- [Search action snippet](https://github.com/eclipsesource/tabris-js/blob/master/snippets/action-search/search-action.js)
+- [Search action snippet](https://github.com/eclipsesource/tabris-js/blob/v1.1.0/snippets/action-search/search-action.js)

@@ -8,7 +8,7 @@ Includes [Composite](Composite.md)
 ### close()
 
 
-**Parameters:** 
+**Parameters:**
 
 
 
@@ -19,7 +19,7 @@ Closes the drawer.
 ### open()
 
 
-**Parameters:** 
+**Parameters:**
 
 
 
@@ -29,4 +29,4 @@ Opens the drawer.
 
 
 ## See also
-- [Snippet for creating a Drawer](https://github.com/eclipsesource/tabris-js/blob/master/snippets/drawer/drawer.js)
+- [Snippet for creating a Drawer](https://github.com/eclipsesource/tabris-js/blob/v1.8.0/snippets/drawer/drawer.js)
