@@ -69,6 +69,7 @@ After your app has become valid, you are ready to execute the first build. Just 
 > <img align="left" src="img/note.png"> <i>When building Windows apps, please also read the [Windows Support Documentation](windows-support.md)</i>
 
 ### Settings
+
 ![App Settings](img/build-app-settings.png)
 
 * **Repository URL:** This is the URL of your git repository. If you're using the free build, it should point to a GitHub repository. Users who are on the [Pro plan](https://tabrisjs.com/pricing/) can also use custom repository locations.
@@ -83,6 +84,7 @@ After your app has become valid, you are ready to execute the first build. Just 
 * **Debug:** Enables the *debug mode*. If set to `ON`, your app will be built including debug symbols and it will be packaged into the Tabris.js Developer App to make development easier. This allows you to use all the benefits like the developer console or the reload also with your own app. Please be aware that debug versions can not be submitted to the app stores. Debug `OFF` means your app will be built to be ready for release: no Developer App, no console, no reload. Only your JavaScript code is executed.
 
 ### Adding Plug-ins
+
 To add a set of Apache Cordova plug-ins you only need to add them to the `config.xml`. The online build supports the Cordova `<plugin />` tag. This tag allows you to add plug-ins using an ID, an HTTP URL or a git URL. A sample `config.xml` including two Cordova plug-ins could look like this:
 ```xml
 <?xml version='1.0' encoding='utf-8'?>
@@ -102,9 +104,11 @@ To add a set of Apache Cordova plug-ins you only need to add them to the `config
 In addition to the settings described in the [Cordova config.xml Guide](http://cordova.apache.org/docs/en/edge/config_ref_index.md.html#The%20config.xml%20File), Tabris.js also takes the following modified/additional `config.xml` attributes into account. These attributes apply to both, the online and the local build.
 
 ### content
+
 The optional `<content>` element defines the app's starting page in ordinary Cordova apps. In Tabris.js you can use it to define the location of the `package.json` file within the `www` folder. E.g. `<content src="mySubFolder/package.json"/>`
 
 ### preferences
+
 Tabris.js accepts the following custom preferences:
 
 | Name                   | Allowed Values | Default Value | Description |
@@ -120,6 +124,7 @@ Tabris.js accepts the following custom preferences:
 | ThemeSplash             | <ul><li>`@style/Theme.Tabris.SplashScreen`</li><li>`@style/Theme.Tabris.Light.SplashScreen` (Default)</ul>The splash screen is shown to the user while the app is starting up. By default this screen has a white background. The `ThemeSplash` preference allows to set one of the bundled themes or to provide a custom theme.<br/><br/>Example: `<preference name="ThemeSplash" value="@style/Theme.Tabris.SplashScreen" />`<br/><br/>Note that the `config.xml` element `<splash .. />` can be used to set an image on the splash screen. For styling guides see the material design guidelines on [launch screens](https://material.google.com/patterns/launch-screens.html). |
 
 ### Windows specific preferences
+
 Windows apps always have a splash screen. If you do not configure one, the default Tabris.js splash screen is used. To configure your own splash creen, you have to give a logo in three different resolutions and the background color, like this:
 
 ```xml

@@ -1,44 +1,54 @@
 ---
 ---
 # TextInput
+
 A widget that allows to enter text.
 Includes [Widget](Widget.md)
 
 ## Properties
+
 ### alignment
 Type: *string*, supported values: `left`, `right`, `center`, default: `left`
 
 The horizontal alignment of the text.
 ### autoCapitalize
+
 Type: *boolean*, default: `false`
 
 Automatically switch to capital letters after every key pressed.
 ### autoCorrect
+
 Type: *boolean*, default: `false`
 
 Enables the spell checker and auto-correction feature.
 ### editable
+
 Type: *boolean*
 
 Whether the text can be edited or not.
 ### keyboard
+
 Type: *string*, supported values: `ascii`, `decimal`, `email`, `number`, `numbersAndPunctuation`, `phone`, `url`, `default`, default: `default`
 
 Selects the keyboard type to use for editing this widget.
 ### message
+
 Type: *string*
 
 A hint text that is displayed when the input field is empty.
 ### text
+
 Type: *string*
 
 The text in the input field.
 ### type
+
 Type: *string*, supported values: `default`, `password`, `search`, `multiline`, default: `default`
 
 The type of the text widget.<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
 
 ## Events
+
 ### "accept" (widget, text, options)
 
 **Parameters:**
@@ -87,5 +97,6 @@ Fired when the text was changed by the user.
 
 
 ## See also
+
 - [Simple TextInput snippet](https://github.com/eclipsesource/tabris-js/blob/v1.7.0/snippets/textinput/textinput.js)
 - [Example with Text and other input controls](https://github.com/eclipsesource/tabris-js/blob/v1.7.0/examples/input/input.js)

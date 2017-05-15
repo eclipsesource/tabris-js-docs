@@ -1,10 +1,12 @@
 ---
 ---
 # Widget API
+
 API supported by all widgets.
 Includes [Events API](Events.md), [Properties API](Properties.md)
 
 ## Methods
+
 ### animate(properties, options)
 
 
@@ -121,106 +123,131 @@ Returns the parent of this widget.
 
 
 ## Fields
+
 ### cid
 Type: *string*
 
 An application-wide unique identifier automatically assigned to all widgets on creation. Do not change it.
 ### id
+
 Type: *string*
 
 Direct access to the value of the property of the same name. May be used instead of `widget.get("id");` Do not use this field to change the value, instead use `widget.set("id", id);`.
 ### type
+
 Type: *string*
 
 The exact string that was used to create this widget using the `tabris.create` method.
 
 ## Properties
+
 ### background
 Type: *[Color](../types.md#color)*
 
 Background color of the widget.
 ### backgroundImage
+
 Type: *[Image](../types.md#image)*
 
 An image to be displayed on the widget's background. If the image is smaller than the widget, it will be tiled.
 ### baseline
+
 Type: *[Widget](Widget.md)*
 
 The vertical position of the widget's baseline relative to a sibling widget.
 ### bottom
+
 Type: *[margin](../types.md#margin)*
 
 The position of the widget's bottom edge relative to the parent or a sibling widget.
 ### bounds
+
 Type: *[Bounds](../types.md#bounds)*
 
 The actual location and size of the widget, relative to its parent. This property is read-only.
 ### centerX
+
 Type: *[offset](../types.md#offset)*
 
 The horizontal position of the widget's center relative to the parent's center.
 ### centerY
+
 Type: *[offset](../types.md#offset)*
 
 The vertical position of the widget's center relative to the parent's center.
 ### enabled
+
 Type: *boolean*, default: `true`
 
 Whether the widget can be operated.
 ### font
+
 Type: *[Font](../types.md#font)*
 
 The font used for the widget.
 ### height
+
 Type: *[dimension](../types.md#dimension)*
 
 The height of the widget.
 ### highlightOnTouch
+
 Type: *boolean*, default: `false`
 
 Whether the entire widget should be highlighted while touched.
 ### id
+
 Type: *string*
 
 A string to identify the widget by using selectors. Id's are optional. It is strongly recommended that they are unique within a page.
 ### layoutData
+
 Type: *[LayoutData](../types.md#layoutdata)*
 
 Shorthand for all layout properties. See [Layout](../layout.md).
 ### left
+
 Type: *[margin](../types.md#margin)*
 
 The position of the widget's left edge relative to the parent or a sibling widget.
 ### opacity
+
 Type: *number*, supported values: `0..1`, default: `1`
 
 Opacity of the entire widget. Can be used for fade animations.
 ### right
+
 Type: *[margin](../types.md#margin)*
 
 The position of the widget's right edge relative to the parent or a sibling widget.
 ### textColor
+
 Type: *[Color](../types.md#color)*
 
 Text color of the widget.
 ### top
+
 Type: *[margin](../types.md#margin)*
 
 The position of the widget's top edge relative to the parent or a sibling widget.
 ### transform
+
 Type: *[Transformation](../types.md#transformation)*
 
 Modifications to the widget's shape, size, or position. Can be used for animations. **Note:** In Android the *transform* property does not affect the *bounds* property, while it does so in iOS.
 ### visible
+
 Type: *boolean*, default: `true`
 
 Whether the widget is visible.
 ### width
+
 Type: *[dimension](../types.md#dimension)*
 
 The width of the widget.
 
 ## Events
+
 ### "animationend" (widget, options)
 
 **Parameters:**
@@ -346,5 +373,6 @@ Fired when a widget is touched. See [Touch Events](../touch.md).
 
 
 ## See also
+
 - [Understanding layouts in Tabris.js](../layout.md)
 - [Understanding gesture events in Tabris.js](../touch.md)

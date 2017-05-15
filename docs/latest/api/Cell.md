@@ -26,9 +26,11 @@ The index of the item that is currently represented by this cell.
 ## Events
 
 ### change:item
+
 Fired when a collection item is assigned to this cell. Use this event to configure the widgets in this cell to represent the assigned item.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -39,9 +41,11 @@ Fired when a collection item is assigned to this cell. Use this event to configu
 
 
 ### change:itemIndex
+
 Fired when the index of the assigned item changes, either by assigning a new item or by inserting/removing items above the current item.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 

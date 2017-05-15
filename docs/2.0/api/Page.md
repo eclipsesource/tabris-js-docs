@@ -30,10 +30,12 @@ The page title to be displayed in the navigation bar.
 ## Events
 
 ### appear
+
 Fired when the page is about to become visible, i.e. it has become the active page.
 
 
 ### disappear
+
 Fired when the page is no longer visible, i.e. another page has become the active page.
 
 

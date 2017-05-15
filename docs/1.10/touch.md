@@ -31,6 +31,7 @@ widget.on("swipe:left", function(widget, event) {
 ```
 
 ### Gesture Object
+
 All gesture listener are called with the parameters `widget`, `gesture`. Each gesture type ("tap", "longpress", "pan" and "swipe") creates a different `gesture` object:
 
 - For **tap** gestures:
@@ -51,9 +52,11 @@ All gesture listener are called with the parameters `widget`, `gesture`. Each ge
 The `end` state is set when the gesture ended by lifting all fingers, while `cancel` may be set if the gesture was interrupted, e.g. by a dialog pop-up.
 
 ### Gestures in scrollable/panable Widgets
+
 In a scrollable widget, like `ScrollView` or `CollectionView`, a recognized **pan** or **swipe** gesture in a non-scrollable direction will prevent scrolling. Therefore, attaching a `pan:horizontal` listener to a widget in a vertically scrolling `ScrollView`, will prevent scrolling for any gesture that starts with a horizontal movement. When no pan listener is attached or the movement starts in a vertical direction, scrolling is still possible.
 
 ## Touch Events
+
 Touch events are a low-level alternative to gesture events. They should only be used in case an interaction can not be accurately represented by a gesture. The target of all touch events is the widget that was touched first.
 
 - `touchstart` - Fired when a finger touches the widget.
@@ -62,6 +65,7 @@ Touch events are a low-level alternative to gesture events. They should only be 
 - `touchcancel` - Fired instead of `touchend` when the touch interaction ends on another widget than it started.
 
 ### Touch Event Object
+
 All touch listeners are called with the parameters `widget`, `touchEvent`. The event object includes the following properties:
 
 - **time**: *number* - number of milliseconds since the start of the app

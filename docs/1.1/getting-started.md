@@ -1,11 +1,13 @@
 ---
 ---
 # Getting Started
+
 Welcome to Tabris.js, the framework for developing native apps in JavaScript. Before you get started, you should be logged in to http://tabrisjs.com. This site provides you with documentation and integrates with the Tabris.js Developer App.
 
 **If you want to start coding right away, there is also the [Quickstart](quickstart.md) guide for the inpatient expert.**
 
 # The Tabris.js Developer App
+
 The Tabris.js developer apps are available for free on the Apple App Store and Google Play respectively. Simply follow the links below or search for "Tabris.js" in the store on your mobile device.
 
 [![Tabris.js on Google play](https://tabrisjs.com/assets/img/playstore-badge.png)](https://play.google.com/store/apps/details?id=com.eclipsesource.tabris.js) [![Tabris.js on Apple App Store](https://tabrisjs.com/assets/img/appstore-badge.png)](https://itunes.apple.com/us/app/tabris.js/id939600018?mt=8) 
@@ -47,6 +49,7 @@ On the [tabrisjs.com snippets page](https://tabrisjs.com/snippets/) you can find
 If you like to play with the snippet, simply copy and paste it to the scratchpad and run it from there.
 
 # Create Your First App
+
 Tabris.js scripts can be developed using any text editor or IDE.
 
 Clone or [Download](https://github.com/eclipsesource/tabris-js-getting-started/archive/master.zip) the [Getting Started Project](https://github.com/eclipsesource/tabris-js-getting-started) to begin developing your first Tabris.js app.
@@ -56,6 +59,7 @@ Clone or [Download](https://github.com/eclipsesource/tabris-js-getting-started/a
 It contains a minimal Tabris.js project, which consists of two files:
 
 ### package.json
+
 The `package.json` file is used to describe the app, including the name, description, dependencies and the main script. Every Tabris.js app should include a package.json.
 
 ```javascript
@@ -70,6 +74,7 @@ The `package.json` file is used to describe the app, including the name, descrip
 ```
 
 ### hello.js
+
 The Tabris.js "Hello, World!" example is contained in `hello.js`. It contains a *button* and a *text view*. When the button is selected, the text view is updated. For further documentation on widgets, visit the [Widgets](widget-basics.md) article and [Widgets API reference](api/Widget.md). 
 
 ```js
@@ -139,4 +144,5 @@ If the URL of your developer machine is stable, you can also use the *My Scripts
 For submission to the App / Play Stores you will need to bundle, brand and build your app, either using the free online build service or using local tools. This process is explained in [Build your app](build.md).
 
 ## Feedback
+
 Help us improve Tabris.js! [Feedback](mailto:care@eclipsesource.com?subject=Tabris.js%20feedback) is always welcome. Feel free to invite your friends if you find Tabris.js interesting.

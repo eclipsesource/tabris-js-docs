@@ -33,6 +33,7 @@ Defines the shade used on the status bar. A `dark` theme sets the foreground ico
 
 
 ## Example
+
 ```js
 createTextView('Theme');
 

@@ -50,6 +50,7 @@ The text to display.
 
 
 ## Example
+
 ```js
 // Create text views with different alignments
 

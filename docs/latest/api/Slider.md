@@ -34,9 +34,11 @@ The actual value.
 ## Events
 
 ### change:selection
+
 Fired when the selection property changes.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -47,9 +49,11 @@ Fired when the selection property changes.
 
 
 ### select
+
 Fired when the selection property is changed by the user.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -61,6 +65,7 @@ Fired when the selection property is changed by the user.
 
 
 ## Example
+
 ```js
 // Create a slider with a selection handler
 

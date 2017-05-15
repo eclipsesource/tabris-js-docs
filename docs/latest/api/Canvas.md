@@ -36,6 +36,7 @@ Returns the drawing context with the given size.
 
 
 ## Example
+
 ```js
 // Draw shapes on a canvas using HTML5 Canvas API
 

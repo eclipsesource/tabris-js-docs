@@ -27,6 +27,7 @@ The height of the navigation bar in device independent pixel. Can be used in con
 
 
 ## Example
+
 ```js
 createTextView('Display mode', 'displayMode');
 

@@ -1,6 +1,7 @@
 ---
 ---
 # Canvas
+
 Canvas is a widget that can be used to draw graphics using a canvas context. Canvas context is a subset of the HTML5 [CanvasRenderingContext2D](https://developer.mozilla.org/en/docs/Web/API/CanvasRenderingContext2D).
 Includes [Composite](Composite.md)
 
@@ -54,6 +55,7 @@ The following `CanvasRenderingContext2D` properties are supported:
 * textBaseline
 
 ## Methods
+
 ### getContext(contextType, width, height)
 
 
@@ -69,4 +71,5 @@ Returns the drawing context with the given size.
 
 
 ## See also
+
 - [Example that shows animations and different shapes on a canvas](https://github.com/eclipsesource/tabris-js/tree/v1.8.0/examples/canvas)

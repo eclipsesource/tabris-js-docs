@@ -40,9 +40,11 @@ The button's label text.
 ## Events
 
 ### change:checked
+
 Fired when the checked property changes.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -53,9 +55,11 @@ Fired when the checked property changes.
 
 
 ### select
+
 Fired when the toggle button is selected or deselected by the user.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -67,6 +71,7 @@ Fired when the toggle button is selected or deselected by the user.
 
 
 ## Example
+
 ```js
 // Create a toggle button with a checked handler
 

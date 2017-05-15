@@ -1,10 +1,12 @@
 ---
 ---
 # TabFolder
+
 A widget that can switch between [tabs](#Tab).
 Includes [Widget API](Widget.md)
 
 ## Methods
+
 ### append(child, child*)
 
 
@@ -19,19 +21,23 @@ Adds the given tabs in the given order to the TabFolder
 
 
 ## Properties
+
 ### paging
 Type: *boolean*
 
 Enables swiping through tabs.
 ### selection
+
 Type: *[Tab](Tab.md)*
 
 ### tabBarLocation
+
 Type: *string*, supported values: `top`, `bottom`, `auto`, default: `auto`
 
 The placement of the tab titles. When set to `"auto"`, the position is platform dependent.<br/>This property can only be set in the `tabris.create` method. It cannot be changed after widget creation.
 
 ## Events
+
 ### "change:selection" (widget, selection, options)
 
 **Parameters:**
@@ -54,4 +60,5 @@ Fired when the selection property changes by user interaction.
 
 
 ## See also
+
 - [Snippet with a TabFolder and Tabs](https://github.com/eclipsesource/tabris-js/blob/v1.1.0/snippets/tabfolder/tabfolder.js)

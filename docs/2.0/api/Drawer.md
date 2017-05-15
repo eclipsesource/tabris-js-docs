@@ -52,15 +52,18 @@ This property may be set to an instance of NavigationView to make its drawer-act
 ## Events
 
 ### close
+
 Fired when the drawer is closed and has reached its resting position.
 
 
 ### open
+
 Fired when the drawer is opened and has reached its resting position.
 
 
 
 ## Example
+
 ```js
 // Enable the drawer and append a widget to it
 

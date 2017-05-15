@@ -200,21 +200,25 @@ Returns a (possibly empty) collection of all siblings of this widget that match 
 ## Fields
 
 ### cid
+
 Type: *string*
 
 An application-wide unique identifier automatically assigned to all widgets on creation. Do not change it.
 
 ### classList
+
 Type: *string[]*
 
 Provides convenient access to the list of class names set to this widget. Class names can either be set using the `class` property or by modifying the `classList` directly.
 
 ### id
+
 Type: *string*
 
 Direct access to the value of the property of the same name. May be used instead of `widget.get("id");` Do not use this field to change the value, instead use `widget.set("id", id);`.
 
 ### type
+
 Type: *string*
 
 The widget type without the 'tabris' namespace.

@@ -1,16 +1,19 @@
 ---
 ---
 # Switch
+
 A switch widget that can be toggled.
 Includes [Widget API](Widget.md)
 
 ## Properties
+
 ### selection
 Type: *boolean*, default: `false`
 
 The checked state of the switch.
 
 ## Events
+
 ### "change:selection" (widget, selection, options)
 
 **Parameters:** 

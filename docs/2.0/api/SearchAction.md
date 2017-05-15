@@ -41,9 +41,11 @@ The text in the search input field.
 ## Events
 
 ### accept
+
 Fired when a text input has been submitted by pressing the keyboard's search key.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -54,9 +56,11 @@ Fired when a text input has been submitted by pressing the keyboard's search key
 
 
 ### input
+
 Fired when the user inputs text.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 

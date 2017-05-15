@@ -38,6 +38,7 @@ This property affects the color of the progress indicator. Not supported on iOS.
 
 
 ## Example
+
 ```js
 // A progress bar that is animated using a timer
 

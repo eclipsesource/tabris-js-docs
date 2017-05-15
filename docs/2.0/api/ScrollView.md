@@ -81,9 +81,11 @@ The vertical scrolling position in dip.
 ## Events
 
 ### scrollX
+
 Fired while scrolling horizontally.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -94,9 +96,11 @@ Fired while scrolling horizontally.
 
 
 ### scrollY
+
 Fired while scrolling vertically.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -108,6 +112,7 @@ Fired while scrolling vertically.
 
 
 ## Example
+
 ```js
 // Create a horizontal scroll view and populate it with text views
 

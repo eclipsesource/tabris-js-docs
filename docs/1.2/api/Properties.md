@@ -1,9 +1,11 @@
 ---
 ---
 # Properties API
+
 Properties API supported by all widgets and various other objects.
 
 ## Methods
+
 ### get(property)
 
 
@@ -65,6 +67,7 @@ Sets all key-value pairs in the properties object as widget properties. Supports
 
 
 ## Events
+
 ### "change:{property}" (target, value, options)
 
 **Parameters:** 

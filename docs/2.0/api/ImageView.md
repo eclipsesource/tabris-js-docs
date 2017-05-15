@@ -36,9 +36,11 @@ A color to change the image appearance. All opaque parts of the image will be ti
 ## Events
 
 ### load
+
 Fired when the image loading has finished.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -50,6 +52,7 @@ Fired when the image loading has finished.
 
 
 ## Example
+
 ```js
 // Display images with different scale modes
 

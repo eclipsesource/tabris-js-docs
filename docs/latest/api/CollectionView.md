@@ -135,13 +135,16 @@ The message text displayed together with the refresh indicator. Currently not su
 ## Events
 
 ### refresh
+
 Fired when the user requested a refresh. An event listener should reset the *refreshIndicator* property when refresh is finished.
 
 
 ### scroll
+
 Fired while the collection view is scrolling.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -155,9 +158,11 @@ Fired while the collection view is scrolling.
 
 
 ### select
+
 Fired when a collection item is selected.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -172,6 +177,7 @@ Fired when a collection item is selected.
 
 
 ## Example
+
 ```js
 // Create a collection view, initialize its cells and fill it with items
 

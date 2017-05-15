@@ -42,9 +42,11 @@ Adds all widgets in the given collection to the composite.
 ## Events
 
 ### addchild
+
 Fired when a child is added to this widget.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -58,9 +60,11 @@ Fired when a child is added to this widget.
 
 
 ### removechild
+
 Fired when a child is removed from this widget.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -75,6 +79,7 @@ Fired when a child is removed from this widget.
 
 
 ## Example
+
 ```js
 // Create composites and append children to them
 

@@ -28,9 +28,11 @@ The label text of the radio button.
 ## Events
 
 ### change:checked
+
 Fired when the checked property changes.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -41,9 +43,11 @@ Fired when the checked property changes.
 
 
 ### select
+
 Fired when the radio button is selected or deselected by the user.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -55,6 +59,7 @@ Fired when the radio button is selected or deselected by the user.
 
 
 ## Example
+
 ```js
 // Create radio buttons with checked handlers
 

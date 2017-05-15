@@ -26,6 +26,7 @@ Offsets are given as a number.
 Percentages are given as a string, e.g. "50%".
 
 ### top, right, bottom, left
+
 Defines the position of the widget's edge.
 Accepted values:
 
@@ -37,6 +38,7 @@ Accepted values:
 
 
 ### centerX
+
 Defines the horizontal position of the widget relative to the parent's center.
 Accepted values:
 
@@ -45,6 +47,7 @@ Accepted values:
 This property cannot be used in combination with either of `left` and `right`.
 
 ### centerY
+
 Defines the vertical position of the widget relative to the parent's center.
 Accepted values:
 
@@ -53,6 +56,7 @@ Accepted values:
 This property cannot be used in combination with either of `top`, `bottom`, and `baseline`.
 
 ### baseline
+
 Defines the vertical position of the widget relative to another widget's text baseline.
 Accepted values:
 
@@ -65,12 +69,14 @@ For multiline texts, the platforms currently differ: Android aligns on the first
 This property cannot be used in combination with either of `top`, `bottom`, and `centerY`.
 
 ### width
+
 Defines the width of the widget.
 Accepted values:
 
 - *width*: the width of the widget in pixels
 
 ### height
+
 Defines the height of the widget.
 Accepted values:
 

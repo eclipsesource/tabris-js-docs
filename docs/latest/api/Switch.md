@@ -46,9 +46,11 @@ The color of the track that holds the thumb, when switched *on*.
 ## Events
 
 ### change:checked
+
 Fired when the checked property changes.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -59,9 +61,11 @@ Fired when the checked property changes.
 
 
 ### select
+
 Fired when the switch is toggled by the user.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -73,6 +77,7 @@ Fired when the switch is toggled by the user.
 
 
 ## Example
+
 ```js
 // Create a switch with a checked handler
 

@@ -27,6 +27,7 @@ The following Software needs to be installed:
 Create a directory with two files:
 
 ### package.json
+
 ```js
 {
   "main": "myapp.js",

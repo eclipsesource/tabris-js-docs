@@ -40,9 +40,11 @@ Controls how the tabs make use of the available horizontal space. Setting the `t
 ## Events
 
 ### change:selection
+
 Fired when the selection property changes.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -53,9 +55,11 @@ Fired when the selection property changes.
 
 
 ### scroll
+
 Fired when `paging` is enabled and a tab is scrolled. The `event` parameter contains position information relative to the currently selected `Tab`. Eg.: scrolling a 500px wide tab 10% to the left sets `offset` to `50`. Scrolling 10% to the right sets `offset` to `-50`.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -69,9 +73,11 @@ Fired when `paging` is enabled and a tab is scrolled. The `event` parameter cont
 
 
 ### select
+
 Fired when the selection property changes by user interaction.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -83,6 +89,7 @@ Fired when the selection property changes by user interaction.
 
 
 ## Example
+
 ```js
 // Create a swipe enabled tab folder with 3 tabs
 

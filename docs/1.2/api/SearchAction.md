@@ -1,24 +1,29 @@
 ---
 ---
 # SearchAction
+
 An action that displays a search text field with dynamic proposals when selected. Add a listener on *select* to implement the action. On *input*, you may set a list of *proposals*.
 Includes [Action](Action.md)
 
 ## Properties
+
 ### message
 Type: *string*
 
 A hint text that is displayed when the search input is empty.
 ### proposals
+
 Type: *[string]*, default: `[]`
 
 The list of proposals to display.
 ### text
+
 Type: *string*
 
 The text in the search input field.
 
 ## Events
+
 ### "accept" (widget, text, options)
 
 **Parameters:**
@@ -41,4 +46,5 @@ Fired the user inputs text.
 
 
 ## See also
+
 - [Search action snippet](https://github.com/eclipsesource/tabris-js/blob/v1.2.0/snippets/action-search/search-action.js)

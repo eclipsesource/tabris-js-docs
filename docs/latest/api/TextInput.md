@@ -88,9 +88,11 @@ The type of the text widget.<br/>This property can only be set on widget creatio
 ## Events
 
 ### accept
+
 Fired when a text input has been finished by pressing the keyboard's Enter key. The label of this key may vary depending on the platform and locale.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -101,13 +103,16 @@ Fired when a text input has been finished by pressing the keyboard's Enter key. 
 
 
 ### blur
+
 Fired when the widget lost focus.
 
 
 ### change:text
+
 Fired when the text property changes.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -118,13 +123,16 @@ Fired when the text property changes.
 
 
 ### focus
+
 Fired when the widget gains focus.
 
 
 ### input
+
 Fired when the text was changed by the user.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -136,6 +144,7 @@ Fired when the text was changed by the user.
 
 
 ## Example
+
 ```js
 // Create a text input field with input finished listener
 

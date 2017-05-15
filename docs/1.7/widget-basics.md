@@ -145,6 +145,7 @@ page.append(okButton, cancelButton);
 ```
 
 ### Traversing
+
 See also: [Selector API](selector.md)
 
 The current parent of a widget is returned by the [`parent`](api/Widget.md#parent) method,

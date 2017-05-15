@@ -45,9 +45,11 @@ The title of the dialog.
 ## Events
 
 ### close
+
 Fired when the dialog was closed for any reason.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -58,19 +60,23 @@ Fired when the dialog was closed for any reason.
 
 
 ### close:cancel
+
 Fired when the dialog was closed by pressing the 'cancel' button.
 
 
 ### close:neutral
+
 Fired when the dialog was closed by pressing the 'neutral' button.
 
 
 ### close:ok
+
 Fired when the dialog was closed by pressing the 'ok' button.
 
 
 
 ## Example
+
 ```js
 // AlertDialog example
 

@@ -80,6 +80,7 @@ Calls the given function with `param` (and all following parameters) after the s
 
 
 ## Example
+
 ```js
 new tabris.Button({
   centerX: 0, centerY: 0,

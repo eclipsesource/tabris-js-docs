@@ -21,6 +21,7 @@ All widgets support a property `layoutData` that defines how the widget should b
 > <img align="left" src="img/note.png"> <i>All layout attributes can also be set directly on the widget as a normal property. The advantage of using the `layoutData` property is that all currently set layout attributes not in the new `layoutData` object will be implicitly reset to null (i.e. "not specified").</i>
 
 ### top, right, bottom, left
+
 Defines the position of the widget's edge.
 Accepted values:
 
@@ -37,6 +38,7 @@ All **percentages** are provided as strings with a percent suffix, e.g. `"50%"`.
 **References to other widgets** can be given as a variable, a [selector string](selector.md) (filtering all siblings of the widget), or the symbolic reference `"prev()"` (used to refer to the preceding sibling). Widget references are resolved dynamically, that is, if a referenced widget is added or removed later, the layout will adjust. When a widget reference does not match any of the current siblings, it will be treated like an offset of zero.
 
 ### centerX
+
 Defines the horizontal position of the widget relative to the parent's center.
 Accepted values:
 
@@ -45,6 +47,7 @@ Accepted values:
 This property cannot be used in combination with either of `left` and `right`.
 
 ### centerY
+
 Defines the vertical position of the widget relative to the parent's center.
 Accepted values:
 
@@ -53,6 +56,7 @@ Accepted values:
 This property cannot be used in combination with either of `top`, `bottom`, and `baseline`.
 
 ### baseline
+
 Defines the vertical position of the widget relative to another widget's text baseline.
 Accepted values:
 
@@ -67,12 +71,14 @@ For multiline texts, the platforms currently differ: Android aligns on the first
 This property cannot be used in combination with either of `top`, `bottom`, and `centerY`.
 
 ### width
+
 Defines the width of the widget.
 Accepted values:
 
 - *width*: the width of the widget in device independent pixel
 
 ### height
+
 Defines the height of the widget.
 Accepted values:
 

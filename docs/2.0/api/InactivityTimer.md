@@ -27,11 +27,13 @@ The interval of user inactivity that will trigger the timer. Given in millisecon
 ## Events
 
 ### timeout
+
 Fired when the app has not been interacted with since the configured delay.
 
 
 
 ## Example
+
 ```js
 var timer = new tabris.InactivityTimer({
   delay: 2000

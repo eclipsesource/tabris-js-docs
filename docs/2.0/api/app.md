@@ -84,13 +84,16 @@ An alternative version number used in app stores to identify different versions 
 ## Events
 
 ### background
+
 Fired when the app becomes invisible. Either because another app is in the foreground or the user has returned to the home screen.
 
 
 ### backnavigation
+
 Fired when the back button is pressed on Android.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -101,23 +104,28 @@ Fired when the back button is pressed on Android.
 
 
 ### foreground
+
 The event is fired when the app starts or when it returns from the background.
 
 
 ### pause
+
 Fired when the app is not the interaction target of the user anymore. Usually preceded by `resume`.
 
 
 ### resume
+
 Fired when the app is visible and ready to interact with the user. The event is preceded by either `foreground` (the app becomes visible again) or `pause` (the app regains ability to interact with user).
 
 
 ### terminate
+
 Fired when the app is being destroyed. After this callback no more interaction with the app is possible.
 
 
 
 ## Example
+
 ```js
 // React to application hibernation, resume and back navigation
 

@@ -1,9 +1,11 @@
 ---
 ---
 # Events API
+
 Event handling API supported by widgets and various other objects.
 
 ## Methods
+
 ### off()
 
 

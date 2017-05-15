@@ -1,10 +1,12 @@
 ---
 ---
 # Composite
+
 An empty widget that can contain other widgets.
 Includes [Widget API](Widget.md)
 
 ## Methods
+
 ### append(child, child*)
 
 
@@ -30,6 +32,7 @@ Adds all widgets in the given collection to the composite.
 
 
 ## Events
+
 ### "addchild" (widget, child, options)
 
 **Parameters:** 

@@ -34,11 +34,13 @@ The button's label text.
 ## Events
 
 ### select
+
 Fired when the button is pressed.
 
 
 
 ## Example
+
 ```js
 // Create a push button that counts up on selection
 

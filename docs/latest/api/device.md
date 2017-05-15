@@ -91,9 +91,11 @@ On a PC this returns `"touch"` when in tablet mode, otherwise `"mouse"`. On phon
 ## Events
 
 ### change:orientation
+
 Fired when the `orientation` property has changed and the rotation animation has finished.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -105,6 +107,7 @@ Fired when the `orientation` property has changed and the rotation animation has
 
 
 ## Example
+
 ```js
 // Display available device information
 

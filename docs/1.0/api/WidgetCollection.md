@@ -1,6 +1,7 @@
 ---
 ---
 # WidgetCollection
+
 A `WidgetCollection` is an array-like object representing a set of widgets, as returned by the widget methods `children` and `find`.
 Includes [Events API](Events.md), [Properties API](Properties.md)
 
@@ -20,6 +21,7 @@ for(var i = 0; i < children.length; i++) {
 Calls to `set` or `animate` change the given properties for all widgets in the collection. Similarly, the `on`, `off` and `once` methods will add/remove the given listener to/from all widgets. When `get` is used, the value of the first widget in the collection is returned. 
 
 ## Methods
+
 ### animate(properties, options)
 
 
@@ -118,6 +120,7 @@ Returns a collection containing all direct parents of all widgets in this collec
 
 
 ## Fields
+
 ### length
 Type: *number*
 

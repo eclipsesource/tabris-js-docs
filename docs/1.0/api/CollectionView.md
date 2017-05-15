@@ -1,10 +1,12 @@
 ---
 ---
 # CollectionView
+
 A scrollable list that displays data items in cells, one per row. Cells are created on demand and filled with widgets in the *initializeCell* callback.
 Includes [Widget API](Widget.md)
 
 ## Methods
+
 ### insert(items)
 
 
@@ -72,32 +74,39 @@ Scrolls the item with the given index into view.
 
 
 ## Properties
+
 ### initializeCell
 Type: *function*
 
 A callback used to initialize a collection cell by attaching widget and *change:item* listener. Cells are created by the framework and recycled on scrolling. This callback receives the cell as the first argument.<br/>This property can only be set in the `tabris.create` method. It cannot be changed after widget creation.
 ### itemHeight
+
 Type: *number*
 
 The height of a collection cell.
 ### items
+
 Type: *Array*
 
 An array of data items to be displayed by the collection view. For dynamic content, use the methods `insert` and `remove` instead of setting this property directly.
 ### refreshEnabled
+
 Type: *boolean*, default: `false`
 
 Enables the user to trigger a refresh by using the pull-to-refresh gesture.
 ### refreshIndicator
+
 Type: *boolean*, default: `false`
 
 Whether the refresh indicator is currently visible. Will be set to `true` when a *refresh* event is triggered. Reset it to `false` when the refresh is finished.
 ### refreshMessage
+
 Type: *string*, default: `""`
 
 The message text displayed together with the refresh indicator. Currently not supported on Android.
 
 ## Events
+
 ### "refresh" (widget)
 
 **Parameters:**
@@ -118,4 +127,5 @@ Fired when a collection item is selected.
 
 
 ## See also
+
 - [CollectionView example](https://github.com/eclipsesource/tabris-js/blob/v1.0.0/snippets/collectionview/collectionview.js)

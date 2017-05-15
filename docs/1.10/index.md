@@ -7,11 +7,13 @@
 Tabris.js is a mobile framework that lets you develop native iOS and Android apps from a single code base written entirely in JavaScript. Tabris.js is a good choice when you are looking for native performance and look & feel while leveraging your JavaScript know-how. Tabris.js has been crafted with web APIs and extensibility on our minds. You can use existing JavaScript libraries and native extensions to extend the core functionality.
 
 ## For Beginners
+
 - [Getting Started](getting-started.md) - Create your first Tabris.js App
 - [Getting Started Ebook](https://tabrisjs.com/downloads/ebook/tabrisjs-1.10.0.pdf) - Create, deploy and test your first Tabris.js app (a detailed tutorial)
 - [The Tabris.js Developer App](developer-app.md) - Get the most out of our developer app
 
 ## Documentation
+
 - [Module System](modules.md) - How to organize and load scripts.
 - [Widget Basics](widget-basics.md) - Native widget handling.
 - [UI Model](ui.md) - Pages, Actions and Drawer.
@@ -37,6 +39,7 @@ Tabris.js is a mobile framework that lets you develop native iOS and Android app
 - [Property Types](types.md)
 
 ### Widgets
+
 - [Widget](api/Widget.md)
 - [Action](api/Action.md)
 - [ActivityIndicator](api/ActivityIndicator.md)
@@ -66,12 +69,14 @@ Tabris.js is a mobile framework that lets you develop native iOS and Android app
 - [WebView](api/WebView.md)
 
 ## Articles
+
 - [Apache Cordova vs. Tabris.js](http://eclipsesource.com/blogs/2015/03/02/apache-cordova-vs-tabris-js/) - How to use Cordova's build tooling to create Tabris.js apps.
 - [Debugging Tabris.js](http://eclipsesource.com/blogs/2015/04/17/debugging-tabris-js/) - How to debug a Tabris.js app running on Android using Eclipse.
 - [Layouting in Tabris.js](http://eclipsesource.com/blogs/2015/02/19/layouting-in-tabris-js/) - Layouting explained.
 - [CollectionView: Display Data Sets in Tabris.js](http://eclipsesource.com/blogs/2015/02/16/collectionview-display-data-sets-in-tabris-js/) - The power of the CollectionView in detail.
 
 ### Tabris.js Examples
+
 This blog post series takes a closer look at the examples.
 
 - [Hello World!](http://eclipsesource.com/blogs/2015/02/20/tabris-js-examples-hello-world/)
@@ -84,5 +89,6 @@ This blog post series takes a closer look at the examples.
 - [Network Access](http://eclipsesource.com/blogs/2015/04/24/tabris-js-examples-network-access/)
 
 ## Custom Widget Documentation (provisional)
+
 - [Custom Widgets](custom-widgets.md) - JavaScript implementation
 - [Custom Widgets - Android](custom-widgets-android.md) - Android implementation

@@ -1,20 +1,24 @@
 ---
 ---
 # Cell
+
 This widget represents a space in a *CollectionView* on which an item is displayed. Cell widgets are not created by the application but by the *CollectionView* widget.
 Includes [Composite](Composite.md)
 
 ## Properties
+
 ### item
 Type: *mixed*
 
 The item that is currently represented by this cell. This property is not set by the application but by the *CollectionView* widget.
 ### itemIndex
+
 Type: *number*
 
 The index of the item that is currently represented by this cell. This property is not set by the application but by the *CollectionView* widget.
 
 ## Events
+
 ### "change:item" (widget, item, options)
 
 **Parameters:**
@@ -37,4 +41,5 @@ Fired when the index of the assigned item changes, either by assigning a new ite
 
 
 ## See also
+
 - [CollectionView example](https://github.com/eclipsesource/tabris-js/blob/v1.4.0/snippets/collectionview/collectionview.js)

@@ -89,9 +89,11 @@ The URL of the video to play. Setting this property to any non-empty string chan
 ## Events
 
 ### change:state
+
 Fired when the state property changes.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -103,6 +105,7 @@ Fired when the state property changes.
 
 
 ## Example
+
 ```js
 var video = new tabris.Video({
   left: 0, top: 0, right: 0, bottom: '#button 16',

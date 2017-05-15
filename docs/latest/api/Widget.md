@@ -293,13 +293,16 @@ Controls the color scheme used for this widget. When set to `"default"` the them
 ## Events
 
 ### dispose
+
 Fired when the widget is about to be disposed. At this point the widget and its children are still accessible.
 
 
 ### longpress
+
 Fired after pressing a widget for a specific amount of time (about a second), and again on lifting the finger.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -313,9 +316,11 @@ Fired after pressing a widget for a specific amount of time (about a second), an
 
 
 ### pan
+
 Fired continuously after a finger touching the widget moved for a certain distance.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -335,9 +340,11 @@ Fired continuously after a finger touching the widget moved for a certain distan
 
 
 ### pan:down
+
 Fired when a finger starts moving down.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -357,9 +364,11 @@ Fired when a finger starts moving down.
 
 
 ### pan:left
+
 Fired when a finger starts moving left.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -379,9 +388,11 @@ Fired when a finger starts moving left.
 
 
 ### pan:right
+
 Fired when a finger starts moving right.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -401,9 +412,11 @@ Fired when a finger starts moving right.
 
 
 ### pan:up
+
 Fired when a finger starts moving up.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -423,9 +436,11 @@ Fired when a finger starts moving up.
 
 
 ### resize
+
 Fired when the widget's size has changed. You can use this event to apply new [*layoutData*](#layoutdata).
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -445,9 +460,11 @@ Fired when the widget's size has changed. You can use this event to apply new [*
 
 
 ### swipe:down
+
 Fired when a finger moves down quickly.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -458,9 +475,11 @@ Fired when a finger moves down quickly.
 
 
 ### swipe:left
+
 Fired when a finger moves left quickly.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -471,9 +490,11 @@ Fired when a finger moves left quickly.
 
 
 ### swipe:right
+
 Fired when a finger moves right quickly.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -484,9 +505,11 @@ Fired when a finger moves right quickly.
 
 
 ### swipe:up
+
 Fired when a finger moves up quickly.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -497,9 +520,11 @@ Fired when a finger moves up quickly.
 
 
 ### tap
+
 Fired once when a finger briefly touched the widget.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -510,9 +535,11 @@ Fired once when a finger briefly touched the widget.
 
 
 ### touchcancel
+
 Fired instead of touchend when the touch ends on another widget than it started on.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -526,9 +553,11 @@ Fired instead of touchend when the touch ends on another widget than it started 
 
 
 ### touchend
+
 Fired when a touch ends on the same widget than it started on.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -542,9 +571,11 @@ Fired when a touch ends on the same widget than it started on.
 
 
 ### touchmove
+
 Fired repeatedly while swiping across the screen.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -558,9 +589,11 @@ Fired repeatedly while swiping across the screen.
 
 
 ### touchstart
+
 Fired when a widget is touched. See [Touch Events](../touch.md).
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 

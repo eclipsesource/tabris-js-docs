@@ -11,6 +11,7 @@ Android | iOS
 Extends [Widget](Widget.md)
 
 ## Example
+
 ```js
 // Create the activity indicator centered in the page
 var activityIndicator = new tabris.ActivityIndicator({

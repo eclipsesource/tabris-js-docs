@@ -52,9 +52,11 @@ The index of the currently selected item.
 ## Events
 
 ### change:selection
+
 Fired when the selection property changes.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -65,9 +67,11 @@ Fired when the selection property changes.
 
 
 ### change:selectionIndex
+
 Fired when the selectionIndex property changes.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -78,9 +82,11 @@ Fired when the selectionIndex property changes.
 
 
 ### select
+
 Fired when an item was selected by the user.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -95,6 +101,7 @@ Fired when an item was selected by the user.
 
 
 ## Example
+
 ```js
 // Create a picker widget to select a string from a list
 

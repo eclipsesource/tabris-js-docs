@@ -1,21 +1,26 @@
 ---
 ---
 # Picker
+
 A widget with a drop-down list of items to choose from.
 Includes [Widget API](Widget.md)
 
 ## Properties
+
 ### items
 Type: *string[]*
 
 ### selection
+
 Type: *string*
 
 ### selectionIndex
+
 Type: *number*
 
 
 ## Events
+
 ### "change:selection" (widget, selection, options)
 
 **Parameters:**
@@ -48,4 +53,5 @@ Fired an item was selected by the user.
 
 
 ## See also
+
 - [Simple Picker snippet](https://github.com/eclipsesource/tabris-js/blob/v1.0.0/snippets/picker/picker.js)

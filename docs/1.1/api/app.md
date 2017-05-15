@@ -1,6 +1,7 @@
 ---
 ---
 # tabris.app
+
 The object `tabris.app` provides information about the application.
 Includes [Events API](Events.md)
 
@@ -13,6 +14,7 @@ tabris.app.on("pause", function() {
 ```
 
 ## Methods
+
 ### installPatch(url, callback)
 
 
@@ -37,6 +39,7 @@ Forces the running application to reload the main module and start over.
 
 
 ## Events
+
 ### "pause" (app)
 
 **Parameters:** 

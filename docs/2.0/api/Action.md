@@ -40,6 +40,7 @@ Allows to override the image of the Action with an MDL2 ("Metro Design Language 
 ## Events
 
 ### select
+
 Fired when the action is invoked.
 
 

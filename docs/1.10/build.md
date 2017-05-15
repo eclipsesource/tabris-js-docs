@@ -66,6 +66,7 @@ After your app has become valid, you are ready to execute the first build. Just 
 > <img align="left" src="img/note.png"> <i>The build service installs the dependencies specified in your package.json from npm (except devDependencies). As a result, you don't have to put the `node_modules` folder under version control.</i>
 
 ### Settings
+
 ![App Settings](img/build-app-settings.png)
 
 * **Repository URL:** This is the URL of your git repository. If you're using the free build, it should point to a GitHub repository. Users who are on the [Pro plan](https://tabrisjs.com/pricing/) can also use custom repository locations.
@@ -80,6 +81,7 @@ After your app has become valid, you are ready to execute the first build. Just 
 * **Debug:** Enables the *debug mode*. If set to `ON`, your app will be built including debug symbols and it will be packaged into the Tabris.js developer app to make development easier. This allows you to use all the benefits like the developer console or the reload also with your own app. Please be aware that debug versions can not be submitted to the app stores. Debug `OFF` means your app will be built to be ready for release: no developer app, no console, no reload. Only your JavaScript code is executed.
 
 ### Adding Plugins
+
 To add a set of Apache Cordova Plugins you only need to add them to the `config.xml`. The online build supports the Cordova `<plugin />` tag. This tag allows you to add plugins using an ID, an HTTP or a git URL. A sample `config.xml` including two Cordova plugins could look like this:
 ```xml
 <?xml version='1.0' encoding='utf-8'?>
@@ -99,9 +101,11 @@ To add a set of Apache Cordova Plugins you only need to add them to the `config.
 In addition to the settings described in the [Cordova config.xml Guide](http://cordova.apache.org/docs/en/edge/config_ref_index.md.html#The%20config.xml%20File), Tabris.js also takes the following modified/additional `config.xml` attributes into account. These attributes apply to both, the online and the local build.
 
 ### content
+
 The optional `<content>` element defines the app's starting page in ordinary Cordova apps. In Tabris.js you can use it to define the location of the `package.json` file within the `www` folder. E.g. `<content src="mySubFolder/package.json"/>`
 
 ### preferences
+
 Tabris.js accepts the following custom preferences:
 
 | Name                   | Allowed Values | Default Value | Description |

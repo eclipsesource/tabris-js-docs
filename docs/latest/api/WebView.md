@@ -38,9 +38,11 @@ The URL of the web page to display. Relative URLs are resolved relative to 'pack
 ## Events
 
 ### download
+
 Fired when the WebView requests a download. The download event provides the properties `url`, `mimeType`, `contentLength` and `contentDisposition`. Supported only on Android.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -60,13 +62,16 @@ Fired when the WebView requests a download. The download event provides the prop
 
 
 ### load
+
 Fired when the url has been loaded.
 
 
 ### message
+
 Fired when a web message has been sent via `window.parent.postMessage(message, targetOrigin)` from inside the `WebView`.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -77,9 +82,11 @@ Fired when a web message has been sent via `window.parent.postMessage(message, t
 
 
 ### navigate
+
 Fired when the WebView is about to navigate to a new URL.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -94,6 +101,7 @@ Fired when the WebView is about to navigate to a new URL.
 
 
 ## Example
+
 ```js
 // Create a web view to show a web page
 

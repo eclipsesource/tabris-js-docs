@@ -1,28 +1,34 @@
 ---
 ---
 # Picker
+
 A widget with a drop-down list of items to choose from.
 Includes [Widget](Widget.md)
 
 ## Properties
+
 ### itemText
 Type: *Function*
 
 A function that returns the string to display for a given data item. Defaults to mapping items to their default string representation.
 ### items
+
 Type: *any[]*
 
 An array of data items to be displayed by the picker. If the items aren't strings, the `itemText` property must be set to a function to extract item texts.
 ### selection
+
 Type: *any*
 
 The currently selected data item.
 ### selectionIndex
+
 Type: *number*
 
 The index of the currently selected item.
 
 ## Events
+
 ### "change:selection" (widget, selection, options)
 
 **Parameters:**
@@ -55,4 +61,5 @@ Fired an item was selected by the user.
 
 
 ## See also
+
 - [Simple Picker snippet](https://github.com/eclipsesource/tabris-js/blob/v1.8.0/snippets/picker/picker.js)

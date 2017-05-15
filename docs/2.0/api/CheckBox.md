@@ -28,9 +28,11 @@ The label text of the check box.
 ## Events
 
 ### change:checked
+
 Fired when the check box is checked or unchecked.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -41,9 +43,11 @@ Fired when the check box is checked or unchecked.
 
 
 ### select
+
 Fired when the check box is checked or unchecked by the user.
 
 #### Event Parameters 
+
 - **target**: *this*
     The widget the event was fired on.
 
@@ -55,6 +59,7 @@ Fired when the check box is checked or unchecked by the user.
 
 
 ## Example
+
 ```js
 // Create a check box with a checked handler
 

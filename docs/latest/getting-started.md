@@ -31,6 +31,7 @@ The following software needs to be installed:
 Create a directory with two files:
 
 #### package.json
+
 ```json
 {
   "main": "app.js",
@@ -76,6 +77,7 @@ Now you can start developing. You may want to have a look at the rest of the doc
 For submission to the App / Play Stores you will need to bundle, brand and build your app, either using the free online build service (on [tabrisjs.com](http://tabrisjs.com)) or using local build tools. This process is explained in [Build your app](build.md).
 
 ## Feedback
+
 Help us improve Tabris.js! [Feedback](mailto:care@tabrisjs.com?subject=Feedback) is always welcome. Feel free to invite your friends if you find Tabris.js interesting.
 
 [![Tabris.js on Twitter](img/social-logo-twitter.png)](https://twitter.com/tabrisjs) [![EclipseSource on LinkedIn](img/social-logo-linkedin.png)](https://www.linkedin.com/company/eclipsesource) [![EclipseSource on Google+](img/social-logo-gplus.png)](https://plus.google.com/+Eclipsesource) [![EclipseSource on Facebook](img/social-logo-facebook.png)](https://www.facebook.com/eclipsesource)
