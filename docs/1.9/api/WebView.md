@@ -72,5 +72,5 @@ Fired when the WebView is about to navigate to a new URL. Listeners can intercep
 ## See also
 
 - [Simple WebView snippet](https://github.com/eclipsesource/tabris-js/blob/v1.9.0/snippets/webview/webview.js)
-- [WebView snippet demonstrating web messaging](https://github.com/eclipsesource/tabris-js/blob/v1.9.0/snippets/webview-webmessage/webview-webmessage.js)
+- [WebView snippet demonstrating web messaging](https://github.com/eclipsesource/tabris-js/blob/v1.9.0/snippets/webview-webmessaging/webview-webmessaging.js)
 - [Web Messaging](https://en.wikipedia.org/wiki/Web_Messaging)
