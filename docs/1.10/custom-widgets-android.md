@@ -80,7 +80,7 @@ While we have instantiated our widget and passed it back to the system, it is no
 
 Since this is a very common scenario we don't have to implement this ourselves but rather rely on the pre-existing `com.eclipsesource.tabris.android.TabrisWidgetPropertyHandler`. The `TabrisWidgetPropertyHandler` implements the `TabrisPropertyHandler` interface which provides `get` and `set` methods to support various properties.
 
-The concrete `TabrisWidgetPropertyHandler` provides default implementations for [common widget properties](https://tabrisjs.com/documentation/latest/api/Widget#properties) like `parent`, `layoutData`, `visible` etc..
+The concrete `TabrisWidgetPropertyHandler` provides default implementations for [common widget properties](api/Widget#properties) like `parent`, `layoutData`, `visible` etc..
 
 To activate the property handler we override `TabrisOperator.getPropertyHandler()` and return the corresponding handler:
 

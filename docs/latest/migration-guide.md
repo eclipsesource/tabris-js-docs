@@ -15,7 +15,7 @@ However, the global `tabris` object is still available. If your app refers to Ta
 
 ## Navigation and pages
 
-Tabris 2.x has a new navigation concept that does not require pages as top-level containers anymore. Widgets can now be appended to the top-level `ui.contentView`. If you use pages, they need to be appended to a `NavigationView`. See [Navigation Patterns](https://tabrisjs.com/documentation/2.0/ui) for more information.
+Tabris 2.x has a new navigation concept that does not require pages as top-level containers anymore. Widgets can now be appended to the top-level `ui.contentView`. If you use pages, they need to be appended to a `NavigationView`. See [Navigation Patterns](../2.0/ui) for more information.
 
 For a simple migration, you could include this snippet:
 
@@ -60,7 +60,7 @@ The changes in detail:
 
 ## Events
 
-The API for event listeners has changed. Most notably, event listeners are now called with a single event parameter. All event objects have a `target` field that contains the object that received the event. Other properties of the event object are event-specific. Refer to the [documentation](https://tabrisjs.com/documentation/2.0/) for the properties available on the respective events.
+The API for event listeners has changed. Most notably, event listeners are now called with a single event parameter. All event objects have a `target` field that contains the object that received the event. Other properties of the event object are event-specific. Refer to the [documentation](../2.0/) for the properties available on the respective events.
 
 For example, the following snippet:
 
@@ -98,7 +98,7 @@ More changes to events:
 
 ## Widgets
 
-* The `tabris.create()` method has been removed. Widget constructors are now available under the `tabris` namespace. [Create widgets](https://tabrisjs.com/documentation/2.0/widget-basics#creating-native-widgets) using `new` instead, e.g. use:
+* The `tabris.create()` method has been removed. Widget constructors are now available under the `tabris` namespace. [Create widgets](../2.0/widget-basics#creating-native-widgets) using `new` instead, e.g. use:
 
 ```js
 new Button({centerX: 0, centerY: 0})
@@ -140,4 +140,4 @@ However, the `get()` and `set()` methods continue to work with a small adjustmen
 
 ## Custom widgets
 
-Custom widget API has changed. Refer to the [custom widget documentation](https://tabrisjs.com/documentation/2.0/custom-widgets) for more information.
+Custom widget API has changed. Refer to the [custom widget documentation](../2.0/custom-widgets) for more information.

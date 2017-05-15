@@ -23,5 +23,5 @@ Type: *string*
 The text to display.
 
 ## See also
-- [Simple Label snippet](https://github.com/eclipsesource/tabris-js/blob/master/snippets/label/label.js)
-- [Snippet for Label with markup](https://github.com/eclipsesource/tabris-js/blob/master/snippets/label-markup/label-markup.js)
+- [Simple Label snippet](https://github.com/eclipsesource/tabris-js/blob/v1.1.0/snippets/textview/textview.js)
+- [Snippet for Label with markup](https://github.com/eclipsesource/tabris-js/blob/v1.1.0/snippets/textview-markup/textview-markup.js)

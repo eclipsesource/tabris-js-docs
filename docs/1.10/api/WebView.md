@@ -11,7 +11,7 @@ Includes [Widget](Widget.md)
 
 
 
-**Parameters:** 
+**Parameters:**
 
 - message: *string*, the message to send. Currently supports only strings.
 - targetOrigin: *string*, the URL of the page that recieves the message. The message is only sent if the current document URL has the same scheme, domain and path. Use `*` to send to any URL.
@@ -41,7 +41,7 @@ The URL of the web page to display. Relative URLs are resolved relative to 'pack
 
 ### "download" (widget, event)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *this*
 - event: *Object*
@@ -51,7 +51,7 @@ Fired when the WebView requests a download. The download event provides the prop
 
 ### "load" (widget)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *this*
 
@@ -60,7 +60,7 @@ Fired when the url has been loaded.
 
 ### "message" (widget, event)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *this*
 - event: *{data: string}*
@@ -70,7 +70,7 @@ Fired when a web message has been send via `window.parent.postMessage(message, t
 
 ### "navigate" (widget, event)
 
-**Parameters:** 
+**Parameters:**
 
 - widget: *this*
 - event: *Object*
@@ -82,5 +82,5 @@ Fired when the WebView is about to navigate to a new URL. Listeners can intercep
 ## See also
 
 - [Simple WebView snippet](https://github.com/eclipsesource/tabris-js/tree/v1.10.0/snippets/webview/webview.js)
-- [WebView snippet demonstrating web messaging](https://github.com/eclipsesource/tabris-js/tree/v1.10.0/snippets/webview-webmessage/webview-webmessage.js)
+- [WebView snippet demonstrating web messaging](https://github.com/eclipsesource/tabris-js/tree/v1.10.0/snippets/webview-webmessaging/webview-webmessaging.js)
 - [Web Messaging](https://en.wikipedia.org/wiki/Web_Messaging)
