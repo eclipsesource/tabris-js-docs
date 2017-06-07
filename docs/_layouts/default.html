@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+  {% assign version = page.path | split:'/' | first %}
+  {% assign tocFile = 'toc-' | append: version | replace: ".", "-"  %}
+  {% assign toc = site.data[tocFile] %}
   <head>
     {% include header.html %}
   </head>
   <body>
-    <!-- sidebar -->
-    <div id="sidebar-nav">
-    </div>
+    <!-- header bar -->
+    {% include navbar.html version = version %}
 
-    <!-- main container -->
-    <div class="content">
-      <div id="pad-wrapper">
-        <div class="row">
+    <div class="container-fluid">
+      <div class="row">
 
-          <!-- side right column -->
-          <div class="col-md-4 col-sm-12 col-xs-12 sidebar pull-right">
-            {% include sidebar.html %}
-          </div>
+        <!-- side right column -->
+        <div class="col-sm-3 col-md-2 sidebar">
+          {% include sidebar-nav.html version = version toc = toc %}
+        </div>
 
-          <div class="col-md-8 col-sm-12 col-xs-12 with-sidebar pull-left">
-            <div class="markdown-body" id="doc-body">
-              {{ content }}
-            </div>
+        <!-- main container -->
+        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+          <div class="markdown-body" id="doc-body">
+            {{ content }}
           </div>
         </div>
       </div>
