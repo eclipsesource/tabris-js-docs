@@ -39,6 +39,58 @@ Allows to override the image of the Action with an MDL2 ("Metro Design Language 
 
 ## Events
 
+### change:image
+
+Fired when the [*image*](#image) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Image](../types.md#image)*
+    The new value of [*image*](#image).
+
+
+### change:placementPriority
+
+Fired when the [*placementPriority*](#placementPriority) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*placementPriority*](#placementPriority).
+
+
+### change:title
+
+Fired when the [*title*](#title) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*title*](#title).
+
+
+### change:win_symbol
+
+Fired when the [*win_symbol*](#win_symbol) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*win_symbol*](#win_symbol).
+
+
 ### select
 
 Fired when the action is invoked.
@@ -47,5 +99,5 @@ Fired when the action is invoked.
 
 ## See also
 
-- [Snippet for creating actions](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/navigationview-action.js)
-- [Actions - placement priorities](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/navigationview-action-placementpriority.js)
+- [Snippet for creating actions](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationview-action.js)
+- [Actions - placement priorities](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationview-action-placementpriority.js)

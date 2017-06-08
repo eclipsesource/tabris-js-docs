@@ -41,7 +41,7 @@ Adds all widgets in the given collection to the composite.
 
 ## Events
 
-### addchild
+### addChild
 
 Fired when a child is added to this widget.
 
@@ -57,9 +57,7 @@ Fired when a child is added to this widget.
     Denotes the position in the children list at which the child widget is added.
 
 
-
-
-### removechild
+### removeChild
 
 Fired when a child is removed from this widget.
 
@@ -81,25 +79,27 @@ Fired when a child is removed from this widget.
 ## Example
 
 ```js
+const {Composite, TextView, ui} = require('tabris');
+
 // Create composites and append children to them
 
-var composite1 = new tabris.Composite({
+let composite1 = new Composite({
   left: 0, top: 0, bottom: 0, right: '50%',
   background: '#f3f3f3'
-}).appendTo(tabris.ui.contentView);
+}).appendTo(ui.contentView);
 
-new tabris.TextView({
+new TextView({
   left: 0, right: 0, top: '50%',
   alignment: 'center',
   text: 'Composite 1'
 }).appendTo(composite1);
 
-var composite2 = new tabris.Composite({
+let composite2 = new Composite({
   left: [composite1, 0], top: 0, bottom: 0, right: 0,
   background: '#eaeaea'
-}).appendTo(tabris.ui.contentView);
+}).appendTo(ui.contentView);
 
-new tabris.TextView({
+new TextView({
   left: 0, right: 0, top: '50%',
   alignment: 'center',
   text: 'Composite 2'

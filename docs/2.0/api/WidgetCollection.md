@@ -11,9 +11,9 @@ It combines a subset of the JavaScript Array API with a subset of the Tabris.js 
 Example:
 
 ```js
-var children = page.children();
-for (var child of children) {
-  console.log(child.get('id'));
+let children = page.children();
+for (let child of children) {
+  console.log(child.id);
 }
 ```
 
@@ -25,8 +25,10 @@ Calls to `set` or `animate` change the given properties for all widgets in the c
 
 **Parameters:** 
 
-- properties: *{transform?: Transformation, opacity?: number}*, the properties and target values to animate.
-- options: *[AnimationOptions](../types.md#animationoptions)*, configures the animation itself.
+- properties: *{transform?: Transformation, opacity?: number}*
+  - the properties and target values to animate.
+- options: *[AnimationOptions](../types.md#animationoptions)*
+  - configures the animation itself.
 
 Animates all widgets in this collection.
 
@@ -34,27 +36,23 @@ Animates all widgets in this collection.
 
 **Parameters:** 
 
-- parent: *[Composite](Composite.md)*, the parent widget to append to.
+- parent: *[Composite](Composite.md)*
+  - the parent widget to append to.
 
 **Returns:** *this*
 
 Appends all widgets in this collection to the given parent widget.
 
-### children()
-
-**Returns:** *[WidgetCollection](WidgetCollection.md)*
-
-Returns a collection containing all children of all widgets in this collection.
-
 ### children(selector)
 
 **Parameters:** 
 
-- selector: *[Selector](../types.md#selector)*, a selector expression or a predicate function to filter the results.
+- selector: *[Selector](../types.md#selector)* [**Optional**]
+  - a selector expression or a predicate function to filter the results.
 
 **Returns:** *[WidgetCollection](WidgetCollection.md)*
 
-Same as `collection.children().filter(selector)`.
+Returns a collection containing all children of all widgets in this collection that match the given selector.
 
 ### dispose()
 
@@ -64,23 +62,19 @@ Disposes all widgets in this collection.
 
 **Parameters:** 
 
-- selector: *[Selector](../types.md#selector)*, a selector expression or a predicate function to filter the results.
+- selector: *[Selector](../types.md#selector)*
+  - a selector expression or a predicate function to filter the results.
 
 **Returns:** *[WidgetCollection](WidgetCollection.md)*
 
 Returns a new *WidgetCollection* containing all widgets in this collection that match the given selector.
 
-### find()
-
-**Returns:** *[WidgetCollection](WidgetCollection.md)*
-
-Returns a collection containing all descendants of all widgets in this collection.
-
 ### find(selector)
 
 **Parameters:** 
 
-- selector: *[Selector](../types.md#selector)*, a selector expression or a predicate function to filter the results.
+- selector: *[Selector](../types.md#selector)* [**Optional**]
+  - a selector expression or a predicate function to filter the results.
 
 **Returns:** *[WidgetCollection](WidgetCollection.md)*
 
@@ -96,7 +90,8 @@ Returns the first widget in the collection. Same as `collection[0]`.
 
 **Parameters:** 
 
-- callback: *(widget: Widget, index: number, collection: WidgetCollection) => void*, the function to call for each widget. The arguments are: *widget*, *index*, *collection*
+- callback: *(widget: Widget, index: number, collection: WidgetCollection) => void*
+  - the function to call for each widget. The arguments are: *widget*, *index*, *collection*
 
 Calls the given callback function once for each widget in the collection.
 
@@ -114,7 +109,8 @@ Returns the value of the given property of the first widget in this collection.
 
 **Parameters:** 
 
-- widget: *[Widget](Widget.md)*, the widget to search in the collection.
+- widget: *[Widget](Widget.md)*
+  - the widget to search in the collection.
 
 **Returns:** *boolean*
 
@@ -124,7 +120,8 @@ Returns `true` if the given widget is included in the collection, `false` otherw
 
 **Parameters:** 
 
-- widget: *[Widget](Widget.md)*, the widget to locate in the collection.
+- widget: *[Widget](Widget.md)*
+  - the widget to locate in the collection.
 
 **Returns:** *number*
 
@@ -136,37 +133,39 @@ Returns the index of the given widget within the collection, or `-1` if the widg
 
 Returns the last widget in the collection. Same as `collection[collection.length - 1]`.
 
-### off(event, listener, context?)
+### off(event, listener, context)
 
 **Parameters:** 
 
 - event: *string*
 - listener: *Function*
-- context?: *this*
+- context: *this* [**Optional**]
 
 **Returns:** *this*
 
 Removes the given listener from all widgets in this collection. See also `Widget.off()`.
 
-### on(event, listener, context?)
+### on(event, listener, context)
 
 **Parameters:** 
 
 - event: *string*
 - listener: *Function*
-- context?: *this*, in the listener function, `this` will point to this object.
+- context: *this* [**Optional**]
+  - in the listener function, `this` will point to this object.
 
 **Returns:** *this*
 
 Adds the given listener to all widgets in this collection. See also `Widget.on()`.
 
-### once(event, listener, context?)
+### once(event, listener, context)
 
 **Parameters:** 
 
 - event: *string*
 - listener: *Function*
-- context?: *this*, in the listener function, `this` will point to this object.
+- context: *this* [**Optional**]
+  - in the listener function, `this` will point to this object.
 
 **Returns:** *this*
 

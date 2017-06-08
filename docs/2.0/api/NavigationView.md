@@ -8,11 +8,16 @@ Extends [Composite](Composite.md)
 
 ## Methods
 
-### pages()
+### pages(selector)
+
+**Parameters:** 
+
+- selector: *[Selector](../types.md#selector)* [**Optional**]
+  - a selector expression or a predicate function to filter the results.
 
 **Returns:** *[WidgetCollection](WidgetCollection.md)*
 
-Returns the ordered list of pages on the page stack, with the bottommost page as the first and the topmost page as the last element. This method is similar to children(), but it does not contain children of other types than `Page`.
+Returns the ordered list of pages on the page stack, with the bottommost page as the first and the topmost page as the last element. Same as children(), but does not return children of other types than `Page`.
 
 
 ## Properties
@@ -27,19 +32,25 @@ The color used for action icons.
 
 Type: *[Color](../types.md#color)*
 
-The color used for action texts. Only applied on Android. IOS uses the `actionColor` to colorize the action text.
+The color used for action texts. Only applied on Android and Windows. IOS uses the `actionColor` to colorize the action text.
 
-### animated
+### bottomToolbarHeight
 
-Type: *boolean*, default: `true`
+Type: *number*
 
-Controls whether page transitions are animated.
+The height of the bottom toolbar. Is 0 if not visible or unsupported by the platform.
 
 ### drawerActionVisible
 
 Type: *boolean*
 
 Whether to display the so-called "Burger menu" to open the drawer.
+
+### pageAnimation
+
+Type: *string*, supported values: `default`, `none`, default: `default`
+
+Controls what animation to use when animating a page transition.
 
 ### titleTextColor
 
@@ -59,6 +70,12 @@ Type: *boolean*, default: `true`
 
 Whether the toolbar is visible.
 
+### topToolbarHeight
+
+Type: *number*
+
+The height of the top toolbar. Is 0 if not visible.
+
 ### win_drawerActionBackground
 
 Type: *[Color](../types.md#color)*
@@ -75,7 +92,7 @@ Controls the color scheme used for the drawer action. When set to `"default"` th
 
 Type: *string*, supported values: `light`, `dark`, `default`, default: `default`
 
-Controls the color scheme used for the toolbars overflow menu. When set to `"default"` the theme is inherited from the toolbar. Available only on Windows.
+Controls the color scheme used for the toolbar's overflow menu. When set to `"default"` the theme is inherited from the toolbar. Available only on Windows.
 
 ### win_toolbarTheme
 
@@ -84,8 +101,208 @@ Type: *string*, supported values: `light`, `dark`, `default`, default: `default`
 Controls the color scheme used for the toolbar. When set to `"default"` the theme is inherited from the NavigationView. Available only on Windows.
 
 
+## Events
+
+### bottomToolbarHeightChanged
+
+Fired when the height of the bottom toolbar changes, e.g. if it changes visibility.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new height
+
+
+### change:actionColor
+
+Fired when the [*actionColor*](#actionColor) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*actionColor*](#actionColor).
+
+
+### change:actionTextColor
+
+Fired when the [*actionTextColor*](#actionTextColor) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*actionTextColor*](#actionTextColor).
+
+
+### change:bottomToolbarHeight
+
+Fired when the [*bottomToolbarHeight*](#bottomToolbarHeight) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*bottomToolbarHeight*](#bottomToolbarHeight).
+
+
+### change:drawerActionVisible
+
+Fired when the [*drawerActionVisible*](#drawerActionVisible) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*drawerActionVisible*](#drawerActionVisible).
+
+
+### change:pageAnimation
+
+Fired when the [*pageAnimation*](#pageAnimation) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*pageAnimation*](#pageAnimation).
+
+
+### change:titleTextColor
+
+Fired when the [*titleTextColor*](#titleTextColor) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*titleTextColor*](#titleTextColor).
+
+
+### change:toolbarColor
+
+Fired when the [*toolbarColor*](#toolbarColor) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*toolbarColor*](#toolbarColor).
+
+
+### change:toolbarVisible
+
+Fired when the [*toolbarVisible*](#toolbarVisible) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*toolbarVisible*](#toolbarVisible).
+
+
+### change:topToolbarHeight
+
+Fired when the [*topToolbarHeight*](#topToolbarHeight) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*topToolbarHeight*](#topToolbarHeight).
+
+
+### change:win_drawerActionBackground
+
+Fired when the [*win_drawerActionBackground*](#win_drawerActionBackground) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*win_drawerActionBackground*](#win_drawerActionBackground).
+
+
+### change:win_drawerActionTheme
+
+Fired when the [*win_drawerActionTheme*](#win_drawerActionTheme) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*win_drawerActionTheme*](#win_drawerActionTheme).
+
+
+### change:win_toolbarOverflowTheme
+
+Fired when the [*win_toolbarOverflowTheme*](#win_toolbarOverflowTheme) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*win_toolbarOverflowTheme*](#win_toolbarOverflowTheme).
+
+
+### change:win_toolbarTheme
+
+Fired when the [*win_toolbarTheme*](#win_toolbarTheme) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*win_toolbarTheme*](#win_toolbarTheme).
+
+
+### topToolbarHeightChanged
+
+Fired when the height of the top toolbar changes, e.g. if it changes visibility.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new height
+
+
+
+
+
 ## See also
 
-- [Snippet with a NavigationView and Pages](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/navigationview-page-stacked.js)
-- [Snippet with a NavigationView and its various properties](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/navigationview-properties.js)
-- [Snippet with NavigationViews embedded in Tabs of a TabFolder](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/navigationview-tabfolder.js)
+- [Snippet with a NavigationView and Pages](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationview-page-stacked.js)
+- [Snippet with a NavigationView and its various properties](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationview-properties.js)
+- [Snippet with NavigationViews embedded in Tabs of a TabFolder](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationview-tabfolder.js)

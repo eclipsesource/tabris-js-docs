@@ -8,12 +8,22 @@ Extends [Widget](Widget.md)
 
 ## Methods
 
+### goBack()
+
+Navigate the `WebView` to the previous page if possible.
+
+### goForward()
+
+Navigate the `WebView` to the next page if possible.
+
 ### postMessage(message, targetOrigin)
 
 **Parameters:** 
 
-- message: *string*, the message to send. Currently supports only strings.
-- targetOrigin: *string*, the URL of the page that recieves the message. The message is only sent if the current document URL has the same scheme, domain and path. Use `*` to send to any URL.
+- message: *string*
+  - the message to send. Currently supports only strings.
+- targetOrigin: *string*
+  - the URL of the page that receives the message. The message is only sent if the current document URL has the same scheme, domain and path. Use `*` to send to any URL.
 
 **Returns:** *this*
 
@@ -21,6 +31,20 @@ Posts a web message to the underlying `window` object of the WebView. The websit
 
 
 ## Properties
+
+### canGoBack
+
+**read-only**<br/>
+Type: *boolean*
+
+Whether there is a previous to navigated to via `goBack()`.
+
+### canGoForward
+
+**read-only**<br/>
+Type: *boolean*
+
+Whether there is a next page to navigate to via `goForward()`.
 
 ### html
 
@@ -36,6 +60,58 @@ The URL of the web page to display. Relative URLs are resolved relative to 'pack
 
 
 ## Events
+
+### change:canGoBack
+
+Fired when the [*canGoBack*](#canGoBack) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*canGoBack*](#canGoBack).
+
+
+### change:canGoForward
+
+Fired when the [*canGoForward*](#canGoForward) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*canGoForward*](#canGoForward).
+
+
+### change:html
+
+Fired when the [*html*](#html) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*html*](#html).
+
+
+### change:url
+
+Fired when the [*url*](#url) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*url*](#url).
+
 
 ### download
 
@@ -59,13 +135,9 @@ Fired when the WebView requests a download. The download event provides the prop
     The URL of the resource to be downloaded.
 
 
-
-
 ### load
 
 Fired when the url has been loaded.
-
-
 ### message
 
 Fired when a web message has been sent via `window.parent.postMessage(message, targetOrigin)` from inside the `WebView`.
@@ -79,8 +151,6 @@ Fired when a web message has been sent via `window.parent.postMessage(message, t
     The sent message.
 
 
-
-
 ### navigate
 
 Fired when the WebView is about to navigate to a new URL.
@@ -91,7 +161,7 @@ Fired when the WebView is about to navigate to a new URL.
     The widget the event was fired on.
 
 - **preventDefault**: *() => void*
-    Call to intercept the navigation.
+    Call to intercept the navigation.  Not possible when the event is only an anchor navigation
 
 - **url**: *string*
     The new URL the WebView is about to navigate to.
@@ -103,26 +173,29 @@ Fired when the WebView is about to navigate to a new URL.
 ## Example
 
 ```js
+const {TextInput, WebView, ui} = require('tabris');
+
 // Create a web view to show a web page
 
-var urlInput = new tabris.TextInput({
+let urlInput = new TextInput({
   left: 8, right: 8, top: 8,
   message: 'Enter URL...',
   text: 'http://en.wikipedia.org'
-}).on('accept', loadUrl).appendTo(tabris.ui.contentView);
+}).on('accept', loadUrl)
+  .appendTo(ui.contentView);
 
-var webview = new tabris.WebView({
-  layoutData: {left: 0, top: [urlInput, 8], right: 0, bottom: 0}
-}).appendTo(tabris.ui.contentView);
+let webView = new WebView({
+  left: 0, top: 'prev() 8', right: 0, bottom: 0
+}).appendTo(ui.contentView);
 
 function loadUrl() {
-  webview.url = urlInput.text;
+  webView.url = urlInput.text;
 }
 
 loadUrl();
 ```
 ## See also
 
-- [Simple WebView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/webview.js)
-- [WebView snippet demonstrating web messaging](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/webview-webmessaging.js)
+- [Simple WebView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/webview.js)
+- [WebView snippet demonstrating web messaging](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/webview-webmessaging.js)
 - [Web Messaging](https://en.wikipedia.org/wiki/Web_Messaging)

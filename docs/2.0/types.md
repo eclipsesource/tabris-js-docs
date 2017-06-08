@@ -35,7 +35,7 @@ The height of the widget in dip
 
 Example:
 ```js
-var buttonWidth = button.get("bounds").width;
+let buttonWidth = button.bounds.width;
 ```
 
 See also [Layout](layout.md).
@@ -53,8 +53,10 @@ The new value of the changed property.
 
 Colors are specified as strings using one of the following formats:
 
-* `#xxxxxx`
-* `#xxx`
+* `#xxxxxx` Hexadecimal rgb
+* `#xxx` Hexadecimal rgb
+* `#xxxxxxxx` Hexadecimal rgba
+* `#xxxx` Hexadecimal rgba
 * `rgb(r, g, b)` with `r`, `g` and `b` being numbers in the range 0..255.
 * `rgba(r, g, b, a)` with `a` being a number in the range 0..1.
 * a [color name](http://www.w3.org/TR/css3-color/#html4) from the CSS3 specification.
@@ -66,6 +68,8 @@ Examples:
 ```js
 "#f00"
 "#ff0000"
+"#ff000080" // 50% opacity red
+"#ff06" // 40% opacity yellow
 "rgb(255, 0, 0)"
 "rgba(255, 0, 0, 0.8)"
 "red"

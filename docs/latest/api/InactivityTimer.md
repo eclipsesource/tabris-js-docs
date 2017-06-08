@@ -4,6 +4,8 @@
 
 A timer that triggers when the app has not been interacted with for a configurable interval.
 
+Extends [NativeObject](NativeObject.md)
+
 ## Methods
 
 ### cancel()
@@ -26,6 +28,19 @@ The interval of user inactivity that will trigger the timer. Given in millisecon
 
 ## Events
 
+### change:delay
+
+Fired when the [*delay*](#delay) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*delay*](#delay).
+
+
 ### timeout
 
 Fired when the app has not been interacted with since the configured delay.
@@ -35,30 +50,30 @@ Fired when the app has not been interacted with since the configured delay.
 ## Example
 
 ```js
-var timer = new tabris.InactivityTimer({
-  delay: 2000
-}).on('timeout', function() {
-  label.text = 'inactive!';
-});
+const {Button, InactivityTimer, TextView, ui} = require('tabris');
 
-var label = new tabris.TextView({
+let timer = new InactivityTimer({
+  delay: 2000
+}).on('timeout', () => label.text = 'inactive!');
+
+let label = new TextView({
   centerX: 0, top: 16,
   text: ''
-}).appendTo(tabris.ui.contentView);
+}).appendTo(ui.contentView);
 
-new tabris.Button({
+new Button({
   centerX: 0, top: 'prev()',
   text: 'Start'
-}).on('select', function() {
+}).on('select', () => {
   timer.start();
   label.text = 'started';
-}).appendTo(tabris.ui.contentView);
+}).appendTo(ui.contentView);
 
-new tabris.Button({
+new Button({
   centerX: 0, top: 'prev()',
   text: 'Cancel'
-}).on('select', function() {
+}).on('select', () => {
   timer.cancel();
   label.text = 'cancelled';
-}).appendTo(tabris.ui.contentView);
+}).appendTo(ui.contentView);
 ```

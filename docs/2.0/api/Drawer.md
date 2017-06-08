@@ -33,12 +33,12 @@ Controls whether the drawer can be opened and closed. When set to `false`, the d
 
 Type: *string*, supported values: `overlay`, `compactOverlay`, `inline`, `compactInline`, default: `overlay`
 
-Controls how the drawer integrates in to its targetView. 
+Controls how the drawer integrates into its targetView. 
 
-- `overlay` completely hides the drawer when closed and overlays other content when opend.
-- `compactOverlay` makes the drawer partially visible when closed so a 48px wide bar remains side-by-side with the targetViews other content. If a drawer-action controls the drawer it is placed inside this bar. When the drawer is opend its remaining width overlays the targetViews other content.
-- `inline` completely hides the drawer when closed, but shows it side-by-side with the targetView when opend. The drawer does not close automatically in this mode.
-- `compactInline` makes the drawer partially visible when closed (like `compactOverlay`), but shows it side-by-side with the targetView when opend (like `inline`).
+- `overlay` completely hides the drawer when closed and overlays other content when opened.
+- `compactOverlay` makes the drawer partially visible when closed so a 48px wide bar remains side-by-side with the targetViews other content. If a drawer-action controls the drawer it is placed inside this bar. When the drawer is opened its remaining width overlays the targetViews other content.
+- `inline` completely hides the drawer when closed, but shows it side-by-side with the targetView when opened. The drawer does not close automatically in this mode.
+- `compactInline` makes the drawer partially visible when closed (like `compactOverlay`), but shows it side-by-side with the targetView when opened (like `inline`).
 
 Available only on windows.
 
@@ -51,11 +51,48 @@ This property may be set to an instance of NavigationView to make its drawer-act
 
 ## Events
 
+### change:enabled
+
+Fired when the [*enabled*](#enabled) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*enabled*](#enabled).
+
+
+### change:win_displayMode
+
+Fired when the [*win_displayMode*](#win_displayMode) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*win_displayMode*](#win_displayMode).
+
+
+### change:win_targetView
+
+Fired when the [*win_targetView*](#win_targetView) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Widget](Widget.md)*
+    The new value of [*win_targetView*](#win_targetView).
+
+
 ### close
 
 Fired when the drawer is closed and has reached its resting position.
-
-
 ### open
 
 Fired when the drawer is opened and has reached its resting position.
@@ -65,29 +102,28 @@ Fired when the drawer is opened and has reached its resting position.
 ## Example
 
 ```js
+const {TextView, ui} = require('tabris');
+
 // Enable the drawer and append a widget to it
 
-var drawer = tabris.ui.drawer;
+let drawer = ui.drawer;
 
 drawer.enabled = true;
 
-drawer.on('open', function() {
-  console.log('drawer opened');
-}).on('close', function() {
-  console.log('drawer closed');
-});
+drawer.on('open', () => console.log('drawer opened'))
+  .on('close', () => console.log('drawer closed'));
 
-var arrow = String.fromCharCode(8592);
-createLabel(arrow + ' Swipe from left or tap here').on('tap', function() {
-  drawer.open();
-}).appendTo(tabris.ui.contentView);
+let arrow = String.fromCharCode(8592);
+createLabel(arrow + ' Swipe from left or tap here')
+  .on('tap', () => drawer.open())
+  .appendTo(ui.contentView);
 
-createLabel('Thank you!').on('tap', function() {
-  drawer.close();
-}).appendTo(drawer);
+createLabel('Thank you!')
+  .on('tap', () => drawer.close())
+  .appendTo(drawer);
 
 function createLabel(text) {
-  return new tabris.TextView({
+  return new TextView({
     left: 10, centerY: 0,
     text: text,
     font: '22px Arial'
@@ -96,5 +132,5 @@ function createLabel(text) {
 ```
 ## See also
 
-- [Snippet for creating a Drawer](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/drawer.js)
-- [Example for Drawer-based navigation](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/drawer-pages.js)
+- [Snippet for creating a Drawer](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/drawer.js)
+- [Example for Drawer-based navigation](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/drawer-pages.js)

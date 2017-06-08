@@ -30,12 +30,18 @@ Type: *number*, default: `0`
 
 The actual value.
 
+### tintColor
+
+Type: *[Color](../types.md#color)*
+
+The color used to display the current selection.
+
 
 ## Events
 
-### change:selection
+### change:maximum
 
-Fired when the selection property changes.
+Fired when the [*maximum*](#maximum) property changes.
 
 #### Event Parameters 
 
@@ -43,9 +49,46 @@ Fired when the selection property changes.
     The widget the event was fired on.
 
 - **value**: *number*
-    The new value of the `selection` property.
+    The new value of [*maximum*](#maximum).
 
 
+### change:minimum
+
+Fired when the [*minimum*](#minimum) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*minimum*](#minimum).
+
+
+### change:selection
+
+Fired when the [*selection*](#selection) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*selection*](#selection).
+
+
+### change:tintColor
+
+Fired when the [*tintColor*](#tintColor) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*tintColor*](#tintColor).
 
 
 ### select
@@ -61,30 +104,44 @@ Fired when the selection property is changed by the user.
     The new value of *[selection](#selection)*.
 
 
+### selectionChanged
+
+Fired when the selection property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of the `selection` property.
+
+
 
 
 
 ## Example
 
 ```js
+const {Slider, TextView, ui} = require('tabris');
+
 // Create a slider with a selection handler
 
-var textView = new tabris.TextView({
+let textView = new TextView({
   left: 10, right: 10, top: '30%',
   alignment: 'center',
   font: '22px sans-serif',
   text: '50'
-}).appendTo(tabris.ui.contentView);
+}).appendTo(ui.contentView);
 
-new tabris.Slider({
+new Slider({
   left: 50, top: [textView, 20], right: 50,
   minimum: -50,
   selection: 50,
   maximum: 150
-}).on('change:selection', function({value}) {
-  textView.text = value;
-}).appendTo(tabris.ui.contentView);
+}).on('selectionChanged', ({value}) => textView.text = value)
+  .appendTo(ui.contentView);
 ```
 ## See also
 
-- [Simple Slider snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/slider.js)
+- [Simple Slider snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/slider.js)

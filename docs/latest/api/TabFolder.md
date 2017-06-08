@@ -36,12 +36,37 @@ Type: *string*, supported values: `fixed`, `scrollable`, default: `fixed`
 
 Controls how the tabs make use of the available horizontal space. Setting the `tabMode` to `"fixed"` makes the tabs span the entire available space. In case of a very wide `TabFolder` the `"fixed"` mode centers the tabs. The mode `"scrollable"` left aligns the tabs and allows to scroll the tabs if there are more tabs than would fit in the available space. Available on Android only.<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
 
+### textColor
+
+Type: *[Color](../types.md#color)*
+
+The color used for the text of the tab headers.
+
+### win_tabBarTheme
+
+Type: *string*, supported values: `light`, `dark`, `default`, default: `default`
+
+Controls the color scheme used for the tabBar. When set to `"default"` the theme is inherited from the TabFolder. Available only on Windows.
+
 
 ## Events
 
+### change:paging
+
+Fired when the [*paging*](#paging) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*paging*](#paging).
+
+
 ### change:selection
 
-Fired when the selection property changes.
+Fired when the [*selection*](#selection) property changes.
 
 #### Event Parameters 
 
@@ -49,9 +74,33 @@ Fired when the selection property changes.
     The widget the event was fired on.
 
 - **value**: *[Tab](Tab.md)*
-    The new value of the `selection` property.
+    The new value of [*selection*](#selection).
 
 
+### change:textColor
+
+Fired when the [*textColor*](#textColor) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*textColor*](#textColor).
+
+
+### change:win_tabBarTheme
+
+Fired when the [*win_tabBarTheme*](#win_tabBarTheme) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*win_tabBarTheme*](#win_tabBarTheme).
 
 
 ### scroll
@@ -70,8 +119,6 @@ Fired when `paging` is enabled and a tab is scrolled. The `event` parameter cont
     The current value of the `selection` property.
 
 
-
-
 ### select
 
 Fired when the selection property changes by user interaction.
@@ -85,39 +132,52 @@ Fired when the selection property changes by user interaction.
     The new value of *selection*.
 
 
+### selectionChanged
+
+Fired when the selection property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Tab](Tab.md)*
+    The new value of the `selection` property.
+
+
 
 
 
 ## Example
 
 ```js
+const {Tab, TabFolder, TextView, ui} = require('tabris');
+
 // Create a swipe enabled tab folder with 3 tabs
 
-var tabFolder = new tabris.TabFolder({
+let tabFolder = new TabFolder({
   left: 0, top: 0, right: 0, bottom: 0,
   paging: true // enables swiping. To still be able to open the developer console in iOS, swipe from the bottom right.
-}).appendTo(tabris.ui.contentView);
-
-var createTab = function(title, image, seletedImage) {
-  var tab = new tabris.Tab({
-    title: title, // converted to upper-case on Android
-    image: {src: image, scale: 2},
-    selectedImage: {src: seletedImage, scale: 2}
-  }).appendTo(tabFolder);
-  new tabris.TextView({
-    centerX: 0, centerY: 0,
-    text: 'Content of Tab ' + title
-  }).appendTo(tab);
-};
+}).appendTo(ui.contentView);
 
 createTab('Cart', 'images/cart.png', 'images/cart-filled.png');
 createTab('Pay', 'images/card.png', 'images/card-filled.png');
 createTab('Statistic', 'images/chart.png', 'images/chart-filled.png');
 
-tabFolder.on('change:selection', function({value: tab}) {
-  console.log(tab.title);
-});
+tabFolder.on('selectionChanged', ({value: tab}) => console.log(tab.title));
+
+function createTab(title, image, seletedImage) {
+  let tab = new Tab({
+    title: title, // converted to upper-case on Android
+    image: {src: image, scale: 2},
+    selectedImage: {src: seletedImage, scale: 2}
+  }).appendTo(tabFolder);
+  new TextView({
+    centerX: 0, centerY: 0,
+    text: 'Content of Tab ' + title
+  }).appendTo(tab);
+}
 ```
 ## See also
 
-- [Snippet with a TabFolder and Tabs](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/tabfolder.js)
+- [Snippet with a TabFolder and Tabs](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/tabfolder.js)

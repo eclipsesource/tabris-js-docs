@@ -2,7 +2,7 @@
 ---
 # AlertDialog
 
-A `AlertDialog` represents a native dialog pop-up showing a message and up to three buttons. It is placed on top of any other API, but is not a widget itself.
+An `AlertDialog` represents a native dialog pop-up showing a message and up to three buttons. It is placed on top of any other API, but is not a widget itself.
 
 Extends [NativeObject](NativeObject.md)
 
@@ -44,6 +44,45 @@ The title of the dialog.
 
 ## Events
 
+### change:buttons
+
+Fired when the [*buttons*](#buttons) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *{ok?: string, cancel?: string, neutral?: string}*
+    The new value of [*buttons*](#buttons).
+
+
+### change:message
+
+Fired when the [*message*](#message) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*message*](#message).
+
+
+### change:title
+
+Fired when the [*title*](#title) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*title*](#title).
+
+
 ### close
 
 Fired when the dialog was closed for any reason.
@@ -57,19 +96,13 @@ Fired when the dialog was closed for any reason.
     The type of button that was used to close the dialog. Can also be an empty string, e.g. when the global back button was pressed.
 
 
-
-
-### close:cancel
+### closeCancel
 
 Fired when the dialog was closed by pressing the 'cancel' button.
-
-
-### close:neutral
+### closeNeutral
 
 Fired when the dialog was closed by pressing the 'neutral' button.
-
-
-### close:ok
+### closeOk
 
 Fired when the dialog was closed by pressing the 'ok' button.
 
@@ -78,48 +111,51 @@ Fired when the dialog was closed by pressing the 'ok' button.
 ## Example
 
 ```js
+const {AlertDialog, Button, ui} = require('tabris');
+
 // AlertDialog example
 
-new tabris.Button({
+new Button({
   left: 16, top: 'prev() 16', right: 16,
   text: 'Show simple dialog'
-}).on('select', function () {
-  new tabris.AlertDialog({
+}).on('select', () => {
+  new AlertDialog({
     message: 'Your comment has been saved.',
-    buttons: {'ok': 'Acknowledge'}
+    buttons: {ok: 'Acknowledge'}
   }).open();
-}).appendTo(tabris.ui.contentView);
+}).appendTo(ui.contentView);
 
-new tabris.Button({
+new Button({
   left: 16, top: 'prev() 16', right: 16,
   text: 'Show full featured dialog'
-}).on('select', function() {
-  new tabris.AlertDialog({
+}).on('select', () => {
+  new AlertDialog({
     title: 'Conflict while saving',
     message: 'How do you want to resolve the conflict?',
     buttons: {
-      'ok': 'Replace',
-      'cancel': 'Discard',
-      'neutral': 'Keep editing'
+      ok: 'Replace',
+      cancel: 'Discard',
+      neutral: 'Keep editing'
     }
-  }).on('close:ok', function() {console.log('Replace');})
-    .on('close:neutral', function() {console.log('Keep editing');})
-    .on('close:cancel', function() {console.log('Discard');})
-    .on('close', function({button}) {console.log('Dialog closed: ' + button);})
-    .open();
-}).appendTo(tabris.ui.contentView);
+  }).on({
+    closeOk: () => console.log('Replace'),
+    closeNeutral: () => console.log('Keep editing'),
+    closeCancel: () => console.log('Discard'),
+    close: ({button}) => console.log('Dialog closed: ' + button)
+  }).open();
+}).appendTo(ui.contentView);
 
-new tabris.Button({
+new Button({
   left: 16, top: 'prev() 16', right: 16,
   text: 'Show self closing dialog'
-}).on('select', function() {
-  var alertDialog = new tabris.AlertDialog({
+}).on('select', () => {
+  let alertDialog = new AlertDialog({
     message: 'This dialogs closes in 3 seconds.',
-    buttons: {'ok': 'OK'}
+    buttons: {ok: 'OK'}
   }).open();
-  setTimeout(function() {alertDialog.close();}, 3000);
-}).appendTo(tabris.ui.contentView);
+  setTimeout(() => alertDialog.close(), 3000);
+}).appendTo(ui.contentView);
 ```
 ## See also
 
-- [Simple AlertDialog snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/alertdialog.js)
+- [Simple AlertDialog snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/alertdialog.js)

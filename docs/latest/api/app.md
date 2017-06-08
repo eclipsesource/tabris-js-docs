@@ -2,14 +2,12 @@
 ---
 # app
 
-The object `tabris.app` provides information about the application.
+Provides information about the application.
 
 Example:
 
 ```js
-tabris.app.on("pause", function() {
-  saveMyData();
-});
+app.on("pause", () => pauseVideo());
 ```
 
 Extends [NativeObject](NativeObject.md)
@@ -20,7 +18,8 @@ Extends [NativeObject](NativeObject.md)
 
 **Parameters:** 
 
-- path: *string*, the path of a resource relative to the application root.
+- path: *string*
+  - the path of a resource relative to the application root.
 
 **Returns:** *string*
 
@@ -30,8 +29,10 @@ Returns the URL for a given resource that is bundled with the app. Can be used t
 
 **Parameters:** 
 
-- url: *string*, the URL to fetch a patch from.
-- callback: *(error: Error|null, patch: any|null) => void*, a callback function to be called when the installation has finished or failed. In case of a failure, the callback will receive a parameter `error` that contains an Error object. If the installation succeeds, this parameter will be `null` and a second parameter will contain the parsed content of the file `patch.json` from the installed patch.
+- url: *string*
+  - the URL to fetch a patch from.
+- callback: *(error: Error|null, patch: any|null) => void*
+  - a callback function to be called when the installation has finished or failed. In case of a failure, the callback will receive a parameter `error` that contains an Error object. If the installation succeeds, this parameter will be `null` and a second parameter will contain the parsed content of the file `patch.json` from the installed patch.
 
 **Note:** this API is provisional and may change in a future release.
 
@@ -86,9 +87,7 @@ An alternative version number used in app stores to identify different versions 
 ### background
 
 Fired when the app becomes invisible. Either because another app is in the foreground or the user has returned to the home screen.
-
-
-### backnavigation
+### backNavigation
 
 Fired when the back button is pressed on Android.
 
@@ -101,23 +100,67 @@ Fired when the back button is pressed on Android.
     Call to suppress the default back navigation behavior.
 
 
+### change:id
+
+Fired when the [*id*](#id) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*id*](#id).
+
+
+### change:pinnedCertificates
+
+Fired when the [*pinnedCertificates*](#pinnedCertificates) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *any[]*
+    The new value of [*pinnedCertificates*](#pinnedCertificates).
+
+
+### change:version
+
+Fired when the [*version*](#version) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*version*](#version).
+
+
+### change:versionCode
+
+Fired when the [*versionCode*](#versionCode) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*versionCode*](#versionCode).
 
 
 ### foreground
 
 The event is fired when the app starts or when it returns from the background.
-
-
 ### pause
 
 Fired when the app is not the interaction target of the user anymore. Usually preceded by `resume`.
-
-
 ### resume
 
 Fired when the app is visible and ready to interact with the user. The event is preceded by either `foreground` (the app becomes visible again) or `pause` (the app regains ability to interact with user).
-
-
 ### terminate
 
 Fired when the app is being destroyed. After this callback no more interaction with the app is possible.
@@ -127,51 +170,51 @@ Fired when the app is being destroyed. After this callback no more interaction w
 ## Example
 
 ```js
+const {Composite, TextView, Button, app, ui} = require('tabris');
+
 // React to application hibernation, resume and back navigation
 
-var paused = 0;
+let paused = 0;
 
-createTextView('Id', tabris.app.id);
-createTextView('Version', tabris.app.version);
-createTextView('Version Code', tabris.app.versionCode);
+createTextView('Id', app.id);
+createTextView('Version', app.version);
+createTextView('Version Code', app.versionCode);
 
-new tabris.Composite({
+new Composite({
   left: 0, top: 'prev() 16', right: 0,
   height: 1,
   background: '#E8E8E8'
-}).appendTo(tabris.ui.contentView);
+}).appendTo(ui.contentView);
 
-var label = new tabris.TextView({
+let label = new TextView({
   left: 16, top: 'prev() 16', right: 16,
   font: 'italic 14px',
   text: 'You can press home and reopen the app to it to see how long you were away.'
-}).appendTo(tabris.ui.contentView);
+}).appendTo(ui.contentView);
 
-new tabris.Button({
+new Button({
   left: 16, right: 16, bottom: 16,
   text: 'Reload app'
-}).on('select', function() {
-  tabris.app.reload();
-}).appendTo(tabris.ui.contentView);
+}).on('select', () => app.reload())
+  .appendTo(ui.contentView);
 
 
-tabris.app.on('pause', function() {
-  paused = Date.now();
-}).on('resume', function() {
-  if (paused > 0) {
-    var diff = Date.now() - paused;
-    label.text = ' Welcome back!\n You were gone for ' + (diff / 1000).toFixed(1) + ' seconds.';
-  }
-});
+app.on('pause', () => paused = Date.now())
+  .on('resume', () => {
+    if (paused > 0) {
+      let diff = Date.now() - paused;
+      label.text = ' Welcome back!\n You were gone for ' + (diff / 1000).toFixed(1) + ' seconds.';
+    }
+  });
 
-tabris.app.on('backnavigation', function(event) {
+app.on('backNavigation', (event) => {
   event.preventDefault();
   label.text = 'Back navigation prevented.';
 });
 
 function createTextView(key, value) {
-  var composite = new tabris.Composite({left: 16, top: 'prev() 8', right: 16}).appendTo(tabris.ui.contentView);
-  new tabris.TextView({text: key}).appendTo(composite);
-  new tabris.TextView({text: value, left: 128}).appendTo(composite);
+  let composite = new Composite({left: 16, top: 'prev() 8', right: 16}).appendTo(ui.contentView);
+  new TextView({text: key}).appendTo(composite);
+  new TextView({text: value, left: 128}).appendTo(composite);
 }
 ```

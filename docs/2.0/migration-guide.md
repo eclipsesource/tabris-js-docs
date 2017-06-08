@@ -15,7 +15,7 @@ However, the global `tabris` object is still available. If your app refers to Ta
 
 ## Navigation and pages
 
-Tabris 2.x has a new navigation concept that does not require pages as top-level containers anymore. Widgets can now be appended to the top-level `ui.contentView`. If you use pages, they need to be appended to a `NavigationView`. See [Navigation Patterns](../2.0/ui) for more information.
+Tabris 2.x has a new navigation concept that does not require pages as top-level containers anymore. Widgets can now be appended to the top-level `ui.contentView`. If you use pages, they need to be appended to a `NavigationView`. See [Navigation Patterns](https://tabrisjs.com/documentation/2.0/ui) for more information.
 
 For a simple migration, you could include this snippet:
 
@@ -60,7 +60,7 @@ The changes in detail:
 
 ## Events
 
-The API for event listeners has changed. Most notably, event listeners are now called with a single event parameter. All event objects have a `target` field that contains the object that received the event. Other properties of the event object are event-specific. Refer to the [documentation](../2.0/) for the properties available on the respective events.
+The API for event listeners has changed. Most notably, event listeners are now called with a single event parameter. All event objects have a `target` field that contains the object that received the event. Other properties of the event object are event-specific. Refer to the [documentation](https://tabrisjs.com/documentation/2.0/) for the properties available on the respective events.
 
 For example, the following snippet:
 
@@ -93,18 +93,76 @@ More changes to events:
 
 * Calling `off()` without arguments or with a single argument is not supported anymore.
 * Calling `on(event, listener)` or `once(event, listener)` multiple times with identical parameters will register the listener only once.
+
+### Event names and properties
+
+* Gesture events have been renamed to camel case, so that e.g. `swipe:left` becomes `swipeLeft`, `pan:horizontal` becomes `panHorizontal` etc.
+* Touch events have been renamed to camel case as well, e.g. `touchstart` becomes `touchStart`.
+* The events `addchild` and `removechild` have been renamed to camel case, i.e. `addChild` and `removeChild`.
+* The event `backnavigation` on `tabris.app` has been renamed to `backNavigation`.
+* Change events are now named after the pattern `<property>Changed`. For example, the event `change:text` becomes `textChanged` etc.
+* The variants of the `close` event on `AlertDialog` have been renamed from `close:ok`, `close:cancel` and `close:neutral` to `closeOk`, `closeCancel`, and `closeNeutral`.
 * The events `animationstart` and `animationend` have been removed, use the Promise returned by `animate()`.
-* The properties `pageX` and `pageY` that was available on touch events have been renamed to `absoluteX` and `absoluteY`.
+* On touch events, the properties `pageX` and `pageY` have been renamed to `absoluteX` and `absoluteY`. Moreover, `time` has been replaced by `timeStamp`.
+* On pan events, the property `translation` has been replaced by individual properties `translationX` and `translationY`. Likewise, `velocity` has been replaced by `velocityX` and `velocityY`.
 
 ## Widgets
 
-* The `tabris.create()` method has been removed. Widget constructors are now available under the `tabris` namespace. [Create widgets](../2.0/widget-basics#creating-native-widgets) using `new` instead, e.g. use:
+* The `tabris.create()` method has been removed. Widget constructors are now available under the `tabris` namespace. [Create widgets](https://tabrisjs.com/documentation/2.0/widget-basics#creating-native-widgets) using `new` instead, e.g. use:
 
 ```js
 new Button({centerX: 0, centerY: 0})
 ```
 
 * The property `Widget.type` has been removed. This property used to contain the widget type, e.g. `'Button'`. Use `widget.constructor.name` instead. The `toString()` method now also returns the widget constructor name.
+
+### New CollectionView API
+
+The CollectionView has a new API based on item *indexes* instead of the items itself.
+This gives the developer more control over binding different types of models to a CollectionView.
+
+To begin with, the `items` property has been replaced by a new property `itemCount` that controls the number of items to be displayed.
+To add or remove items at runtime, the methods `insert()` and `remove()` can be used, however, `insert()` now expects and item count instead of an array.
+
+The cells of a CollectionView must now be created by the application in the callback `createCell`, which replaces the `initializeCell` callback.
+Any type of widget can be used as a cell. The type Cell has become obsolete and was removed. Example:
+
+```js
+function createCell(type) {
+  return new TextView({
+    font: type === 'header' ? 'bold 18px' : '14px'
+  });
+}
+```
+
+Instead of the `change:item` event, the cells are now populated in a dedicated `updateCell` callback that receives the cell view and the item index to show:
+
+```js
+function updateCell(cell, index) {
+  cell.text = items[index].name;
+}
+```
+
+The property `itemHeight` has been renamed to `cellHeight` for consistency.
+
+### New Picker API
+
+The Picker API now follows the same approach as CollectionView, it works on item count and indexes rather than an array of strings.
+
+The property `items` has been replaced by `itemCount`.
+The property `selection` that accepted the selected item has been removed in favor of the existing property `selectionIndex`.
+The `select` event does not contain a `selection` property anymore, only `index`.
+
+The `itemText` callback is now required to provide a text for a given item. This callback is now called with an `index` instead of an item.
+
+Example:
+```js
+let items = ['Apples', 'Oranges', 'Banana'];
+new Picker({
+  itemCount: items.length,
+  itemText: index => items[index]
+});
+```
 
 ### Stateful buttons
 
@@ -140,4 +198,4 @@ However, the `get()` and `set()` methods continue to work with a small adjustmen
 
 ## Custom widgets
 
-Custom widget API has changed. Refer to the [custom widget documentation](../2.0/custom-widgets) for more information.
+Custom widget API has changed. Refer to the [custom widget documentation](https://tabrisjs.com/documentation/2.0/custom-widgets) for more information.

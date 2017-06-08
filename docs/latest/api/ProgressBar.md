@@ -36,23 +36,31 @@ Type: *string*, supported values: `normal`, `paused`, `error`, default: `normal`
 
 This property affects the color of the progress indicator. Not supported on iOS.
 
+### tintColor
+
+Type: *[Color](../types.md#color)*
+
+The color used to display the current progress.
+
 
 ## Example
 
 ```js
+const {ProgressBar, ui} = require('tabris');
+
 // A progress bar that is animated using a timer
 
-var progressBar = new tabris.ProgressBar({
+let progressBar = new ProgressBar({
   left: 15, right: 15, centerY: 0,
   maximum: 300,
   selection: 100
-}).appendTo(tabris.ui.contentView);
+}).appendTo(ui.contentView);
 
-setInterval(function() {
-  var selection = progressBar.selection + 1;
+setInterval(() => {
+  let selection = progressBar.selection + 1;
   progressBar.selection = selection > 300 ? 0 : selection;
 }, 20);
 ```
 ## See also
 
-- [Simple ProgressBar snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/progressbar.js)
+- [Simple ProgressBar snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/progressbar.js)

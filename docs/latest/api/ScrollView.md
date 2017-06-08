@@ -12,43 +12,27 @@ Extends [Composite](Composite.md)
 
 ## Methods
 
-### scrollToX(offset)
-
-**Parameters:** 
-
-- offset: *number*, the offset to scroll to in dip.
-
-**Returns:** *this*
-
-Scrolls to the given horizontal offset using an animation. Has no effect on a vertical `ScrollView`
-
 ### scrollToX(offset, options)
 
 **Parameters:** 
 
-- offset: *number*, the offset to scroll to in dip.
-- options: *{animate?: boolean}*, an additional object to control the animation. Set `{animate: false}` to scroll without an animation.
+- offset: *number*
+  - the offset to scroll to in dip.
+- options: *{animate?: boolean}* [**Optional**]
+  - an additional object to control the animation. Set to `{animate: false}` to scroll without an animation.
 
 **Returns:** *this*
 
 Scrolls to the given horizontal offset. Give `{animate: false}` as the second parameter to suppress the animation.
 
-### scrollToY(offsetY)
+### scrollToY(offset, options)
 
 **Parameters:** 
 
-- offsetY: *number*, the offset to scroll to in dip.
-
-**Returns:** *this*
-
-Scrolls to the given vertical offset using an animation. Has no effect on a horizontal `ScrollView`
-
-### scrollToY(offsetY, options)
-
-**Parameters:** 
-
-- offsetY: *number*, the offset to scroll to in dip.
-- options: *{animate?: boolean}*, an additional object to control the animation. Set `{animate: false}` to scroll without an animation.
+- offset: *number*
+  - the offset to scroll to in dip.
+- options: *{animate?: boolean}* [**Optional**]
+  - an additional object to control the animation. Set to `{animate: false}` to scroll without an animation.
 
 **Returns:** *this*
 
@@ -80,6 +64,32 @@ The vertical scrolling position in dip.
 
 ## Events
 
+### change:offsetX
+
+Fired when the [*offsetX*](#offsetX) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*offsetX*](#offsetX).
+
+
+### change:offsetY
+
+Fired when the [*offsetY*](#offsetY) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*offsetY*](#offsetY).
+
+
 ### scrollX
 
 Fired while scrolling horizontally.
@@ -91,8 +101,6 @@ Fired while scrolling horizontally.
 
 - **offset**: *number*
     Indicates the current horizontal scrolling position.
-
-
 
 
 ### scrollY
@@ -114,30 +122,31 @@ Fired while scrolling vertically.
 ## Example
 
 ```js
+const {Button, ScrollView, TextView, ui} = require('tabris');
+
 // Create a horizontal scroll view and populate it with text views
 
-var scrollView = new tabris.ScrollView({
+let scrollView = new ScrollView({
   left: 0, right: 0, top: '40%', bottom: '40%',
   direction: 'horizontal',
   background: '#234'
-}).appendTo(tabris.ui.contentView);
+}).appendTo(ui.contentView);
 
-for (var i = 0; i <= 50; i++) {
-  new tabris.TextView({
+for (let i = 0; i <= 50; i++) {
+  new TextView({
     left: i * 30 + 20, centerY: 0, width: 30,
     textColor: 'white',
     text: i + '°'
   }).appendTo(scrollView);
 }
 
-new tabris.Button({
+new Button({
   left: 16, bottom: 16,
   text: 'scroll'
-}).on('select', function() {
-  scrollView.scrollToX(310);
-}).appendTo(tabris.ui.contentView);
+}).on('select', () => scrollView.scrollToX(310))
+  .appendTo(ui.contentView);
 ```
 ## See also
 
-- [Simple ScrollView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/scrollview.js)
-- [Example using a ScrollView](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/examples/parallax/parallax.js)
+- [Simple ScrollView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/scrollview.js)
+- [Example using a ScrollView](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/examples/parallax/parallax.js)

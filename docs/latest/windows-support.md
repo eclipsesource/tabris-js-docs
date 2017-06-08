@@ -2,31 +2,47 @@
 ---
 # Notes on Windows 10 Support
 
+## Developer App
+
+The developer app for Windows can run – without emulation or Windows SDK – on the same machine that you use for Tabris.js app development. When doing so you should know a few things:
+
+1. The mouse does not always replace a touchscreen. Some gestures will not be recognized using mouse input. Owners of laptop/tablet hybrid devices have an advantage here.
+
+2. The one-finger-edge-swipe gesture to open the developer console won’t work: That gesture is reserved by the OS to open the action center. As a replacement, you can use the mouse or a pen to do the gesture, use two finger to do it (may require more precision), or simply press F12 on your keyboard.
+
+3. Loopback addresses (`localhost`, `127.0.0.1`) do not work out-of-the-box. To allow the developer app to access a tabris http-server running on the same machine, you need to enable it once using this command in an admin command prompt window:
+
+`CheckNetIsolation.exe LoopbackExempt -a -p="S-1-15-2-2113086592-2161398931-2814723024-3165814665-986162242-220195364-2881192403"`
+
+
 ## API
 
 Windows 10 (UWP/Store Apps) support was added in Tabris.js 2.0 and is still catching up to the other platforms in terms of API support. It also features a few APIs specific to Windows. These are prefixed with `win_` and documented in the API reference.
 
-The following classes and objects are not yet supported on Windows:
- - `crypto`
- - `app`
- - `WebSocket`
- - `SearchAction`
- - `ui.statusBar`
- - `ui.navigationBar`
+The following APIs are not yet supported on Windows:
+  - `SearchAction`
+  - `ui.statusBar`
+  - `ui.navigationBar`
+  - `Drawer`: Events `open` and `close`.
+  - `Button`: Property `alignment`. (Button content is always centered.)
+  - `CollectionView`: Properties `refreshEnabled`, and `columnCount`.
+  - `ImageView`: Property `tintColor`.
+  - `NavigationView`: Properties `toolbarVisible` and `animated`. (Both behave as if `true`.)
+  - `ScrollView`: Methods `scrollToX` and `scrollToY`. Event `scrollX`.
+  - `Tab`: Properties `badge`, `image` and `selectedImage`.
+  - `TabFolder`: Property `paging`. (Behaves as if always `true`.)
+  - `TextInput`: Properties `alignment`, `autoCapitalize`, `editable`, `fillColor`, `borderColor`, `keepFocus`, `focused`. `type` is partially supported. (Can not be set to `search`).
+  - `TextView`: Properties `maxLines`, `selectable` and `lineSpacing`.
+  - `ToggleButton`: Properties `image` and `alignment`. (Content is always centered.)
+  - `WebView`: Events `download` and `message`. Method `postMessage`.
 
- The following Classes and objects are currently only partially supported:
-  - `Drawer`: No `open` and `close` events fired.
-  - `Button`: Property `alignment` is ignored. Button content is always centered.
-  - `CollectionView`: Methods `insert`, `refresh`, `remove` and `reveal`, as well as the properties `refreshEnabled` and `columnCount` are ignored.
-  - `ImageView`: Property `tintColor` is ignored.
-  - `NavigationView`: Properties `toolbarVisible` and `animated` are ignored. Both behave as if `true`.
-  - `ScrollView`: Methods `scrollToX` and `scrollToY` have no effect.
-  - `Tab`: Properties `badge`, `image` and `selectedImage` are ignored. Only the title is displayed.
-  - `TabFolder`: Property `paging` is ignored, behaves as if always `true`.
-  - `TextInput`: Properties `alignment`, `autoCapitalize`, `editable`, `fillColor`, `borderColor`, `keepFocus` are ignored. Setting `type` to `search` has no effect, but `password` and `multiline` work. `focused` is unsupported and will not reflect whether or not the field is actually focused. However, **all events are supported**, including `focus` and `blur`.
-  - `TextView`: Properties `maxLines`, `selectable` and `lineSpacing` are ignored.
-  - `ToggleButton`: Properties `image` and `alignment` are ignored. The content is always centered.
-  - `WebView`: No `download` or `message` events are fired. The `postMessage` method has no effect.
+There are also some APIs only supported on Windows which are prefixed with `win_`:
+ - `device`: Properties `win_keyboardPresent` and `win_primariyInput`.
+ - `Widget`: Property `win_theme`.
+ - `Action`: Property `win_symbol`.
+ - `Drawer`: Properties `win_targetView` and `win_displayMode`.
+ - `NavigationView`: Properties `win_toolbarTheme`, `win_toolbarOverflowTheme`, `win_drawerActionTheme` and `win_drawerActionBackground`.
+ - `TabFolder`: Property `win_tabBarTheme`.
 
 ## Sideloading apps on Windows 10 (PC):
 
@@ -59,7 +75,6 @@ The other option is to install the app from a Windows PC. This requires the Wind
  - Enter `"C:\Program Files (x86)\Windows Kits\10\bin\x86\WinAppDeployCmd.exe" devices`
  - Copy the GUID of your phone.
  - Enter `"C:\Program Files (x86)\Windows Kits\10\bin\x86\WinAppDeployCmd.exe" install -file "<path-to-your-appxbundle>" -g <GUID-of-your-phone>`
-
 
 ## Generating keys for the Windows Store
  - To create an `appxupload` file that is accepted by the Windows Store you will need to sign it using a `.pfx` file specific to your Windows Store account. This requires the tools `makecert.exe` and `pvk2pfx.exe`. If you have Visual Studio 2016 (or just the Windows 10 SDK) installed you can find it in `C:\Program Files (x86)\Windows Kits\10\bin\x64\`. If not you can [download a standalone SDK from Microsoft](https://developer.microsoft.com/en-us/windows/downloads/windows-10-sdk). 

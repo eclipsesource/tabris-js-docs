@@ -47,6 +47,71 @@ The color of the track that holds the thumb, when switched *on*.
 
 ### change:checked
 
+Fired when the [*checked*](#checked) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*checked*](#checked).
+
+
+### change:thumbOffColor
+
+Fired when the [*thumbOffColor*](#thumbOffColor) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*thumbOffColor*](#thumbOffColor).
+
+
+### change:thumbOnColor
+
+Fired when the [*thumbOnColor*](#thumbOnColor) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*thumbOnColor*](#thumbOnColor).
+
+
+### change:trackOffColor
+
+Fired when the [*trackOffColor*](#trackOffColor) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*trackOffColor*](#trackOffColor).
+
+
+### change:trackOnColor
+
+Fired when the [*trackOnColor*](#trackOnColor) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*trackOnColor*](#trackOnColor).
+
+
+### checkedChanged
+
 Fired when the checked property changes.
 
 #### Event Parameters 
@@ -56,8 +121,6 @@ Fired when the checked property changes.
 
 - **value**: *boolean*
     The new value of the `checked` property.
-
-
 
 
 ### select
@@ -79,29 +142,31 @@ Fired when the switch is toggled by the user.
 ## Example
 
 ```js
+const {Button, Switch, TextView, ui} = require('tabris');
+
 // Create a switch with a checked handler
 
-var MARGIN = 16;
+let MARGIN = 16;
 
-new tabris.Switch({
+new Switch({
   left: MARGIN, top: MARGIN,
   id: 'switch',
   checked: true
-}).on('change:checked', function({value: checked}) {
-  tabris.ui.contentView.find('#stateView').first().text = checked ? 'State: checked' : 'State: unchecked';
-}).appendTo(tabris.ui.contentView);
+}).on('checkedChanged', ({value: checked}) => {
+  ui.contentView.find('#stateView').first().text = checked ? 'State: checked' : 'State: unchecked';
+}).appendTo(ui.contentView);
 
-new tabris.TextView({
+new TextView({
   left: ['#switch', MARGIN], baseline: '#switch',
   id: 'stateView',
   text: 'State: checked'
-}).appendTo(tabris.ui.contentView);
+}).appendTo(ui.contentView);
 
-new tabris.Button({
+new Button({
   left: MARGIN, top: ['#switch', MARGIN],
   text: 'Toggle Switch'
-}).on('select', function() {
-  var switcher = tabris.ui.contentView.find('#switch').first();
+}).on('select', () => {
+  let switcher = ui.contentView.find('#switch').first();
   switcher.checked = !switcher.checked;
-}).appendTo(tabris.ui.contentView);
+}).appendTo(ui.contentView);
 ```

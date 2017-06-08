@@ -48,31 +48,39 @@ Type: *string*
 
 The text to display.
 
+### textColor
+
+Type: *[Color](../types.md#color)*
+
+The color of the text.
+
 
 ## Example
 
 ```js
+const {TextView, ui} = require('tabris');
+
 // Create text views with different alignments
 
-new tabris.TextView({
+new TextView({
   left: 10, top: 10, right: 10,
   text: 'Left',
   alignment: 'left'
-}).appendTo(tabris.ui.contentView);
+}).appendTo(ui.contentView);
 
-new tabris.TextView({
+new TextView({
   left: 10, top: 'prev() 10', right: 10,
   text: 'Center',
   alignment: 'center'
-}).appendTo(tabris.ui.contentView);
+}).appendTo(ui.contentView);
 
-new tabris.TextView({
+new TextView({
   left: 10, top: 'prev() 10', right: 10,
   text: 'Right',
   alignment: 'right'
-}).appendTo(tabris.ui.contentView);
+}).appendTo(ui.contentView);
 ```
 ## See also
 
-- [Simple TextView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/textview.js)
-- [Snippet for TextView with markup](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/textview-markup.js)
+- [Simple TextView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/textview.js)
+- [Snippet for TextView with markup](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/textview-markupenabled.js)

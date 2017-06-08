@@ -2,16 +2,14 @@
 ---
 # device
 
-The object `tabris.device` provides information about the device that executes the application.
+Provides information about the device that executes the application.
 
 Example:
 
 ```js
-var lang = tabris.device.get("language");
+let lang = device.language;
 
-tabris.device.on("change:orientation", function(event) {
-  console.log("new orientation:", event.value);
-});
+device.on("orientationChanged", ({value: orientation}) => console.log("new orientation: ", orientation));
 ```
 
 Extends [NativeObject](NativeObject.md)
@@ -43,7 +41,7 @@ The device orientation. One of `portrait-primary`, `portrait-secondary`, `landsc
 
 Type: *string*, supported values: `Android`, `iOS`, `windows`
 
-The name of the platform. Currently either `"Android"` or `"iOS"`. This property is also available globally as `device.platform`.
+The name of the platform. Currently either `"Android"`, `"iOS"`, or `"windows"`. This property is also available globally as `device.platform`.
 
 ### scaleFactor
 
@@ -71,7 +69,7 @@ The entire width of the device's screen in device independent pixel. Depends on 
 **read-only**<br/>
 Type: *string*
 
-The platform version. On iOS it lools like this: `"8.1.1"`. On Android, the [version code](https://developer.android.com/reference/android/os/Build.VERSION_CODES.html) is returned. This property is also available globally as `device.version`.
+The platform version. On iOS it looks like this: `"8.1.1"`. On Android, the [version code](https://developer.android.com/reference/android/os/Build.VERSION_CODES.html) is returned. This property is also available globally as `device.version`.
 
 ### win_keyboardPresent
 
@@ -90,7 +88,137 @@ On a PC this returns `"touch"` when in tablet mode, otherwise `"mouse"`. On phon
 
 ## Events
 
+### change:language
+
+Fired when the [*language*](#language) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*language*](#language).
+
+
+### change:model
+
+Fired when the [*model*](#model) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*model*](#model).
+
+
 ### change:orientation
+
+Fired when the [*orientation*](#orientation) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*orientation*](#orientation).
+
+
+### change:platform
+
+Fired when the [*platform*](#platform) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*platform*](#platform).
+
+
+### change:scaleFactor
+
+Fired when the [*scaleFactor*](#scaleFactor) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*scaleFactor*](#scaleFactor).
+
+
+### change:screenHeight
+
+Fired when the [*screenHeight*](#screenHeight) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*screenHeight*](#screenHeight).
+
+
+### change:screenWidth
+
+Fired when the [*screenWidth*](#screenWidth) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*screenWidth*](#screenWidth).
+
+
+### change:version
+
+Fired when the [*version*](#version) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*version*](#version).
+
+
+### change:win_keyboardPresent
+
+Fired when the [*win_keyboardPresent*](#win_keyboardPresent) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*win_keyboardPresent*](#win_keyboardPresent).
+
+
+### change:win_primaryInput
+
+Fired when the [*win_primaryInput*](#win_primaryInput) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*win_primaryInput*](#win_primaryInput).
+
+
+### orientationChanged
 
 Fired when the `orientation` property has changed and the rotation animation has finished.
 
@@ -109,17 +237,19 @@ Fired when the `orientation` property has changed and the rotation animation has
 ## Example
 
 ```js
+const {TextView, device, ui} = require('tabris');
+
 // Display available device information
 
-['platform', 'version', 'model', 'language', 'orientation'].forEach(function(property) {
-  new tabris.TextView({
+['platform', 'version', 'model', 'language', 'orientation'].forEach((property) => {
+  new TextView({
     id: property,
     left: 10, right: 10, top: 'prev() 10',
-    text: property + ': ' + tabris.device[property]
-  }).appendTo(tabris.ui.contentView);
+    text: property + ': ' + device[property]
+  }).appendTo(ui.contentView);
 });
 
-tabris.device.on('change:orientation', function({value: orientation}) {
-  tabris.ui.contentView.find('#orientation').set('text', 'orientation: ' + orientation);
+device.on('orientationChanged', ({value: orientation}) => {
+  ui.contentView.find('#orientation').set('text', 'orientation: ' + orientation);
 });
 ```

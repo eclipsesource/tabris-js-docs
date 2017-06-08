@@ -42,6 +42,12 @@ Type: *boolean*, default: `true`
 
 Whether the text can be edited or not.
 
+### enterKeyType
+
+Type: *string*, supported values: `default`, `done`, `next`, `send`, `search`, `go`, default: `default`
+
+Label or icon to display on the keyboard 'confirmation' key. The key press can be captured via the `accept` event. Setting an `enterKeyType` other than `default` will change the key behavior to not close the keyboard automatically. The developer is able close the keyboard by removing the focus from the `TextInput`.
+
 ### fillColor
 
 Type: *[Color](../types.md#color)*
@@ -78,6 +84,12 @@ Type: *string*
 
 The text in the input field.
 
+### textColor
+
+Type: *[Color](../types.md#color)*
+
+The color of the text.
+
 ### type
 
 Type: *string*, supported values: `default`, `password`, `search`, `multiline`, default: `default`
@@ -100,14 +112,195 @@ Fired when a text input has been finished by pressing the keyboard's Enter key. 
     The current value of *[text](#text)*.
 
 
-
-
 ### blur
 
 Fired when the widget lost focus.
+### change:alignment
+
+Fired when the [*alignment*](#alignment) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*alignment*](#alignment).
+
+
+### change:autoCapitalize
+
+Fired when the [*autoCapitalize*](#autoCapitalize) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*autoCapitalize*](#autoCapitalize).
+
+
+### change:autoCorrect
+
+Fired when the [*autoCorrect*](#autoCorrect) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*autoCorrect*](#autoCorrect).
+
+
+### change:borderColor
+
+Fired when the [*borderColor*](#borderColor) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*borderColor*](#borderColor).
+
+
+### change:editable
+
+Fired when the [*editable*](#editable) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*editable*](#editable).
+
+
+### change:enterKeyType
+
+Fired when the [*enterKeyType*](#enterKeyType) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*enterKeyType*](#enterKeyType).
+
+
+### change:fillColor
+
+Fired when the [*fillColor*](#fillColor) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*fillColor*](#fillColor).
+
+
+### change:focused
+
+Fired when the [*focused*](#focused) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*focused*](#focused).
+
+
+### change:keepFocus
+
+Fired when the [*keepFocus*](#keepFocus) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*keepFocus*](#keepFocus).
+
+
+### change:keyboard
+
+Fired when the [*keyboard*](#keyboard) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*keyboard*](#keyboard).
+
+
+### change:message
+
+Fired when the [*message*](#message) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*message*](#message).
 
 
 ### change:text
+
+Fired when the [*text*](#text) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*text*](#text).
+
+
+### change:textColor
+
+Fired when the [*textColor*](#textColor) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*textColor*](#textColor).
+
+
+### focus
+
+Fired when the widget gains focus.
+### input
+
+Fired when the text was changed by the user.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **text**: *string*
+    The new value of *[text](#text)*.
+
+
+### textChanged
 
 Fired when the text property changes.
 
@@ -122,43 +315,25 @@ Fired when the text property changes.
 
 
 
-### focus
-
-Fired when the widget gains focus.
-
-
-### input
-
-Fired when the text was changed by the user.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **text**: *string*
-    The new value of *[text](#text)*.
-
-
-
-
 
 ## Example
 
 ```js
+const {TextInput, TextView, ui} = require('tabris');
+
 // Create a text input field with input finished listener
 
-new tabris.TextInput({
+new TextInput({
   top: 20, left: '20%', right: '20%',
   message: 'Type here, then confirm'
-}).on('accept', function({text}) {
-  new tabris.TextView({
+}).on('accept', ({text}) => {
+  new TextView({
     top: 'prev() 20', left: '20%',
     text: text
-  }).appendTo(tabris.ui.contentView);
-}).appendTo(tabris.ui.contentView);
+  }).appendTo(ui.contentView);
+}).appendTo(ui.contentView);
 ```
 ## See also
 
-- [Simple TextInput snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/textinput.js)
-- [Example with Text and other input controls](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/examples/input/input.js)
+- [Simple TextInput snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/textinput.js)
+- [Example with Text and other input controls](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/examples/input/input.js)

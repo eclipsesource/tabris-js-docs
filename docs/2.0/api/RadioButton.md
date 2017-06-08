@@ -24,10 +24,55 @@ Type: *string*
 
 The label text of the radio button.
 
+### textColor
+
+Type: *[Color](../types.md#color)*
+
+The color of the text.
+
 
 ## Events
 
 ### change:checked
+
+Fired when the [*checked*](#checked) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*checked*](#checked).
+
+
+### change:text
+
+Fired when the [*text*](#text) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*text*](#text).
+
+
+### change:textColor
+
+Fired when the [*textColor*](#textColor) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*textColor*](#textColor).
+
+
+### checkedChanged
 
 Fired when the checked property changes.
 
@@ -38,8 +83,6 @@ Fired when the checked property changes.
 
 - **value**: *boolean*
     The new value of the `checked` property.
-
-
 
 
 ### select
@@ -61,19 +104,21 @@ Fired when the radio button is selected or deselected by the user.
 ## Example
 
 ```js
+const {RadioButton, ui} = require('tabris');
+
 // Create radio buttons with checked handlers
 
-['One', 'Two', 'Three'].forEach(function(title) {
-  new tabris.RadioButton({
+['One', 'Two', 'Three'].forEach((title) => {
+  new RadioButton({
     left: 10, top: 'prev() 10',
     text: title
-  }).on('change:checked', function({target, value: checked}) {
+  }).on('checkedChanged', ({target, value: checked}) => {
     if (checked) {
       console.log(target.text + ' checked');
     }
-  }).appendTo(tabris.ui.contentView);
+  }).appendTo(ui.contentView);
 });
 ```
 ## See also
 
-- [Simple RadioButton snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/radiobutton.js)
+- [Simple RadioButton snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/radiobutton.js)

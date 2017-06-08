@@ -53,6 +53,43 @@ Fired when a text input has been submitted by pressing the keyboard's search key
     The current value of *[text](#text)*.
 
 
+### change:message
+
+Fired when the [*message*](#message) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*message*](#message).
+
+
+### change:proposals
+
+Fired when the [*proposals*](#proposals) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string[]*
+    The new value of [*proposals*](#proposals).
+
+
+### change:text
+
+Fired when the [*text*](#text) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*text*](#text).
 
 
 ### input
@@ -73,4 +110,4 @@ Fired when the user inputs text.
 
 ## See also
 
-- [Search action snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/navigationview-searchaction.js)
+- [Search action snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationview-searchaction.js)

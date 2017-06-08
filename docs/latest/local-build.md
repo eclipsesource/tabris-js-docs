@@ -21,7 +21,7 @@ The Tabris CLI uses Cordova to build apps, so you also need a Cordova installati
 
 ### Downloading Tabris.js platforms
 
-Tabris.js ships custom Cordova platforms for Android, iOS, and Windows. Visit the [Tabris.js download page](https://tabrisjs.com/download) and download the platform of your choice.
+Tabris.js ships custom Cordova platforms for Android, iOS, and Windows. Visit the [Tabris.js download page](https://tabrisjs.com/download) and download the platform of your choice (make sure to sign in to Tabrisjs.com).
 
 Extract the content of the downloaded archive and create an environment variable `TABRIS_ANDROID_PLATFORM`, `TABRIS_IOS_PLATFORM`, or `TABRIS_WINDOWS_PLATFORM`, respectively, that contains the path to the extracted folder.
 
@@ -35,7 +35,7 @@ For details please refer to the [Cordova documentation](https://cordova.apache.o
 
 You can integrate all available [Cordova Plugins](http://plugins.cordova.io/#/) by including them in your `config.xml`.
 
-For example, to add the [Cordova Camera Plugin](http://plugins.cordova.io/#/package/org.apache.cordova.camera), you'd add this line:
+For example, to add the [Cordova Camera Plugin](https://www.npmjs.com/package/cordova-plugin-camera), you'd add this line:
 
 ```
 <plugin name="cordova-plugin-camera" spec="^2.3.0" />

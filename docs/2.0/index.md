@@ -1,6 +1,6 @@
 ---
 ---
-# Tabris.js - 2.0 Beta 2
+# Tabris.js - 2.0 RC 1
 
 ## Introduction
 
@@ -9,7 +9,7 @@ Tabris.js is a mobile framework that lets you develop native iOS and Android app
 ## Getting Started
 
 - [Quick Start Guide](getting-started.md) - Create your first Tabris.js App
-- [Getting Started Ebook](https://tabrisjs.com/downloads/ebook/tabrisjs-2.0.0-beta1.pdf) - Create, deploy and test your first Tabris.js app (a detailed tutorial)
+- [Getting Started Ebook](https://tabrisjs.com/downloads/ebook/tabrisjs-2.0.0-rc1.pdf) - Create, deploy and test your first Tabris.js app (a detailed tutorial)
 - [The Tabris.js Developer App](developer-app.md) - Get the most out of our developer app
 
 ## Documentation
@@ -22,6 +22,7 @@ Tabris.js is a mobile framework that lets you develop native iOS and Android app
 - [Touch Events](touch.md) - Processing widget gesture/touch events.
 - [W3C Compatibility](w3c-api.md) - XMLHttpRequest, LocalStorage and timer.
 - [Cordova Support](cordova.md) - Using Cordova plug-ins, including Dialogs, File and Camera.
+- [Windows Support](windows-support.md) - Important notes on Windows 10 support.
 - [Build your app](build.md) - Create a standalone app from your Tabris.js project files.
 - [Local Build](local-build.md) - Build your Tabris.js app locally.
 - [Patch your app](patch.md) - Hotfix critical issues without waiting for app store submission.
@@ -32,10 +33,9 @@ Tabris.js is a mobile framework that lets you develop native iOS and Android app
 - [app](api/app.md)
 - [CanvasContext](api/CanvasContext.md)
 - [device](api/device.md)
+- [fs](api/fs.md)
 - [InactivityTimer](api/InactivityTimer.md)
 - [NativeObject](api/NativeObject.md)
-- [NavigationBar](api/NavigationBar.md)
-- [StatusBar](api/StatusBar.md)
 - [window](api/window.md)
 - [ui](api/ui.md)
 - [WidgetCollection](api/WidgetCollection.md)
@@ -47,12 +47,12 @@ Tabris.js is a mobile framework that lets you develop native iOS and Android app
 - [ActivityIndicator](api/ActivityIndicator.md)
 - [Button](api/Button.md)
 - [Canvas](api/Canvas.md)
-- [Cell](api/Cell.md)
 - [CheckBox](api/CheckBox.md)
 - [CollectionView](api/CollectionView.md)
 - [Composite](api/Composite.md)
 - [Drawer](api/Drawer.md)
 - [ImageView](api/ImageView.md)
+- [NavigationBar](api/NavigationBar.md)
 - [NavigationView](api/NavigationView.md)
 - [Page](api/Page.md)
 - [Picker](api/Picker.md)
@@ -61,6 +61,7 @@ Tabris.js is a mobile framework that lets you develop native iOS and Android app
 - [ScrollView](api/ScrollView.md)
 - [SearchAction](api/SearchAction.md)
 - [Slider](api/Slider.md)
+- [StatusBar](api/StatusBar.md)
 - [Switch](api/Switch.md)
 - [Tab](api/Tab.md)
 - [TabFolder](api/TabFolder.md)
@@ -70,13 +71,6 @@ Tabris.js is a mobile framework that lets you develop native iOS and Android app
 - [Video](api/Video.md)
 - [WebView](api/WebView.md)
 - [Widget](api/Widget.md)
-
-## Articles
-
-- [Apache Cordova vs. Tabris.js](http://eclipsesource.com/blogs/2015/03/02/apache-cordova-vs-tabris-js/) - How to use Cordova's build tooling to create Tabris.js apps.
-- [Debugging Tabris.js](debug.md) - How to debug a Tabris.js app
-- [Layouting in Tabris.js](http://eclipsesource.com/blogs/2015/02/19/layouting-in-tabris-js/) - Layouting explained.
-- [CollectionView: Display Data Sets in Tabris.js](http://eclipsesource.com/blogs/2015/02/16/collectionview-display-data-sets-in-tabris-js/) - The power of the CollectionView in detail.
 
 ### Tabris.js Examples
 
@@ -91,7 +85,8 @@ This blog post series takes a closer look at the examples.
 - [Drawing on the Canvas](http://eclipsesource.com/blogs/2015/04/15/tabris-js-examples-drawing-on-the-canvas/)
 - [Network Access](http://eclipsesource.com/blogs/2015/04/24/tabris-js-examples-network-access/)
 
-## Custom Widget Documentation (provisional)
+## Custom Widget Documentation
 
 - [Custom Widgets](custom-widgets.md) - JavaScript implementation
 - [Custom Widgets - Android](custom-widgets-android.md) - Android implementation
+- [Custom Widgets - iOS](custom-widgets-ios.md) - iOS implementation

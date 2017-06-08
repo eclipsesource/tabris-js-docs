@@ -12,8 +12,10 @@ Extends [NativeObject](NativeObject.md)
 
 **Parameters:** 
 
-- properties: *{transform?: Transformation, opacity?: number}*, the properties and target values to animate.
-- options: *[AnimationOptions](../types.md#animationoptions)*, configures the animation itself.
+- properties: *{transform?: Transformation, opacity?: number}*
+  - the properties and target values to animate.
+- options: *[AnimationOptions](../types.md#animationoptions)*
+  - configures the animation itself.
 
 **Returns:** *Promise<any>*
 
@@ -33,23 +35,19 @@ Appends this widget to the given parent. The parent widget must support children
 
 **Parameters:** 
 
-- properties: *Object*, an object in the format `{Selector: {property: value, property: value, ... }, Selector: ...}`
+- properties: *Object*
+  - an object in the format `{Selector: {property: value, property: value, ... }, Selector: ...}`
 
 **Returns:** *this*
 
 Applies the given properties to all descendants that match the associated selector(s).
 
-### children()
-
-**Returns:** *[WidgetCollection](WidgetCollection.md)*
-
-Returns a (possibly empty) collection of all children of this widget.
-
 ### children(selector)
 
 **Parameters:** 
 
-- selector: *[Selector](../types.md#selector)*, a selector expression or a predicate function to filter the results.
+- selector: *[Selector](../types.md#selector)* [**Optional**]
+  - a selector expression or a predicate function to filter the results.
 
 **Returns:** *[WidgetCollection](WidgetCollection.md)*
 
@@ -65,17 +63,12 @@ Removes this widget from its parent.
 
 Removes this widget from its parent and destroys it. Also disposes of all its children. Triggers a `remove` event on the parent and a `dispose` event on itself. The widget can no longer be used.
 
-### find()
-
-**Returns:** *[WidgetCollection](WidgetCollection.md)*
-
-Returns a (possibly empty) collection of all descendants of this widget.
-
 ### find(selector)
 
 **Parameters:** 
 
-- selector: *[Selector](../types.md#selector)*, a selector expression or a predicate function to filter the results.
+- selector: *[Selector](../types.md#selector)* [**Optional**]
+  - a selector expression or a predicate function to filter the results.
 
 **Returns:** *[WidgetCollection](WidgetCollection.md)*
 
@@ -113,17 +106,12 @@ Returns `true` if the widget has been disposed, otherwise `false`.
 
 Returns the parent of this widget or `null` if this widget is not appended to a parent.
 
-### siblings()
-
-**Returns:** *[WidgetCollection](WidgetCollection.md)*
-
-Returns a (possibly empty) collection of all siblings of this widget.
-
 ### siblings(selector)
 
 **Parameters:** 
 
-- selector: *[Selector](../types.md#selector)*, a selector expression or a predicate function to filter the results.
+- selector: *[Selector](../types.md#selector)* [**Optional**]
+  - a selector expression or a predicate function to filter the results.
 
 **Returns:** *[WidgetCollection](WidgetCollection.md)*
 
@@ -146,7 +134,7 @@ An image to be displayed on the widget's background. If the image is smaller tha
 
 ### baseline
 
-Type: *[Widget](Widget.md)*
+Type: *Widget|Selector*
 
 The vertical position of the widget's baseline relative to a sibling widget.
 
@@ -192,6 +180,13 @@ Provides convenient access to the list of class names set to this widget. Class 
 Type: *number*
 
 Configure a widget to have rounded corners. Each corner is affected equally. Supported on iOS and Android 5.0+.
+
+### data
+
+**read-only**<br/>
+Type: *Object*
+
+A general-purpose object that allows the application to attach arbitrary data to the widget. Manipulations on this object have no effect on the widget itself in any way. Example: `widget.data.myData = myData;`
 
 ### elevation
 
@@ -253,12 +248,6 @@ Type: *[margin](../types.md#margin)*
 
 The position of the widget's right edge relative to the parent or a sibling widget.
 
-### textColor
-
-Type: *[Color](../types.md#color)*
-
-Text color of the widget.
-
 ### top
 
 Type: *[margin](../types.md#margin)*
@@ -292,11 +281,347 @@ Controls the color scheme used for this widget. When set to `"default"` the them
 
 ## Events
 
+### change:background
+
+Fired when the [*background*](#background) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*background*](#background).
+
+
+### change:backgroundImage
+
+Fired when the [*backgroundImage*](#backgroundImage) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Image](../types.md#image)*
+    The new value of [*backgroundImage*](#backgroundImage).
+
+
+### change:baseline
+
+Fired when the [*baseline*](#baseline) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *Widget|Selector*
+    The new value of [*baseline*](#baseline).
+
+
+### change:bottom
+
+Fired when the [*bottom*](#bottom) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[margin](../types.md#margin)*
+    The new value of [*bottom*](#bottom).
+
+
+### change:bounds
+
+Fired when the [*bounds*](#bounds) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Bounds](../types.md#bounds)*
+    The new value of [*bounds*](#bounds).
+
+
+### change:centerX
+
+Fired when the [*centerX*](#centerX) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[offset](../types.md#offset)*
+    The new value of [*centerX*](#centerX).
+
+
+### change:centerY
+
+Fired when the [*centerY*](#centerY) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[offset](../types.md#offset)*
+    The new value of [*centerY*](#centerY).
+
+
+### change:class
+
+Fired when the [*class*](#class) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*class*](#class).
+
+
+### change:classList
+
+Fired when the [*classList*](#classList) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string[]*
+    The new value of [*classList*](#classList).
+
+
+### change:cornerRadius
+
+Fired when the [*cornerRadius*](#cornerRadius) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*cornerRadius*](#cornerRadius).
+
+
+### change:data
+
+Fired when the [*data*](#data) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *Object*
+    The new value of [*data*](#data).
+
+
+### change:elevation
+
+Fired when the [*elevation*](#elevation) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*elevation*](#elevation).
+
+
+### change:enabled
+
+Fired when the [*enabled*](#enabled) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*enabled*](#enabled).
+
+
+### change:font
+
+Fired when the [*font*](#font) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Font](../types.md#font)*
+    The new value of [*font*](#font).
+
+
+### change:height
+
+Fired when the [*height*](#height) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[dimension](../types.md#dimension)*
+    The new value of [*height*](#height).
+
+
+### change:highlightOnTouch
+
+Fired when the [*highlightOnTouch*](#highlightOnTouch) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*highlightOnTouch*](#highlightOnTouch).
+
+
+### change:id
+
+Fired when the [*id*](#id) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*id*](#id).
+
+
+### change:layoutData
+
+Fired when the [*layoutData*](#layoutData) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[LayoutData](../types.md#layoutdata)*
+    The new value of [*layoutData*](#layoutData).
+
+
+### change:left
+
+Fired when the [*left*](#left) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[margin](../types.md#margin)*
+    The new value of [*left*](#left).
+
+
+### change:opacity
+
+Fired when the [*opacity*](#opacity) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*opacity*](#opacity).
+
+
+### change:right
+
+Fired when the [*right*](#right) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[margin](../types.md#margin)*
+    The new value of [*right*](#right).
+
+
+### change:top
+
+Fired when the [*top*](#top) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[margin](../types.md#margin)*
+    The new value of [*top*](#top).
+
+
+### change:transform
+
+Fired when the [*transform*](#transform) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Transformation](../types.md#transformation)*
+    The new value of [*transform*](#transform).
+
+
+### change:visible
+
+Fired when the [*visible*](#visible) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*visible*](#visible).
+
+
+### change:width
+
+Fired when the [*width*](#width) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[dimension](../types.md#dimension)*
+    The new value of [*width*](#width).
+
+
+### change:win_theme
+
+Fired when the [*win_theme*](#win_theme) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*win_theme*](#win_theme).
+
+
 ### dispose
 
 Fired when the widget is about to be disposed. At this point the widget and its children are still accessible.
-
-
 ### longpress
 
 Fired after pressing a widget for a specific amount of time (about a second), and again on lifting the finger.
@@ -311,8 +636,6 @@ Fired after pressing a widget for a specific amount of time (about a second), an
 
 - **touches**: *{x: number, y: number}[]*
     Touch coordinates relative to the origin coordinates of the widget.
-
-
 
 
 ### pan
@@ -330,16 +653,20 @@ Fired continuously after a finger touching the widget moved for a certain distan
 - **touches**: *{x: number, y: number}[]*
     Touch coordinates relative to the origin coordinates of the widget.
 
-- **translation**: *{x: number, y: number}*
-    Current touch coordinates relative to the coordinates of the first touch.
+- **translationX**: *number*
+    Current horizontal touch offset relative to the first touch.
 
-- **velocity**: *{x: number, y: number}*
-    Current touch velocity in pixels per second.
+- **translationY**: *number*
+    Current vertical touch offset relative to the first touch.
+
+- **velocityX**: *number*
+    Current horizontal velocity in pixels per second.
+
+- **velocityY**: *number*
+    Current vertical velocity in pixels per second.
 
 
-
-
-### pan:down
+### panDown
 
 Fired when a finger starts moving down.
 
@@ -354,16 +681,48 @@ Fired when a finger starts moving down.
 - **touches**: *{x: number, y: number}[]*
     Touch coordinates relative to the origin coordinates of the widget.
 
-- **translation**: *{x: number, y: number}*
-    Current touch coordinates relative to the coordinates of the first touch.
+- **translationX**: *number*
+    Current horizontal touch offset relative to the first touch.
 
-- **velocity**: *{x: number, y: number}*
-    Current touch velocity in pixels per second.
+- **translationY**: *number*
+    Current vertical touch offset relative to the first touch.
+
+- **velocityX**: *number*
+    Current horizontal velocity in pixels per second.
+
+- **velocityY**: *number*
+    Current vertical velocity in pixels per second.
 
 
+### panHorizontal
+
+Fired when a finger starts moving left or right.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **state**: *'start'|'change'|'end'|'cancel'*
+    'start' when the finger starts moving, 'change' while the finger is moving, 'end' when the finger has been lifted and 'cancel' when the gesture has been interrupted.
+
+- **touches**: *{x: number, y: number}[]*
+    Touch coordinates relative to the origin coordinates of the widget.
+
+- **translationX**: *number*
+    Current horizontal touch offset relative to the first touch.
+
+- **translationY**: *number*
+    Current vertical touch offset relative to the first touch.
+
+- **velocityX**: *number*
+    Current horizontal velocity in pixels per second.
+
+- **velocityY**: *number*
+    Current vertical velocity in pixels per second.
 
 
-### pan:left
+### panLeft
 
 Fired when a finger starts moving left.
 
@@ -378,16 +737,20 @@ Fired when a finger starts moving left.
 - **touches**: *{x: number, y: number}[]*
     Touch coordinates relative to the origin coordinates of the widget.
 
-- **translation**: *{x: number, y: number}*
-    Current touch coordinates relative to the coordinates of the first touch.
+- **translationX**: *number*
+    Current horizontal touch offset relative to the first touch.
 
-- **velocity**: *{x: number, y: number}*
-    Current touch velocity in pixels per second.
+- **translationY**: *number*
+    Current vertical touch offset relative to the first touch.
+
+- **velocityX**: *number*
+    Current horizontal velocity in pixels per second.
+
+- **velocityY**: *number*
+    Current vertical velocity in pixels per second.
 
 
-
-
-### pan:right
+### panRight
 
 Fired when a finger starts moving right.
 
@@ -402,16 +765,20 @@ Fired when a finger starts moving right.
 - **touches**: *{x: number, y: number}[]*
     Touch coordinates relative to the origin coordinates of the widget.
 
-- **translation**: *{x: number, y: number}*
-    Current touch coordinates relative to the coordinates of the first touch.
+- **translationX**: *number*
+    Current horizontal touch offset relative to the first touch.
 
-- **velocity**: *{x: number, y: number}*
-    Current touch velocity in pixels per second.
+- **translationY**: *number*
+    Current vertical touch offset relative to the first touch.
+
+- **velocityX**: *number*
+    Current horizontal velocity in pixels per second.
+
+- **velocityY**: *number*
+    Current vertical velocity in pixels per second.
 
 
-
-
-### pan:up
+### panUp
 
 Fired when a finger starts moving up.
 
@@ -426,13 +793,45 @@ Fired when a finger starts moving up.
 - **touches**: *{x: number, y: number}[]*
     Touch coordinates relative to the origin coordinates of the widget.
 
-- **translation**: *{x: number, y: number}*
-    Current touch coordinates relative to the coordinates of the first touch.
+- **translationX**: *number*
+    Current horizontal touch offset relative to the first touch.
 
-- **velocity**: *{x: number, y: number}*
-    Current touch velocity in pixels per second.
+- **translationY**: *number*
+    Current vertical touch offset relative to the first touch.
+
+- **velocityX**: *number*
+    Current horizontal velocity in pixels per second.
+
+- **velocityY**: *number*
+    Current vertical velocity in pixels per second.
 
 
+### panVertical
+
+Fired when a finger starts moving up or down.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **state**: *'start'|'change'|'end'|'cancel'*
+    'start' when the finger starts moving, 'change' while the finger is moving, 'end' when the finger has been lifted and 'cancel' when the gesture has been interrupted.
+
+- **touches**: *{x: number, y: number}[]*
+    Touch coordinates relative to the origin coordinates of the widget.
+
+- **translationX**: *number*
+    Current horizontal touch offset relative to the first touch.
+
+- **translationY**: *number*
+    Current vertical touch offset relative to the first touch.
+
+- **velocityX**: *number*
+    Current horizontal velocity in pixels per second.
+
+- **velocityY**: *number*
+    Current vertical velocity in pixels per second.
 
 
 ### resize
@@ -457,9 +856,7 @@ Fired when the widget's size has changed. You can use this event to apply new [*
     The width of the widget in dip.
 
 
-
-
-### swipe:down
+### swipeDown
 
 Fired when a finger moves down quickly.
 
@@ -472,9 +869,7 @@ Fired when a finger moves down quickly.
     Touch coordinates relative to the origin coordinates of the widget.
 
 
-
-
-### swipe:left
+### swipeLeft
 
 Fired when a finger moves left quickly.
 
@@ -487,9 +882,7 @@ Fired when a finger moves left quickly.
     Touch coordinates relative to the origin coordinates of the widget.
 
 
-
-
-### swipe:right
+### swipeRight
 
 Fired when a finger moves right quickly.
 
@@ -502,9 +895,7 @@ Fired when a finger moves right quickly.
     Touch coordinates relative to the origin coordinates of the widget.
 
 
-
-
-### swipe:up
+### swipeUp
 
 Fired when a finger moves up quickly.
 
@@ -515,8 +906,6 @@ Fired when a finger moves up quickly.
 
 - **touches**: *{x: number, y: number}[]*
     Touch coordinates relative to the origin coordinates of the widget.
-
-
 
 
 ### tap
@@ -532,27 +921,20 @@ Fired once when a finger briefly touched the widget.
     Touch coordinates relative to the origin coordinates of the widget.
 
 
+### touchCancel
 
-
-### touchcancel
-
-Fired instead of touchend when the touch ends on another widget than it started on.
+Fired instead of touchEnd when the touch ends on another widget than it started on.
 
 #### Event Parameters 
 
 - **target**: *this*
     The widget the event was fired on.
 
-- **time**: *number*
-    Number of milliseconds since the start of the app.
-
 - **touches**: *{x: number, y: number, absoluteX: number, absoluteY: number}[]*
     Touch coordinates relative to the origin coordinates of the widget.
 
 
-
-
-### touchend
+### touchEnd
 
 Fired when a touch ends on the same widget than it started on.
 
@@ -561,16 +943,11 @@ Fired when a touch ends on the same widget than it started on.
 - **target**: *this*
     The widget the event was fired on.
 
-- **time**: *number*
-    Number of milliseconds since the start of the app.
-
 - **touches**: *{x: number, y: number, absoluteX: number, absoluteY: number}[]*
     Touch coordinates relative to the origin coordinates of the widget.
 
 
-
-
-### touchmove
+### touchMove
 
 Fired repeatedly while swiping across the screen.
 
@@ -579,16 +956,11 @@ Fired repeatedly while swiping across the screen.
 - **target**: *this*
     The widget the event was fired on.
 
-- **time**: *number*
-    Number of milliseconds since the start of the app.
-
 - **touches**: *{x: number, y: number, absoluteX: number, absoluteY: number}[]*
     Touch coordinates relative to the origin coordinates of the widget.
 
 
-
-
-### touchstart
+### touchStart
 
 Fired when a widget is touched. See [Touch Events](../touch.md).
 
@@ -596,9 +968,6 @@ Fired when a widget is touched. See [Touch Events](../touch.md).
 
 - **target**: *this*
     The widget the event was fired on.
-
-- **time**: *number*
-    Number of milliseconds since the start of the app.
 
 - **touches**: *{x: number, y: number, absoluteX: number, absoluteY: number}[]*
     Touch coordinates relative to the origin coordinates of the widget.

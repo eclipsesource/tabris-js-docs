@@ -2,7 +2,9 @@
 ---
 # NavigationBar
 
-The navigation bar is the onscreen area where *Back*, *Home* and similar buttons are displayed. The singleton instance can be accessed via `tabris.ui.navigationBar` and is only available on Android.
+The navigation bar is the onscreen area where *Back*, *Home* and similar buttons are displayed. The singleton instance can be accessed via `ui.navigationBar` and is only available on Android.
+
+Extends [Widget](Widget.md)
 
 ## Properties
 
@@ -16,7 +18,7 @@ Background color of the navigation bar.
 
 Type: *string*, supported values: `default`, `hide`, `float`, default: `default`
 
-Controls how the navigation bar is positioned relative to the `tabris.ui.contentView`. The value `default` places the content above the navigation bar. The `hide` option lets the navigation bar disappear, making room for the content. The `float` option lets the content flow underneath the navigation bar.
+Controls how the navigation bar is positioned relative to the `ui.contentView`. The value `default` places the content above the navigation bar. The `hide` option lets the navigation bar disappear, making room for the content. The `float` option lets the content flow underneath the navigation bar.
 
 ### height
 
@@ -29,39 +31,44 @@ The height of the navigation bar in device independent pixel. Can be used in con
 ## Example
 
 ```js
+const {Picker, TextView, ui} = require('tabris');
+
+const DISPLAY_MODES = ['default', 'float', 'hide'];
+const BACKGROUNDS = [ui.navigationBar.background, 'rgba(0, 0, 0, 0.25)', 'red', 'green', 'blue'];
+
 createTextView('Display mode', 'displayMode');
 
-new tabris.Picker({
+new Picker({
   left: '#displayMode 16', baseline: 'prev()', right: 16,
-  items: ['default', 'float', 'hide']
-}).on('change:selection', function({value: displayMode}) {
-  tabris.ui.navigationBar.displayMode = displayMode;
-}).appendTo(tabris.ui.contentView);
+  itemCount: DISPLAY_MODES.length,
+  itemText: index => DISPLAY_MODES[index]
+}).on('select', ({index}) => ui.navigationBar.displayMode = DISPLAY_MODES[index])
+  .appendTo(ui.contentView);
 
 createTextView('Background');
 
-new tabris.Picker({
+new Picker({
   left: '#displayMode 16', baseline: 'prev()', right: 16,
-  items: [tabris.ui.navigationBar.background, 'rgba(0, 0, 0, 0.25)', 'red', 'green', 'blue']
-}).on('change:selection', function({value: background}) {
-  tabris.ui.navigationBar.background = background;
-}).appendTo(tabris.ui.contentView);
+  itemCount: BACKGROUNDS.length,
+  itemText: index => BACKGROUNDS[index]
+}).on('select', ({index}) => ui.navigationBar.background = BACKGROUNDS[index])
+  .appendTo(ui.contentView);
 
 createTextView('Height');
 
-new tabris.TextView({
+new TextView({
   left: '#displayMode 16', baseline: 'prev()', right: 16,
-  text: tabris.ui.navigationBar.height
-}).appendTo(tabris.ui.contentView);
+  text: ui.navigationBar.height
+}).appendTo(ui.contentView);
 
 function createTextView(text, id) {
-  new tabris.TextView({
+  new TextView({
     id: id,
     left: 16, top: 'prev() 16',
     text: text
-  }).appendTo(tabris.ui.contentView);
+  }).appendTo(ui.contentView);
 }
 ```
 ## See also
 
-- [Snippet demonstrating various properties of the `NavigationBar`](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/navigationbar.js)
+- [Snippet demonstrating various properties of the `NavigationBar`](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationbar.js)

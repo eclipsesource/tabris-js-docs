@@ -2,7 +2,7 @@
 ---
 # CollectionView
 
-A scrollable list that displays data items in cells, one per row. Cells are created on demand and filled with widgets in the *initializeCell* callback.
+A scrollable list that displays data items in cells, one per row. Cells are created on demand by the *createCell* callback and reused on scrolling.
 
 Android | iOS
 --- | ---
@@ -12,68 +12,59 @@ Extends [Widget](Widget.md)
 
 ## Methods
 
-### insert(items)
+### insert(index, count)
 
 **Parameters:** 
 
-- items: *any[]*
+- index: *number*
+- count: *number* [**Optional**]
+  - the position to insert the items at. A negative index is interpreted as relative to the end. If the given index is greater than the item count, new items will be appended at the end. 
 
-Inserts the given items into this view. Items are added at the end. This operation will modify the *items* property.
-
-### insert(items, index)
-
-**Parameters:** 
-
-- items: *any[]*
-- index: *number*, the position to insert the items at. If a negative index is given, it is interpreted as relative to the end. If the given index is greater than the item count, new items will be appended at the end. 
-
-Inserts the given items into this view at the given index. This operation will modify the *items* property.
-
-### refresh()
-
-Triggers a refresh of all visible items. This will issue *change:item* events on the corresponding cells.
+Inserts one or more items at the given index. When no *count* is specified, a single item will be added at the given *index*. New cells may be created if needed. The `updateCell` callback will only be called for those new items that become immediately visible. Note that inserting new items changes the index of all subsequent items. This operation will update the `itemCount` property.
 
 ### refresh(index)
 
 **Parameters:** 
 
-- index: *number*, the index of the item that was changed.
+- index: *number* [**Optional**]
+  - the index of the item that was changed.
 
-Triggers a refresh of the item with the given index. If the item is scrolled into view, an *change:item* event will be issued on the corresponding cell.
-
-### remove(index)
-
-**Parameters:** 
-
-- index: *number*, the index of the item to remove. If this is negative, it is interpreted as relative to the end.
-
-Removes the item at the given index from this view. This operation will modify the *items* property.
+Triggers an update of the item at the given *index* by calling the `updateCell` callback of the corresponding. If no *index* is given, all visible items will be updated.
 
 ### remove(index, count)
 
 **Parameters:** 
 
-- index: *number*, the index of the first item to remove. If this is negative, it is interpreted as relative to the end.
-- count: *number*, the number of items to remove.
+- index: *number*
+  - the index of the first item to remove. A negative value is interpreted as relative to the end.
+- count: *number* [**Optional**]
+  - the number of items to remove.
 
-Removes *count* items beginning with the given index from this view. This operation will modify the *items* property.
+Removes one or more items beginning with the given index. When no *count* is given, only the item at *index* will be removed. Note that this changes the index of all subsequent items, however. This operation will update the `itemCount` property.
 
 ### reveal(index)
 
 **Parameters:** 
 
-- index: *number*, the index of the item to reveal. If this is negative, it is interpreted as relative to the end
+- index: *number*
+  - the index of the item to reveal. If this is negative, it is interpreted as relative to the end
 
 Scrolls the item with the given index into view.
 
 
 ## Properties
 
+### cellHeight
+
+Type: *number|"auto"|((index: number, cellType: string) => number)*, default: `auto`
+
+The height of a collection cell. If set to `"auto"`, the cell height will be calculated individually for each cell. If set to a function, this function will be called for every item, providing the item index and the cell type as parameters, and must return the cell height for the given item.
+
 ### cellType
 
-Type: *string|((item: any) => string)*
+Type: *string|((index: number) => string)*
 
-The name of the cell type to use for a given item. This name will be passed to the `initializeCell` and `itemHeight` functions. Cells will be reused only by items that require the same cell type. If set to a function, this function will be called for every item, providing the item as a parameter, and must return a name for the cell type to use for the given item.
+The name of the cell type to use for the item at the given index. This name will be passed to the `createCell` and `cellHeight` callbacks. Cells will be reused only for those items that map to the same cell type. If set to a function, this function will be called for every item, providing the item index as a parameter, and must return a unique name for the cell type to use for the given item.
 
 ### columnCount
 
@@ -81,37 +72,31 @@ Type: *number*, default: `1`
 
 The number of columns to display in the collection view. If set to a value `n > 1`, each row will contain `n` items. The available space will be equally distributed between columns.
 
+### createCell
+
+Type: *(cellType: string) => Widget*
+
+A callback used to create a new reusable cell widget for a given type. This callback will be called by the framework and the created cell will be reused for different items. The created widget should be populated in the `updateCell` function.<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
+
 ### firstVisibleIndex
 
 **read-only**<br/>
 Type: *number*
 
-The first item that is currently visible on screen.
+The index of the first item that is currently visible on screen.
 
-### initializeCell
+### itemCount
 
-Type: *(cell: Cell, cellType: string) => void*
+Type: *number*
 
-A callback used to initialize a collection cell by attaching widget and *change:item* listener. Cells are created by the framework and recycled on scrolling.<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
-
-### itemHeight
-
-Type: *number|((item: any, cellType: string) => number)*
-
-The height of a collection cell. If set to a function, this function will be called for every item, providing the item and the cell type as parameters, and must return the item height for the given item.
-
-### items
-
-Type: *any[]*
-
-An array of data items to be displayed by the collection view. For dynamic content, use the methods `insert` and `remove` instead of setting this property directly.
+The number of items to display. To add or remove items later, use the methods `insert` and `remove` instead of setting the `itemCount`. To display a new list of items, set this property and call `refresh()`.
 
 ### lastVisibleIndex
 
 **read-only**<br/>
 Type: *number*
 
-The last item that is currently visible on screen.
+The index of the last item that is currently visible on screen.
 
 ### refreshEnabled
 
@@ -131,14 +116,135 @@ Type: *string*, default: `""`
 
 The message text displayed together with the refresh indicator. Currently not supported on Android.
 
+### updateCell
+
+Type: *(cell: Widget, index: number) => void*
+
+A callback used to update a given cell widget to display the item with the given index. This callback will be called by the framework.<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
+
 
 ## Events
+
+### change:cellHeight
+
+Fired when the [*cellHeight*](#cellHeight) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number|"auto"|((index: number, cellType: string) => number)*
+    The new value of [*cellHeight*](#cellHeight).
+
+
+### change:cellType
+
+Fired when the [*cellType*](#cellType) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string|((index: number) => string)*
+    The new value of [*cellType*](#cellType).
+
+
+### change:columnCount
+
+Fired when the [*columnCount*](#columnCount) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*columnCount*](#columnCount).
+
+
+### change:firstVisibleIndex
+
+Fired when the [*firstVisibleIndex*](#firstVisibleIndex) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*firstVisibleIndex*](#firstVisibleIndex).
+
+
+### change:itemCount
+
+Fired when the [*itemCount*](#itemCount) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*itemCount*](#itemCount).
+
+
+### change:lastVisibleIndex
+
+Fired when the [*lastVisibleIndex*](#lastVisibleIndex) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*lastVisibleIndex*](#lastVisibleIndex).
+
+
+### change:refreshEnabled
+
+Fired when the [*refreshEnabled*](#refreshEnabled) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*refreshEnabled*](#refreshEnabled).
+
+
+### change:refreshIndicator
+
+Fired when the [*refreshIndicator*](#refreshIndicator) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*refreshIndicator*](#refreshIndicator).
+
+
+### change:refreshMessage
+
+Fired when the [*refreshMessage*](#refreshMessage) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*refreshMessage*](#refreshMessage).
+
 
 ### refresh
 
 Fired when the user requested a refresh. An event listener should reset the *refreshIndicator* property when refresh is finished.
-
-
 ### scroll
 
 Fired while the collection view is scrolling.
@@ -155,11 +261,9 @@ Fired while the collection view is scrolling.
     The delta of the scroll position. Positive when scrolling up and negative when scrolling down.
 
 
-
-
 ### select
 
-Fired when a collection item is selected.
+Fired when a cell is selected.
 
 #### Event Parameters 
 
@@ -169,9 +273,6 @@ Fired when a collection item is selected.
 - **index**: *number*
     The index of the selected item.
 
-- **item**: *any*
-    The item that was selected.
-
 
 
 
@@ -180,10 +281,10 @@ Fired when a collection item is selected.
 
 ```js
 // Create a collection view, initialize its cells and fill it with items
+const {CollectionView, Composite, ImageView, TextView, ui} = require('tabris');
+const IMAGE_PATH = 'images/';
 
-var IMAGE_PATH = 'images/';
-
-var people = [
+let people = [
   ['Holger', 'Staudacher', 'holger.jpg'],
   ['Ian', 'Bull', 'ian.jpg'],
   ['Jochen', 'Krause', 'jochen.jpg'],
@@ -192,31 +293,33 @@ var people = [
   ['Moritz', 'Post', 'moritz.jpg'],
   ['Ralf', 'Sternberg', 'ralf.jpg'],
   ['Tim', 'Buschtöns', 'tim.jpg']
-].map(function(element) {
-  return {firstName: element[0], lastName: element[1], image: IMAGE_PATH + element[2]};
-});
+].map(([firstName, lastName, image]) => ({firstName, lastName, image: IMAGE_PATH + image}));
 
-new tabris.CollectionView({
+new CollectionView({
   left: 0, top: 0, right: 0, bottom: 0,
-  items: people,
-  itemHeight: 256,
-  initializeCell: function(cell) {
-    var imageView = new tabris.ImageView({
+  itemCount: people.length,
+  cellHeight: 256,
+  createCell: () => {
+    let cell = new Composite();
+    new ImageView({
       top: 16, centerX: 0, width: 200, height: 200
     }).appendTo(cell);
-    var nameTextView = new tabris.TextView({
-      left: 30, top: [imageView, 16], right: 30,
+    new TextView({
+      left: 30, top: 'prev() 16', right: 30,
       alignment: 'center'
     }).appendTo(cell);
-    cell.on('change:item', function({value: person}) {
-      imageView.image = person.image;
-      nameTextView.text = person.firstName;
+    return cell;
+  },
+  updateCell: (cell, index) => {
+    let person = people[index];
+    cell.apply({
+      ImageView: {image: person.image},
+      TextView: {text: person.firstName}
     });
   }
-}).on('select', function({item}) {
-  console.log('selected', item.firstName);
-}).appendTo(tabris.ui.contentView);
+}).on('select', ({index}) => console.log('selected', people[index].firstName))
+  .appendTo(ui.contentView);
 ```
 ## See also
 
-- [CollectionView example](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/collectionview.js)
+- [CollectionView example](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/collectionview.js)

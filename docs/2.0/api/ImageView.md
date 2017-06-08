@@ -35,6 +35,45 @@ A color to change the image appearance. All opaque parts of the image will be ti
 
 ## Events
 
+### change:image
+
+Fired when the [*image*](#image) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Image](../types.md#image)*
+    The new value of [*image*](#image).
+
+
+### change:scaleMode
+
+Fired when the [*scaleMode*](#scaleMode) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*scaleMode*](#scaleMode).
+
+
+### change:tintColor
+
+Fired when the [*tintColor*](#tintColor) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*tintColor*](#tintColor).
+
+
 ### load
 
 Fired when the image loading has finished.
@@ -54,21 +93,20 @@ Fired when the image loading has finished.
 ## Example
 
 ```js
-// Display images with different scale modes
+const {ImageView, ui} = require('tabris');
 
-var createImageView = function(scaleMode) {
-  new tabris.ImageView({
-    left: 10, top: 'prev() 10', width: 250, height: 100,
-    image: {src: 'images/target_200.png'},
-    background: '#aaaaaa',
-    scaleMode: scaleMode
-  }).appendTo(tabris.ui.contentView);
-};
+// Display images with different scale modes
 
 createImageView('fit');
 createImageView('none');
 createImageView('fill');
-```
-## See also
 
-- [Image example](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/examples/image/image.js)
+function createImageView(scaleMode) {
+  new ImageView({
+    left: 10, top: 'prev() 10', width: 250, height: 100,
+    image: 'images/target_200.png',
+    background: '#aaaaaa',
+    scaleMode: scaleMode
+  }).appendTo(ui.contentView);
+}
+```

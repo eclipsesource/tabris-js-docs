@@ -16,23 +16,21 @@ Extends [Widget](Widget.md)
 
 Pauses the video. *[state](#state)* changes to `pause` and `speed` to `0`. Has no effect when *[state](#state)* is not `play`.
 
-### play()
-
-Starts playing the video, *[state](#state)* changes to `play`. Has no effect if the current state is not either `pause` or `ready`.
-
 ### play(speed)
 
 **Parameters:** 
 
-- speed: *number*, desired playback speed. If the given speed is not supported by the platform or video, the actual playback speed will be `1` - i.e. the natural speed of the video.
+- speed: *number* [**Optional**]
+  - desired playback speed. If the given speed is not supported by the platform or video, the actual playback speed will be `1` - i.e. the natural speed of the video.
 
-Starts playing the video, *[state](#state)* changes to `play`. Has no effect if the current state is not either `pause` or `ready`.
+Starts playing the video, *[state](#state)* changes to `play`. Has no effect unless the current state is either `pause` or `ready`.
 
 ### seek(position)
 
 **Parameters:** 
 
-- position: *number*, desired position in milliseconds.
+- position: *number*
+  - desired position in milliseconds.
 
 Attempts to change the `position` to the given time index. Success depends on the currently loaded video. Has no effect if the current *[state](#state)* is `empty` or `fail`.
 
@@ -88,7 +86,98 @@ The URL of the video to play. Setting this property to any non-empty string chan
 
 ## Events
 
+### change:autoPlay
+
+Fired when the [*autoPlay*](#autoPlay) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*autoPlay*](#autoPlay).
+
+
+### change:controlsVisible
+
+Fired when the [*controlsVisible*](#controlsVisible) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*controlsVisible*](#controlsVisible).
+
+
+### change:duration
+
+Fired when the [*duration*](#duration) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*duration*](#duration).
+
+
+### change:position
+
+Fired when the [*position*](#position) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*position*](#position).
+
+
+### change:speed
+
+Fired when the [*speed*](#speed) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*speed*](#speed).
+
+
 ### change:state
+
+Fired when the [*state*](#state) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*state*](#state).
+
+
+### change:url
+
+Fired when the [*url*](#url) property changes.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*url*](#url).
+
+
+### stateChanged
 
 Fired when the state property changes.
 
@@ -107,22 +196,22 @@ Fired when the state property changes.
 ## Example
 
 ```js
-var video = new tabris.Video({
+const {Button, Video, ui} = require('tabris');
+
+let video = new Video({
   left: 0, top: 0, right: 0, bottom: '#button 16',
   url: 'http://peach.themazzone.com/durian/movies/sintel-1280-stereo.mp4',
   controlsVisible: false
-}).on('change:state', function(event) {
-  button.text = event.value !== 'pause' ? '❚❚' : '▶';
-}).appendTo(tabris.ui.contentView);
+}).on('stateChanged', event => button.text = event.value !== 'pause' ? '❚❚' : '▶')
+  .appendTo(ui.contentView);
 
-var button = new tabris.Button({
+let button = new Button({
   id: 'button',
   centerX: 0, bottom: 16,
   text: '❚❚'
-}).on('select', function() {
-  video.state === 'play' ? video.pause() : video.play();
-}).appendTo(tabris.ui.contentView);
+}).on('select', () => video.state === 'play' ? video.pause() : video.play())
+  .appendTo(ui.contentView);
 ```
 ## See also
 
-- [Snippet for creating a video wigdet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-beta2/snippets/video.js)
+- [Snippet for creating a video widget](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/video.js)
