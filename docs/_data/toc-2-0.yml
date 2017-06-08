@@ -1,5 +1,7 @@
 - title: Getting started
   pages:
+    - title: Introduction
+      url: index.html
     - title: Quick Start Guide
       url: getting-started.html
       description: Create your first Tabris.js App
@@ -137,18 +139,6 @@
     - title: Custom Widgets - Android
       url: custom-widgets-android.html
       description: Android implementation
-
-- title: Articles
-  pages:
-    - title: Apache Cordova vs. Tabris.js
-      url: http://eclipsesource.com/blogs/2015/03/02/apache-cordova-vs-tabris-js/
-      description: How to use Cordova's build tooling to create Tabris.js apps.
-    - title: Debugging Tabris.js
-      url: debug.html
-      description: How to debug a Tabris.js app
-    - title: Layouting in Tabris.js
-      url: http://eclipsesource.com/blogs/2015/02/19/layouting-in-tabris-js/
-      description: Layouting explained.
-    - title: CollectionView - Display Data Sets in Tabris.js
-      url: http://eclipsesource.com/blogs/2015/02/16/collectionview-display-data-sets-in-tabris-js/
-      description: The power of the CollectionView in detail.
+    - title: Custom Widgets - iOS
+      url: custom-widgets-ios.md
+      description: iOS implementation
