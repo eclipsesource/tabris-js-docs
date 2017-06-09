@@ -1,71 +1,57 @@
-- title: Getting started
+- title: Getting Started
   pages:
     - title: Introduction
       url: index.html
     - title: Quick Start Guide
       url: getting-started.html
-      description: Create your first Tabris.js App
     - title: The Tabris.js Developer App
       url: developer-app.html
-      description: Get the most out of our developer app
 
-- title: Documentation
+- title: Developer Guide
   pages:
     - title: Module System
       url: modules.html
-      description: How to organize and load scripts.
     - title: Widget Basics
       url: widget-basics.html
-      description: Native widget handling.
     - title: UI Model
       url: ui.html
-      description: Pages, Actions and Drawer.
     - title: Using Selectors
       url: selector.html
-      description: Working more efficiently with widgets.
     - title: Layouts
       url: layout.html
-      description: Layouting widgets.
     - title: Touch Events
       url: touch.html
-      description: Processing widget gesture/touch events.
     - title: W3C Compatibility
       url: w3c-api.html
-      description: XMLHttpRequest, LocalStorage and timer.
     - title: Cordova Support
       url: cordova.html
-      description: Using Cordova plug-ins, including Dialogs, File and Camera.
     - title: Windows Support
       url: windows-support.html
-      description: Important notes on Windows 10 support.
     - title: Build your app
       url: build.html
-      description: Create a standalone app from your Tabris.js project files.
-    - title: Local Build
-      url: local-build.html
-      description: Build your Tabris.js app locally.
     - title: Patch your app
       url: patch.html
-      description: Hotfix critical issues without waiting for app store submission.
 
 - title: API Reference
   pages:
-    - title: AlertDialog
-      url: api/AlertDialog.html
     - title: app
       url: api/app.html
-    - title: CanvasContext
-      url: api/CanvasContext.html
     - title: device
       url: api/device.html
+    - title: fs
+      url: api/fs.html
+    - title: ui
+      url: api/ui.html
+    - title: window
+      url: api/window.html
+    - title: AlertDialog
+      url: api/AlertDialog.html
+    - title: CanvasContext
+      url: api/CanvasContext.html
     - title: InactivityTimer
       url: api/InactivityTimer.html
     - title: NativeObject
       url: api/NativeObject.html
-    - title: window
-      url: api/window.html
-    - title: ui
-      url: api/ui.html
     - title: WidgetCollection
       url: api/WidgetCollection.html
     - title: Property Types
@@ -130,15 +116,11 @@
     - title: Widget
       url: api/Widget.html
 
-
 - title: Custom Widgets
   pages:
     - title: Custom Widgets
       url: custom-widgets.html
-      description: JavaScript implementation
     - title: Custom Widgets - Android
       url: custom-widgets-android.html
-      description: Android implementation
     - title: Custom Widgets - iOS
       url: custom-widgets-ios.md
-      description: iOS implementation

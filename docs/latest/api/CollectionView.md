@@ -18,9 +18,18 @@ Extends [Widget](Widget.md)
 
 - index: *number*
 - count: *number* [**Optional**]
-  - the position to insert the items at. A negative index is interpreted as relative to the end. If the given index is greater than the item count, new items will be appended at the end. 
+  - the position to insert the items at. A negative index is interpreted as relative to the end. If the given index is greater than the item count, new items will be appended at the end.
 
 Inserts one or more items at the given index. When no *count* is specified, a single item will be added at the given *index*. New cells may be created if needed. The `updateCell` callback will only be called for those new items that become immediately visible. Note that inserting new items changes the index of all subsequent items. This operation will update the `itemCount` property.
+
+### load(itemCount)
+
+**Parameters:** 
+
+- itemCount: *number*
+  - the number of items in the model to load.
+
+Loads a new model with the given *itemCount*. This operation will update the `itemCount` property.
 
 ### refresh(index)
 
@@ -89,7 +98,7 @@ The index of the first item that is currently visible on screen.
 
 Type: *number*
 
-The number of items to display. To add or remove items later, use the methods `insert` and `remove` instead of setting the `itemCount`. To display a new list of items, set this property and call `refresh()`.
+The number of items to display. To add or remove items later, use the methods `insert()` and `remove()` instead of setting the `itemCount`. To display a new list of items, use the `load()` method.
 
 ### lastVisibleIndex
 
