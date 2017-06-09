@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% assign version = page.path | split:'/' | first %}
+  {% assign version = '' %}
+  {% assign segments = page.path | split:'/' %}
+  {% if segments.size > 1 %}{% assign version = segments | first %}{% endif %}
   {% assign tocFile = 'toc-' | append: version | replace: ".", "-"  %}
   {% assign toc = site.data[tocFile] %}
   <head>
