@@ -1,7 +1,7 @@
 {% assign current = page.path | replace:'.md','.html' | relative_url %}
 <ul id="main-nav" class="nav nav-sidebar">
   {% for section in include.toc %}
-    {% assign sectionId = section.title | slugify %}
+    {% assign sectionId = section.title | slugify | prepend:'nav-' %}
     {% assign active = false %}
     {% for item in section.pages %}
       {% assign url = item.url | prepend:'/' | prepend:include.version | relative_url %}
