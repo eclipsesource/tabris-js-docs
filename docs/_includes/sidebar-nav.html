@@ -1,10 +1,11 @@
 {% assign current = page.path | replace:'.md','.html' | relative_url %}
+{% assign subdir = page.path | split:'/' | first %}
 <ul id="main-nav" class="nav nav-sidebar">
   {% for section in include.toc %}
     {% assign sectionId = section.title | slugify | prepend:'nav-' %}
     {% assign active = false %}
     {% for item in section.pages %}
-      {% assign url = item.url | prepend:'/' | prepend:include.version | relative_url %}
+      {% assign url = item.url | prepend:'/' | prepend:subdir | relative_url %}
       {% if current == url %}{% assign active = true %}{% endif %}
     {% endfor %}
     {% if active %}
@@ -20,7 +21,7 @@
       {% if item.url contains "://" %}
       {% assign url = item.url %}
       {% else %}
-      {% assign url = item.url | prepend:'/' | prepend:include.version | relative_url %}
+      {% assign url = item.url | prepend:'/' | prepend:subdir | relative_url %}
       {% endif %}
       {% if current == url %}
       <li class="active"><a>{{ item.title }}</a></li>

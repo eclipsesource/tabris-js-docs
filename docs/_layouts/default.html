@@ -3,6 +3,7 @@
   {% assign version = '' %}
   {% assign segments = page.path | split:'/' %}
   {% if segments.size > 1 %}{% assign version = segments | first %}{% endif %}
+  {% if version == 'latest' %}{% assign version = site.data.main.latest %}{% endif %}
   {% assign tocFile = 'toc-' | append: version | replace: ".", "-"  %}
   {% assign toc = site.data[tocFile] %}
   <head>
