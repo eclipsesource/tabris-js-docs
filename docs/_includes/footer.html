@@ -5,21 +5,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- Algolia docsearch -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script>
-<script type="text/javascript">
-  $(function () {
-    if ($('h2').length) {
-      $("#toc").stoc({
-        search: "#doc-body",
-        depth: 2, //how many hN should we search
-        start: 2, //which hN will be the first (and after it we go just deeper)
-        stocTitle: '<a href="/documentation/latest/">Index</a>', //what to display before our box
-        listType: "ul", //could be ul or ol
-        smoothScroll: 1
-      });
-    }
-  });
-  // Search the documentation with Algolia widget
+<script type="text/javascript" src="//cdn.jsdelivr.net/docsearch.js/2/docsearch.min.js"></script>
+<script>
   docsearch({
     apiKey: '18eb7cad98edf7d6fc8cd6d459e39baa',
     indexName: 'tabrisjs',
