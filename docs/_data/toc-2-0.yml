@@ -54,8 +54,6 @@
       url: api/NativeObject.html
     - title: WidgetCollection
       url: api/WidgetCollection.html
-    - title: Property Types
-      url: types.html
 
 - title: Widgets
   pages:
