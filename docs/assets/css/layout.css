@@ -6,13 +6,17 @@ body {
 	margin: 0px;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
-  color: #333333;
-	background-color: #f7f7f7;
+  color: ​#333333;
+	background-color: white;
 }
 
 /*
  * Top navigation
  */
+
+nav.navbar-inverse {
+  background-color: black;
+}
 
 /* Hide default border to remove 1px line. */
 .navbar-fixed-top {
@@ -41,7 +45,7 @@ body {
   left: 0;
   z-index: 1000;
   display: block;
-  background-color: #f3f3f3;
+  background-color: #f4f5f6;
 }
 
 /* Sidebar navigation */
@@ -52,22 +56,32 @@ body {
 }
 .nav-sidebar a {
   outline: none;
-  color: #333333;
 }
 .nav-sidebar > li > a {
   font-weight: bold;
   padding: 10px 20px;
+  color: #333333;
 }
 .nav-section > li > a {
   padding: 5px 20px 5px 40px;
 }
-.nav-sidebar .active {
-	background-color: #f7f7f7;
+.nav-sidebar > li.active {
+	background-color: white;
 }
 .nav-sidebar .active > a {
   font-weight: bold;
-  color: #4183c4;
+  color: #333333;
 }
+.nav.nav-sidebar a:focus {
+  background-color: #f4f5f6;
+}
+.nav.nav-sidebar .active a:focus {
+  background-color: white;
+}
+.nav.nav-sidebar .active a:hover {
+  background-color: #fafafa;
+}
+
 /* Override bootstrap defaults for .panel,
    .panel is needed for collapse: https://stackoverflow.com/questions/19425165 */
 .nav-sidebar .panel {
@@ -101,6 +115,7 @@ body {
 /*
  * TOC
  */
+
 .sidebar.right > #toc-container {
   position: fixed;
 }
@@ -108,4 +123,12 @@ body {
   padding: 10px 20px;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+/*
+ * Search
+ */
+
+#search-query {
+  border-radius: 4px;
 }
