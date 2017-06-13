@@ -15,3 +15,13 @@ select,
 textarea {
   font-family: "Open Sans", Arial;
 }
+
+/* Twitter Bootstrap Override Style */
+.nav-list > li > a, .nav-list .nav-header {
+  margin: 0px;
+}
+
+/* Twitter Bootstrap Override Style */
+.nav-list > li > a {
+  padding: 5px;
+}

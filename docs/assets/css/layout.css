@@ -6,7 +6,7 @@ body {
 	margin: 0px;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
-  color: ​#333333;
+  color: #333333;
 	background-color: #f7f7f7;
 }
 
@@ -28,23 +28,20 @@ body {
  * Sidebar
  */
 
-/* Hide for mobile, show later */
 .sidebar {
-  display: none;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
 }
-@media (min-width: 768px) {
-  .sidebar {
-    position: fixed;
-    top: 51px;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
-    display: block;
-    padding: 20px;
-    overflow-x: hidden;
-    overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
-    background-color: #f3f3f3;
-  }
+
+.sidebar.left {
+  position: fixed;
+  top: 51px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: block;
+  background-color: #f3f3f3;
 }
 
 /* Sidebar navigation */
@@ -96,4 +93,19 @@ body {
 }
 .main .page-header {
   margin-top: 0;
+}
+.main > #doc-body {
+  padding: 10px;
+}
+
+/*
+ * TOC
+ */
+.sidebar.right > #toc-container {
+  position: fixed;
+}
+.toc-header {
+  padding: 10px 20px;
+  font-weight: bold;
+  text-transform: uppercase;
 }

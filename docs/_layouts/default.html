@@ -16,15 +16,24 @@
     <div class="container-fluid">
       <div class="row">
 
-        <!-- side right column -->
-        <div class="col-sm-3 col-md-2 sidebar">
+        <!-- right column -->
+        <div class="hidden-xs col-sm-3 col-md-2 sidebar left">
           {% include sidebar-nav.html version = version toc = toc %}
         </div>
 
         <!-- main container -->
-        <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <div class="markdown-body" id="doc-body">
+        <div class="col-sm-9 col-sm-offset-3 col-md-8 col-md-offset-2 main">
+          <div id="doc-body" class="markdown-body" id="doc-body">
             {{ content }}
+          </div>
+        </div>
+
+        <!-- left container -->
+        <div class="col-sm-0 col-md-2 sidebar right">
+          <div id="toc-container">
+            <div class="toc-header">In this article</div>
+            <div id="toc">
+            </div>
           </div>
         </div>
       </div>
