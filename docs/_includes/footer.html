@@ -26,6 +26,12 @@
     $('#toc').tocify({
       context: '#doc-body',
       selectors: 'h2,h3',
+      hashGenerator: function(text, el) {
+        var id = el.attr('id');
+        el.removeAttr('id');
+        return id;
+      },
+      scrollTo: 60
     });
   });
 </script>
