@@ -65,7 +65,7 @@ The list of pinned certificates has to be in the form of `[{host: <string>, hash
 - The `hash` attribute is the base64 encoded sha256 fingerprint of the _subjectPublicKeyInfo_, prefixed with `sha256/`.
 - The `algorithm` attribute denotes the public key algorithm of the SSL certificate and can have the values `RSA2048`, `RSA4096` or `ECDSA256`. This attribute is only required on iOS.
 
-Example: `[{host: 'freegeoip.net', hash: 'sha256/eTPz+5X4FcoK5fW+I0Wt/9y2vOkU3UMmVnDs7yGUJf8', algorithm: 'RSA4096'}]`
+Example: `[{host: 'freegeoip.net', hash: 'sha256/+SVYjThgePRQxQ0e8bWTQDRtPYR/xBRufqyMoeaWteo=', algorithm: 'ECDSA256'}]`
 
 For further details see https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning.
 

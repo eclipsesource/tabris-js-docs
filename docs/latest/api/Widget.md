@@ -72,7 +72,7 @@ Removes this widget from its parent and destroys it. Also disposes of all its ch
 
 **Returns:** *[WidgetCollection](WidgetCollection.md)*
 
-Returns a (possibly empty) collection of all descendants of this widget that match the given selector.
+Returns a collection containing all descendants of all widgets in this collection that match the given selector.
 
 ### insertAfter(widget)
 

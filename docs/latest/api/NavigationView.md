@@ -17,7 +17,7 @@ Extends [Composite](Composite.md)
 
 **Returns:** *[WidgetCollection](WidgetCollection.md)*
 
-Returns the ordered list of pages on the page stack, with the bottommost page as the first and the topmost page as the last element. Same as children(), but does not return children of other types than `Page`.
+Returns the ordered list of pages on the page stack, with the bottommost page as the first and the topmost page as the last element. Same as children(), but only returns children that are of type `Page`.
 
 
 ## Properties
