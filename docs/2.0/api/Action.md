@@ -2,13 +2,15 @@
 ---
 # Action
 
+Extends [Widget](Widget.md)
+
 An executable item that is integrated in the application's navigation menu. Add a listener on *select* to implement the action.
+
+Import this type with "`const {Action} = require('tabris');`"
 
 Android | iOS
 --- | ---
 ![Action on Android](img/android/Action.png) | ![Action on iOS](img/ios/Action.png)
-
-Extends [Widget](Widget.md)
 
 ## Properties
 
@@ -39,9 +41,9 @@ Allows to override the image of the Action with an MDL2 ("Metro Design Language 
 
 ## Events
 
-### change:image
+### imageChanged
 
-Fired when the [*image*](#image) property changes.
+Fired when the [*image*](#image) property has changed.
 
 #### Event Parameters 
 
@@ -52,9 +54,9 @@ Fired when the [*image*](#image) property changes.
     The new value of [*image*](#image).
 
 
-### change:placementPriority
+### placementPriorityChanged
 
-Fired when the [*placementPriority*](#placementPriority) property changes.
+Fired when the [*placementPriority*](#placementPriority) property has changed.
 
 #### Event Parameters 
 
@@ -65,9 +67,12 @@ Fired when the [*placementPriority*](#placementPriority) property changes.
     The new value of [*placementPriority*](#placementPriority).
 
 
-### change:title
+### select
 
-Fired when the [*title*](#title) property changes.
+Fired when the action is invoked.
+### titleChanged
+
+Fired when the [*title*](#title) property has changed.
 
 #### Event Parameters 
 
@@ -78,9 +83,9 @@ Fired when the [*title*](#title) property changes.
     The new value of [*title*](#title).
 
 
-### change:win_symbol
+### win_symbolChanged
 
-Fired when the [*win_symbol*](#win_symbol) property changes.
+Fired when the [*win_symbol*](#win_symbol) property has changed.
 
 #### Event Parameters 
 
@@ -91,13 +96,10 @@ Fired when the [*win_symbol*](#win_symbol) property changes.
     The new value of [*win_symbol*](#win_symbol).
 
 
-### select
-
-Fired when the action is invoked.
 
 
 
 ## See also
 
-- [Snippet for creating actions](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationview-action.js)
-- [Actions - placement priorities](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationview-action-placementpriority.js)
+- [Snippet for creating actions](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/navigationview-action.js)
+- [Actions - placement priorities](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/navigationview-action-placementpriority.js)

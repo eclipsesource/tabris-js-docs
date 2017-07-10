@@ -2,9 +2,11 @@
 ---
 # AlertDialog
 
+Extends [NativeObject](NativeObject.md)
+
 An `AlertDialog` represents a native dialog pop-up showing a message and up to three buttons. It is placed on top of any other API, but is not a widget itself.
 
-Extends [NativeObject](NativeObject.md)
+Import this type with "`const {AlertDialog} = require('tabris');`"
 
 ## Methods
 
@@ -44,9 +46,9 @@ The title of the dialog.
 
 ## Events
 
-### change:buttons
+### buttonsChanged
 
-Fired when the [*buttons*](#buttons) property changes.
+Fired when the [*buttons*](#buttons) property has changed.
 
 #### Event Parameters 
 
@@ -55,32 +57,6 @@ Fired when the [*buttons*](#buttons) property changes.
 
 - **value**: *{ok?: string, cancel?: string, neutral?: string}*
     The new value of [*buttons*](#buttons).
-
-
-### change:message
-
-Fired when the [*message*](#message) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*message*](#message).
-
-
-### change:title
-
-Fired when the [*title*](#title) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*title*](#title).
 
 
 ### close
@@ -105,6 +81,32 @@ Fired when the dialog was closed by pressing the 'neutral' button.
 ### closeOk
 
 Fired when the dialog was closed by pressing the 'ok' button.
+### messageChanged
+
+Fired when the [*message*](#message) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*message*](#message).
+
+
+### titleChanged
+
+Fired when the [*title*](#title) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*title*](#title).
+
+
 
 
 
@@ -158,4 +160,4 @@ new Button({
 ```
 ## See also
 
-- [Simple AlertDialog snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/alertdialog.js)
+- [Simple AlertDialog snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/alertdialog.js)

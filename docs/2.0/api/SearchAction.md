@@ -2,13 +2,15 @@
 ---
 # SearchAction
 
+Extends [Action](Action.md)
+
 An action that displays a search text field with dynamic proposals when selected. Add a listener on *select* to implement the action. On *input*, you may set a list of *proposals*.
+
+Import this type with "`const {SearchAction} = require('tabris');`"
 
 Android | iOS
 --- | ---
 ![SearchAction on Android](img/android/SearchAction.png) | ![SearchAction on iOS](img/ios/SearchAction.png)
-
-Extends [Action](Action.md)
 
 ## Methods
 
@@ -53,45 +55,6 @@ Fired when a text input has been submitted by pressing the keyboard's search key
     The current value of *[text](#text)*.
 
 
-### change:message
-
-Fired when the [*message*](#message) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*message*](#message).
-
-
-### change:proposals
-
-Fired when the [*proposals*](#proposals) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string[]*
-    The new value of [*proposals*](#proposals).
-
-
-### change:text
-
-Fired when the [*text*](#text) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*text*](#text).
-
-
 ### input
 
 Fired when the user inputs text.
@@ -105,9 +68,48 @@ Fired when the user inputs text.
     The new value of *[text](#text)*.
 
 
+### messageChanged
+
+Fired when the [*message*](#message) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*message*](#message).
+
+
+### proposalsChanged
+
+Fired when the [*proposals*](#proposals) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string[]*
+    The new value of [*proposals*](#proposals).
+
+
+### textChanged
+
+Fired when the [*text*](#text) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*text*](#text).
+
+
 
 
 
 ## See also
 
-- [Search action snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationview-searchaction.js)
+- [Search action snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/navigationview-searchaction.js)

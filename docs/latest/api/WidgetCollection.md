@@ -4,6 +4,8 @@
 
 A `WidgetCollection` is an array-like object representing a set of widgets, as returned by the widget methods `children` and `find`.
 
+Import this type with "`const {WidgetCollection} = require('tabris');`"
+
 A `WidgetCollection` is an array-like object that represents any number of widgets - it can also be empty.
 
 It combines a subset of the JavaScript Array API with a subset of the Tabris.js Widget API. Like an array, the widgets within the collection may be accessed directly using the `[index]` syntax. The number of widgets is stored in the `length` field. Instances of *WidgetCollection* are immutable.
@@ -80,11 +82,16 @@ Returns a new *WidgetCollection* containing all widgets in this collection that 
 
 Returns a collection containing all descendants of all widgets in this collection that match the given selector.
 
-### first()
+### first(selector)
+
+**Parameters:** 
+
+- selector: *[Selector](../types.md#selector)* [**Optional**]
+  - a selector expression or a predicate function to filter the results.
 
 **Returns:** *[Widget](Widget.md)*
 
-Returns the first widget in the collection. Same as `collection[0]`.
+Returns the first widget in the collection that is matched by the selector. Without selector, it is the same as `collection[0]`.
 
 ### forEach(callback)
 
@@ -127,11 +134,16 @@ Returns `true` if the given widget is included in the collection, `false` otherw
 
 Returns the index of the given widget within the collection, or `-1` if the widget is not present.
 
-### last()
+### last(selector)
+
+**Parameters:** 
+
+- selector: *[Selector](../types.md#selector)* [**Optional**]
+  - a selector expression or a predicate function to filter the results.
 
 **Returns:** *[Widget](Widget.md)*
 
-Returns the last widget in the collection. Same as `collection[collection.length - 1]`.
+Returns the last widget in the collection that is matched by the selector. Without selector, it is the same as `collection[collection.length - 1]`.
 
 ### off(event, listener, context)
 

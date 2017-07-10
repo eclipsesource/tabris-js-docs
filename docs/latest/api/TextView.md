@@ -2,13 +2,15 @@
 ---
 # TextView
 
+Extends [Widget](Widget.md)
+
 A widget to display a text. For images, use ImageView.
+
+Import this type with "`const {TextView} = require('tabris');`"
 
 Android | iOS
 --- | ---
 ![TextView on Android](img/android/TextView.png) | ![TextView on iOS](img/ios/TextView.png)
-
-Extends [Widget](Widget.md)
 
 ## Properties
 
@@ -82,5 +84,5 @@ new TextView({
 ```
 ## See also
 
-- [Simple TextView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/textview.js)
-- [Snippet for TextView with markup](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/textview-markupenabled.js)
+- [Simple TextView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/textview.js)
+- [Snippet for TextView with markup](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/textview-markupenabled.js)

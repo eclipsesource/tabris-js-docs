@@ -2,7 +2,11 @@
 ---
 # device
 
+Extends [NativeObject](NativeObject.md)
+
 Provides information about the device that executes the application.
+
+Import this object with "`const {device} = require('tabris');`"
 
 Example:
 
@@ -11,8 +15,6 @@ let lang = device.language;
 
 device.on("orientationChanged", ({value: orientation}) => console.log("new orientation: ", orientation));
 ```
-
-Extends [NativeObject](NativeObject.md)
 
 ## Properties
 
@@ -88,9 +90,9 @@ On a PC this returns `"touch"` when in tablet mode, otherwise `"mouse"`. On phon
 
 ## Events
 
-### change:language
+### languageChanged
 
-Fired when the [*language*](#language) property changes.
+Fired when the [*language*](#language) property has changed.
 
 #### Event Parameters 
 
@@ -101,9 +103,9 @@ Fired when the [*language*](#language) property changes.
     The new value of [*language*](#language).
 
 
-### change:model
+### modelChanged
 
-Fired when the [*model*](#model) property changes.
+Fired when the [*model*](#model) property has changed.
 
 #### Event Parameters 
 
@@ -112,110 +114,6 @@ Fired when the [*model*](#model) property changes.
 
 - **value**: *string*
     The new value of [*model*](#model).
-
-
-### change:orientation
-
-Fired when the [*orientation*](#orientation) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*orientation*](#orientation).
-
-
-### change:platform
-
-Fired when the [*platform*](#platform) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*platform*](#platform).
-
-
-### change:scaleFactor
-
-Fired when the [*scaleFactor*](#scaleFactor) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *number*
-    The new value of [*scaleFactor*](#scaleFactor).
-
-
-### change:screenHeight
-
-Fired when the [*screenHeight*](#screenHeight) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *number*
-    The new value of [*screenHeight*](#screenHeight).
-
-
-### change:screenWidth
-
-Fired when the [*screenWidth*](#screenWidth) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *number*
-    The new value of [*screenWidth*](#screenWidth).
-
-
-### change:version
-
-Fired when the [*version*](#version) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*version*](#version).
-
-
-### change:win_keyboardPresent
-
-Fired when the [*win_keyboardPresent*](#win_keyboardPresent) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*win_keyboardPresent*](#win_keyboardPresent).
-
-
-### change:win_primaryInput
-
-Fired when the [*win_primaryInput*](#win_primaryInput) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*win_primaryInput*](#win_primaryInput).
 
 
 ### orientationChanged
@@ -229,6 +127,97 @@ Fired when the `orientation` property has changed and the rotation animation has
 
 - **value**: *string*
     The new value of the `orientation` property.
+
+
+### platformChanged
+
+Fired when the [*platform*](#platform) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*platform*](#platform).
+
+
+### scaleFactorChanged
+
+Fired when the [*scaleFactor*](#scaleFactor) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*scaleFactor*](#scaleFactor).
+
+
+### screenHeightChanged
+
+Fired when the [*screenHeight*](#screenHeight) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*screenHeight*](#screenHeight).
+
+
+### screenWidthChanged
+
+Fired when the [*screenWidth*](#screenWidth) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*screenWidth*](#screenWidth).
+
+
+### versionChanged
+
+Fired when the [*version*](#version) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*version*](#version).
+
+
+### win_keyboardPresentChanged
+
+Fired when the [*win_keyboardPresent*](#win_keyboardPresent) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*win_keyboardPresent*](#win_keyboardPresent).
+
+
+### win_primaryInputChanged
+
+Fired when the [*win_primaryInput*](#win_primaryInput) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*win_primaryInput*](#win_primaryInput).
 
 
 

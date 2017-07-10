@@ -2,13 +2,15 @@
 ---
 # TabFolder
 
+Extends [Composite](Composite.md)
+
 A widget that can switch between [tabs](Tab). Only children of type `Tab` are supported. Since the TabFolder does not compute its own size, the width and height must be defined by the respective layout properties (e.g. either `width` or `left` and `right` must be specified).
+
+Import this type with "`const {TabFolder} = require('tabris');`"
 
 Android | iOS
 --- | ---
 ![TabFolder on Android](img/android/TabFolder.png) | ![TabFolder on iOS](img/ios/TabFolder.png)
-
-Extends [Composite](Composite.md)
 
 ## Properties
 
@@ -51,9 +53,9 @@ Controls the color scheme used for the tabBar. When set to `"default"` the theme
 
 ## Events
 
-### change:paging
+### pagingChanged
 
-Fired when the [*paging*](#paging) property changes.
+Fired when the [*paging*](#paging) property has changed.
 
 #### Event Parameters 
 
@@ -62,45 +64,6 @@ Fired when the [*paging*](#paging) property changes.
 
 - **value**: *boolean*
     The new value of [*paging*](#paging).
-
-
-### change:selection
-
-Fired when the [*selection*](#selection) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Tab](Tab.md)*
-    The new value of [*selection*](#selection).
-
-
-### change:textColor
-
-Fired when the [*textColor*](#textColor) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*textColor*](#textColor).
-
-
-### change:win_tabBarTheme
-
-Fired when the [*win_tabBarTheme*](#win_tabBarTheme) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*win_tabBarTheme*](#win_tabBarTheme).
 
 
 ### scroll
@@ -145,6 +108,32 @@ Fired when the selection property changes.
     The new value of the `selection` property.
 
 
+### textColorChanged
+
+Fired when the [*textColor*](#textColor) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*textColor*](#textColor).
+
+
+### win_tabBarThemeChanged
+
+Fired when the [*win_tabBarTheme*](#win_tabBarTheme) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*win_tabBarTheme*](#win_tabBarTheme).
+
+
 
 
 
@@ -180,4 +169,4 @@ function createTab(title, image, seletedImage) {
 ```
 ## See also
 
-- [Snippet with a TabFolder and Tabs](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/tabfolder.js)
+- [Snippet with a TabFolder and Tabs](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/tabfolder.js)

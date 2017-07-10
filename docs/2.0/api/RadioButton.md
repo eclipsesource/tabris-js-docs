@@ -2,13 +2,15 @@
 ---
 # RadioButton
 
+Extends [Widget](Widget.md)
+
 A radio button. Selecting a radio button de-selects all its siblings (i.e. all radio buttons within the same parent).
+
+Import this type with "`const {RadioButton} = require('tabris');`"
 
 Android | iOS
 --- | ---
 ![RadioButton on Android](img/android/RadioButton.png) | ![RadioButton on iOS](img/ios/RadioButton.png)
-
-Extends [Widget](Widget.md)
 
 ## Properties
 
@@ -32,45 +34,6 @@ The color of the text.
 
 
 ## Events
-
-### change:checked
-
-Fired when the [*checked*](#checked) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*checked*](#checked).
-
-
-### change:text
-
-Fired when the [*text*](#text) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*text*](#text).
-
-
-### change:textColor
-
-Fired when the [*textColor*](#textColor) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*textColor*](#textColor).
-
 
 ### checkedChanged
 
@@ -98,6 +61,32 @@ Fired when the radio button is selected or deselected by the user.
     The new value of *[checked](#checked)*.
 
 
+### textChanged
+
+Fired when the [*text*](#text) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*text*](#text).
+
+
+### textColorChanged
+
+Fired when the [*textColor*](#textColor) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*textColor*](#textColor).
+
+
 
 
 
@@ -121,4 +110,4 @@ const {RadioButton, ui} = require('tabris');
 ```
 ## See also
 
-- [Simple RadioButton snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/radiobutton.js)
+- [Simple RadioButton snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/radiobutton.js)

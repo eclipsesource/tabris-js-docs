@@ -4,6 +4,8 @@
 
 The CanvasContext is used for drawing onto the [canvas](./Canvas.md). It is a subset of the HTML5 [CanvasRenderingContext2D](https://developer.mozilla.org/en/docs/Web/API/CanvasRenderingContext2D).
 
+Import this type with "`const {CanvasContext} = require('tabris');`"
+
 ## Methods
 
 ### arc(x, y, radius, startAngle, endAngle, anticlockwise)

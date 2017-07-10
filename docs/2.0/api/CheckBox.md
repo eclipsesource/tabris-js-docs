@@ -2,13 +2,15 @@
 ---
 # CheckBox
 
+Extends [Widget](Widget.md)
+
 A check box widget.
+
+Import this type with "`const {CheckBox} = require('tabris');`"
 
 Android | iOS
 --- | ---
 ![CheckBox on Android](img/android/CheckBox.png) | ![CheckBox on iOS](img/ios/CheckBox.png)
-
-Extends [Widget](Widget.md)
 
 ## Properties
 
@@ -32,45 +34,6 @@ The color of the text.
 
 
 ## Events
-
-### change:checked
-
-Fired when the [*checked*](#checked) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*checked*](#checked).
-
-
-### change:text
-
-Fired when the [*text*](#text) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*text*](#text).
-
-
-### change:textColor
-
-Fired when the [*textColor*](#textColor) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*textColor*](#textColor).
-
 
 ### checkedChanged
 
@@ -98,6 +61,32 @@ Fired when the check box is checked or unchecked by the user.
     The new value of *[checked](#checked)*.
 
 
+### textChanged
+
+Fired when the [*text*](#text) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*text*](#text).
+
+
+### textColorChanged
+
+Fired when the [*textColor*](#textColor) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*textColor*](#textColor).
+
+
 
 
 
@@ -117,4 +106,4 @@ new CheckBox({
 ```
 ## See also
 
-- [Simple Checkbox snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/checkbox.js)
+- [Simple Checkbox snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/checkbox.js)

@@ -2,7 +2,11 @@
 ---
 # Canvas
 
+Extends [Composite](Composite.md)
+
 Canvas is a widget that can be used to draw graphics using a [canvas context](./CanvasContext.md).
+
+Import this type with "`const {Canvas} = require('tabris');`"
 
 ![Canvas on Android](img/android/Canvas.png)
 
@@ -17,8 +21,6 @@ new Canvas({
   // ...
 }).appendTo(page);
 ```
-
-Extends [Composite](Composite.md)
 
 ## Methods
 

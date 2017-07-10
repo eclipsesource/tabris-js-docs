@@ -2,9 +2,11 @@
 ---
 # InactivityTimer
 
+Extends [NativeObject](NativeObject.md)
+
 A timer that triggers when the app has not been interacted with for a configurable interval.
 
-Extends [NativeObject](NativeObject.md)
+Import this type with "`const {InactivityTimer} = require('tabris');`"
 
 ## Methods
 
@@ -28,9 +30,9 @@ The interval of user inactivity that will trigger the timer. Given in millisecon
 
 ## Events
 
-### change:delay
+### delayChanged
 
-Fired when the [*delay*](#delay) property changes.
+Fired when the [*delay*](#delay) property has changed.
 
 #### Event Parameters 
 

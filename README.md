@@ -17,7 +17,7 @@ Run:
 
 - Perform a release build of tabris-js (`grunt --release`)
 - Copy the `build/doc/` directory from the tabris build to to `docs/<version>/`
-- Copy the `toc.yml` from tabris.js to `docs/_data/toc-<version-with-dashes>.yml`
+- Move the `docs/<version>/toc.yml` to `docs/_data/toc-<version-with-dashes>.yml`
 - Update the latest version in the config file [main.yml](./docs/_data/main.yml) if needed.
 - Run `find docs/2.0/ -name '*.md' -exec node tools/fix-markdown.js {} \;`
 - Run `node tools/check-links.js http://127.0.0.1:4000/`

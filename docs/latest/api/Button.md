@@ -2,13 +2,15 @@
 ---
 # Button
 
+Extends [Widget](Widget.md)
+
 A push button. Can contain a text or an image.
+
+Import this type with "`const {Button} = require('tabris');`"
 
 Android | iOS
 --- | ---
 ![Button on Android](img/android/Button.png) | ![Button on iOS](img/ios/Button.png)
-
-Extends [Widget](Widget.md)
 
 ## Properties
 
@@ -39,9 +41,9 @@ The color of the text.
 
 ## Events
 
-### change:alignment
+### alignmentChanged
 
-Fired when the [*alignment*](#alignment) property changes.
+Fired when the [*alignment*](#alignment) property has changed.
 
 #### Event Parameters 
 
@@ -52,9 +54,9 @@ Fired when the [*alignment*](#alignment) property changes.
     The new value of [*alignment*](#alignment).
 
 
-### change:image
+### imageChanged
 
-Fired when the [*image*](#image) property changes.
+Fired when the [*image*](#image) property has changed.
 
 #### Event Parameters 
 
@@ -65,9 +67,12 @@ Fired when the [*image*](#image) property changes.
     The new value of [*image*](#image).
 
 
-### change:text
+### select
 
-Fired when the [*text*](#text) property changes.
+Fired when the button is pressed.
+### textChanged
+
+Fired when the [*text*](#text) property has changed.
 
 #### Event Parameters 
 
@@ -78,9 +83,9 @@ Fired when the [*text*](#text) property changes.
     The new value of [*text*](#text).
 
 
-### change:textColor
+### textColorChanged
 
-Fired when the [*textColor*](#textColor) property changes.
+Fired when the [*textColor*](#textColor) property has changed.
 
 #### Event Parameters 
 
@@ -91,9 +96,6 @@ Fired when the [*textColor*](#textColor) property changes.
     The new value of [*textColor*](#textColor).
 
 
-### select
-
-Fired when the button is pressed.
 
 
 
@@ -114,4 +116,4 @@ new Button({
 ```
 ## See also
 
-- [Simple Button snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/button.js)
+- [Simple Button snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/button.js)

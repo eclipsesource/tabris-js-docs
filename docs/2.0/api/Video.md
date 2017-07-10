@@ -2,13 +2,15 @@
 ---
 # Video
 
+Extends [Widget](Widget.md)
+
 A widget that plays a video from an URL.
+
+Import this type with "`const {Video} = require('tabris');`"
 
 Android | iOS
 --- | ---
 ![Video on Android](img/android/Video.png) | ![Video on iOS](img/ios/Video.png)
-
-Extends [Widget](Widget.md)
 
 ## Methods
 
@@ -86,9 +88,9 @@ The URL of the video to play. Setting this property to any non-empty string chan
 
 ## Events
 
-### change:autoPlay
+### autoPlayChanged
 
-Fired when the [*autoPlay*](#autoPlay) property changes.
+Fired when the [*autoPlay*](#autoPlay) property has changed.
 
 #### Event Parameters 
 
@@ -99,9 +101,9 @@ Fired when the [*autoPlay*](#autoPlay) property changes.
     The new value of [*autoPlay*](#autoPlay).
 
 
-### change:controlsVisible
+### controlsVisibleChanged
 
-Fired when the [*controlsVisible*](#controlsVisible) property changes.
+Fired when the [*controlsVisible*](#controlsVisible) property has changed.
 
 #### Event Parameters 
 
@@ -112,9 +114,9 @@ Fired when the [*controlsVisible*](#controlsVisible) property changes.
     The new value of [*controlsVisible*](#controlsVisible).
 
 
-### change:duration
+### durationChanged
 
-Fired when the [*duration*](#duration) property changes.
+Fired when the [*duration*](#duration) property has changed.
 
 #### Event Parameters 
 
@@ -125,9 +127,9 @@ Fired when the [*duration*](#duration) property changes.
     The new value of [*duration*](#duration).
 
 
-### change:position
+### positionChanged
 
-Fired when the [*position*](#position) property changes.
+Fired when the [*position*](#position) property has changed.
 
 #### Event Parameters 
 
@@ -138,9 +140,9 @@ Fired when the [*position*](#position) property changes.
     The new value of [*position*](#position).
 
 
-### change:speed
+### speedChanged
 
-Fired when the [*speed*](#speed) property changes.
+Fired when the [*speed*](#speed) property has changed.
 
 #### Event Parameters 
 
@@ -149,32 +151,6 @@ Fired when the [*speed*](#speed) property changes.
 
 - **value**: *number*
     The new value of [*speed*](#speed).
-
-
-### change:state
-
-Fired when the [*state*](#state) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*state*](#state).
-
-
-### change:url
-
-Fired when the [*url*](#url) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*url*](#url).
 
 
 ### stateChanged
@@ -188,6 +164,19 @@ Fired when the state property changes.
 
 - **value**: *string*
     The new value of the `state` property.
+
+
+### urlChanged
+
+Fired when the [*url*](#url) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*url*](#url).
 
 
 
@@ -214,4 +203,4 @@ let button = new Button({
 ```
 ## See also
 
-- [Snippet for creating a video widget](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/video.js)
+- [Snippet for creating a video widget](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/video.js)

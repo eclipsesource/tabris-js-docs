@@ -2,9 +2,11 @@
 ---
 # NavigationBar
 
+Extends [Widget](Widget.md)
+
 The navigation bar is the onscreen area where *Back*, *Home* and similar buttons are displayed. The singleton instance can be accessed via `ui.navigationBar` and is only available on Android.
 
-Extends [Widget](Widget.md)
+Import this type with "`const {NavigationBar} = require('tabris');`"
 
 ## Properties
 
@@ -71,4 +73,4 @@ function createTextView(text, id) {
 ```
 ## See also
 
-- [Snippet demonstrating various properties of the `NavigationBar`](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationbar.js)
+- [Snippet demonstrating various properties of the `NavigationBar`](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/navigationbar.js)

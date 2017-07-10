@@ -2,13 +2,15 @@
 ---
 # Switch
 
+Extends [Widget](Widget.md)
+
 A switch widget that can be toggled.
+
+Import this type with "`const {Switch} = require('tabris');`"
 
 Android | iOS
 --- | ---
 ![Switch on Android](img/android/Switch.png) | ![Switch on iOS](img/ios/Switch.png)
-
-Extends [Widget](Widget.md)
 
 ## Properties
 
@@ -45,71 +47,6 @@ The color of the track that holds the thumb, when switched *on*.
 
 ## Events
 
-### change:checked
-
-Fired when the [*checked*](#checked) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*checked*](#checked).
-
-
-### change:thumbOffColor
-
-Fired when the [*thumbOffColor*](#thumbOffColor) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*thumbOffColor*](#thumbOffColor).
-
-
-### change:thumbOnColor
-
-Fired when the [*thumbOnColor*](#thumbOnColor) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*thumbOnColor*](#thumbOnColor).
-
-
-### change:trackOffColor
-
-Fired when the [*trackOffColor*](#trackOffColor) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*trackOffColor*](#trackOffColor).
-
-
-### change:trackOnColor
-
-Fired when the [*trackOnColor*](#trackOnColor) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*trackOnColor*](#trackOnColor).
-
-
 ### checkedChanged
 
 Fired when the checked property changes.
@@ -134,6 +71,58 @@ Fired when the switch is toggled by the user.
 
 - **checked**: *boolean*
     The current value of *[checked](#checked)*.
+
+
+### thumbOffColorChanged
+
+Fired when the [*thumbOffColor*](#thumbOffColor) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*thumbOffColor*](#thumbOffColor).
+
+
+### thumbOnColorChanged
+
+Fired when the [*thumbOnColor*](#thumbOnColor) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*thumbOnColor*](#thumbOnColor).
+
+
+### trackOffColorChanged
+
+Fired when the [*trackOffColor*](#trackOffColor) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*trackOffColor*](#trackOffColor).
+
+
+### trackOnColorChanged
+
+Fired when the [*trackOnColor*](#trackOnColor) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*trackOnColor*](#trackOnColor).
 
 
 

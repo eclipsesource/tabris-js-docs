@@ -2,9 +2,11 @@
 ---
 # NavigationView
 
+Extends [Composite](Composite.md)
+
 A widget that displays a stack of [pages](Page) with a toolbar that allows to navigate back. The toolbar also displays the current page's title and the highest priority [actions](Action) that are added to the NavigationView. Only children of type `Page`, `Action` and `SearchAction` are supported. Since the NavigationView does not compute its own size, the width and height must be defined by the respective layout properties (e.g. either `width` or `left` and `right` must be specified).
 
-Extends [Composite](Composite.md)
+Import this type with "`const {NavigationView} = require('tabris');`"
 
 ## Methods
 
@@ -103,6 +105,32 @@ Controls the color scheme used for the toolbar. When set to `"default"` the them
 
 ## Events
 
+### actionColorChanged
+
+Fired when the [*actionColor*](#actionColor) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*actionColor*](#actionColor).
+
+
+### actionTextColorChanged
+
+Fired when the [*actionTextColor*](#actionTextColor) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*actionTextColor*](#actionTextColor).
+
+
 ### bottomToolbarHeightChanged
 
 Fired when the height of the bottom toolbar changes, e.g. if it changes visibility.
@@ -116,48 +144,9 @@ Fired when the height of the bottom toolbar changes, e.g. if it changes visibili
     The new height
 
 
-### change:actionColor
+### drawerActionVisibleChanged
 
-Fired when the [*actionColor*](#actionColor) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*actionColor*](#actionColor).
-
-
-### change:actionTextColor
-
-Fired when the [*actionTextColor*](#actionTextColor) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*actionTextColor*](#actionTextColor).
-
-
-### change:bottomToolbarHeight
-
-Fired when the [*bottomToolbarHeight*](#bottomToolbarHeight) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *number*
-    The new value of [*bottomToolbarHeight*](#bottomToolbarHeight).
-
-
-### change:drawerActionVisible
-
-Fired when the [*drawerActionVisible*](#drawerActionVisible) property changes.
+Fired when the [*drawerActionVisible*](#drawerActionVisible) property has changed.
 
 #### Event Parameters 
 
@@ -168,9 +157,9 @@ Fired when the [*drawerActionVisible*](#drawerActionVisible) property changes.
     The new value of [*drawerActionVisible*](#drawerActionVisible).
 
 
-### change:pageAnimation
+### pageAnimationChanged
 
-Fired when the [*pageAnimation*](#pageAnimation) property changes.
+Fired when the [*pageAnimation*](#pageAnimation) property has changed.
 
 #### Event Parameters 
 
@@ -181,9 +170,9 @@ Fired when the [*pageAnimation*](#pageAnimation) property changes.
     The new value of [*pageAnimation*](#pageAnimation).
 
 
-### change:titleTextColor
+### titleTextColorChanged
 
-Fired when the [*titleTextColor*](#titleTextColor) property changes.
+Fired when the [*titleTextColor*](#titleTextColor) property has changed.
 
 #### Event Parameters 
 
@@ -194,9 +183,9 @@ Fired when the [*titleTextColor*](#titleTextColor) property changes.
     The new value of [*titleTextColor*](#titleTextColor).
 
 
-### change:toolbarColor
+### toolbarColorChanged
 
-Fired when the [*toolbarColor*](#toolbarColor) property changes.
+Fired when the [*toolbarColor*](#toolbarColor) property has changed.
 
 #### Event Parameters 
 
@@ -207,9 +196,9 @@ Fired when the [*toolbarColor*](#toolbarColor) property changes.
     The new value of [*toolbarColor*](#toolbarColor).
 
 
-### change:toolbarVisible
+### toolbarVisibleChanged
 
-Fired when the [*toolbarVisible*](#toolbarVisible) property changes.
+Fired when the [*toolbarVisible*](#toolbarVisible) property has changed.
 
 #### Event Parameters 
 
@@ -218,71 +207,6 @@ Fired when the [*toolbarVisible*](#toolbarVisible) property changes.
 
 - **value**: *boolean*
     The new value of [*toolbarVisible*](#toolbarVisible).
-
-
-### change:topToolbarHeight
-
-Fired when the [*topToolbarHeight*](#topToolbarHeight) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *number*
-    The new value of [*topToolbarHeight*](#topToolbarHeight).
-
-
-### change:win_drawerActionBackground
-
-Fired when the [*win_drawerActionBackground*](#win_drawerActionBackground) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*win_drawerActionBackground*](#win_drawerActionBackground).
-
-
-### change:win_drawerActionTheme
-
-Fired when the [*win_drawerActionTheme*](#win_drawerActionTheme) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*win_drawerActionTheme*](#win_drawerActionTheme).
-
-
-### change:win_toolbarOverflowTheme
-
-Fired when the [*win_toolbarOverflowTheme*](#win_toolbarOverflowTheme) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*win_toolbarOverflowTheme*](#win_toolbarOverflowTheme).
-
-
-### change:win_toolbarTheme
-
-Fired when the [*win_toolbarTheme*](#win_toolbarTheme) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*win_toolbarTheme*](#win_toolbarTheme).
 
 
 ### topToolbarHeightChanged
@@ -298,11 +222,63 @@ Fired when the height of the top toolbar changes, e.g. if it changes visibility.
     The new height
 
 
+### win_drawerActionBackgroundChanged
+
+Fired when the [*win_drawerActionBackground*](#win_drawerActionBackground) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*win_drawerActionBackground*](#win_drawerActionBackground).
+
+
+### win_drawerActionThemeChanged
+
+Fired when the [*win_drawerActionTheme*](#win_drawerActionTheme) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*win_drawerActionTheme*](#win_drawerActionTheme).
+
+
+### win_toolbarOverflowThemeChanged
+
+Fired when the [*win_toolbarOverflowTheme*](#win_toolbarOverflowTheme) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*win_toolbarOverflowTheme*](#win_toolbarOverflowTheme).
+
+
+### win_toolbarThemeChanged
+
+Fired when the [*win_toolbarTheme*](#win_toolbarTheme) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*win_toolbarTheme*](#win_toolbarTheme).
+
+
 
 
 
 ## See also
 
-- [Snippet with a NavigationView and Pages](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationview-page-stacked.js)
-- [Snippet with a NavigationView and its various properties](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationview-properties.js)
-- [Snippet with NavigationViews embedded in Tabs of a TabFolder](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationview-tabfolder.js)
+- [Snippet with a NavigationView and Pages](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/navigationview-page-stacked.js)
+- [Snippet with a NavigationView and its various properties](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/navigationview-properties.js)
+- [Snippet with NavigationViews embedded in Tabs of a TabFolder](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/navigationview-tabfolder.js)

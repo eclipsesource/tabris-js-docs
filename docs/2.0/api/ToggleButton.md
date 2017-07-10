@@ -2,13 +2,15 @@
 ---
 # ToggleButton
 
+Extends [Widget](Widget.md)
+
 A push button that "snaps in", i.e. it is selected when pressed and deselected when pressed again.
+
+Import this type with "`const {ToggleButton} = require('tabris');`"
 
 Android | iOS
 --- | ---
 ![ToggleButton on Android](img/android/ToggleButton.png) | ![ToggleButton on iOS](img/ios/ToggleButton.png)
-
-Extends [Widget](Widget.md)
 
 ## Properties
 
@@ -45,9 +47,9 @@ The color of the text.
 
 ## Events
 
-### change:alignment
+### alignmentChanged
 
-Fired when the [*alignment*](#alignment) property changes.
+Fired when the [*alignment*](#alignment) property has changed.
 
 #### Event Parameters 
 
@@ -56,58 +58,6 @@ Fired when the [*alignment*](#alignment) property changes.
 
 - **value**: *string*
     The new value of [*alignment*](#alignment).
-
-
-### change:checked
-
-Fired when the [*checked*](#checked) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*checked*](#checked).
-
-
-### change:image
-
-Fired when the [*image*](#image) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Image](../types.md#image)*
-    The new value of [*image*](#image).
-
-
-### change:text
-
-Fired when the [*text*](#text) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*text*](#text).
-
-
-### change:textColor
-
-Fired when the [*textColor*](#textColor) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*textColor*](#textColor).
 
 
 ### checkedChanged
@@ -123,6 +73,19 @@ Fired when the checked property changes.
     The new value of the `checked` property.
 
 
+### imageChanged
+
+Fired when the [*image*](#image) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Image](../types.md#image)*
+    The new value of [*image*](#image).
+
+
 ### select
 
 Fired when the toggle button is selected or deselected by the user.
@@ -134,6 +97,32 @@ Fired when the toggle button is selected or deselected by the user.
 
 - **checked**: *boolean*
     The current value of *[checked](#checked)*.
+
+
+### textChanged
+
+Fired when the [*text*](#text) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*text*](#text).
+
+
+### textColorChanged
+
+Fired when the [*textColor*](#textColor) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*textColor*](#textColor).
 
 
 
@@ -155,4 +144,4 @@ new ToggleButton({
 ```
 ## See also
 
-- [Simple ToggleButton snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/togglebutton.js)
+- [Simple ToggleButton snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/togglebutton.js)

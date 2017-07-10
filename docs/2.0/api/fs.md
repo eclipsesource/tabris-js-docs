@@ -2,9 +2,11 @@
 ---
 # fs
 
+Extends [NativeObject](NativeObject.md)
+
 The `fs` object provides methods to read and write files. All methods are asynchronous and return a promise.
 
-Extends [NativeObject](NativeObject.md)
+Import this object with "`const {fs} = require('tabris');`"
 
 ## Methods
 

@@ -42,10 +42,10 @@
       url: api/device.html
     - title: fs
       url: api/fs.html
+    - title: localStorage
+      url: api/localStorage.html
     - title: ui
       url: api/ui.html
-    - title: window
-      url: api/window.html
     - title: AlertDialog
       url: api/AlertDialog.html
     - title: CanvasContext
@@ -54,6 +54,8 @@
       url: api/InactivityTimer.html
     - title: NativeObject
       url: api/NativeObject.html
+    - title: Timer
+      url: api/timer.html
     - title: WidgetCollection
       url: api/WidgetCollection.html
 

@@ -2,13 +2,15 @@
 ---
 # Slider
 
+Extends [Widget](Widget.md)
+
 A widget representing a numeric value as an movable indicator on a horizontal line.
+
+Import this type with "`const {Slider} = require('tabris');`"
 
 Android | iOS
 --- | ---
 ![Slider on Android](img/android/Slider.png) | ![Slider on iOS](img/ios/Slider.png)
-
-Extends [Widget](Widget.md)
 
 ## Properties
 
@@ -39,9 +41,9 @@ The color used to display the current selection.
 
 ## Events
 
-### change:maximum
+### maximumChanged
 
-Fired when the [*maximum*](#maximum) property changes.
+Fired when the [*maximum*](#maximum) property has changed.
 
 #### Event Parameters 
 
@@ -52,9 +54,9 @@ Fired when the [*maximum*](#maximum) property changes.
     The new value of [*maximum*](#maximum).
 
 
-### change:minimum
+### minimumChanged
 
-Fired when the [*minimum*](#minimum) property changes.
+Fired when the [*minimum*](#minimum) property has changed.
 
 #### Event Parameters 
 
@@ -63,32 +65,6 @@ Fired when the [*minimum*](#minimum) property changes.
 
 - **value**: *number*
     The new value of [*minimum*](#minimum).
-
-
-### change:selection
-
-Fired when the [*selection*](#selection) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *number*
-    The new value of [*selection*](#selection).
-
-
-### change:tintColor
-
-Fired when the [*tintColor*](#tintColor) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*tintColor*](#tintColor).
 
 
 ### select
@@ -115,6 +91,19 @@ Fired when the selection property changes.
 
 - **value**: *number*
     The new value of the `selection` property.
+
+
+### tintColorChanged
+
+Fired when the [*tintColor*](#tintColor) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*tintColor*](#tintColor).
 
 
 
@@ -144,4 +133,4 @@ new Slider({
 ```
 ## See also
 
-- [Simple Slider snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/slider.js)
+- [Simple Slider snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/slider.js)

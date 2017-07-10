@@ -1,8 +1,8 @@
 ---
 ---
-# window
+# Timer
 
-The object `window` is the global object. All fields of windows are also global variables and vice versa. For compatibility it is also known as `global` and `self`.
+This API is available in the global namespace. You do not need to import it explicitly.
 
 ## Methods
 

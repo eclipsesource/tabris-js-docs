@@ -2,9 +2,11 @@
 ---
 # Widget
 
+Extends [NativeObject](NativeObject.md)
+
 Base class for all widgets
 
-Extends [NativeObject](NativeObject.md)
+Import this type with "`const {Widget} = require('tabris');`"
 
 ## Methods
 
@@ -281,9 +283,9 @@ Controls the color scheme used for this widget. When set to `"default"` the them
 
 ## Events
 
-### change:background
+### backgroundChanged
 
-Fired when the [*background*](#background) property changes.
+Fired when the [*background*](#background) property has changed.
 
 #### Event Parameters 
 
@@ -294,9 +296,9 @@ Fired when the [*background*](#background) property changes.
     The new value of [*background*](#background).
 
 
-### change:backgroundImage
+### backgroundImageChanged
 
-Fired when the [*backgroundImage*](#backgroundImage) property changes.
+Fired when the [*backgroundImage*](#backgroundImage) property has changed.
 
 #### Event Parameters 
 
@@ -307,9 +309,9 @@ Fired when the [*backgroundImage*](#backgroundImage) property changes.
     The new value of [*backgroundImage*](#backgroundImage).
 
 
-### change:baseline
+### baselineChanged
 
-Fired when the [*baseline*](#baseline) property changes.
+Fired when the [*baseline*](#baseline) property has changed.
 
 #### Event Parameters 
 
@@ -320,9 +322,9 @@ Fired when the [*baseline*](#baseline) property changes.
     The new value of [*baseline*](#baseline).
 
 
-### change:bottom
+### bottomChanged
 
-Fired when the [*bottom*](#bottom) property changes.
+Fired when the [*bottom*](#bottom) property has changed.
 
 #### Event Parameters 
 
@@ -333,9 +335,9 @@ Fired when the [*bottom*](#bottom) property changes.
     The new value of [*bottom*](#bottom).
 
 
-### change:bounds
+### boundsChanged
 
-Fired when the [*bounds*](#bounds) property changes.
+Fired when the [*bounds*](#bounds) property has changed.
 
 #### Event Parameters 
 
@@ -346,9 +348,9 @@ Fired when the [*bounds*](#bounds) property changes.
     The new value of [*bounds*](#bounds).
 
 
-### change:centerX
+### centerXChanged
 
-Fired when the [*centerX*](#centerX) property changes.
+Fired when the [*centerX*](#centerX) property has changed.
 
 #### Event Parameters 
 
@@ -359,9 +361,9 @@ Fired when the [*centerX*](#centerX) property changes.
     The new value of [*centerX*](#centerX).
 
 
-### change:centerY
+### centerYChanged
 
-Fired when the [*centerY*](#centerY) property changes.
+Fired when the [*centerY*](#centerY) property has changed.
 
 #### Event Parameters 
 
@@ -372,9 +374,9 @@ Fired when the [*centerY*](#centerY) property changes.
     The new value of [*centerY*](#centerY).
 
 
-### change:class
+### classChanged
 
-Fired when the [*class*](#class) property changes.
+Fired when the [*class*](#class) property has changed.
 
 #### Event Parameters 
 
@@ -385,9 +387,9 @@ Fired when the [*class*](#class) property changes.
     The new value of [*class*](#class).
 
 
-### change:classList
+### classListChanged
 
-Fired when the [*classList*](#classList) property changes.
+Fired when the [*classList*](#classList) property has changed.
 
 #### Event Parameters 
 
@@ -398,9 +400,9 @@ Fired when the [*classList*](#classList) property changes.
     The new value of [*classList*](#classList).
 
 
-### change:cornerRadius
+### cornerRadiusChanged
 
-Fired when the [*cornerRadius*](#cornerRadius) property changes.
+Fired when the [*cornerRadius*](#cornerRadius) property has changed.
 
 #### Event Parameters 
 
@@ -411,9 +413,9 @@ Fired when the [*cornerRadius*](#cornerRadius) property changes.
     The new value of [*cornerRadius*](#cornerRadius).
 
 
-### change:data
+### dataChanged
 
-Fired when the [*data*](#data) property changes.
+Fired when the [*data*](#data) property has changed.
 
 #### Event Parameters 
 
@@ -424,9 +426,12 @@ Fired when the [*data*](#data) property changes.
     The new value of [*data*](#data).
 
 
-### change:elevation
+### dispose
 
-Fired when the [*elevation*](#elevation) property changes.
+Fired when the widget is about to be disposed. At this point the widget and its children are still accessible.
+### elevationChanged
+
+Fired when the [*elevation*](#elevation) property has changed.
 
 #### Event Parameters 
 
@@ -437,9 +442,9 @@ Fired when the [*elevation*](#elevation) property changes.
     The new value of [*elevation*](#elevation).
 
 
-### change:enabled
+### enabledChanged
 
-Fired when the [*enabled*](#enabled) property changes.
+Fired when the [*enabled*](#enabled) property has changed.
 
 #### Event Parameters 
 
@@ -450,9 +455,9 @@ Fired when the [*enabled*](#enabled) property changes.
     The new value of [*enabled*](#enabled).
 
 
-### change:font
+### fontChanged
 
-Fired when the [*font*](#font) property changes.
+Fired when the [*font*](#font) property has changed.
 
 #### Event Parameters 
 
@@ -463,9 +468,9 @@ Fired when the [*font*](#font) property changes.
     The new value of [*font*](#font).
 
 
-### change:height
+### heightChanged
 
-Fired when the [*height*](#height) property changes.
+Fired when the [*height*](#height) property has changed.
 
 #### Event Parameters 
 
@@ -476,9 +481,9 @@ Fired when the [*height*](#height) property changes.
     The new value of [*height*](#height).
 
 
-### change:highlightOnTouch
+### highlightOnTouchChanged
 
-Fired when the [*highlightOnTouch*](#highlightOnTouch) property changes.
+Fired when the [*highlightOnTouch*](#highlightOnTouch) property has changed.
 
 #### Event Parameters 
 
@@ -489,9 +494,9 @@ Fired when the [*highlightOnTouch*](#highlightOnTouch) property changes.
     The new value of [*highlightOnTouch*](#highlightOnTouch).
 
 
-### change:id
+### idChanged
 
-Fired when the [*id*](#id) property changes.
+Fired when the [*id*](#id) property has changed.
 
 #### Event Parameters 
 
@@ -502,9 +507,9 @@ Fired when the [*id*](#id) property changes.
     The new value of [*id*](#id).
 
 
-### change:layoutData
+### layoutDataChanged
 
-Fired when the [*layoutData*](#layoutData) property changes.
+Fired when the [*layoutData*](#layoutData) property has changed.
 
 #### Event Parameters 
 
@@ -515,9 +520,9 @@ Fired when the [*layoutData*](#layoutData) property changes.
     The new value of [*layoutData*](#layoutData).
 
 
-### change:left
+### leftChanged
 
-Fired when the [*left*](#left) property changes.
+Fired when the [*left*](#left) property has changed.
 
 #### Event Parameters 
 
@@ -528,100 +533,6 @@ Fired when the [*left*](#left) property changes.
     The new value of [*left*](#left).
 
 
-### change:opacity
-
-Fired when the [*opacity*](#opacity) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *number*
-    The new value of [*opacity*](#opacity).
-
-
-### change:right
-
-Fired when the [*right*](#right) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[margin](../types.md#margin)*
-    The new value of [*right*](#right).
-
-
-### change:top
-
-Fired when the [*top*](#top) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[margin](../types.md#margin)*
-    The new value of [*top*](#top).
-
-
-### change:transform
-
-Fired when the [*transform*](#transform) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Transformation](../types.md#transformation)*
-    The new value of [*transform*](#transform).
-
-
-### change:visible
-
-Fired when the [*visible*](#visible) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*visible*](#visible).
-
-
-### change:width
-
-Fired when the [*width*](#width) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[dimension](../types.md#dimension)*
-    The new value of [*width*](#width).
-
-
-### change:win_theme
-
-Fired when the [*win_theme*](#win_theme) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*win_theme*](#win_theme).
-
-
-### dispose
-
-Fired when the widget is about to be disposed. At this point the widget and its children are still accessible.
 ### longpress
 
 Fired after pressing a widget for a specific amount of time (about a second), and again on lifting the finger.
@@ -636,6 +547,19 @@ Fired after pressing a widget for a specific amount of time (about a second), an
 
 - **touches**: *{x: number, y: number}[]*
     Touch coordinates relative to the origin coordinates of the widget.
+
+
+### opacityChanged
+
+Fired when the [*opacity*](#opacity) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*opacity*](#opacity).
 
 
 ### pan
@@ -856,6 +780,19 @@ Fired when the widget's size has changed. You can use this event to apply new [*
     The width of the widget in dip.
 
 
+### rightChanged
+
+Fired when the [*right*](#right) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[margin](../types.md#margin)*
+    The new value of [*right*](#right).
+
+
 ### swipeDown
 
 Fired when a finger moves down quickly.
@@ -921,6 +858,19 @@ Fired once when a finger briefly touched the widget.
     Touch coordinates relative to the origin coordinates of the widget.
 
 
+### topChanged
+
+Fired when the [*top*](#top) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[margin](../types.md#margin)*
+    The new value of [*top*](#top).
+
+
 ### touchCancel
 
 Fired instead of touchEnd when the touch ends on another widget than it started on.
@@ -971,6 +921,58 @@ Fired when a widget is touched. See [Touch Events](../touch.md).
 
 - **touches**: *{x: number, y: number, absoluteX: number, absoluteY: number}[]*
     Touch coordinates relative to the origin coordinates of the widget.
+
+
+### transformChanged
+
+Fired when the [*transform*](#transform) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Transformation](../types.md#transformation)*
+    The new value of [*transform*](#transform).
+
+
+### visibleChanged
+
+Fired when the [*visible*](#visible) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*visible*](#visible).
+
+
+### widthChanged
+
+Fired when the [*width*](#width) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[dimension](../types.md#dimension)*
+    The new value of [*width*](#width).
+
+
+### win_themeChanged
+
+Fired when the [*win_theme*](#win_theme) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*win_theme*](#win_theme).
 
 
 

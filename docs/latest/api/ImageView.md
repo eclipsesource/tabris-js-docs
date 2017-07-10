@@ -2,9 +2,11 @@
 ---
 # ImageView
 
+Extends [Widget](Widget.md)
+
 A widget to display an image.
 
-Extends [Widget](Widget.md)
+Import this type with "`const {ImageView} = require('tabris');`"
 
 ## Properties
 
@@ -35,9 +37,9 @@ A color to change the image appearance. All opaque parts of the image will be ti
 
 ## Events
 
-### change:image
+### imageChanged
 
-Fired when the [*image*](#image) property changes.
+Fired when the [*image*](#image) property has changed.
 
 #### Event Parameters 
 
@@ -46,32 +48,6 @@ Fired when the [*image*](#image) property changes.
 
 - **value**: *[Image](../types.md#image)*
     The new value of [*image*](#image).
-
-
-### change:scaleMode
-
-Fired when the [*scaleMode*](#scaleMode) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*scaleMode*](#scaleMode).
-
-
-### change:tintColor
-
-Fired when the [*tintColor*](#tintColor) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*tintColor*](#tintColor).
 
 
 ### load
@@ -85,6 +61,32 @@ Fired when the image loading has finished.
 
 - **error**: *boolean*
     Contains the final status of the loading process
+
+
+### scaleModeChanged
+
+Fired when the [*scaleMode*](#scaleMode) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*scaleMode*](#scaleMode).
+
+
+### tintColorChanged
+
+Fired when the [*tintColor*](#tintColor) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*tintColor*](#tintColor).
 
 
 

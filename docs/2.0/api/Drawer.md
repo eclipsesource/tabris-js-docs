@@ -2,9 +2,11 @@
 ---
 # Drawer
 
+Extends [Composite](Composite.md)
+
 A drawer that can be swiped in from the left edge of the screen. There's only a single instance that can be accessed via `tabris.ui.drawer`. The drawer is locked by default. To use it in an application, set the property `locked` to `false`. The drawer can contain any kind of widgets.
 
-Extends [Composite](Composite.md)
+Import this type with "`const {Drawer} = require('tabris');`"
 
 ## Methods
 
@@ -51,9 +53,12 @@ This property may be set to an instance of NavigationView to make its drawer-act
 
 ## Events
 
-### change:enabled
+### close
 
-Fired when the [*enabled*](#enabled) property changes.
+Fired when the drawer is closed and has reached its resting position.
+### enabledChanged
+
+Fired when the [*enabled*](#enabled) property has changed.
 
 #### Event Parameters 
 
@@ -64,9 +69,12 @@ Fired when the [*enabled*](#enabled) property changes.
     The new value of [*enabled*](#enabled).
 
 
-### change:win_displayMode
+### open
 
-Fired when the [*win_displayMode*](#win_displayMode) property changes.
+Fired when the drawer is opened and has reached its resting position.
+### win_displayModeChanged
+
+Fired when the [*win_displayMode*](#win_displayMode) property has changed.
 
 #### Event Parameters 
 
@@ -77,9 +85,9 @@ Fired when the [*win_displayMode*](#win_displayMode) property changes.
     The new value of [*win_displayMode*](#win_displayMode).
 
 
-### change:win_targetView
+### win_targetViewChanged
 
-Fired when the [*win_targetView*](#win_targetView) property changes.
+Fired when the [*win_targetView*](#win_targetView) property has changed.
 
 #### Event Parameters 
 
@@ -90,12 +98,6 @@ Fired when the [*win_targetView*](#win_targetView) property changes.
     The new value of [*win_targetView*](#win_targetView).
 
 
-### close
-
-Fired when the drawer is closed and has reached its resting position.
-### open
-
-Fired when the drawer is opened and has reached its resting position.
 
 
 
@@ -132,5 +134,5 @@ function createLabel(text) {
 ```
 ## See also
 
-- [Snippet for creating a Drawer](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/drawer.js)
-- [Example for Drawer-based navigation](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/drawer-pages.js)
+- [Snippet for creating a Drawer](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/drawer.js)
+- [Example for Drawer-based navigation](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/drawer-pages.js)

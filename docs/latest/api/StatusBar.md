@@ -2,9 +2,11 @@
 ---
 # StatusBar
 
+Extends [Widget](Widget.md)
+
 The status bar is the area where notifications, status icons and device time are displayed. The singleton instance can be accessed via `ui.statusBar`.
 
-Extends [Widget](Widget.md)
+Import this type with "`const {StatusBar} = require('tabris');`"
 
 ## Properties
 
@@ -43,37 +45,37 @@ const THEMES = ['default', 'light', 'dark'];
 const DISPLAY_MODES = ['default', 'float', 'hide'];
 const BACKGROUNDS = [ui.statusBar.background, 'rgba(0, 0, 0, 0.25)', 'red', 'green', 'blue'];
 
-createTextView('Theme');
+createTextView('Theme', 'theme');
+createTextView('Display mode', 'displayMode');
+createTextView('Background', 'background');
+createTextView('Height', 'height');
 
 new Picker({
-  left: '#displayMode 16', baseline: 'prev()', right: 16,
+  left: '#displayMode 16', baseline: '#theme', right: 16,
   itemCount: THEMES.length,
   itemText: index => THEMES[index]
 }).on('select', ({index}) => ui.statusBar.theme = THEMES[index])
   .appendTo(ui.contentView);
 
-createTextView('Display mode', 'displayMode');
-
 new Picker({
-  left: '#displayMode 16', baseline: 'prev()', right: 16,
+
+  left: '#displayMode 16', baseline: '#displayMode', right: 16,
   itemCount: DISPLAY_MODES.length,
   itemText: index => DISPLAY_MODES[index]
 }).on('select', ({index}) => ui.statusBar.displayMode = DISPLAY_MODES[index])
   .appendTo(ui.contentView);
 
-createTextView('Background');
 
 new Picker({
-  left: '#displayMode 16', baseline: 'prev()', right: 16,
+  left: '#displayMode 16', baseline: '#background', right: 16,
   itemCount: BACKGROUNDS.length,
   itemText: index => BACKGROUNDS[index]
 }).on('select', ({index}) => ui.statusBar.background = BACKGROUNDS[index])
   .appendTo(ui.contentView);
 
-createTextView('Height');
 
 new TextView({
-  left: '#displayMode 16', baseline: 'prev()', right: 16,
+  left: '#displayMode 16', baseline: '#height', right: 16,
   text: ui.statusBar.height
 }).appendTo(ui.contentView);
 
@@ -87,4 +89,4 @@ function createTextView(text, id) {
 ```
 ## See also
 
-- [Snippet demonstrating various properties on the `StatusBar`](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/statusbar.js)
+- [Snippet demonstrating various properties on the `StatusBar`](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/statusbar.js)

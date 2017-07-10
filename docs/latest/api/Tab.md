@@ -2,9 +2,11 @@
 ---
 # Tab
 
+Extends [Composite](Composite.md)
+
 A container representing a single tab of a TabFolder widget.
 
-Extends [Composite](Composite.md)
+Import this type with "`const {Tab} = require('tabris');`"
 
 ## Properties
 
@@ -35,4 +37,4 @@ The title to be displayed on the tab.
 
 ## See also
 
-- [Snippet with a TabFolder and Tabs](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/tabfolder.js)
+- [Snippet with a TabFolder and Tabs](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/tabfolder.js)

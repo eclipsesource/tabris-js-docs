@@ -2,9 +2,11 @@
 ---
 # ui
 
+Extends [Composite](Composite.md)
+
 Represents the top-level parent for all widgets. It provides access to the status bar, the navigation bar, the drawer and the content view.
 
-Extends [Composite](Composite.md)
+Import this object with "`const {ui} = require('tabris');`"
 
 ## Properties
 

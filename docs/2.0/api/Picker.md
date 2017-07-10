@@ -2,13 +2,15 @@
 ---
 # Picker
 
+Extends [Widget](Widget.md)
+
 A widget with a drop-down list of items to choose from.
+
+Import this type with "`const {Picker} = require('tabris');`"
 
 Android | iOS
 --- | ---
 ![Picker on Android](img/android/Picker.png) | ![Picker on iOS](img/ios/Picker.png)
-
-Extends [Widget](Widget.md)
 
 ## Properties
 
@@ -51,9 +53,9 @@ The color of the text.
 
 ## Events
 
-### change:borderColor
+### borderColorChanged
 
-Fired when the [*borderColor*](#borderColor) property changes.
+Fired when the [*borderColor*](#borderColor) property has changed.
 
 #### Event Parameters 
 
@@ -64,9 +66,9 @@ Fired when the [*borderColor*](#borderColor) property changes.
     The new value of [*borderColor*](#borderColor).
 
 
-### change:fillColor
+### fillColorChanged
 
-Fired when the [*fillColor*](#fillColor) property changes.
+Fired when the [*fillColor*](#fillColor) property has changed.
 
 #### Event Parameters 
 
@@ -77,9 +79,9 @@ Fired when the [*fillColor*](#fillColor) property changes.
     The new value of [*fillColor*](#fillColor).
 
 
-### change:itemCount
+### itemCountChanged
 
-Fired when the [*itemCount*](#itemCount) property changes.
+Fired when the [*itemCount*](#itemCount) property has changed.
 
 #### Event Parameters 
 
@@ -90,9 +92,9 @@ Fired when the [*itemCount*](#itemCount) property changes.
     The new value of [*itemCount*](#itemCount).
 
 
-### change:itemText
+### itemTextChanged
 
-Fired when the [*itemText*](#itemText) property changes.
+Fired when the [*itemText*](#itemText) property has changed.
 
 #### Event Parameters 
 
@@ -101,32 +103,6 @@ Fired when the [*itemText*](#itemText) property changes.
 
 - **value**: *(index: number) => string*
     The new value of [*itemText*](#itemText).
-
-
-### change:selectionIndex
-
-Fired when the [*selectionIndex*](#selectionIndex) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *number*
-    The new value of [*selectionIndex*](#selectionIndex).
-
-
-### change:textColor
-
-Fired when the [*textColor*](#textColor) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*textColor*](#textColor).
 
 
 ### select
@@ -153,6 +129,19 @@ Fired when the selectionIndex property changes.
 
 - **value**: *number*
     The new value of the `selectionIndex` property.
+
+
+### textColorChanged
+
+Fired when the [*textColor*](#textColor) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*textColor*](#textColor).
 
 
 
@@ -191,4 +180,4 @@ picker.on('select', ({index}) => console.log('Selected ' + AIRPORTS[index].id));
 ```
 ## See also
 
-- [Simple Picker snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/picker.js)
+- [Simple Picker snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/picker.js)

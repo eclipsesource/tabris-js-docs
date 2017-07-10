@@ -2,13 +2,15 @@
 ---
 # CollectionView
 
+Extends [Widget](Widget.md)
+
 A scrollable list that displays data items in cells, one per row. Cells are created on demand by the *createCell* callback and reused on scrolling.
+
+Import this type with "`const {CollectionView} = require('tabris');`"
 
 Android | iOS
 --- | ---
 ![CollectionView on Android](img/android/CollectionView.png) | ![CollectionView on iOS](img/ios/CollectionView.png)
-
-Extends [Widget](Widget.md)
 
 ## Methods
 
@@ -134,9 +136,9 @@ A callback used to update a given cell widget to display the item with the given
 
 ## Events
 
-### change:cellHeight
+### cellHeightChanged
 
-Fired when the [*cellHeight*](#cellHeight) property changes.
+Fired when the [*cellHeight*](#cellHeight) property has changed.
 
 #### Event Parameters 
 
@@ -147,9 +149,9 @@ Fired when the [*cellHeight*](#cellHeight) property changes.
     The new value of [*cellHeight*](#cellHeight).
 
 
-### change:cellType
+### cellTypeChanged
 
-Fired when the [*cellType*](#cellType) property changes.
+Fired when the [*cellType*](#cellType) property has changed.
 
 #### Event Parameters 
 
@@ -160,9 +162,9 @@ Fired when the [*cellType*](#cellType) property changes.
     The new value of [*cellType*](#cellType).
 
 
-### change:columnCount
+### columnCountChanged
 
-Fired when the [*columnCount*](#columnCount) property changes.
+Fired when the [*columnCount*](#columnCount) property has changed.
 
 #### Event Parameters 
 
@@ -173,9 +175,9 @@ Fired when the [*columnCount*](#columnCount) property changes.
     The new value of [*columnCount*](#columnCount).
 
 
-### change:firstVisibleIndex
+### firstVisibleIndexChanged
 
-Fired when the [*firstVisibleIndex*](#firstVisibleIndex) property changes.
+Fired when the [*firstVisibleIndex*](#firstVisibleIndex) property has changed.
 
 #### Event Parameters 
 
@@ -186,9 +188,9 @@ Fired when the [*firstVisibleIndex*](#firstVisibleIndex) property changes.
     The new value of [*firstVisibleIndex*](#firstVisibleIndex).
 
 
-### change:itemCount
+### itemCountChanged
 
-Fired when the [*itemCount*](#itemCount) property changes.
+Fired when the [*itemCount*](#itemCount) property has changed.
 
 #### Event Parameters 
 
@@ -199,9 +201,9 @@ Fired when the [*itemCount*](#itemCount) property changes.
     The new value of [*itemCount*](#itemCount).
 
 
-### change:lastVisibleIndex
+### lastVisibleIndexChanged
 
-Fired when the [*lastVisibleIndex*](#lastVisibleIndex) property changes.
+Fired when the [*lastVisibleIndex*](#lastVisibleIndex) property has changed.
 
 #### Event Parameters 
 
@@ -212,9 +214,12 @@ Fired when the [*lastVisibleIndex*](#lastVisibleIndex) property changes.
     The new value of [*lastVisibleIndex*](#lastVisibleIndex).
 
 
-### change:refreshEnabled
+### refresh
 
-Fired when the [*refreshEnabled*](#refreshEnabled) property changes.
+Fired when the user requested a refresh. An event listener should reset the *refreshIndicator* property when refresh is finished.
+### refreshEnabledChanged
+
+Fired when the [*refreshEnabled*](#refreshEnabled) property has changed.
 
 #### Event Parameters 
 
@@ -225,9 +230,9 @@ Fired when the [*refreshEnabled*](#refreshEnabled) property changes.
     The new value of [*refreshEnabled*](#refreshEnabled).
 
 
-### change:refreshIndicator
+### refreshIndicatorChanged
 
-Fired when the [*refreshIndicator*](#refreshIndicator) property changes.
+Fired when the [*refreshIndicator*](#refreshIndicator) property has changed.
 
 #### Event Parameters 
 
@@ -238,9 +243,9 @@ Fired when the [*refreshIndicator*](#refreshIndicator) property changes.
     The new value of [*refreshIndicator*](#refreshIndicator).
 
 
-### change:refreshMessage
+### refreshMessageChanged
 
-Fired when the [*refreshMessage*](#refreshMessage) property changes.
+Fired when the [*refreshMessage*](#refreshMessage) property has changed.
 
 #### Event Parameters 
 
@@ -251,9 +256,6 @@ Fired when the [*refreshMessage*](#refreshMessage) property changes.
     The new value of [*refreshMessage*](#refreshMessage).
 
 
-### refresh
-
-Fired when the user requested a refresh. An event listener should reset the *refreshIndicator* property when refresh is finished.
 ### scroll
 
 Fired while the collection view is scrolling.
@@ -331,4 +333,4 @@ new CollectionView({
 ```
 ## See also
 
-- [CollectionView example](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/collectionview.js)
+- [CollectionView example](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/collectionview.js)

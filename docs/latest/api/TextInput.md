@@ -2,13 +2,15 @@
 ---
 # TextInput
 
+Extends [Widget](Widget.md)
+
 A widget that allows to enter text.
+
+Import this type with "`const {TextInput} = require('tabris');`"
 
 Android | iOS
 --- | ---
 ![TextInput on Android](img/android/TextInput.png) | ![TextInput on iOS](img/ios/TextInput.png)
-
-Extends [Widget](Widget.md)
 
 ## Properties
 
@@ -112,12 +114,9 @@ Fired when a text input has been finished by pressing the keyboard's Enter key. 
     The current value of *[text](#text)*.
 
 
-### blur
+### alignmentChanged
 
-Fired when the widget lost focus.
-### change:alignment
-
-Fired when the [*alignment*](#alignment) property changes.
+Fired when the [*alignment*](#alignment) property has changed.
 
 #### Event Parameters 
 
@@ -128,9 +127,9 @@ Fired when the [*alignment*](#alignment) property changes.
     The new value of [*alignment*](#alignment).
 
 
-### change:autoCapitalize
+### autoCapitalizeChanged
 
-Fired when the [*autoCapitalize*](#autoCapitalize) property changes.
+Fired when the [*autoCapitalize*](#autoCapitalize) property has changed.
 
 #### Event Parameters 
 
@@ -141,9 +140,9 @@ Fired when the [*autoCapitalize*](#autoCapitalize) property changes.
     The new value of [*autoCapitalize*](#autoCapitalize).
 
 
-### change:autoCorrect
+### autoCorrectChanged
 
-Fired when the [*autoCorrect*](#autoCorrect) property changes.
+Fired when the [*autoCorrect*](#autoCorrect) property has changed.
 
 #### Event Parameters 
 
@@ -154,9 +153,12 @@ Fired when the [*autoCorrect*](#autoCorrect) property changes.
     The new value of [*autoCorrect*](#autoCorrect).
 
 
-### change:borderColor
+### blur
 
-Fired when the [*borderColor*](#borderColor) property changes.
+Fired when the widget lost focus.
+### borderColorChanged
+
+Fired when the [*borderColor*](#borderColor) property has changed.
 
 #### Event Parameters 
 
@@ -167,9 +169,9 @@ Fired when the [*borderColor*](#borderColor) property changes.
     The new value of [*borderColor*](#borderColor).
 
 
-### change:editable
+### editableChanged
 
-Fired when the [*editable*](#editable) property changes.
+Fired when the [*editable*](#editable) property has changed.
 
 #### Event Parameters 
 
@@ -180,9 +182,9 @@ Fired when the [*editable*](#editable) property changes.
     The new value of [*editable*](#editable).
 
 
-### change:enterKeyType
+### enterKeyTypeChanged
 
-Fired when the [*enterKeyType*](#enterKeyType) property changes.
+Fired when the [*enterKeyType*](#enterKeyType) property has changed.
 
 #### Event Parameters 
 
@@ -193,9 +195,9 @@ Fired when the [*enterKeyType*](#enterKeyType) property changes.
     The new value of [*enterKeyType*](#enterKeyType).
 
 
-### change:fillColor
+### fillColorChanged
 
-Fired when the [*fillColor*](#fillColor) property changes.
+Fired when the [*fillColor*](#fillColor) property has changed.
 
 #### Event Parameters 
 
@@ -206,9 +208,12 @@ Fired when the [*fillColor*](#fillColor) property changes.
     The new value of [*fillColor*](#fillColor).
 
 
-### change:focused
+### focus
 
-Fired when the [*focused*](#focused) property changes.
+Fired when the widget gains focus.
+### focusedChanged
+
+Fired when the [*focused*](#focused) property has changed.
 
 #### Event Parameters 
 
@@ -219,74 +224,6 @@ Fired when the [*focused*](#focused) property changes.
     The new value of [*focused*](#focused).
 
 
-### change:keepFocus
-
-Fired when the [*keepFocus*](#keepFocus) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*keepFocus*](#keepFocus).
-
-
-### change:keyboard
-
-Fired when the [*keyboard*](#keyboard) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*keyboard*](#keyboard).
-
-
-### change:message
-
-Fired when the [*message*](#message) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*message*](#message).
-
-
-### change:text
-
-Fired when the [*text*](#text) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*text*](#text).
-
-
-### change:textColor
-
-Fired when the [*textColor*](#textColor) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*textColor*](#textColor).
-
-
-### focus
-
-Fired when the widget gains focus.
 ### input
 
 Fired when the text was changed by the user.
@@ -300,6 +237,45 @@ Fired when the text was changed by the user.
     The new value of *[text](#text)*.
 
 
+### keepFocusChanged
+
+Fired when the [*keepFocus*](#keepFocus) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*keepFocus*](#keepFocus).
+
+
+### keyboardChanged
+
+Fired when the [*keyboard*](#keyboard) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*keyboard*](#keyboard).
+
+
+### messageChanged
+
+Fired when the [*message*](#message) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*message*](#message).
+
+
 ### textChanged
 
 Fired when the text property changes.
@@ -311,6 +287,19 @@ Fired when the text property changes.
 
 - **value**: *string*
     The new value of the `text` property.
+
+
+### textColorChanged
+
+Fired when the [*textColor*](#textColor) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*textColor*](#textColor).
 
 
 
@@ -335,5 +324,5 @@ new TextInput({
 ```
 ## See also
 
-- [Simple TextInput snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/textinput.js)
-- [Example with Text and other input controls](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/examples/input/input.js)
+- [Simple TextInput snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/textinput.js)
+- [Example with Text and other input controls](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/examples/input/input.js)

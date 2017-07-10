@@ -2,13 +2,15 @@
 ---
 # ProgressBar
 
+Extends [Widget](Widget.md)
+
 A widget representing a numeric value as a horizontal bar with a growing indicator.
+
+Import this type with "`const {ProgressBar} = require('tabris');`"
 
 Android | iOS
 --- | ---
 ![ProgressBar on Android](img/android/ProgressBar.png) | ![ProgressBar on iOS](img/ios/ProgressBar.png)
-
-Extends [Widget](Widget.md)
 
 ## Properties
 
@@ -63,4 +65,4 @@ setInterval(() => {
 ```
 ## See also
 
-- [Simple ProgressBar snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/progressbar.js)
+- [Simple ProgressBar snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/progressbar.js)

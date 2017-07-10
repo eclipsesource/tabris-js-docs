@@ -2,13 +2,15 @@
 ---
 # ScrollView
 
+Extends [Composite](Composite.md)
+
 A composite that allows its content to overflow either vertically (default) or horizontally. Since the ScrollView does not compute its own size, the width and height must be defined by the respective layout properties (e.g. either `width` or `left` and `right` must be specified).
+
+Import this type with "`const {ScrollView} = require('tabris');`"
 
 Android | iOS
 --- | ---
 ![ScrollView on Android](img/android/ScrollView.png) | ![ScrollView on iOS](img/ios/ScrollView.png)
-
-Extends [Composite](Composite.md)
 
 ## Methods
 
@@ -64,9 +66,9 @@ The vertical scrolling position in dip.
 
 ## Events
 
-### change:offsetX
+### offsetXChanged
 
-Fired when the [*offsetX*](#offsetX) property changes.
+Fired when the [*offsetX*](#offsetX) property has changed.
 
 #### Event Parameters 
 
@@ -77,9 +79,9 @@ Fired when the [*offsetX*](#offsetX) property changes.
     The new value of [*offsetX*](#offsetX).
 
 
-### change:offsetY
+### offsetYChanged
 
-Fired when the [*offsetY*](#offsetY) property changes.
+Fired when the [*offsetY*](#offsetY) property has changed.
 
 #### Event Parameters 
 
@@ -148,5 +150,5 @@ new Button({
 ```
 ## See also
 
-- [Simple ScrollView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/scrollview.js)
-- [Example using a ScrollView](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/examples/parallax/parallax.js)
+- [Simple ScrollView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/scrollview.js)
+- [Example using a ScrollView](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/examples/parallax/parallax.js)

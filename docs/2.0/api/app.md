@@ -2,15 +2,17 @@
 ---
 # app
 
+Extends [NativeObject](NativeObject.md)
+
 Provides information about the application.
+
+Import this object with "`const {app} = require('tabris');`"
 
 Example:
 
 ```js
 app.on("pause", () => pauseVideo());
 ```
-
-Extends [NativeObject](NativeObject.md)
 
 ## Methods
 
@@ -100,9 +102,12 @@ Fired when the back button is pressed on Android.
     Call to suppress the default back navigation behavior.
 
 
-### change:id
+### foreground
 
-Fired when the [*id*](#id) property changes.
+The event is fired when the app starts or when it returns from the background.
+### idChanged
+
+Fired when the [*id*](#id) property has changed.
 
 #### Event Parameters 
 
@@ -113,9 +118,12 @@ Fired when the [*id*](#id) property changes.
     The new value of [*id*](#id).
 
 
-### change:pinnedCertificates
+### pause
 
-Fired when the [*pinnedCertificates*](#pinnedCertificates) property changes.
+Fired when the app is not the interaction target of the user anymore. Usually preceded by `resume`.
+### pinnedCertificatesChanged
+
+Fired when the [*pinnedCertificates*](#pinnedCertificates) property has changed.
 
 #### Event Parameters 
 
@@ -126,9 +134,15 @@ Fired when the [*pinnedCertificates*](#pinnedCertificates) property changes.
     The new value of [*pinnedCertificates*](#pinnedCertificates).
 
 
-### change:version
+### resume
 
-Fired when the [*version*](#version) property changes.
+Fired when the app is visible and ready to interact with the user. The event is preceded by either `foreground` (the app becomes visible again) or `pause` (the app regains ability to interact with user).
+### terminate
+
+Fired when the app is being destroyed. After this callback no more interaction with the app is possible.
+### versionChanged
+
+Fired when the [*version*](#version) property has changed.
 
 #### Event Parameters 
 
@@ -139,9 +153,9 @@ Fired when the [*version*](#version) property changes.
     The new value of [*version*](#version).
 
 
-### change:versionCode
+### versionCodeChanged
 
-Fired when the [*versionCode*](#versionCode) property changes.
+Fired when the [*versionCode*](#versionCode) property has changed.
 
 #### Event Parameters 
 
@@ -152,18 +166,6 @@ Fired when the [*versionCode*](#versionCode) property changes.
     The new value of [*versionCode*](#versionCode).
 
 
-### foreground
-
-The event is fired when the app starts or when it returns from the background.
-### pause
-
-Fired when the app is not the interaction target of the user anymore. Usually preceded by `resume`.
-### resume
-
-Fired when the app is visible and ready to interact with the user. The event is preceded by either `foreground` (the app becomes visible again) or `pause` (the app regains ability to interact with user).
-### terminate
-
-Fired when the app is being destroyed. After this callback no more interaction with the app is possible.
 
 
 

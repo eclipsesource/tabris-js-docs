@@ -2,9 +2,11 @@
 ---
 # WebView
 
+Extends [Widget](Widget.md)
+
 A widget that can display a web page. Since this widget requires a lot of resources it's recommended to have no more than one instance at a time.
 
-Extends [Widget](Widget.md)
+Import this type with "`const {WebView} = require('tabris');`"
 
 ## Methods
 
@@ -61,9 +63,9 @@ The URL of the web page to display. Relative URLs are resolved relative to 'pack
 
 ## Events
 
-### change:canGoBack
+### canGoBackChanged
 
-Fired when the [*canGoBack*](#canGoBack) property changes.
+Fired when the [*canGoBack*](#canGoBack) property has changed.
 
 #### Event Parameters 
 
@@ -74,9 +76,9 @@ Fired when the [*canGoBack*](#canGoBack) property changes.
     The new value of [*canGoBack*](#canGoBack).
 
 
-### change:canGoForward
+### canGoForwardChanged
 
-Fired when the [*canGoForward*](#canGoForward) property changes.
+Fired when the [*canGoForward*](#canGoForward) property has changed.
 
 #### Event Parameters 
 
@@ -85,32 +87,6 @@ Fired when the [*canGoForward*](#canGoForward) property changes.
 
 - **value**: *boolean*
     The new value of [*canGoForward*](#canGoForward).
-
-
-### change:html
-
-Fired when the [*html*](#html) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*html*](#html).
-
-
-### change:url
-
-Fired when the [*url*](#url) property changes.
-
-#### Event Parameters 
-
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*url*](#url).
 
 
 ### download
@@ -133,6 +109,19 @@ Fired when the WebView requests a download. The download event provides the prop
 
 - **url**: *string*
     The URL of the resource to be downloaded.
+
+
+### htmlChanged
+
+Fired when the [*html*](#html) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*html*](#html).
 
 
 ### load
@@ -167,6 +156,19 @@ Fired when the WebView is about to navigate to a new URL.
     The new URL the WebView is about to navigate to.
 
 
+### urlChanged
+
+Fired when the [*url*](#url) property has changed.
+
+#### Event Parameters 
+
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*url*](#url).
+
+
 
 
 
@@ -196,6 +198,6 @@ loadUrl();
 ```
 ## See also
 
-- [Simple WebView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/webview.js)
-- [WebView snippet demonstrating web messaging](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/webview-webmessaging.js)
+- [Simple WebView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/webview.js)
+- [WebView snippet demonstrating web messaging](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/webview-webmessaging.js)
 - [Web Messaging](https://en.wikipedia.org/wiki/Web_Messaging)

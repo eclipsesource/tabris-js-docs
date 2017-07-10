@@ -4,6 +4,8 @@
 
 Base class for all objects with a native implementation.
 
+Import this type with "`const {NativeObject} = require('tabris');`"
+
 ## Methods
 
 ### get(property)

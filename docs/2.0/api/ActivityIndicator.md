@@ -2,13 +2,15 @@
 ---
 # ActivityIndicator
 
+Extends [Widget](Widget.md)
+
 A widget representing a spinning indicator for indeterminate loading / processing time.
+
+Import this type with "`const {ActivityIndicator} = require('tabris');`"
 
 Android | iOS
 --- | ---
 ![ActivityIndicator on Android](img/android/ActivityIndicator.png) | ![ActivityIndicator on iOS](img/ios/ActivityIndicator.png)
-
-Extends [Widget](Widget.md)
 
 ## Example
 
@@ -44,4 +46,4 @@ executeLongRunningTask();
 ```
 ## See also
 
-- [Simple ActivityIndicator snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/activityindicator.js)
+- [Simple ActivityIndicator snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/activityindicator.js)
