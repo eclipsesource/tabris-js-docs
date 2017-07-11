@@ -1,0 +1,16 @@
+{% assign segments = page.path | split: '/' %}
+
+{% assign version = '' %}
+{% if segments.size > 1 %}{% assign version = segments | first %}{% endif %}
+{% if version == 'latest' %}{% assign version = site.data.main.latest %}{% endif %}
+
+{% assign tocFile = 'toc-' | append: version | replace: '.', '-'  %}
+{% assign toc = site.data[tocFile] %}
+
+{% assign base = '' %}
+{% assign depth = segments.size %}
+{% if    depth <= 1 %}{% assign base = '.' %}
+{% elsif depth == 2 %}{% assign base = '..' %}
+{% elsif depth == 3 %}{% assign base = '../..' %}
+{% elsif depth == 4 %}{% assign base = '../../..' %}
+{% endif %}

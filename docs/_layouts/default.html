@@ -1,24 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-  {% assign version = '' %}
-  {% assign segments = page.path | split:'/' %}
-  {% if segments.size > 1 %}{% assign version = segments | first %}{% endif %}
-  {% if version == 'latest' %}{% assign version = site.data.main.latest %}{% endif %}
-  {% assign tocFile = 'toc-' | append: version | replace: ".", "-"  %}
-  {% assign toc = site.data[tocFile] %}
   <head>
     {% include header.html %}
   </head>
   <body>
     <!-- header bar -->
-    {% include navbar.html version = version %}
+    {% include navbar.html %}
 
     <div class="container-fluid">
       <div class="row">
 
         <!-- right column -->
         <div class="hidden-xs col-sm-3 col-md-2 sidebar left">
-          {% include sidebar-nav.html version = version toc = toc %}
+          {% include sidebar-nav.html %}
         </div>
 
         <!-- main container -->

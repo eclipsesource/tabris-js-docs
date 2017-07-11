@@ -1,11 +1,12 @@
-{% assign current = page.path | replace:'.md','.html' | relative_url %}
+{% include base.html %}
+{% assign current = page.path | replace: '.md', '.html' %}
 {% assign subdir = page.path | split:'/' | first %}
 <ul id="main-nav" class="nav nav-sidebar">
-  {% for section in include.toc %}
-    {% assign sectionId = section.title | slugify | prepend:'nav-' %}
+  {% for section in toc %}
+    {% assign sectionId = section.title | slugify | prepend: 'nav-' %}
     {% assign active = false %}
     {% for item in section.pages %}
-      {% assign url = item.url | prepend:'/' | prepend:subdir | relative_url %}
+      {% assign url = item.url | prepend: '/' | prepend: subdir %}
       {% if current == url %}{% assign active = true %}{% endif %}
     {% endfor %}
     {% if active %}
@@ -18,15 +19,12 @@
     <ul id="{{ sectionId | slugify }}" class="nav nav-section collapse">
     {% endif %}
     {% for item in section.pages %}
-      {% if item.url contains "://" %}
-      {% assign url = item.url %}
-      {% else %}
-      {% assign url = item.url | prepend:'/' | prepend:subdir | relative_url %}
-      {% endif %}
+      {% assign url = item.url | prepend: '/' | prepend: subdir %}
+      {% assign relurl = url | prepend: '/' | prepend: base %}
       {% if current == url %}
       <li class="active"><a>{{ item.title }}</a></li>
       {% else %}
-      <li><a href="{{ url }}">{{ item.title }}</a></li>
+      <li><a href="{{ relurl }}">{{ item.title }}</a></li>
       {% endif %}
     {% endfor %}
     </ul>

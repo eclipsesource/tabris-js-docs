@@ -1,3 +1,4 @@
+{% include base.html %}
 {% assign segments = page.path | split:'/' %}
 {% if segments.size > 1 %}{% assign subdir = segments | first %}{% else %}{% assign subdir = '' %}{% endif %}
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -12,9 +13,9 @@
       </button>
 
       <a class="navbar-brand" href="https://tabrisjs.com/">
-        <img height="24px" src="{{ site.baseurl }}/assets/img/tabris-logo.png" alt="logo">
+        <img height="24px" src="{{ base }}/assets/img/tabris-logo.png" alt="logo">
       </a>
-      <a class="navbar-brand title" href="{{ site.baseurl }}/{{ subdir }}">Tabris.js {{ include.version }} Documentation</a>
+      <a class="navbar-brand title" href="{{ base }}/{{ subdir }}">Tabris.js {{ version }} Documentation</a>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
