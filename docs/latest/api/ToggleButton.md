@@ -16,11 +16,13 @@ Android | iOS
 
 ### alignment
 
+
 Type: *string*, supported values: `left`, `right`, `center`, default: `center`
 
 The horizontal alignment of the button text.
 
 ### checked
+
 
 Type: *boolean*, default: `false`
 
@@ -28,17 +30,20 @@ The checked state of the toggle button.
 
 ### image
 
+
 Type: *[Image](../types.md#image)*
 
 An image to be displayed on the button.
 
 ### text
 
+
 Type: *string*
 
 The button's label text.
 
 ### textColor
+
 
 Type: *[Color](../types.md#color)*
 
@@ -52,7 +57,6 @@ The color of the text.
 Fired when the [*alignment*](#alignment) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -65,7 +69,6 @@ Fired when the [*alignment*](#alignment) property has changed.
 Fired when the checked property changes.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -78,7 +81,6 @@ Fired when the checked property changes.
 Fired when the [*image*](#image) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -91,7 +93,6 @@ Fired when the [*image*](#image) property has changed.
 Fired when the toggle button is selected or deselected by the user.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -104,7 +105,6 @@ Fired when the toggle button is selected or deselected by the user.
 Fired when the [*text*](#text) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -117,7 +117,6 @@ Fired when the [*text*](#text) property has changed.
 Fired when the [*textColor*](#textColor) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -129,7 +128,6 @@ Fired when the [*textColor*](#textColor) property has changed.
 
 
 ## Example
-
 ```js
 const {ToggleButton, ui} = require('tabris');
 
@@ -144,4 +142,4 @@ new ToggleButton({
 ```
 ## See also
 
-- [Simple ToggleButton snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/togglebutton.js)
+- [Simple ToggleButton snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/togglebutton.js)

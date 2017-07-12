@@ -10,6 +10,7 @@ Import this type with "`const {NativeObject} = require('tabris');`"
 
 ### get(property)
 
+
 **Parameters:** 
 
 - property: *string*
@@ -19,6 +20,7 @@ Import this type with "`const {NativeObject} = require('tabris');`"
 Gets the current value of the given *property*.
 
 ### off(type, listener, context)
+
 
 **Parameters:** 
 
@@ -35,6 +37,7 @@ Removes all occurrences of *listener* that are bound to *type* and *context* fro
 
 ### off(listeners)
 
+
 **Parameters:** 
 
 - listeners: *EventsObject*
@@ -45,6 +48,7 @@ Removes all occurrences of *listener* that are bound to *type* and *context* fro
 Removes all listeners in the given object from the event type indicated by their key.
 
 ### on(type, listener, context)
+
 
 **Parameters:** 
 
@@ -61,6 +65,7 @@ Registers a *listener* function to be notified of events of the given *type*.
 
 ### on(listeners)
 
+
 **Parameters:** 
 
 - listeners: *EventsObject*
@@ -71,6 +76,7 @@ Registers a *listener* function to be notified of events of the given *type*.
 Registers all listeners in the given object for the event type indicated by their key.
 
 ### once(type, listener, context)
+
 
 **Parameters:** 
 
@@ -87,6 +93,7 @@ Same as `on`, but removes the listener after it has been invoked by an event.
 
 ### once(listeners)
 
+
 **Parameters:** 
 
 - listeners: *EventsObject*
@@ -97,6 +104,7 @@ Same as `on`, but removes the listener after it has been invoked by an event.
 Same as `on`, but removes the listener after it has been invoked by an event.
 
 ### set(property, value)
+
 
 **Parameters:** 
 
@@ -109,6 +117,7 @@ Sets the given property.
 
 ### set(properties)
 
+
 **Parameters:** 
 
 - properties: *PropertiesObject*
@@ -118,6 +127,7 @@ Sets the given property.
 Sets all key-value pairs in the properties object as widget properties.
 
 ### trigger(type, event)
+
 
 **Parameters:** 
 
@@ -134,6 +144,7 @@ Notifies all registered listeners for the given *type* and passes the *event* ob
 ## Properties
 
 ### cid
+
 
 **read-only**<br/>
 Type: *string*

@@ -14,9 +14,11 @@ This object is available in the global namespace. You do not need to import it e
 
 ### clear()
 
+
 Remove all key/value pairs from the storage.
 
 ### getItem(key)
+
 
 **Parameters:** 
 
@@ -28,6 +30,7 @@ Retrieves the value associated with the given key.
 
 ### removeItem(key)
 
+
 **Parameters:** 
 
 - key: *string*
@@ -35,6 +38,7 @@ Retrieves the value associated with the given key.
 Removes the given key/value pair from the storage.
 
 ### setItem(key, value)
+
 
 **Parameters:** 
 

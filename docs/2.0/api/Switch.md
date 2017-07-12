@@ -16,11 +16,13 @@ Android | iOS
 
 ### checked
 
+
 Type: *boolean*, default: `false`
 
 The checked state of the switch.
 
 ### thumbOffColor
+
 
 Type: *[Color](../types.md#color)*
 
@@ -28,17 +30,20 @@ The color of the movable thumb, when switched *off*.
 
 ### thumbOnColor
 
+
 Type: *[Color](../types.md#color)*
 
 The color of the movable thumb, when switched *on*.
 
 ### trackOffColor
 
+
 Type: *[Color](../types.md#color)*
 
 The color of the track that holds the thumb, when switched *off*.
 
 ### trackOnColor
+
 
 Type: *[Color](../types.md#color)*
 
@@ -52,7 +57,6 @@ The color of the track that holds the thumb, when switched *on*.
 Fired when the checked property changes.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -65,7 +69,6 @@ Fired when the checked property changes.
 Fired when the switch is toggled by the user.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -78,7 +81,6 @@ Fired when the switch is toggled by the user.
 Fired when the [*thumbOffColor*](#thumbOffColor) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -91,7 +93,6 @@ Fired when the [*thumbOffColor*](#thumbOffColor) property has changed.
 Fired when the [*thumbOnColor*](#thumbOnColor) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -104,7 +105,6 @@ Fired when the [*thumbOnColor*](#thumbOnColor) property has changed.
 Fired when the [*trackOffColor*](#trackOffColor) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -117,7 +117,6 @@ Fired when the [*trackOffColor*](#trackOffColor) property has changed.
 Fired when the [*trackOnColor*](#trackOnColor) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -129,7 +128,6 @@ Fired when the [*trackOnColor*](#trackOnColor) property has changed.
 
 
 ## Example
-
 ```js
 const {Button, Switch, TextView, ui} = require('tabris');
 

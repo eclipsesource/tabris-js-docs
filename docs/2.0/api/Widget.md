@@ -12,6 +12,7 @@ Import this type with "`const {Widget} = require('tabris');`"
 
 ### animate(properties, options)
 
+
 **Parameters:** 
 
 - properties: *{transform?: Transformation, opacity?: number}*
@@ -25,6 +26,7 @@ Starts an animation that transforms the given properties from their current valu
 
 ### appendTo(parent)
 
+
 **Parameters:** 
 
 - parent: *[Composite](Composite.md)*
@@ -34,6 +36,7 @@ Starts an animation that transforms the given properties from their current valu
 Appends this widget to the given parent. The parent widget must support children (extending *Composite*). If the widget already has a parent, it is removed from the old parent.
 
 ### apply(properties)
+
 
 **Parameters:** 
 
@@ -46,6 +49,7 @@ Applies the given properties to all descendants that match the associated select
 
 ### children(selector)
 
+
 **Parameters:** 
 
 - selector: *[Selector](../types.md#selector)* [**Optional**]
@@ -57,15 +61,18 @@ Returns a (possibly empty) collection of all children of this widget that match 
 
 ### detach()
 
+
 **Returns:** *this*
 
 Removes this widget from its parent.
 
 ### dispose()
 
+
 Removes this widget from its parent and destroys it. Also disposes of all its children. Triggers a `remove` event on the parent and a `dispose` event on itself. The widget can no longer be used.
 
 ### find(selector)
+
 
 **Parameters:** 
 
@@ -78,6 +85,7 @@ Returns a collection containing all descendants of all widgets in this collectio
 
 ### insertAfter(widget)
 
+
 **Parameters:** 
 
 - widget: *[Widget](Widget.md)*
@@ -87,6 +95,7 @@ Returns a collection containing all descendants of all widgets in this collectio
 Inserts this widget directly after the given widget. If the widget already has a parent, it is removed from the old parent.
 
 ### insertBefore(widget)
+
 
 **Parameters:** 
 
@@ -98,17 +107,20 @@ Inserts this widget directly before the given widget. If the widget already has 
 
 ### isDisposed()
 
+
 **Returns:** *boolean*
 
 Returns `true` if the widget has been disposed, otherwise `false`.
 
 ### parent()
 
+
 **Returns:** *[Composite](Composite.md)*
 
 Returns the parent of this widget or `null` if this widget is not appended to a parent.
 
 ### siblings(selector)
+
 
 **Parameters:** 
 
@@ -124,11 +136,13 @@ Returns a (possibly empty) collection of all siblings of this widget that match 
 
 ### background
 
+
 Type: *[Color](../types.md#color)*
 
 Background color of the widget.
 
 ### backgroundImage
+
 
 Type: *[Image](../types.md#image)*
 
@@ -136,17 +150,20 @@ An image to be displayed on the widget's background. If the image is smaller tha
 
 ### baseline
 
+
 Type: *Widget|Selector*
 
 The vertical position of the widget's baseline relative to a sibling widget.
 
 ### bottom
 
-Type: *[margin](../types.md#margin)*
+
+Type: *margin*
 
 The position of the widget's bottom edge relative to the parent or a sibling widget.
 
 ### bounds
+
 
 **read-only**<br/>
 Type: *[Bounds](../types.md#bounds)*
@@ -155,17 +172,20 @@ The actual location and size of the widget, relative to its parent.
 
 ### centerX
 
-Type: *[offset](../types.md#offset)*
+
+Type: *offset*
 
 The horizontal position of the widget's center relative to the parent's center.
 
 ### centerY
 
-Type: *[offset](../types.md#offset)*
+
+Type: *offset*
 
 The vertical position of the widget's center relative to the parent's center.
 
 ### class
+
 
 Type: *string*
 
@@ -173,11 +193,13 @@ A class name or a whitespace separated list of class names to identify the widge
 
 ### classList
 
+
 Type: *string[]*
 
 Provides convenient access to the list of class names set to this widget. Class names can either be set using the `class` property or by modifying the `classList` directly.
 
 ### cornerRadius
+<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
 
 Type: *number*
 
@@ -185,12 +207,14 @@ Configure a widget to have rounded corners. Each corner is affected equally. Sup
 
 ### data
 
+
 **read-only**<br/>
 Type: *Object*
 
 A general-purpose object that allows the application to attach arbitrary data to the widget. Manipulations on this object have no effect on the widget itself in any way. Example: `widget.data.myData = myData;`
 
 ### elevation
+<p class="platforms"><span class="android-tag" title="supported on Android">Android</span></p>
 
 Type: *number*
 
@@ -198,11 +222,13 @@ The position of the widget on the z-axis. Currently only supported on Android 5.
 
 ### enabled
 
+
 Type: *boolean*, default: `true`
 
 Whether the widget can be operated.
 
 ### font
+
 
 Type: *[Font](../types.md#font)*
 
@@ -210,11 +236,13 @@ The font used for the widget.
 
 ### height
 
-Type: *[dimension](../types.md#dimension)*
+
+Type: *dimension*
 
 The height of the widget.
 
 ### highlightOnTouch
+
 
 Type: *boolean*, default: `false`
 
@@ -222,11 +250,13 @@ Whether the entire widget should be highlighted while touched.
 
 ### id
 
+
 Type: *string*
 
 A string to identify the widget by using selectors. IDs are optional. It is strongly recommended that they are unique within a page.
 
 ### layoutData
+
 
 Type: *[LayoutData](../types.md#layoutdata)*
 
@@ -234,11 +264,13 @@ Shorthand for all layout properties. See [Layout](../layout.md).
 
 ### left
 
-Type: *[margin](../types.md#margin)*
+
+Type: *margin*
 
 The position of the widget's left edge relative to the parent or a sibling widget.
 
 ### opacity
+
 
 Type: *number*, default: `1`
 
@@ -246,17 +278,20 @@ Opacity of the entire widget, in the range `[0..1]`. Can be used for fade animat
 
 ### right
 
-Type: *[margin](../types.md#margin)*
+
+Type: *margin*
 
 The position of the widget's right edge relative to the parent or a sibling widget.
 
 ### top
 
-Type: *[margin](../types.md#margin)*
+
+Type: *margin*
 
 The position of the widget's top edge relative to the parent or a sibling widget.
 
 ### transform
+
 
 Type: *[Transformation](../types.md#transformation)*
 
@@ -264,17 +299,20 @@ Modifications to the widget's shape, size, or position. Can be used for animatio
 
 ### visible
 
+
 Type: *boolean*, default: `true`
 
 Whether the widget is visible.
 
 ### width
 
-Type: *[dimension](../types.md#dimension)*
+
+Type: *dimension*
 
 The width of the widget.
 
 ### win_theme
+<p class="platforms"><span class="windows-tag" title="supported on Windows 10">Windows 10</span></p>
 
 Type: *string*, supported values: `light`, `dark`, `default`, default: `default`
 
@@ -288,7 +326,6 @@ Controls the color scheme used for this widget. When set to `"default"` the them
 Fired when the [*background*](#background) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -301,7 +338,6 @@ Fired when the [*background*](#background) property has changed.
 Fired when the [*backgroundImage*](#backgroundImage) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -314,7 +350,6 @@ Fired when the [*backgroundImage*](#backgroundImage) property has changed.
 Fired when the [*baseline*](#baseline) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -327,11 +362,10 @@ Fired when the [*baseline*](#baseline) property has changed.
 Fired when the [*bottom*](#bottom) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
-- **value**: *[margin](../types.md#margin)*
+- **value**: *margin*
     The new value of [*bottom*](#bottom).
 
 
@@ -340,7 +374,6 @@ Fired when the [*bottom*](#bottom) property has changed.
 Fired when the [*bounds*](#bounds) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -353,11 +386,10 @@ Fired when the [*bounds*](#bounds) property has changed.
 Fired when the [*centerX*](#centerX) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
-- **value**: *[offset](../types.md#offset)*
+- **value**: *offset*
     The new value of [*centerX*](#centerX).
 
 
@@ -366,11 +398,10 @@ Fired when the [*centerX*](#centerX) property has changed.
 Fired when the [*centerY*](#centerY) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
-- **value**: *[offset](../types.md#offset)*
+- **value**: *offset*
     The new value of [*centerY*](#centerY).
 
 
@@ -379,7 +410,6 @@ Fired when the [*centerY*](#centerY) property has changed.
 Fired when the [*class*](#class) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -392,7 +422,6 @@ Fired when the [*class*](#class) property has changed.
 Fired when the [*classList*](#classList) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -405,7 +434,6 @@ Fired when the [*classList*](#classList) property has changed.
 Fired when the [*cornerRadius*](#cornerRadius) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -418,7 +446,6 @@ Fired when the [*cornerRadius*](#cornerRadius) property has changed.
 Fired when the [*data*](#data) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -434,7 +461,6 @@ Fired when the widget is about to be disposed. At this point the widget and its 
 Fired when the [*elevation*](#elevation) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -447,7 +473,6 @@ Fired when the [*elevation*](#elevation) property has changed.
 Fired when the [*enabled*](#enabled) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -460,7 +485,6 @@ Fired when the [*enabled*](#enabled) property has changed.
 Fired when the [*font*](#font) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -473,11 +497,10 @@ Fired when the [*font*](#font) property has changed.
 Fired when the [*height*](#height) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
-- **value**: *[dimension](../types.md#dimension)*
+- **value**: *dimension*
     The new value of [*height*](#height).
 
 
@@ -486,7 +509,6 @@ Fired when the [*height*](#height) property has changed.
 Fired when the [*highlightOnTouch*](#highlightOnTouch) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -499,7 +521,6 @@ Fired when the [*highlightOnTouch*](#highlightOnTouch) property has changed.
 Fired when the [*id*](#id) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -512,7 +533,6 @@ Fired when the [*id*](#id) property has changed.
 Fired when the [*layoutData*](#layoutData) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -525,11 +545,10 @@ Fired when the [*layoutData*](#layoutData) property has changed.
 Fired when the [*left*](#left) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
-- **value**: *[margin](../types.md#margin)*
+- **value**: *margin*
     The new value of [*left*](#left).
 
 
@@ -538,7 +557,6 @@ Fired when the [*left*](#left) property has changed.
 Fired after pressing a widget for a specific amount of time (about a second), and again on lifting the finger.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -554,7 +572,6 @@ Fired after pressing a widget for a specific amount of time (about a second), an
 Fired when the [*opacity*](#opacity) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -567,7 +584,6 @@ Fired when the [*opacity*](#opacity) property has changed.
 Fired continuously after a finger touching the widget moved for a certain distance.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -595,7 +611,6 @@ Fired continuously after a finger touching the widget moved for a certain distan
 Fired when a finger starts moving down.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -623,7 +638,6 @@ Fired when a finger starts moving down.
 Fired when a finger starts moving left or right.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -651,7 +665,6 @@ Fired when a finger starts moving left or right.
 Fired when a finger starts moving left.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -679,7 +692,6 @@ Fired when a finger starts moving left.
 Fired when a finger starts moving right.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -707,7 +719,6 @@ Fired when a finger starts moving right.
 Fired when a finger starts moving up.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -735,7 +746,6 @@ Fired when a finger starts moving up.
 Fired when a finger starts moving up or down.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -763,7 +773,6 @@ Fired when a finger starts moving up or down.
 Fired when the widget's size has changed. You can use this event to apply new [*layoutData*](#layoutdata).
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -785,11 +794,10 @@ Fired when the widget's size has changed. You can use this event to apply new [*
 Fired when the [*right*](#right) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
-- **value**: *[margin](../types.md#margin)*
+- **value**: *margin*
     The new value of [*right*](#right).
 
 
@@ -798,7 +806,6 @@ Fired when the [*right*](#right) property has changed.
 Fired when a finger moves down quickly.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -811,7 +818,6 @@ Fired when a finger moves down quickly.
 Fired when a finger moves left quickly.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -824,7 +830,6 @@ Fired when a finger moves left quickly.
 Fired when a finger moves right quickly.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -837,7 +842,6 @@ Fired when a finger moves right quickly.
 Fired when a finger moves up quickly.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -850,7 +854,6 @@ Fired when a finger moves up quickly.
 Fired once when a finger briefly touched the widget.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -863,11 +866,10 @@ Fired once when a finger briefly touched the widget.
 Fired when the [*top*](#top) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
-- **value**: *[margin](../types.md#margin)*
+- **value**: *margin*
     The new value of [*top*](#top).
 
 
@@ -876,7 +878,6 @@ Fired when the [*top*](#top) property has changed.
 Fired instead of touchEnd when the touch ends on another widget than it started on.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -889,7 +890,6 @@ Fired instead of touchEnd when the touch ends on another widget than it started 
 Fired when a touch ends on the same widget than it started on.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -902,7 +902,6 @@ Fired when a touch ends on the same widget than it started on.
 Fired repeatedly while swiping across the screen.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -915,7 +914,6 @@ Fired repeatedly while swiping across the screen.
 Fired when a widget is touched. See [Touch Events](../touch.md).
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -928,7 +926,6 @@ Fired when a widget is touched. See [Touch Events](../touch.md).
 Fired when the [*transform*](#transform) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -941,7 +938,6 @@ Fired when the [*transform*](#transform) property has changed.
 Fired when the [*visible*](#visible) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -954,11 +950,10 @@ Fired when the [*visible*](#visible) property has changed.
 Fired when the [*width*](#width) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
-- **value**: *[dimension](../types.md#dimension)*
+- **value**: *dimension*
     The new value of [*width*](#width).
 
 
@@ -967,7 +962,6 @@ Fired when the [*width*](#width) property has changed.
 Fired when the [*win_theme*](#win_theme) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 

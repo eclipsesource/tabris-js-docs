@@ -12,9 +12,11 @@ Import this type with "`const {InactivityTimer} = require('tabris');`"
 
 ### cancel()
 
+
 Stops and resets the timer.
 
 ### start()
+
 
 Starts the timer with the currently configured delay. After the first `timeout` event, the timer will stop but it can be started again.
 
@@ -22,6 +24,7 @@ Starts the timer with the currently configured delay. After the first `timeout` 
 ## Properties
 
 ### delay
+
 
 Type: *number*, default: `0`
 
@@ -35,7 +38,6 @@ The interval of user inactivity that will trigger the timer. Given in millisecon
 Fired when the [*delay*](#delay) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -50,7 +52,6 @@ Fired when the app has not been interacted with since the configured delay.
 
 
 ## Example
-
 ```js
 const {Button, InactivityTimer, TextView, ui} = require('tabris');
 

@@ -16,6 +16,7 @@ Android | iOS
 
 ### open()
 
+
 Invokes the search action, i.e. displays the UI to perform a search.
 
 
@@ -23,17 +24,20 @@ Invokes the search action, i.e. displays the UI to perform a search.
 
 ### message
 
+
 Type: *string*
 
 A hint text that is displayed when the search input is empty.
 
 ### proposals
 
+
 Type: *string[]*, default: `[]`
 
 The list of proposals to display.
 
 ### text
+
 
 Type: *string*
 
@@ -47,7 +51,6 @@ The text in the search input field.
 Fired when a text input has been submitted by pressing the keyboard's search key.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -60,7 +63,6 @@ Fired when a text input has been submitted by pressing the keyboard's search key
 Fired when the user inputs text.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -73,7 +75,6 @@ Fired when the user inputs text.
 Fired when the [*message*](#message) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -86,7 +87,6 @@ Fired when the [*message*](#message) property has changed.
 Fired when the [*proposals*](#proposals) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -99,7 +99,6 @@ Fired when the [*proposals*](#proposals) property has changed.
 Fired when the [*text*](#text) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -112,4 +111,4 @@ Fired when the [*text*](#text) property has changed.
 
 ## See also
 
-- [Search action snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/navigationview-searchaction.js)
+- [Search action snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationview-searchaction.js)

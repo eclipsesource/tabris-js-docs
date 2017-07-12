@@ -25,6 +25,7 @@ Calls to `set` or `animate` change the given properties for all widgets in the c
 
 ### animate(properties, options)
 
+
 **Parameters:** 
 
 - properties: *{transform?: Transformation, opacity?: number}*
@@ -35,6 +36,7 @@ Calls to `set` or `animate` change the given properties for all widgets in the c
 Animates all widgets in this collection.
 
 ### appendTo(parent)
+
 
 **Parameters:** 
 
@@ -47,6 +49,7 @@ Appends all widgets in this collection to the given parent widget.
 
 ### children(selector)
 
+
 **Parameters:** 
 
 - selector: *[Selector](../types.md#selector)* [**Optional**]
@@ -58,9 +61,11 @@ Returns a collection containing all children of all widgets in this collection t
 
 ### dispose()
 
+
 Disposes all widgets in this collection.
 
 ### filter(selector)
+
 
 **Parameters:** 
 
@@ -73,6 +78,7 @@ Returns a new *WidgetCollection* containing all widgets in this collection that 
 
 ### find(selector)
 
+
 **Parameters:** 
 
 - selector: *[Selector](../types.md#selector)* [**Optional**]
@@ -83,6 +89,7 @@ Returns a new *WidgetCollection* containing all widgets in this collection that 
 Returns a collection containing all descendants of all widgets in this collection that match the given selector.
 
 ### first(selector)
+
 
 **Parameters:** 
 
@@ -95,6 +102,7 @@ Returns the first widget in the collection that is matched by the selector. With
 
 ### forEach(callback)
 
+
 **Parameters:** 
 
 - callback: *(widget: Widget, index: number, collection: WidgetCollection) => void*
@@ -103,6 +111,7 @@ Returns the first widget in the collection that is matched by the selector. With
 Calls the given callback function once for each widget in the collection.
 
 ### get(property)
+
 
 **Parameters:** 
 
@@ -113,6 +122,7 @@ Calls the given callback function once for each widget in the collection.
 Returns the value of the given property of the first widget in this collection.
 
 ### includes(widget)
+
 
 **Parameters:** 
 
@@ -125,6 +135,7 @@ Returns `true` if the given widget is included in the collection, `false` otherw
 
 ### indexOf(widget)
 
+
 **Parameters:** 
 
 - widget: *[Widget](Widget.md)*
@@ -135,6 +146,7 @@ Returns `true` if the given widget is included in the collection, `false` otherw
 Returns the index of the given widget within the collection, or `-1` if the widget is not present.
 
 ### last(selector)
+
 
 **Parameters:** 
 
@@ -147,6 +159,7 @@ Returns the last widget in the collection that is matched by the selector. Witho
 
 ### off(event, listener, context)
 
+
 **Parameters:** 
 
 - event: *string*
@@ -158,6 +171,7 @@ Returns the last widget in the collection that is matched by the selector. Witho
 Removes the given listener from all widgets in this collection. See also `Widget.off()`.
 
 ### on(event, listener, context)
+
 
 **Parameters:** 
 
@@ -172,6 +186,7 @@ Adds the given listener to all widgets in this collection. See also `Widget.on()
 
 ### once(event, listener, context)
 
+
 **Parameters:** 
 
 - event: *string*
@@ -185,11 +200,13 @@ Adds the given listener for single execution on all widgets in this collection. 
 
 ### parent()
 
+
 **Returns:** *[WidgetCollection](WidgetCollection.md)*
 
 Returns a collection containing all direct parents of the widgets in this collection.
 
 ### set(property, value)
+
 
 **Parameters:** 
 
@@ -202,6 +219,7 @@ Sets the given property on all widgets in this collection. See also `Widget.set(
 
 ### set(properties)
 
+
 **Parameters:** 
 
 - properties: *Object*
@@ -212,11 +230,13 @@ Sets all key-value pairs in the properties object on all widgets in this collect
 
 ### toArray()
 
+
 **Returns:** *Widget[]*
 
 Returns an Array containing all widgets in the collection.
 
 ### trigger(event, ...params)
+
 
 **Parameters:** 
 
@@ -231,6 +251,7 @@ Triggers an event of the given type on all widgets in this collection. See also 
 ## Properties
 
 ### length
+
 
 **read-only**<br/>
 Type: *number*

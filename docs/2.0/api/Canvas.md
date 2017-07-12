@@ -26,6 +26,7 @@ new Canvas({
 
 ### getContext(contextType, width, height)
 
+
 **Parameters:** 
 
 - contextType: *string*
@@ -41,7 +42,6 @@ Returns the drawing context with the given size.
 
 
 ## Example
-
 ```js
 const {Canvas, ui, device} = require('tabris');
 

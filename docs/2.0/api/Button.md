@@ -16,11 +16,13 @@ Android | iOS
 
 ### alignment
 
+
 Type: *string*, supported values: `left`, `right`, `center`, default: `center`
 
 The horizontal alignment of the button text.
 
 ### image
+
 
 Type: *[Image](../types.md#image)*
 
@@ -28,11 +30,13 @@ An image to be displayed on the button.
 
 ### text
 
+
 Type: *string*
 
 The button's label text.
 
 ### textColor
+
 
 Type: *[Color](../types.md#color)*
 
@@ -46,7 +50,6 @@ The color of the text.
 Fired when the [*alignment*](#alignment) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -59,7 +62,6 @@ Fired when the [*alignment*](#alignment) property has changed.
 Fired when the [*image*](#image) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -75,7 +77,6 @@ Fired when the button is pressed.
 Fired when the [*text*](#text) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -88,7 +89,6 @@ Fired when the [*text*](#text) property has changed.
 Fired when the [*textColor*](#textColor) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -100,7 +100,6 @@ Fired when the [*textColor*](#textColor) property has changed.
 
 
 ## Example
-
 ```js
 const {Button, ui} = require('tabris');
 
@@ -116,4 +115,4 @@ new Button({
 ```
 ## See also
 
-- [Simple Button snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/button.js)
+- [Simple Button snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/button.js)

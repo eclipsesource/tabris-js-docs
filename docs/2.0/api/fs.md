@@ -12,6 +12,7 @@ Import this object with "`const {fs} = require('tabris');`"
 
 ### readFile(path)
 
+
 **Parameters:** 
 
 - path: *string*
@@ -23,6 +24,7 @@ Reads the given file and returns a promise that resolves to the contents of the 
 
 ### removeFile(path)
 
+
 **Parameters:** 
 
 - path: *string*
@@ -33,6 +35,7 @@ Reads the given file and returns a promise that resolves to the contents of the 
 Removes the given file. Returns a promise that resolves on success and rejects with an Error in case of a failure.
 
 ### writeFile(path, data)
+
 
 **Parameters:** 
 
@@ -50,6 +53,7 @@ Writes the given contents to the given file. If the file exists, it is overwritt
 
 ### cacheDir
 
+
 **read-only**<br/>
 Type: *string*
 
@@ -57,8 +61,28 @@ The path to a directory that the app may use to store cached files. The OS may d
 
 ### filesDir
 
+
 **read-only**<br/>
 Type: *string*
 
 The path to a directory that the app may use to store persistent files.
 
+
+## Example
+```js
+const {ImageView, fs, ui} = require('tabris');
+
+let file = fs.cacheDir + '/test.png';
+
+let imageView = new ImageView({
+  centerX: 0, centerY: 0, width: 400, height: 200,
+  background: '#aaaaaa'
+}).appendTo(ui.contentView);
+
+fetch('http://lorempixel.com/400/200/')
+  .then(res => res.arrayBuffer())
+  .then(data => fs.writeFile(file, data))
+  .then(() => imageView.image = file)
+  .then(() => console.log('image:', file))
+  .catch(err => console.error(err));
+```

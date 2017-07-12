@@ -132,3 +132,33 @@ nav.navbar-inverse {
 #search-query {
   border-radius: 4px;
 }
+
+/*
+ * Platform labels
+ */
+
+.platforms {
+	margin-top: -20px;
+	font-size: 12px;
+	font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+	color: white;
+  cursor: default;
+}
+
+.platforms span {
+	border-radius: 2px;
+	padding: 1px 5px;
+  margin-right: 5px;
+}
+
+.platforms .windows-tag {
+  background: rgb(0, 120, 212);
+}
+
+.platforms .android-tag {
+  background: rgb(104, 180, 69);
+}
+
+.platforms .ios-tag {
+  background: rgb(153, 153, 153);
+}

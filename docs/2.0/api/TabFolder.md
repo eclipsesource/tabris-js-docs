@@ -15,12 +15,14 @@ Android | iOS
 ## Properties
 
 ### paging
+<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
 
 Type: *boolean*
 
-Enables swiping through tabs.
+Enables swiping through tabs. Always enabled on Windows.
 
 ### selection
+
 
 Type: *[Tab](Tab.md)*
 
@@ -28,23 +30,27 @@ The currently selected tab.
 
 ### tabBarLocation
 
+
 Type: *string*, supported values: `top`, `bottom`, `hidden`, `auto`, default: `auto`
 
 The placement of the tab titles. When set to `"hidden"`, the tab bar will not be visible. When set to `"auto"`, the position is platform dependent.<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
 
 ### tabMode
+<p class="platforms"><span class="android-tag" title="supported on Android">Android</span></p>
 
 Type: *string*, supported values: `fixed`, `scrollable`, default: `fixed`
 
 Controls how the tabs make use of the available horizontal space. Setting the `tabMode` to `"fixed"` makes the tabs span the entire available space. In case of a very wide `TabFolder` the `"fixed"` mode centers the tabs. The mode `"scrollable"` left aligns the tabs and allows to scroll the tabs if there are more tabs than would fit in the available space. Available on Android only.<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
 
 ### textColor
+<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
 
 Type: *[Color](../types.md#color)*
 
 The color used for the text of the tab headers.
 
 ### win_tabBarTheme
+
 
 Type: *string*, supported values: `light`, `dark`, `default`, default: `default`
 
@@ -58,7 +64,6 @@ Controls the color scheme used for the tabBar. When set to `"default"` the theme
 Fired when the [*paging*](#paging) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -71,7 +76,6 @@ Fired when the [*paging*](#paging) property has changed.
 Fired when `paging` is enabled and a tab is scrolled. The `event` parameter contains position information relative to the currently selected `Tab`. Eg.: scrolling a 500px wide tab 10% to the left sets `offset` to `50`. Scrolling 10% to the right sets `offset` to `-50`.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -87,7 +91,6 @@ Fired when `paging` is enabled and a tab is scrolled. The `event` parameter cont
 Fired when the selection property changes by user interaction.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -100,7 +103,6 @@ Fired when the selection property changes by user interaction.
 Fired when the selection property changes.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -113,7 +115,6 @@ Fired when the selection property changes.
 Fired when the [*textColor*](#textColor) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -126,7 +127,6 @@ Fired when the [*textColor*](#textColor) property has changed.
 Fired when the [*win_tabBarTheme*](#win_tabBarTheme) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -138,7 +138,6 @@ Fired when the [*win_tabBarTheme*](#win_tabBarTheme) property has changed.
 
 
 ## Example
-
 ```js
 const {Tab, TabFolder, TextView, ui} = require('tabris');
 
@@ -169,4 +168,4 @@ function createTab(title, image, seletedImage) {
 ```
 ## See also
 
-- [Snippet with a TabFolder and Tabs](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/tabfolder.js)
+- [Snippet with a TabFolder and Tabs](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/tabfolder.js)

@@ -16,11 +16,13 @@ Android | iOS
 
 ### maximum
 
+
 Type: *number*, default: `100`
 
 The maximum value.
 
 ### minimum
+
 
 Type: *number*, default: `0`
 
@@ -28,11 +30,13 @@ The minimum value.
 
 ### selection
 
+
 Type: *number*, default: `0`
 
 The actual value.
 
 ### tintColor
+
 
 Type: *[Color](../types.md#color)*
 
@@ -46,7 +50,6 @@ The color used to display the current selection.
 Fired when the [*maximum*](#maximum) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -59,7 +62,6 @@ Fired when the [*maximum*](#maximum) property has changed.
 Fired when the [*minimum*](#minimum) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -72,7 +74,6 @@ Fired when the [*minimum*](#minimum) property has changed.
 Fired when the selection property is changed by the user.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -85,7 +86,6 @@ Fired when the selection property is changed by the user.
 Fired when the selection property changes.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -98,7 +98,6 @@ Fired when the selection property changes.
 Fired when the [*tintColor*](#tintColor) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -110,7 +109,6 @@ Fired when the [*tintColor*](#tintColor) property has changed.
 
 
 ## Example
-
 ```js
 const {Slider, TextView, ui} = require('tabris');
 
@@ -133,4 +131,4 @@ new Slider({
 ```
 ## See also
 
-- [Simple Slider snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/slider.js)
+- [Simple Slider snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/slider.js)

@@ -12,11 +12,13 @@ Import this type with "`const {Drawer} = require('tabris');`"
 
 ### close()
 
+
 **Returns:** *this*
 
 Closes the drawer.
 
 ### open()
+
 
 **Returns:** *this*
 
@@ -27,11 +29,13 @@ Opens the drawer. It may be useful to call this method on first startup, so that
 
 ### enabled
 
+
 Type: *boolean*, default: `false`
 
 Controls whether the drawer can be opened and closed. When set to `false`, the drawer cannot be opened and calls to `drawer.open()` will be ignored.
 
 ### win_displayMode
+<p class="platforms"><span class="windows-tag" title="supported on Windows 10">Windows 10</span></p>
 
 Type: *string*, supported values: `overlay`, `compactOverlay`, `inline`, `compactInline`, default: `overlay`
 
@@ -45,6 +49,7 @@ Controls how the drawer integrates into its targetView.
 Available only on windows.
 
 ### win_targetView
+<p class="platforms"><span class="windows-tag" title="supported on Windows 10">Windows 10</span></p>
 
 Type: *[Widget](Widget.md)*, default: ``tabris.ui``
 
@@ -54,14 +59,13 @@ This property may be set to an instance of NavigationView to make its drawer-act
 ## Events
 
 ### close
-
+<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
 Fired when the drawer is closed and has reached its resting position.
 ### enabledChanged
 
 Fired when the [*enabled*](#enabled) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -70,14 +74,13 @@ Fired when the [*enabled*](#enabled) property has changed.
 
 
 ### open
-
+<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
 Fired when the drawer is opened and has reached its resting position.
 ### win_displayModeChanged
 
 Fired when the [*win_displayMode*](#win_displayMode) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -90,7 +93,6 @@ Fired when the [*win_displayMode*](#win_displayMode) property has changed.
 Fired when the [*win_targetView*](#win_targetView) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -102,7 +104,6 @@ Fired when the [*win_targetView*](#win_targetView) property has changed.
 
 
 ## Example
-
 ```js
 const {TextView, ui} = require('tabris');
 
@@ -134,5 +135,5 @@ function createLabel(text) {
 ```
 ## See also
 
-- [Snippet for creating a Drawer](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/drawer.js)
-- [Example for Drawer-based navigation](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/drawer-pages.js)
+- [Snippet for creating a Drawer](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/drawer.js)
+- [Example for Drawer-based navigation](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/drawer-pages.js)

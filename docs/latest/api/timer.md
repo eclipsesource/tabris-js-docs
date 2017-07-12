@@ -8,6 +8,7 @@ This API is available in the global namespace. You do not need to import it expl
 
 ### clearInterval(id)
 
+
 **Parameters:** 
 
 - id: *any*
@@ -17,6 +18,7 @@ Cancels the running interval associated with the given ID. When given an invalid
 
 ### clearTimeout(id)
 
+
 **Parameters:** 
 
 - id: *any*
@@ -25,6 +27,7 @@ Cancels the running interval associated with the given ID. When given an invalid
 Cancels the running timeout associated with the given ID. When given an invalid ID, nothing happens.
 
 ### setInterval(callback, delay, ...params)
+
 
 **Parameters:** 
 
@@ -41,6 +44,7 @@ Calls the given function repeatedly, each times waiting the given delay. The act
 
 ### setTimeout(callback, delay, ...params)
 
+
 **Parameters:** 
 
 - callback: *Function*
@@ -56,7 +60,6 @@ Calls the given function with `param` (and all following parameters) after the s
 
 
 ## Example
-
 ```js
 const {Button, ui} = require('tabris');
 

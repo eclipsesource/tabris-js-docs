@@ -16,17 +16,20 @@ Android | iOS
 
 ### checked
 
+
 Type: *boolean*, default: `false`
 
 The checked state of the radio button.
 
 ### text
 
+
 Type: *string*
 
 The label text of the radio button.
 
 ### textColor
+
 
 Type: *[Color](../types.md#color)*
 
@@ -40,7 +43,6 @@ The color of the text.
 Fired when the checked property changes.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -53,7 +55,6 @@ Fired when the checked property changes.
 Fired when the radio button is selected or deselected by the user.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -66,7 +67,6 @@ Fired when the radio button is selected or deselected by the user.
 Fired when the [*text*](#text) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -79,7 +79,6 @@ Fired when the [*text*](#text) property has changed.
 Fired when the [*textColor*](#textColor) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -91,7 +90,6 @@ Fired when the [*textColor*](#textColor) property has changed.
 
 
 ## Example
-
 ```js
 const {RadioButton, ui} = require('tabris');
 
@@ -110,4 +108,4 @@ const {RadioButton, ui} = require('tabris');
 ```
 ## See also
 
-- [Simple RadioButton snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/radiobutton.js)
+- [Simple RadioButton snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/radiobutton.js)

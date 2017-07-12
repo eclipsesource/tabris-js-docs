@@ -12,17 +12,20 @@ Import this type with "`const {StatusBar} = require('tabris');`"
 
 ### background
 
+
 Type: *[Color](../types.md#color)*
 
 Background color of the status bar. Should be used in conjunction with the `theme` property to keep the status bar icons legible.
 
 ### displayMode
 
+
 Type: *string*, supported values: `default`, `hide`, `float`, default: `default`
 
-Controls how the status bar is positioned relative to the `ui.contentView`. The value `default` places the content below the status bar. The `hide` option lets the status bar disappear, making more room for the content. The `float` option lets the content flow underneath the status bar.
+Controls how the status bar is positioned relative to the `ui.contentView`. The value `default` places the content below the status bar. The `hide` option lets the status bar disappear, making more room for the content. The `float` option lets the content flow underneath the status bar. *On Windows `float` is currently not supported and treated as `hide`.*
 
 ### height
+
 
 **read-only**<br/>
 Type: *number*
@@ -30,6 +33,7 @@ Type: *number*
 The height of the status bar in device independent pixel. Can be used in conjunction with the `displayMode` `'float'` to offset the content as to not have it covered by the status bar.
 
 ### theme
+<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
 
 Type: *string*, supported values: `default`, `light`, `dark`, default: `default`
 
@@ -37,7 +41,6 @@ Defines the shade used on the status bar. A `dark` theme sets the foreground ico
 
 
 ## Example
-
 ```js
 const {Picker, TextView, ui} = require('tabris');
 
@@ -89,4 +92,4 @@ function createTextView(text, id) {
 ```
 ## See also
 
-- [Snippet demonstrating various properties on the `StatusBar`](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/statusbar.js)
+- [Snippet demonstrating various properties on the `StatusBar`](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/statusbar.js)

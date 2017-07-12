@@ -12,6 +12,7 @@ Import this type with "`const {Composite} = require('tabris');`"
 
 ### append(...widgets)
 
+
 **Parameters:** 
 
 - ...widgets: *Widget[]*
@@ -22,6 +23,7 @@ Adds the given widgets to the composite.
 
 ### append(widgets)
 
+
 **Parameters:** 
 
 - widgets: *Widget[]*
@@ -31,6 +33,7 @@ Adds the given widgets to the composite.
 Adds all widgets in the given array to the composite.
 
 ### append(widgets)
+
 
 **Parameters:** 
 
@@ -48,7 +51,6 @@ Adds all widgets in the given collection to the composite.
 Fired when a child is added to this widget.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -64,7 +66,6 @@ Fired when a child is added to this widget.
 Fired when a child is removed from this widget.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -79,7 +80,6 @@ Fired when a child is removed from this widget.
 
 
 ## Example
-
 ```js
 const {Composite, TextView, ui} = require('tabris');
 

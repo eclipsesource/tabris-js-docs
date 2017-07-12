@@ -16,11 +16,13 @@ Android | iOS
 
 ### image
 
+
 Type: *[Image](../types.md#image)*
 
 Icon image for the action.
 
 ### placementPriority
+
 
 Type: *string*, supported values: `low`, `high`, `normal`, default: `normal`
 
@@ -28,11 +30,13 @@ Actions with higher placement priority will be placed at a more significant posi
 
 ### title
 
+
 Type: *string*
 
 The text to be displayed for the action.
 
 ### win_symbol
+<p class="platforms"><span class="windows-tag" title="supported on Windows 10">Windows 10</span></p>
 
 Type: *string*
 
@@ -46,7 +50,6 @@ Allows to override the image of the Action with an MDL2 ("Metro Design Language 
 Fired when the [*image*](#image) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -59,7 +62,6 @@ Fired when the [*image*](#image) property has changed.
 Fired when the [*placementPriority*](#placementPriority) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -75,7 +77,6 @@ Fired when the action is invoked.
 Fired when the [*title*](#title) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -88,7 +89,6 @@ Fired when the [*title*](#title) property has changed.
 Fired when the [*win_symbol*](#win_symbol) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -101,5 +101,5 @@ Fired when the [*win_symbol*](#win_symbol) property has changed.
 
 ## See also
 
-- [Snippet for creating actions](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/navigationview-action.js)
-- [Actions - placement priorities](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/navigationview-action-placementpriority.js)
+- [Snippet for creating actions](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationview-action.js)
+- [Actions - placement priorities](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationview-action-placementpriority.js)

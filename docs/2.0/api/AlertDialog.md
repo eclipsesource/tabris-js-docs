@@ -12,11 +12,13 @@ Import this type with "`const {AlertDialog} = require('tabris');`"
 
 ### close()
 
+
 **Returns:** *this*
 
 Hides the dialog permanently. It can not be made visible anymore.
 
 ### open()
+
 
 **Returns:** *this*
 
@@ -27,17 +29,20 @@ Makes the dialog visible.
 
 ### buttons
 
+
 Type: *{ok?: string, cancel?: string, neutral?: string}*
 
 An object with the texts of the buttons to display. There are up to three buttons: `ok`, `cancel` and `neutral`. If no text is given for a button it will not be displayed. Example: `{ok: 'Yes', cancel: 'No'}` shows 'Yes' and 'No', but no 'neutral' button.
 
 ### message
 
+
 Type: *string*
 
 The message to display inside the dialog.
 
 ### title
+
 
 Type: *string*
 
@@ -51,7 +56,6 @@ The title of the dialog.
 Fired when the [*buttons*](#buttons) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -64,7 +68,6 @@ Fired when the [*buttons*](#buttons) property has changed.
 Fired when the dialog was closed for any reason.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -86,7 +89,6 @@ Fired when the dialog was closed by pressing the 'ok' button.
 Fired when the [*message*](#message) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -99,7 +101,6 @@ Fired when the [*message*](#message) property has changed.
 Fired when the [*title*](#title) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -111,7 +112,6 @@ Fired when the [*title*](#title) property has changed.
 
 
 ## Example
-
 ```js
 const {AlertDialog, Button, ui} = require('tabris');
 
@@ -160,4 +160,4 @@ new Button({
 ```
 ## See also
 
-- [Simple AlertDialog snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/alertdialog.js)
+- [Simple AlertDialog snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/alertdialog.js)

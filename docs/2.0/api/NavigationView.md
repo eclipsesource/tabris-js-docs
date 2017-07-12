@@ -12,6 +12,7 @@ Import this type with "`const {NavigationView} = require('tabris');`"
 
 ### pages(selector)
 
+
 **Parameters:** 
 
 - selector: *[Selector](../types.md#selector)* [**Optional**]
@@ -26,11 +27,13 @@ Returns the ordered list of pages on the page stack, with the bottommost page as
 
 ### actionColor
 
+
 Type: *[Color](../types.md#color)*
 
 The color used for action icons.
 
 ### actionTextColor
+<p class="platforms"><span class="android-tag" title="supported on Android">Android</span><span class="windows-tag" title="supported on Windows 10">Windows 10</span></p>
 
 Type: *[Color](../types.md#color)*
 
@@ -38,11 +41,13 @@ The color used for action texts. Only applied on Android and Windows. IOS uses t
 
 ### bottomToolbarHeight
 
+
 Type: *number*
 
 The height of the bottom toolbar. Is 0 if not visible or unsupported by the platform.
 
 ### drawerActionVisible
+
 
 Type: *boolean*
 
@@ -50,11 +55,13 @@ Whether to display the so-called "Burger menu" to open the drawer.
 
 ### pageAnimation
 
+
 Type: *string*, supported values: `default`, `none`, default: `default`
 
 Controls what animation to use when animating a page transition.
 
 ### titleTextColor
+
 
 Type: *[Color](../types.md#color)*
 
@@ -62,11 +69,13 @@ The text color used for page titles.
 
 ### toolbarColor
 
+
 Type: *[Color](../types.md#color)*
 
 The background color of the toolbar.
 
 ### toolbarVisible
+
 
 Type: *boolean*, default: `true`
 
@@ -74,29 +83,34 @@ Whether the toolbar is visible.
 
 ### topToolbarHeight
 
+
 Type: *number*
 
 The height of the top toolbar. Is 0 if not visible.
 
 ### win_drawerActionBackground
+<p class="platforms"><span class="windows-tag" title="supported on Windows 10">Windows 10</span></p>
 
 Type: *[Color](../types.md#color)*
 
 The background color used for the drawer action. It is common to the make this the same color as the splash screen. Available only on Windows.
 
 ### win_drawerActionTheme
+<p class="platforms"><span class="windows-tag" title="supported on Windows 10">Windows 10</span></p>
 
 Type: *string*, supported values: `light`, `dark`, `default`, default: `default`
 
 Controls the color scheme used for the drawer action. When set to `"default"` the theme is inherited from the NavigationView. Available only on Windows.
 
 ### win_toolbarOverflowTheme
+<p class="platforms"><span class="windows-tag" title="supported on Windows 10">Windows 10</span></p>
 
 Type: *string*, supported values: `light`, `dark`, `default`, default: `default`
 
 Controls the color scheme used for the toolbar's overflow menu. When set to `"default"` the theme is inherited from the toolbar. Available only on Windows.
 
 ### win_toolbarTheme
+<p class="platforms"><span class="windows-tag" title="supported on Windows 10">Windows 10</span></p>
 
 Type: *string*, supported values: `light`, `dark`, `default`, default: `default`
 
@@ -110,7 +124,6 @@ Controls the color scheme used for the toolbar. When set to `"default"` the them
 Fired when the [*actionColor*](#actionColor) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -123,7 +136,6 @@ Fired when the [*actionColor*](#actionColor) property has changed.
 Fired when the [*actionTextColor*](#actionTextColor) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -136,7 +148,6 @@ Fired when the [*actionTextColor*](#actionTextColor) property has changed.
 Fired when the height of the bottom toolbar changes, e.g. if it changes visibility.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -149,7 +160,6 @@ Fired when the height of the bottom toolbar changes, e.g. if it changes visibili
 Fired when the [*drawerActionVisible*](#drawerActionVisible) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -162,7 +172,6 @@ Fired when the [*drawerActionVisible*](#drawerActionVisible) property has change
 Fired when the [*pageAnimation*](#pageAnimation) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -175,7 +184,6 @@ Fired when the [*pageAnimation*](#pageAnimation) property has changed.
 Fired when the [*titleTextColor*](#titleTextColor) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -188,7 +196,6 @@ Fired when the [*titleTextColor*](#titleTextColor) property has changed.
 Fired when the [*toolbarColor*](#toolbarColor) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -201,7 +208,6 @@ Fired when the [*toolbarColor*](#toolbarColor) property has changed.
 Fired when the [*toolbarVisible*](#toolbarVisible) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -214,7 +220,6 @@ Fired when the [*toolbarVisible*](#toolbarVisible) property has changed.
 Fired when the height of the top toolbar changes, e.g. if it changes visibility.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -227,7 +232,6 @@ Fired when the height of the top toolbar changes, e.g. if it changes visibility.
 Fired when the [*win_drawerActionBackground*](#win_drawerActionBackground) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -240,7 +244,6 @@ Fired when the [*win_drawerActionBackground*](#win_drawerActionBackground) prope
 Fired when the [*win_drawerActionTheme*](#win_drawerActionTheme) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -253,7 +256,6 @@ Fired when the [*win_drawerActionTheme*](#win_drawerActionTheme) property has ch
 Fired when the [*win_toolbarOverflowTheme*](#win_toolbarOverflowTheme) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -266,7 +268,6 @@ Fired when the [*win_toolbarOverflowTheme*](#win_toolbarOverflowTheme) property 
 Fired when the [*win_toolbarTheme*](#win_toolbarTheme) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -279,6 +280,6 @@ Fired when the [*win_toolbarTheme*](#win_toolbarTheme) property has changed.
 
 ## See also
 
-- [Snippet with a NavigationView and Pages](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/navigationview-page-stacked.js)
-- [Snippet with a NavigationView and its various properties](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/navigationview-properties.js)
-- [Snippet with NavigationViews embedded in Tabs of a TabFolder](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/navigationview-tabfolder.js)
+- [Snippet with a NavigationView and Pages](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationview-page-stacked.js)
+- [Snippet with a NavigationView and its various properties](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationview-properties.js)
+- [Snippet with NavigationViews embedded in Tabs of a TabFolder](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationview-tabfolder.js)

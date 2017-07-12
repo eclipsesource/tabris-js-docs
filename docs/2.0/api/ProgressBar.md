@@ -16,11 +16,13 @@ Android | iOS
 
 ### maximum
 
+
 Type: *number*, default: `100`
 
 The value that represents a progress of 100%.
 
 ### minimum
+
 
 Type: *number*, default: `0`
 
@@ -28,11 +30,13 @@ The value that represents a progress of 0%.
 
 ### selection
 
+
 Type: *number*, default: `0`
 
 The actual progress to be displayed.
 
 ### state
+<p class="platforms"><span class="android-tag" title="supported on Android">Android</span><span class="windows-tag" title="supported on Windows 10">Windows 10</span></p>
 
 Type: *string*, supported values: `normal`, `paused`, `error`, default: `normal`
 
@@ -40,13 +44,13 @@ This property affects the color of the progress indicator. Not supported on iOS.
 
 ### tintColor
 
+
 Type: *[Color](../types.md#color)*
 
 The color used to display the current progress.
 
 
 ## Example
-
 ```js
 const {ProgressBar, ui} = require('tabris');
 
@@ -65,4 +69,4 @@ setInterval(() => {
 ```
 ## See also
 
-- [Simple ProgressBar snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/progressbar.js)
+- [Simple ProgressBar snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/progressbar.js)

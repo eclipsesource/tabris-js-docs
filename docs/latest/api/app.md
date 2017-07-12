@@ -18,6 +18,7 @@ app.on("pause", () => pauseVideo());
 
 ### getResourceLocation(path)
 
+
 **Parameters:** 
 
 - path: *string*
@@ -28,6 +29,7 @@ app.on("pause", () => pauseVideo());
 Returns the URL for a given resource that is bundled with the app. Can be used to access app resources like images, videos, etc. Note that these resources can only be accessed in read-only mode.
 
 ### installPatch(url, callback)
+
 
 **Parameters:** 
 
@@ -42,6 +44,7 @@ Installs a patch from the given URL. When the patch is successfully installed, i
 
 ### reload()
 
+
 Forces the running application to reload the main module and start over.
 
 
@@ -49,11 +52,13 @@ Forces the running application to reload the main module and start over.
 
 ### id
 
+
 Type: *string*
 
 Uniquely identifies the app.
 
 ### pinnedCertificates
+
 
 Type: *any[]*
 
@@ -73,11 +78,13 @@ For further details see https://www.owasp.org/index.php/Certificate_and_Public_K
 
 ### version
 
+
 Type: *string*
 
 The user facing version number, e.g. '2.1-beta3'.
 
 ### versionCode
+
 
 Type: *number*
 
@@ -94,7 +101,6 @@ Fired when the app becomes invisible. Either because another app is in the foreg
 Fired when the back button is pressed on Android.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -110,7 +116,6 @@ The event is fired when the app starts or when it returns from the background.
 Fired when the [*id*](#id) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -126,7 +131,6 @@ Fired when the app is not the interaction target of the user anymore. Usually pr
 Fired when the [*pinnedCertificates*](#pinnedCertificates) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -138,14 +142,13 @@ Fired when the [*pinnedCertificates*](#pinnedCertificates) property has changed.
 
 Fired when the app is visible and ready to interact with the user. The event is preceded by either `foreground` (the app becomes visible again) or `pause` (the app regains ability to interact with user).
 ### terminate
-
+<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
 Fired when the app is being destroyed. After this callback no more interaction with the app is possible.
 ### versionChanged
 
 Fired when the [*version*](#version) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -158,7 +161,6 @@ Fired when the [*version*](#version) property has changed.
 Fired when the [*versionCode*](#versionCode) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -170,7 +172,6 @@ Fired when the [*versionCode*](#versionCode) property has changed.
 
 
 ## Example
-
 ```js
 const {Composite, TextView, Button, app, ui} = require('tabris');
 

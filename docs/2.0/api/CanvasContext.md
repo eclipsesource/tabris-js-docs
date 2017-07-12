@@ -10,6 +10,7 @@ Import this type with "`const {CanvasContext} = require('tabris');`"
 
 ### arc(x, y, radius, startAngle, endAngle, anticlockwise)
 
+
 **Parameters:** 
 
 - x: *number*
@@ -29,9 +30,11 @@ Adds an arc to the path which is centered at *(x, y)* position with radius *r* s
 
 ### beginPath()
 
+
 Starts a new path by emptying the list of sub-paths.
 
 ### bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
+
 
 **Parameters:** 
 
@@ -52,6 +55,7 @@ Adds a cubic Bézier curve to the path. The starting point is the last point in 
 
 ### clearRect(x, y, width, height)
 
+
 **Parameters:** 
 
 - x: *number*
@@ -67,9 +71,11 @@ Sets all pixels in the rectangle defined by starting point *(x, y)* and size *(w
 
 ### closePath()
 
+
 Adds a straight line from the current point to the start of the current sub-path.
 
 ### createImageData(width, height)
+
 
 **Parameters:** 
 
@@ -84,6 +90,7 @@ creates a new, blank ImageData object with the specified dimensions. All of the 
 
 ### createImageData(imageData)
 
+
 **Parameters:** 
 
 - imageData: *[ImageData](../types.md#imagedata)*
@@ -95,9 +102,11 @@ creates a new, blank ImageData object with the same dimensions as the specified 
 
 ### fill()
 
+
 Fills the current or path with the current fill style.
 
 ### fillRect(x, y, width, height)
+
 
 **Parameters:** 
 
@@ -114,6 +123,7 @@ draws a filled rectangle at *(x, y)* position whose size is determined by *width
 
 ### fillText(text, x, y)
 
+
 **Parameters:** 
 
 - text: *string*
@@ -126,6 +136,7 @@ draws a filled rectangle at *(x, y)* position whose size is determined by *width
 Fills a given text at the given *(x, y)* position using the current *textAlign* and *textBaseline* values.
 
 ### getImageData(x, y, width, height)
+
 
 **Parameters:** 
 
@@ -144,6 +155,7 @@ Returns an ImageData object representing the underlying pixel data for the area 
 
 ### lineTo(x, y)
 
+
 **Parameters:** 
 
 - x: *number*
@@ -155,6 +167,7 @@ Connects the last point in the sub-path to the *(x, y)* coordinates with a strai
 
 ### moveTo(x, y)
 
+
 **Parameters:** 
 
 - x: *number*
@@ -165,6 +178,7 @@ Connects the last point in the sub-path to the *(x, y)* coordinates with a strai
 Moves the starting point of a new sub-path to the *(x, y)* coordinates.
 
 ### putImageData(imageData, x, y)
+
 
 **Parameters:** 
 
@@ -178,6 +192,7 @@ Moves the starting point of a new sub-path to the *(x, y)* coordinates.
 Paints data from the given ImageData object onto the bitmap at coordinates (x, y).
 
 ### quadraticCurveTo(cpx, cpy, x, y)
+
 
 **Parameters:** 
 
@@ -194,6 +209,7 @@ Adds a quadratic Bézier curve to the path. The starting point is the last point
 
 ### rect(x, y, width, height)
 
+
 **Parameters:** 
 
 - x: *number*
@@ -209,9 +225,11 @@ Creates a path for a rectangle with the top-left corner at *(x, y)*
 
 ### restore()
 
+
 Restores the most recently saved canvas state by popping the top entry in the drawing state stack.
 
 ### rotate(angle)
+
 
 **Parameters:** 
 
@@ -222,9 +240,11 @@ Adds a rotation to the transformation matrix.
 
 ### save()
 
+
 Saves the entire state of the canvas by pushing the current state onto a stack.
 
 ### scale(x, y)
+
 
 **Parameters:** 
 
@@ -236,6 +256,7 @@ Saves the entire state of the canvas by pushing the current state onto a stack.
 Adds a scaling transformation to the canvas units by x horizontally and by y vertically.
 
 ### setTransform(a, b, c, d, e, f)
+
 
 **Parameters:** 
 
@@ -259,9 +280,11 @@ resets (overrides) the current transformation to the identity matrix and then in
 
 ### stroke()
 
+
 Strokes the current path with the current stroke style.
 
 ### strokeRect(x, y, width, height)
+
 
 **Parameters:** 
 
@@ -278,6 +301,7 @@ draws the outline of a rectangle at *(x, y)* position whose size is determined b
 
 ### strokeText(text, x, y)
 
+
 **Parameters:** 
 
 - text: *string*
@@ -290,6 +314,7 @@ draws the outline of a rectangle at *(x, y)* position whose size is determined b
 Strokes a given text at the given *(x, y)* position using the current *textAlign* and *textBaseline* values.
 
 ### transform(a, b, c, d, e, f)
+
 
 **Parameters:** 
 
@@ -313,6 +338,7 @@ Multiplies the current transformation with the matrix described by the arguments
 
 ### translate(x, y)
 
+
 **Parameters:** 
 
 - x: *number*
@@ -327,11 +353,13 @@ Adds a translation transformation by moving the canvas and its origin *x* horizo
 
 ### fillStyle
 
+
 Type: *[Color](../types.md#color)*
 
 Specifies the color to use inside shapes.
 
 ### font
+
 
 Type: *[Font](../types.md#font)*
 
@@ -339,11 +367,13 @@ Specifies the current text style being used when drawing text.
 
 ### lineCap
 
+
 Type: *string*, supported values: `butt`, `round`, `square`
 
 Determines how the end points of every line are drawn.
 
 ### lineJoin
+
 
 Type: *string*, supported values: `bevel`, `round`, `miter`
 
@@ -351,11 +381,13 @@ Determines how two connecting segments in a shape are joined together.
 
 ### lineWidth
 
+
 Type: *number*
 
 The thickness of lines in space units.
 
 ### strokeStyle
+
 
 Type: *[Color](../types.md#color)*
 
@@ -363,11 +395,13 @@ Specifies the color to use for the lines around shapes.
 
 ### textAlign
 
+
 Type: *string*, supported values: `left`, `right`, `center`, `start`, `end`
 
 Specifies the current text alignment being used when drawing text.
 
 ### textBaseline
+
 
 Type: *string*, supported values: `top`, `hanging`, `middle`, `alphabetic`, `ideographic`, `bottom`
 

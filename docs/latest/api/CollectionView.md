@@ -16,6 +16,7 @@ Android | iOS
 
 ### insert(index, count)
 
+
 **Parameters:** 
 
 - index: *number*
@@ -26,6 +27,7 @@ Inserts one or more items at the given index. When no *count* is specified, a si
 
 ### load(itemCount)
 
+
 **Parameters:** 
 
 - itemCount: *number*
@@ -35,6 +37,7 @@ Loads a new model with the given *itemCount*. This operation will update the `it
 
 ### refresh(index)
 
+
 **Parameters:** 
 
 - index: *number* [**Optional**]
@@ -43,6 +46,7 @@ Loads a new model with the given *itemCount*. This operation will update the `it
 Triggers an update of the item at the given *index* by calling the `updateCell` callback of the corresponding. If no *index* is given, all visible items will be updated.
 
 ### remove(index, count)
+
 
 **Parameters:** 
 
@@ -54,6 +58,7 @@ Triggers an update of the item at the given *index* by calling the `updateCell` 
 Removes one or more items beginning with the given index. When no *count* is given, only the item at *index* will be removed. Note that this changes the index of all subsequent items, however. This operation will update the `itemCount` property.
 
 ### reveal(index)
+
 
 **Parameters:** 
 
@@ -67,17 +72,20 @@ Scrolls the item with the given index into view.
 
 ### cellHeight
 
+
 Type: *number|"auto"|((index: number, cellType: string) => number)*, default: `auto`
 
 The height of a collection cell. If set to `"auto"`, the cell height will be calculated individually for each cell. If set to a function, this function will be called for every item, providing the item index and the cell type as parameters, and must return the cell height for the given item.
 
 ### cellType
 
+
 Type: *string|((index: number) => string)*
 
 The name of the cell type to use for the item at the given index. This name will be passed to the `createCell` and `cellHeight` callbacks. Cells will be reused only for those items that map to the same cell type. If set to a function, this function will be called for every item, providing the item index as a parameter, and must return a unique name for the cell type to use for the given item.
 
 ### columnCount
+<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
 
 Type: *number*, default: `1`
 
@@ -85,11 +93,13 @@ The number of columns to display in the collection view. If set to a value `n > 
 
 ### createCell
 
+
 Type: *(cellType: string) => Widget*
 
 A callback used to create a new reusable cell widget for a given type. This callback will be called by the framework and the created cell will be reused for different items. The created widget should be populated in the `updateCell` function.<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
 
 ### firstVisibleIndex
+
 
 **read-only**<br/>
 Type: *number*
@@ -98,11 +108,13 @@ The index of the first item that is currently visible on screen.
 
 ### itemCount
 
+
 Type: *number*
 
 The number of items to display. To add or remove items later, use the methods `insert()` and `remove()` instead of setting the `itemCount`. To display a new list of items, use the `load()` method.
 
 ### lastVisibleIndex
+
 
 **read-only**<br/>
 Type: *number*
@@ -110,24 +122,28 @@ Type: *number*
 The index of the last item that is currently visible on screen.
 
 ### refreshEnabled
+<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
 
 Type: *boolean*, default: `false`
 
 Enables the user to trigger a refresh by using the pull-to-refresh gesture.
 
 ### refreshIndicator
+<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
 
 Type: *boolean*, default: `false`
 
 Whether the refresh indicator is currently visible. Will be set to `true` when a *refresh* event is triggered. Reset it to `false` when the refresh is finished.
 
 ### refreshMessage
+<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span></p>
 
 Type: *string*, default: `""`
 
 The message text displayed together with the refresh indicator. Currently not supported on Android.
 
 ### updateCell
+
 
 Type: *(cell: Widget, index: number) => void*
 
@@ -141,7 +157,6 @@ A callback used to update a given cell widget to display the item with the given
 Fired when the [*cellHeight*](#cellHeight) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -154,7 +169,6 @@ Fired when the [*cellHeight*](#cellHeight) property has changed.
 Fired when the [*cellType*](#cellType) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -167,7 +181,6 @@ Fired when the [*cellType*](#cellType) property has changed.
 Fired when the [*columnCount*](#columnCount) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -180,7 +193,6 @@ Fired when the [*columnCount*](#columnCount) property has changed.
 Fired when the [*firstVisibleIndex*](#firstVisibleIndex) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -193,7 +205,6 @@ Fired when the [*firstVisibleIndex*](#firstVisibleIndex) property has changed.
 Fired when the [*itemCount*](#itemCount) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -206,7 +217,6 @@ Fired when the [*itemCount*](#itemCount) property has changed.
 Fired when the [*lastVisibleIndex*](#lastVisibleIndex) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -215,14 +225,13 @@ Fired when the [*lastVisibleIndex*](#lastVisibleIndex) property has changed.
 
 
 ### refresh
-
+<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
 Fired when the user requested a refresh. An event listener should reset the *refreshIndicator* property when refresh is finished.
 ### refreshEnabledChanged
 
 Fired when the [*refreshEnabled*](#refreshEnabled) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -235,7 +244,6 @@ Fired when the [*refreshEnabled*](#refreshEnabled) property has changed.
 Fired when the [*refreshIndicator*](#refreshIndicator) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -248,7 +256,6 @@ Fired when the [*refreshIndicator*](#refreshIndicator) property has changed.
 Fired when the [*refreshMessage*](#refreshMessage) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -261,7 +268,6 @@ Fired when the [*refreshMessage*](#refreshMessage) property has changed.
 Fired while the collection view is scrolling.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -277,7 +283,6 @@ Fired while the collection view is scrolling.
 Fired when a cell is selected.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -289,7 +294,6 @@ Fired when a cell is selected.
 
 
 ## Example
-
 ```js
 // Create a collection view, initialize its cells and fill it with items
 const {CollectionView, Composite, ImageView, TextView, ui} = require('tabris');
@@ -333,4 +337,4 @@ new CollectionView({
 ```
 ## See also
 
-- [CollectionView example](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/collectionview.js)
+- [CollectionView example](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/collectionview.js)

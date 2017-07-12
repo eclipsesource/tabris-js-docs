@@ -16,11 +16,13 @@ Android | iOS
 
 ### borderColor
 
+
 Type: *[Color](../types.md#color)*
 
 The color of the border of the Picker. On iOS this is a rectangular border around the Picker, on Android it is a single line below the Picker.
 
 ### fillColor
+<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span></p>
 
 Type: *[Color](../types.md#color)*
 
@@ -28,11 +30,13 @@ The color of the background of the Picker - applies only to iOS.
 
 ### itemCount
 
+
 Type: *number*
 
 The number of items to display.
 
 ### itemText
+
 
 Type: *(index: number) => string*
 
@@ -40,11 +44,13 @@ A function that returns the string to display for a given index.
 
 ### selectionIndex
 
+
 Type: *number*
 
 The index of the currently selected item.
 
 ### textColor
+
 
 Type: *[Color](../types.md#color)*
 
@@ -58,7 +64,6 @@ The color of the text.
 Fired when the [*borderColor*](#borderColor) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -71,7 +76,6 @@ Fired when the [*borderColor*](#borderColor) property has changed.
 Fired when the [*fillColor*](#fillColor) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -84,7 +88,6 @@ Fired when the [*fillColor*](#fillColor) property has changed.
 Fired when the [*itemCount*](#itemCount) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -97,7 +100,6 @@ Fired when the [*itemCount*](#itemCount) property has changed.
 Fired when the [*itemText*](#itemText) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -110,7 +112,6 @@ Fired when the [*itemText*](#itemText) property has changed.
 Fired when an item was selected by the user.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -123,7 +124,6 @@ Fired when an item was selected by the user.
 Fired when the selectionIndex property changes.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -136,7 +136,6 @@ Fired when the selectionIndex property changes.
 Fired when the [*textColor*](#textColor) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -148,7 +147,6 @@ Fired when the [*textColor*](#textColor) property has changed.
 
 
 ## Example
-
 ```js
 const {Picker, ui} = require('tabris');
 
@@ -180,4 +178,4 @@ picker.on('select', ({index}) => console.log('Selected ' + AIRPORTS[index].id));
 ```
 ## See also
 
-- [Simple Picker snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/picker.js)
+- [Simple Picker snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/picker.js)

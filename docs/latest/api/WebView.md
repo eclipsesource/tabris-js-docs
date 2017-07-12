@@ -12,13 +12,16 @@ Import this type with "`const {WebView} = require('tabris');`"
 
 ### goBack()
 
+
 Navigate the `WebView` to the previous page if possible.
 
 ### goForward()
 
+
 Navigate the `WebView` to the next page if possible.
 
 ### postMessage(message, targetOrigin)
+<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
 
 **Parameters:** 
 
@@ -36,12 +39,14 @@ Posts a web message to the underlying `window` object of the WebView. The websit
 
 ### canGoBack
 
+
 **read-only**<br/>
 Type: *boolean*
 
 Whether there is a previous to navigated to via `goBack()`.
 
 ### canGoForward
+
 
 **read-only**<br/>
 Type: *boolean*
@@ -50,11 +55,13 @@ Whether there is a next page to navigate to via `goForward()`.
 
 ### html
 
+
 Type: *string*
 
 A complete HTML document to display. Always returns the last set value.
 
 ### url
+
 
 Type: *string*
 
@@ -68,7 +75,6 @@ The URL of the web page to display. Relative URLs are resolved relative to 'pack
 Fired when the [*canGoBack*](#canGoBack) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -81,7 +87,6 @@ Fired when the [*canGoBack*](#canGoBack) property has changed.
 Fired when the [*canGoForward*](#canGoForward) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -90,11 +95,10 @@ Fired when the [*canGoForward*](#canGoForward) property has changed.
 
 
 ### download
-
+<p class="platforms"><span class="android-tag" title="supported on Android">Android</span></p>
 Fired when the WebView requests a download. The download event provides the properties `url`, `mimeType`, `contentLength` and `contentDisposition`. Supported only on Android.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -116,7 +120,6 @@ Fired when the WebView requests a download. The download event provides the prop
 Fired when the [*html*](#html) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -128,11 +131,10 @@ Fired when the [*html*](#html) property has changed.
 
 Fired when the url has been loaded.
 ### message
-
+<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
 Fired when a web message has been sent via `window.parent.postMessage(message, targetOrigin)` from inside the `WebView`.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -145,7 +147,6 @@ Fired when a web message has been sent via `window.parent.postMessage(message, t
 Fired when the WebView is about to navigate to a new URL.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -161,7 +162,6 @@ Fired when the WebView is about to navigate to a new URL.
 Fired when the [*url*](#url) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -173,7 +173,6 @@ Fired when the [*url*](#url) property has changed.
 
 
 ## Example
-
 ```js
 const {TextInput, WebView, ui} = require('tabris');
 
@@ -198,6 +197,6 @@ loadUrl();
 ```
 ## See also
 
-- [Simple WebView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/webview.js)
-- [WebView snippet demonstrating web messaging](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/webview-webmessaging.js)
+- [Simple WebView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/webview.js)
+- [WebView snippet demonstrating web messaging](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/webview-webmessaging.js)
 - [Web Messaging](https://en.wikipedia.org/wiki/Web_Messaging)

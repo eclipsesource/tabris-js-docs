@@ -13,7 +13,6 @@ Android | iOS
 ![ActivityIndicator on Android](img/android/ActivityIndicator.png) | ![ActivityIndicator on iOS](img/ios/ActivityIndicator.png)
 
 ## Example
-
 ```js
 const {ActivityIndicator, Button, ui} = require('tabris');
 
@@ -46,4 +45,4 @@ executeLongRunningTask();
 ```
 ## See also
 
-- [Simple ActivityIndicator snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/activityindicator.js)
+- [Simple ActivityIndicator snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/activityindicator.js)

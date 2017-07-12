@@ -4,25 +4,28 @@
 
 Extends [Widget](Widget.md)
 
-The navigation bar is the onscreen area where *Back*, *Home* and similar buttons are displayed. The singleton instance can be accessed via `ui.navigationBar` and is only available on Android.
+The navigation bar is the onscreen area where *Back*, *Home* and similar buttons are displayed. The singleton instance can be accessed via `ui.navigationBar` and is only supported on Android.
 
 Import this type with "`const {NavigationBar} = require('tabris');`"
 
 ## Properties
 
 ### background
+<p class="platforms"><span class="android-tag" title="supported on Android">Android</span></p>
 
 Type: *[Color](../types.md#color)*
 
 Background color of the navigation bar.
 
 ### displayMode
+<p class="platforms"><span class="android-tag" title="supported on Android">Android</span></p>
 
 Type: *string*, supported values: `default`, `hide`, `float`, default: `default`
 
 Controls how the navigation bar is positioned relative to the `ui.contentView`. The value `default` places the content above the navigation bar. The `hide` option lets the navigation bar disappear, making room for the content. The `float` option lets the content flow underneath the navigation bar.
 
 ### height
+<p class="platforms"><span class="android-tag" title="supported on Android">Android</span></p>
 
 **read-only**<br/>
 Type: *number*
@@ -31,7 +34,6 @@ The height of the navigation bar in device independent pixel. Can be used in con
 
 
 ## Example
-
 ```js
 const {Picker, TextView, ui} = require('tabris');
 
@@ -73,4 +75,4 @@ function createTextView(text, id) {
 ```
 ## See also
 
-- [Snippet demonstrating various properties of the `NavigationBar`](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/navigationbar.js)
+- [Snippet demonstrating various properties of the `NavigationBar`](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/navigationbar.js)

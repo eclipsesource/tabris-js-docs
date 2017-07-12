@@ -12,11 +12,13 @@ Import this type with "`const {ImageView} = require('tabris');`"
 
 ### image
 
+
 Type: *[Image](../types.md#image)*
 
 The image to display. Providing the `width` and `height` attributes on the image will resize it internally. When no dimensions are given the image will be loaded with its original size. Since the full size image might occupy a lot of memory, it's recommended to provide exact dimensions.
 
 ### scaleMode
+
 
 Type: *string*, supported values: `auto`, `fit`, `fill`, `stretch`, `none`, default: `auto`
 
@@ -29,10 +31,11 @@ How to scale the image.
 - `none` will not resize the image at all. The image will be displayed in its original size.
 
 ### tintColor
+<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
 
 Type: *[Color](../types.md#color)*
 
-A color to change the image appearance. All opaque parts of the image will be tinted with the given color. Set to `initial` to remove the effect. Available on iOS and Android 5.0+.
+A color to change the image appearance. All opaque parts of the image will be tinted with the given color. Set to `initial` to remove the effect.
 
 
 ## Events
@@ -42,7 +45,6 @@ A color to change the image appearance. All opaque parts of the image will be ti
 Fired when the [*image*](#image) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -55,7 +57,6 @@ Fired when the [*image*](#image) property has changed.
 Fired when the image loading has finished.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -68,7 +69,6 @@ Fired when the image loading has finished.
 Fired when the [*scaleMode*](#scaleMode) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -81,7 +81,6 @@ Fired when the [*scaleMode*](#scaleMode) property has changed.
 Fired when the [*tintColor*](#tintColor) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -93,7 +92,6 @@ Fired when the [*tintColor*](#tintColor) property has changed.
 
 
 ## Example
-
 ```js
 const {ImageView, ui} = require('tabris');
 

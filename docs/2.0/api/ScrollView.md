@@ -16,6 +16,7 @@ Android | iOS
 
 ### scrollToX(offset, options)
 
+
 **Parameters:** 
 
 - offset: *number*
@@ -28,6 +29,7 @@ Android | iOS
 Scrolls to the given horizontal offset. Give `{animate: false}` as the second parameter to suppress the animation.
 
 ### scrollToY(offset, options)
+
 
 **Parameters:** 
 
@@ -45,11 +47,13 @@ Scrolls to the given vertical offset. Give `{animate: false}` as the second para
 
 ### direction
 
+
 Type: *string*, supported values: `vertical`, `horizontal`, default: `vertical`
 
 Specifies the scrolling direction of the scroll composite.<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
 
 ### offsetX
+
 
 **read-only**<br/>
 Type: *number*
@@ -57,6 +61,7 @@ Type: *number*
 The horizontal scrolling position in dip.
 
 ### offsetY
+
 
 **read-only**<br/>
 Type: *number*
@@ -71,7 +76,6 @@ The vertical scrolling position in dip.
 Fired when the [*offsetX*](#offsetX) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -84,7 +88,6 @@ Fired when the [*offsetX*](#offsetX) property has changed.
 Fired when the [*offsetY*](#offsetY) property has changed.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -97,7 +100,6 @@ Fired when the [*offsetY*](#offsetY) property has changed.
 Fired while scrolling horizontally.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -110,7 +112,6 @@ Fired while scrolling horizontally.
 Fired while scrolling vertically.
 
 #### Event Parameters 
-
 - **target**: *this*
     The widget the event was fired on.
 
@@ -122,7 +123,6 @@ Fired while scrolling vertically.
 
 
 ## Example
-
 ```js
 const {Button, ScrollView, TextView, ui} = require('tabris');
 
@@ -150,5 +150,5 @@ new Button({
 ```
 ## See also
 
-- [Simple ScrollView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/snippets/scrollview.js)
-- [Example using a ScrollView](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2-dev.20170710+0912/examples/parallax/parallax.js)
+- [Simple ScrollView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/scrollview.js)
+- [Example using a ScrollView](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/examples/parallax/parallax.js)
