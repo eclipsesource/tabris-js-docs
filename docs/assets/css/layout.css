@@ -48,6 +48,14 @@ nav.navbar-inverse {
   background-color: #f4f5f6;
 }
 
+.sidebar.right {
+  position: fixed;
+  top: 51px;
+  bottom: 0;
+  right: 0;
+  display: block;
+}
+
 /* Sidebar navigation */
 .nav-sidebar {
   margin-right: -21px; /* 20px padding + 1px border */
@@ -116,9 +124,6 @@ nav.navbar-inverse {
  * TOC
  */
 
-.sidebar.right > #toc-container {
-  position: fixed;
-}
 .toc-header {
   padding: 10px 20px;
   font-weight: bold;
@@ -137,7 +142,7 @@ nav.navbar-inverse {
  * Platform labels
  */
 
-.platforms {
+p.platforms {
 	margin-top: -20px;
 	font-size: 12px;
 	font-family: "Segoe UI", Helvetica, Arial, sans-serif;
@@ -145,20 +150,44 @@ nav.navbar-inverse {
   cursor: default;
 }
 
-.platforms span {
+p.platforms span {
 	border-radius: 2px;
 	padding: 1px 5px;
   margin-right: 5px;
 }
 
-.platforms .windows-tag {
+p.platforms .windows-tag {
   background: rgb(0, 120, 212);
 }
 
-.platforms .android-tag {
+p.platforms .android-tag {
   background: rgb(104, 180, 69);
 }
 
-.platforms .ios-tag {
+p.platforms .ios-tag {
   background: rgb(153, 153, 153);
+}
+
+/**
+ * Social
+ */
+h3.social-header {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#social-container ul {
+  padding: 2px 20px;
+}
+
+#social-container li {
+  list-style: none;
+  margin-left: 5px;
+  margin-bottom: 2px;
+}
+
+#social-container a {
+  text-decoration: none;
 }
