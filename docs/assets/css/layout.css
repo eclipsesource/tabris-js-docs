@@ -59,8 +59,25 @@ nav.navbar-inverse {
   border-color: transparent;
 }
 
-.navbar .title {
-  font-size: 18px;
+.navbar .navbar-brand {
+  background-image: url(//tabrisjs.com/documentation/assets/img/tabris-logo.png);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: left 15px center;
+  padding-left: 50px;
+  font-size: 20px;
+  letter-spacing: -.05rem;
+  color: white;
+  min-height: 50px;
+  padding-top: 15px;
+  line-height: 20px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #ebebeb;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
   color: white;
 }
 
