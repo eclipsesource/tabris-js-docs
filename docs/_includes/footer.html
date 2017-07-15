@@ -19,21 +19,14 @@
   });
 </script>
 
-<!-- Tocify TOC generator -->
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.tocify/1.9.0/javascripts/jquery.tocify.min.js"></script>
+<!-- Tocbot TOC generator -->
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/tocbot/3.0.2/tocbot.min.js"></script>
 <script>
-  $(function() {
-    $('#toc').tocify({
-      context: '#doc-body',
-      selectors: 'h2,h3',
-      hashGenerator: function(text, el) {
-        var id = el.attr('id');
-        el.removeAttr('id');
-        return id;
-      },
-      scrollTo: 60
-    });
+  tocbot.init({
+    tocSelector: '#toc',
+    contentSelector: '#doc-body',
+    headingSelector: 'h2, h3',
+    headingsOffset: 60
   });
 </script>
 

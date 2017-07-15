@@ -88,7 +88,7 @@ nav.navbar-inverse {
 }
 
 .sidebar .box {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .sidebar .box:first-of-type {
@@ -104,12 +104,7 @@ nav.navbar-inverse {
   list-style-type: none;
   list-style-position: outside;
   padding-left: 10px;
-  margin-left: 0;
-  margin-bottom: 5px;
-}
-
-.sidebar ul ul > li {
-  padding-left: 20px;
+  margin: 5px 0;
 }
 
 .sidebar a {
@@ -142,11 +137,15 @@ nav.navbar-inverse {
 }
 .sidebar-nav li li {
   border-left: 3px solid transparent;
+  padding-left: 20px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 .sidebar-nav li.active li.active {
-  border-left: 3px solid #cecece;
+  border-left: 3px solid #026da7;
+}
+.sidebar-nav a {
+  cursor: pointer;
 }
 .sidebar-nav li.panel > a {
   display: block;
@@ -172,4 +171,15 @@ nav.navbar-inverse {
 
 #search-query {
   border-radius: 4px;
+}
+
+li.toc-list-item a {
+  color: #666;
+}
+li.toc-list-item a:hover {
+  color: #333;
+}
+
+li li.toc-list-item {
+  font-size: 85%;
 }

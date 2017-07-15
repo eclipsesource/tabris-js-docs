@@ -11,11 +11,11 @@
     {% endfor %}
     {% if active %}
   <li class="panel active">
-    <a href="#{{ sectionId }}" data-parent="#main-nav" data-toggle="collapse">{{ section.title }}</a>
+    <a data-target="#{{ sectionId }}" data-parent="#main-nav" data-toggle="collapse">{{ section.title }}</a>
     <ul id="{{ sectionId | slugify }}" class="collapse in">
     {% else %}
   <li class="panel">
-    <a href="#{{ sectionId }}" data-parent="#main-nav" data-toggle="collapse">{{ section.title }}</a>
+    <a data-target="#{{ sectionId }}" data-parent="#main-nav" data-toggle="collapse">{{ section.title }}</a>
     <ul id="{{ sectionId | slugify }}" class="collapse">
     {% endif %}
     {% for item in section.pages %}
