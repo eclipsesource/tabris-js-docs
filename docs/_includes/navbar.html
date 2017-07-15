@@ -1,8 +1,8 @@
 {% include base.html %}
 {% assign segments = page.path | split:'/' %}
 {% if segments.size > 1 %}{% assign subdir = segments | first %}{% else %}{% assign subdir = '' %}{% endif %}
-<nav class="navbar navbar-inverse navbar-fixed-top">
-  <div class="container-fluid">
+<nav class="navbar navbar-default navbar-static-top navbar-inverse">
+  <div class="container">
 
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">

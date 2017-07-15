@@ -1,7 +1,7 @@
 {% include base.html %}
 {% assign current = page.path | replace: '.md', '.html' %}
 {% assign subdir = page.path | split:'/' | first %}
-<ul id="main-nav" class="nav nav-sidebar">
+<ul id="main-nav">
   {% for section in toc %}
     {% assign sectionId = section.title | slugify | prepend: 'nav-' %}
     {% assign active = false %}
@@ -12,11 +12,11 @@
     {% if active %}
   <li class="panel active">
     <a href="#{{ sectionId }}" data-parent="#main-nav" data-toggle="collapse">{{ section.title }}</a>
-    <ul id="{{ sectionId | slugify }}" class="nav nav-section collapse in">
+    <ul id="{{ sectionId | slugify }}" class="collapse in">
     {% else %}
   <li class="panel">
     <a href="#{{ sectionId }}" data-parent="#main-nav" data-toggle="collapse">{{ section.title }}</a>
-    <ul id="{{ sectionId | slugify }}" class="nav nav-section collapse">
+    <ul id="{{ sectionId | slugify }}" class="collapse">
     {% endif %}
     {% for item in section.pages %}
       {% assign url = item.url | prepend: '/' | prepend: subdir %}

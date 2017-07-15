@@ -105,30 +105,6 @@
   line-height: 1.1
 }
 
-.markdown-body h1 {
-  font-size: 30px
-}
-
-.markdown-body h2 {
-  font-size: 21px
-}
-
-.markdown-body h3 {
-  font-size: 16px
-}
-
-.markdown-body h4 {
-  font-size: 14px
-}
-
-.markdown-body h5 {
-  font-size: 12px
-}
-
-.markdown-body h6 {
-  font-size: 11px
-}
-
 .markdown-body blockquote {
   margin: 0
 }
@@ -273,6 +249,7 @@
 }
 
 .markdown-body blockquote {
+  font-size: 100%;
   padding: 0 15px;
   color: #777;
   border-left: 4px solid #ddd
@@ -395,16 +372,32 @@
   border-radius: 2px
 }
 
-.markdown-body .task-list-item {
-  list-style-type: none
+/*
+ * Platform labels
+ */
+
+p.platforms {
+  margin-top: -20px;
+  font-size: 12px;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  color: white;
+  cursor: default;
 }
 
-.markdown-body .task-list-item+.task-list-item {
-  margin-top: 3px
+p.platforms span {
+  border-radius: 2px;
+  padding: 1px 5px;
+  margin-right: 5px;
 }
 
-.markdown-body .task-list-item input {
-  float: left;
-  margin: .3em 0 .25em -1.6em;
-  vertical-align: middle
+p.platforms .windows-tag {
+  background: rgb(0, 120, 212);
+}
+
+p.platforms .android-tag {
+  background: rgb(104, 180, 69);
+}
+
+p.platforms .ios-tag {
+  background: rgb(153, 153, 153);
 }

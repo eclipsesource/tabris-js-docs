@@ -8,75 +8,83 @@
     <!-- header bar -->
     {% include navbar.html %}
 
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
 
         <!-- right column -->
-        <div class="hidden-xs col-sm-3 col-md-2 sidebar left">
-          {% include sidebar-nav.html %}
+        <div class="hidden-xs col-sm-3 col-md-2">
+          <div class="sidebar sidebar-nav">
+            {% include sidebar-nav.html %}
+          </div>
         </div>
 
-        <!-- main container -->
-        <div class="col-sm-9 col-sm-offset-3 col-md-8 col-md-offset-2 main">
-          <div id="doc-body" class="markdown-body" id="doc-body">
+        <!-- main content area -->
+        <div class="col-sm-9 col-md-8">
+          <div id="doc-body" class="main markdown-body" id="doc-body">
             {{ content }}
           </div>
         </div>
 
-        <!-- left container -->
-        <div class="col-sm-0 col-md-2 sidebar right">
-          <div id="toc-container">
-            <div class="toc-header">In this article</div>
-            <div id="toc">
+        <!-- left column -->
+        <div class="col-sm-12 col-md-2">
+          <div class="sidebar">
+            <div class="box hidden-xs hidden-sm">
+              <h4 class="toc-header">In this article</h4>
+              <div id="toc">
+              </div>
             </div>
-          </div>
-          <div id="social-container">
-            <h3 class="social-header">Help us improve Tabris.js</h3>
-            <ul>
-              <li>
-                <a href="https://stackoverflow.com/questions/ask?tags=tabris">
-                  <img width="28" height="28" src="{{ base }}/assets/img/social-logo-stackoverflow.png" alt="Stack Overflow" />
-                  Ask questions
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/eclipsesource/tabris-js/issues">
-                  <img width="28" height="28" src="{{ base }}/assets/img/social-logo-github.png" alt="GitHub" />
-                  Report issues
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/tabrisjs">
-                  <img width="28" height="28" src="{{ base }}/assets/img/social-logo-twitter.png" alt="Twitter" />
-                  Follow @tabrisjs
-                </a>
-              </li>
-              <li>
-                <a href="https://tabrisjs.herokuapp.com/">
-                  <img width="28" height="28" src="{{ base }}/assets/img/social-logo-slack.png" alt="Slack" />
-                  Join the public chat
-                </a>
-              </li>
-            </ul>
 
-            <h3 class="social-header">Install the app</h3>
-            <ul>
-              <li>
-                <a href="https://play.google.com/store/apps/details?id=com.eclipsesource.tabrisjs2">
-                  <img width="170" src="{{ base }}/assets/img/play-store-badge.png" alt="Tabris.js 2 on Google Play" />
-                </a>
-              </li>
-              <li>
-                <a href="https://itunes.apple.com/us/app/tabris.js-2/id1166468326?mt=8">
-                  <img width="170" src="{{ base }}/assets/img/app-store-badge.png" alt="Tabris.js 2 on Apple App Store" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.microsoft.com/store/apps/9n8z4pp9chtx">
-                  <img width="170" src="{{ base }}/assets/img/windows-badge.png" alt="Tabris.js 2 on Windows Store" />
-                </a>
-              </li>
-            </ul>
+            <div class="box">
+              <h4>Help us improve Tabris.js</h4>
+              <ul>
+                <li>
+                  <a href="https://stackoverflow.com/questions/ask?tags=tabris">
+                    <img width="28" height="28" src="{{ base }}/assets/img/social-logo-stackoverflow.png" alt="Stack Overflow" />
+                    Ask questions
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/eclipsesource/tabris-js/issues">
+                    <img width="28" height="28" src="{{ base }}/assets/img/social-logo-github.png" alt="GitHub" />
+                    Report issues
+                  </a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/tabrisjs">
+                    <img width="28" height="28" src="{{ base }}/assets/img/social-logo-twitter.png" alt="Twitter" />
+                    Follow @tabrisjs
+                  </a>
+                </li>
+                <li>
+                  <a href="https://tabrisjs.herokuapp.com/">
+                    <img width="28" height="28" src="{{ base }}/assets/img/social-logo-slack.png" alt="Slack" />
+                    Join the public chat
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="box">
+              <h4>Install the app</h4>
+              <ul>
+                <li>
+                  <a href="https://play.google.com/store/apps/details?id=com.eclipsesource.tabrisjs2">
+                    <img width="150" src="{{ base }}/assets/img/play-store-badge.png" alt="Tabris.js 2 on Google Play" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://itunes.apple.com/us/app/tabris.js-2/id1166468326?mt=8">
+                    <img width="150" src="{{ base }}/assets/img/app-store-badge.png" alt="Tabris.js 2 on Apple App Store" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.microsoft.com/store/apps/9n8z4pp9chtx">
+                    <img width="150" src="{{ base }}/assets/img/windows-badge.png" alt="Tabris.js 2 on Windows Store" />
+                  </a>
+                </li>
+              </ul>
+            </div>
+
           </div>
         </div>
       </div>

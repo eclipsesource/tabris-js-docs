@@ -11,7 +11,7 @@ See: https://help.github.com/articles/setting-up-your-github-pages-site-locally-
 Run:
 
     cd docs/
-    bundle exec jekyll serve
+    bundle exec jekyll serve --incremental
 
 ### Updating
 
