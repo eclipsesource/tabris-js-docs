@@ -135,5 +135,5 @@ function createLabel(text) {
 ```
 ## See also
 
-- [Snippet for creating a Drawer](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/drawer.js)
-- [Example for Drawer-based navigation](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/drawer-pages.js)
+- [Snippet for creating a Drawer](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/drawer.js)
+- [Example for Drawer-based navigation](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/drawer-pages.js)

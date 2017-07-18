@@ -142,4 +142,4 @@ new ToggleButton({
 ```
 ## See also
 
-- [Simple ToggleButton snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/togglebutton.js)
+- [Simple ToggleButton snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/togglebutton.js)

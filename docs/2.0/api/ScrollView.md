@@ -150,5 +150,5 @@ new Button({
 ```
 ## See also
 
-- [Simple ScrollView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/scrollview.js)
-- [Example using a ScrollView](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/examples/parallax/parallax.js)
+- [Simple ScrollView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/scrollview.js)
+- [Example using a ScrollView](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/examples/parallax/parallax.js)

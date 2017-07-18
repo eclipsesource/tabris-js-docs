@@ -104,4 +104,4 @@ new CheckBox({
 ```
 ## See also
 
-- [Simple Checkbox snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/checkbox.js)
+- [Simple Checkbox snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/checkbox.js)

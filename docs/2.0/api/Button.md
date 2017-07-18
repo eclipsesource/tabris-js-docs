@@ -115,4 +115,4 @@ new Button({
 ```
 ## See also
 
-- [Simple Button snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/button.js)
+- [Simple Button snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/button.js)

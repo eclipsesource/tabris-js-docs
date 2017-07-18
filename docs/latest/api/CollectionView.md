@@ -337,4 +337,4 @@ new CollectionView({
 ```
 ## See also
 
-- [CollectionView example](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/collectionview.js)
+- [CollectionView example](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/collectionview.js)

@@ -69,4 +69,4 @@ setInterval(() => {
 ```
 ## See also
 
-- [Simple ProgressBar snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/progressbar.js)
+- [Simple ProgressBar snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/progressbar.js)

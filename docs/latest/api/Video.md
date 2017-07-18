@@ -205,4 +205,4 @@ let video = new Video({
 ```
 ## See also
 
-- [Snippet for creating a video widget](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/video.js)
+- [Snippet for creating a video widget](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/video.js)

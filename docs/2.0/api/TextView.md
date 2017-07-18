@@ -90,5 +90,5 @@ new TextView({
 ```
 ## See also
 
-- [Simple TextView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/textview.js)
-- [Snippet for TextView with markup](https://github.com/eclipsesource/tabris-js/tree/v2.0.0-rc2/snippets/textview-markupenabled.js)
+- [Simple TextView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/textview.js)
+- [Snippet for TextView with markup](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/textview-markupenabled.js)

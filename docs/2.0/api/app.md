@@ -43,7 +43,7 @@ Returns the URL for a given resource that is bundled with the app. Can be used t
 Installs a patch from the given URL. When the patch is successfully installed, it will remain inactive until the application is reloaded. Not supported on Windows.
 
 ### reload()
-
+<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
 
 Forces the running application to reload the main module and start over.
 

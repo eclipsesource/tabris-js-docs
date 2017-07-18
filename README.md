@@ -11,18 +11,25 @@ See: https://help.github.com/articles/setting-up-your-github-pages-site-locally-
 Run:
 
     cd docs/
-    bundle exec jekyll serve --incremental
+    bundle exec jekyll serve --incremental --host 0.0.0.0
 
 ### Updating
 
 - Perform a release build of tabris-js (`grunt --release`)
-- Copy the `build/doc/` directory from the tabris build to to `docs/<version>/`
-- Move `docs/<version>/toc.yml` to `docs/_data/toc-<version-with-dashes>.yml`
-- Move `docs/<version>/faq.md` to `docs/faq/index.md`
 - Update the latest version in the config file [main.yml](./docs/_data/main.yml) if needed.
-- Run `find docs/2.0/ -name '*.md' -exec node tools/fix-markdown.js {} \;`
+- Perform these steps:
+
+```
+VERSION=2.0
+
+rm -r docs/VERSION/ docs/latest/
+cp -a ../tabris-js/build/doc/ docs/VERSION/
+mv docs/VERSION/toc.yml docs/_data/toc-${VERSION/./-}.yml
+mv docs/VERSION/faq.md docs/faq/index.md
+cp -a docs/VERSION/ docs/latest/
+```
+
 - Run `node tools/check-links.js http://127.0.0.1:4000/`
-- Copy `docs/<version>/` to `docs/latest/`
 
 ### Handling of latest/
 
