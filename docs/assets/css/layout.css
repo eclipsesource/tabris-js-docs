@@ -90,10 +90,11 @@ nav.navbar-inverse {
   overflow-x: hidden;
   overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
   display: block;
+  font-size: 90%;
 }
 
 .sidebar h4 {
-  padding: 10px 0;
+  padding: 0;
   font-size: 14px;
   font-weight: bold;
   text-transform: uppercase;
@@ -120,8 +121,16 @@ nav.navbar-inverse {
 .sidebar li {
   list-style-type: none;
   list-style-position: outside;
-  padding-left: 10px;
+  padding-left: 0;
   margin: 5px 0;
+}
+
+.sidebar > ul > li:first-of-type {
+  margin-top: 0;
+}
+
+.sidebar li li {
+  padding-left: 10px;
 }
 
 .sidebar a {
@@ -132,6 +141,10 @@ nav.navbar-inverse {
 /*
  * Sidebar navigation
  */
+
+.sidebar-nav {
+  font-size: 100%;
+}
 
 /* Override bootstrap defaults for .panel,
    .panel is needed for collapse: https://stackoverflow.com/questions/19425165 */
@@ -198,14 +211,14 @@ li.toc-list-item a:hover {
 }
 
 li li.toc-list-item {
-  font-size: 85%;
+  font-size: 90%;
 }
 
 /**
  * Footer
  */
 
- footer {
+footer {
   background-color: #313131;
   color: #ddd;
   padding-top: 20px;
