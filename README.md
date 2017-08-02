@@ -22,11 +22,11 @@ Run:
 ```
 VERSION=2.0
 
-rm -r docs/VERSION/ docs/latest/
-cp -a ../tabris-js/build/doc/ docs/VERSION/
-mv docs/VERSION/toc.yml docs/_data/toc-${VERSION/./-}.yml
-mv docs/VERSION/faq.md docs/faq/index.md
-cp -a docs/VERSION/ docs/latest/
+rm -r docs/$VERSION/ docs/latest/
+cp -a ../tabris-js/build/doc/ docs/$VERSION/
+mv docs/$VERSION/toc.yml docs/_data/toc-${VERSION/./-}.yml
+mv docs/$VERSION/faq.md docs/faq/index.md
+cp -a docs/$VERSION/ docs/latest/
 ```
 
 - Run `node tools/check-links.js http://127.0.0.1:4000/`
