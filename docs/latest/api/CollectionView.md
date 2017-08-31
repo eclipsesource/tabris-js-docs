@@ -73,7 +73,7 @@ Scrolls the item with the given index into view.
 ### cellHeight
 
 
-Type: *number|"auto"|((index: number, cellType: string) => number)*, default: `auto`
+Type: *number|"auto"|((index: number, cellType: string) => number|"auto")*, default: `auto`
 
 The height of a collection cell. If set to `"auto"`, the cell height will be calculated individually for each cell. If set to a function, this function will be called for every item, providing the item index and the cell type as parameters, and must return the cell height for the given item.
 
@@ -160,7 +160,7 @@ Fired when the [*cellHeight*](#cellHeight) property has changed.
 - **target**: *this*
     The widget the event was fired on.
 
-- **value**: *number|"auto"|((index: number, cellType: string) => number)*
+- **value**: *number|"auto"|((index: number, cellType: string) => number|"auto")*
     The new value of [*cellHeight*](#cellHeight).
 
 
@@ -337,4 +337,4 @@ new CollectionView({
 ```
 ## See also
 
-- [CollectionView example](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/collectionview.js)
+- [CollectionView example](https://github.com/eclipsesource/tabris-js/tree/v2.1.0/snippets/collectionview.js)

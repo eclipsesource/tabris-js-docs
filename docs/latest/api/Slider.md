@@ -83,14 +83,14 @@ Fired when the selection property is changed by the user.
 
 ### selectionChanged
 
-Fired when the selection property changes.
+Fired when the [*selection*](#selection) property has changed.
 
 #### Event Parameters 
 - **target**: *this*
     The widget the event was fired on.
 
 - **value**: *number*
-    The new value of the `selection` property.
+    The new value of [*selection*](#selection).
 
 
 ### tintColorChanged
@@ -131,4 +131,4 @@ new Slider({
 ```
 ## See also
 
-- [Simple Slider snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/slider.js)
+- [Simple Slider snippet](https://github.com/eclipsesource/tabris-js/tree/v2.1.0/snippets/slider.js)

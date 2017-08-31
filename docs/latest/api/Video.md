@@ -160,14 +160,14 @@ Fired when the [*speed*](#speed) property has changed.
 
 ### stateChanged
 
-Fired when the state property changes.
+Fired when the [*state*](#state) property has changed.
 
 #### Event Parameters 
 - **target**: *this*
     The widget the event was fired on.
 
 - **value**: *string*
-    The new value of the `state` property.
+    The new value of [*state*](#state).
 
 
 ### urlChanged
@@ -205,4 +205,4 @@ let video = new Video({
 ```
 ## See also
 
-- [Snippet for creating a video widget](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/video.js)
+- [Snippet for creating a video widget](https://github.com/eclipsesource/tabris-js/tree/v2.1.0/snippets/video.js)

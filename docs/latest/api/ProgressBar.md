@@ -50,6 +50,71 @@ Type: *[Color](../types.md#color)*
 The color used to display the current progress.
 
 
+## Events
+
+### maximumChanged
+
+Fired when the [*maximum*](#maximum) property has changed.
+
+#### Event Parameters 
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*maximum*](#maximum).
+
+
+### minimumChanged
+
+Fired when the [*minimum*](#minimum) property has changed.
+
+#### Event Parameters 
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*minimum*](#minimum).
+
+
+### selectionChanged
+
+Fired when the [*selection*](#selection) property has changed.
+
+#### Event Parameters 
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*selection*](#selection).
+
+
+### stateChanged
+
+Fired when the [*state*](#state) property has changed.
+
+#### Event Parameters 
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*state*](#state).
+
+
+### tintColorChanged
+
+Fired when the [*tintColor*](#tintColor) property has changed.
+
+#### Event Parameters 
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*tintColor*](#tintColor).
+
+
+
+
+
 ## Example
 ```js
 const {ProgressBar, ui} = require('tabris');
@@ -69,4 +134,4 @@ setInterval(() => {
 ```
 ## See also
 
-- [Simple ProgressBar snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/progressbar.js)
+- [Simple ProgressBar snippet](https://github.com/eclipsesource/tabris-js/tree/v2.1.0/snippets/progressbar.js)

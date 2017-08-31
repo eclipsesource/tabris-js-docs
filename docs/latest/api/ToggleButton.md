@@ -66,14 +66,14 @@ Fired when the [*alignment*](#alignment) property has changed.
 
 ### checkedChanged
 
-Fired when the checked property changes.
+Fired when the [*checked*](#checked) property has changed.
 
 #### Event Parameters 
 - **target**: *this*
     The widget the event was fired on.
 
 - **value**: *boolean*
-    The new value of the `checked` property.
+    The new value of [*checked*](#checked).
 
 
 ### imageChanged
@@ -142,4 +142,4 @@ new ToggleButton({
 ```
 ## See also
 
-- [Simple ToggleButton snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/togglebutton.js)
+- [Simple ToggleButton snippet](https://github.com/eclipsesource/tabris-js/tree/v2.1.0/snippets/togglebutton.js)

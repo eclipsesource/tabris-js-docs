@@ -21,6 +21,13 @@ Type: *boolean*, default: `false`
 
 The checked state of the radio button.
 
+### checkedTintColor
+<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
+
+Type: *[Color](../types.md#color)*
+
+The color of the selectable area in checked state. Will fall back to `tintColor` if not set.
+
 ### text
 
 
@@ -35,19 +42,38 @@ Type: *[Color](../types.md#color)*
 
 The color of the text.
 
+### tintColor
+<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
+
+Type: *[Color](../types.md#color)*
+
+The color of the selectable area.
+
 
 ## Events
 
 ### checkedChanged
 
-Fired when the checked property changes.
+Fired when the [*checked*](#checked) property has changed.
 
 #### Event Parameters 
 - **target**: *this*
     The widget the event was fired on.
 
 - **value**: *boolean*
-    The new value of the `checked` property.
+    The new value of [*checked*](#checked).
+
+
+### checkedTintColorChanged
+
+Fired when the [*checkedTintColor*](#checkedTintColor) property has changed.
+
+#### Event Parameters 
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*checkedTintColor*](#checkedTintColor).
 
 
 ### select
@@ -86,6 +112,18 @@ Fired when the [*textColor*](#textColor) property has changed.
     The new value of [*textColor*](#textColor).
 
 
+### tintColorChanged
+
+Fired when the [*tintColor*](#tintColor) property has changed.
+
+#### Event Parameters 
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*tintColor*](#tintColor).
+
+
 
 
 
@@ -108,4 +146,4 @@ const {RadioButton, ui} = require('tabris');
 ```
 ## See also
 
-- [Simple RadioButton snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/radiobutton.js)
+- [Simple RadioButton snippet](https://github.com/eclipsesource/tabris-js/tree/v2.1.0/snippets/radiobutton.js)

@@ -64,6 +64,83 @@ Type: *[Color](../types.md#color)*
 The color of the text.
 
 
+## Events
+
+### alignmentChanged
+
+Fired when the [*alignment*](#alignment) property has changed.
+
+#### Event Parameters 
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*alignment*](#alignment).
+
+
+### lineSpacingChanged
+
+Fired when the [*lineSpacing*](#lineSpacing) property has changed.
+
+#### Event Parameters 
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number*
+    The new value of [*lineSpacing*](#lineSpacing).
+
+
+### maxLinesChanged
+
+Fired when the [*maxLines*](#maxLines) property has changed.
+
+#### Event Parameters 
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *number|null*
+    The new value of [*maxLines*](#maxLines).
+
+
+### selectableChanged
+
+Fired when the [*selectable*](#selectable) property has changed.
+
+#### Event Parameters 
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *boolean*
+    The new value of [*selectable*](#selectable).
+
+
+### textChanged
+
+Fired when the [*text*](#text) property has changed.
+
+#### Event Parameters 
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *string*
+    The new value of [*text*](#text).
+
+
+### textColorChanged
+
+Fired when the [*textColor*](#textColor) property has changed.
+
+#### Event Parameters 
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*textColor*](#textColor).
+
+
+
+
+
 ## Example
 ```js
 const {TextView, ui} = require('tabris');
@@ -90,5 +167,5 @@ new TextView({
 ```
 ## See also
 
-- [Simple TextView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/textview.js)
-- [Snippet for TextView with markup](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/textview-markupenabled.js)
+- [Simple TextView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.1.0/snippets/textview.js)
+- [Snippet for TextView with markup](https://github.com/eclipsesource/tabris-js/tree/v2.1.0/snippets/textview-markupenabled.js)

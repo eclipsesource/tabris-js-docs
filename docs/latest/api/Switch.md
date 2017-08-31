@@ -54,14 +54,14 @@ The color of the track that holds the thumb, when switched *on*.
 
 ### checkedChanged
 
-Fired when the checked property changes.
+Fired when the [*checked*](#checked) property has changed.
 
 #### Event Parameters 
 - **target**: *this*
     The widget the event was fired on.
 
 - **value**: *boolean*
-    The new value of the `checked` property.
+    The new value of [*checked*](#checked).
 
 
 ### select

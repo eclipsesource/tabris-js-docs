@@ -100,14 +100,14 @@ Fired when the selection property changes by user interaction.
 
 ### selectionChanged
 
-Fired when the selection property changes.
+Fired when the [*selection*](#selection) property has changed.
 
 #### Event Parameters 
 - **target**: *this*
     The widget the event was fired on.
 
 - **value**: *[Tab](Tab.md)*
-    The new value of the `selection` property.
+    The new value of [*selection*](#selection).
 
 
 ### textColorChanged
@@ -168,4 +168,4 @@ function createTab(title, image, seletedImage) {
 ```
 ## See also
 
-- [Snippet with a TabFolder and Tabs](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/tabfolder.js)
+- [Snippet with a TabFolder and Tabs](https://github.com/eclipsesource/tabris-js/tree/v2.1.0/snippets/tabfolder.js)

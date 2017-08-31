@@ -12,6 +12,33 @@ Android | iOS
 --- | ---
 ![ActivityIndicator on Android](img/android/ActivityIndicator.png) | ![ActivityIndicator on iOS](img/ios/ActivityIndicator.png)
 
+## Properties
+
+### tintColor
+<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
+
+Type: *[Color](../types.md#color)*
+
+The color of the indicator.
+
+
+## Events
+
+### tintColorChanged
+
+Fired when the [*tintColor*](#tintColor) property has changed.
+
+#### Event Parameters 
+- **target**: *this*
+    The widget the event was fired on.
+
+- **value**: *[Color](../types.md#color)*
+    The new value of [*tintColor*](#tintColor).
+
+
+
+
+
 ## Example
 ```js
 const {ActivityIndicator, Button, ui} = require('tabris');
@@ -45,4 +72,4 @@ executeLongRunningTask();
 ```
 ## See also
 
-- [Simple ActivityIndicator snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/activityindicator.js)
+- [Simple ActivityIndicator snippet](https://github.com/eclipsesource/tabris-js/tree/v2.1.0/snippets/activityindicator.js)

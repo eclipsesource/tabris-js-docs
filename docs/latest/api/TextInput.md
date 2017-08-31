@@ -279,14 +279,14 @@ Fired when the [*message*](#message) property has changed.
 
 ### textChanged
 
-Fired when the text property changes.
+Fired when the [*text*](#text) property has changed.
 
 #### Event Parameters 
 - **target**: *this*
     The widget the event was fired on.
 
 - **value**: *string*
-    The new value of the `text` property.
+    The new value of [*text*](#text).
 
 
 ### textColorChanged
@@ -322,5 +322,5 @@ new TextInput({
 ```
 ## See also
 
-- [Simple TextInput snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/textinput.js)
-- [Example with Text and other input controls](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/examples/input/input.js)
+- [Simple TextInput snippet](https://github.com/eclipsesource/tabris-js/tree/v2.1.0/snippets/textinput.js)
+- [Example with Text and other input controls](https://github.com/eclipsesource/tabris-js/tree/v2.1.0/examples/input/input.js)

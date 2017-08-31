@@ -121,14 +121,14 @@ Fired when an item was selected by the user.
 
 ### selectionIndexChanged
 
-Fired when the selectionIndex property changes.
+Fired when the [*selectionIndex*](#selectionIndex) property has changed.
 
 #### Event Parameters 
 - **target**: *this*
     The widget the event was fired on.
 
 - **value**: *number*
-    The new value of the `selectionIndex` property.
+    The new value of [*selectionIndex*](#selectionIndex).
 
 
 ### textColorChanged
@@ -178,4 +178,4 @@ picker.on('select', ({index}) => console.log('Selected ' + AIRPORTS[index].id));
 ```
 ## See also
 
-- [Simple Picker snippet](https://github.com/eclipsesource/tabris-js/tree/v2.0.0/snippets/picker.js)
+- [Simple Picker snippet](https://github.com/eclipsesource/tabris-js/tree/v2.1.0/snippets/picker.js)
