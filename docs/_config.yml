@@ -1,4 +1,4 @@
-gems:
+plugins:
   - jekyll-relative-links
   - jekyll-titles-from-headings
   - jemoji
