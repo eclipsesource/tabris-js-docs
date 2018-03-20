@@ -131,4 +131,4 @@ new Slider({
 ```
 ## See also
 
-- [Simple Slider snippet](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/slider.js)
+- [Simple Slider snippet](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/slider.js)

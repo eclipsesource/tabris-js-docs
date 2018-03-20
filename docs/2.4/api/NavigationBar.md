@@ -130,4 +130,4 @@ function createTextView(text, id) {
 ```
 ## See also
 
-- [Snippet demonstrating various properties of the `NavigationBar`](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/navigationbar.js)
+- [Snippet demonstrating various properties of the `NavigationBar`](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/navigationbar.js)

@@ -146,4 +146,4 @@ const {RadioButton, ui} = require('tabris');
 ```
 ## See also
 
-- [Simple RadioButton snippet](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/radiobutton.js)
+- [Simple RadioButton snippet](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/radiobutton.js)

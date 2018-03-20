@@ -44,4 +44,4 @@ new Button({
 ```
 ## See also
 
-- [Snippet showing how to print a PDF document bundled in the app](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/printer.js)
+- [Snippet showing how to print a PDF document bundled in the app](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/printer.js)

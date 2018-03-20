@@ -81,5 +81,5 @@ Fired when the [*title*](#title) property has changed.
 
 ## See also
 
-- [Simple snippet for displaying a single page](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/navigationview-page.js)
-- [Snippet for creating a stack of pages](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/navigationview-page-stacked.js)
+- [Simple snippet for displaying a single page](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/navigationview-page.js)
+- [Snippet for creating a stack of pages](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/navigationview-page-stacked.js)

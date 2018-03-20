@@ -89,4 +89,4 @@ function showTimeDialog() {
 ```
 ## See also
 
-- [Simple TimeDialog snippet](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/timedialog.js)
+- [Simple TimeDialog snippet](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/timedialog.js)

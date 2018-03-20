@@ -367,5 +367,5 @@ new TextInput({
 ```
 ## See also
 
-- [Simple TextInput snippet](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/textinput.js)
-- [Example with Text and other input controls](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/examples/input/input.js)
+- [Simple TextInput snippet](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/textinput.js)
+- [Example with Text and other input controls](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/examples/input/input.js)

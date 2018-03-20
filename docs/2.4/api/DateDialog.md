@@ -132,4 +132,4 @@ function showDateDialog() {
 ```
 ## See also
 
-- [Simple DateDialog snippet](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/datedialog.js)
+- [Simple DateDialog snippet](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/datedialog.js)

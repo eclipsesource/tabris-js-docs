@@ -111,4 +111,4 @@ Fired when the [*text*](#text) property has changed.
 
 ## See also
 
-- [Search action snippet](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/navigationview-searchaction.js)
+- [Search action snippet](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/navigationview-searchaction.js)

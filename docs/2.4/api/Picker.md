@@ -178,4 +178,4 @@ picker.on('select', ({index}) => console.log('Selected ' + AIRPORTS[index].id));
 ```
 ## See also
 
-- [Simple Picker snippet](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/picker.js)
+- [Simple Picker snippet](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/picker.js)

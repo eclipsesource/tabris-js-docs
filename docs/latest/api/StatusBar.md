@@ -130,4 +130,4 @@ function createTextView(text, id) {
 ```
 ## See also
 
-- [Snippet demonstrating various properties on the `StatusBar`](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/statusbar.js)
+- [Snippet demonstrating various properties on the `StatusBar`](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/statusbar.js)

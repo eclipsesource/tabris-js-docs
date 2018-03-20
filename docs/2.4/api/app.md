@@ -264,5 +264,5 @@ function createTextView(key, value) {
 ```
 ## See also
 
-- [Snippet showing various capabilities of the `App` object](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/app.js)
-- [Snippet to register and use an external font](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/textview-font-external.js)
+- [Snippet showing various capabilities of the `App` object](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/app.js)
+- [Snippet to register and use an external font](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/textview-font-external.js)

@@ -101,5 +101,5 @@ Fired when the [*win_symbol*](#win_symbol) property has changed.
 
 ## See also
 
-- [Snippet for creating actions](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/navigationview-action.js)
-- [Actions - placement priorities](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/navigationview-action-placementpriority.js)
+- [Snippet for creating actions](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/navigationview-action.js)
+- [Actions - placement priorities](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/navigationview-action-placementpriority.js)

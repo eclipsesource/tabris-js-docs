@@ -197,6 +197,6 @@ loadUrl();
 ```
 ## See also
 
-- [Simple WebView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/webview.js)
-- [WebView snippet demonstrating web messaging](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/webview-webmessaging.js)
+- [Simple WebView snippet](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/webview.js)
+- [WebView snippet demonstrating web messaging](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/webview-webmessaging.js)
 - [Web Messaging](https://en.wikipedia.org/wiki/Web_Messaging)

@@ -72,4 +72,4 @@ executeLongRunningTask();
 ```
 ## See also
 
-- [Simple ActivityIndicator snippet](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/activityindicator.js)
+- [Simple ActivityIndicator snippet](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/activityindicator.js)

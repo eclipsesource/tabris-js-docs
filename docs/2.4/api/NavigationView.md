@@ -280,6 +280,6 @@ Fired when the [*win_toolbarTheme*](#win_toolbarTheme) property has changed.
 
 ## See also
 
-- [Snippet with a NavigationView and Pages](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/navigationview-page-stacked.js)
-- [Snippet with a NavigationView and its various properties](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/navigationview-properties.js)
-- [Snippet with NavigationViews embedded in Tabs of a TabFolder](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/navigationview-tabfolder.js)
+- [Snippet with a NavigationView and Pages](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/navigationview-page-stacked.js)
+- [Snippet with a NavigationView and its various properties](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/navigationview-properties.js)
+- [Snippet with NavigationViews embedded in Tabs of a TabFolder](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/navigationview-tabfolder.js)

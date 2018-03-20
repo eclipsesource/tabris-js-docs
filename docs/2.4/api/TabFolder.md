@@ -171,4 +171,4 @@ function createTab(title, image, seletedImage) {
 ```
 ## See also
 
-- [Snippet with a TabFolder and Tabs](https://github.com/eclipsesource/tabris-js/tree/v2.4.0/snippets/tabfolder.js)
+- [Snippet with a TabFolder and Tabs](https://github.com/eclipsesource/tabris-js/tree/v2.4.1/snippets/tabfolder.js)
