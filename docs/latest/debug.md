@@ -50,7 +50,7 @@ In this state you are debugging the source code as it is bundled with the app. Y
 
 Developer Machine Requirements:
 * Windows 10
-* [Visual Studio 2017](https://www.visualstudio.com/de/download/)
+* [Visual Studio 2017](https://www.visualstudio.com/de/downloads/)
 * [Tabris CLI](https://tabrisjs.com/documentation/latest/getting-started.html#set-up-your-development-machine)
 
 Target Device Requirements:
