@@ -42,6 +42,11 @@ h1, h2, h3, h4, h5, h6 {
  * Top navigation
  */
 
+nav.navbar-default {
+  background-color: white;
+  border-bottom-color: white;
+}
+
 nav.navbar-inverse {
   background-color: #0273b1;
   box-shadow: inset 0 0 15px #026da7;
@@ -60,17 +65,20 @@ nav.navbar-inverse {
 }
 
 .navbar .navbar-brand {
-  background-image: url(//tabrisjs.com/documentation/assets/img/tabris-logo.png);
-  background-size: 24px;
+  background-image: url(//docs.tabris.com/assets/img/tabris-logo.png);
+  background-size: 260px 85px;
   background-repeat: no-repeat;
   background-position: left 15px center;
   padding-left: 50px;
   font-size: 20px;
-  letter-spacing: -.05rem;
-  color: white;
-  min-height: 50px;
+  min-width: 300px;
+  min-height: 90px;
   padding-top: 15px;
   line-height: 20px;
+}
+
+.navbar .navbar-nav > li {
+  font-size: 20px;
 }
 
 .navbar-inverse .navbar-nav > li > a {
