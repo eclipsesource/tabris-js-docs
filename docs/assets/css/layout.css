@@ -5,7 +5,7 @@
 body {
   padding: 0;
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Oxygen", sans-serif;
   font-size: 14px;
   color: ​#333333;
   background-color: white;
@@ -15,12 +15,12 @@ input,
 button,
 select,
 textarea {
-  font-family: "Open Sans", Arial;
+  font-family: "Oxygen", Arial;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Oxygen", sans-serif;
 }
 
 .nav-list > li > a,
@@ -79,6 +79,7 @@ nav.navbar-inverse {
 
 .navbar .navbar-nav > li {
   font-size: 20px;
+  font-weight: 100;
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -87,6 +88,19 @@ nav.navbar-inverse {
 
 .navbar-inverse .navbar-nav > li > a:hover {
   color: white;
+}
+
+.navbar-default .navbar-nav > li > a {
+  color: #48484a;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a.selected {
+  color: black;
+}
+
+.navbar .main-menu {
+  padding-top: 20px;
 }
 
 /*
