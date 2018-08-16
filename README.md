@@ -2,7 +2,7 @@
 
 This GitHub repository contains the documentation for [Tabris.js](https://tabris.com).
 
-The content of this repository will be published on the [Tabris.js portal](https://docs.tabris.com).
+The content of this repository will be published on the [docs.tabris.com](https://docs.tabris.com).
 
 ### Local setup
 
@@ -24,7 +24,7 @@ Run:
 - Update the latest version in the config file [main.yml](./docs/_data/main.yml) if needed.
 - Perform these steps:
 
-```
+```bash
 VERSION=2.0
 
 rm -r docs/$VERSION/ docs/latest/
