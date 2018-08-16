@@ -1,4 +1,4 @@
---
+---
 ---
 # Debugging Tabris.js
 
@@ -9,15 +9,18 @@ Tabris.js supports the `console.log`, `info`, `warn`, and `error` functions that
 You can debug your app using the Chrome Developer Tools. Detailed Instructions by Google can also be found [here](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/).
 
 Developer Machine Requirements:
+
 * Windows, Linux or macOS
 * [Google Chrome](https://www.google.com/chrome/browser/desktop/index.html)
 * For Windows only, the [OEM USB driver of your Phone](https://developer.android.com/tools/extras/oem-usb.html).
 
 Android Device Requirements:
+
 * An installed Tabris.js app that has been built in debug mode, [either locally](./build.md#local-build) or via the [Tabris.js build service](./build.md#build-service).
 * [USB Debugging Enabled](https://developer.android.com/studio/debug/dev-options.html)
 
 How to Debug:
+
 * Start the Tabris.js app.
 * In Google Chrome enter `chrome://inspect/#devices`
 * Connect your Android device via USB directly to the developer machine. Your device may ask you to allow USB debugging.
@@ -31,14 +34,17 @@ In this state you are debugging the source code as it is bundled with the app. Y
 ## iOS using Safari
 
 Developer Machine Requirements:
+
 * macOS
 * Safari Browser, with the developer Menu enabled under "Safari -> Preferences -> Advanced".
 
 iOS Device Requirements:
+
 * An installed Tabris.js app that has been built in debug mode, [either locally](./build.md#local-build) or via the [Tabris.js build service](./build.md#build-service).
 * Web Inspector enabled in "Settings -> Safari -> Advanced"
 
 How to Debug:
+
 * Connect your iOS device via USB directly to the developer machine.
 * Start the Tabris.js app.
 * In Safari go to "Develop -> \{name-of-your-device} -> \{name-of-your-app} -> JSContext" (If there are multiple entries, kill and restart the entire app)
@@ -49,15 +55,18 @@ In this state you are debugging the source code as it is bundled with the app. Y
 ## Windows using Visual Studio
 
 Developer Machine Requirements:
+
 * Windows 10
 * [Visual Studio 2017](https://www.visualstudio.com/de/downloads/)
 * [Tabris CLI](https://tabrisjs.com/documentation/latest/getting-started.html#set-up-your-development-machine)
 
 Target Device Requirements:
+
 * Windows 10/Windows 10 Mobile (this may also be the developer machine)
 * [Developer Mode Enabled](https://docs.microsoft.com/en-us/windows/uwp/get-started/enable-your-device-for-development)
 
 How to Debug:
+
 * [Build your app locally](https://tabrisjs.com/documentation/latest/windows-support.html#building-an-app), for example:
 
 `set VSINSTALLDIR=C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\&tabris build windows --debug -- --archs=x64`
@@ -75,11 +84,12 @@ In this state you are debugging the source code as it is bundled with the soluti
 * Open a command prompt and navigate to this directory.
 * Enter the following commands:
 
-```
+```shell
 mklink package.json ..\..\..\..\..\..\package.json
 mklink node_modules ..\..\..\..\..\..\node_modules /D
 mklink src ..\..\..\..\..\..\src /D
 ```
+
 Do this for all files and directories (using `/D`) needed at runtime by your app. Do _not_ link the entire project root.
 
 * Re-open the solution.
