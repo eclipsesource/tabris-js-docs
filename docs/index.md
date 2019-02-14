@@ -3,6 +3,7 @@
 # Tabris.js Documentation
 
 * [latest](latest/)
+* [2.7](2.7/)
 * [2.6](2.6/)
 * [2.5](2.5/)
 * [2.4](2.4/)
