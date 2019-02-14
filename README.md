@@ -22,6 +22,7 @@ Run:
 
 - Perform a release build of tabris-js (`grunt --release`)
 - Update the latest version in the config file [main.yml](./docs/_data/main.yml) if needed.
+- Ensure the [index](https://github.com/eclipsesource/tabris-js-docs/blob/master/docs/index.md) is up-to-date.
 - Perform these steps:
 
 ```bash
