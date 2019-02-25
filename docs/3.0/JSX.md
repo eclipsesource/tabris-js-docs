@@ -7,7 +7,7 @@ JSX is a proprietary extension to the JavaScript/TypeScript syntax that allows m
 
 ## Usage
 
-In Tabris, JSX is used to create UI elements in a declarative manner. Every constructor for a Widget, WidgetCollection or Popup based class can be used as an JSX element. (As of 3.0-beta1 only the ActionSheet popup supports JSX. This will change in the final release.)
+In Tabris, JSX is used to create UI elements in a declarative manner. Every constructor for a Widget, WidgetCollection or Popup based class can be used as an JSX element.
 
 Action | JavaScript/TypeScript | JSX
 ---|---|---
@@ -87,9 +87,13 @@ const StyledText = (properties: TextView['jsxProperties']) =>
 
 Any custom component (a user-defined class extending a built-in widget) can be used as a JSX element right away. The only requirement is that the constructor takes the properties object and passes it on to the base class in a `super()` call. All attributes are interpreted as either a property or a listener as you would expect.
 
-**However, in TypeScript an extra step is needed.**
+In TypeScript the attributes that are available on the element are derived from the properties and events of the component:
 
-All classes that can be used as JSX elements have a special (TypeScript-only) property called `jsxProperties`. The *type* of this property defines what JSX attributes are accepted. It should be an interface that includes some or all properties and event listeners supported by the class.
+* All public, writable properties except functions (methods) are valid attributes.
+* All events defined via `Listeners` properties are also valid attributes.
+* All child types accepted by the super type are still accepted.
+
+This behavior can be modified by declaring a special (TypeScript-only) property called `jsxProperties`. The *type* of this property defines what JSX attributes are accepted. It must be an interface that includes some or all properties and event listeners supported by the class.
 
 You best declare the property by extending the `jsxProperties` type of the base class (referenced as `BaseClass['jsxProperties']`) using the `&` type operator and  `JSXProperties` helper interface. It's a generic type based on your custom component class and a list (union type) of APIs you want to support as JSX attributes, e.g. `JSXProperties<BaseClass, 'prop1' | 'prop2' | 'prop3'>`.
 

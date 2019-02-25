@@ -6,7 +6,7 @@ Tabris implements a subset of popular W3C standards. Besides providing web devel
 
 ## window object
 
-In JavaScript there is always an object that represents the global scope. All global variables are members of this object. For compatibility this object is available as `window`, but `global` is actual global object in Tabris.js. For example, the tabris object can be accessed either via `tabris` or `global.tabris` or `window.tabris`.
+In JavaScript there is always an object that represents the global scope. All global variables are members of this object. For compatibility this object is available as `window`, but `global` is the actual global object in Tabris.js. For example, the tabris object can be accessed either via `tabris` or `global.tabris` or `window.tabris`.
 
 ## console object
 
@@ -31,7 +31,10 @@ Tabris supports the [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API
 
 When a relative URL is given, Tabris.js will interpret it as a path relative to the application's main `package.json`. This allows you to read static resources, i.e. the files residing in your project folder and not excluded via [`.tabrisignore`](./build.md#the-tabrisignore-file). You can also use URLs relative to the current [module](./modules.md) by using the `__dirname` variable, e.g. `fetch(__dirname + "/foo.txt");`.
 
-> :point_right: To enable access to SSL protected resources that use self signed certificates, use the `UseStrictSSL` preference in the config.xml. See [Building a Tabris.js App](build.md#preferences).
+> :point_right: To enable access to SSL protected resources that use self signed certificates
+add them to [`app.trustedCertificates`](./api/app.md). Alternatively you can disable the `UseStrictSSL` preference in the config.xml to accept all certificates. See [Building a Tabris.js App](build.md#preferences).
+
+
 
 ## XMLHttpRequest
 

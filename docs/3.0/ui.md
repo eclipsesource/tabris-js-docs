@@ -2,7 +2,7 @@
 ---
 # UI Architecture
 
-The UI of a Tabris.js app consists of platform-native elements that can be controlled by a cross-platform JavaScript API. Within the framework these elements are implemented in native code and provide a user experience that "feels like home" on each OS.
+The UI of a Tabris.js app consists of platform-native elements that can be controlled by a cross-platform JavaScript API. Within the framework these elements are implemented in native code and provide a user experience that feels familiar on each OS.
 
 ## Type Hierarchy
 
@@ -38,7 +38,7 @@ All other types are special cases that will be explained below.
 
 ## Object Hierarchy
 
-The top-level parent for the main UI is represented by the global object `tabris`, which also doubles as the namespace that holds all public classes and singletons of the framework.
+The top-level parent for the main UI is represented by the global object `tabris`, which also acts as the namespace that holds all public classes and singletons of the framework.
 
 ```
 tabris
@@ -52,11 +52,18 @@ tabris
 
 `tabris.ContentView` is a subclass of `tabris.Composite` and the only widget that is visible without any kind of parent. It can not be instantiated by application code. Instead, any instance is bound to another `tabris.NativeObject`, like the global `tabris` object, e.g. `tabris.contentView` representing the main app content. Newly created widgets can be added directly to that instance to make them visible immediately:
 
+JSX:
 ```jsx
 tabris.contentView.append(
   <SomeWidget />
 );
 ```
+
+JS:
+```js
+tabris.contentView.append(
+  new SomeWidget()
+);
 
 ![ContentView](img/contentview.png)
 
@@ -88,7 +95,7 @@ Widgets can be added to the content view, and optionally to the drawer.
 
 ## StatusBar
 
-`tabris.statusBar` is a singleton instance of `tabris.StatusBar`, extending `tabris.NativeObject`. It represents the small area on the top of the screen that displays notifications, status icons and the time. The object can be used to control different aspects of that element's look and feel, such as background color and visibility.
+`tabris.statusBar` is a singleton instance of `tabris.StatusBar`, extending `tabris.NativeObject`. It represents the small area - usually on the top of the screen - that displays notifications, status icons and time. The object can be used to control different aspects of the element's look and feel, such as background color and visibility.
 
 ![StatusBar](img/statusbar.png)
 
