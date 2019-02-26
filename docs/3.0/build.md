@@ -55,7 +55,7 @@ Dependencies are automatically installed during the build process.
 
 #### Build scripts
 
-When a Tabris.js app is built, `build` scripts given in the `package.json` are executed before the JavaScript code is bundled into the app. They can be used to transpile the JavaScript app code.
+When a Tabris.js app is built, `build` scripts given in the `package.json` are executed before the JavaScript code is bundled into the app. They can be used to transpile (source-to-source transform) the JavaScript app code.
 
 ```json
 {
@@ -76,7 +76,7 @@ Supported build script hooks are:
 
 #### Example: TypeScript
 
-When generating a "Compiled" Tabris.js app using the `tabris init` command it is already configured to use the TypeScript compiler. The details are explained [here](./typescript.md#setup).
+Generate a Tabris.js app using the `tabris init` command and select *"Compiled"* as the project type. The resulting `package.json` is already configured to use the TypeScript compiler. The details are explained [here](./typescript.md#setup).
 
 #### Example: Babel.js
 

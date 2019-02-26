@@ -35,7 +35,7 @@ Some gesture events also provide a `state` property of the type `string`:
 
 State      | Description
 -----------|------------
-`"start"`  | The gesture started, i.e. the finger starts moving (`pan`) or has been hold down long enough (`longPress`).
+`"start"`  | The gesture started, i.e. the finger starts moving (`pan`) or has been held down long enough (`longPress`).
 `"change"` | The gesture continued by moving a finger (`pan` only).
 `"end"`    | The gesture ended by lifting all fingers (`pan` and `longPress`).
 `"cancel"` | The gesture was interrupted, e.g. by a dialog pop-up (`pan` and `longPress`).
@@ -43,8 +43,8 @@ State      | Description
 Example:
 
 ```js
-widget.onLongPress(ev => {
-  if (ev.state === 'start') {
+widget.onLongPress(e => {
+  if (e.state === 'start') {
     widget.background = 'red';
   } else {
     widget.background = 'transparent';

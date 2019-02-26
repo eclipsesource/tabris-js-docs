@@ -2,8 +2,8 @@
 ---
 # The Tabris.js Developer App
 
-The *Tabris.js 3* Developer App is the easiest way to see some Tabris.js examples and to start developing mobile apps without having to perform an app build.
-It is available for free in the app stores – just follow the links below or search for "Tabris.js" in the store on your mobile device.
+The *Tabris.js* Developer App is the easiest way to see some Tabris.js examples and to start developing mobile apps without having to perform an app build.
+It is available for free in the app stores – just follow the links below or search for "Tabris.js" in the store on your mobile device. (The app "Tabris.js 2" is for legacy Tabris.js 2.x projects only, "Tabris.js" is always the current version.)
 
 [![Tabris.js on Google play](https://tabrisjs.com/assets/img/playstore-badge.png)](https://play.google.com/store/apps/details?id=com.eclipsesource.tabris.js)
 [![Tabris.js on Apple App Store](https://tabrisjs.com/assets/img/appstore-badge.png)](https://itunes.apple.com/us/app/tabris-js/id939600018?mt=8)
@@ -35,8 +35,6 @@ You'll also find actions to filter the log and to share it (e.g. by email).
 Finally, you can enter a different script URL directly in the header.
 
 ![Developer Console](img/console-android.png)
-
-> :point_right: If you have trouble opening the drawer on iOS, try a four-finger double tap.
 
 ## Play with the Playground
 

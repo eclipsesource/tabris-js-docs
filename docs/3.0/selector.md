@@ -2,7 +2,7 @@
 ---
 # Selector API
 
-Tabris.js offers APIs to find and manipulate widgets anywhere in the UI tree using selectors. A selectors is [string, a widget constructor, or a filter function](#selector-syntax) that can be used by the framework to filter a given set of widgets and *select* only those with a specific *type*, *ID*, or *class* attribute or parent-child relationship.
+Tabris.js offers APIs to find and manipulate widgets anywhere in the UI tree using selectors. A selectors is [a string, a widget constructor, or a filter function](#selector-syntax) that can be used by the framework to filter a given set of widgets and *select* only those with a specific *type*, *ID*, or *class* attribute or parent-child relationship.
 
 ## Selector Syntax
 
@@ -46,13 +46,13 @@ To select a widget by its ID, you can use the selector expression `'#id'` where 
 page.find('#submit')
 ```
 
-By convention IDs should be unique within the given subtree, although this is not enforced by the framework. See "[Encapsulation]"(#Encapsulation).
+By convention IDs should be unique within the given subtree, although this is not enforced by the framework. See "[Encapsulation](#Encapsulation)".
 
 ### Class Selectors
 
 The `class` property is a string containing a whitespace separated list of "classes".  A class is an arbitrary name for a state or category the widget should be identifiable by. It may only contain alphanumeric characters, `'_'` and `'-'`.
 
-> :point_right: The `class` attribute is comparable to the concept of a CSS classes, and not related to JavaScript/TypeScript classes in any way.
+> :point_right: The `class` attribute is comparable to the concept of a CSS class, and not related to JavaScript/TypeScript classes in any way.
 
 Examples:
 
@@ -86,7 +86,7 @@ Example: Let's say you have a page with two buttons:
 <Page>
   <Button/>
   <Composite>
-    <Button />
+    <Button/>
   </Composite>
 </Page>
 ```
@@ -97,7 +97,7 @@ In this case you can either select both buttons...
 page.find('Button')
 ```
 
-... or only the button within the composite...
+...or only the button within the composite...
 
 ```js
 page.find('Composite > Button')
@@ -109,7 +109,7 @@ page.find('Composite > Button')
 page.find('Page > Button')
 ```
 
-In this case `'Page'` we select here is supposed to only refer to the *page* object itself, not any (potential) children that are also of the type `Page`. To avoid this ambiguity we can use the `:host` pseudo class:
+In this case the `'Page'` we select here is supposed to only refer to the *page* object itself, not any (potential) children that are also of the type `Page`. To avoid this ambiguity we can use the `:host` pseudo class:
 
 ```js
 page.find(':host > Button')
@@ -143,7 +143,7 @@ Instances of `WidgetCollection` can be both the basis and the result of a select
 
 Widget collections are array-like objects that represent a set of widgets in Tabris.js. They are immutable and every entry is unique, i.e. they never contain any duplicates. They may also be empty, representing zero widgets.
 
- Notably, a widget collection features a subset of widget API that allows modifying all contained widgets at once. This includes `set`, `trigger`, `on`, `off`, `once`, `append`, `appendTo`, `dispose` and `animate`. Example:
+Notably, a widget collection features a subset of the widget API that allows modifying all contained widgets at once. This includes `set`, `trigger`, `on`, `off`, `once`, `append`, `appendTo`, `dispose` and `animate`. Example:
 
 ```js
 collection
@@ -174,14 +174,14 @@ JSX can be used to create a widget collection, usually to create and append an e
 ```jsx
 contentView.append(
   <WidgetCollection>
-    <TextView />
-    <TextView />
-    <TextView />
+    <TextView/>
+    <TextView/>
+    <TextView/>
   </WidgetCollection>
 );
 ```
 
-In TypeScript `WidgetCollection` is a generic type (`WidgetCollection<T extends Widget = Widget>`>that "knows" what type of widgets are contained - if they are all of the same type:
+In TypeScript `WidgetCollection` is a generic type (`WidgetCollection<T extends Widget = Widget>`>)that "knows" what type of widgets are contained - if they are all of the same type:
 
 ```js
 const collection: WidgetCollection<TextView> = new WidgetCollection([new TextView()]);
@@ -194,7 +194,7 @@ Such a collection is created implicitly whenever a constructor is used as a [typ
 
 ### Composite#children
 
-The method `composite.children(selector)` method returns a new widget collection containing the composite current children that match the given selector. This includes only first generation descendants, so children of children are not part of the result.
+The method `composite.children(selector)` method returns a new widget collection containing the composite's current children that match the given selector. This includes only first generation descendants, so children of children are not part of the result.
 
 The selector parameter defaults to `*`, so `children()` is the same as `children('*')`.
 
@@ -210,7 +210,7 @@ The selector parameter defaults to `*`, so `children()` is the same as `children
 ).children(TextView).set({left: 23});
 ```
 
-This will modify the first two children of the given composite.
+This will modify the first two children of the given composite sicne these are `TextView` instances.
 
 ### Composite#find
 
@@ -263,8 +263,6 @@ page.find('#submit').first().text = 'Hello'; // does not compile
 page.find('#submit').first(Button).text = 'Hello'; // OK
 ```
 
-> :point_right: This example assume that the compiler option `strictNullChecks` is not enabled. If it is the compiler will refuse set a property on the result of `first(Button)` since it may be `undefined`.
-
 ### WidgetCollection#children
 
 The method `collection.children(selector)` will apply the given selector to all children of it's own entries. This allows selecting by parent-child relationships, similar to [relationship selectors](#relationship-selectors):
@@ -278,7 +276,7 @@ While this method is longer, it allows using non-string selector, i.e. functions
 
 ### WidgetCollection#find
 
-The method `collection.find(selector)` will apply the given selector to descendants to all of it's own entries. This excludes the entries themselves, effectively skipping one generation in a subtree.
+The method `collection.find(selector)` will apply the given selector to all descendants of its own entries". This excludes the entries themselves, effectively skipping one generation in a subtree.
 
 ```js
 widget.children().find('.bar'); // All descendants matching '.bar' EXCEPT direct children
@@ -333,8 +331,8 @@ By default the scope of `find` and `apply` include all descendants of their host
 ```jsx
 widget.append(
   <Composite>
-    <Button id='primary' />
-    <MyCustomComponent />
+    <Button id='primary'/>
+    <MyCustomComponent/>
   </Composite>
 );
 ```
@@ -350,9 +348,9 @@ But `MyCustomComponent` may itself also contain a match for `'#primary'`:
 ```js
 class MyCustomComponent extends Composite {
 
-constructor(properties) {
+  constructor(properties) {
     super(properties);
-    this.append(<TextView id='primary' />);
+    this.append(<TextView id='primary'/>);
   }
 
 }

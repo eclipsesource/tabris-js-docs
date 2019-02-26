@@ -2,7 +2,7 @@
 ---
 # Layout
 
-Tabris.js uses the native platform capabilities to layout UIs. As display density widely varies among mobile devices the pixel measures in Tabris.js are always expressed as [Device Independent Pixels](https://en.wikipedia.org/wiki/Device_independent_pixel) (DIP). The density of a device's display can be accessed by `window.devicePixelRatio`. The value represents the number of native pixels per Device Independent Pixel.
+Tabris.js uses the native platform capabilities to layout UIs. As display density (pixels per inch) widely varies among mobile devices the pixel measures in Tabris.js are always expressed as [Device Independent Pixels](https://en.wikipedia.org/wiki/Device_independent_pixel) (DIP). The density of a device's display can be accessed by `e tabris.device.scaleFactor`. The value represents the number of native pixels per Device Independent Pixel.
 
 ## Layout Property
 
@@ -69,13 +69,13 @@ widget.layoutData = 'center';
 widget.layoutData = `{centerX: 0, centerY: 0}`
 ```
 
-How layoutData is interpreted depends on the layout manager of the parent and will be explained below.
+How `layoutData` is interpreted depends on the layout manager of the parent and will be explained below.
 
-> :point-right: The `layout` and `layoutData` values of the **same** widget instance are not relevant to each other. `layout` always deals with the size and position of a widgets children, while `layoutData` is relevant for a widgets own size and position.
+> :point_right: The `layout` and `layoutData` values of the **same** widget instance are not relevant to each other. `layout` always deals with the size and position of a widgets children, while `layoutData` is relevant for a widgets own size and position.
 
 ## ConstraintLayout
 
-This is the default layout used by `Composite` and most of its subclasses like `ContentView`. It supports all `layoutData` properties and each child can be arranged freely arranged based on its own content, the parents dimension and its siblings size and position.
+This is the default layout used by `Composite` and most of its subclasses like `ContentView`. It supports all `layoutData` properties and each child can be arranged freely based on its own content, the parent's dimensions and its sibling's sizes and positions.
 
 The only property of the `ConstraintLayout` is [`padding`](./api/ConstraintLayout.md#), which can simply be set on widget creation. [It can either be a single number for all edges or an object with different values for each edge.](./types.md#BoxDimensions)
 
@@ -89,7 +89,7 @@ new Composite({
 
 ### Properties "width" and "height"
 
-These define the [dimensions](./types.md#dimension) of the widget in DIPs. The value can be a positive float, `0` or `'auto'`. The default value is `'auto'`.
+The `width` and `height` properties define the [dimensions](./types.md#dimension) of the widget in DIPs. The value can be a positive float, `0` or `'auto'`. The default value is `'auto'`.
 
 If `width` is `'auto`' (or not specified), the actual width is computed based on the position of the left and right edge defined by the `left` and `right` properties. If either `left` or `right` is also `'auto'`, the widget will shrink to its intrinsic width, i.e. the minimal width required to display its content.
 
@@ -97,21 +97,21 @@ The same logic applies to `height`/`top`/`bottom`.
 
 ### Properties "top", "right", "bottom", "left"
 
-These put a constraint on the the position of the child's edge. For detailed syntax see [ConstraintValue](./types.md#ConstraintValue). The position may be given as an absolute (`number`) or relative (percentage) distance in relation to either the parents opposing edge or a siblings opposing edge.
+The `top`, `right`, `bottom` and `left` properties put a constraint on the the position of the child's edge. For detailed syntax see [ConstraintValue](./types.md#ConstraintValue). The position may be given as an absolute (`number`) or relative (percentage) distance in relation to either the parent's opposing edge or a sibling's opposing edge.
 
 Example Values  | Description
 ----------------|-------------
 `'auto'` | No constraint on this edge, the size of the widget will determine its position. Default value.
-`23` | 23 DIPs (device independent pixels) from the parent's opposing edge in device independent pixels. This in addition to the parent's padding value for that edge.
-`50%`<br/>`{percent:`&nbsp;`50}` | The distance from the parent's opposing edge will be 50% of the parent's width/height. This in addition to the parent's padding value for that edge.<br/>The string notation is shorter, but the object notation (second example) provides better type-safety in TypeScript.
-`fooWidget` | Attaches this edge to the opposing edge of the given sibling. Using a direct reference like this is often inconvenient, for that reason there are other ways to reference sibling widgets.
+`23` | 23 DIPs (device independent pixels) from the parent's opposing edge. This in addition to the parent's padding value for that edge.
+`'50%'`<br/>`{percent:`&nbsp;`50}` | The distance from the parent's opposing edge will be 50% of the parent's width/height. This in addition to the parent's padding value for that edge.<br/>The string notation is shorter, but the object notation (second example) provides better type-safety in TypeScript.
+`widget` | Attaches this edge to the opposing edge of the given sibling widget. Using a direct reference like this is often inconvenient, for that reason there are other ways to reference sibling widgets.
 `'#foo'` | Attaches this edge to the opposing edge of the sibling widget with the id `'bar'`.
 `'.bar'` | Attaches this edge to the opposing edge of the first sibling widget with a `'foo'` [class list entry](./api/Widget.md#classList).
 `'prev()'`<br/>`LayoutData.prev` | Attaches this edge to the opposing edge of the preceding sibling widget.<br/>The string notation is shorter, but the symbol reference (second example) provides better type-safety in TypeScript.
 `'next()'`<br/>`LayoutData.next` | Attaches this edge to the opposing edge of the next sibling widget.<br/>The string notation is shorter, but the symbol reference (second example) provides better type-safety in TypeScript.
-`'50%`&nbsp;`23'`<br/>`[{percent:`&nbsp;`50},`&nbsp;`23]`| The distance from the parent's opposing edge will be 50% of the parent's width/height **plus** a fixed offset in pixels, **in addition** to the parent's padding value for that edge.<br/>The string notation is shorter, butt the array notation provides better type-safety in TypeScript.
-`'#foo`&nbsp;`23'`<br/>`[foo,`&nbsp;`23]`| Attaches this edge to the opposing edge of the given sibling **plus** a fixed offset in pixels, **in addition** to the parent's padding value for that edge. For the second example the sibling `foo` is assumed to also have the id `'foo'`.
-`'prev()`&nbsp;`23'`<br/>`[LayoutData.prev,`&nbsp;`23]`| Attaches this edge to the opposing edge of the preceding sibling  **plus** a fixed offset in pixels, **in addition** to the parent's padding value for that edge.
+`'50%`&nbsp;`23'`<br/>`[{percent:`&nbsp;`50},`&nbsp;`23]`| The distance from the parent's opposing edge will be 50% of the parent's width/height **plus** a fixed offset in pixels. This in addition to the parent's padding value for that edge..<br/>The string notation is shorter, butt the array notation provides better type-safety in TypeScript.
+`'#foo`&nbsp;`23'`<br/>`[foo,`&nbsp;`23]`| Attaches this edge to the opposing edge of the given sibling **plus** a fixed offset in DIPs. This in addition to the parent's padding value for that edge. For the second example the sibling `foo` is assumed to also have the id `'foo'`.
+`'prev()`&nbsp;`23'`<br/>`[LayoutData.prev,`&nbsp;`23]`| Attaches this edge to the opposing edge of the preceding sibling  **plus** a fixed offset in DIPs. This in addition to the parent's padding value for that edge.
 
 Sibling references are resolved dynamically, that is, if a referenced widget is added or removed later, the layout will adjust. When a sibling selector does not match any of the current siblings, it will be treated like an offset of zero.
 
@@ -125,16 +125,12 @@ The same logic applies for `centerY`/`top`/`bottom`.
 
 ### Property "baseline"
 
-Defines the vertical position of the widget relative to another widget's text baseline.
-Accepted values:
+Defines the vertical position of the widget relative to another widget's text baseline. The value must be [a reference to a sibling widget](./types.md#SiblingReferenceValue), for example via `'prev()'` or `'#id'`.
+(For more example see left/right/top/bottom properties above.)
 
-- *widget*: a reference to another widget to baseline-align
+This property is only supported for widgets that contain text, i.e. both the actual and the referenced widget must be one of `TextView`, `TextInput`, or `Button`.
 
-The widget may be referenced with a variable, a [selector string](selector.md), or with `"prev()"` and `"next()"`.
-
-At the moment, this property is only supported for widgets that contain text, i.e. both the actual and the referenced widget must be one of `TextView`, `TextInput`, or `Button`.
-
-For multiline texts, the platforms differ: Android aligns on the first line, iOS on the last line.
+> :warning: For multiline texts, the platforms differ: Android aligns on the first line, iOS on the last line.
 
 This property cannot be used in combination with either of `top`, `bottom`, and `centerY`.
 
@@ -149,6 +145,8 @@ child.insertAfter(parent.children().last()); // now drawn on top of all other ch
 ```
 
 In this example `child` may or may not already be a child of `parent`, the outcome will be the same.
+
+The [`elevation`](./api/Widget.md#elevation) property overrides the default z-order. Any widget with an `elevation` of `1` will be drawn on top of any sibling with an `elevation` of `0`, regardless of child order.
 
 ### Fallback position
 
@@ -171,14 +169,14 @@ widget.layoutData = {
 
 ## StackLayout
 
-The `StackLayout` is the default layout manager of `StackComposite`, but can also be used on `Composite`, `Canvas`, `Page`, `Tab` and `CollectionView`. It's a convenient way of arranging widgets in a vertical live, like a single-column table.
+The `StackLayout` is the default layout manager of `StackComposite`, but can also be used on `Composite`, `Canvas`, `Page`, `Tab` and `CollectionView`. It's a convenient way of arranging widgets in a vertical line, like a single-column table.
 
 > :point_right: `StackLayout` is just a helper, everything it can do can also be achieved with `ConstraintLayout`.
 
 There are three properties of `StackLayout` that can be set via constructor, all of which are also available on `StackComposite`. There properties are:
 
-Property | Type | Description
----------|------|------------
+Property | Value | Description
+---------|-------|------------
 `padding` | [`number` or `object`](./types.md#BoxDimensions) | As used in [ConstraintLayout](#ConstraintLayout).
 `alignment` | `string`&nbsp;(`'left'`,&nbsp;`'centerX'`,&nbsp;`'stretchX'`&nbsp;or&nbsp;`'right'`) | Determines the horizontal placement of the children
 `spacing` | `number` | Additional space to add between the children in device independent pixel

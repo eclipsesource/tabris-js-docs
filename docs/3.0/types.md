@@ -93,9 +93,9 @@ Examples:
 
 ```js
 widget.left = '12%';
-widget.right = {percent: 50};
+widget.right = 'prev()';
 widget.top = new Percent(50);
-widget.bottom = '0%';
+widget.bottom = '#foo';
 ```
 
 #### Constraint instance
@@ -321,7 +321,7 @@ Examples:
 
 #### ColorArray
 
-An array in the shape of `[red, green, blue, ?alpha]`. All entries should be natural number between (and including) 0 and 255. If omitted, alpha is 255.
+An array in the shape of `[red, green, blue, alpha]`. All entries should be natural number between (and including) 0 and 255. If omitted, alpha is 255.
 
 Examples:
 
@@ -366,7 +366,7 @@ A `FontValue` describes a font by size, family, weight and style. This type allo
 
 Generic **font size** is always given as DIP (device independent pixels), though the string shorthand expects `"px"` as a unit. It's still DIPs.
 
-Generic **font families** are supported across all platforms: `"serif"`, `"sans-serif"`, `"condensed"` and `"monospace"`. These are available as static string properties of `Font`, e.g. `Color.serif`. These exist just to help with autocompletion. More families can be added via `app.registerFont`. If no family is given for a font the system default is used. If no font family is given the default system font will be used. The string `"initial"` represents the platform default.
+Generic **font families** are supported across all platforms: `"serif"`, `"sans-serif"`, `"condensed"` and `"monospace"`. These are available as static string properties of `Font`, e.g. `Font.serif`. These exist just to help with autocompletion. More families can be added via `app.registerFont`. If no family is given for a font the system default is used. If no font family is given the default system font will be used. The string `"initial"` represents the platform default.
 
 Supported **font weights** are `"light"`, `"thin"`, `"normal"`, `"medium"`, `"bold"` and `"black"`. The default is `"normal"`
 
@@ -433,7 +433,7 @@ The **width** and **height** of an image are specified in DIP (device independen
 
 The **scale** is a positive float or `'auto'`. The image will be scaled down by this factor. Ignored if **width** or **height** are given. If neither **scale**, **width** or **height** are given the scale may be extracted from image file name if it follows the pattern "@\<scale\>x", e.g. `"image@2x.jpg"`. If the scale can not be determined by any of these methods it will be treated as `1`.
 
-The scale factor of the image is relevant when the intrinsic size (in DIP) of the image is needed for layouting. On high-density displays (i.e. [devices with a  scale factor higher than 1](./api/device.md#scaleFactor)) an undetermined image scale factor (or scale factor `1`) may make the image look blurry at full its natural size.  It is the application developers responsibility to provide and use image files with the appropriate scale factor for any given device.
+The scale factor of the image is relevant when the intrinsic size (in DIP) of the image is needed for layouting. On high-density displays (i.e. [devices with a  scale factor higher than 1](./api/device.md#scaleFactor)) an undetermined image scale factor (or scale factor `1`) may make the image look blurry at full its full natural size.  It is the application developers responsibility to provide and use image files with the appropriate scale factor for any given device.
 
 The following are all valid `ImageValue` types:
 
@@ -473,7 +473,7 @@ Examples:
 
 ### LinearGradientValue
 
-A `LinearGradientValue` specifies a set of colors, their relative position along a straight line, and the angel of that line. This describes a color gradient that can be drawn to fill any area, usually the background of a widget. This type allows various expressions that can all be used in place of a [`LinearGradient`](./api/LinearGradient.md) instance for convenience. All API that accept these expressions will convert them to a `LinearGradient` object.
+A `LinearGradientValue` specifies a set of colors, their relative position along a straight line, and the angle of that line. This describes a color gradient that can be drawn to fill any area, usually the background of a widget. This type allows various expressions that can all be used in place of a [`LinearGradient`](./api/LinearGradient.md) instance for convenience. All API that accept these expressions will convert them to a `LinearGradient` object.
 
 In TypeScript you can import this type as a union with `import {LinearGradientValue} from 'tabris';` or use `tabris.LinearGradientValue`. [Type guards](https://www.typescriptlang.org/docs/handbook/advanced-types.html#type-guards-and-differentiating-types) for `LinearGradientValue` are available as [`LinearGradient.isLinearGradientValue`](./api/LinearGradient.md#isLinearGradientValue) and [`LinearGradient.isValidLinearGradientValue`](./api/LinearGradient.md#isValidLinearGradientValue).
 
@@ -481,7 +481,7 @@ The following are all valid `LinearGradientValue` types:
 
 #### LinearGradient instance
 
-An instance of the [`ImageLinearGradient`](./api/LinearGradient.md) class may be created via its [constructor](./api/LinearGradient.md#constructor) or the less strict [`LinearGradient.from`](./api/Image.md#from) factory.
+An instance of the [`LinearGradient`](./api/LinearGradient.md) class may be created via its [constructor](./api/LinearGradient.md#constructor) or the less strict [`LinearGradient.from`](./api/Image.md#from) factory.
 
 Examples:
 
