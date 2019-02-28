@@ -85,7 +85,7 @@ const StyledText = (properties: TextView['jsxProperties']) =>
 
 ### Custom Components
 
-Any custom component (a user-defined class extending a built-in widget) can be used as a JSX element right away. The only requirement is that the constructor takes the properties object and passes it on to the base class in a `super()` call. All attributes are interpreted as either a property or a listener as you would expect.
+Any custom component (a user-defined class extending a built-in widget) can be used as a JSX element right away. The only requirement is that the constructor takes the `properties` object and passes it on to the base class in a `super(properties)` call. All attributes are interpreted as either a property or a listener as you would expect.
 
 In TypeScript the attributes that are available on the element are derived from the properties and events of the component:
 

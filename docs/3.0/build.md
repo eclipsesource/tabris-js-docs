@@ -4,16 +4,18 @@
 
 Tabris.js utilizes [Apache Cordova](http://cordova.apache.org) to build and package apps. Apps can be built without any local setup [using the free online build service](#build-service) on tabrisjs.com. To [build an app on your local machine](#local-build), you need to setup developer tools like Xcode, Visual Studio or the Android SDK. The following features are supported by the two different build types.
 
-|                           | Build Service | Local Build |
-| :------------------------ |:---------------:| :---------------: |
-| Building iOS Apps         |       ✓         |       ✓      |
-| Building Android Apps     |       ✓         |       ✓      |
-| [Integrate Cordova Plugins](cordova.md)     |       ✓      |       ✓      |
-| [Cordova Build Hooks](http://cordova.apache.org/docs/en/edge/guide_appdev_hooks_index.md.html#Hooks%20Guide)       |       ✓      |       ✓      |
-| Custom Project Structure  |       ✓      |       ✓      |
-| Own Build Scripts         |              |       ✓      |
-| Using own build hardware  |              |       ✓      |
-| Other SCMs than Git       |              |       ✓      |
+|                           | Build Service | Local Build
+|---------------------------|---------------|------------
+| Building iOS Apps |✓|✓
+| Building Android Apps|✓|✓
+| NPM Build Scripts|✓|✓|
+| [Integrate Cordova Plugins](cordova.md)|✓|✓
+| [Cordova Build Hooks](http://cordova.apache.org/docs/en/edge/guide_appdev_hooks_index.md.html#Hooks%20Guide)|✓|✓
+| Custom Project Structure|✓|✓|
+| NPM Build Scripts|✓|✓|
+| Using own build hardware||✓|
+| Other SCMs than Git||✓|
+| Custom Build Environment||✓|
 
 > :point_right: The online build service is free for unlimited public GitHub repositories and 1 private repository. To build from unlimited private repositories, you need a [Pro account](https://tabrisjs.com/pricing/). [Local builds](#local-build) are free for everyone.
 
@@ -53,7 +55,7 @@ See [package.json | npm documentation](https://docs.npmjs.com/files/package.json
 
 Dependencies are automatically installed during the build process.
 
-#### Build scripts
+#### NPM Build scripts
 
 When a Tabris.js app is built, `build` scripts given in the `package.json` are executed before the JavaScript code is bundled into the app. They can be used to transpile (source-to-source transform) the JavaScript app code.
 
@@ -68,11 +70,11 @@ When a Tabris.js app is built, `build` scripts given in the `package.json` are e
 }
 ```
 
-Supported build script hooks are:
+Supported build script names are:
 
-  - `"build"`: executed for all platform builds
   - `"build:android"`: executed for Android builds
   - `"build:ios"`: executed for iOS builds
+  - `"build"`: executed last for all platform builds
 
 #### Example: TypeScript
 
@@ -120,7 +122,7 @@ To test the setup run `npm run build` or simply `tabris serve`.
 
 ### The config.xml file
 
-The minimal build configuration you need is a `cordova/config.xml` file that describes your app. It contains information like the id of your app, its version, icons and splash screens. The format of the `config.xml` is the same as a standard [Cordova config.xml](https://cordova.apache.org/docs/en/4.0.0/config_ref_index.md.html#The%20config.xml%20File) file. A minimal example config could look like this:
+The minimal build configuration you need is a `cordova/config.xml` file that describes your app. It contains information like the id of your app, its version, app icons and splash screens. The format of the `config.xml` is the same as a standard [Cordova config.xml](https://cordova.apache.org/docs/en/8.x/config_ref/index.html) file. A minimal example config could look like this:
 
 ```xml
 <?xml version='1.0' encoding='utf-8'?>

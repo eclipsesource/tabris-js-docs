@@ -22,7 +22,7 @@ No, unlike a regular Cordova app, the UI created by Tabris.js apps consists of t
 
 |         | Tabris.js 1.x | Tabris.js 2.x | Tabris.js 3.x |
 |---------|---------------|---------------|---------------|
-| Android | 4.1 and up    | 4.2 and up    | 5,9 and up    |
+| Android | 4.1 and up    | 4.2 and up    | 5.9 and up    |
 | iOS     | iOS 8 and up  | iOS 9 and up  | iOS 9 and up  |
 | Windows | N/A           | 10            | on request    |
 
@@ -49,7 +49,10 @@ One way to put it is "Tabris.js is Cordova with native widgets instead of HTML".
 
 ### What Cordova versions is Tabris.js based on?
 
-In Tabris.js 3.0 it's 5.0 for iOS and 8.0 for Android.
+|         | Tabris.js 3.x |
+|---------|---------------|
+| Android | 5.0           |
+| iOS     | 8.0           |
 
 ### Is Tabris.js based on Java?
 

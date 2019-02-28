@@ -192,7 +192,7 @@ Such a collection is created implicitly whenever a constructor is used as a [typ
 
 ## APIs that accept Selectors
 
-### Composite#children
+### composite.children()
 
 The method `composite.children(selector)` method returns a new widget collection containing the composite's current children that match the given selector. This includes only first generation descendants, so children of children are not part of the result.
 
@@ -212,7 +212,7 @@ The selector parameter defaults to `*`, so `children()` is the same as `children
 
 This will modify the first two children of the given composite sicne these are `TextView` instances.
 
-### Composite#find
+### composite.find()
 
 The method `composite.find(selector)` returns a new widget collection containing all descendants that match the given selector. This excludes the widget the method was called on, and any descendants that are [encapsulated](#encapsulation).
 
@@ -232,7 +232,7 @@ The selector parameter defaults to `*`, so `find()` is the same as `find('*')`.
 
 This will modify all `TextView` elements in the tree.
 
-### WidgetCollection#filter
+### widgetCollection.filter()
 
 The method `widgetCollection.filter(selector)` returns a new widget collection containing all entries of the original collection that match the given selector. This is useful to narrow down an initial selection:
 
@@ -248,7 +248,7 @@ The method `widgetCollection.filter(selector)` returns a new widget collection c
 
 This will modify the first `TextView` instance, but neither the `Button` nor the second `TextView`.
 
-### WidgetCollection#first and WidgetCollection#last
+### widgetCollection.first() and widgetCollection.last()
 
 These return the first/last entry in the collection that match the given selector. If no element matches they return `undefined`. The selector parameter defaults to `*`, so `first()` is the same as `first('*')`. It is also effectively the same as accessing the element via index:
 
@@ -263,7 +263,7 @@ page.find('#submit').first().text = 'Hello'; // does not compile
 page.find('#submit').first(Button).text = 'Hello'; // OK
 ```
 
-### WidgetCollection#children
+### widgetCollection.children()
 
 The method `collection.children(selector)` will apply the given selector to all children of it's own entries. This allows selecting by parent-child relationships, similar to [relationship selectors](#relationship-selectors):
 
@@ -274,7 +274,7 @@ widget.children('.foo').children('.bar'); // same result
 
 While this method is longer, it allows using non-string selector, i.e. functions/constructors.
 
-### WidgetCollection#find
+### widgetCollection.find()
 
 The method `collection.find(selector)` will apply the given selector to all descendants of its own entries". This excludes the entries themselves, effectively skipping one generation in a subtree.
 
@@ -283,7 +283,7 @@ widget.children().find('.bar'); // All descendants matching '.bar' EXCEPT direct
 widget.children().filter('.bar'); // The opposite: ONLY direct children matching '.bar'
 ```
 
-### Composite#apply
+### composite#.apply()
 
 A shortcut for setting different sets of properties for different selections in one method call. The method takes a plain object with selectors as keys and property objects as values:
 

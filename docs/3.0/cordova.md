@@ -21,10 +21,10 @@ While using the [Tabris.js Developer App](developer-app.md), your application ca
 
 These plug-ins have been tested with Tabris.js and a [demo](https://github.com/eclipsesource/tabris-js/tree/master/examples/cordova) can be found among the Tabris.js examples.
 
-Please note, default plug-ins are only included in the debug version of an app. If you want to use them in the release version, you should add them via `<plugin>` tags in the Cordova `config.xml` file: [Integrating Cordova Plugins](build.md#integrating-cordova-plugins).
+Please note, these default plug-ins are only part of the developer app published through the app stores, they are not automatically included when you are building your own app.
 
 ## Other Cordova plug-ins
 
 Since Tabris.js uses a **native UI** and **no HTML**, most other plug-ins will work out of the box but not all. Plug-ins that manipulate the DOM will not work.
 
-To use Cordova plug-ins not part of the Tabris.js [Developer App](./developer-app.md) you need to add them during the [build](build.md) process and install the resulting app on your device. You can still side-load code if you build the app in *debug* mode. To do so use the  `--debug` switch with `tabris build` or the "Debug" setting in the build service "Settings" tab. This enables the [developer console](./developer-app.md#the-developer-console). The app will start with the source code from the git commit the built is based on, but the console allows you to load code from any URL.
+To use Cordova plug-ins not part of the Tabris.js [Developer App](./developer-app.md) you need to add them during the [build](build.md) process and install the resulting app on your device. You can still side-load code if you build the app in *debug* mode. To do so use the  `--debug` switch with the `tabris build` command or the "Debug" setting in the build service' "Settings" tab. This enables the [developer console](./developer-app.md#the-developer-console). (Assuming `EnableDeveloperConsole` is set to `$IS_DEBUG` in your `config.xml`.) The resulting app will then start with the source code from the git commit the built is based on, but the console allows you to load code via the CLI `serve` command.

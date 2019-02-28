@@ -64,6 +64,7 @@ JS:
 tabris.contentView.append(
   new SomeWidget()
 );
+```
 
 ![ContentView](img/contentview.png)
 

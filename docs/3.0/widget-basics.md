@@ -2,7 +2,7 @@
 ---
 # Widget Basics
 
-In the context of Tabris.js a widget is an native UI element that can be freely arranged, composed and configured in application code. In JavaScript these elements are represented by subclasses of `tabris.Widget`.
+In the context of Tabris.js a widget is a native UI element that can be freely arranged, composed and configured in application code. In JavaScript these elements are represented by subclasses of `tabris.Widget`.
 
 ## Hello World
 
@@ -25,10 +25,10 @@ Code | Explanation
 -----|------------
 `tabris.contentView`| uses the `tabris` namespace to access the [`contentView`](./api/contentview.md) widget instance, [which represents the main content of your app](./ui.md).
 `.append(`|calls the append method to add something to that area.
-&nbsp;&nbsp;&nbsp;&nbsp;`<tabris.Button>`| creates the actual button via an [JSX](./jsx.md) expression, similar to an HTML element. To be able to do this the file name needs to have a `.jsx` or `.tsx` ending.
+&nbsp;&nbsp;&nbsp;&nbsp;`<tabris.Button>`| creates the actual button via an [JSX](./jsx.md) expression, similar to an HTML element. This is only supported in  `.jsx` or `.tsx` files in a [compiled project setup](./getting-started.md#Create-your-first-app).
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Hello World`| is the text that the button displays. Most widgets that can display text allow defining it that way, but you can also set the `text` attribute.
 &nbsp;&nbsp;&nbsp;&nbsp;`</tabris.Button>`|closes the `Button` element and ends the JSX expression.
-`);`|ends the `apppend` call.
+`);`|ends the `append` call.
 
 ### Variations
 
@@ -239,4 +239,4 @@ button.on('dispose', () => console.log('Button disposed!'));
 button.dispose();
 ```
 
-After a widget is disposed none of its methods will work except `isDisposed()`, which returns `true` if the widget has been disposed, otherwise `false`.
+After a widget has been disposed `isDisposed()` returns `true` while all other methods will throw an exception if called.

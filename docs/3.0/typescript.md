@@ -64,8 +64,6 @@ This is the default configuration for generated TypeScript projects. It includes
 }
 ```
 
-Either way, if you want to support iOS 9 you need to set `target` to `es5`.
-
 Now edit `package.json` to let the `main` field point to the compiled app in `dist/`:
 
 ```json
