@@ -6,7 +6,7 @@ Tabris.js 3 targets TypeScript 2.9 or later. TypeScript is a <em>type-safe</em> 
 
 ## Setup
 
-TypeScript files have to be compiled to JavaScript before execution. The compiler is installed in the project directory to `node_modules/.bin/tsc` when generating a new Tabris.js app using the `tabris init` command. To compile the code, simply type `npm run build`. This also happens when sideloading code via `tabris serve`, during a full app build via `tabris build` or on the build service. Alternatively, type `tabris serve -w -a` to start the compiler in watch mode for incremental compiling. That way you do not have to restart `tabris serve` after every code change.
+TypeScript files have to be compiled to JavaScript before execution. The compiler is installed in the project directory to `node_modules/.bin/tsc` when generating a new Tabris.js app using the `tabris init` command. (It belongs to the `devDependencies` in `package.json`.) To compile the code, simply type `npm run build`. This also happens when sideloading code via `tabris serve`, during a full app build via `tabris build` or on the build service. Alternatively, type `tabris serve -w -a` to start the compiler in watch mode for incremental compiling. That way you do not have to restart `tabris serve` after every code change.
 
 If you want to migrate an existing Vanilla-JavaScript Tabris.js project, do the following:
 

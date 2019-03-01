@@ -613,7 +613,7 @@ Property       | Default | Description
 `scaleY`       | `1`     |  Vertical scale factor.
 `translationX` | `0`     |  Horizontal translation (shift) in DIP (device independent pixels).
 `translationY` | `0`     |  Vertical translation (shift) in DIP.
-`translationZ` | `0`     |  Z-axis translation (shift) in DIP. Android 5.0+ only.
+`translationZ` | `0`     |  Z-axis translation (shift) in DIP.
 
 Example:
 

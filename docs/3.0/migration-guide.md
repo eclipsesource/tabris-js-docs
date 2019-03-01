@@ -40,7 +40,7 @@ The `get` method has been removed entirely.
 ### Alternatives for `set("prop", value)`:
 
 On both `NativeObject` and `WidgetCollection`, `obj.set('foo', baz)` can be replaced with `obj.set({foo: baz})`,
-and `obj.set(bar, baz)` can be replaced with `obj.set([foo]: baz})`.
+and `obj.set(bar, baz)` can be replaced with `obj.set({[foo]: baz})`.
 
 On `NativeObject` only, `obj.set('foo', baz)` can be replaced with `obj.foo = baz`,
 and `obj.set(bar, baz)` can be replaced with `obj[bar] = baz`.

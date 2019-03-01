@@ -4,7 +4,7 @@
 
 Custom widgets are Tabris.js widgets that are mainly written in the programming language of the native platforms they support. They use the interfaces of the native Tabris.js clients and are wrapped in a Cordova plug-in. This article covers the platform-independent JavaScript part of the implementation.
 
-A custom widget is not a "Custom Component", which has no native code at all.
+A custom widget is not a "Custom Component", which has no native code at all. A custom widget directly extends `tabris.Widget`, while custom components extend an existing widgets like `tabris.Composite`.
 
 ## Defining a Custom Widget in JavaScript
 

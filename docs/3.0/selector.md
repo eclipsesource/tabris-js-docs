@@ -210,7 +210,7 @@ The selector parameter defaults to `*`, so `children()` is the same as `children
 ).children(TextView).set({left: 23});
 ```
 
-This will modify the first two children of the given composite sicne these are `TextView` instances.
+This will modify the first two children of the given composite since these are `TextView` instances.
 
 ### composite.find()
 
@@ -276,7 +276,7 @@ While this method is longer, it allows using non-string selector, i.e. functions
 
 ### widgetCollection.find()
 
-The method `collection.find(selector)` will apply the given selector to all descendants of its own entries". This excludes the entries themselves, effectively skipping one generation in a subtree.
+The method `collection.find(selector)` will apply the given selector to all descendants of its own entries. This excludes the entries themselves, effectively skipping one generation in a subtree.
 
 ```js
 widget.children().find('.bar'); // All descendants matching '.bar' EXCEPT direct children

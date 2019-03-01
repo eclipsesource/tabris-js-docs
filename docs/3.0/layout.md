@@ -209,4 +209,4 @@ new Page({
 
 The *actual*, computed onscreen bounds (position and dimension) of a widget are available as the read-only property [`bounds`](./api/Widget.md#bounds). Note that there is a short delay before changes to `layoutData` are reflected in `bounds`. To be notified about changes of `bounds` listen to the [`resize`](./api/Widget.md#resize) event.
 
-The initial value of `bounds` until the first layout pass is `{left: 0, top: 0, width: 0, height: 0}`.
+The initial value of `bounds` until the first layout pass is `{left: 0, top: 0, width: 0, height: 0}`. That is also the value for any widget not attached to a parent.
