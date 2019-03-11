@@ -44,7 +44,7 @@
   pages:
     - title: Property Types
       url: api/types.html
-      - title: ActionSheet
+    - title: ActionSheet
       url: api/ActionSheet.html
     - title: AlertDialog
       url: api/AlertDialog.html
@@ -105,7 +105,7 @@
 
 - title: Widgets
   pages:
-      - title: Action
+    - title: Action
       url: api/Action.html
     - title: ActivityIndicator
       url: api/ActivityIndicator.html
