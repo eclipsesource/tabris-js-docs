@@ -2,6 +2,11 @@
 ---
 # Tabris.js Documentation
 
+## Beta
+* [3.0-beta2](3.0-beta2/)
+* [3.0-beta1](3.0-beta1/)
+
+## Stable
 * [latest](latest/)
 * [2.7](2.7/)
 * [2.6](2.6/)
