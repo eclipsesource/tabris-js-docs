@@ -13,24 +13,27 @@ let followExternal = true;
 let startUrl = null;
 let cache = {};
 
-process.argv.slice(2).forEach(arg => {
-  if (arg === '--skip-external') {
-    followExternal = false;
-  } else if (!startUrl) {
-    startUrl = arg;
-  } else {
-    console.error('Unknown parameter:', arg);
+if (process.argv[1].endsWith('check-links.js')) {
+
+  process.argv.slice(2).forEach(arg => {
+    if (arg === '--skip-external') {
+      followExternal = false;
+    } else if (!startUrl) {
+      startUrl = arg;
+    } else {
+      console.error('Unknown parameter:', arg);
+    }
+  });
+
+  if (!startUrl) {
+    console.error('Missing start URL');
+    process.exit(1);
   }
-});
 
-if (!startUrl) {
-  console.error('Missing start URL');
-  process.exit(1);
+  checkLinks(startUrl)
+    .catch(err => console.error('Error: ' + err))
+    .then(() => console.log('done'));
 }
-
-checkLinks(startUrl)
-  .catch(err => console.error('Error: ' + err))
-  .then(() => console.log('done'));
 
 async function checkLinks(url) {
   let html = await get(url);
@@ -55,6 +58,8 @@ async function checkLinks(url) {
     }
   }
 }
+
+exports.checkLinks = checkLinks;
 
 function isHtml(headers) {
   return headers['content-type'] && headers['content-type'].includes('text/html');
@@ -98,12 +103,20 @@ function readBody(res) {
 }
 
 function request(method, url) {
+  process.stdout.write('Getting ' + url);
   let {protocol, hostname, port, path} = parse(url);
   let timeout = 12000;
   let options = {method, protocol, hostname, port, path, timeout};
   return new Promise((resolve, reject) => {
-    let req = (protocol === 'https:' ? https : http).request(options, res => resolve(res));
-    req.on('error', err => reject(err));
+    setTimeout(() => reject(new Error('Forced timeout')), timeout);
+    let req = (protocol === 'https:' ? https : http).request(options, res => {
+      process.stdout.write(' - OK\n');
+      resolve(res);
+    });
+    req.on('error', err => {
+      process.stdout.write(' - FAILED\n');
+      reject(err)
+    });
     req.end();
   });
 }

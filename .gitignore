@@ -7,3 +7,4 @@ npm-debug.log*
 *.lock
 *.zip
 .jekyll-metadata
+Gemfile.lock
