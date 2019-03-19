@@ -1,3 +1,5 @@
+'use strict';
+
 /**
  * Link checker for internal and external links.
  * Requires Node 7.
@@ -9,51 +11,101 @@ const http = require('http');
 const https = require('https');
 const {parse, resolve} = require('url');
 
-let followExternal = true;
-let startUrl = null;
-let cache = {};
+if (process.argv[1].endsWith('check-links.js')) {
 
-process.argv.slice(2).forEach(arg => {
-  if (arg === '--skip-external') {
-    followExternal = false;
-  } else if (!startUrl) {
-    startUrl = arg;
-  } else {
-    console.error('Unknown parameter:', arg);
+  let followExternal = true;
+  let startUrl = null;
+
+  process.argv.slice(2).forEach(arg => {
+    if (arg === '--skip-external') {
+      followExternal = false;
+    } else if (!startUrl) {
+      startUrl = arg;
+    } else {
+      console.error('Unknown parameter:', arg);
+    }
+  });
+
+  if (!startUrl) {
+    console.error('Missing start URL');
+    process.exit(1);
   }
-});
 
-if (!startUrl) {
-  console.error('Missing start URL');
-  process.exit(1);
+  checkLinks({startUrl, followExternal})
+    .catch(err => console.error('Error: ' + err.stack))
+    .then(() => console.log('done'));
 }
 
-checkLinks(startUrl)
-  .catch(err => console.error('Error: ' + err))
-  .then(() => console.log('done'));
-
-async function checkLinks(url) {
-  let html = await get(url);
-  cache[url] = null;
-  let links = extractLinks(html).filter(link => !link.startsWith('mailto:'));
-  for (href of links) {
-    let link = resolve(url, href).replace(/#.*$/, '');
-    if (link in cache) {
+async function checkLinks(options) {
+  const startUrl = options.startUrl;
+  const url = options.url || startUrl;
+  /**
+   * @type {{[url: string]: {found: boolean, error: string, html: string}}}
+   */
+  const cache = options.cache || {};
+  const followExternal = options.followExternal || false;
+  const html = cache[url] ? cache[url].html : await get(url);
+  const links = extractLinks(html).filter(link => !link.startsWith('mailto:'));
+  for (const href of links) {
+    const resolvedLink = resolve(url, href).replace(/[\#\?].*$/, '');
+    if (!resolvedLink.startsWith(startUrl) && !followExternal) {
       continue;
     }
-    if (link.startsWith(startUrl) || followExternal) {
-      try {
-        let headers = await head(link);
-        cache[link] = null;
-        if (link.startsWith(startUrl) && isHtml(headers)) {
-          await checkLinks(link);
+    try {
+      if (!/^[\/\.\#a-zA-Z]/.test(href) || /\s/.test(href)) {
+        throw new Error('Invalid URL');
+      }
+      if (!(resolvedLink in cache)) {
+        if (isHtml(await head(resolvedLink))) {
+          if (resolvedLink.endsWith('.md')) {
+            throw new Error('URL has wrong file extension');
+          }
+          cache[resolvedLink] = {error: null, html: await get(resolvedLink)};
+        } else {
+          cache[resolvedLink] = {error: null, html: null};
         }
-      } catch (err) {
-        cache[link] = err;
-        console.error(`In ${url}: '${href}': ${err}`);
+        if (resolvedLink.startsWith(startUrl) && typeof cache[resolvedLink].html === 'string') {
+          await checkLinks({url: resolvedLink, startUrl, followExternal, cache});
+        }
+      } else if (cache[resolvedLink].error) {
+        console.error(`In ${url}: '${href}': ${cache[resolvedLink].error}`);
+      }
+      if (!cache[resolvedLink].error) {
+        checkDeepLink(url, cache[resolvedLink].html, href);
+      }
+    } catch (ex) {
+      cache[resolvedLink] = {error: ex.message, html: null};
+      if (ex.message.indexOf('HTTP') === -1 && ex.message.indexOf('URL') === -1) {
+        console.error(`In ${url}: '${href}': ${ex.stack}`);
+      } else {
+        console.error(`In ${url}: '${href}': ${ex.message}`);
       }
     }
   }
+}
+
+exports.checkLinks = checkLinks;
+
+function checkDeepLink(url, html, href) {
+  const anchor = href.split('#')[1];
+  if (!anchor) {
+    return;
+  }
+  try {
+    if (!html) {
+      throw new Error('Can not deep-link to non-html content');
+    }
+    if (html.indexOf(`id="${anchor}"`) === -1) {
+      if (html.toLowerCase().indexOf(`id="${anchor.toLowerCase()}"`) !== -1) {
+        throw new Error(`Anchor found but case doesn't match`);
+      } else {
+        throw new Error('Anchor not found');
+      }
+    }
+  } catch (ex) {
+    console.error(`In ${url}: '${href}': ${ex.message}`);
+  }
+
 }
 
 function isHtml(headers) {
