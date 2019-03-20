@@ -10,6 +10,14 @@
 const http = require('http');
 const https = require('https');
 const {parse, resolve} = require('url');
+const githubRepo = /github\.com\/eclipsesource\/tabris-js\/tree\/([^\/]+)/;
+
+// Prevent false negatives:
+const doNotCheck = [
+  /developer\.apple\.com/,
+  /www\.linkedin\.com\/company\/eclipsesource/,
+  /cordova\.apache\.org\/docs\/en\/6\.x\/reference\/cordova-cli\/index\.html/
+];
 
 if (process.argv[1].endsWith('check-links.js')) {
 
@@ -39,6 +47,7 @@ if (process.argv[1].endsWith('check-links.js')) {
 async function checkLinks(options) {
   const startUrl = options.startUrl;
   const url = options.url || startUrl;
+  const branch = options.branch;
   /**
    * @type {{[url: string]: {found: boolean, error: string, html: string}}}
    */
@@ -47,8 +56,11 @@ async function checkLinks(options) {
   const html = cache[url] ? cache[url].html : await get(url);
   const links = extractLinks(html).filter(link => !link.startsWith('mailto:'));
   for (const href of links) {
-    const resolvedLink = resolve(url, href).replace(/[\#\?].*$/, '');
-    if (!resolvedLink.startsWith(startUrl) && !followExternal) {
+    const resolvedLink = resolveLink(url, href, branch);
+    if (
+      doNotCheck.some(regexp => regexp.test(resolvedLink))
+      || (!resolvedLink.startsWith(startUrl) && !followExternal)
+    ) {
       continue;
     }
     try {
@@ -57,18 +69,19 @@ async function checkLinks(options) {
       }
       if (!(resolvedLink in cache)) {
         if (isHtml(await head(resolvedLink))) {
-          if (resolvedLink.endsWith('.md')) {
+          if (resolvedLink.startsWith(startUrl) && resolvedLink.endsWith('.md')) {
             throw new Error('URL has wrong file extension');
           }
           cache[resolvedLink] = {error: null, html: await get(resolvedLink)};
         } else {
+          console.log('Non-html: ' + resolveLink);
           cache[resolvedLink] = {error: null, html: null};
         }
         if (resolvedLink.startsWith(startUrl) && typeof cache[resolvedLink].html === 'string') {
-          await checkLinks({url: resolvedLink, startUrl, followExternal, cache});
+          await checkLinks({url: resolvedLink, startUrl, followExternal, cache, branch});
         }
       } else if (cache[resolvedLink].error) {
-        console.error(`In ${url}: '${href}': ${cache[resolvedLink].error}`);
+        console.error(`In ${url}: ${href} : ${cache[resolvedLink].error}`);
       }
       if (!cache[resolvedLink].error) {
         checkDeepLink(url, cache[resolvedLink].html, href);
@@ -76,9 +89,9 @@ async function checkLinks(options) {
     } catch (ex) {
       cache[resolvedLink] = {error: ex.message, html: null};
       if (ex.message.indexOf('HTTP') === -1 && ex.message.indexOf('URL') === -1) {
-        console.error(`In ${url}: '${href}': ${ex.stack}`);
+        console.error(`In ${url}: ${href} : ${ex.stack}`);
       } else {
-        console.error(`In ${url}: '${href}': ${ex.message}`);
+        console.error(`In ${url}: ${href} : ${ex.message}`);
       }
     }
   }
@@ -95,7 +108,10 @@ function checkDeepLink(url, html, href) {
     if (!html) {
       throw new Error('Can not deep-link to non-html content');
     }
-    if (html.indexOf(`id="${anchor}"`) === -1) {
+    if (
+      (html.indexOf(`id="${anchor}"`) === -1)
+      && (html.indexOf(`id=${anchor}`) === -1) // some extern sites do this
+    ) {
       if (html.toLowerCase().indexOf(`id="${anchor.toLowerCase()}"`) !== -1) {
         throw new Error(`Anchor found but case doesn't match`);
       } else {
@@ -125,7 +141,7 @@ function extractLinks(html, base) {
 function head(url) {
   return request('HEAD', url).then(res => {
     if (res.statusCode >= 400) {
-      throw new Error('HTTP ' + res.statusCode);
+      throw new Error('HTTP ' + res.statusCode + ' for ' + url);
     }
     return res.headers;
   });
@@ -134,7 +150,7 @@ function head(url) {
 function get(url) {
   return request('GET', url).then(res => {
     if (res.statusCode >= 400) {
-      throw new Error('HTTP ' + res.statusCode);
+      throw new Error('HTTP ' + res.statusCode + ' for ' + url);
     }
     return readBody(res);
   });
@@ -158,4 +174,16 @@ function request(method, url) {
     req.on('error', err => reject(err));
     req.end();
   });
+}
+
+function resolveLink(url, href, branch) {
+  if (branch && githubRepo.test(href)) {
+    return href.replace(RegExp.$1, branch);
+  }
+  if (href.startsWith('//')) {
+    return 'http:' + href;
+  } else if (href.startsWith('http')) {
+    return href;
+  }
+  return resolve(url, href).replace(/[\#\?].*$/, '');
 }

@@ -41,7 +41,7 @@ const INDEX_HEAD = `---
   updateIndex();
   await startJekyll();
   console.log('Checking links...');
-  await checkLinks({startUrl: 'http://127.0.0.1:4000/latest/', followExternal: true});
+  await checkLinks({startUrl: 'http://127.0.0.1:4000/latest/', followExternal: true, branch: 'master'});
   console.log('ALL DONE');
   console.log('Press CTRL+C to kill server');
 })().catch(err => {
