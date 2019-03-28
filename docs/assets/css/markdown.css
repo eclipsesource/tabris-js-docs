@@ -264,11 +264,9 @@
 }
 
 .markdown-body table {
-  display: block;
   width: 100%;
   overflow: auto;
-  word-break: normal;
-  word-break: keep-all
+  word-break: keep-all;
 }
 
 .markdown-body table th {
@@ -296,9 +294,7 @@
 }
 
 .markdown-body code {
-  padding: 0;
-  padding-top: .2em;
-  padding-bottom: .2em;
+  padding: .2em 0;
   margin: 0;
   font-size: 85%;
   background-color: rgba(0, 0, 0, 0.04);
