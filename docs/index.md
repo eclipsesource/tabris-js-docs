@@ -2,7 +2,8 @@
 ---
 # Tabris.js Documentation
 
-## Beta
+## Pre-Release
+* [3.0-rc1](3.0-rc1/)
 * [3.0-beta2](3.0-beta2/)
 * [3.0-beta1](3.0-beta1/)
 
