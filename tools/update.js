@@ -117,8 +117,7 @@ async function generateDocs() {
 function updateIndex() {
   const toc = fs.readdirSync(DOCS_TARGET_DIR)
     .filter(entry => /^[1-9]\..*$/.test(entry))
-    .sort()
-    .concat(['latest'])
+    .sort(entry => parseInt(entry.split('.').join('')))
     .reverse()
     .map(version => `* [${version}](${version}/)`)
     .join('\n');
@@ -148,7 +147,7 @@ async function startJekyll() {
     });
     setTimeout(() => {
       reject(new Error('Jekyll Timeout'));
-    }, 1000 * 120);
+    }, 1000 * 180);
   });
 }
 
