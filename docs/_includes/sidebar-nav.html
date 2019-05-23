@@ -1,6 +1,7 @@
 {% include base.html %}
 {% assign current = page.path | replace: '.md', '.html' %}
 {% assign subdir = page.path | split:'/' | first %}
+<h3 style="margin: 0px 0px 24px 0px">Tabris.js {{ version }}</h3>
 <ul id="main-nav">
   {% for section in toc %}
     {% assign sectionId = section.title | slugify | prepend: 'nav-' %}
