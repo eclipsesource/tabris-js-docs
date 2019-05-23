@@ -16,7 +16,9 @@ const githubRepo = /github\.com\/eclipsesource\/tabris-js\/tree\/([^\/]+)/;
 const doNotCheck = [
   /developer\.apple\.com/,
   /www\.linkedin\.com\/company\/eclipsesource/,
-  /cordova\.apache\.org\/docs\/en\/6\.x\/reference\/cordova-cli\/index\.html/
+  /cordova\.apache\.org\/docs\/en\/6\.x\/reference\/cordova-cli\/index\.html/,
+  /example\.com/, // used in example code
+  /marketplace\.visualstudio\.com/ // returns 404 in node only for some reason
 ];
 
 if (process.argv[1].endsWith('check-links.js')) {
@@ -74,24 +76,27 @@ async function checkLinks(options) {
           }
           cache[resolvedLink] = {error: null, html: await get(resolvedLink)};
         } else {
-          console.log('Non-html: ' + resolveLink);
           cache[resolvedLink] = {error: null, html: null};
         }
         if (resolvedLink.startsWith(startUrl) && typeof cache[resolvedLink].html === 'string') {
           await checkLinks({url: resolvedLink, startUrl, followExternal, cache, branch});
         }
       } else if (cache[resolvedLink].error) {
-        console.error(`In ${url}: ${href} : ${cache[resolvedLink].error}`);
+        console.error(`In ${url}: ${href} (${resolvedLink}) : ${cache[resolvedLink].error}`);
       }
       if (!cache[resolvedLink].error) {
         checkDeepLink(url, cache[resolvedLink].html, href);
       }
     } catch (ex) {
-      cache[resolvedLink] = {error: ex.message, html: null};
-      if (ex.message.indexOf('HTTP') === -1 && ex.message.indexOf('URL') === -1) {
-        console.error(`In ${url}: ${href} : ${ex.stack}`);
+      if (ex.message.indexOf('self signed certificate') !== -1) {
+        cache[resolvedLink] = {error: null, html: null};
       } else {
-        console.error(`In ${url}: ${href} : ${ex.message}`);
+        cache[resolvedLink] = {error: ex.message, html: null};
+        if (ex.message.indexOf('HTTP') === -1 && ex.message.indexOf('URL') === -1) {
+          console.error(`In ${url}: ${href} : ${ex.stack}`);
+        } else {
+          console.error(`In ${url}: ${href} : ${ex.message}`);
+        }
       }
     }
   }
