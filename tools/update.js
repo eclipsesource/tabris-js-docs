@@ -4,11 +4,15 @@ const child_process = require('child_process');
 const path = require('path');
 const fs = require('fs');
 
+const DECO_SUBDIR = 'decorators';
 const TABRIS_REPO_DIR = path.join(__dirname, '../../tabris-js');
+const DECO_REPO_DIR = path.join(__dirname, '../../tabris-decorators');
 const DOC_OUT_DIR = path.join(TABRIS_REPO_DIR, 'build', 'doc');
 const DOCS_TARGET_DIR = path.join(__dirname, '..', 'docs');
+const DECO_DOCS_DIR = path.join(DECO_REPO_DIR, 'doc');
 const LATEST_DIR = path.join(__dirname, '..', 'docs', 'latest');
 const DATA_DIR = path.join(__dirname, '..', 'docs', '_data');
+const SITE_DIR = path.join(__dirname, '..', 'docs', '_site');
 const MAIN_YML = path.join(DATA_DIR, 'main.yml');
 const INDEX_MD = path.join(DOCS_TARGET_DIR, 'index.md');
 const INDEX_HEAD = `---
@@ -21,18 +25,24 @@ const INDEX_HEAD = `---
   await preChecks();
   const version = getTargetVersion();
   const targetDir = path.join(DOCS_TARGET_DIR, version);
+  const decoTargetDir = path.join(targetDir, DECO_SUBDIR);
   const targetYml = path.join(DATA_DIR, `toc-${version.replace(/\./g, '-')}.yml`);
   const sourceYml = path.join(targetDir, 'toc.yml');
-  console.log('Prepare Jekyll...');
-  await exec('bundle update'); // this sometimes fails fo now reason, just try again
+  console.log('Prepare  ...');
+  await exec('bundle update'); // randomly fails for no good reason, just try again
   clean(targetDir);
   clean(targetYml);
   clean(LATEST_DIR);
+  clean(SITE_DIR);
   await generateDocs();
   console.log(`Copy files from ${DOC_OUT_DIR} to ${targetDir}...`);
   copyDir(DOC_OUT_DIR, targetDir);
   console.log(`Move ${sourceYml} to ${targetYml}`);
   fs.renameSync(sourceYml, targetYml);
+  console.log(`Copy files from ${DECO_DOCS_DIR} to ${decoTargetDir}...`);
+  copyDir(DECO_DOCS_DIR, decoTargetDir);
+  console.log(`Update ${targetYml}`);
+  updateTargetYml(targetYml, decoTargetDir);
   console.log('Write main.yml');
   fs.writeFileSync(MAIN_YML, `latest: ${version}\n`)
   console.log(`Copy files from ${targetDir} to ${LATEST_DIR}...`);
@@ -114,6 +124,31 @@ async function generateDocs() {
   }
 }
 
+function updateTargetYml(yml, decoDir) {
+  const orgContent = fs.readFileSync(yml).toString();
+  const sections = orgContent.split('\n\n');
+  const decoYml = generateYml(DECO_SUBDIR, fs.readdirSync(decoDir));
+  sections.splice(sections.length - 1, 0, decoYml);
+  const newContent = sections.join('\n\n');
+  fs.writeFileSync(yml, newContent);
+}
+
+function generateYml(dir, files) {
+  const title = dir.slice(0, 1).toUpperCase() + dir.slice(1);
+  const pages = ['index.md'].concat(files.filter(file => file !== 'index.md'));
+  const head = '- title: ' + title + '\n  pages:\n';
+  const body = pages
+    .map(file =>
+`    - title: "${filenameToTitle(file)}"
+      url: ${dir}/${file.replace('.md', '.html')}`)
+    .join('\n');
+  return head + body;
+}
+
+function filenameToTitle(file) {
+  return file === 'index.md' ? 'Introduction' : file.replace('.md', '');
+}
+
 function updateIndex() {
   const toc = fs.readdirSync(DOCS_TARGET_DIR)
     .filter(entry => /^[1-9]\..*$/.test(entry))
@@ -147,7 +182,7 @@ async function startJekyll() {
     });
     setTimeout(() => {
       reject(new Error('Jekyll Timeout'));
-    }, 1000 * 180);
+    }, 1000 * 540);
   });
 }
 
