@@ -385,16 +385,49 @@ p.platforms span {
   margin-right: 5px;
 }
 
-p.platforms .windows-tag {
-  background: rgb(0, 120, 212);
-}
-
 p.platforms .android-tag {
   background: rgb(104, 180, 69);
 }
 
 p.platforms .ios-tag {
   background: rgb(153, 153, 153);
+}
+
+/*
+ * Language tags
+ */
+
+span.language {
+  cursor: default;
+  font-size: 12px;
+  font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+  border-radius: 2px;
+  padding: 0 5px;
+  float: left;
+  text-align: center;
+  width: 34px;
+  margin-right: 12px;
+  margin-top: 4px;
+}
+
+span.js {
+  background: rgba(247, 223, 30, 0.71);
+  color: black;
+}
+
+span.jsx {
+  background: rgba(247, 223, 30, 0.7);
+  color: black;
+}
+
+span.ts {
+  background: rgba(0, 122, 204, 0.71);
+  color: white;
+}
+
+span.tsx {
+  background: rgba(0, 122, 204, 0.71);
+  color: white;
 }
 
 div.tabris-image {
