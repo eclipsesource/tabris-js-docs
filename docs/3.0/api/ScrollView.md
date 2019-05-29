@@ -27,9 +27,9 @@ new Textview({text: 'Scrollable content'}
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Creating a simple `ScrollView`](https://playground.tabris.com/?gitref=v3.0.0&snippet=scrollview.jsx)
-- [Demo JavaScript/JSX Snippet: How to implement parallax scrolling with a `ScrollView`](https://playground.tabris.com/?gitref=v3.0.0&snippet=scrollview-parallax.jsx)
+  
+[<span class='language jsx'>JSX</span> Creating a simple `ScrollView`](https://playground.tabris.com/?gitref=v3.0.0&snippet=scrollview.jsx)  
+[<span class='language jsx'>JSX</span> How to implement parallax scrolling with a `ScrollView`](https://playground.tabris.com/?gitref=v3.0.0&snippet=scrollview-parallax.jsx)
 
 ## Constructor
 

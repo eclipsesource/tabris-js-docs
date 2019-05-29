@@ -25,8 +25,8 @@ console.dirxml({});
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Logging to the `console` with various log levels](https://playground.tabris.com/?gitref=v3.0.0&snippet=console.jsx)
+  
+[<span class='language jsx'>JSX</span> Logging to the `console` with various log levels](https://playground.tabris.com/?gitref=v3.0.0&snippet=console.jsx)
 
 ## Methods
 

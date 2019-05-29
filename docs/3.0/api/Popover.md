@@ -23,8 +23,8 @@ popover.open();
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Creating a `Popover` containing a `NavigationView`](https://playground.tabris.com/?gitref=v3.0.0&snippet=popover.jsx)
+  
+[<span class='language jsx'>JSX</span> Creating a `Popover` containing a `NavigationView`](https://playground.tabris.com/?gitref=v3.0.0&snippet=popover.jsx)
 
 ## Constructor
 

@@ -26,9 +26,9 @@ drawer
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Simple example of using a `Drawer`](https://playground.tabris.com/?gitref=v3.0.0&snippet=drawer.jsx)
-- [Demo TypeScript/JSX Snippet: Using a `Drawer` for app navigation](https://playground.tabris.com/?gitref=v3.0.0&snippet=drawer-pages.tsx)
+  
+[<span class='language jsx'>JSX</span> Simple example of using a `Drawer`](https://playground.tabris.com/?gitref=v3.0.0&snippet=drawer.jsx)  
+[<span class='language tsx'>TSX</span> Using a `Drawer` for app navigation](https://playground.tabris.com/?gitref=v3.0.0&snippet=drawer-pages.tsx)
 
 ## Methods
 

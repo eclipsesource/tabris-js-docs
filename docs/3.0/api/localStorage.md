@@ -25,8 +25,8 @@ console.log(localStorage.getItem("message")); // "Hello World!"
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: A example how to read and write from the `localStorage`](https://playground.tabris.com/?gitref=v3.0.0&snippet=local-storage.jsx)
+  
+[<span class='language jsx'>JSX</span> A example how to read and write from the `localStorage`](https://playground.tabris.com/?gitref=v3.0.0&snippet=local-storage.jsx)
 
 ## Methods
 

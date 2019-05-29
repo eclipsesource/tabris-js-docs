@@ -1,134 +1,138 @@
 ---
 ---
-# Slider
+# Class "Slider"
 
-Extends [Widget](Widget.md)
+<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> > <span style="white-space:nowrap;">[`Slider`](Slider.md)</span>
 
 A widget representing a numeric value as an movable indicator on a horizontal line.
 
-Import this type with "`const {Slider} = require('tabris');`"
 
-Android | iOS
---- | ---
-![Slider on Android](img/android/Slider.png) | ![Slider on iOS](img/ios/Slider.png)
+<div class="tabris-image"><figure><div><img srcset="img/android/Slider.png 2x" src="img/android/Slider.png" alt="Slider on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/Slider.png 2x" src="img/ios/Slider.png" alt="Slider on iOS"/></div><figcaption>iOS</figcaption></figure></div>
+
+Constructor | *public*
+Singleton | *No*
+Namespace |`tabris`
+Direct subclasses | *None*
+JSX support | Element: `<Slider/>`<br/>Parent element: [`<Composite/>`](Composite.md) *and any widget extending* <span style="white-space:nowrap;">[`Composite`](Composite.md)</span><br/>Child elements: *None*<br/>Text content: *Not supported*<br/>
+
+## Example
+```js
+import {Slider, contentView} from 'tabris';
+
+new Slider({
+  left: 16, right: 16,
+  selection: 50
+}).onSelect(({selection}) => console.log(`Slider is at ${selection}`))
+  .appendTo(contentView);
+```
+
+See also:
+  
+[<span class='language jsx'>JSX</span> Creating a simple `Slider`](https://playground.tabris.com/?gitref=v3.0.0&snippet=slider.jsx)
+
+## Constructor
+
+### new Slider(properties?)
+
+Parameter|Type|Optional|Description
+-|-|-|-
+properties | <span style="white-space:nowrap;">`Properties<Slider>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
 
 ## Properties
 
 ### maximum
 
 
-Type: *number*, default: `100`
-
 The maximum value.
+
+Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Default | `100`
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### minimum
 
 
-Type: *number*, default: `0`
-
 The minimum value.
+
+Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Default | `0`
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### selection
 
 
-Type: *number*, default: `0`
-
 The actual value.
+
+Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Default | `0`
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### tintColor
 
 
-Type: *[Color](../types.md#color)*
-
 The color used to display the current selection.
+
+Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 
 ## Events
-
-### maximumChanged
-
-Fired when the [*maximum*](#maximum) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *number*
-    The new value of [*maximum*](#maximum).
-
-
-### minimumChanged
-
-Fired when the [*minimum*](#minimum) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *number*
-    The new value of [*minimum*](#minimum).
-
 
 ### select
 
 Fired when the selection property is changed by the user.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+Parameter|Type|Description
+-|-|-
+selection | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of *[selection](#selection)*.
 
-- **selection**: *number*
-    The new value of *[selection](#selection)*.
+## Change Events
 
+### minimumChanged
+
+Fired when the [*minimum*](#minimum) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*minimum*](#minimum).
+
+### maximumChanged
+
+Fired when the [*maximum*](#maximum) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*maximum*](#maximum).
 
 ### selectionChanged
 
 Fired when the [*selection*](#selection) property has changed.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *number*
-    The new value of [*selection*](#selection).
-
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*selection*](#selection).
 
 ### tintColorChanged
 
-Fired when the [*tintColor*](#tintColor) property has changed.
+Fired when the [*tintColor*](#tintcolor) property has changed.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*tintColor*](#tintcolor).
 
-- **value**: *[Color](../types.md#color)*
-    The new value of [*tintColor*](#tintColor).
-
-
-
-
-
-## Example
-```js
-const {Slider, TextView, ui} = require('tabris');
-
-// Create a slider with a selection handler
-
-let textView = new TextView({
-  left: 10, right: 10, top: '30%',
-  alignment: 'center',
-  font: '22px sans-serif',
-  text: '50'
-}).appendTo(ui.contentView);
-
-new Slider({
-  left: 50, top: [textView, 20], right: 50,
-  minimum: -50,
-  selection: 50,
-  maximum: 150
-}).on('selectionChanged', ({value}) => textView.text = value)
-  .appendTo(ui.contentView);
-```
-## See also
-
-- [Simple Slider snippet](https://github.com/eclipsesource/tabris-js/tree/v2.7.0/snippets/slider.js)

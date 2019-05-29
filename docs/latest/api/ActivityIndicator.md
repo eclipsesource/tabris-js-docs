@@ -1,75 +1,62 @@
 ---
 ---
-# ActivityIndicator
+# Class "ActivityIndicator"
 
-Extends [Widget](Widget.md)
+<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> > <span style="white-space:nowrap;">[`ActivityIndicator`](ActivityIndicator.md)</span>
 
 A widget representing a spinning indicator for indeterminate loading / processing time.
 
-Import this type with "`const {ActivityIndicator} = require('tabris');`"
 
-Android | iOS
---- | ---
-![ActivityIndicator on Android](img/android/ActivityIndicator.png) | ![ActivityIndicator on iOS](img/ios/ActivityIndicator.png)
+<div class="tabris-image"><figure><div><img srcset="img/android/ActivityIndicator.png 2x" src="img/android/ActivityIndicator.png" alt="ActivityIndicator on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/ActivityIndicator.png 2x" src="img/ios/ActivityIndicator.png" alt="ActivityIndicator on iOS"/></div><figcaption>iOS</figcaption></figure></div>
+
+Constructor | *public*
+Singleton | *No*
+Namespace |`tabris`
+Direct subclasses | *None*
+JSX support | Element: `<ActivityIndicator/>`<br/>Parent element: [`<Composite/>`](Composite.md) *and any widget extending* <span style="white-space:nowrap;">[`Composite`](Composite.md)</span><br/>Child elements: *None*<br/>Text content: *Not supported*<br/>
+
+## Example
+```js
+import {ActivityIndicator, contentView} from 'tabris';
+
+new ActivityIndicator()
+  .appendTo(contentView);
+```
+
+See also:
+  
+[<span class='language jsx'>JSX</span> Creating a simple `ActivityIndicator`](https://playground.tabris.com/?gitref=v3.0.0&snippet=activityindicator.jsx)
+
+## Constructor
+
+### new ActivityIndicator(properties?)
+
+Parameter|Type|Optional|Description
+-|-|-|-
+properties | <span style="white-space:nowrap;">`Properties<ActivityIndicator>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
 
 ## Properties
 
 ### tintColor
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
 
-Type: *[Color](../types.md#color)*
 
 The color of the indicator.
 
+Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
+Settable | *Yes*
+Change events | *Yes*
 
-## Events
+
+
+
+
+## Change Events
 
 ### tintColorChanged
 
-Fired when the [*tintColor*](#tintColor) property has changed.
+Fired when the [*tintColor*](#tintcolor) property has changed.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*tintColor*](#tintcolor).
 
-- **value**: *[Color](../types.md#color)*
-    The new value of [*tintColor*](#tintColor).
-
-
-
-
-
-## Example
-```js
-const {ActivityIndicator, Button, ui} = require('tabris');
-
-// Create the activity indicator centered in the page
-let activityIndicator = new ActivityIndicator({
-  centerX: 0,
-  centerY: 0
-}).appendTo(ui.contentView);
-
-// Create reload button
-let reloadButton = new Button({
-  centerX: 0, centerY: 0,
-  text: 'Run Task'
-}).on('select', () => executeLongRunningTask())
-  .appendTo(ui.contentView);
-
-function executeLongRunningTask() {
-  // Toggle visibility of elements
-  activityIndicator.visible = true;
-  reloadButton.visible = false;
-
-  setTimeout(() => {
-    // Async action is done
-    activityIndicator.visible = false;
-    reloadButton.visible = true;
-  }, 2500);
-}
-
-executeLongRunningTask();
-```
-## See also
-
-- [Simple ActivityIndicator snippet](https://github.com/eclipsesource/tabris-js/tree/v2.7.0/snippets/activityindicator.js)

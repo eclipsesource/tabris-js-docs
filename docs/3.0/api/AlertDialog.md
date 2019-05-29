@@ -26,8 +26,8 @@ new AlertDialog({
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Creating various types of alert dialogs](https://playground.tabris.com/?gitref=v3.0.0&snippet=alertdialog.jsx)
+  
+[<span class='language jsx'>JSX</span> Creating various types of alert dialogs](https://playground.tabris.com/?gitref=v3.0.0&snippet=alertdialog.jsx)
 
 ## Constructor
 

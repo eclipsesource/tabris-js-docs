@@ -29,8 +29,8 @@ new RadioButton({text: 'Two'})
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Creating a set of `RadioButtons`](https://playground.tabris.com/?gitref=v3.0.0&snippet=radiobutton.jsx)
+  
+[<span class='language jsx'>JSX</span> Creating a set of `RadioButtons`](https://playground.tabris.com/?gitref=v3.0.0&snippet=radiobutton.jsx)
 
 ## Constructor
 

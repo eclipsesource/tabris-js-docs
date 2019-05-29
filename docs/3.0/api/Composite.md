@@ -25,8 +25,8 @@ new Composite({left: 0, top: 0, width: 128, height: 256})
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Creating a simple `Composite`](https://playground.tabris.com/?gitref=v3.0.0&snippet=composite.jsx)
+  
+[<span class='language jsx'>JSX</span> Creating a simple `Composite`](https://playground.tabris.com/?gitref=v3.0.0&snippet=composite.jsx)
 
 ## Constructor
 

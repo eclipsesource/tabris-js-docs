@@ -15,11 +15,11 @@ JSX support | *No*
 
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Displaying app properties](https://playground.tabris.com/?gitref=v3.0.0&snippet=app-info.jsx)
-- [Demo JavaScript/JSX Snippet: Displaying app events](https://playground.tabris.com/?gitref=v3.0.0&snippet=app-events.jsx)
-- [Demo JavaScript/JSX Snippet: Launching an url](https://playground.tabris.com/?gitref=v3.0.0&snippet=app-launch.jsx)
-- [Demo JavaScript Snippet: Register and use an external font](https://playground.tabris.com/?gitref=v3.0.0&snippet=textview-font-external.js)
+  
+[<span class='language jsx'>JSX</span> Displaying app properties](https://playground.tabris.com/?gitref=v3.0.0&snippet=app-info.jsx)  
+[<span class='language jsx'>JSX</span> Displaying app events](https://playground.tabris.com/?gitref=v3.0.0&snippet=app-events.jsx)  
+[<span class='language jsx'>JSX</span> Launching an url](https://playground.tabris.com/?gitref=v3.0.0&snippet=app-launch.jsx)  
+[<span class='language js'>JS</span> Register and use an external font](https://playground.tabris.com/?gitref=v3.0.0&snippet=textview-font-external.js)
 
 ## Methods
 
@@ -59,8 +59,8 @@ url | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org
 
 Returns <span style="white-space:nowrap;">`Promise<void>`</span>
 See also:
-
-- [Demo JavaScript/JSX Snippet: app-launch.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=app-launch.jsx)
+  
+[<span class='language jsx'>JSX</span> app-launch.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=app-launch.jsx)
 
 ### registerFont(alias, file)
 

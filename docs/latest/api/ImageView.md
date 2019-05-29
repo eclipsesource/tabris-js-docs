@@ -1,40 +1,90 @@
 ---
 ---
-# ImageView
+# Class "ImageView"
 
-Extends [Widget](Widget.md)
+<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> > <span style="white-space:nowrap;">[`ImageView`](ImageView.md)</span>
 
 A widget to display an image.
 
-Import this type with "`const {ImageView} = require('tabris');`"
+
+<div class="tabris-image"><figure><div><img srcset="img/android/ImageView.png 2x" src="img/android/ImageView.png" alt="ImageView on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/ImageView.png 2x" src="img/ios/ImageView.png" alt="ImageView on iOS"/></div><figcaption>iOS</figcaption></figure></div>
+
+Constructor | *public*
+Singleton | *No*
+Namespace |`tabris`
+Direct subclasses | *None*
+JSX support | Element: `<ImageView/>`<br/>Parent element: [`<Composite/>`](Composite.md) *and any widget extending* <span style="white-space:nowrap;">[`Composite`](Composite.md)</span><br/>Child elements: *None*<br/>Text content: *Not supported*<br/>
+
+## Example
+```js
+import {ImageView, contentView} from 'tabris';
+
+new ImageView({image: 'resources/image.png'})
+  .appendTo(contentView);
+```
+
+See also:
+  
+[<span class='language jsx'>JSX</span> Using an `ImageView` as a button](https://playground.tabris.com/?gitref=v3.0.0&snippet=imageview-as-a-button.jsx)  
+[<span class='language jsx'>JSX</span> Creating `ImageView`s with various scale modes](https://playground.tabris.com/?gitref=v3.0.0&snippet=imageview-scalemode.jsx)  
+[<span class='language jsx'>JSX</span> Creating an `ImageView` with support for pinch-to-zoom](https://playground.tabris.com/?gitref=v3.0.0&snippet=imageview-zoom.jsx)  
+[<span class='language jsx'>JSX</span> Creating an `ImageView` with a tint color applied](https://playground.tabris.com/?gitref=v3.0.0&snippet=imageview-tintcolor.jsx)  
+[<span class='language jsx'>JSX</span> Creating an `ImageView` with a load event callback](https://playground.tabris.com/?gitref=v3.0.0&snippet=imageview-load.jsx)  
+[<span class='language jsx'>JSX</span> Using an `ImageView` to show a Base64 encoded image](https://playground.tabris.com/?gitref=v3.0.0&snippet=imageview-base64.jsx)  
+[<span class='language tsx'>TSX</span> imageview-gallery.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=imageview-gallery.tsx)  
+[<span class='language jsx'>JSX</span> imageview-scalemode-auto.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=imageview-scalemode-auto.jsx)  
+[<span class='language jsx'>JSX</span> imageview.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=imageview.jsx)
+
+## Constructor
+
+### new ImageView(properties?)
+
+Parameter|Type|Optional|Description
+-|-|-|-
+properties | <span style="white-space:nowrap;">`Properties<ImageView>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
 
 ## Properties
 
 ### image
 
 
-Type: *[Image](../types.md#image)*
-
 The image to display. Providing the `width` and `height` attributes on the image will resize it internally. When no dimensions are given the image will be loaded with its original size. Since the full size image might occupy a lot of memory, it's recommended to provide exact dimensions.
 
-### maxZoomLevel
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
+Type | <span style="white-space:nowrap;">[`ImageValue`](../types.md#imagevalue)</span>
+Settable | *Yes*
+Change events | *Yes*
 
-Type: *number*, default: `3`
+
+
+
+### maxZoomLevel
+
 
 The highest amount the image can be zoomed in to. Setting the `maxZoomLevel` to a level smaller than the current `zoomLevel` changes the `zoomLevel` to be the same as the new `maxZoomLevel`.
 
-### minZoomLevel
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
+Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Default | `3`
+Settable | *Yes*
+Change events | *Yes*
 
-Type: *number*, default: `1`
+
+
+
+### minZoomLevel
+
 
 The lowest amount the image can be zoomed out to. Setting the `minZoomLevel` to a level larger than the current `zoomLevel` changes the `zoomLevel` to be the same as the new `minZoomLevel`. 
 
+Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Default | `1`
+Settable | *Yes*
+Change events | *Yes*
+
+
+
+
 ### scaleMode
 
-
-Type: *string*, supported values: `auto`, `fit`, `fill`, `stretch`, `none`, default: `auto`
 
 How to scale the image.
 
@@ -44,157 +94,138 @@ How to scale the image.
 - `stretch` will resize the image to the actual bounds of the image view.
 - `none` will not resize the image at all. The image will be displayed in its original size.
 
-### tintColor
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
+Type | `'auto'` \| `'fit'` \| `'fill'` \| `'stretch'` \| `'none'`
+Default | `'auto'`
+Settable | *Yes*
+Change events | *Yes*
 
-Type: *[Color](../types.md#color)*
+
+See also:
+  
+[<span class='language jsx'>JSX</span> imageview-scalemode-auto.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=imageview-scalemode-auto.jsx)  
+[<span class='language jsx'>JSX</span> imageview-scalemode.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=imageview-scalemode.jsx)
+
+
+### tintColor
+
 
 A color to change the image appearance. All opaque parts of the image will be tinted with the given color. Set to `initial` to remove the effect.
 
-### zoomEnabled
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
+Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
+Settable | *Yes*
+Change events | *Yes*
 
-Type: *boolean*
+
+See also:
+  
+[<span class='language jsx'>JSX</span> imageview-tintcolor.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=imageview-tintcolor.jsx)
+
+
+### zoomEnabled
+
 
 Enables the pinch-to-zoom gesture on the `ImageView` and makes the properties `zoomLevel`, `minZoomLevel` and `maxZoomLevel` available. Setting `zoomEnabled` to `false` also resets the `zoomLevel`, `minZoomLevel`, `maxZoomLevel` to their respective defaults.
 
-### zoomLevel
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
+Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
+Settable | *Yes*
+Change events | *Yes*
 
-Type: *number*, default: `1`
+
+
+
+### zoomLevel
+
 
 The amount that the image is zoomed in or out. The default position without any zooming has the value 1.0.
 
+Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Default | `1`
+Settable | *Yes*
+Change events | *Yes*
+
+
+
+
 
 ## Events
-
-### imageChanged
-
-Fired when the [*image*](#image) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Image](../types.md#image)*
-    The new value of [*image*](#image).
-
 
 ### load
 
 Fired when the image loading has finished.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+Parameter|Type|Description
+-|-|-
+error | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | Contains the final status of the loading process
 
-- **error**: *boolean*
-    Contains the final status of the loading process
-
-
-### maxZoomLevelChanged
-
-Fired when the [*maxZoomLevel*](#maxZoomLevel) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *number*
-    The new value of [*maxZoomLevel*](#maxZoomLevel).
-
-
-### minZoomLevelChanged
-
-Fired when the [*minZoomLevel*](#minZoomLevel) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *number*
-    The new value of [*minZoomLevel*](#minZoomLevel).
-
-
-### scaleModeChanged
-
-Fired when the [*scaleMode*](#scaleMode) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*scaleMode*](#scaleMode).
-
-
-### tintColorChanged
-
-Fired when the [*tintColor*](#tintColor) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*tintColor*](#tintColor).
-
-
+See also:
+  
+[<span class='language jsx'>JSX</span> imageview-load.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=imageview-load.jsx)
 ### zoom
 
 Fired when the user zooms the image in or out. The `zoom` event indicates a change to the `zoomLevel` property.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+Parameter|Type|Description
+-|-|-
+zoomLevel | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of *[zoomLevel](#zoomlevel)*.
 
-- **zoomLevel**: *number*
-    The new value of *[zoomLevel](#zoomLevel)*.
+See also:
+  
+[<span class='language jsx'>JSX</span> imageview-zoom.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=imageview-zoom.jsx)
+## Change Events
 
+### imageChanged
+
+Fired when the [*image*](#image) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`ImageValue`](../types.md#imagevalue)</span> | The new value of [*image*](#image).
+
+### scaleModeChanged
+
+Fired when the [*scaleMode*](#scalemode) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*scaleMode*](#scalemode).
+
+### tintColorChanged
+
+Fired when the [*tintColor*](#tintcolor) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*tintColor*](#tintcolor).
 
 ### zoomEnabledChanged
 
-Fired when the [*zoomEnabled*](#zoomEnabled) property has changed.
+Fired when the [*zoomEnabled*](#zoomenabled) property has changed.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*zoomEnabled*](#zoomEnabled).
-
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of [*zoomEnabled*](#zoomenabled).
 
 ### zoomLevelChanged
 
-Fired when the [*zoomLevel*](#zoomLevel) property has changed.
+Fired when the [*zoomLevel*](#zoomlevel) property has changed.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*zoomLevel*](#zoomlevel).
 
-- **value**: *number*
-    The new value of [*zoomLevel*](#zoomLevel).
+### minZoomLevelChanged
 
+Fired when the [*minZoomLevel*](#minzoomlevel) property has changed.
 
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*minZoomLevel*](#minzoomlevel).
 
+### maxZoomLevelChanged
 
+Fired when the [*maxZoomLevel*](#maxzoomlevel) property has changed.
 
-## Example
-```js
-const {ImageView, ui} = require('tabris');
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*maxZoomLevel*](#maxzoomlevel).
 
-// Display images with different scale modes
-
-createImageView('fit');
-createImageView('none');
-createImageView('fill');
-
-function createImageView(scaleMode) {
-  new ImageView({
-    left: 10, top: 'prev() 10', width: 250, height: 100,
-    image: 'resources/target_200.png',
-    background: '#aaaaaa',
-    scaleMode: scaleMode
-  }).appendTo(ui.contentView);
-}
-```

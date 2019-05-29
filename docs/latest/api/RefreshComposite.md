@@ -1,35 +1,79 @@
 ---
 ---
-# RefreshComposite
+# Class "RefreshComposite"
 
-Extends [Composite](Composite.md)
+<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> > <span style="white-space:nowrap;">[`Composite`](Composite.md)</span> > <span style="white-space:nowrap;">[`RefreshComposite`](RefreshComposite.md)</span>
 
 A composite allowing to use a pull-to-refresh gesture to trigger and visualize a long running operation.
 
-Import this type with "`const {RefreshComposite} = require('tabris');`"
+
+<div class="tabris-image"><figure><div><img srcset="img/android/RefreshComposite.png 2x" src="img/android/RefreshComposite.png" alt="RefreshComposite on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/RefreshComposite.png 2x" src="img/ios/RefreshComposite.png" alt="RefreshComposite on iOS"/></div><figcaption>iOS</figcaption></figure></div>
+
+Constructor | *public*
+Singleton | *No*
+Namespace |`tabris`
+Direct subclasses | *None*
+JSX support | Element: `<RefreshComposite/>`<br/>Parent element: [`<Composite/>`](Composite.md) *and any widget extending* <span style="white-space:nowrap;">[`Composite`](Composite.md)</span><br/>Child elements: *Widgets*<br/>Text content: *Not supported*<br/>
+
+## Example
+```js
+import {RefreshComposite, contentView} from 'tabris';
+
+new RefreshComposite({layoutData: 'stretch'})
+  .onRefresh(() => console.log('Refreshing...'))
+  .appendTo(contentView);
+```
+
+See also:
+  
+[<span class='language jsx'>JSX</span> Creating a simple `RefreshComposite`](https://playground.tabris.com/?gitref=v3.0.0&snippet=refreshcomposite.jsx)
+
+## Constructor
+
+### new RefreshComposite(properties?)
+
+Parameter|Type|Optional|Description
+-|-|-|-
+properties | <span style="white-space:nowrap;">`Properties<RefreshComposite>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
 
 ## Properties
 
 ### refreshEnabled
 
 
-Type: *boolean*, default: `true`
-
 Whether the pull-to-refresh gesture can be performed by the user. When disabled, the `RefreshComposite` behaves like a regular `Composite`.
+
+Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
+Default | `true`
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### refreshIndicator
 
 
-Type: *boolean*
-
 Whether to visualize a long running operation. After the user has triggered a manual refresh, this property is `true` and should be set to `false` when the operation ended.
 
-### refreshMessage
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="windows-tag" title="supported on Windows 10">Windows 10</span></p>
+Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
+Settable | *Yes*
+Change events | *Yes*
 
-Type: *string*
+
+
+
+### refreshMessage
+<p class="platforms"><span class='ios-tag' title='supported on iOS'>iOS</span></p>
 
 A message to show to the user during the refresh operation.
+
+Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 
 ## Events
@@ -37,80 +81,30 @@ A message to show to the user during the refresh operation.
 ### refresh
 
 Fired when a refresh is triggered by the user.
+
+## Change Events
+
 ### refreshEnabledChanged
 
-Fired when the [*refreshEnabled*](#refreshEnabled) property has changed.
+Fired when the [*refreshEnabled*](#refreshenabled) property has changed.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*refreshEnabled*](#refreshEnabled).
-
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of [*refreshEnabled*](#refreshenabled).
 
 ### refreshIndicatorChanged
 
-Fired when the [*refreshIndicator*](#refreshIndicator) property has changed.
+Fired when the [*refreshIndicator*](#refreshindicator) property has changed.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*refreshIndicator*](#refreshIndicator).
-
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of [*refreshIndicator*](#refreshindicator).
 
 ### refreshMessageChanged
 
-Fired when the [*refreshMessage*](#refreshMessage) property has changed.
+Fired when the [*refreshMessage*](#refreshmessage) property has changed.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*refreshMessage*](#refreshmessage).
 
-- **value**: *string*
-    The new value of [*refreshMessage*](#refreshMessage).
-
-
-
-
-
-## Example
-```js
-const {RefreshComposite, CheckBox, ScrollView, TextView, ui} = require('tabris');
-
-let refreshComposite = new RefreshComposite({
-  left: 0, right: 0, top: 0, bottom: 0,
-}).on('refresh', ({target}) => setTimeout(() => {
-  target.refreshIndicator = false;
-  textView.text = `last refresh: ${new Date()}\n${textView.text}`;
-}, 1000)).appendTo(ui.contentView);
-
-let scrollView = new ScrollView({
-  left: 0, right: 0, top: 0, bottom: 0,
-}).appendTo(refreshComposite);
-
-new TextView({
-  left: 0, right: 0, top: 32,
-  alignment: 'center',
-  font: 'black 24px',
-  text: 'pull to refresh'
-}).appendTo(scrollView);
-
-const textView = new TextView({
-  left: 0, right: 0, top: 'prev() 32',
-  alignment: 'center',
-  lineSpacing: 1.4,
-}).appendTo(scrollView);
-
-new CheckBox({
-  left: 16, right: 16, bottom: 16,
-  text: 'Enable pull to refresh',
-  checked: true
-}).on('checkedChanged', ({value: checked}) => refreshComposite.refreshEnabled = checked)
-  .appendTo(ui.contentView);
-```
-## See also
-
-- [Simple RefreshComposite snippet](https://github.com/eclipsesource/tabris-js/tree/v2.7.0/snippets/refreshcomposite.js)

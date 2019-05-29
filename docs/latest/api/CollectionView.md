@@ -1,71 +1,176 @@
 ---
 ---
-# CollectionView
+# Class "CollectionView"
 
-Extends [Widget](Widget.md)
+<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> > <span style="white-space:nowrap;">[`Composite`](Composite.md)</span> > <span style="white-space:nowrap;">[`CollectionView`](CollectionView.md)</span>
 
 A scrollable list that displays data items in cells, one per row. Cells are created on demand by the *createCell* callback and reused on scrolling.
 
-Import this type with "`const {CollectionView} = require('tabris');`"
 
-Android | iOS
---- | ---
-![CollectionView on Android](img/android/CollectionView.png) | ![CollectionView on iOS](img/ios/CollectionView.png)
+<div class="tabris-image"><figure><div><img srcset="img/android/CollectionView.png 2x" src="img/android/CollectionView.png" alt="CollectionView on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/CollectionView.png 2x" src="img/ios/CollectionView.png" alt="CollectionView on iOS"/></div><figcaption>iOS</figcaption></figure></div>
+
+TypeScript type | `CollectionView<Cell extends Widget> extends Composite<Cell>`
+Constructor | *public*
+Singleton | *No*
+Namespace |`tabris`
+Direct subclasses | *None*
+JSX support | Element: `<CollectionView/>`<br/>Parent element: [`<Composite/>`](Composite.md) *and any widget extending* <span style="white-space:nowrap;">[`Composite`](Composite.md)</span><br/>Child elements: *None*<br/>Text content: *Not supported*<br/>
+
+## Example
+```js
+import {CollectionView, contentView, TextView} from 'tabris';
+
+const items = ['Apple', 'Banana', 'Cherry'];
+
+new CollectionView({
+  left: 0, top: 0, right: 0, bottom: 0,
+  itemCount: items.length,
+  createCell: () => new TextView(),
+  updateCell: (view, index) =>  {
+    view.text = items[index];
+  }
+}).appendTo(contentView);
+```
+
+See also:
+  
+[<span class='language jsx'>JSX</span> Creating a simple `CollectionView`](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `CollectionView` with multiple cell types](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-celltype.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `CollectionView` with pull-to-refresh support](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-refreshenabled.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `CollectionView` with sticky headers](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-scroll.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `CollectionView` with dynamic column count](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-columncount.jsx)  
+[<span class='language jsx'>JSX</span> collectionview-cellheightauto.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-cellheightauto.jsx)  
+[<span class='language tsx'>TSX</span> collectionview-cellheightauto.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-cellheightauto.tsx)  
+[<span class='language tsx'>TSX</span> collectionview-celltype-ts.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-celltype-ts.tsx)  
+[<span class='language tsx'>TSX</span> collectionview-scroll-ts.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-scroll-ts.tsx)  
+[<span class='language jsx'>JSX</span> collectionview-swipe-to-dismiss.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-swipe-to-dismiss.jsx)  
+[<span class='language tsx'>TSX</span> collectionview-ts.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-ts.tsx)
+
+## Constructor
+
+### new CollectionView(properties?)
+
+Parameter|Type|Optional|Description
+-|-|-|-
+properties | <span style="white-space:nowrap;">`Properties<CollectionView<Cell>> & Partial<Pick<CollectionView<Cell>, 'cellHeight'` \| `'cellType'` \| `'createCell'` \| `'updateCell'>>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
 
 ## Methods
 
-### insert(index, count)
+### cellByItemIndex(itemIndex)
 
 
-**Parameters:** 
 
-- index: *number*
-- count: *number* [**Optional**]
-  - the position to insert the items at. A negative index is interpreted as relative to the end. If the given index is greater than the item count, new items will be appended at the end.
+Returns the cell currently associated with the given item index. Returns `null` if the item is not currently displayed.
+
+
+Parameter|Type|Optional|Description
+-|-|-|-
+itemIndex | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The index of the item as given in `updateCell`.
+
+
+Returns <span style="white-space:nowrap;">`Cell` \| [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type)</span>
+
+### insert(index, count?)
+
+
 
 Inserts one or more items at the given index. When no *count* is specified, a single item will be added at the given *index*. New cells may be created if needed. The `updateCell` callback will only be called for those new items that become immediately visible. Note that inserting new items changes the index of all subsequent items. This operation will update the `itemCount` property.
+
+
+Parameter|Type|Optional|Description
+-|-|-|-
+index | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | 
+count | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | Yes | The position to insert the items at. A negative index is interpreted as relative to the end. If the given index is greater than the item count, new items will be appended at the end.
+
+
+Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+
+### itemIndex(widget)
+
+
+
+Determines the item index currently associated with the given cell.
+
+
+Parameter|Type|Optional|Description
+-|-|-|-
+widget | <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> | No | A widget instance created by `createCell`, or a child of that widget.
+
+
+Returns <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
 
 ### load(itemCount)
 
 
-**Parameters:** 
-
-- itemCount: *number*
-  - the number of items in the model to load.
 
 Loads a new model with the given *itemCount*. This operation will update the `itemCount` property.
 
-### refresh(index)
+
+Parameter|Type|Optional|Description
+-|-|-|-
+itemCount | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The number of items in the model to load.
 
 
-**Parameters:** 
+Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
 
-- index: *number* [**Optional**]
-  - the index of the item that was changed.
+### refresh(index?)
+
+
 
 Triggers an update of the item at the given *index* by calling the `updateCell` callback of the corresponding. If no *index* is given, all visible items will be updated.
 
-### remove(index, count)
+
+Parameter|Type|Optional|Description
+-|-|-|-
+index | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | Yes | The index of the item that was changed.
 
 
-**Parameters:** 
+Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
 
-- index: *number*
-  - the index of the first item to remove. A negative value is interpreted as relative to the end.
-- count: *number* [**Optional**]
-  - the number of items to remove.
+### remove(index, count?)
+
+
 
 Removes one or more items beginning with the given index. When no *count* is given, only the item at *index* will be removed. Note that this changes the index of all subsequent items, however. This operation will update the `itemCount` property.
+
+
+Parameter|Type|Optional|Description
+-|-|-|-
+index | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The index of the first item to remove. A negative value is interpreted as relative to the end.
+count | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | Yes | The number of items to remove.
+
+
+Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
 
 ### reveal(index)
 
 
-**Parameters:** 
-
-- index: *number*
-  - the index of the item to reveal. If this is negative, it is interpreted as relative to the end
 
 Scrolls the item with the given index into view.
+
+
+Parameter|Type|Optional|Description
+-|-|-|-
+index | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The index of the item to reveal. If this is negative, it is interpreted as relative to the end
+
+
+Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+
+### set(properties)
+
+
+
+Sets all key-value pairs in the properties object as widget properties.
+
+**Important TypeScript note:** When called on `this` you may need to specify your custom type like this: `this.set<MyComponent>({propA: valueA});`
+
+
+Parameter|Type|Optional|Description
+-|-|-|-
+properties | <span style="white-space:nowrap;">`Properties<T> & Partial<Pick<this, 'cellHeight'` \| `'cellType'` \| `'createCell'>>`</span> | No | 
+
+
+Returns <span style="white-space:nowrap;">[`this`](#)</span>
 
 
 ## Properties
@@ -73,268 +178,258 @@ Scrolls the item with the given index into view.
 ### cellHeight
 
 
-Type: *number\|"auto"\|((index: number, cellType: string) => number\|"auto")*, default: `auto`
-
 The height of a collection cell. If set to `"auto"`, the cell height will be calculated individually for each cell. If set to a function, this function will be called for every item, providing the item index and the cell type as parameters, and must return the cell height for the given item.
+Note: On iOS `"auto"` may cause significant performance downgrade as it requires additional layouting passes to calculate cell height internally. If possible please use a combination of fixed `itemHeight` and `cellType` properties to specify different height for different cells.
+
+Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type) \| `"auto"` \| `((index: number, cellType: string) => number` \| `"auto")`</span>
+Default | `auto`
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### cellType
 
 
-Type: *string\|((index: number) => string)\|null*
-
 The name of the cell type to use for the item at the given index. This name will be passed to the `createCell` and `cellHeight` callbacks. Cells will be reused only for those items that map to the same cell type. If set to a function, this function will be called for every item, providing the item index as a parameter, and must return a unique name for the cell type to use for the given item.
+
+Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type) \| `((index: number) => string)` \| [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type)</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+See also:
+  
+[<span class='language tsx'>TSX</span> collectionview-celltype-ts.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-celltype-ts.tsx)  
+[<span class='language jsx'>JSX</span> collectionview-celltype.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-celltype.jsx)
+
 
 ### columnCount
 
 
-Type: *number*, default: `1`
+The number of columns to display in the collection view. If set to a value `n > 1`, each row will contain `n` items. The available space will be equally distributed between columns.
 
-The number of columns to display in the collection view. If set to a value `n > 1`, each row will contain `n` items. The available space will be equally distributed between columns. On Windows, this feature cannot be combined with variable cell height.
+Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Default | `1`
+Settable | *Yes*
+Change events | *Yes*
+
+
+See also:
+  
+[<span class='language jsx'>JSX</span> collectionview-columncount.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-columncount.jsx)
+
 
 ### createCell
 
 
-Type: *(cellType: string) => Widget*
+A callback used to create a new reusable cell widget for a given type. This callback will be called by the framework and the created cell will be reused for different items. The created widget should be populated in the `updateCell` function.
 
-A callback used to create a new reusable cell widget for a given type. This callback will be called by the framework and the created cell will be reused for different items. The created widget should be populated in the `updateCell` function.<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
+Type | <span style="white-space:nowrap;">`(cellType: string) => Cell`</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### firstVisibleIndex
 
 
-**read-only**<br/>
-Type: *number*
-
 The index of the first item that is currently visible on screen.
+
+Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Settable | *No*
+Change events | *Yes*
+
+
+
 
 ### itemCount
 
 
-Type: *number*
-
 The number of items to display. To add or remove items later, use the methods `insert()` and `remove()` instead of setting the `itemCount`. To display a new list of items, use the `load()` method.
+
+Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### lastVisibleIndex
 
 
-**read-only**<br/>
-Type: *number*
-
 The index of the last item that is currently visible on screen.
 
-### refreshEnabled
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
+Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Settable | *No*
+Change events | *Yes*
 
-Type: *boolean*, default: `false`
+
+
+
+### refreshEnabled
+
 
 Enables the user to trigger a refresh by using the pull-to-refresh gesture.
 
-### refreshIndicator
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
+Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
+Default | `false`
+Settable | *Yes*
+Change events | *Yes*
 
-Type: *boolean*, default: `false`
+
+See also:
+  
+[<span class='language jsx'>JSX</span> collectionview-refreshenabled.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-refreshenabled.jsx)
+
+
+### refreshIndicator
+
 
 Whether the refresh indicator is currently visible. Will be set to `true` when a *refresh* event is triggered. Reset it to `false` when the refresh is finished.
 
+Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
+Default | `false`
+Settable | *Yes*
+Change events | *Yes*
+
+
+
+
 ### refreshMessage
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span></p>
+<p class="platforms"><span class='ios-tag' title='supported on iOS'>iOS</span></p>
 
-Type: *string*, default: `""`
+The message text displayed together with the refresh indicator.
 
-The message text displayed together with the refresh indicator. Currently not supported on Android.
+Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Default | `'""'`
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### updateCell
 
 
-Type: *(cell: Widget, index: number) => void*
+A callback used to update a given cell widget to display the item with the given index. This callback will be called by the framework.
 
-A callback used to update a given cell widget to display the item with the given index. This callback will be called by the framework.<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
+Type | <span style="white-space:nowrap;">`(cell: Cell, index: number) => void`</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 
 ## Events
 
-### cellHeightChanged
-
-Fired when the [*cellHeight*](#cellHeight) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *number\|"auto"\|((index: number, cellType: string) => number\|"auto")*
-    The new value of [*cellHeight*](#cellHeight).
-
-
-### cellTypeChanged
-
-Fired when the [*cellType*](#cellType) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string\|((index: number) => string)\|null*
-    The new value of [*cellType*](#cellType).
-
-
-### columnCountChanged
-
-Fired when the [*columnCount*](#columnCount) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *number*
-    The new value of [*columnCount*](#columnCount).
-
-
-### firstVisibleIndexChanged
-
-Fired when the [*firstVisibleIndex*](#firstVisibleIndex) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *number*
-    The new value of [*firstVisibleIndex*](#firstVisibleIndex).
-
-
-### itemCountChanged
-
-Fired when the [*itemCount*](#itemCount) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *number*
-    The new value of [*itemCount*](#itemCount).
-
-
-### lastVisibleIndexChanged
-
-Fired when the [*lastVisibleIndex*](#lastVisibleIndex) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *number*
-    The new value of [*lastVisibleIndex*](#lastVisibleIndex).
-
-
 ### refresh
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
+
 Fired when the user requested a refresh. An event listener should reset the *refreshIndicator* property when refresh is finished.
-### refreshEnabledChanged
-
-Fired when the [*refreshEnabled*](#refreshEnabled) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*refreshEnabled*](#refreshEnabled).
-
-
-### refreshIndicatorChanged
-
-Fired when the [*refreshIndicator*](#refreshIndicator) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*refreshIndicator*](#refreshIndicator).
-
-
-### refreshMessageChanged
-
-Fired when the [*refreshMessage*](#refreshMessage) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*refreshMessage*](#refreshMessage).
-
 
 ### scroll
 
 Fired while the collection view is scrolling.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+Parameter|Type|Description
+-|-|-
+deltaX | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | Currently always 0.
+deltaY | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The delta of the scroll position. Positive when scrolling up and negative when scrolling down.
 
-- **deltaX**: *number*
-    Currently always 0.
+See also:
+  
+[<span class='language tsx'>TSX</span> collectionview-scroll-ts.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-scroll-ts.tsx)  
+[<span class='language jsx'>JSX</span> collectionview-scroll.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-scroll.jsx)
+## Change Events
 
-- **deltaY**: *number*
-    The delta of the scroll position. Positive when scrolling up and negative when scrolling down.
+### cellHeightChanged
 
+Fired when the [*cellHeight*](#cellheight) property has changed.
 
-### select
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type) \| `"auto"` \| `((index: number, cellType: string) => number` \| `"auto")`</span> | The new value of [*cellHeight*](#cellheight).
 
-Fired when a cell is selected.
+### itemCountChanged
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+Fired when the [*itemCount*](#itemcount) property has changed.
 
-- **index**: *number*
-    The index of the selected item.
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*itemCount*](#itemcount).
 
+### createCellChanged
 
+Fired when the [*createCell*](#createcell) property has changed.
 
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">`(cellType: string) => Cell`</span> | The new value of [*createCell*](#createcell).
 
+### updateCellChanged
 
-## Example
-```js
-// Create a collection view, initialize its cells and fill it with items
-const {CollectionView, Composite, ImageView, TextView, ui} = require('tabris');
-const IMAGE_PATH = 'resources/';
+Fired when the [*updateCell*](#updatecell) property has changed.
 
-let people = [
-  ['Holger', 'Staudacher', 'holger.jpg'],
-  ['Ian', 'Bull', 'ian.jpg'],
-  ['Jochen', 'Krause', 'jochen.jpg'],
-  ['Jordi', 'Böhme López', 'jordi.jpg'],
-  ['Markus', 'Knauer', 'markus.jpg'],
-  ['Moritz', 'Post', 'moritz.jpg'],
-  ['Ralf', 'Sternberg', 'ralf.jpg'],
-  ['Tim', 'Buschtöns', 'tim.jpg']
-].map(([firstName, lastName, image]) => ({firstName, lastName, image: IMAGE_PATH + image}));
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">`(cell: Cell, index: number) => void`</span> | The new value of [*updateCell*](#updatecell).
 
-new CollectionView({
-  left: 0, top: 0, right: 0, bottom: 0,
-  itemCount: people.length,
-  cellHeight: 256,
-  createCell: () => {
-    let cell = new Composite();
-    new ImageView({
-      top: 16, centerX: 0, width: 200, height: 200
-    }).appendTo(cell);
-    new TextView({
-      left: 30, top: 'prev() 16', right: 30,
-      alignment: 'center'
-    }).appendTo(cell);
-    return cell;
-  },
-  updateCell: (cell, index) => {
-    let person = people[index];
-    cell.apply({
-      ImageView: {image: person.image},
-      TextView: {text: person.firstName}
-    });
-  }
-}).on('select', ({index}) => console.log('selected', people[index].firstName))
-  .appendTo(ui.contentView);
-```
-## See also
+### cellTypeChanged
 
-- [CollectionView example](https://github.com/eclipsesource/tabris-js/tree/v2.7.0/snippets/collectionview.js)
+Fired when the [*cellType*](#celltype) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type) \| `((index: number) => string)` \| [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type)</span> | The new value of [*cellType*](#celltype).
+
+### refreshEnabledChanged
+
+Fired when the [*refreshEnabled*](#refreshenabled) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of [*refreshEnabled*](#refreshenabled).
+
+### refreshIndicatorChanged
+
+Fired when the [*refreshIndicator*](#refreshindicator) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of [*refreshIndicator*](#refreshindicator).
+
+### refreshMessageChanged
+
+Fired when the [*refreshMessage*](#refreshmessage) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*refreshMessage*](#refreshmessage).
+
+### firstVisibleIndexChanged
+
+Fired when the [*firstVisibleIndex*](#firstvisibleindex) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*firstVisibleIndex*](#firstvisibleindex).
+
+### lastVisibleIndexChanged
+
+Fired when the [*lastVisibleIndex*](#lastvisibleindex) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*lastVisibleIndex*](#lastvisibleindex).
+
+### columnCountChanged
+
+Fired when the [*columnCount*](#columncount) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*columnCount*](#columncount).
+

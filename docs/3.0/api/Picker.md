@@ -29,9 +29,9 @@ new Picker({
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Creating a simple `Picker`](https://playground.tabris.com/?gitref=v3.0.0&snippet=picker.jsx)
-- [Demo JavaScript/JSX Snippet: picker-style.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=picker-style.jsx)
+  
+[<span class='language jsx'>JSX</span> Creating a simple `Picker`](https://playground.tabris.com/?gitref=v3.0.0&snippet=picker.jsx)  
+[<span class='language jsx'>JSX</span> picker-style.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=picker-style.jsx)
 
 ## Constructor
 
@@ -163,8 +163,8 @@ Change events | *No*
 
 
 This property can only be set via constructor or JSX. Once set, it cannot change anymore.See also:
-
-- [Demo JavaScript/JSX Snippet: picker-style.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=picker-style.jsx)
+  
+[<span class='language jsx'>JSX</span> picker-style.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=picker-style.jsx)
 
 
 ### textColor

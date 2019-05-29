@@ -25,9 +25,9 @@ new Button({text: 'Save'})
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Create a simple `Button`](https://playground.tabris.com/?gitref=v3.0.0&snippet=button.jsx)
-- [Demo JavaScript/JSX Snippet: Create buttons with different styles](https://playground.tabris.com/?gitref=v3.0.0&snippet=button-style.jsx)
+  
+[<span class='language jsx'>JSX</span> Create a simple `Button`](https://playground.tabris.com/?gitref=v3.0.0&snippet=button.jsx)  
+[<span class='language jsx'>JSX</span> Create buttons with different styles](https://playground.tabris.com/?gitref=v3.0.0&snippet=button-style.jsx)
 
 ## Constructor
 
@@ -119,8 +119,8 @@ Change events | *No*
 
 
 This property can only be set via constructor or JSX. Once set, it cannot change anymore.See also:
-
-- [Demo JavaScript/JSX Snippet: button-style.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=button-style.jsx)
+  
+[<span class='language jsx'>JSX</span> button-style.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=button-style.jsx)
 
 
 ### text

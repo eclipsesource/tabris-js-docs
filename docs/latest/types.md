@@ -1,85 +1,380 @@
 ---
 ---
-Property Types
-==============
+Data Types
+==========
 
-## AnimationOptions
-
-Options of the [`animate()`](api/Widget.md#animateproperties-options) method. They have following properties:
-
-- **delay**: *number*, default: `0`
-Time until the animation starts in ms.
-- **duration**: *number*
-Animation duration in ms.
-- **easing**: *string*
-One of `linear`, `ease-in`, `ease-out`, `ease-in-out`.
-- **repeat**: *number*, default: `0`
-Number of times to repeat the animation.
-- **reverse**: *boolean*
-`true` to alternate the direction of the animation on every repeat.
-- **name**: *string*
-No effect, but will be given in animation events.
-
-## Bounds
-
-Widget bounds are represented as an object with the following properties:
-
-* **left**: *number*
-The horizontal offset from the parent's left edge in dip
-* **top**: *number*
-The vertical offset from the parent's top edge in dip
-* **width**: *number*
-The width of the widget in dip
-* **height**: *number*
-The height of the widget in dip
-
-Example:
-```js
-let buttonWidth = button.bounds.width;
-```
+## Layout API
 
 See also [Layout](layout.md).
 
-## BoxDimensions
+### Bounds
 
-Dimensions to be applied on all four sides of a widget, as used for padding.
+* JavaScript Type: `Object`
+* TypeScript Type: `tabris.Bounds`
 
-* **left**: *number*
-The offset from the left edge in dip
-* **right**: *number*
-The offset from the right edge in dip
-* **top**: *number*
-The offset from the top edge in dip
-* **bottom**: *number*
-The offset from the bottom edge in dip
+The bounds of a rectangle in relation to the top-left corner of a containing element in DIP (device independent pixel). This is a plain object implementing the following interface:
 
-Example:
-```js
-composite.padding = {left: 8, right: 8, top: 0, bottom: 0};
+```ts
+interface Bounds {
+  left: number;
+  top: number;
+  width: number;
+  height: number;
+}
 ```
 
-## PropertyChangedEvent
+Explanation:
 
-An event fired when an object property changes. It has following properties:
+Property | Description
+---------|--------------------------------------------------
+left     | The horizontal offset from the parent's left edge
+top      | The vertical offset from the parent's top edge
+width    | The width of the widget
+height   | The height of the widget
 
-- **target**: *Widget*
-The widget the event was fired on.
-- **value**: *any*
-The new value of the changed property.
+Example:
 
-## Color
+```js
+const buttonRight = button.bounds.left + button.bounds.width;
+```
 
-Colors are specified as strings using one of the following formats:
+### BoxDimensions
 
-* `#xxxxxx` Hexadecimal rgb
-* `#xxx` Hexadecimal rgb
-* `#xxxxxxxx` Hexadecimal rgba
-* `#xxxx` Hexadecimal rgba
-* `rgb(r, g, b)` with `r`, `g` and `b` being numbers in the range 0..255.
-* `rgba(r, g, b, a)` with `a` being a number in the range 0..1.
-* a [color name](http://www.w3.org/TR/css3-color/#html4) from the CSS3 specification.
-* `transparent` sets a fully transparent color. This is a shortcut for `rgba(0, 0, 0, 0)`.
-* `initial` resets the color to its (platform-dependent) default.
+* JavaScript Type: `Object` or `string` or `Array`.
+* TypeScript Type: `tabris.BoxDimensions`
+
+The bounds of a rectangle in relation to the four edges of a containing element in DIP (device independent pixel). By default it is a plain object implementing the following interface:
+
+```ts
+interface BoxDimensions {
+  left?: number;
+  right?: number;
+  top?: number;
+  bottom?: number;
+}
+```
+
+All properties are [`dimension`](#dimension) and optional. Omitted properties are treated as `0`.
+
+As a shorthand a list of four dimensions is also accepted. This follow the order of `[top, right, bottom, left]`, with missing entries being filled in by the entry of the opposing dimension. If only one entry is given it is used for all dimensions:
+
+```js
+[1, 2, 3, 4] // {top: 1, right: 2, bottom: 3, left: 4};
+[1, 2, 3] // {top: 1, right: 2, bottom: 3, left: 2};
+[1, 2] // {top: 1, right: 2, bottom: 1, left: 2};
+[1] // {top: 1, right: 1, bottom: 1, left: 1};
+```
+
+A space separated string list is also accepted instead of an array, with or without `px` as a unit.
+
+Examples:
+
+```js
+widget.padding = {left: 8, right: 8, top: 0, bottom: 0};
+widget.padding = {left: 10, right: 10};
+widget.padding = [0, 8];
+widget.padding = [1, 10, 2, 10];
+widget.padding = '10px 11px 12px 13px';
+widget.padding = '10 11 12 13';
+widget.padding = '0 8';
+```
+
+### ConstraintValue
+
+* JavaScript Type: `tabris.Constraint`, `tabris.Widget`, `tabris.Percent`, `Symbol`, `Array`, `Object`, `string`, `number` or `true`.
+* TypeScript Type: `tabris.ConstraintValue`
+
+A `ConstraintValue` represents a constraint on the layout of a widget that the parent uses to determine the position of one of its edges. This type allows various expressions that can all be used in place of a [`Constraint`](./api/Constraint.md) instance for convenience. All API that accept these expressions will convert them to a `Constraint` object. (With the exception of `CanvasContext`.)
+
+Every expression of `ConstraintValue` consists of a [`reference`](./api/Constraint.md#reference) value and/or an [`offset`](./api/Constraint.md#offset) value. The following are all valid `ConstraintValue` types:
+
+#### Offset-only constraints
+
+Simply the [`Offset`](#offset) number by itself, a positive float including zero. A value of `true` is also accepted and treated like zero.
+
+Examples:
+
+```js
+widget.left = 12.5;
+widget.right = 8;
+widget.top = 0;
+widget.bottom = true;
+```
+
+#### Reference-only constraints
+
+Either a [`PercentValue`](#percentvalue) or a [`SiblingReferenceValue`](#siblingreferencevalue).
+
+Examples:
+
+```js
+widget.left = '12%';
+widget.right = 'prev()';
+widget.top = new Percent(50);
+widget.bottom = '#foo';
+```
+
+#### Constraint instance
+
+An instance of the [`Constraint`](./api/Constraint.md) class naturally is also a valid `ConstraintValue`. It may be created via its [constructor](./api/Constraint.md#constructor) or the less strict [`Constraint.from`](./api/Constraint.md#fromconstraintvalue) factory.
+
+#### ConstraintLikeObject
+
+An object implementing the following interface:
+
+```ts
+interface ConstraintLikeObject {
+  reference?: SiblingReferenceValue | PercentValue;
+  offset?: Offset;
+}
+```
+
+An instances of [`Constraint`](./api/Constraint.md) is a valid `ConstraintLikeObject`, but `ConstraintLikeObject` is less strict:  The `reference` property can be a [`PercentValue`](#percentvalue) or a [`SiblingReferenceValue`](#siblingreferencevalue), or can be omitted if  [`offset`](#offset) is given. Either of the two entries may be omitted, but not both.
+
+Examples:
+
+```js
+widget.left = {reference: sibling, offset: 12};
+widget.right = {reference: '23%', offset: 12};
+widget.top = {reference: Constraint.prev};
+widget.bottom = {offset: 12};
+```
+
+#### ConstraintArrayValue
+
+An array tuple in the format of `[reference, offset]`, where `reference` is either a [`PercentValue`](#percentvalue) or a [`SiblingReferenceValue`](#siblingreferencevalue), and offset is an [`Offset`](#offset), i.e. a `number`.
+
+Examples:
+
+```js
+widget.left = [sibling, 0];
+widget.right = ['#foo', 0];
+widget.top = [{percent: 23}, 12];
+widget.bottom = [Constraint.prev, 12];
+```
+
+#### Constraint String
+
+This is often the most compact way to express a constraint, but it may not be the preferred way in TypeScript projects if type safety is a priority. The string consists of a space separated list of two values in the pattern of `'reference offset'`. The reference part may be of any string as accepted by [`SiblingReferenceValue`](#siblingreferencevalue) or [`PercentValue`](#percentvalue). The offset has to be a positive (including zero) float, just like [`Offset`](#offset).
+
+Examples:
+
+```js
+widget.left = '.bar 0';
+widget.right = '#foo 0'
+widget.top = '23% 12';
+widget.bottom = 'prev() 12';
+```
+
+### Dimension
+
+* JavaScript Type: `number`
+* TypeScript Type: `tabris.Dimension`, an alias for `number`
+
+A positive float, or 0, representing device independent pixels (DIP).
+
+### LayoutDataValue
+
+* JavaScript Type: `tabris.LayoutData`, `Object`
+* TypeScript Type: `tabris.LayoutDataValue`
+
+A `LayoutDataValue` provides layout information for a widget to be used its parent when determining its size and position. It allows various expressions that can all be used in place of a [`LayoutData`](./api/LayoutData.md) instance for convenience. All API that accepts these expressions will convert them to a `LayoutData` object.
+
+The following are all valid `LayoutDataValue` types:
+
+#### LayoutData instance
+
+An instance of the [`LayoutData`](./api/LayoutData.md) class naturally is also a valid `LayoutDataValue`. It may be created via its [constructor](./api/LayoutData.md#constructor) or the less strict [`LayoutData.from`](./api/LayoutData.md#fromlayoutdatavalue) factory.
+
+#### LayoutDataLikeObject
+
+An object containing implementing the following interface:
+
+```ts
+interface LayoutDataLikeObject {
+  left?: 'auto' | ConstraintValue;
+  right?: 'auto' | ConstraintValue;
+  top?: 'auto' | ConstraintValue;
+  bottom?: 'auto' | ConstraintValue;
+  centerX?: 'auto' | Offset | true;
+  centerY?: 'auto' | Offset | true;
+  baseline?: 'auto' | SiblingReferenceValue | true;
+  width?: 'auto' | Dimension;
+  height?: 'auto' | Dimension;
+}
+```
+
+An instance of [`LayoutData`](./api/LayoutData.md) is a valid `LayoutDataLikeObject`, but in `LayoutDataLikeObject` all properties are optional and less strict. For example `left`, `top`, `right` and `bottom` accept [`ConstraintValue`](#constraintvalue) (e.g. a `number`) in place of a [`Constraint`](./api/Constraint.md) instance.
+
+A value of `true` is also accepted for all fields except `width` and `height`. For `left`, `right`, `top`, `bottom`, `centerX` and `centerY` it means `0`. For `baseline` it means `'prev()'`.
+
+Example:
+
+```js
+widget.layoutData = {
+  baseline: 'prev()',
+  left: 10,
+  width: 100
+};
+widget.layoutData = {
+  top: '25%',
+  centerX: true
+};
+```
+
+#### LayoutData string
+
+There are 4 alias strings that can be used in place of a LayoutData object:
+
+Alias        | Equivalent
+-------------|-----------------------------------------
+`'center'`   | `{centerX: 0, centerY: 0}`
+`'stretch'`  | `{left: 0, top: 0, right: 0, bottom: 0}`
+`'stretchX'` | `{left: 0, right: 0}`
+`'stretchY'` | `{top: 0, bottom: 0}`
+
+```js
+widget.layoutData = 'stretch';
+```
+
+### Offset
+
+* JavaScript Type: `number`
+* TypeScript Type: `tabris.Offset`, an alias for `number`
+
+A positive or negative float, or 0, representing device independent pixels (DIP).
+
+### PercentValue
+
+* JavaScript Type: `tabris.Percent`, `Object`, `string`
+* TypeScript Type: `tabris.PercentValue`
+
+Represents a percentage. This type includes various expressions that can all be used in place of a [`Percent`](./api/Percent.md) instance for convenience. All APIs that accept these expressions will convert them to a `Percent` object.
+
+In TypeScript you can import this type as a union with `import {PercentValue} from 'tabris';` or use `tabris.PercentValue`. A [Type guard](https://www.typescriptlang.org/docs/handbook/advanced-types.html#type-guards-and-differentiating-types) for `PercentValue` is available as  [`Percent.isValidPercentValue`](./api/Percent.md#isvalidpercentvaluevalue).
+
+#### Percent instance
+
+An instance of the [`Percent`](./api/Percent.md) class naturally is also a valid `PercentValue`. It may be created via its [constructor](./api/Percent.md#constructor) or the more versatile [`Percent.from`](./api/Percent.md#frompercentvalue) factory.
+
+#### PercentLikeObject
+
+A plain object in the format of `{percent: number}`, where `100` presents 100%. An instance of [`Percent`](./api/Percent.md) is a valid `PercentLikeObject`.
+
+Examples:
+
+```js
+widget.left = {percent: 50};
+```
+
+#### Percent String
+
+A number followed by `%`.
+
+Example: `'50%'`
+
+### SiblingReference
+
+* JavaScript Type: `tabris.Widget`, `Symbol`, `string`
+* TypeScript Type: `tabris.SiblingReference`
+
+A `SiblingReference` indicates a single sibling of a given Widget. Differs from the type [`SiblingReferenceValue`](#siblingreferencevalue) in that it does not include `'next()` and `'prev()'` as selectors strings. [It uses symbols instead](#sibling-reference-symbol). There are three variants of `SiblingReference`:
+
+#### Sibling instance
+
+Any widget instance that has the same parent.
+
+#### Sibling Selector String
+
+A simple selector string of the format `'#Type'`, `'#id'`, `'.class'`. No child selectors. The first matching sibling is selected.
+
+#### Sibling Reference Symbol
+
+The constants [`Constraint.prev`](./api/Constraint#prev) and [`Constraint.next`](./api/Constraint#next) (also available as [`LayoutData.prev`](./api/LayoutData#prev) and [`LayoutData.next`](./api/LayoutData#next)) may be used to point to the sibling directly before/after the reference widget in the parents children list.
+
+### SiblingReferenceValue
+
+* JavaScript Type: `tabris.Widget`, `Symbol`, `string`
+* TypeScript Type: `tabris.SiblingReferenceValue`
+
+Same as [`SiblingReference`](#siblingreference), but less strict in that it also allows the strings `'next()` and `'prev()'` in place of the [`prev`](./api/Constraint#prev) and [`next`](./api/Constraint#next) symbols.
+
+## Styling Related Types
+
+Types related to the visual presentation of a widget.
+
+### ColorValue
+
+* JavaScript Type: `tabris.Color`, `Object`, `Array`, `string`
+* TypeScript Type: `tabris.ColorValue`
+
+A `ColorValue` represents a 24 bit color, plus an alpha channel for opacity. This type allows various expressions that can all be used in place of a [`Color`](./api/Color.md) instance for convenience. All API that accept these expressions will convert them to a `Color` object. (With the exception of `CanvasContext`.) Setting a ColorValue property to null resets it to the default.
+
+In TypeScript you can import this type as a union with `import {ColorValue} from 'tabris';` or use `tabris.ColorValue`. [Type guards](https://www.typescriptlang.org/docs/handbook/advanced-types.html#type-guards-and-differentiating-types) for `ColorValue` are available as [`Color.isColorValue`](./api/Color.md#iscolorvaluevalue) and [`Color.isValidColorValue`](./api/Color.md#isvalidcolorvaluevalue).
+
+The following are all valid `ColorValue` types:
+
+#### Color instance
+
+An instance of the [`Color`](./api/Color.md) class may be created via its [constructor](./api/Color.md#constructor) or the less strict [`Color.from`](./api/Color.md#fromcolorvalue) factory.
+
+Examples:
+
+```js
+new Color(255, 0, 0)
+new Color(255, 0, 0, 200)
+Color.from("rgba(255, 0, 0, 0.8)")
+```
+
+#### ColorLikeObject
+
+ An object implementing the following interface:
+
+```ts
+interface ColorLikeObject {
+  red: number;
+  green: number;
+  blue: number;
+  alpha?: number;
+}
+```
+
+An instance of [`Color`](./api/Color.md) is a valid `ColorLikeObject`.
+
+Examples:
+
+```js
+{red: 255, green: 255, blue: 255}
+{red: 255, green: 255, blue: 255, alpha: 200}
+```
+
+#### ColorArray
+
+An array in the shape of `[red, green, blue, alpha]`. All entries should be natural number between (and including) 0 and 255. If omitted, alpha is 255.
+
+Examples:
+
+```js
+[255, 0, 0]
+[255, 0, 0, 200]
+```
+
+#### Color string
+
+Any string in the following format:
+
+Pattern              | Description
+---------------------|------------
+`"#rrggbb"`          | Hexadecimal rgb, with each value being between and including `00` and `ff`.
+`"#rgb"`             | Hexadecimal rgb, with each value being between and including `0` and `f`.
+`"#rrggbbaa"`        | Hexadecimal rgba, with each value being between and including `00` and `ff`.
+`"#rgba"`            | Hexadecimal rgba, with each value being between and including `0` and `f`.
+`"rgb(r, g, b)"`     | With `r`, `g` and `b` being numbers in the range 0..255.
+`"rgba(r, g, b, a)"` | With `a` being a number in the range 0..1.
+`"transparent"`      | Sets a fully transparent color. Same as `rgba(0, 0, 0, 0)`.
+`"initial"`          | Resets the color to its (platform-dependent) default. Same as `null`.
+
+[Color names](https://www.w3.org/TR/css-color-3/#html4) from the CSS3 specification are also accepted. They are available as static string properties of `Color`, e.g. `Color.lime`. These exist just to help with autocompletion.
 
 Examples:
 
@@ -91,105 +386,265 @@ Examples:
 "rgb(255, 0, 0)"
 "rgba(255, 0, 0, 0.8)"
 "red"
-"initial"
+"initial" // same as null
 ```
 
-## Dimension
+### FontValue
 
-A positive float, or 0, representing device independent pixels.
+A `FontValue` describes a font by size, family, weight and style. This type allows various expressions that can all be used in place of a [`Font`](./api/Font.md) instance for convenience. All API that accept these expressions will convert them to a `Font` object. (With the exception of `CanvasContext`.) Setting a FontValue property to null resets it to the default.
 
-See also [Layout](layout.md).
+Generic **font size** is always given as DIP (device independent pixels), though the string shorthand expects `"px"` as a unit. It's still DIPs.
 
-## Margin
+Generic **font families** are supported across all platforms: `"serif"`, `"sans-serif"`, `"condensed"` and `"monospace"`. These are available as static string properties of `Font`, e.g. `Font.serif`. These exist just to help with autocompletion. More families can be added via `app.registerFont`. If no family is given for a font the system default is used. If no font family is given the default system font will be used. The string `"initial"` represents the platform default.
 
-Distance to a parent's or sibling's opposing edge in one of these formats:
+Supported **font weights** are `"light"`, `"thin"`, `"normal"`, `"medium"`, `"bold"` and `"black"`. The default is `"normal"`
 
-* [`offset`](#offset)
-* [`percentage`](#percentage)
-* [`Widget`](api/Widget.md)
-* [`"selector"`](#selector)
-* `"prev()"`
-* `"next()"`
-* `"percentage offset"`
-* `"selector offset"`
-* `"prev() offset"`
-* `"next() offset"`
-* `[Widget, offset]`
-* `[percentage, offset]`
-* `[selector, offset]`
-* `["prev()", offset]`
-* `["next()", offset]`
+Supported **font styles** are `"italic"` and `"normal"`. The default is `"normal"`
 
-See also [Layout](layout.md).
+In TypeScript you can import this type as a union with `import {FontValue} from 'tabris';` or use `tabris.FontValue`. [Type guards](https://www.typescriptlang.org/docs/handbook/advanced-types.html#type-guards-and-differentiating-types) for `FontValue` are available as [`Font.isFontValue`](./api/Font.md#isfontvaluevalue) and [`Font.isValidFontValue`](./api/Font.md#isvalidfontvaluevalue).
 
-## Font
+The following are all valid `FontValue` types:
 
-Fonts are specified as strings using the shorthand syntax known from CSS, specifically `"[font-style] [font-weight] font-size [font-family[, font-family]*]"`. The font family may be omitted, in this case the default system font will be used. Generic font families supported across all platforms are `"serif"`, `"sans-serif"`, `"condensed"` and `"monospace"`. Supported font weights are `"light"`, `"thin"`, `"normal"`, `"medium"`, `"bold"` and `"black"`. The value `"initial"` represents the platform default.
+#### Font instance
+
+An instance of the [`Font`](./api/Font.md) class may be created via its [constructor](./api/Font.md#constructor) or the less strict [`Font.from`](./api/Font.md#fromfontvalue) factory.
+
+Examples:
+
+```js
+new Font({size: 16, family: Font.sansSerif})
+Font.from("16px san-serif");
+```
+
+#### FontLikeObject
+
+ An object implementing the following interface:
+
+```ts
+interface FontLikeObject {
+  size: number;
+  family?: string[];
+  weight?: FontWeight;
+  style?: FontStyle;
+}
+```
+
+An instance of [`Font`](./api/Font.md) is a valid `FontLikeObject`.
+
+Examples:
+
+```js
+{size: 16, weight: 'bold'}
+{size: 24, family: 'sans-serif', style: 'italic'}
+```
+
+#### Font string
+
+ As a string, a subset of the shorthand syntax known from CSS is used: `"font-style font-weight font-size font-family"`, where every value except size is optional. The size also need to have a `"px"` postfix. Multiple families may be given separated by commas. Families with spaces in their name need to be put in single or double quotes.
 
 Examples:
 
 ```js
 "bold 24px"
 "12px sans-serif"
-"thin italic 12px sans-serif"
+"italic thin 12px sans-serif"
+"24px 'My Font', sans-serif"
 "initial"
 ```
 
-## Image
+### ImageValue
 
-Images are specified as objects with the following properties:
+A `ImageValue` describes an image file path and that image's dimension or scale. This type allows various expressions that can all be used in place of a [`Image`](./api/Image.md) instance for convenience. All API that accept these expressions will convert them to a `Image` object.
 
-* **src**: *string*
-    File system path, relative path or URL. Android and iOS also support [data URI](https://en.wikipedia.org/wiki/Data_URI_scheme). Relative paths are resolved relative to 'package.json'. On Android the name of a bundled [drawable resource](https://developer.android.com/guide/topics/resources/drawable-resource.html) can be provided with the url scheme `android-drawable`, e.g. `android-drawable://ic_info_black`.
-* **width**: *number (optional)*
-    Image width in dip, extracted from the image file when missing.
-* **height**: *number (optional)*
-    Image height in dip, extracted from the image file when missing.
-* **scale**: *number (optional)*
-    Image scale factor - the image will be scaled down by this factor. Ignored when width or height are set.
+The **source** (shortened to `src`) is a File system path, relative path or URL. The [data URI](https://en.wikipedia.org/wiki/Data_URI_scheme) scheme is also supported. Relative paths are resolved **relative to the projects 'package.json'**. On Android the name of a bundled [drawable resource](https://developer.android.com/guide/topics/resources/drawable-resource.html) can be provided with the url scheme `android-drawable`, e.g. `android-drawable://ic_info_black`.
 
-A plain string can be used as a shorthand, e.g. `"image.jpg"` equals `{src: "image.jpg"}`.
+The **width** and **height** of an image are specified in DIP (device independent pixel). If none are given (e.g. value is `"auto"`) the dimensions from the image file are used in combination with the given **scale**.
+
+The **scale** is a positive float or `'auto'`. The image will be scaled down by this factor. Ignored if **width** or **height** are given. If neither **scale**, **width** or **height** are given the scale may be extracted from image file name if it follows the pattern "@\<scale\>x", e.g. `"image@2x.jpg"`. If the scale can not be determined by any of these methods it will be treated as `1`.
+
+The scale factor of the image is relevant when the intrinsic size (in DIP) of the image is needed for layouting. On high-density displays (i.e. [devices with a  scale factor higher than 1](./api/device.md#scalefactor)) an undetermined image scale factor (or scale factor `1`) may make the image look blurry at full its full natural size.  It is the application developers responsibility to provide and use image files with the appropriate scale factor for any given device.
+
+When displaying images that are very large (eg. 3000 x 2000) on small widgets (like a 100 x 100 `ImageView`), it is strongly recommended to provided a concrete image size. This will allow the system to scale the image to the given size, saving memory and computing power, which leads to a faster display time overall.
+
+The following are all valid `ImageValue` types:
+
+#### Image instance
+
+An instance of the [`Image`](./api/Image.md) class may be created via its [constructor](./api/Image.md#constructor) or the less strict [`Image.from`](./api/Image.md#fromimagevalue) factory.
 
 Examples:
 
 ```js
-"images/catseye.jpg"
+new Image({src: "http://example.com/catseye.jpg", scale: 2})
+new Image({src: "http://example.com/catseye.jpg", width: 100, height: 200})
+Image.from("images/catseye@2x.jpg");
+```
+
+#### ImageLikeObject
+
+ An object implementing the following interface:
+
+```ts
+interface ImageLikeObject {
+  src: string;
+  scale?: number | "auto";
+  width?: number | "auto";
+  height?: number | "auto";
+}
+```
+
+An instance of [`Image`](./api/Image.md) class is a valid `ImageLikeObject`.
+
+Examples:
+
+```js
 {src: "images/catseye.jpg", width: 300, height: 200}
 {src: "http://example.com/catseye.jpg", scale: 2}
 ```
 
-## LayoutData
+### LinearGradientValue
 
-Used to define how a widget should be arranged within its parent. See ["Layouts"](layout.md).
+A `LinearGradientValue` specifies a set of colors, their relative position along a straight line, and the angle of that line. This describes a color gradient that can be drawn to fill any area, usually the background of a widget. This type allows various expressions that can all be used in place of a [`LinearGradient`](./api/LinearGradient.md) instance for convenience. All API that accept these expressions will convert them to a `LinearGradient` object.
 
-## Offset
+In TypeScript you can import this type as a union with `import {LinearGradientValue} from 'tabris';` or use `tabris.LinearGradientValue`. [Type guards](https://www.typescriptlang.org/docs/handbook/advanced-types.html#type-guards-and-differentiating-types) for `LinearGradientValue` are available as [`LinearGradient.isLinearGradientValue`](./api/LinearGradient.md#islineargradientvaluevalue) and [`LinearGradient.isValidLinearGradientValue`](./api/LinearGradient.md#isvalidlineargradientvaluevalue).
 
-A positive or negative float, or 0, representing device independent pixels.
+The following are all valid `LinearGradientValue` types:
 
-See also [Layout](layout.md).
+#### LinearGradient instance
 
-## Percentage
+An instance of the [`LinearGradient`](./api/LinearGradient.md) class may be created via its [constructor](./api/LinearGradient.md#constructor) or the less strict [`LinearGradient.from`](./api/LinearGradient.md#fromlineargradientvalue) factory.
 
-A string starting with a number (int) followed directly by `%`. May be negative.
+Examples:
 
-See also [Layout](layout.md).
+```js
+new LinearGradient([Color.red, Color.green]);
+new LinearGradient([[Color.red, new Percent(5)], Color.green], 90);
+LinearGradient.from({colorStops: [['red', '5%'], 'green'], direction: 'left'});
+LinearGradient.from('linear-gradient(45deg, red 5%, green)');
+```
 
-## Transformation
+#### LinearGradientLikeObject
 
-Transformations are specified as an object with the following properties:
+An object implementing the following interface:
 
-* **rotation**: *number*, default: `0`
-    Clock-wise rotation in radians.
-* **scaleX**: *number*, default: `1`
-    Horizontal scale factor.
-* **scaleY**: *number*, default: `1`
-    Vertical scale factor.
-* **translationX**: *number*, default: `0`
-    Horizontal translation (shift) in dip.
-* **translationY**: *number*, default: `0`
-    Vertical translation (shift) in dip.
-* **translationZ**: *number*, default: `0`
-    Z-axis translation (shift) in dip. Android 5.0+ only.
+```ts
+interface LinearGradientLikeObject {
+  colorStops: Array<ColorValue | [ColorValue, PercentValue]>,
+  direction?: number | 'left' | 'top' | 'right' | 'bottom'
+}
+```
+
+An instances of [`LinearGradient`](./api/LinearGradient.md) is a valid `LinearGradientLikeObject`, but `LinearGradientLikeObject` is less strict as it accepts more expressions for `colorStops` and `direction`.
+Examples:
+
+```js
+{colorStops: [['red', '5%'], 'green'], direction: 'left'}
+{colorStops: [['red', '5%'], 'green'], direction: 45}
+```
+
+#### LinearGradient string
+
+ As a string, a subset of the CSS syntax is used:
+
+```css
+<color-stop> ::= <color> [ <number>% ]
+<linear-gradient> ::= linear-gradient(
+    [ <number>deg | to ( left | top | right | bottom ), ]
+    <color-stop> {, <color-stop>}
+)
+```
+
+Examples:
+
+```js
+"linear-gradient(red, green)"
+"linear-gradient(to left, red 5%, green)"
+"linear-gradient(45deg, red 5%, green)"
+```
+
+## Binary Types
+
+### ImageData
+
+Represents the underlying pixel data of an area of a `Canvas` widget. It is created using the creator methods on the [CanvasContext](api/CanvasContext.md): `createImageData()` and `getImageData()`. It can also be used to set a part of the canvas by using `putImageData()`.
+
+An ImageData object implements the following interface:
+
+```ts
+interface ImageData {
+  data: Uint8ClampedArray;
+  width: number;
+  height: number;
+}
+```
+
+Explanation:
+
+Property | Description
+---------|-------------
+`data`   | One-dimensional array containing the data in the RGBA order, with integer values between `0` and `255`.
+`width`  | Width in pixels of the ImageData.
+`height` | Height in pixels of the ImageData.
+
+## Selector API
+
+### Selector
+
+See [this article](./selector.md).
+
+## Animation API
+
+### AnimationOptions
+
+Options of the [`animate()`](api/Widget.md#animateproperties-options) method. They have to implement the following interface:
+
+```ts
+interface AnimationOptions {
+  delay?: number;
+  duration?: number;
+  easing?: "linear" | "ease-in" | "ease-out" | "ease-in-out";
+  repeat?: number;
+  reverse?: boolean;
+  name?: string;
+}
+```
+
+Each property has a default value if omitted:
+
+Property   | Default            | Description
+-----------|--------------------|------------
+`delay`    | `0`                | Time until the animation starts in ms.
+`duration` | (platform default) | Animation duration in ms.
+`easing`   | `linear`           | Acceleration/deceleration curve
+`repeat`   | `0`                | Number of times to repeat the animation.
+`reverse`  | `true`             | Should the direction of the animation alternative on every repeat.
+`name`     | `undefined`        | No effect, but will be given in animation events.
+
+### Transformation
+
+A Transformation is any object implementing the following interface:
+
+```ts
+interface Transformation {
+  rotation?: number;
+  scaleX?: number;
+  scaleY?: number;
+  translationX?: number;
+  translationY?: number;
+  translationZ?: number;
+}
+```
+
+Each property has a default value if omitted:
+
+Property       | Default | Description
+---------------|---------|------------
+`rotation`     | `0`     |  Clock-wise rotation in radians.
+`scaleX`       | `1`     |  Horizontal scale factor.
+`scaleY`       | `1`     |  Vertical scale factor.
+`translationX` | `0`     |  Horizontal translation (shift) in DIP (device independent pixels).
+`translationY` | `0`     |  Vertical translation (shift) in DIP.
+`translationZ` | `0`     |  Z-axis translation (shift) in DIP.
 
 Example:
 
@@ -198,19 +653,8 @@ Example:
 ```
 This transformation will make the widget twice as big and rotate it by 135&deg;.
 
-## Selector
+## Event Handling
 
-Selectors are used to filter a given list of widgets. A selector can be a string, a widget constructor, or a filter function.
-* When it is a string, it may either reference a widget type (e.g. `'Button'`, `'TextView'`), its id (`'#myButton'`, `'#myTextView'`), or its class property (`'.myButtons'`). A `'*'` matches all widgets. When selectors are used with the widget methods `find` and `apply`, the `:host` selector matches the widget that the selector is used on. This is useful in combination with child selectors, which use the syntax `Selector1 > Selector2`, so for example `:host > Button`.
-* When it is a widget constructor, a widget matches if it is an instance of that class/type. This is different from giving the type as a string, as subclasses are also matched. For example, `Composite` would match also match an instance of `Tab` or `Page`.
-* When it is a filter function, the function must accept a widget as the first parameter and return a boolean to indicate a match.
+### PropertyChangedEvent
 
-For more information, see [this article](./selector.md).
-
-## ImageData
-
-Represents the underlying pixel data of an area of a canvas element. It is created using the creator methods on the [CanvasContext](api/CanvasContext.md): createImageData() and getImageData(). It can also be used to set a part of the canvas by using putImageData().
-An ImageData object has the following read-only properties:
-* **data**: *Uint8ClampedArray* one-dimensional array containing the data in the RGBA order, with integer values between `0` and `255`
-* **width**: *number* width in pixels of the ImageData
-* **height**: *number* height in pixels of the ImageData
+An event object fired when an object property changes. It is an instance of [`EventObject`](./api/EventObject.md) that provides an additional property `value` containing the new value.

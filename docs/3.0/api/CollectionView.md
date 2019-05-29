@@ -33,17 +33,18 @@ new CollectionView({
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Creating a simple `CollectionView`](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview.jsx)
-- [Demo JavaScript/JSX Snippet: Creating a `CollectionView` with multiple cell types](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-celltype.jsx)
-- [Demo JavaScript/JSX Snippet: Creating a `CollectionView` with pull-to-refresh support](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-refreshenabled.jsx)
-- [Demo JavaScript/JSX Snippet: Creating a `CollectionView` with sticky headers](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-scroll.jsx)
-- [Demo JavaScript/JSX Snippet: Creating a `CollectionView` with dynamic column count](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-columncount.jsx)
-- [Demo TypeScript/JSX Snippet: collectionview-cellheightauto.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-cellheightauto.tsx)
-- [Demo TypeScript/JSX Snippet: collectionview-celltype-ts.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-celltype-ts.tsx)
-- [Demo TypeScript/JSX Snippet: collectionview-scroll-ts.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-scroll-ts.tsx)
-- [Demo JavaScript/JSX Snippet: collectionview-swipe-to-dismiss.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-swipe-to-dismiss.jsx)
-- [Demo TypeScript/JSX Snippet: collectionview-ts.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-ts.tsx)
+  
+[<span class='language jsx'>JSX</span> Creating a simple `CollectionView`](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `CollectionView` with multiple cell types](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-celltype.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `CollectionView` with pull-to-refresh support](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-refreshenabled.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `CollectionView` with sticky headers](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-scroll.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `CollectionView` with dynamic column count](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-columncount.jsx)  
+[<span class='language jsx'>JSX</span> collectionview-cellheightauto.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-cellheightauto.jsx)  
+[<span class='language tsx'>TSX</span> collectionview-cellheightauto.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-cellheightauto.tsx)  
+[<span class='language tsx'>TSX</span> collectionview-celltype-ts.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-celltype-ts.tsx)  
+[<span class='language tsx'>TSX</span> collectionview-scroll-ts.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-scroll-ts.tsx)  
+[<span class='language jsx'>JSX</span> collectionview-swipe-to-dismiss.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-swipe-to-dismiss.jsx)  
+[<span class='language tsx'>TSX</span> collectionview-ts.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-ts.tsx)
 
 ## Constructor
 
@@ -199,9 +200,9 @@ Change events | *Yes*
 
 
 See also:
-
-- [Demo TypeScript/JSX Snippet: collectionview-celltype-ts.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-celltype-ts.tsx)
-- [Demo JavaScript/JSX Snippet: collectionview-celltype.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-celltype.jsx)
+  
+[<span class='language tsx'>TSX</span> collectionview-celltype-ts.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-celltype-ts.tsx)  
+[<span class='language jsx'>JSX</span> collectionview-celltype.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-celltype.jsx)
 
 
 ### columnCount
@@ -216,8 +217,8 @@ Change events | *Yes*
 
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: collectionview-columncount.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-columncount.jsx)
+  
+[<span class='language jsx'>JSX</span> collectionview-columncount.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-columncount.jsx)
 
 
 ### createCell
@@ -280,8 +281,8 @@ Change events | *Yes*
 
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: collectionview-refreshenabled.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-refreshenabled.jsx)
+  
+[<span class='language jsx'>JSX</span> collectionview-refreshenabled.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-refreshenabled.jsx)
 
 
 ### refreshIndicator
@@ -339,9 +340,9 @@ deltaX | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.
 deltaY | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The delta of the scroll position. Positive when scrolling up and negative when scrolling down.
 
 See also:
-
-- [Demo TypeScript/JSX Snippet: collectionview-scroll-ts.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-scroll-ts.tsx)
-- [Demo JavaScript/JSX Snippet: collectionview-scroll.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-scroll.jsx)
+  
+[<span class='language tsx'>TSX</span> collectionview-scroll-ts.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-scroll-ts.tsx)  
+[<span class='language jsx'>JSX</span> collectionview-scroll.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=collectionview-scroll.jsx)
 ## Change Events
 
 ### cellHeightChanged

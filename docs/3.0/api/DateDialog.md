@@ -25,8 +25,8 @@ new DateDialog()
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Creating a simple `DateDialog`](https://playground.tabris.com/?gitref=v3.0.0&snippet=datedialog.jsx)
+  
+[<span class='language jsx'>JSX</span> Creating a simple `DateDialog`](https://playground.tabris.com/?gitref=v3.0.0&snippet=datedialog.jsx)
 
 ## Constructor
 

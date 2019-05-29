@@ -24,8 +24,8 @@ new ActivityIndicator()
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Creating a simple `ActivityIndicator`](https://playground.tabris.com/?gitref=v3.0.0&snippet=activityindicator.jsx)
+  
+[<span class='language jsx'>JSX</span> Creating a simple `ActivityIndicator`](https://playground.tabris.com/?gitref=v3.0.0&snippet=activityindicator.jsx)
 
 ## Constructor
 

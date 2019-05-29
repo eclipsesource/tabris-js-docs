@@ -1,145 +1,186 @@
 ---
 ---
-# ToggleButton
+# Class "ToggleButton"
 
-Extends [Widget](Widget.md)
+<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> > <span style="white-space:nowrap;">[`ToggleButton`](ToggleButton.md)</span>
 
 A push button that "snaps in", i.e. it is selected when pressed and deselected when pressed again.
 
-Import this type with "`const {ToggleButton} = require('tabris');`"
 
-Android | iOS
---- | ---
-![ToggleButton on Android](img/android/ToggleButton.png) | ![ToggleButton on iOS](img/ios/ToggleButton.png)
+<div class="tabris-image"><figure><div><img srcset="img/android/ToggleButton.png 2x" src="img/android/ToggleButton.png" alt="ToggleButton on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/ToggleButton.png 2x" src="img/ios/ToggleButton.png" alt="ToggleButton on iOS"/></div><figcaption>iOS</figcaption></figure></div>
+
+Constructor | *public*
+Singleton | *No*
+Namespace |`tabris`
+Direct subclasses | *None*
+JSX support | Element: `<ToggleButton/>`<br/>Parent element: [`<Composite/>`](Composite.md) *and any widget extending* <span style="white-space:nowrap;">[`Composite`](Composite.md)</span><br/>Child elements: *None*<br/>Text content: *Sets [text](#text) property*<br/>
+
+## Example
+```js
+import {Tab, contentView} from 'tabris';
+
+new ToggleButton({text: 'Toggle button'})
+  .onSelect(() => console.log('ToggleButton toggled'))
+  .appendTo(contentView);
+```
+
+See also:
+  
+[<span class='language jsx'>JSX</span> Creating a simple `ToggleButton`](https://playground.tabris.com/?gitref=v3.0.0&snippet=togglebutton.jsx)
+
+## Constructor
+
+### new ToggleButton(properties?)
+
+Parameter|Type|Optional|Description
+-|-|-|-
+properties | <span style="white-space:nowrap;">`Properties<ToggleButton>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
 
 ## Properties
 
 ### alignment
 
 
-Type: *string*, supported values: `left`, `right`, `center`, default: `center`
-
 The horizontal alignment of the button text.
+
+Type | `'left'` \| `'right'` \| `'centerX'`
+Default | `'centerX'`
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### checked
 
 
-Type: *boolean*, default: `false`
-
 The checked state of the toggle button.
+
+Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
+Default | `false`
+Settable | *Yes*
+Change events | *Yes*
+
+
+
+
+### font
+
+
+The font used for the text.
+
+Type | <span style="white-space:nowrap;">[`FontValue`](../types.md#fontvalue)</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### image
 
 
-Type: *[Image](../types.md#image)*
-
 An image to be displayed on the button.
+
+Type | <span style="white-space:nowrap;">[`ImageValue`](../types.md#imagevalue)</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### text
 
 
-Type: *string*
-
 The button's label text.
+
+Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Settable | *Yes*
+Change events | *Yes*
+JSX content type | `string`
+
+
+
+
+When using ToggleButton as an JSX element the element content is mapped to this property. Therefore
+```jsx
+<ToggleButton>Hello World</ToggleButton>
+```
+ has the same effect as:
+```jsx
+<ToggleButton text='Hello World' />
+```
+
 
 ### textColor
 
 
-Type: *[Color](../types.md#color)*
-
 The color of the text.
+
+Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 
 ## Events
-
-### alignmentChanged
-
-Fired when the [*alignment*](#alignment) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*alignment*](#alignment).
-
-
-### checkedChanged
-
-Fired when the [*checked*](#checked) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*checked*](#checked).
-
-
-### imageChanged
-
-Fired when the [*image*](#image) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Image](../types.md#image)*
-    The new value of [*image*](#image).
-
 
 ### select
 
 Fired when the toggle button is selected or deselected by the user.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+Parameter|Type|Description
+-|-|-
+checked | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The current value of *[checked](#checked)*.
 
-- **checked**: *boolean*
-    The current value of *[checked](#checked)*.
+## Change Events
 
+### alignmentChanged
+
+Fired when the [*alignment*](#alignment) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*alignment*](#alignment).
+
+### imageChanged
+
+Fired when the [*image*](#image) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`ImageValue`](../types.md#imagevalue)</span> | The new value of [*image*](#image).
+
+### checkedChanged
+
+Fired when the [*checked*](#checked) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of [*checked*](#checked).
 
 ### textChanged
 
 Fired when the [*text*](#text) property has changed.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*text*](#text).
-
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*text*](#text).
 
 ### textColorChanged
 
-Fired when the [*textColor*](#textColor) property has changed.
+Fired when the [*textColor*](#textcolor) property has changed.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*textColor*](#textcolor).
 
-- **value**: *[Color](../types.md#color)*
-    The new value of [*textColor*](#textColor).
+### fontChanged
 
+Fired when the [*font*](#font) property has changed.
 
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`FontValue`](../types.md#fontvalue)</span> | The new value of [*font*](#font).
 
-
-
-## Example
-```js
-const {ToggleButton, ui} = require('tabris');
-
-// Create a toggle button with a checked handler
-
-new ToggleButton({
-  left: 10, top: 10,
-  text: 'checked',
-  checked: true
-}).on('checkedChanged', event => event.target.text = event.value ? 'checked' : 'not checked')
-  .appendTo(ui.contentView);
-```
-## See also
-
-- [Simple ToggleButton snippet](https://github.com/eclipsesource/tabris-js/tree/v2.7.0/snippets/togglebutton.js)

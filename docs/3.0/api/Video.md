@@ -26,8 +26,8 @@ new Video({
 ```
 
 See also:
-
-- [Demo JavaScript Snippet: Creating a `Video` widget](https://playground.tabris.com/?gitref=v3.0.0&snippet=video.js)
+  
+[<span class='language js'>JS</span> Creating a `Video` widget](https://playground.tabris.com/?gitref=v3.0.0&snippet=video.js)
 
 ## Constructor
 

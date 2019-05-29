@@ -25,8 +25,8 @@ new Switch()
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Creating a Switch](https://playground.tabris.com/?gitref=v3.0.0&snippet=switch.jsx)
+  
+[<span class='language jsx'>JSX</span> Creating a Switch](https://playground.tabris.com/?gitref=v3.0.0&snippet=switch.jsx)
 
 ## Constructor
 

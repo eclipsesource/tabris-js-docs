@@ -15,8 +15,8 @@ JSX support | *No*
 
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Reading various device properties](https://playground.tabris.com/?gitref=v3.0.0&snippet=device.jsx)
+  
+[<span class='language jsx'>JSX</span> Reading various device properties](https://playground.tabris.com/?gitref=v3.0.0&snippet=device.jsx)
 
 ## Properties
 

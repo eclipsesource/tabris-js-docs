@@ -27,8 +27,8 @@ new ActionSheet({
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Creating a simple `ActionSheet`](https://playground.tabris.com/?gitref=v3.0.0&snippet=actionsheet.jsx)
+  
+[<span class='language jsx'>JSX</span> Creating a simple `ActionSheet`](https://playground.tabris.com/?gitref=v3.0.0&snippet=actionsheet.jsx)
 
 ## Constructor
 

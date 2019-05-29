@@ -28,10 +28,10 @@ new TabFolder({left: 0, top: 0, right: 0, bottom: 0})
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Creating a `TabFolder` containing a set of tabs](https://playground.tabris.com/?gitref=v3.0.0&snippet=tabfolder.jsx)
-- [Demo JavaScript Snippet: tabfolder-swipe-parallax.js](https://playground.tabris.com/?gitref=v3.0.0&snippet=tabfolder-swipe-parallax.js)
-- [Demo JavaScript/JSX Snippet: tabfolder-swipe.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=tabfolder-swipe.jsx)
+  
+[<span class='language jsx'>JSX</span> Creating a `TabFolder` containing a set of tabs](https://playground.tabris.com/?gitref=v3.0.0&snippet=tabfolder.jsx)  
+[<span class='language js'>JS</span> tabfolder-swipe-parallax.js](https://playground.tabris.com/?gitref=v3.0.0&snippet=tabfolder-swipe-parallax.js)  
+[<span class='language jsx'>JSX</span> tabfolder-swipe.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=tabfolder-swipe.jsx)
 
 ## Constructor
 

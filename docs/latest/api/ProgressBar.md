@@ -1,137 +1,148 @@
 ---
 ---
-# ProgressBar
+# Class "ProgressBar"
 
-Extends [Widget](Widget.md)
+<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> > <span style="white-space:nowrap;">[`ProgressBar`](ProgressBar.md)</span>
 
 A widget representing a numeric value as a horizontal bar with a growing indicator.
 
-Import this type with "`const {ProgressBar} = require('tabris');`"
 
-Android | iOS
---- | ---
-![ProgressBar on Android](img/android/ProgressBar.png) | ![ProgressBar on iOS](img/ios/ProgressBar.png)
+<div class="tabris-image"><figure><div><img srcset="img/android/ProgressBar.png 2x" src="img/android/ProgressBar.png" alt="ProgressBar on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/ProgressBar.png 2x" src="img/ios/ProgressBar.png" alt="ProgressBar on iOS"/></div><figcaption>iOS</figcaption></figure></div>
+
+Constructor | *public*
+Singleton | *No*
+Namespace |`tabris`
+Direct subclasses | *None*
+JSX support | Element: `<ProgressBar/>`<br/>Parent element: [`<Composite/>`](Composite.md) *and any widget extending* <span style="white-space:nowrap;">[`Composite`](Composite.md)</span><br/>Child elements: *None*<br/>Text content: *Not supported*<br/>
+
+## Example
+```js
+import {ProgressBar, contentView} from 'tabris';
+
+new ProgressBar({
+  left: 16, right: 16,
+  selection: 50
+}).appendTo(contentView);
+```
+
+See also:
+  
+[<span class='language jsx'>JSX</span> Creating a simple `ProgressBar`](https://playground.tabris.com/?gitref=v3.0.0&snippet=progressbar.jsx)
+
+## Constructor
+
+### new ProgressBar(properties?)
+
+Parameter|Type|Optional|Description
+-|-|-|-
+properties | <span style="white-space:nowrap;">`Properties<ProgressBar>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
 
 ## Properties
 
 ### maximum
 
 
-Type: *number*, default: `100`
-
 The value that represents a progress of 100%.
+
+Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Default | `100`
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### minimum
 
 
-Type: *number*, default: `0`
-
 The value that represents a progress of 0%.
+
+Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Default | `0`
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### selection
 
 
-Type: *number*, default: `0`
-
 The actual progress to be displayed.
 
-### state
-<p class="platforms"><span class="android-tag" title="supported on Android">Android</span><span class="windows-tag" title="supported on Windows 10">Windows 10</span></p>
+Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Default | `0`
+Settable | *Yes*
+Change events | *Yes*
 
-Type: *string*, supported values: `normal`, `paused`, `error`, default: `normal`
+
+
+
+### state
+<p class="platforms"><span class='android-tag' title='supported on Android'>Android</span></p>
 
 This property affects the color of the progress indicator. Not supported on iOS.
+
+Type | `'normal'` \| `'paused'` \| `'error'`
+Default | `'normal'`
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### tintColor
 
 
-Type: *[Color](../types.md#color)*
-
 The color used to display the current progress.
 
+Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
+Settable | *Yes*
+Change events | *Yes*
 
-## Events
 
-### maximumChanged
 
-Fired when the [*maximum*](#maximum) property has changed.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
 
-- **value**: *number*
-    The new value of [*maximum*](#maximum).
-
+## Change Events
 
 ### minimumChanged
 
 Fired when the [*minimum*](#minimum) property has changed.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*minimum*](#minimum).
 
-- **value**: *number*
-    The new value of [*minimum*](#minimum).
+### maximumChanged
 
+Fired when the [*maximum*](#maximum) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*maximum*](#maximum).
+
+### tintColorChanged
+
+Fired when the [*tintColor*](#tintcolor) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*tintColor*](#tintcolor).
 
 ### selectionChanged
 
 Fired when the [*selection*](#selection) property has changed.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *number*
-    The new value of [*selection*](#selection).
-
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*selection*](#selection).
 
 ### stateChanged
 
 Fired when the [*state*](#state) property has changed.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*state*](#state).
 
-- **value**: *string*
-    The new value of [*state*](#state).
-
-
-### tintColorChanged
-
-Fired when the [*tintColor*](#tintColor) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*tintColor*](#tintColor).
-
-
-
-
-
-## Example
-```js
-const {ProgressBar, ui} = require('tabris');
-
-// A progress bar that is animated using a timer
-
-let progressBar = new ProgressBar({
-  left: 15, right: 15, centerY: 0,
-  maximum: 300,
-  selection: 100
-}).appendTo(ui.contentView);
-
-setInterval(() => {
-  let selection = progressBar.selection + 1;
-  progressBar.selection = selection > 300 ? 0 : selection;
-}, 20);
-```
-## See also
-
-- [Simple ProgressBar snippet](https://github.com/eclipsesource/tabris-js/tree/v2.7.0/snippets/progressbar.js)

@@ -1,39 +1,109 @@
 ---
 ---
-# DateDialog
+# Class "DateDialog"
 
-Extends [Popup](Popup.md)
+<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Popup`](Popup.md)</span> > <span style="white-space:nowrap;">[`DateDialog`](DateDialog.md)</span>
 
 A `DateDialog` represents a native dialog pop-up allowing the user to pick a date. Properties can only be set before open() is called. The dialog is automatically disposed when closed.
 
-Import this type with "`const {DateDialog} = require('tabris');`"
 
-Android | iOS
---- | ---
-![DateDialog on Android](img/android/DateDialog.png) | ![DateDialog on iOS](img/ios/DateDialog.png)
+<div class="tabris-image"><figure><div><img srcset="img/android/DateDialog.png 2x" src="img/android/DateDialog.png" alt="DateDialog on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/DateDialog.png 2x" src="img/ios/DateDialog.png" alt="DateDialog on iOS"/></div><figcaption>iOS</figcaption></figure></div>
+
+Constructor | *public*
+Singleton | *No*
+Namespace |`tabris`
+Direct subclasses | *None*
+JSX support | Element: `<DateDialog/>`<br/>Child elements: *None*<br/>Text content: *Not supported*<br/>
+
+## Example
+```js
+import {DateDialog} from 'tabris';
+
+new DateDialog()
+  .onSelect(({date}) => console.log(`Selected ${date}`))
+  .open();
+```
+
+See also:
+  
+[<span class='language jsx'>JSX</span> Creating a simple `DateDialog`](https://playground.tabris.com/?gitref=v3.0.0&snippet=datedialog.jsx)
+
+## Constructor
+
+### new DateDialog(properties?)
+
+Parameter|Type|Optional|Description
+-|-|-|-
+properties | <span style="white-space:nowrap;">`Properties<DateDialog>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
+
+## Static Methods
+
+### open(dateDialog)
+
+
+
+Makes the given date dialog visible. Meant to be used with inline-JSX. In TypeScript it also casts the given JSX element from `any` to an actual DateDialog.
+
+
+Parameter|Type|Optional|Description
+-|-|-|-
+dateDialog | <span style="white-space:nowrap;">[`DateDialog`](DateDialog.md)</span> | No | The date dialog to open
+
+
+Returns <span style="white-space:nowrap;">[`DateDialog`](DateDialog.md)</span>
+
+### open(date?)
+
+
+
+Creates and opens a date dialog.
+
+
+Parameter|Type|Optional|Description
+-|-|-|-
+date | <span style="white-space:nowrap;">`Date`</span> | Yes | The date to be displayed in the dialog. The current date is used when no date is provided.
+
+
+Returns <span style="white-space:nowrap;">[`DateDialog`](DateDialog.md)</span>
+
 
 ## Properties
 
 ### date
 
 
-Type: *Date*
-
 The date to be displayed in the dialog. The current date is used when no date is provided.
+
+Type | <span style="white-space:nowrap;">`Date`</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### maxDate
 
 
-Type: *Date*
-
 Limits the selectable date range to the given future date. No limit is applied when not set.
+
+Type | <span style="white-space:nowrap;">`Date`</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### minDate
 
 
-Type: *Date*
-
 Limits the selectable date range to the given past date. No limit is applied when not set.
+
+Type | <span style="white-space:nowrap;">`Date`</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 
 ## Events
@@ -42,94 +112,41 @@ Limits the selectable date range to the given past date. No limit is applied whe
 
 Fired when the date dialog was closed.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **date**: *Date*
-    The selected date. Can be `undefined` when no date was selected.
-
-
-### dateChanged
-
-Fired when the [*date*](#date) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *Date*
-    The new value of [*date*](#date).
-
-
-### maxDateChanged
-
-Fired when the [*maxDate*](#maxDate) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *Date*
-    The new value of [*maxDate*](#maxDate).
-
-
-### minDateChanged
-
-Fired when the [*minDate*](#minDate) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *Date*
-    The new value of [*minDate*](#minDate).
-
+Parameter|Type|Description
+-|-|-
+date | <span style="white-space:nowrap;">`Date` \| [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type)</span> | The selected date. Can be `null` when no date was selected.
 
 ### select
 
 Fired when a date was selected by the user.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+Parameter|Type|Description
+-|-|-
+date | <span style="white-space:nowrap;">`Date`</span> | The selected date. Only the date components reflect the users selection. The time component values are undefined.
 
-- **date**: *Date*
-    The selected date. Only the date components reflect the users selection. The time component values are undefined.
+## Change Events
 
+### dateChanged
 
+Fired when the [*date*](#date) property has changed.
 
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">`Date`</span> | The new value of [*date*](#date).
 
+### minDateChanged
 
-## Example
-```js
-const {DateDialog, TextView, Button, ui} = require('tabris');
+Fired when the [*minDate*](#mindate) property has changed.
 
-const FIVE_DAYS = 432000000;
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">`Date`</span> | The new value of [*minDate*](#mindate).
 
-new Button({
-  left: 16, right: 16, top: 16,
-  text: 'Show DateDialog'
-}).on({select: showDateDialog})
-  .appendTo(ui.contentView);
+### maxDateChanged
 
-let selectionTextView = new TextView({
-  left: 16, right: 16, top: ['prev()', 16],
-  alignment: 'center'
-}).appendTo(ui.contentView);
+Fired when the [*maxDate*](#maxdate) property has changed.
 
-function showDateDialog() {
-  let date = new Date();
-  new DateDialog({
-    date: date,
-    minDate: new Date(date.getTime() - FIVE_DAYS),
-    maxDate: new Date(date.getTime() + FIVE_DAYS)
-  }).on({
-    select: ({date}) => selectionTextView.text = date,
-    close: () => console.log('DateDialog closed')
-  }).open();
-}
-```
-## See also
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">`Date`</span> | The new value of [*maxDate*](#maxdate).
 
-- [Simple DateDialog snippet](https://github.com/eclipsesource/tabris-js/tree/v2.7.0/snippets/datedialog.js)

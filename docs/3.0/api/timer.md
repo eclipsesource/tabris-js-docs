@@ -8,8 +8,8 @@ setTimeout(() => console.log('Timer finished after 2 seconds'), 2000);
 ```
 
 See also:
-
-- [Demo TypeScript/JSX Snippet: timer.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=timer.tsx)
+  
+[<span class='language tsx'>TSX</span> timer.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=timer.tsx)
 
 ## Methods
 

@@ -15,17 +15,17 @@ JSX support | *No*
 
 
 See also:
-
-- [Understanding layouts in Tabris.js](../layout.md)
-- [Understanding gesture events in Tabris.js](../touch.md)
-- [Demo JavaScript/JSX Snippet: A `Widget` with padding](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-padding.jsx)
-- [Demo JavaScript/JSX Snippet: A card style `Widget` with corner radius and elevation](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-cornerradius.jsx)
-- [Demo JavaScript Snippet: A `Widget` with a linear-gradient background](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-lineargradient.js)
-- [Demo JavaScript Snippet: Using touch events on a `Widget`](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-longpress-to-drag.js)
-- [Demo JavaScript/JSX Snippet: widget-elevation.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-elevation.jsx)
-- [Demo JavaScript/JSX Snippet: widget-exclude-from-layout.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-exclude-from-layout.jsx)
-- [Demo JavaScript/JSX Snippet: widget-highlightontouch.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-highlightontouch.jsx)
-- [Demo JavaScript Snippet: widget-touch.js](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-touch.js)
+  
+[Understanding layouts in Tabris.js](../layout.md)  
+[Understanding gesture events in Tabris.js](../touch.md)  
+[<span class='language jsx'>JSX</span> A `Widget` with padding](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-padding.jsx)  
+[<span class='language jsx'>JSX</span> A card style `Widget` with corner radius and elevation](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-cornerradius.jsx)  
+[<span class='language js'>JS</span> A `Widget` with a linear-gradient background](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-lineargradient.js)  
+[<span class='language js'>JS</span> Using touch events on a `Widget`](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-longpress-to-drag.js)  
+[<span class='language jsx'>JSX</span> widget-elevation.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-elevation.jsx)  
+[<span class='language jsx'>JSX</span> widget-exclude-from-layout.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-exclude-from-layout.jsx)  
+[<span class='language jsx'>JSX</span> widget-highlightontouch.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-highlightontouch.jsx)  
+[<span class='language js'>JS</span> widget-touch.js](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-touch.js)
 
 ## Methods
 
@@ -305,8 +305,8 @@ Change events | *Yes*
 
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: widget-cornerradius.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-cornerradius.jsx)
+  
+[<span class='language jsx'>JSX</span> widget-cornerradius.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-cornerradius.jsx)
 
 
 ### data
@@ -336,8 +336,8 @@ Change events | *Yes*
 
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: widget-elevation.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-elevation.jsx)
+  
+[<span class='language jsx'>JSX</span> widget-elevation.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-elevation.jsx)
 
 
 ### enabled
@@ -391,8 +391,8 @@ Change events | *Yes*
 
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: widget-highlightontouch.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-highlightontouch.jsx)
+  
+[<span class='language jsx'>JSX</span> widget-highlightontouch.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-highlightontouch.jsx)
 
 
 ### id
@@ -463,8 +463,8 @@ Change events | *No*
 
 
 This property can only be set via constructor or JSX. Once set, it cannot change anymore.See also:
-
-- [Demo JavaScript/JSX Snippet: widget-padding.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-padding.jsx)
+  
+[<span class='language jsx'>JSX</span> widget-padding.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-padding.jsx)
 
 
 ### right
@@ -552,8 +552,8 @@ state | <span style="white-space:nowrap;">`'start'` \| `'end'` \| `'cancel'`</sp
 touches | <span style="white-space:nowrap;">`{x: number, y: number}[]`</span> | Touch coordinates relative to the origin coordinates of the widget.
 
 See also:
-
-- [Demo JavaScript Snippet: widget-longpress-to-drag.js](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-longpress-to-drag.js)
+  
+[<span class='language js'>JS</span> widget-longpress-to-drag.js](https://playground.tabris.com/?gitref=v3.0.0&snippet=widget-longpress-to-drag.js)
 ### pan
 
 Fired continuously after a finger touching the widget moved for a certain distance.

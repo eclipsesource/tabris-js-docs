@@ -28,12 +28,12 @@ new Canvas({layoutData: 'stretch'})
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Creating a `Canvas` with simple shapes](https://playground.tabris.com/?gitref=v3.0.0&snippet=canvas-shapes.jsx)
-- [Demo JavaScript/JSX Snippet: Creating a `Canvas` and working with `ImageData`](https://playground.tabris.com/?gitref=v3.0.0&snippet=canvas-imagedata.jsx)
-- [Demo JavaScript/JSX Snippet: How to show text on a `Canvas`](https://playground.tabris.com/?gitref=v3.0.0&snippet=canvas-text.jsx)
-- [Demo JavaScript/JSX Snippet: How to use animations on a `Canvas`](https://playground.tabris.com/?gitref=v3.0.0&snippet=canvas-animation.jsx)
-- [Demo JavaScript/JSX Snippet: canvas-arc.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=canvas-arc.jsx)
+  
+[<span class='language jsx'>JSX</span> Creating a `Canvas` with simple shapes](https://playground.tabris.com/?gitref=v3.0.0&snippet=canvas-shapes.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `Canvas` and working with `ImageData`](https://playground.tabris.com/?gitref=v3.0.0&snippet=canvas-imagedata.jsx)  
+[<span class='language jsx'>JSX</span> How to show text on a `Canvas`](https://playground.tabris.com/?gitref=v3.0.0&snippet=canvas-text.jsx)  
+[<span class='language jsx'>JSX</span> How to use animations on a `Canvas`](https://playground.tabris.com/?gitref=v3.0.0&snippet=canvas-animation.jsx)  
+[<span class='language jsx'>JSX</span> canvas-arc.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=canvas-arc.jsx)
 
 ## Constructor
 

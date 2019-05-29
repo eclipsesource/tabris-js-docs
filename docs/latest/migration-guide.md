@@ -1,201 +1,272 @@
 ---
 ---
-# Migration Guide 1.x to 2.0
+# Migration Guide 2.x to 3.0
 
-Tabris.js 2.0 introduces a number of API changes that require adjustments in your app code.
-This guide explains how to migrate your app from Tabris.js 1.x to 2.0.
+## General
 
-We recommend using ES6 or Typescript for Tabris.js apps and importing Tabris types instead of accessing the global `tabris` object. You can import types using the ES6 object destructor syntax:
+### Removed ui object
 
+The `ui` object (`tabris.ui`) and `Ui` class no longer exist. All properties formerly hosted by `ui` are now directly attached to the `tabris` object/namespace. Example:
+
+Tabris 2.x
 ```js
-const {Button, NavigationView, ui} from 'tabris';
+import {ui} from 'tabris';
+
+ui.contentView.background = 'red';
+ui.drawer.background = 'red';
+ui.statusBar.background = 'red';
+ui.navigationBar.background = 'red';
 ```
 
-However, the global `tabris` object is still available. If your app refers to Tabris API using the `tabris` object, e.g. `tabris.Button`, this code will continue to work.
-
-## Navigation and pages
-
-Tabris 2.x has a new navigation concept that does not require pages as top-level containers anymore. Widgets can now be appended to the top-level `ui.contentView`. If you use pages, they need to be appended to a `NavigationView`. See [Navigation Patterns](https://tabrisjs.com/documentation/2.0/ui) for more information.
-
-For a simple migration, you could include this snippet:
-
+Tabris 3.0
 ```js
-let navigationView = new NavigationView({
-  left: 0, top: 0, right: 0, bottom: 0
-}).appendTo(ui.contentView);
-Page.prototype.open = function() {
-  this.appendTo(navigationView);
-}
-Page.prototype.close = function() {
-  this.dispose();
-}
+import {contentView, drawer, statusBar, navigationBar} from 'tabris';
+
+contentView.background = 'red';
+drawer.background = 'red';
+statusBar.background = 'red';
+navigationBar.background = 'red';
 ```
 
-The changes in detail:
+### Removed `get("prop")` and `set("prop", value)`
 
-#### Page and PageSelector
+This concerns all instances of `NativeObject` (including widgets) and `WidgetCollection`.
 
-* `Page.open()` has been removed. Append the page to a `NavigationView` instead.
-* `Page.close()` has been removed. Use `dispose()` or `detach()` to close a page.
-* `Page.topLevel` property has been removed.
-* `PageSelector` has been removed. For a sample page selector implementation, see the [drawer pages snippet](https://github.com/eclipsesource/tabris-js/blob/master/snippets/drawer-pages.js).
+The `set` method still exists, but now only takes one argument (the properties object).
+The `get` method has been removed entirely.
 
-### Actions
+#### Alternatives for `set("prop", value)`:
 
-* Instances of `Action` and `SearchAction` must now be appended to a `NavigationView`.
+On both `NativeObject` and `WidgetCollection`, `obj.set('foo', baz)` can be replaced with `obj.set({foo: baz})`,
+and `obj.set(bar, baz)` can be replaced with `obj.set({[foo]: baz})`.
 
-### Drawer
+On `NativeObject` only, `obj.set('foo', baz)` can be replaced with `obj.foo = baz`,
+and `obj.set(bar, baz)` can be replaced with `obj[bar] = baz`.
 
-* The type `Drawer` can not be instantiated anymore. A singleton instance is now available as `ui.drawer`.
-* The drawer is disabled by default. The property `enabled` must be set to `true` before the drawer can be used.
+#### Alternatives for `get("prop")`:
 
-### UI
+On `NativeObject`, `bar = obj.get('foo')` can be replaced with `bar = obj.foo`,
+and `baz = obj.get(bar)` can be replaced with `baz = obj[bar]`.
 
-* `ui.statusBarTheme` has been removed. Use `ui.statusBar.theme` instead.
-* `ui.displayMode` has been removed. Use `ui.statusBar.displayMode` instead.
-* `ui.activePage` has been removed. Get the top most page of a `NavigationView` by calling `navigationView.pages().last()`.
-* `ui.background` has been removed. Use the `NavigationView` property `toolbarColor` instead.
-* `ui.textColor` has been removed. Use the `NavigationView` properties `titleTextColor`, `actionColor` and `actionTextColor` instead.
-* `ui.toolbarVisible` has been removed. Use the `NavigationView` property `toolbarVisible` instead.
+On `WidgetCollection`, `bar = wc.get('foo');` can be replaced with `bar = wc.first().foo`,
+and `baz = wc.get(bar)` can be replaced with `baz = wc.first()[bar]`.
 
-## Events
+### app.installPatch removed
 
-The API for event listeners has changed. Most notably, event listeners are now called with a single event parameter. All event objects have a `target` field that contains the object that received the event. Other properties of the event object are event-specific. Refer to the [documentation](https://tabrisjs.com/documentation/2.0/) for the properties available on the respective events.
+You can no longer patch your application using this method.
 
-For example, the following snippet:
+### AlertDialog textInputs property is now a ContentView
 
+Instead of assigning `TextInputs` widgets to that property they need to be appended:
+
+Old:
 ```js
-// Tabris 1.x
-checkBox.on('select', (target, selection) => {
-  target.text = selection ? 'checked' : 'not checked';
-});
+alertDialog.textInputs = [new TextInput()];
 ```
 
-would have to be rewritten to:
-
+New:
 ```js
-// Tabris 2.0
-checkBox.on('select', (event) => {
-  event.target.text = event.checked ? 'checked' : 'not checked';
-});
+alertDialog.textInputs.append(new TextInput());
 ```
 
-or, a bit more concise, using ES6 object destructors:
+Alternatively JSX my be used:
 
-```js
-// Tabris 2.0
-checkBox.on('select', ({target, checked}) => {
-  target.text = checked ? 'checked' : 'not checked';
-});
+```jsx
+<AlertDialog>
+  <TextInput/>
+</AlertDialog>
 ```
 
-More changes to events:
+### Removed properties "placementPriority" of Action and "navigationAction" of NavigationView
 
-* Calling `off()` without arguments or with a single argument is not supported anymore.
-* Calling `on(event, listener)` or `once(event, listener)` multiple times with identical parameters will register the listener only once.
+These properties are replaced by a new property `placement` on the `Action` widget. It accepts the values `'default'` (same as `placementPriority = 'normal'`), `'overflow'` (same as a `placementPriority = 'low'`) and `'navigation'`, which puts the action in the place usually reserved by the drawer icon.
 
-### Event names and properties
+### Removed widgetCollection.find
 
-* Gesture events have been renamed to camel case, so that e.g. `swipe:left` becomes `swipeLeft`, `pan:horizontal` becomes `panHorizontal` etc.
-* Touch events have been renamed to camel case as well, e.g. `touchstart` becomes `touchStart`.
-* The events `addchild` and `removechild` have been renamed to camel case, i.e. `addChild` and `removeChild`.
-* The event `backnavigation` on `tabris.app` has been renamed to `backNavigation`.
-* Change events are now named after the pattern `<property>Changed`. For example, the event `change:text` becomes `textChanged` etc.
-* The variants of the `close` event on `AlertDialog` have been renamed from `close:ok`, `close:cancel` and `close:neutral` to `closeOk`, `closeCancel`, and `closeNeutral`.
-* The events `animationstart` and `animationend` have been removed, use the Promise returned by `animate()`.
-* On touch events, the properties `pageX` and `pageY` have been renamed to `absoluteX` and `absoluteY`. Moreover, `time` has been replaced by `timeStamp`.
-* On pan events, the property `translation` has been replaced by individual properties `translationX` and `translationY`. Likewise, `velocity` has been replaced by `velocityX` and `velocityY`.
+This method has been removed due to its ambiguous nature. This does not affect `composite.find` which still exists.
 
-## Widgets
+### "trigger" object/eventObject parameter is now cloned
 
-* The `tabris.create()` method has been removed. Widget constructors are now available under the `tabris` namespace. [Create widgets](https://tabrisjs.com/documentation/2.0/widget-basics#creating-native-widgets) using `new` instead, e.g. use:
+**This is relevant only if in your application you are passing values to `trigger` of types other than `Object` or `EventObject`.** Examples would be passing primitives (e.g. `trigger('select', selectionIndex);`) or instances of classes other than `Object` (e.g. `trigger('select', someArray);`). If you do that you need to change this to pass an object that references the value instead (e.g. `trigger('select', {selectionIndex});`)
+
+ Previously the second parameter of the `trigger` method was  directly passed on to all listeners in all cases. However, we want to ensure that listeners can always expect to be called with a valid `EventObject` instance. For that reason the values of the `trigger` parameter are now copied to a new event object, *unless* the given parameter is already an instance of `EventObject` and has not been initialized yet.
+
+### Color properties
+
+All color properties are now of the type `ColorValue`. While these properties still accept the same string values as in 2.x, they will return a "Color" class instance instead of a string. The exception is CanvasContext, where color properties still return a string for W3C compatibility.
+
+### Widget.background property
+
+Widget background setter now also accepts `ColorValue`, `ImageValue`, and `LinearGradientValue` values and the getter will return instances of the "Color", "Image" and "LinearGradient" classes.
+
+### Widget.backgroundImage property removed
+
+You can now set images directly on the `background` property.
+
+### alignment properties
+
+All widget `alignment` properties (on `Button`, `TextInput`, `TextView` and `ToggleButton`) now expect `centerX` instead of `center`.
+
+### TabFolder.textColor property replaced with more flexible properties
+
+The `TabFolder.textColor` property has been replaced with a set of new properties which provide more
+control over the appearance of the TabFolder tabs:
+
+- `tabTintColor`
+- `selectedTabTintColor`
+- `tabBarBackground`
+- `selectedTabIndicatorTintColor`
+
+In addition the `TabFolder` gained the property `tabBarElevation` which is applicable on Android.
+
+### Tab.badge property changed to be of type number instead of string
+
+With the added support for `badge` on Android, the type of the `badge` property has been updated to be a number:
 
 ```js
-new Button({centerX: 0, centerY: 0})
+tab.badge = 10
 ```
 
-* The property `Widget.type` has been removed. This property used to contain the widget type, e.g. `'Button'`. Use `widget.constructor.name` instead. The `toString()` method now also returns the widget constructor name.
+### CollectionView select event removed
 
-### New CollectionView API
-
-The CollectionView has a new API based on item *indexes* instead of the items itself.
-This gives the developer more control over binding different types of models to a CollectionView.
-
-To begin with, the `items` property has been replaced by a new property `itemCount` that controls the number of items to be displayed.
-To add or remove items at runtime, the methods `insert()` and `remove()` can be used, however, `insert()` now expects and item count instead of an array.
-
-The cells of a CollectionView must now be created by the application in the callback `createCell`, which replaces the `initializeCell` callback.
-Any type of widget can be used as a cell. The type Cell has become obsolete and was removed. Example:
+The collectionView no longer provides a select event. Interactions with a cell have to be handled directly by listeners attached to the cell. A new method `itemIndex` may be used to determine the index associated with a cell:
 
 ```js
-function createCell(type) {
-  return new TextView({
-    font: type === 'header' ? 'bold 18px' : '14px'
+collectionView.createCell = () => {
+  const cell = new SomeWidget();
+  cell.onTap(() => {
+    const index = cell.parent(CollectionView).itemIndex(cell);
+    // do something with the item...
   });
+  return cell;
 }
 ```
 
-Instead of the `change:item` event, the cells are now populated in a dedicated `updateCell` callback that receives the cell view and the item index to show:
+### Picker allows empty state with "message" property as placeholder
 
-```js
-function updateCell(cell, index) {
-  cell.text = items[index].name;
-}
-```
+The `Picker` now allows to show an (initial) empty state. This unselected state can be filled with a `message` text similar to a `TextInput`. The initial `selectionIndex` is therefore `-1`. It can also be set to `-1` which shows the empty state or the `message` respectively.
 
-The property `itemHeight` has been renamed to `cellHeight` for consistency.
+To recreate the previous behavior the `selectionIndex` could be set to `0`.
 
-### New Picker API
+### Picker property "fillColor" removed
 
-The Picker API now follows the same approach as CollectionView, it works on item count and indexes rather than an array of strings.
+With the introduction of the new `style` property on `Picker`, the iOS only property `fillColor` became redundant.
+Previously the `fillColor` was required to separate the Android underline colorization from the ios picker background color. Setting the `Picker` `style` to _underline_ on Android now ignores the background and only applies the `borderColor` property.
 
-The property `items` has been replaced by `itemCount`.
-The property `selection` that accepted the selected item has been removed in favor of the existing property `selectionIndex`.
-The `select` event does not contain a `selection` property anymore, only `index`.
+### Font properties
 
-The `itemText` callback is now required to provide a text for a given item. This callback is now called with an `index` instead of an item.
+All font properties are now of the type "FontValue". While these properties still accept the same string values as in 2.x, they will return a "Font" class instance instead of a string. The exception is CanvasContext, where font properties still return a string for W3C compatibility.
+
+### Image properties
+
+All image properties are now of the type "ImageValue". While these properties still accept the same string values as in 2.x, they will return an "Image" class instance instead of a string.
+
+### Gesture event "longpress" renamed to "longPress"
+
+To be consistent with the event naming scheme of gesture events, the event "longpress" has been renamed to "longPress".
+
+### TextInput property "fillColor" removed
+
+With the introduction of the new `style` property on `TextInput`, the iOS only property `fillColor` became redundant. Previously the `fillColor` was required to separate the Android underline colorization from the ios input background color. Setting the `TextInput` `style` to _underline_ on Android now ignores the background and only applies the `borderColor` property.
+
+## TypeScript
+
+### Properties interfaces removed
+
+The `tabris` module no longer exports a separate properties interfaces for every built-in type. These can be replaced with the generic `Properties` type:
+
+`CompositeProperties` `=>` `Properties<Composite>`
+
+### "tsProperties" property no longer supported
+
+It is no longer necessary or supported to create a property `tsProperties` on classes inheriting from `Widget` to control the properties accepted by the `set` method. In most cases public properties are recognized by `set` automatically. That excludes methods/functions.
+
+When called on `this` the supported properties can not be inferred. To fix this the `set` method can be overwritten/re-declared, or it may be called with the appropriate generic type like this: `this.set<MyComponent>({propA: valueA});`
+
+### type "Partial"
+
+The helper type `Partial<T, U>` was removed to avoid confusion with the `Partial` type built in to newer TypeScript versions. It can be replaced with `Partial<Pick<T, U>>`.
+
+### CollectionView is generic
+
+The `CollectionView` is now a generic type `CollectionView<Cell extends Widget>`, where `Cell` is the type of widget returned by the `createCell` callback. All occurrences of `CollectionView` as a type should be replaced with the appropriate generic version, e.g. `CollectionView<Composite>`.
+
+### types "dimension" and "offset"
+
+Types "dimension" and "offset" have been renamed to start with an upper case.
+Type "margin" has been replaced with "ConstraintValue", which includes the former "margin" type.
+
+### LayoutData and related properties
+
+The `layoutData` property is now of the type `LayoutDataValue`. The values that were accepted in 2.x are still accepted, with one exception: It was previously possible to give a percentage as a number type within a `margin` (now `ConstraintValue`) type array, i.e. `[number, number]`. However, this was an undocumented feature, as the documentation stated:
+
+> "All **percentages** are provided as strings with a percent suffix, e.g. `"50%"`."
+
+All percentages are now of the `PercentValue` type, i.e. a string like `"50%"`, an instance of the `Percent` class, or a `Percent`-like object, e.g. `{percent: 50}`.
+
+The return value of the `layoutData` property is now always an instance of the `LayoutData` class instead of a plain object.
+
+The shorthand properties to `layoutData` now also return the normalized types used in the `LayoutData` class, i.e. an instance of `Constraint` (for `left`, `right`, `top` and `bottom`) or `SiblingReference` (for `baseline`), a number (for `width`, `height`, `centerX` and `centerY`), or `"auto"` (the default for all of these).
+
+In 2.x, negative edge offsets were previously supported on some platforms. To prevent inconsistent layouts among platforms, they are not supported anymore.
+
+### Event handling
+
+The methods `on` and `once` no longer have widget-specific parameters, meaning they are not type-safe anymore. Strictly speaking this is not a breaking change, but it is strongly recommended to switch to the new (type safe) `Listeners` API as soon as possible. Some examples:
+
+`widget.on('resize', listener)` and `widget.on({resize: listener})` become `widget.onResize(listener)`.
+
+`widget.off('resize', listener)` becomes `widget.onResize.removeListener(listener)`.
+
+`widget.once('resize', listener)` becomes `widget.onResize.once(listener)`.
+
+## JSX
+
+### Elements need to be imported
+
+Tabris no longer provides "intrinsic" elements. This means that instead of creating a built-in widget via a lowercase element it has to be done by referencing the actual widget class.
 
 Example:
-```js
-let items = ['Apples', 'Oranges', 'Banana'];
-new Picker({
-  itemCount: items.length,
-  itemText: index => items[index]
-});
+
+This...
+```jsx
+import { ui } from 'tabris';
+
+ui.contentView.append(<textView text='foo'/>);
 ```
 
-### Stateful buttons
+has to be changed to:
 
-* On `CheckBox`, `RadioButton`, `Switch` and `ToggleButton`, the property `selection` has been renamed to `checked`.
+```jsx
+import { contentView, TextView } from 'tabris';
 
-### ScrollView
+contentView.append(<TextView text='foo' />);
+```
+Only widgets actually supporting different fonts now have a font property. Most applications should not have to adjust to this change.
 
-* The properties `scrollX` and `scrollY` have been renamed to `offsetX` and `offsetY`, respectively. They are now read-only, use the method `scrollToX()` or `scrollToY()` to scroll.
-* The event `scroll` has been replaced by `scrollX` and `scrollY`.
+### jsxProperties
 
-## Access to properties
+It used to be necessary to declare this property to add JSX attributes to a custom component. This now happens automatically. The mechanism itself is still present, but the property is now named `jsxAttributes` to make it distinct from the properties of the created object. Declaring `jsxAttributes` may sometimes be be necessary because properties that are either functions or are marked as readonly are not available as JSX attributes by default.
 
-Widget properties can now be accessed directly, without `get()` and `set()`. For example:
+## Cordova plugins
+
+The Cordova CLI dependency has been updated from `6.5.0` to `8.1.2`. The Cordova CLI will now use the system `npm` to install plugins. This has following implications:
+
+* Plugins need to provide a `package.json` in their root directory.
+* Plugins in package [subdirectories](https://cordova.apache.org/docs/en/6.x/reference/cordova-cli/index.html#plugin-spec) are not supported anymore.
+
+## Android custom theme
+
+Creating a custom theme follows the same approach as in 2.x but the paths to the theme.xml file has been changed slightly due to the migration to cordova-android 8.0. Declared theme.xml resource files need to be prefixed with with `app/src/main/`, e.g.:
 
 ```
-// Tabris 1.x
-textView.set('text', 'foo');
-let text = textView.get('text');
+<resource-file src="res/android/values/my_theme.xml" target="res/values/my_theme.xml" />
 ```
 
-can now be written as:
+should be changed to:
 
 ```
-// Tabris 2.0
-textView.text = 'foo';
-let text = textView.text;
+<resource-file src="res/android/values/my_theme.xml" target="app/src/main/res/values/my_theme.xml" />
 ```
 
-However, the `get()` and `set()` methods continue to work with a small adjustment:
-
-* Calling `get()` on a disposed object now returns `undefined`.
-* Calling `set()` on a disposed object is a [NOOP](https://en.wikipedia.org/wiki/NOP).
-
-## Custom widgets
-
-Custom widget API has changed. Refer to the [custom widget documentation](https://tabrisjs.com/documentation/2.0/custom-widgets) for more information.
+For more details on Android custom themes see: https://docs.tabris.com/3.0/theming-android.html

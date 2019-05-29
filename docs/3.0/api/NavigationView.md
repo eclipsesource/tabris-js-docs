@@ -26,13 +26,13 @@ new NavigationView({layoutData: 'stretch'})
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Creating a simple `NavigationView` with pages](https://playground.tabris.com/?gitref=v3.0.0&snippet=navigationview-page-stacked.jsx)
-- [Demo JavaScript/JSX Snippet: Demonstrating a `NavigationView` with various interactive properties](https://playground.tabris.com/?gitref=v3.0.0&snippet=navigationview-properties.jsx)
-- [Demo JavaScript Snippet: Using multiple `NavigationViews` in `TabFolder` `Tabs`](https://playground.tabris.com/?gitref=v3.0.0&snippet=navigationview-tabfolder.js)
-- [Demo JavaScript/JSX Snippet: navigationview-action-placement.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=navigationview-action-placement.jsx)
-- [Demo JavaScript/JSX Snippet: navigationview-action.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=navigationview-action.jsx)
-- [Demo JavaScript/JSX Snippet: navigationview-searchaction.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=navigationview-searchaction.jsx)
+  
+[<span class='language jsx'>JSX</span> Creating a simple `NavigationView` with pages](https://playground.tabris.com/?gitref=v3.0.0&snippet=navigationview-page-stacked.jsx)  
+[<span class='language jsx'>JSX</span> Demonstrating a `NavigationView` with various interactive properties](https://playground.tabris.com/?gitref=v3.0.0&snippet=navigationview-properties.jsx)  
+[<span class='language js'>JS</span> Using multiple `NavigationViews` in `TabFolder` `Tabs`](https://playground.tabris.com/?gitref=v3.0.0&snippet=navigationview-tabfolder.js)  
+[<span class='language jsx'>JSX</span> navigationview-action-placement.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=navigationview-action-placement.jsx)  
+[<span class='language jsx'>JSX</span> navigationview-action.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=navigationview-action.jsx)  
+[<span class='language jsx'>JSX</span> navigationview-searchaction.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=navigationview-searchaction.jsx)
 
 ## Constructor
 

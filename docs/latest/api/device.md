@@ -1,177 +1,173 @@
 ---
 ---
-# device
+# Object "device"
 
-Extends [NativeObject](NativeObject.md)
+<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Device`](device.md)</span>
 
 Provides information about the device that executes the application.
 
-Import this object with "`const {device} = require('tabris');`"
 
-Example:
+Constructor | *private*
+Singleton | `device`
+Namespace |`tabris`
+Direct subclasses | *None*
+JSX support | *No*
 
-```js
-let lang = device.language;
 
-device.on("orientationChanged", ({value: orientation}) => console.log("new orientation: ", orientation));
-```
+See also:
+  
+[<span class='language jsx'>JSX</span> Reading various device properties](https://playground.tabris.com/?gitref=v3.0.0&snippet=device.jsx)
 
 ## Properties
 
 ### language
 
 
-**read-only**<br/>
-Type: *string*
+The user language configured on the device as an [RFC 4646](http://tools.ietf.org/html/rfc4646) compliant string. For example `"de"`, `"es-ES"`, etc. This property is also available globally as `navigator.language`.  Note: On iOS ≥ 11 it will only return languages declared in [CFBundleLocalizations](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html#//apple_ref/doc/uid/TP40009249-109552-TPXREF111).
 
-The user language configured on the device as an [RFC 4646](http://tools.ietf.org/html/rfc4646) compliant string. For example `"de"`, `"es-ES"`, etc. This property is also available globally as `navigator.language`.<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
+Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Settable | *No*
+Change events | *No*
+
+
+
+
+This property can only be set via constructor. Once set, it cannot change anymore.
 
 ### model
 
 
-**read-only**<br/>
-Type: *string*
+The name of the device model. For example `"iPad4,1"` or `"Nexus 7"`. This property is also available globally as `device.model`.
 
-The name of the device model. For example `"iPad4,1"` or `"Nexus 7"`. This property is also available globally as `device.model`.<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
+Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Settable | *No*
+Change events | *No*
+
+
+
+
+This property can only be set via constructor. Once set, it cannot change anymore.
 
 ### name
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span></p>
 
-**read-only**<br/>
-Type: *string*
 
-The name of the device set by owner. For example `"John's iPhone"`. This property is also available globally as `device.name`.<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
+The name of the device set by owner. For example `"John's phone"`. This property is also available globally as `device.name`.
+
+**Note:** On Android `name` is only available on Android 7.1+.
+
+Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Settable | *No*
+Change events | *No*
+
+
+
+
+This property can only be set via constructor. Once set, it cannot change anymore.
 
 ### orientation
 
 
-**read-only**<br/>
-Type: *string*, supported values: `portrait-primary`, `portrait-secondary`, `landscape-primary`, `landscape-secondary`
-
 The device orientation. One of `portrait-primary`, `portrait-secondary`, `landscape-primary`, and `landscape-secondary`.
+
+Type | `'portrait-primary'` \| `'portrait-secondary'` \| `'landscape-primary'` \| `'landscape-secondary'`
+Settable | *No*
+Change events | *Yes*
+
+
+
 
 ### platform
 
 
-Type: *string*, supported values: `Android`, `iOS`, `windows`
+The name of the platform. Either `"Android"` or `"iOS"`. This property is also available globally as `device.platform`.
 
-The name of the platform. Currently either `"Android"`, `"iOS"`, or `"windows"`. This property is also available globally as `device.platform`.<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
+Type | `'Android'` \| `'iOS'`
+Settable | *No*
+Change events | *No*
+
+
+
+
+This property can only be set via constructor. Once set, it cannot change anymore.
 
 ### scaleFactor
 
 
-**read-only**<br/>
-Type: *number*
+The ratio between physical pixels and device independent pixels. This property is also available globally as [`window.devicePixelRatio`](https://developer.mozilla.org/en-US/docs/Web/API/Window.devicePixelRatio).
 
-The ratio between physical pixels and device independent pixels. This property is also available globally as [`window.devicePixelRatio`](https://developer.mozilla.org/en-US/docs/Web/API/Window.devicePixelRatio).<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
+Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Settable | *No*
+Change events | *No*
+
+
+
+
+This property can only be set via constructor. Once set, it cannot change anymore.
 
 ### screenHeight
 
 
-**read-only**<br/>
-Type: *number*
+The entire height of the device's screen in device independent pixel. Depends on the current device orientation. This property is also available globally as [screen.height](https://developer.mozilla.org/en-US/docs/Web/API/Screen.height).
 
-The entire height of the device's screen in device independent pixel. Depends on the current device orientation. This property is also available globally as [screen.height](https://developer.mozilla.org/en-US/docs/Web/API/Screen.height).<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
+Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Settable | *No*
+Change events | *No*
+
+
+
+
+This property can only be set via constructor. Once set, it cannot change anymore.
 
 ### screenWidth
 
 
-**read-only**<br/>
-Type: *number*
+The entire width of the device's screen in device independent pixel. Depends on the current device orientation. This property is also available globally as [screen.width](https://developer.mozilla.org/en-US/docs/Web/API/Screen.width).
 
-The entire width of the device's screen in device independent pixel. Depends on the current device orientation. This property is also available globally as [screen.width](https://developer.mozilla.org/en-US/docs/Web/API/Screen.width).<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
+Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Settable | *No*
+Change events | *No*
+
+
+
+
+This property can only be set via constructor. Once set, it cannot change anymore.
 
 ### vendor
 
 
-**read-only**<br/>
-Type: *string*
+The name of the device manufacture. For example `"Samsung"` or `"Apple"`. This property is also available globally as `device.vendor`.
 
-The name of the device manufacture. For example `"Samsung"` or `"Apple"`. This property is also available globally as `device.vendor`.<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
+Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Settable | *No*
+Change events | *No*
+
+
+
+
+This property can only be set via constructor. Once set, it cannot change anymore.
 
 ### version
 
 
-**read-only**<br/>
-Type: *string*
+The platform version. On iOS it looks like this: `"8.1.1"`. On Android, the [version code](https://developer.android.com/reference/android/os/Build.VERSION_CODES.html) is returned. This property is also available globally as `device.version`.
 
-The platform version. On iOS it looks like this: `"8.1.1"`. On Android, the [version code](https://developer.android.com/reference/android/os/Build.VERSION_CODES.html) is returned. This property is also available globally as `device.version`.<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
-
-### win_keyboardPresent
-<p class="platforms"><span class="windows-tag" title="supported on Windows 10">Windows 10</span></p>
-
-**read-only**<br/>
-Type: *boolean*
-
-Returns `true` if a hardware keyboard is present. The developer may choose to handle some user input differently in that case. Available only on windows.
-
-### win_primaryInput
-<p class="platforms"><span class="windows-tag" title="supported on Windows 10">Windows 10</span></p>
-
-**read-only**<br/>
-Type: *boolean*, supported values: `touch`, `mouse`
-
-On a PC this returns `"touch"` when in tablet mode, otherwise `"mouse"`. On phones this this returns `"mouse"` when displayed on an external display ("Continuum"), otherwise `"touch"`. Available only on windows
+Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Settable | *No*
+Change events | *No*
 
 
-## Events
+
+
+This property can only be set via constructor. Once set, it cannot change anymore.
+
+
+## Change Events
 
 ### orientationChanged
 
 Fired when the `orientation` property has changed and the rotation animation has finished.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*orientation*](#orientation).
 
-- **value**: *string*
-    The new value of [*orientation*](#orientation).
-
-
-### win_keyboardPresentChanged
-
-Fired when the [*win_keyboardPresent*](#win_keyboardPresent) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*win_keyboardPresent*](#win_keyboardPresent).
-
-
-### win_primaryInputChanged
-
-Fired when the [*win_primaryInput*](#win_primaryInput) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*win_primaryInput*](#win_primaryInput).
-
-
-
-
-
-## Example
-```js
-const {TextView, device, ui} = require('tabris');
-
-// Display available device information
-
-['platform', 'version', 'model', 'vendor', 'name', 'language',
-  'orientation', 'screenWidth', 'screenHeight', 'scaleFactor']
-  .forEach((property) => {
-    new TextView({
-      id: property,
-      left: 10, right: 10, top: 'prev() 10',
-      text: property + ': ' + device[property]
-    }).appendTo(ui.contentView);
-  });
-
-device.on('orientationChanged', ({value: orientation}) => {
-  ui.contentView.find('#orientation').set('text', 'orientation: ' + orientation);
-});
-```

@@ -1,181 +1,258 @@
 ---
 ---
-# Picker
+# Class "Picker"
 
-Extends [Widget](Widget.md)
+<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> > <span style="white-space:nowrap;">[`Picker`](Picker.md)</span>
 
 A widget with a drop-down list of items to choose from.
 
-Import this type with "`const {Picker} = require('tabris');`"
 
-Android | iOS
---- | ---
-![Picker on Android](img/android/Picker.png) | ![Picker on iOS](img/ios/Picker.png)
+<div class="tabris-image"><figure><div><img srcset="img/android/Picker.png 2x" src="img/android/Picker.png" alt="Picker on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/Picker.png 2x" src="img/ios/Picker.png" alt="Picker on iOS"/></div><figcaption>iOS</figcaption></figure></div>
+
+Constructor | *public*
+Singleton | *No*
+Namespace |`tabris`
+Direct subclasses | *None*
+JSX support | Element: `<Picker/>`<br/>Parent element: [`<Composite/>`](Composite.md) *and any widget extending* <span style="white-space:nowrap;">[`Composite`](Composite.md)</span><br/>Child elements: *None*<br/>Text content: *Not supported*<br/>
+
+## Example
+```js
+import {contentView, Picker} from 'tabris';
+
+const items = ['Apple', 'Banana', 'Cherry'];
+
+new Picker({
+  itemCount: items.length,
+  itemText: index => items[index]
+}).onSelect(event => console.log(`Selected ${items[event.index]}`))
+  .appendTo(contentView);
+```
+
+See also:
+  
+[<span class='language jsx'>JSX</span> Creating a simple `Picker`](https://playground.tabris.com/?gitref=v3.0.0&snippet=picker.jsx)  
+[<span class='language jsx'>JSX</span> picker-style.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=picker-style.jsx)
+
+## Constructor
+
+### new Picker(properties?)
+
+Parameter|Type|Optional|Description
+-|-|-|-
+properties | <span style="white-space:nowrap;">`Properties<Picker> & Partial<Pick<Picker, 'itemText'>>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
+
+## Methods
+
+### set(properties)
+
+
+
+Sets all key-value pairs in the properties object as widget properties.
+
+**Important TypeScript note:** When called on `this` you may need to specify your custom type like this: `this.set<MyComponent>({propA: valueA});`
+
+
+Parameter|Type|Optional|Description
+-|-|-|-
+properties | <span style="white-space:nowrap;">`Properties<T> & Partial<Pick<this, 'itemText'>>`</span> | No | 
+
+
+Returns <span style="white-space:nowrap;">[`this`](#)</span>
+
 
 ## Properties
 
 ### borderColor
 
 
-Type: *[Color](../types.md#color)*
+The color of the Picker border. This can be the surrounding line or the underline of the Picker depending on the `style` property.
 
-The color of the border of the Picker. On iOS this is a rectangular border around the Picker, on Android it is a single line below the Picker.
+Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
+Settable | *Yes*
+Change events | *Yes*
 
-### fillColor
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span></p>
 
-Type: *[Color](../types.md#color)*
 
-The color of the background of the Picker - applies only to iOS.
+
+### floatMessage
+<p class="platforms"><span class='android-tag' title='supported on Android'>Android</span></p>
+
+Whether the hint message should float above the Picker when focus is gained.
+
+Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
+Default | `true`
+Settable | *Yes*
+Change events | *Yes*
+
+
+
+
+### font
+
+
+The font used for the text inside the Picker.
+
+Type | <span style="white-space:nowrap;">[`FontValue`](../types.md#fontvalue)</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### itemCount
 
 
-Type: *number*
-
 The number of items to display.
+
+Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### itemText
 
 
-Type: *(index: number) => string*
-
 A function that returns the string to display for a given index.
+
+Type | <span style="white-space:nowrap;">`(index: number) => string`</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+
+
+### message
+
+
+A hint text that is displayed when the picker has no selection.
+
+Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### selectionIndex
 
 
-Type: *number*
-
 The index of the currently selected item.
+
+Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+
+
+### style
+<p class="platforms"><span class='android-tag' title='supported on Android'>Android</span></p>
+
+The visual appearance of the `Picker` widget.
+
+With the `style` _outline_, _fill_ or _underline_ the message hint will float above the `Picker` on Android. This behavior can be controlled with the property `floatMessage`. The `style` _none_ will remove any background visualization, allowing to create a custom background. 
+
+Type | `'default'` \| `'outline'` \| `'fill'` \| `'underline'` \| `'none'`
+Default | `'default'`
+Settable | *On creation*
+Change events | *No*
+
+
+
+
+This property can only be set via constructor or JSX. Once set, it cannot change anymore.See also:
+  
+[<span class='language jsx'>JSX</span> picker-style.jsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=picker-style.jsx)
+
 
 ### textColor
 
 
-Type: *[Color](../types.md#color)*
-
 The color of the text.
+
+Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 
 ## Events
-
-### borderColorChanged
-
-Fired when the [*borderColor*](#borderColor) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*borderColor*](#borderColor).
-
-
-### fillColorChanged
-
-Fired when the [*fillColor*](#fillColor) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*fillColor*](#fillColor).
-
-
-### itemCountChanged
-
-Fired when the [*itemCount*](#itemCount) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *number*
-    The new value of [*itemCount*](#itemCount).
-
-
-### itemTextChanged
-
-Fired when the [*itemText*](#itemText) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *(index: number) => string*
-    The new value of [*itemText*](#itemText).
-
 
 ### select
 
 Fired when an item was selected by the user.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+Parameter|Type|Description
+-|-|-
+index | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | Contains the index of the selected item.
 
-- **index**: *number*
-    Contains the index of the selected item.
+## Change Events
 
+### messageChanged
+
+Fired when the [*message*](#message) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*message*](#message).
+
+### floatMessageChanged
+
+Fired when the [*floatMessage*](#floatmessage) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of [*floatMessage*](#floatmessage).
+
+### itemCountChanged
+
+Fired when the [*itemCount*](#itemcount) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*itemCount*](#itemcount).
+
+### itemTextChanged
+
+Fired when the [*itemText*](#itemtext) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">`(index: number) => string`</span> | The new value of [*itemText*](#itemtext).
 
 ### selectionIndexChanged
 
-Fired when the [*selectionIndex*](#selectionIndex) property has changed.
+Fired when the [*selectionIndex*](#selectionindex) property has changed.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*selectionIndex*](#selectionindex).
 
-- **value**: *number*
-    The new value of [*selectionIndex*](#selectionIndex).
+### borderColorChanged
 
+Fired when the [*borderColor*](#bordercolor) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*borderColor*](#bordercolor).
 
 ### textColorChanged
 
-Fired when the [*textColor*](#textColor) property has changed.
+Fired when the [*textColor*](#textcolor) property has changed.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*textColor*](#textcolor).
 
-- **value**: *[Color](../types.md#color)*
-    The new value of [*textColor*](#textColor).
+### fontChanged
 
+Fired when the [*font*](#font) property has changed.
 
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`FontValue`](../types.md#fontvalue)</span> | The new value of [*font*](#font).
 
-
-
-## Example
-```js
-const {Picker, ui} = require('tabris');
-
-// Create a picker widget to select a string from a list
-
-const AIRPORTS = [
-  {
-    id: 'SFO',
-    name: 'San Francisco'
-  },
-  {
-    id: 'TXL',
-    name: 'Berlin Tegel'
-  },
-  {
-    id: 'FRA',
-    name: 'Frankfurt'
-  }
-];
-
-let picker = new Picker({
-  left: 20, top: 20, right: 20,
-  itemCount: AIRPORTS.length,
-  itemText: (index) => AIRPORTS[index].name,
-  selectionIndex: 1
-}).appendTo(ui.contentView);
-
-picker.on('select', ({index}) => console.log('Selected ' + AIRPORTS[index].id));
-```
-## See also
-
-- [Simple Picker snippet](https://github.com/eclipsesource/tabris-js/tree/v2.7.0/snippets/picker.js)

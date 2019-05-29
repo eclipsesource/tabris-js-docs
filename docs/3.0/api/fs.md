@@ -24,8 +24,8 @@ fs.writeFile(fs.cacheDir + '/file.txt', "Hello World!")
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Using the file system to read and write files](https://playground.tabris.com/?gitref=v3.0.0&snippet=fs.jsx)
+  
+[<span class='language jsx'>JSX</span> Using the file system to read and write files](https://playground.tabris.com/?gitref=v3.0.0&snippet=fs.jsx)
 
 ## Methods
 

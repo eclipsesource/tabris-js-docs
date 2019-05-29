@@ -31,8 +31,8 @@ new SearchAction({title: 'Search', image: 'resources/search.png'})
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Creating a `SearchAction`](https://playground.tabris.com/?gitref=v3.0.0&snippet=navigationview-searchaction.jsx)
+  
+[<span class='language jsx'>JSX</span> Creating a `SearchAction`](https://playground.tabris.com/?gitref=v3.0.0&snippet=navigationview-searchaction.jsx)
 
 ## Constructor
 

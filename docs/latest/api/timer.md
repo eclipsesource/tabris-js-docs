@@ -2,76 +2,74 @@
 ---
 # Timer
 
-This API is available in the global namespace. You do not need to import it explicitly.
+## Example
+```js
+setTimeout(() => console.log('Timer finished after 2 seconds'), 2000);
+```
+
+See also:
+  
+[<span class='language tsx'>TSX</span> timer.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=timer.tsx)
 
 ## Methods
 
 ### clearInterval(id)
 
 
-**Parameters:** 
-
-- id: *any*
-  - the ID that was returned by `setInterval`.
 
 Cancels the running interval associated with the given ID. When given an invalid ID, nothing happens.
+
+
+Parameter|Type|Optional|Description
+-|-|-|-
+id | <span style="white-space:nowrap;">[`any`](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)</span> | No | The ID that was returned by `setInterval`.
+
+
+Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
 
 ### clearTimeout(id)
 
 
-**Parameters:** 
-
-- id: *any*
-  - the ID that was returned by `setTimeout`.
 
 Cancels the running timeout associated with the given ID. When given an invalid ID, nothing happens.
 
-### setInterval(callback, delay, ...params)
+
+Parameter|Type|Optional|Description
+-|-|-|-
+id | <span style="white-space:nowrap;">[`any`](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)</span> | No | The ID that was returned by `setTimeout`.
 
 
-**Parameters:** 
+Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
 
-- callback: *Function*
-  - the function to call.
-- delay: *number* [**Optional**]
-  - the delay in milliseconds.
-- ...params: *any[]*
-  - one or more values passed on to the callback.
+### setInterval(callback, delay?, ...params)
 
-**Returns:** *any*
+
 
 Calls the given function repeatedly, each times waiting the given delay. The actual delay may be slightly longer than the given one.
 
-### setTimeout(callback, delay, ...params)
+
+Parameter|Type|Optional|Description
+-|-|-|-
+callback | <span style="white-space:nowrap;">`Function`</span> | No | The function to call.
+delay | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | Yes | The delay in milliseconds.
+...params | <span style="white-space:nowrap;">`any[]`</span> | No | One or more values passed on to the callback.
 
 
-**Parameters:** 
+Returns <span style="white-space:nowrap;">[`any`](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)</span>
 
-- callback: *Function*
-  - the function to call.
-- delay: *number* [**Optional**]
-  - the delay in milliseconds.
-- ...params: *any[]*
-  - one or more values passed on to the callback.
+### setTimeout(callback, delay?, ...params)
 
-**Returns:** *any*
+
 
 Calls the given function with `param` (and all following parameters) after the specified delay. The actual delay may be slightly longer than the given one.
 
 
-## Example
-```js
-const {Button, ui} = require('tabris');
+Parameter|Type|Optional|Description
+-|-|-|-
+callback | <span style="white-space:nowrap;">`Function`</span> | No | The function to call.
+delay | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | Yes | The delay in milliseconds.
+...params | <span style="white-space:nowrap;">`any[]`</span> | No | One or more values passed on to the callback.
 
-new Button({
-  centerX: 0, centerY: 0,
-  text: 'Press me!'
-}).on('select', ({target}) => {
-  target.text = 'Please wait...';
-  setTimeout(sayThanks, 2000, target);
-}).appendTo(ui.contentView);
 
-function sayThanks(widget) {
-  widget.text = 'Thank you!';
-}
-```
+Returns <span style="white-space:nowrap;">[`any`](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)</span>
+

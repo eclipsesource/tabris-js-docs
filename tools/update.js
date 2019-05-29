@@ -29,7 +29,15 @@ const INDEX_HEAD = `---
   const targetYml = path.join(DATA_DIR, `toc-${version.replace(/\./g, '-')}.yml`);
   const sourceYml = path.join(targetDir, 'toc.yml');
   console.log('Prepare  ...');
-  await exec('bundle update'); // randomly fails for no good reason, just try again
+  let updated = false;
+  for (let i = 0; (i < 4) && !updated; i++) {
+    try {
+      await exec('bundle update'); // randomly fails for no apparent reason, just try again
+    } catch (ex) {
+      // try again
+    }
+    updated = true;
+  }
   clean(targetDir);
   clean(targetYml);
   clean(LATEST_DIR);

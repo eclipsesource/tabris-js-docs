@@ -4,21 +4,19 @@
 
 Tabris.js utilizes [Apache Cordova](http://cordova.apache.org) to build and package apps. Apps can be built without any local setup [using the free online build service](#build-service) on tabrisjs.com. To [build an app on your local machine](#local-build), you need to setup developer tools like Xcode, Visual Studio or the Android SDK. The following features are supported by the two different build types.
 
-|                           | Build Service | Local Build |
-| :------------------------ |:---------------:| :---------------: |
-| Building iOS Apps         |       ✓         |       ✓      |
-| Building Android Apps     |       ✓         |       ✓      |
-| Building Windows Apps     |       ✓         |       ✓      |
-| [Integrate Cordova Plugins](cordova.md)     |       ✓      |       ✓      |
-| [Cordova Build Hooks](http://cordova.apache.org/docs/en/edge/guide_appdev_hooks_index.md.html#Hooks%20Guide)       |       ✓      |       ✓      |
-| Custom Project Structure  |       ✓      |       ✓      |
-| Own Build Scripts         |              |       ✓      |
-| Using own build hardware  |              |       ✓      |
-| Other SCMs than Git       |              |       ✓      |
+|                           | Build Service | Local Build
+|---------------------------|---------------|------------
+| Building iOS Apps |✓|✓
+| Building Android Apps|✓|✓
+| npm "build" Script|✓|✓|
+| [Integrate Cordova Plugins](cordova.md)|✓|✓
+| [Cordova Build Hooks](http://cordova.apache.org/docs/en/edge/guide_appdev_hooks_index.md.html)|✓|✓
+| Custom Project Structure|✓|✓|
+| Using own build hardware||✓|
+| Other SCMs than Git||✓|
+| Custom Build Environment||✓|
 
 > :point_right: The online build service is free for unlimited public GitHub repositories and 1 private repository. To build from unlimited private repositories, you need a [Pro account](https://tabrisjs.com/pricing/). [Local builds](#local-build) are free for everyone.
-
-> :point_right: When building Windows apps, please also read the [Windows Support Documentation](windows-support.md) on the topic.
 
 ## Project Layout
 
@@ -46,7 +44,7 @@ See [package.json | npm documentation](https://docs.npmjs.com/files/package.json
   // ...
   "main": "src/app.js",
   "dependencies": {
-    "tabris": "^2.0.0",
+    "tabris": "^3.0.0",
     "left-pad": "^1.1.3",
     // ...
   }
@@ -56,9 +54,9 @@ See [package.json | npm documentation](https://docs.npmjs.com/files/package.json
 
 Dependencies are automatically installed during the build process.
 
-#### Build scripts
+#### NPM Build scripts
 
-When a Tabris.js app is built, `build` scripts given in the `package.json` are executed before the JavaScript code is bundled into the app. They can be used to transpile the JavaScript app code.
+When a Tabris.js app is built, the `build` scripts given in the `package.json` are executed before the JavaScript code is bundled into the app. They can be used to transpile (source-to-source transform) the JavaScript app code.
 
 ```json
 {
@@ -71,30 +69,34 @@ When a Tabris.js app is built, `build` scripts given in the `package.json` are e
 }
 ```
 
-Supported build script hooks are:
+Supported build script names are:
 
-  - `"build"`: executed for all platform builds
-  - `"build:android"`: executed for Android builds
-  - `"build:ios"`: executed for iOS builds
-  - `"build:windows"`: executed for Windows builds
+  - `"build:android"`: executed only for Android builds
+  - `"build:ios"`: executed only for iOS builds
+  - `"build"`: executed last for any platform
 
-Make sure the `"build"` script is executed before executing `tabris serve` (when running the app locally). This step can be automated by using the watch mode of your transpiler, which will compile the file on change (refer to your transpiler's documentation). A module like [npm-run-all](https://www.npmjs.com/package/npm-run-all) can help run the transpiler in watch mode and `tabris serve` at the same time.
+#### Example: TypeScript
 
-For bigger projects you may want to use a module bundler like [rollup.js](https://rollupjs.org). It removes the overhead of loading multiple modules and uses static analysis to remove unused code from the bundled artifact.
+Generate a Tabris.js app using the `tabris init` command and select *"Compiled"* as the project type. The resulting `package.json` is already configured to use the TypeScript compiler. The details are explained [here](./typescript.md#setup).
 
-#### Example: Transpiling ES6 code
+#### Example: Babel.js
 
-Install the Babel transpiler and the necessary plug-ins. The `--save-dev` option will add the dependencies to your `package.json`:
+Babel.js may be used to add support for specific [JavaScript features not natively supported by Tabris.js](./runtime.md).
+
+To do so, install the Babel transpiler and the necessary plug-ins. The `--save-dev` option will add the dependencies to your `package.json`:
 
 ```
-npm install --save-dev babel-cli babel-plugin-transform-es2015-modules-commonjs
+npm install --save-dev @babel/core @babel/cli @babel/plugin-transform-modules-commonjs @babel/plugin-transform-async-to-generator
 ```
 
 Create a `.babelrc` file in the root of your project:
 
 ```json
 {
-  "plugins": ["transform-es2015-modules-commonjs"]
+  "plugins": [
+    "@babel/plugin-transform-modules-commonjs",
+    "@babel/plugin-transform-async-to-generator"
+  ]
 }
 ```
 
@@ -103,13 +105,13 @@ Include the following build script in the `scripts` sections of your `package.js
 ```json
 {
   "scripts": {
-    "build": "babel --compact false --out-dir dist/ src/"
+    "build": "babel --compact false src -d dist"
   }
   ...
 }
 ```
 
-Let the `main` field point to the *transpiled* `app.js` in `dist/`:
+Let the `main` field point to the *compiled* version of `app.js` in `dist/`:
 
 ```json
 {
@@ -118,40 +120,11 @@ Let the `main` field point to the *transpiled* `app.js` in `dist/`:
 }
 ```
 
-In case iOS 9 support is desired, more Babel plugins can be added to compensate for missing ES6 features.
-See [EcmaScript 6](lang.md#ecmascript-6) for more information about supported ES6 features in iOS 9.
-
-#### Example: Transpiling TypeScript code
-
-Install the TypeScript compiler:
-
-```
-npm install --save-dev typescript
-```
-
-Include the following build script in the `scripts` sections of your `package.json`:
-
-```json
-{
-  "scripts": {
-    "build": "tsc -p ."
-  }
-  ...
-}
-```
-
-Let the `main` field point to the *transpiled* `app.js` in `dist/`:
-
-```json
-{
-  "main": "dist/app.js",
-  ...
-}
-```
+To test the setup run `npm run build` or simply `tabris serve`.
 
 ### The config.xml file
 
-The minimal build configuration you need is a `cordova/config.xml` file that describes your app. It contains information like the id of your app, its version, icons and splash screens. The format of the `config.xml` is the same as a standard [Cordova config.xml](https://cordova.apache.org/docs/en/4.0.0/config_ref_index.md.html#The%20config.xml%20File) file. A minimal example config could look like this:
+The minimal build configuration you need is a `cordova/config.xml` file that describes your app. It contains information like the id of your app, its version, app icons and splash screens. The format of the `config.xml` is the same as a standard [Cordova config.xml](https://cordova.apache.org/docs/en/8.x/config_ref/index.html) file. A minimal example config could look like this:
 
 ```xml
 <?xml version='1.0' encoding='utf-8'?>
@@ -170,13 +143,13 @@ The minimal build configuration you need is a `cordova/config.xml` file that des
 
 To add a set of Apache Cordova plug-ins you only need to add them to `config.xml` using the `<plugin />` tag. It allows you to add plug-ins using an ID, an HTTP URL or a git URL.
 
-For example, to add the [Cordova Camera Plugin](http://plugins.cordova.io/#/package/org.apache.cordova.camera), you'd add this line:
+For example, to add the [Cordova Camera Plugin](https://plugins.cordova.io/#/package/org.apache.cordova.camera), you'd add this line:
 
 ```xml
 <plugin name="cordova-plugin-camera" spec="^2.3.0" />
 ```
 
-You can integrate all available [Cordova Plugins](http://plugins.cordova.io/#/) by including them in your `config.xml`.
+You can integrate all available [Cordova Plugins](https://plugins.cordova.io/#/) by including them in your `config.xml`.
 
 **Important:** You can install all available Cordova Plugins. Most of the Plugins will work out of the box. However, since Tabris.js uses a **native UI** and **no HTML5**, plugins that rely on an HTML5 UI (i.e. the DOM) won't work.
 
@@ -195,7 +168,7 @@ In addition to the settings described in the [Cordova config.xml Guide](http://c
 
 | Name                   | Allowed Values | Default Value | Description |
 |------------------------|----------------|---------------|-------------|
-| EnableDeveloperConsole | true/false     | false         | Enables/Disables the [Tabris.js Developer Console](getting-started.md#the-developer-console). Setting the value to `$IS_DEBUG` will make the value follow the value for [debug mode](#settings)|
+| EnableDeveloperConsole | true/false     | false         | Enables/Disables the [Tabris.js Developer Console](developer-app.md#the-developer-console). Setting the value to `$IS_DEBUG` will make the value follow the value for [debug mode](#settings)|
 | UseStrictSSL           | true/false     | true          | Activate/Deactivate SSL certificate validation on [XHR](w3c-api.md#xmlhttprequest). When disabled self signed SSL certificates are accepted. Should be enabled in production. |
 
 Example:
@@ -210,32 +183,7 @@ Example:
 | Theme                   |- `@style/Theme.Tabris`<br/>- `@style/Theme.Tabris.Light`<br/>- `@style/Theme.Tabris.Light.DarkAppBar` (Default)<br/><br/>In addition to the bundled Tabris themes, a resource reference to a custom Android theme can be specified. Custom themes have to inherit from one of the Tabris base themes.<br/><br/>Example: `<preference name="Theme" value="@style/Theme.MyAppTheme" />` |
 | ThemeSplash             | - `@style/Theme.Tabris.SplashScreen`<br/>- `@style/Theme.Tabris.Light.SplashScreen` (Default)<br/><br/>The splash screen is shown to the user while the app is starting up. By default this screen has a white background. The `ThemeSplash` preference allows to set one of the bundled themes or to provide a custom theme.<br/><br/>Example: `<preference name="ThemeSplash" value="@style/Theme.Tabris.SplashScreen" />`<br/><br/>Note that the `config.xml` element `<splash .. />` can be used to set an image on the splash screen. For styling guides see the material design guidelines on [launch screens](https://material.google.com/patterns/launch-screens.html). |
 
-#### Windows specific preferences
-
-Windows apps always have a splash screen. If you do not configure one, the default Tabris.js splash screen is used. To configure your own splash screen, you have to give a logo in three different resolutions and the background color. The naming of the files has to match those given here:
-
-```xml
-<platform name="windows">
-    <splash src="resources/windows/splash/SplashScreen.scale-100.png" width="620" height="300"/>
-    <splash src="resources/windows/splash/SplashScreen.scale-150.png" width="930" height="450"/>
-    <splash src="resources/windows/splash/SplashScreen.scale-200.png" width="1240" height="600"/>
-    <preference name="SplashScreenBackgroundColor" value="#009688"/>
-</platform>
-```
-
-To replace the tabris logo on the launcher tile, Windows store and task icon you also have to give all of the following files. Again, naming is relevant:
-
-```xml
-<platform name="windows">
-    <icon src="res/windows/storelogo.png" target="StoreLogo" />
-    <icon src="res/windows/smalllogo.png" target="Square30x30Logo" />
-    <icon src="res/Windows/Square44x44Logo.png" target="Square44x44Logo" />
-    <icon src="res/Windows/Small71x71Logo.png" target="Square71x71Logo" />
-    <icon src="res/Windows/Square150x150Logo.png" target="Square150x150Logo" />
-    <icon src="res/Windows/Large310x310Logo.png" target="Square310x310Logo" />
-    <icon src="res/Windows/Wide310x150Logo.png" target="Wide310x150Logo" />
-</platform>
-```
+For more information, see [Theming an Android app](theming-android.md).
 
 ### The .tabrisignore file
 
@@ -268,11 +216,10 @@ After your app has become valid, you are ready to execute the first build. Just 
 * **App Directory:** The directory within your repository that contains your Tabris.js app. The value must be relative to the repository root.
 * **iOS Signing Key:** iOS apps can not be deployed to a mobile device without being signed. If you want to build an iOS app you need an Apple Developer account and provide the certificate together with the provisioning profile. A very good tutorial on how to get these files can be found in the [Phonegap Build documentation](http://docs.phonegap.com/phonegap-build/signing/ios/).
 * **Android Signing Key:** Android apps need to be signed with a certificate only if you want to deploy them to Play Store. You can find a very good tutorial in the [Phonegap Build documentation](http://docs.phonegap.com/phonegap-build/signing/android/) as well.
-* **Windows Architecure** Choose which CPU architecture you want to build your package for.
 * **Environment Variables:** Key/Value pairs that will be stored and transferred encrypted to the build machines. They can be used within the config.xml or custom hooks. Use cases are adding plug-ins from private git repositories or handling access keys.
 * **Builds to keep:** Specifies the number of builds that should be kept before deleting them automatically.
 * **Tabris.js Version:** The Tabris.js *client* version to use in the app. In contrast to the "tabris" dependency to your `package.json` which defines the version of the JavaScript module, this setting defines the version of the native client that will interpret your JavaScript code. In most cases, the value `latest` is good enough here. But if you want to stick to a fixed Tabris.js version you can configure it here.
-* **Debug:** Enables the *debug mode*. If set to `ON`, your app will be built including debug symbols and it will be packaged into the Tabris.js Developer App to make development easier. This allows you to use all the benefits like the developer console or the reload also with your own app. Please be aware that debug versions can not be submitted to the app stores. Debug `OFF` means your app will be built to be ready for release: no Developer App, no console, no reload. Only your JavaScript code is executed.
+* **Debug:** Enables the *debug mode*. If set to `ON`, your app will be built including debug symbols and enabled [developer console](./developer-app.md#the-developer-console). (Assuming `EnableDeveloperConsole` is set to `$IS_DEBUG` in your [config.xml](#preferences).) That enables [code side-loading](./developer-app.md#code-sideloading), logging and [attaching a debugger](./debug.md). Please be aware that debug versions can not be submitted to the app stores. Debug `OFF` means your app will be built to be ready for release.
 
 ## Local Build
 
@@ -282,7 +229,6 @@ You can build Tabris.js apps on your local machine using the [Tabris CLI](https:
 
 To build apps on your machine, the development environment for the target platform must be installed.
 If you're targeting iOS, you need macOS with a recent version of Xcode.
-For Windows, you need a Windows PC with Visual Studio 2017.
 Android apps can be build on any OS with the latest Android SDK installed.
 
 The Tabris CLI must be installed globally on your system:
@@ -301,7 +247,7 @@ You can find this key on your [profile page](https://tabrisjs.com/settings/accou
 To build your app, run
 
 ```
-tabris build [android|ios|windows]
+tabris build [android|ios]
 ```
 
 For more command-line options, please refer to the [CLI documentation](https://www.npmjs.com/package/tabris-cli).

@@ -1,148 +1,335 @@
 ---
 ---
-# TextInput
+# Class "TextInput"
 
-Extends [Widget](Widget.md)
+<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> > <span style="white-space:nowrap;">[`TextInput`](TextInput.md)</span>
 
 A widget that allows to enter text.
 
-Import this type with "`const {TextInput} = require('tabris');`"
 
-Android | iOS
---- | ---
-![TextInput on Android](img/android/TextInput.png) | ![TextInput on iOS](img/ios/TextInput.png)
+<div class="tabris-image"><figure><div><img srcset="img/android/TextInput.png 2x" src="img/android/TextInput.png" alt="TextInput on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/TextInput.png 2x" src="img/ios/TextInput.png" alt="TextInput on iOS"/></div><figcaption>iOS</figcaption></figure></div>
+
+Constructor | *public*
+Singleton | *No*
+Namespace |`tabris`
+Direct subclasses | *None*
+JSX support | Element: `<TextInput/>`<br/>Parent element: [`<Composite/>`](Composite.md) *and any widget extending* <span style="white-space:nowrap;">[`Composite`](Composite.md)</span><br/>Child elements: *None*<br/>Text content: *Sets [text](#text) property*<br/>
+
+## Example
+```js
+import {TextInput, contentView} from 'tabris';
+
+new TextInput({
+  left: 16, right: 16,
+  message: 'Name'
+}).onInput(({text}) => console.log(`Text changed to ${text}`))
+  .appendTo(contentView);
+```
+
+See also:
+  
+[<span class='language jsx'>JSX</span> Creating a simple `TextInput`](https://playground.tabris.com/?gitref=v3.0.0&snippet=textinput.jsx)  
+[<span class='language js'>JS</span> Handling selection on a `TextInput`](https://playground.tabris.com/?gitref=v3.0.0&snippet=textinput-selection.js)  
+[<span class='language jsx'>JSX</span> Handling focus changes on a `TextInput`](https://playground.tabris.com/?gitref=v3.0.0&snippet=textinput.jsx)  
+[<span class='language js'>JS</span> Creating `TextInputs` with various enter key types](https://playground.tabris.com/?gitref=v3.0.0&snippet=textinput-enterkeytype.js)  
+[<span class='language js'>JS</span> Creating `TextInputs` with various keyboards](https://playground.tabris.com/?gitref=v3.0.0&snippet=textinput-keyboard.js)  
+[<span class='language js'>JS</span> Showing password in clear text on a `TextInput`](https://playground.tabris.com/?gitref=v3.0.0&snippet=textinput-revealpassword.js)  
+[<span class='language jsx'>JSX</span> A form using `TextInput` and other input controls](https://playground.tabris.com/?gitref=v3.0.0&snippet=input.jsx)  
+[<span class='language tsx'>TSX</span> textinput-focus.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=textinput-focus.tsx)  
+[<span class='language ts'>TS</span> textinput-keyboard.ts](https://playground.tabris.com/?gitref=v3.0.0&snippet=textinput-keyboard.ts)  
+[<span class='language tsx'>TSX</span> textinput-style.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=textinput-style.tsx)
+
+## Constructor
+
+### new TextInput(properties?)
+
+Parameter|Type|Optional|Description
+-|-|-|-
+properties | <span style="white-space:nowrap;">`Properties<TextInput>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
 
 ## Properties
 
 ### alignment
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
 
-Type: *string*, supported values: `left`, `right`, `center`, default: `left`
 
 The horizontal alignment of the text.
 
-### autoCapitalize
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
+Type | `'left'` \| `'right'` \| `'centerX'`
+Default | `'left'`
+Settable | *Yes*
+Change events | *Yes*
 
-Type: *any*, supported values: `true`, `false`, `none`, `sentence`, `word`, `all`
+
+
+
+### autoCapitalize
+
 
 Control how text input is capitalized.
 
-`none` - Do not change any text input
-`sentence` - Capitalize the first word of a sentence
-`word` - Capitalize every word
-`all` - Capitalize every letter
+* `none` - Do not change any text input
+* `sentence` - Capitalize the first word of a sentence
+* `word` - Capitalize every word
+* `all` - Capitalize every letter
 
 The boolean value `false` maps to `none` whereas `true` is equal to `all`.
+
+Type | `true` \| `false` \| `none` \| `sentence` \| `word` \| `all`
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### autoCorrect
 
 
-Type: *boolean*, default: `false`
-
 Enables the spell checker and auto-correction feature.
 
-### borderColor
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
+Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
+Default | `false`
+Settable | *Yes*
+Change events | *Yes*
 
-Type: *[Color](../types.md#color)*
+
+
+
+### borderColor
+
 
 The color of the border of the TextInput. On iOS this is a rectangular border around the TextInput, on Android it is a single line below the TextInput.
 
-### cursorColor
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span></p>
+Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
+Settable | *Yes*
+Change events | *Yes*
 
-Type: *[Color](../types.md#color)*
+
+
+
+### cursorColor
+<p class="platforms"><span class='ios-tag' title='supported on iOS'>iOS</span></p>
 
 The color of the cursor in the `TextInput`.
+
+Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### editable
 
 
-Type: *boolean*, default: `true`
-
 Whether the text can be edited or not.
+
+Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
+Default | `true`
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### enterKeyType
 
 
-Type: *string*, supported values: `default`, `done`, `next`, `send`, `search`, `go`, default: `default`
-
 Label or icon to display on the keyboard 'confirmation' key. The key press can be captured via the `accept` event. Setting an `enterKeyType` other than `default` will change the key behavior to not close the keyboard automatically. The developer is able close the keyboard by removing the focus from the `TextInput`.
 
-### fillColor
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span></p>
+Type | `'default'` \| `'done'` \| `'next'` \| `'send'` \| `'search'` \| `'go'`
+Default | `'default'`
+Settable | *Yes*
+Change events | *Yes*
 
-Type: *[Color](../types.md#color)*
 
-The color of the background of the TextInput - applies only to iOS.
+See also:
+  
+[<span class='language js'>JS</span> textinput-enterkeytype.js](https://playground.tabris.com/?gitref=v3.0.0&snippet=textinput-enterkeytype.js)
+
+
+### floatMessage
+<p class="platforms"><span class='android-tag' title='supported on Android'>Android</span></p>
+
+Should the hint message float above the TextInput when focus is gained.
+
+Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
+Default | `true`
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### focused
 
 
-Type: *boolean*, default: `false`
-
 Reflects whether this widget has the keyboard focus. Setting this property to `true` will focus the widget and open the virtual keyboard, setting it to `false` will remove the focus and hide the virtual keyboard.
 
-### keepFocus
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
+Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
+Default | `false`
+Settable | *Yes*
+Change events | *Yes*
 
-Type: *boolean*, default: `false`
+
+
+
+### font
+
+
+The font used for the text.
+
+Type | <span style="white-space:nowrap;">[`FontValue`](../types.md#fontvalue)</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+
+
+### keepFocus
+
 
 When `true` the `TextInput` will keep its focus, even when tapped outside of the widget bounds.
+
+Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
+Default | `false`
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### keyboard
 
 
-Type: *string*, supported values: `ascii`, `decimal`, `email`, `number`, `numbersAndPunctuation`, `phone`, `url`, `default`, default: `default`
-
 Selects the keyboard type to use for editing this widget. Has no effect when `type` is set to `multiline`.
+
+Type | `'ascii'` \| `'decimal'` \| `'email'` \| `'number'` \| `'numbersAndPunctuation'` \| `'phone'` \| `'url'` \| `'default'`
+Default | `'default'`
+Settable | *Yes*
+Change events | *Yes*
+
+
+See also:
+  
+[<span class='language js'>JS</span> textinput-keyboard.js](https://playground.tabris.com/?gitref=v3.0.0&snippet=textinput-keyboard.js)  
+[<span class='language ts'>TS</span> textinput-keyboard.ts](https://playground.tabris.com/?gitref=v3.0.0&snippet=textinput-keyboard.ts)
+
 
 ### message
 
 
-Type: *string*
-
 A hint text that is displayed when the input field is empty. Does not apply on iOS when `type` is set to `multiline`.
 
-### revealPassword
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
+Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Settable | *Yes*
+Change events | *Yes*
 
-Type: *boolean*
+
+
+
+### revealPassword
+
 
 Makes the text visible when the `TextInput` has the type `password`.
 
-### selection
-<p class="platforms"><span class="ios-tag" title="supported on iOS">iOS</span><span class="android-tag" title="supported on Android">Android</span></p>
+Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
+Settable | *Yes*
+Change events | *Yes*
 
-Type: *number[]*
+
+See also:
+  
+[<span class='language js'>JS</span> textinput-revealpassword.js](https://playground.tabris.com/?gitref=v3.0.0&snippet=textinput-revealpassword.js)
+
+
+### selection
+
 
 The `selection` is a two element number array representing the text selections start and end position. The native platform usually shows selection handles so that the selection can be changed by the user. A `selection` array where both numbers are the same represent a single cursor at the given position. The selection start is the index of the first character where as the end is the index of the last character + 1. E.g. to select the word "ok" the selection would be `[0, 2]`.
 
 To make a selection visible the `TextInput` has to be in focus. Consequently the selection is preserved when the focus is lost and regained. When the user gives the `TextInput` focus by tapping on it, the selection is changed to represent his touch position.
 
- Getting the `selection` upon user interaction (e.g. a button press) the focus would be lost and possibly the `selection` altered due to user interaction. In such a scenario it is recommended to set the [`keepFocus`](#keepFocus) property to `true`.
+ Getting the `selection` upon user interaction (e.g. a button press) the focus would be lost and possibly the `selection` altered due to user interaction. In such a scenario it is recommended to set the [`keepFocus`](#keepfocus) property to `true`.
+
+Type | <span style="white-space:nowrap;">[`number[]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+See also:
+  
+[<span class='language js'>JS</span> textinput-selection.js](https://playground.tabris.com/?gitref=v3.0.0&snippet=textinput-selection.js)
+
+
+### style
+<p class="platforms"><span class='android-tag' title='supported on Android'>Android</span></p>
+
+The visual appearance of the text widget.
+
+With the `style` _outline_, _fill_ or _underline_ the message hint will float above the `TextInput` on Android. This behavior can be controlled with the property `floatMessage`. The `style` _none_ will remove any background visualization, allowing to create a custom background. 
+
+Type | `'default'` \| `'outline'` \| `'fill'` \| `'underline'` \| `'none'`
+Default | `'default'`
+Settable | *On creation*
+Change events | *No*
+
+
+
+
+This property can only be set via constructor or JSX. Once set, it cannot change anymore.See also:
+  
+[<span class='language tsx'>TSX</span> textinput-style.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=textinput-style.tsx)
+
 
 ### text
 
 
-Type: *string*
-
 The text in the input field.
+
+Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Settable | *Yes*
+Change events | *Yes*
+JSX content type | `string`
+
+
+
+
+When using TextInput as an JSX element the element content is mapped to this property. Therefore
+```jsx
+<TextInput>Hello World</TextInput>
+```
+ has the same effect as:
+```jsx
+<TextInput text='Hello World' />
+```
+
 
 ### textColor
 
 
-Type: *[Color](../types.md#color)*
-
 The color of the text.
+
+Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
+Settable | *Yes*
+Change events | *Yes*
+
+
+
 
 ### type
 
 
-Type: *string*, supported values: `default`, `password`, `search`, `multiline`, default: `default`
+The type of the text widget.
 
-The type of the text widget. Windows 10 currently interprets `search`  as `default`.<br/>This property can only be set on widget creation. Once set, it cannot be changed anymore.
+Type | `'default'` \| `'password'` \| `'search'` \| `'multiline'`
+Default | `'default'`
+Settable | *On creation*
+Change events | *No*
+
+
+
+
+This property can only be set via constructor or JSX. Once set, it cannot change anymore.
 
 
 ## Events
@@ -151,187 +338,9 @@ The type of the text widget. Windows 10 currently interprets `search`  as `defau
 
 Fired when a text input has been finished by pressing the keyboard's Enter key. The label of this key may vary depending on the platform and locale.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **text**: *string*
-    The current value of *[text](#text)*.
-
-
-### alignmentChanged
-
-Fired when the [*alignment*](#alignment) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*alignment*](#alignment).
-
-
-### autoCapitalizeChanged
-
-Fired when the [*autoCapitalize*](#autoCapitalize) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *any*
-    The new value of [*autoCapitalize*](#autoCapitalize).
-
-
-### autoCorrectChanged
-
-Fired when the [*autoCorrect*](#autoCorrect) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*autoCorrect*](#autoCorrect).
-
-
-### blur
-
-Fired when the widget lost focus.
-### borderColorChanged
-
-Fired when the [*borderColor*](#borderColor) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*borderColor*](#borderColor).
-
-
-### cursorColorChanged
-
-Fired when the [*cursorColor*](#cursorColor) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*cursorColor*](#cursorColor).
-
-
-### editableChanged
-
-Fired when the [*editable*](#editable) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*editable*](#editable).
-
-
-### enterKeyTypeChanged
-
-Fired when the [*enterKeyType*](#enterKeyType) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*enterKeyType*](#enterKeyType).
-
-
-### fillColorChanged
-
-Fired when the [*fillColor*](#fillColor) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *[Color](../types.md#color)*
-    The new value of [*fillColor*](#fillColor).
-
-
-### focus
-
-Fired when the widget gains focus.
-### focusedChanged
-
-Fired when the [*focused*](#focused) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*focused*](#focused).
-
-
-### input
-
-Fired when the text was changed by the user.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **text**: *string*
-    The new value of *[text](#text)*.
-
-
-### keepFocusChanged
-
-Fired when the [*keepFocus*](#keepFocus) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*keepFocus*](#keepFocus).
-
-
-### keyboardChanged
-
-Fired when the [*keyboard*](#keyboard) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*keyboard*](#keyboard).
-
-
-### messageChanged
-
-Fired when the [*message*](#message) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*message*](#message).
-
-
-### revealPasswordChanged
-
-Fired when the [*revealPassword*](#revealPassword) property has changed.
-
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *boolean*
-    The new value of [*revealPassword*](#revealPassword).
-
+Parameter|Type|Description
+-|-|-
+text | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The current value of *[text](#text)*.
 
 ### select
 
@@ -339,70 +348,164 @@ The `select` event is fired when the user alters the text [`selection`](#selecti
 
 The event also fires when the user taps inside a `TextInput` since this involves to set the cursor to the tapped position.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+Parameter|Type|Description
+-|-|-
+selection | <span style="white-space:nowrap;">[`number[]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The current `selection` as a two element number array of start and end position.
 
-- **selection**: *number[]*
-    The current `selection` as a two element number array of start and end position.
+### blur
 
+Fired when the widget lost focus.
 
-### selectionChanged
+### focus
 
-Fired when the [*selection*](#selection) property has changed.
+Fired when the widget gains focus.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+See also:
+  
+[<span class='language tsx'>TSX</span> textinput-focus.tsx](https://playground.tabris.com/?gitref=v3.0.0&snippet=textinput-focus.tsx)
+### input
 
-- **value**: *number[]*
-    The new value of [*selection*](#selection).
+Fired when the text was changed by the user.
 
+Parameter|Type|Description
+-|-|-
+text | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of *[text](#text)*.
+
+## Change Events
 
 ### textChanged
 
 Fired when the [*text*](#text) property has changed.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
-
-- **value**: *string*
-    The new value of [*text*](#text).
-
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*text*](#text).
 
 ### textColorChanged
 
-Fired when the [*textColor*](#textColor) property has changed.
+Fired when the [*textColor*](#textcolor) property has changed.
 
-#### Event Parameters 
-- **target**: *this*
-    The widget the event was fired on.
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*textColor*](#textcolor).
 
-- **value**: *[Color](../types.md#color)*
-    The new value of [*textColor*](#textColor).
+### messageChanged
 
+Fired when the [*message*](#message) property has changed.
 
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*message*](#message).
 
+### editableChanged
 
+Fired when the [*editable*](#editable) property has changed.
 
-## Example
-```js
-const {TextInput, TextView, ui} = require('tabris');
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of [*editable*](#editable).
 
-// Create a text input field with input finished listener
+### floatMessageChanged
 
-new TextInput({
-  top: 20, left: '20%', right: '20%',
-  message: 'Type here, then confirm'
-}).on('accept', ({text}) => {
-  new TextView({
-    top: 'prev() 20', left: '20%',
-    text: text
-  }).appendTo(ui.contentView);
-}).appendTo(ui.contentView);
-```
-## See also
+Fired when the [*floatMessage*](#floatmessage) property has changed.
 
-- [Simple TextInput snippet](https://github.com/eclipsesource/tabris-js/tree/v2.7.0/snippets/textinput.js)
-- [Example with Text and other input controls](https://github.com/eclipsesource/tabris-js/tree/v2.7.0/examples/input/input.js)
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of [*floatMessage*](#floatmessage).
+
+### alignmentChanged
+
+Fired when the [*alignment*](#alignment) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*alignment*](#alignment).
+
+### autoCorrectChanged
+
+Fired when the [*autoCorrect*](#autocorrect) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of [*autoCorrect*](#autocorrect).
+
+### autoCapitalizeChanged
+
+Fired when the [*autoCapitalize*](#autocapitalize) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`any`](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)</span> | The new value of [*autoCapitalize*](#autocapitalize).
+
+### keyboardChanged
+
+Fired when the [*keyboard*](#keyboard) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*keyboard*](#keyboard).
+
+### enterKeyTypeChanged
+
+Fired when the [*enterKeyType*](#enterkeytype) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*enterKeyType*](#enterkeytype).
+
+### focusedChanged
+
+Fired when the [*focused*](#focused) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of [*focused*](#focused).
+
+### keepFocusChanged
+
+Fired when the [*keepFocus*](#keepfocus) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of [*keepFocus*](#keepfocus).
+
+### borderColorChanged
+
+Fired when the [*borderColor*](#bordercolor) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*borderColor*](#bordercolor).
+
+### revealPasswordChanged
+
+Fired when the [*revealPassword*](#revealpassword) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of [*revealPassword*](#revealpassword).
+
+### cursorColorChanged
+
+Fired when the [*cursorColor*](#cursorcolor) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*cursorColor*](#cursorcolor).
+
+### selectionChanged
+
+Fired when the [*selection*](#selection) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`number[]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*selection*](#selection).
+
+### fontChanged
+
+Fired when the [*font*](#font) property has changed.
+
+Parameter|Type|Description
+-|-|-
+value | <span style="white-space:nowrap;">[`FontValue`](../types.md#fontvalue)</span> | The new value of [*font*](#font).
+

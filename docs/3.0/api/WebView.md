@@ -26,11 +26,11 @@ new WebView({
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Creating a simple `WebView`](https://playground.tabris.com/?gitref=v3.0.0&snippet=webview.jsx)
-- [Demo JavaScript Snippet: Creating browser-like navigation buttons in a `WebView`](https://playground.tabris.com/?gitref=v3.0.0&snippet=webview-navigation.js)
-- [Demo JavaScript Snippet: Demonstrating web messaging in a `WebView`](https://playground.tabris.com/?gitref=v3.0.0&snippet=webview-webmessaging.js)
-- [Web Messaging on Wikipedia](https://en.wikipedia.org/wiki/Web_Messaging)
+  
+[<span class='language jsx'>JSX</span> Creating a simple `WebView`](https://playground.tabris.com/?gitref=v3.0.0&snippet=webview.jsx)  
+[<span class='language js'>JS</span> Creating browser-like navigation buttons in a `WebView`](https://playground.tabris.com/?gitref=v3.0.0&snippet=webview-navigation.js)  
+[<span class='language js'>JS</span> Demonstrating web messaging in a `WebView`](https://playground.tabris.com/?gitref=v3.0.0&snippet=webview-webmessaging.js)  
+[Web Messaging on Wikipedia](https://en.wikipedia.org/wiki/Web_Messaging)
 
 ## Constructor
 

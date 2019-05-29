@@ -23,8 +23,8 @@ new InactivityTimer({delay: 2000})
 ```
 
 See also:
-
-- [Demo JavaScript Snippet: inactivitytimer.js](https://playground.tabris.com/?gitref=v3.0.0&snippet=inactivitytimer.js)
+  
+[<span class='language js'>JS</span> inactivitytimer.js](https://playground.tabris.com/?gitref=v3.0.0&snippet=inactivitytimer.js)
 
 ## Constructor
 

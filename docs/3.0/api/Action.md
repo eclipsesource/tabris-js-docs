@@ -30,9 +30,9 @@ new Action({
 ```
 
 See also:
-
-- [Demo JavaScript/JSX Snippet: Creating a simple `Action`](https://playground.tabris.com/?gitref=v3.0.0&snippet=navigationview-action.jsx)
-- [Demo JavaScript/JSX Snippet: Using placement property](https://playground.tabris.com/?gitref=v3.0.0&snippet=navigationview-action-placement.jsx)
+  
+[<span class='language jsx'>JSX</span> Creating a simple `Action`](https://playground.tabris.com/?gitref=v3.0.0&snippet=navigationview-action.jsx)  
+[<span class='language jsx'>JSX</span> Using placement property](https://playground.tabris.com/?gitref=v3.0.0&snippet=navigationview-action-placement.jsx)
 
 ## Constructor
 
