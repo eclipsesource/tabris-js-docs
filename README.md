@@ -41,7 +41,9 @@ Now you can open http://localhost:4000 in your browser to see the docs.
 
 ### Updating
 
-- Run `node tools/update`
+- `node tools/update` generates documentation for the currently checked out branch of tabris-js. The server keeps running after the link checks for manual inspection
+- `node tools/update release` as above, but exists with appropriate exit code after link checks
+- `node tools/update pre-release` as above, but skips links not expected to work before a full release
 
 ### Checking links
 

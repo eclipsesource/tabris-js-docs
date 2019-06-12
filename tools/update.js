@@ -21,6 +21,9 @@ const INDEX_HEAD = `---
 
 `;
 
+const release = process.argv[2] === 'release';
+const preRelease = process.argv[2] === 'pre-release';
+
 (async () => {
   await preChecks();
   const version = getTargetVersion();
@@ -28,7 +31,14 @@ const INDEX_HEAD = `---
   const decoTargetDir = path.join(targetDir, DECO_SUBDIR);
   const targetYml = path.join(DATA_DIR, `toc-${version.replace(/\./g, '-')}.yml`);
   const sourceYml = path.join(targetDir, 'toc.yml');
-  console.log('Prepare  ...');
+  console.log('Prepare...');
+  if (release) {
+    console.log('This is a release update');
+  } else if (preRelease) {
+    console.log('This is a pre-release update');
+  } else {
+    console.log('This is a test update');
+  }
   let updated = false;
   for (let i = 0; (i < 4) && !updated; i++) {
     try {
@@ -59,8 +69,16 @@ const INDEX_HEAD = `---
   updateIndex();
   await startJekyll();
   console.log('Checking links...');
-  await checkLinks({startUrl: 'http://127.0.0.1:4000/latest/', followExternal: true, branch: 'master'});
-  console.log('ALL DONE');
+  const result = await checkLinks({
+    startUrl: 'http://127.0.0.1:4000/latest/',
+    followExternal: true,
+    branch: 'master',
+    preRelease
+  });
+  console.log(result ? 'SUCCESS' : 'FAILURE');
+  if (release || preRelease) {
+    process.exit(result ? 0 : 1);
+  }
   console.log('Press CTRL+C to kill server');
 })().catch(err => {
   console.error(err);
@@ -69,6 +87,7 @@ const INDEX_HEAD = `---
 })
 
 async function preChecks() {
+  console.log('Pre-checks');
   const ruby = await exec('ruby -v');
   console.log(ruby);
   if (!/^ruby\s2\.[0-9]\..*/.test(ruby)) {

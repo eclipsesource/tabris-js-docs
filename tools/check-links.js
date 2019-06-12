@@ -13,12 +13,16 @@ const {parse, resolve} = require('url');
 const githubRepo = /github\.com\/eclipsesource\/tabris-js\/tree\/([^\/]+)/;
 
 // Prevent false negatives:
-const doNotCheck = [
+const whitelist = [
   /developer\.apple\.com/,
   /www\.linkedin\.com\/company\/eclipsesource/,
   /cordova\.apache\.org\/docs\/en\/6\.x\/reference\/cordova-cli\/index\.html/,
   /example\.com/, // used in example code
   /marketplace\.visualstudio\.com/ // returns 404 in node only for some reason
+];
+
+const preReleaseWhitelist = [
+  /tabrisjs\.com\/downloads\/ebook\/tabrisjs-3.\d.0.pdf/
 ];
 
 if (process.argv[1].endsWith('check-links.js')) {
@@ -46,15 +50,27 @@ if (process.argv[1].endsWith('check-links.js')) {
     .then(() => console.log('done'));
 }
 
+/**
+ * Returns true if all links work
+ * @param {{
+ *   startUrl: string,
+ *   followExternal?: boolean,
+ *   preRelease?: boolean,
+ *   branch: string
+ * }} options
+ * @returns {boolean}
+ */
 async function checkLinks(options) {
   const startUrl = options.startUrl;
   const url = options.url || startUrl;
   const branch = options.branch;
   /**
-   * @type {{[url: string]: {found: boolean, error: string, html: string}}}
+   * @type {{[url: string]: {error: string, html: string}}}
    */
   const cache = options.cache || {};
   const followExternal = options.followExternal || false;
+  const preRelease = !!options.preRelease;
+  const doNotCheck = whitelist.concat(preRelease ? preReleaseWhitelist : []);
   const html = cache[url] ? cache[url].html : await get(url);
   const links = extractLinks(html).filter(link => !link.startsWith('mailto:'));
   for (const href of links) {
@@ -79,7 +95,7 @@ async function checkLinks(options) {
           cache[resolvedLink] = {error: null, html: null};
         }
         if (resolvedLink.startsWith(startUrl) && typeof cache[resolvedLink].html === 'string') {
-          await checkLinks({url: resolvedLink, startUrl, followExternal, cache, branch});
+          await checkLinks({url: resolvedLink, startUrl, followExternal, cache, branch, preRelease});
         }
       } else if (cache[resolvedLink].error) {
         console.error(`In ${url}: ${href} (${resolvedLink}) : ${cache[resolvedLink].error}`);
@@ -100,6 +116,7 @@ async function checkLinks(options) {
       }
     }
   }
+  return !Object.keys(cache).some(url => cache[url].error !== null);
 }
 
 exports.checkLinks = checkLinks;
