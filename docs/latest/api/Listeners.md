@@ -35,7 +35,7 @@ Registers a listener to be notified by new events. Each listener can only be add
 
 Parameter|Type|Optional|Description
 -|-|-|-
-listener | <span style="white-space:nowrap;">`(event: EventObject) =&gt; void`</span> | No | 
+listener | <span style="white-space:nowrap;">`(event: EventObject) => void`</span> | No | 
 
 
 Returns <span style="white-space:nowrap;">`this.target`</span>
@@ -49,7 +49,7 @@ Notifies the given listener the next time an event is issued, but not afterwards
 
 Parameter|Type|Optional|Description
 -|-|-|-
-listener | <span style="white-space:nowrap;">`(event: EventObject) =&gt; void`</span> | No | 
+listener | <span style="white-space:nowrap;">`(event: EventObject) => void`</span> | No | 
 
 
 Returns <span style="white-space:nowrap;">`this.target`</span>
@@ -71,7 +71,7 @@ Deregisters a listener, it will not be notified of future events. Returns the ta
 
 Parameter|Type|Optional|Description
 -|-|-|-
-listener | <span style="white-space:nowrap;">`(event: EventObject) =&gt; void`</span> | No | 
+listener | <span style="white-space:nowrap;">`(event: EventObject) => void`</span> | No | 
 
 
 Returns <span style="white-space:nowrap;">`this.target`</span>

@@ -31,7 +31,7 @@ options | <span style="white-space:nowrap;">`{type?: string}`</span> | Yes | `ty
 
 Reads the blob data into an ArrayBuffer and returns it in a promise. Each call creates a new in-memory copy of the data.
 
-Returns <span style="white-space:nowrap;">`Promise&lt;ArrayBuffer&gt;`</span>
+Returns <span style="white-space:nowrap;">`Promise<ArrayBuffer>`</span>
 
 ### text()
 
@@ -39,7 +39,7 @@ Returns <span style="white-space:nowrap;">`Promise&lt;ArrayBuffer&gt;`</span>
 
 Decodes the blob data as a string and returns it in a promise.
 
-Returns <span style="white-space:nowrap;">`Promise&lt;string&gt;`</span>
+Returns <span style="white-space:nowrap;">`Promise<string>`</span>
 
 
 ## Properties

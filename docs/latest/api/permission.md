@@ -97,7 +97,7 @@ Parameter|Type|Optional|Description
 ...permissions | <span style="white-space:nowrap;">[`string[]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | A list of permissions to request authorization for.
 
 
-Returns <span style="white-space:nowrap;">`Promise&lt;string&gt;`</span>
+Returns <span style="white-space:nowrap;">`Promise<string>`</span>
 
 ### withAuthorization(permissions, onAuthorized, onUnauthorized, onError)
 

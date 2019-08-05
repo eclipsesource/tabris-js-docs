@@ -45,5 +45,5 @@ data | <span style="white-space:nowrap;">[`any`](https://www.typescriptlang.org/
 options | <span style="white-space:nowrap;">`{jobName?: string, contentType?: string}`</span> | Yes | An optional set of configuration parameters. Setting the `jobName` allows to provide the document name shown the user. The `contentType` is required when printing a specific document format. By default `application/pdf` is used but it needs to be changed to `image/*` when printing an image
 
 
-Returns <span style="white-space:nowrap;">`Promise&lt;any&gt;`</span>
+Returns <span style="white-space:nowrap;">`Promise<any>`</span>
 

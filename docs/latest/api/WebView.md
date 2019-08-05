@@ -38,7 +38,7 @@ See also:
 
 Parameter|Type|Optional|Description
 -|-|-|-
-properties | <span style="white-space:nowrap;">`Properties&lt;WebView&gt;`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
+properties | <span style="white-space:nowrap;">`Properties<WebView>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
 
 ## Methods
 
@@ -152,7 +152,7 @@ Note: This event will not be fired on iOS when a page is using `history.pushStat
 
 Parameter|Type|Description
 -|-|-
-preventDefault | <span style="white-space:nowrap;">`() =&gt; void`</span> | Call to intercept the navigation.  Not possible when the event is only an anchor navigation
+preventDefault | <span style="white-space:nowrap;">`() => void`</span> | Call to intercept the navigation.  Not possible when the event is only an anchor navigation
 url | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new URL the WebView is about to navigate to.
 
 ### load

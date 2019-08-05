@@ -51,7 +51,7 @@ See also:
 
 Parameter|Type|Optional|Description
 -|-|-|-
-properties | <span style="white-space:nowrap;">`Properties&lt;CollectionView&lt;Cell&gt;&gt; & Partial&lt;Pick&lt;CollectionView&lt;Cell&gt;, 'cellHeight'` \| `'cellType'` \| `'createCell'` \| `'updateCell'&gt;&gt;`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
+properties | <span style="white-space:nowrap;">`Properties<CollectionView<Cell>> & Partial<Pick<CollectionView<Cell>, 'cellHeight'` \| `'cellType'` \| `'createCell'` \| `'updateCell'>>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
 
 ## Methods
 
@@ -166,7 +166,7 @@ Sets all key-value pairs in the properties object as widget properties.
 
 Parameter|Type|Optional|Description
 -|-|-|-
-properties | <span style="white-space:nowrap;">`Properties&lt;T&gt; & Partial&lt;Pick&lt;this, 'cellHeight'` \| `'cellType'` \| `'createCell'&gt;&gt;`</span> | No | 
+properties | <span style="white-space:nowrap;">`Properties<T> & Partial<Pick<this, 'cellHeight'` \| `'cellType'` \| `'createCell'>>`</span> | No | 
 
 
 Returns <span style="white-space:nowrap;">[`this`](#)</span>
@@ -180,7 +180,7 @@ Returns <span style="white-space:nowrap;">[`this`](#)</span>
 The height of a collection cell. If set to `"auto"`, the cell height will be calculated individually for each cell. If set to a function, this function will be called for every item, providing the item index and the cell type as parameters, and must return the cell height for the given item.
 Note: On iOS `"auto"` may cause significant performance downgrade as it requires additional layouting passes to calculate cell height internally. If possible please use a combination of fixed `itemHeight` and `cellType` properties to specify different height for different cells.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type) \| `"auto"` \| `((index: number, cellType: string) =&gt; number` \| `"auto")`</span>
+Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type) \| `"auto"` \| `((index: number, cellType: string) => number` \| `"auto")`</span>
 Default | `auto`
 Settable | *Yes*
 Change events | *Yes*
@@ -193,7 +193,7 @@ Change events | *Yes*
 
 The name of the cell type to use for the item at the given index. This name will be passed to the `createCell` and `cellHeight` callbacks. Cells will be reused only for those items that map to the same cell type. If set to a function, this function will be called for every item, providing the item index as a parameter, and must return a unique name for the cell type to use for the given item.
 
-Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type) \| `((index: number) =&gt; string)` \| [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type)</span>
+Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type) \| `((index: number) => string)` \| [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type)</span>
 Settable | *Yes*
 Change events | *Yes*
 
@@ -225,7 +225,7 @@ See also:
 
 A callback used to create a new reusable cell widget for a given type. This callback will be called by the framework and the created cell will be reused for different items. The created widget should be populated in the `updateCell` function.
 
-Type | <span style="white-space:nowrap;">`(cellType: string) =&gt; Cell`</span>
+Type | <span style="white-space:nowrap;">`(cellType: string) => Cell`</span>
 Settable | *Yes*
 Change events | *Yes*
 
@@ -328,7 +328,7 @@ Change events | *Yes*
 
 A callback used to update a given cell widget to display the item with the given index. This callback will be called by the framework.
 
-Type | <span style="white-space:nowrap;">`(cell: Cell, index: number) =&gt; void`</span>
+Type | <span style="white-space:nowrap;">`(cell: Cell, index: number) => void`</span>
 Settable | *Yes*
 Change events | *Yes*
 
@@ -371,7 +371,7 @@ Fired when the [*cellHeight*](#cellheight) property has changed.
 
 Parameter|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type) \| `"auto"` \| `((index: number, cellType: string) =&gt; number` \| `"auto")`</span> | The new value of [*cellHeight*](#cellheight).
+value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type) \| `"auto"` \| `((index: number, cellType: string) => number` \| `"auto")`</span> | The new value of [*cellHeight*](#cellheight).
 
 ### itemCountChanged
 
@@ -387,7 +387,7 @@ Fired when the [*createCell*](#createcell) property has changed.
 
 Parameter|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">`(cellType: string) =&gt; Cell`</span> | The new value of [*createCell*](#createcell).
+value | <span style="white-space:nowrap;">`(cellType: string) => Cell`</span> | The new value of [*createCell*](#createcell).
 
 ### updateCellChanged
 
@@ -395,7 +395,7 @@ Fired when the [*updateCell*](#updatecell) property has changed.
 
 Parameter|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">`(cell: Cell, index: number) =&gt; void`</span> | The new value of [*updateCell*](#updatecell).
+value | <span style="white-space:nowrap;">`(cell: Cell, index: number) => void`</span> | The new value of [*updateCell*](#updatecell).
 
 ### cellTypeChanged
 
@@ -403,7 +403,7 @@ Fired when the [*cellType*](#celltype) property has changed.
 
 Parameter|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type) \| `((index: number) =&gt; string)` \| [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type)</span> | The new value of [*cellType*](#celltype).
+value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type) \| `((index: number) => string)` \| [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type)</span> | The new value of [*cellType*](#celltype).
 
 ### refreshEnabledChanged
 

@@ -70,7 +70,7 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 
 
 
-Returns <span style="white-space:nowrap;">`IterableIterator&lt;[string, string` \| `File]&gt;`</span>
+Returns <span style="white-space:nowrap;">`IterableIterator<[string, string` \| `File]>`</span>
 
 ### get(key)
 
@@ -98,7 +98,7 @@ Parameter|Type|Optional|Description
 key | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
 
 
-Returns <span style="white-space:nowrap;">`Array&lt;string` \| `File&gt;`</span>
+Returns <span style="white-space:nowrap;">`Array<string` \| `File>`</span>
 
 ### has(key)
 
@@ -118,7 +118,7 @@ Returns <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.
 
 
 
-Returns <span style="white-space:nowrap;">`IterableIterator&lt;string&gt;`</span>
+Returns <span style="white-space:nowrap;">`IterableIterator<string>`</span>
 
 ### set(key, value)
 
@@ -155,5 +155,5 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 
 
 
-Returns <span style="white-space:nowrap;">`IterableIterator&lt;string` \| `File&gt;`</span>
+Returns <span style="white-space:nowrap;">`IterableIterator<string` \| `File>`</span>
 

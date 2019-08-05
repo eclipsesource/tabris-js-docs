@@ -39,7 +39,7 @@ See also:
 
 Parameter|Type|Optional|Description
 -|-|-|-
-properties | <span style="white-space:nowrap;">`Properties&lt;Picker&gt; & Partial&lt;Pick&lt;Picker, 'itemText'&gt;&gt;`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
+properties | <span style="white-space:nowrap;">`Properties<Picker> & Partial<Pick<Picker, 'itemText'>>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
 
 ## Methods
 
@@ -54,7 +54,7 @@ Sets all key-value pairs in the properties object as widget properties.
 
 Parameter|Type|Optional|Description
 -|-|-|-
-properties | <span style="white-space:nowrap;">`Properties&lt;T&gt; & Partial&lt;Pick&lt;this, 'itemText'&gt;&gt;`</span> | No | 
+properties | <span style="white-space:nowrap;">`Properties<T> & Partial<Pick<this, 'itemText'>>`</span> | No | 
 
 
 Returns <span style="white-space:nowrap;">[`this`](#)</span>
@@ -116,7 +116,7 @@ Change events | *Yes*
 
 A function that returns the string to display for a given index.
 
-Type | <span style="white-space:nowrap;">`(index: number) =&gt; string`</span>
+Type | <span style="white-space:nowrap;">`(index: number) => string`</span>
 Settable | *Yes*
 Change events | *Yes*
 
@@ -224,7 +224,7 @@ Fired when the [*itemText*](#itemtext) property has changed.
 
 Parameter|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">`(index: number) =&gt; string`</span> | The new value of [*itemText*](#itemtext).
+value | <span style="white-space:nowrap;">`(index: number) => string`</span> | The new value of [*itemText*](#itemtext).
 
 ### selectionIndexChanged
 

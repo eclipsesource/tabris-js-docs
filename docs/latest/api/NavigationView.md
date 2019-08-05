@@ -40,7 +40,7 @@ See also:
 
 Parameter|Type|Optional|Description
 -|-|-|-
-properties | <span style="white-space:nowrap;">`Properties&lt;NavigationView&gt;`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
+properties | <span style="white-space:nowrap;">`Properties<NavigationView>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
 
 ## Methods
 
@@ -70,7 +70,7 @@ Parameter|Type|Optional|Description
 constructor | <span style="white-space:nowrap;">`{ new (...args: any[]): U }`</span> | No | A class to filter the results.
 
 
-Returns <span style="white-space:nowrap;">`WidgetCollection&lt;U&gt;`</span>
+Returns <span style="white-space:nowrap;">`WidgetCollection<U>`</span>
 
 
 ## Properties

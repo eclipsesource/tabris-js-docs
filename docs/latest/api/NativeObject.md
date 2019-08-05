@@ -28,7 +28,7 @@ In TypeScript you should use the alternative `Listeners` API, e.g. `widget.onRes
 Parameter|Type|Optional|Description
 -|-|-|-
 type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The type of events to remove listeners for.
-listener | <span style="white-space:nowrap;">`(event: EventObject&lt;NativeObject&gt;) =&gt; void`</span> | No | The listener function to remove.
+listener | <span style="white-space:nowrap;">`(event: EventObject<NativeObject>) => void`</span> | No | The listener function to remove.
 context | <span style="white-space:nowrap;">[`object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> | Yes | The context of the bound listener to remove.
 
 
@@ -60,7 +60,7 @@ Registers a *listener* function to be notified of events of the given *type*.
 Parameter|Type|Optional|Description
 -|-|-|-
 type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The type of events to listen for.
-listener | <span style="white-space:nowrap;">`(event: EventObject) =&gt; void`</span> | No | The listener function to register. This function will be called with an event object.
+listener | <span style="white-space:nowrap;">`(event: EventObject) => void`</span> | No | The listener function to register. This function will be called with an event object.
 
 In TypeScript you should use the alternative `Listeners` API, e.g. `widget.onResize(listener);` instead of `widget.on({resize: listener});` The former provides more type information.
 context | <span style="white-space:nowrap;">[`object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> | Yes | In the listener function, `this` will point to this object. If not present, the listener will be called in the context of this object.
@@ -96,7 +96,7 @@ In TypeScript you should use the alternative `Listeners` API, e.g. `widget.onRes
 Parameter|Type|Optional|Description
 -|-|-|-
 type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The type of the event to listen for.
-listener | <span style="white-space:nowrap;">`(event: EventObject&lt;NativeObject&gt;) =&gt; void`</span> | No | The listener function to register. This function will be called with an event object.
+listener | <span style="white-space:nowrap;">`(event: EventObject<NativeObject>) => void`</span> | No | The listener function to register. This function will be called with an event object.
 context | <span style="white-space:nowrap;">[`object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> | Yes | In the listener function, `this` will point to this object. If not present, the listener will be called in the context of this object.
 
 
@@ -129,7 +129,7 @@ Sets all key-value pairs in the properties object as widget properties.
 
 Parameter|Type|Optional|Description
 -|-|-|-
-properties | <span style="white-space:nowrap;">`Properties&lt;T&gt;`</span> | No | 
+properties | <span style="white-space:nowrap;">`Properties<T>`</span> | No | 
 
 
 Returns <span style="white-space:nowrap;">[`this`](#)</span>
@@ -230,7 +230,7 @@ Returns <span style="white-space:nowrap;">`unknown`</span>
 
 Used by `console.dirxml()` to produce part of the XML representation of this object. May be overwritten to modify the output. The return value should be an array of tuples consisting of the attribute name and string representation. The new implementation may make a super call to obtain the default list of attributes printed for this object.
 
-Returns <span style="white-space:nowrap;">`Array&lt;[string, any]&gt;`</span>
+Returns <span style="white-space:nowrap;">`Array<[string, any]>`</span>
 
 ### _getXMLContent()
 
@@ -483,7 +483,7 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 When using JSX with TypeScript (`.tsx` files), the type of this property determines which JSX attributes are valid for this object.
 
-Type | <span style="white-space:nowrap;">`JSXAttributes&lt;this&gt;`</span>
+Type | <span style="white-space:nowrap;">`JSXAttributes<this>`</span>
 Settable | *No*
 Change events | *No*
 

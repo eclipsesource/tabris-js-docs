@@ -32,7 +32,7 @@ See also:
 
 Parameter|Type|Optional|Description
 -|-|-|-
-properties | <span style="white-space:nowrap;">`Properties&lt;Popover&gt;`</span> | Yes | Sets all key-value pairs in the properties object on the `Popover`.
+properties | <span style="white-space:nowrap;">`Properties<Popover>`</span> | Yes | Sets all key-value pairs in the properties object on the `Popover`.
 
 ## Static Methods
 

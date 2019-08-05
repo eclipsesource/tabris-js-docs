@@ -102,7 +102,7 @@ Returns a new *WidgetCollection* containing all widgets in this collection and t
 
 Parameter|Type|Optional|Description
 -|-|-|-
-...items | <span style="white-space:nowrap;">`Array&lt;T` \| `T[]` \| `WidgetCollection&lt;T&gt;&gt;`</span> | No | 
+...items | <span style="white-space:nowrap;">`Array<T` \| `T[]` \| `WidgetCollection<T>>`</span> | No | 
 
 
 Returns <span style="white-space:nowrap;">[`WidgetCollection`](WidgetCollection.md)</span>
@@ -132,7 +132,7 @@ Returns a new *WidgetCollection* containing all widgets in this collection that 
 
 Parameter|Type|Optional|Description
 -|-|-|-
-selector | <span style="white-space:nowrap;">`Selector&lt;T, Result&gt;`</span> | No | A selector expression or a predicate function to filter the results.
+selector | <span style="white-space:nowrap;">`Selector<T, Result>`</span> | No | A selector expression or a predicate function to filter the results.
 
 
 Returns <span style="white-space:nowrap;">[`WidgetCollection`](WidgetCollection.md)</span>
@@ -160,7 +160,7 @@ Calls the given callback function once for each widget in the collection.
 
 Parameter|Type|Optional|Description
 -|-|-|-
-callback | <span style="white-space:nowrap;">`(widget: Widget, index: number, collection: WidgetCollection) =&gt; void`</span> | No | The function to call for each widget. The arguments are: *widget*, *index*, *collection*
+callback | <span style="white-space:nowrap;">`(widget: Widget, index: number, collection: WidgetCollection) => void`</span> | No | The function to call for each widget. The arguments are: *widget*, *index*, *collection*
 
 
 Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
@@ -230,7 +230,7 @@ Calls the given callback function once for each widget in the collection and ret
 
 Parameter|Type|Optional|Description
 -|-|-|-
-callback | <span style="white-space:nowrap;">`(widget: Widget, index: number, collection: WidgetCollection) =&gt; void`</span> | No | The function to call for each widget. The arguments are: *widget*, *index*, *collection*
+callback | <span style="white-space:nowrap;">`(widget: Widget, index: number, collection: WidgetCollection) => void`</span> | No | The function to call for each widget. The arguments are: *widget*, *index*, *collection*
 
 
 Returns <span style="white-space:nowrap;">`Array`</span>

@@ -34,7 +34,7 @@ See also:
 
 Parameter|Type|Optional|Description
 -|-|-|-
-properties | <span style="white-space:nowrap;">`Properties&lt;DateDialog&gt;`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
+properties | <span style="white-space:nowrap;">`Properties<DateDialog>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
 
 ## Static Methods
 

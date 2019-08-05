@@ -38,7 +38,7 @@ Parameter|Type|Optional|Description
 image | <span style="white-space:nowrap;">[`Blob`](Blob.md) \| [`ImageData`](../types.md#imagedata) \| [`ImageBitmap`](ImageBitmap.md)</span> | No | The data source to create an ImageBitmap instance from.
 
 
-Returns <span style="white-space:nowrap;">`Promise&lt;ImageBitmap&gt;`</span>
+Returns <span style="white-space:nowrap;">`Promise<ImageBitmap>`</span>
 
 
 ## Properties

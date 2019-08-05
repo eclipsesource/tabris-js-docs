@@ -45,7 +45,7 @@ See also:
 
 Parameter|Type|Optional|Description
 -|-|-|-
-properties | <span style="white-space:nowrap;">`Properties&lt;TextInput&gt;`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
+properties | <span style="white-space:nowrap;">`Properties<TextInput>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
 
 ## Properties
 

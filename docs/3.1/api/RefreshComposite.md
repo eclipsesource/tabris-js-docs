@@ -34,7 +34,7 @@ See also:
 
 Parameter|Type|Optional|Description
 -|-|-|-
-properties | <span style="white-space:nowrap;">`Properties&lt;RefreshComposite&gt;`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
+properties | <span style="white-space:nowrap;">`Properties<RefreshComposite>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
 
 ## Properties
 

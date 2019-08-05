@@ -57,7 +57,7 @@ Parameter|Type|Optional|Description
 url | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The URL to launch.
 
 
-Returns <span style="white-space:nowrap;">`Promise&lt;void&gt;`</span>
+Returns <span style="white-space:nowrap;">`Promise<void>`</span>
 See also:
   
 [<span class='language jsx'>JSX</span> app-launch.jsx](https://playground.tabris.com/?gitref=v3.1.0&snippet=app-launch.jsx)
@@ -225,7 +225,7 @@ Fired when the back button is pressed on Android.
 
 Parameter|Type|Description
 -|-|-
-preventDefault | <span style="white-space:nowrap;">`() =&gt; void`</span> | Call to suppress the default back navigation behavior.
+preventDefault | <span style="white-space:nowrap;">`() => void`</span> | Call to suppress the default back navigation behavior.
 
 ## Change Events
 

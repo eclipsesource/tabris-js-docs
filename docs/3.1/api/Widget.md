@@ -42,7 +42,7 @@ properties | <span style="white-space:nowrap;">`{transform?: Transformation, opa
 options | <span style="white-space:nowrap;">[`AnimationOptions`](../types.md#animationoptions)</span> | No | Configures the animation itself.
 
 
-Returns <span style="white-space:nowrap;">`Promise&lt;any&gt;`</span>
+Returns <span style="white-space:nowrap;">`Promise<any>`</span>
 
 ### appendTo(parent)
 

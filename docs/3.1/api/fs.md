@@ -41,7 +41,7 @@ Parameter|Type|Optional|Description
 path | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The path of the directory to read.
 
 
-Returns <span style="white-space:nowrap;">`Promise&lt;string[]&gt;`</span>
+Returns <span style="white-space:nowrap;">`Promise<string[]>`</span>
 
 ### readFile(path)
 
@@ -55,7 +55,7 @@ Parameter|Type|Optional|Description
 path | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The path of the file to read.
 
 
-Returns <span style="white-space:nowrap;">`Promise&lt;ArrayBuffer&gt;`</span>
+Returns <span style="white-space:nowrap;">`Promise<ArrayBuffer>`</span>
 
 ### readFile(path, encoding)
 
@@ -70,7 +70,7 @@ path | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.or
 encoding | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The encoding to use to read text files.
 
 
-Returns <span style="white-space:nowrap;">`Promise&lt;string&gt;`</span>
+Returns <span style="white-space:nowrap;">`Promise<string>`</span>
 
 ### removeFile(path)
 
@@ -84,7 +84,7 @@ Parameter|Type|Optional|Description
 path | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The path of the file to remove.
 
 
-Returns <span style="white-space:nowrap;">`Promise&lt;void&gt;`</span>
+Returns <span style="white-space:nowrap;">`Promise<void>`</span>
 
 ### writeFile(path, data)
 
@@ -99,7 +99,7 @@ path | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.or
 data | <span style="white-space:nowrap;">`ArrayBuffer` \| [`Blob`](Blob.md)</span> | No | The contents to write to the file.
 
 
-Returns <span style="white-space:nowrap;">`Promise&lt;void&gt;`</span>
+Returns <span style="white-space:nowrap;">`Promise<void>`</span>
 
 ### writeFile(path, text, encoding?)
 
@@ -115,7 +115,7 @@ text | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.or
 encoding | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | Yes | The encoding to use to write a text file. When omitted, `utf-8` will be used.
 
 
-Returns <span style="white-space:nowrap;">`Promise&lt;void&gt;`</span>
+Returns <span style="white-space:nowrap;">`Promise<void>`</span>
 
 
 ## Properties
