@@ -144,31 +144,6 @@
     - title: Widget
       url: api/Widget.html
 
-- title: Decorators
-  pages:
-    - title: "Introduction"
-      url: decorators/index.html
-    - title: "@bind"
-      url: decorators/@bind.html
-    - title: "@component"
-      url: decorators/@component.html
-    - title: "@event"
-      url: decorators/@event.html
-    - title: "@getById"
-      url: decorators/@getById.html
-    - title: "@inject"
-      url: decorators/@inject.html
-    - title: "@injectable"
-      url: decorators/@injectable.html
-    - title: "@injectionHandler"
-      url: decorators/@injectionHandler.html
-    - title: "@property"
-      url: decorators/@property.html
-    - title: "@shared"
-      url: decorators/@shared.html
-    - title: "Injector"
-      url: decorators/Injector.html
-
 - title: Custom Widgets
   pages:
     - title: Custom Widgets
