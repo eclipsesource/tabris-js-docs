@@ -4,17 +4,19 @@ const child_process = require('child_process');
 const path = require('path');
 const fs = require('fs');
 
-const DECO_SUBDIR = 'decorators';
+const DECORATORS_GITHUB = 'https://github.com/eclipsesource/tabris-decorators/';
 const TABRIS_REPO_DIR = path.join(__dirname, '../../tabris-js');
-const DECO_REPO_DIR = path.join(__dirname, '../../tabris-decorators');
+const DECO_DOCS_DIR = path.join(__dirname, '../../tabris-decorators/doc');
 const DOC_OUT_DIR = path.join(TABRIS_REPO_DIR, 'build', 'doc');
 const DOCS_TARGET_DIR = path.join(__dirname, '..', 'docs');
-const DECO_DOCS_DIR = path.join(DECO_REPO_DIR, 'doc');
 const LATEST_DIR = path.join(__dirname, '..', 'docs', 'latest');
+const DECO_DATABINDING_DIR = path.join(DECO_DOCS_DIR, 'databinding');
+const DECO_DI_DIR = path.join(DECO_DOCS_DIR, 'di');
 const DATA_DIR = path.join(__dirname, '..', 'docs', '_data');
 const SITE_DIR = path.join(__dirname, '..', 'docs', '_site');
 const MAIN_YML = path.join(DATA_DIR, 'main.yml');
 const INDEX_MD = path.join(DOCS_TARGET_DIR, 'index.md');
+const EXAMPLES_NEEDLE = /\]\(\.\.\/\.\.\/examples\//gm;
 const INDEX_HEAD = `---
 ---
 # Tabris.js Documentation
@@ -28,9 +30,11 @@ const preRelease = process.argv[2] === 'pre-release';
   await preChecks();
   const version = getTargetVersion();
   const targetDir = path.join(DOCS_TARGET_DIR, version);
-  const decoTargetDir = path.join(targetDir, DECO_SUBDIR);
   const targetYml = path.join(DATA_DIR, `toc-${version.replace(/\./g, '-')}.yml`);
+  const targetDataBindingDir = path.join(targetDir, 'databinding');
+  const targetDiDir = path.join(targetDir, 'di');
   const sourceYml = path.join(targetDir, 'toc.yml');
+  const examplesRepl = '](' + DECORATORS_GITHUB + 'tree/v' + version + '/examples/';
   console.log('Prepare...');
   if (release) {
     console.log('This is a release update');
@@ -57,10 +61,16 @@ const preRelease = process.argv[2] === 'pre-release';
   copyDir(DOC_OUT_DIR, targetDir);
   console.log(`Move ${sourceYml} to ${targetYml}`);
   fs.renameSync(sourceYml, targetYml);
-  console.log(`Copy files from ${DECO_DOCS_DIR} to ${decoTargetDir}...`);
-  copyDir(DECO_DOCS_DIR, decoTargetDir);
+  console.log(`Copy files from ${DECO_DATABINDING_DIR} to ${targetDataBindingDir}...`);
+  copyDir(DECO_DATABINDING_DIR, targetDataBindingDir);
+  console.log(`Copy files from ${DECO_DI_DIR} to ${targetDiDir}...`);
+  copyDir(DECO_DI_DIR, targetDiDir);
+  console.log('Fix tabris-decorators example links');
+  replaceInAll(targetDataBindingDir, EXAMPLES_NEEDLE, examplesRepl);
+  replaceInAll(targetDiDir, EXAMPLES_NEEDLE, + examplesRepl);
   console.log(`Update ${targetYml}`);
-  updateTargetYml(targetYml, decoTargetDir);
+  updateTargetYml(targetYml, 'Data Binding', targetDataBindingDir);
+  updateTargetYml(targetYml, 'Dependency Injection', targetDiDir);
   console.log('Write main.yml');
   fs.writeFileSync(MAIN_YML, `latest: ${version}\n`)
   console.log(`Copy files from ${targetDir} to ${LATEST_DIR}...`);
@@ -151,23 +161,24 @@ async function generateDocs() {
   }
 }
 
-function updateTargetYml(yml, decoDir) {
+function updateTargetYml(yml, title, extensionDir) {
   const orgContent = fs.readFileSync(yml).toString();
   const sections = orgContent.split('\n\n');
-  const decoYml = generateYml(DECO_SUBDIR, fs.readdirSync(decoDir));
+  const decoYml = generateYml(extensionDir, title);
   sections.splice(sections.length - 1, 0, decoYml);
   const newContent = sections.join('\n\n');
   fs.writeFileSync(yml, newContent);
 }
 
-function generateYml(dir, files) {
-  const title = dir.slice(0, 1).toUpperCase() + dir.slice(1);
+function generateYml(dir, title) {
+  const subDir = path.basename(dir);
+  const files = fs.readdirSync(dir).map(docPath => path.basename(docPath));
   const pages = ['index.md'].concat(files.filter(file => file !== 'index.md'));
   const head = '- title: ' + title + '\n  pages:\n';
   const body = pages
     .map(file =>
-`    - title: "${filenameToTitle(file)}"
-      url: ${dir}/${file.replace('.md', '.html')}`)
+`    - title: "${filenameToTitle(path.basename(file))}"
+      url: ${subDir}/${file.replace('.md', '.html')}`)
     .join('\n');
   return head + body;
 }
@@ -256,6 +267,15 @@ function rmDir(target) {
     throw new Error('Not a directory: ' + target);
   }
 }
+
+function replaceInAll(dir, needle, insert) {
+  fs.readdirSync(dir).forEach(entry => {
+    const file = path.join(dir, entry);
+    const content = fs.readFileSync(file, {encoding: 'utf-8'});
+    fs.writeFileSync(file, content.replace(needle, insert));
+  });
+}
+
 async function exec(command) {
   const cwd = path.join(__dirname, '..');
   return new Promise((resolve, reject) => {
