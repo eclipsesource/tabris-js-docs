@@ -283,10 +283,6 @@
   border-top: 1px solid #ccc
 }
 
-.markdown-body table tr:nth-child(2n) {
-  background-color: #f8f8f8
-}
-
 .markdown-body img {
   max-width: 100%;
   -moz-box-sizing: border-box;
@@ -297,7 +293,7 @@
   padding: .2em 0;
   margin: 0;
   font-size: 85%;
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: rgba(0, 0, 0, 0.07  );
   border-radius: 3px
 }
 
@@ -469,4 +465,18 @@ div.tabris-image figcaption {
   border-radius: 0 0 8px 8px;
   padding: 8px;
   font-weight: lighter;
+}
+
+code, code a, a code {
+  color: #c7254e;
+}
+
+code a:hover {
+  color: #c7254e;
+  text-decoration: underline;
+}
+
+code a:not(a[href]) {
+  cursor: default;
+  text-decoration: none;
 }
