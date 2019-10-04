@@ -2,19 +2,23 @@
 ---
 # Class "Image"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`Image`](Image.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="#" >Image</a>
 
 Represents an image. See also [ImageValue](../types.html#imagevalue)
 
 
-Constructor | *public*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | *No*
+Type: | <code style="white-space: nowrap">Image extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a></code>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | No
 
 
-## Example
+## Examples
+### JavaScript
+
+
 ```js
 import {Image} from 'tabris';
 
@@ -22,13 +26,14 @@ const image = Image.from({src: 'image@2x.png'});
 console.log(image.scale); // "2"
 ```
 
+
 ## Constructor
 
 ### new Image(imageLike)
 
-Parameter|Type|Optional|Description
--|-|-|-
-imageLike | <span style="white-space:nowrap;">`ImageLikeObject`</span> | No | An image configuration. See [ImageLikeObject](../types.html#imagelikeobject)
+Parameter|Type|Description
+-|-|-
+imageLike | <code style="white-space: nowrap">ImageLikeObject</code> | An image configuration. See [ImageLikeObject](../types.html#imagelikeobject)
 
 ## Static Methods
 
@@ -39,12 +44,12 @@ imageLike | <span style="white-space:nowrap;">`ImageLikeObject`</span> | No | An
 Creates a new instance of Image using any valid Image expression. For any other value, including `null`, the method throws.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-imageValue | <span style="white-space:nowrap;">[`ImageValue`](../types.md#imagevalue)</span> | No | The value to create an Image instance from. See [ImageValue](../types.html#imagevalue)
+Parameter|Type|Description
+-|-|-
+imageValue | <code style="white-space: nowrap"><a href="../types.html#imagevalue" title="ImageValue Type Reference">ImageValue</a></code> | The value to create an Image instance from. See [ImageValue](../types.html#imagevalue)
 
 
-Returns <span style="white-space:nowrap;">[`Image`](Image.md)</span>
+Returns: <code style="white-space: nowrap"><a href="#" >Image</a></code>
 
 ### isImageValue(value)
 
@@ -53,12 +58,12 @@ Returns <span style="white-space:nowrap;">[`Image`](Image.md)</span>
 Returns true if value is an ImageValue. This includes `null`. Use this to check if a value will be accepted by an image property. This is also a valid TypeScript type guard function.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-value | <span style="white-space:nowrap;">[`any`](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)</span> | No | The value to test
+Parameter|Type|Description
+-|-|-
+value | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code> | The value to test
 
 
-Returns <span style="white-space:nowrap;">`value is ImageValue`</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 ### isValidImageValue(value)
 
@@ -67,12 +72,12 @@ Returns <span style="white-space:nowrap;">`value is ImageValue`</span>
 Returns true if value is a valid ImageValue. This excludes `null`. Use this to check if a value will be accepted by Image.from. This is also a valid TypeScript type guard function.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-value | <span style="white-space:nowrap;">[`any`](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)</span> | No | The value to test
+Parameter|Type|Description
+-|-|-
+value | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code> | The value to test
 
 
-Returns <span style="white-space:nowrap;">`value is ImageValue`</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 
 ## Properties
@@ -82,10 +87,8 @@ Returns <span style="white-space:nowrap;">`value is ImageValue`</span>
 
 Image height in dip. Extracted from the image file when 'auto'.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type) \| `'auto'`</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Settable: | No
 
 
 
@@ -98,10 +101,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 Image scale factor - the image will be scaled down by this factor. See [ImageLikeObject](../types.md#imagelikeobject) for details
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type) \| `'auto'`</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Settable: | No
 
 
 
@@ -112,12 +113,12 @@ This property can only be set via constructor. Once set, it cannot change anymor
 ### src
 
 
-File system path, relative path or URL. Android and iOS also support [data URI](https://en.wikipedia.org/wiki/Data_URI_scheme). Relative paths are resolved **relative to ‘package.json’**. On Android the name of a bundled [drawable resource](https://developer.android.com/guide/topics/resources/drawable-resource) can be provided with the url scheme android-drawable, e.g. android-drawable://ic_info_black.
+As a string this is a file system path, relative path or URL. [Data URIs](https://en.wikipedia.org/wiki/Data_URI_scheme) are also supported. Relative paths are resolved **relative to ‘package.json’**. On Android the name of a bundled [drawable resource](https://developer.android.com/guide/topics/resources/drawable-resource) can be provided with the url scheme android-drawable, e.g. android-drawable://ic_info_black.
+If a closed ImageBitmap is given the constructor will throw.
+A given Blob must contain an encoded image.
 
-Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a><br/> &#124; <a href="ImageBitmap.html" title="ImageBitmap Class Reference">ImageBitmap</a><br/> &#124; <a href="Blob.html" title="Blob Class Reference">Blob</a></code>
+Settable: | No
 
 
 
@@ -130,10 +131,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 Image width in dip. Extracted from the image file when 'auto'.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type) \| `'auto'`</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Settable: | No
 
 
 

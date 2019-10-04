@@ -38,7 +38,7 @@ console.log(myComponent.find('#foo').only(TextInput).text);
 
 ## One way bindings
 
-> See example app ["bind-one-way"](https://github.com/eclipsesource/tabris-decorators/tree/v3.2/examples/bind-one-way).
+> See example app ["bind-one-way"](https://github.com/eclipsesource/tabris-decorators/tree/v3.2.0/examples/bind-one-way).
 
 For one-way bindings, `@component` enables JSX attributes of the following format:
 
@@ -104,7 +104,7 @@ export class CustomComponent extends Composite {
 
 ### Binding to nested properties
 
-> See example app ["bind-one-way"](https://github.com/eclipsesource/tabris-decorators/tree/v3.2/examples/bind-one-way).
+> See example app ["bind-one-way"](https://github.com/eclipsesource/tabris-decorators/tree/v3.2.0/examples/bind-one-way).
 
 The *source property* of a binding can also be a property of a *component property* value if its an object:
 
@@ -162,7 +162,7 @@ component.item = item1; // OK even without @property
 
 ### Conversion
 
-> See example app ["bind-and-convert"](https://github.com/eclipsesource/tabris-decorators/tree/v3.2/examples/bind-and-convert).
+> See example app ["bind-and-convert"](https://github.com/eclipsesource/tabris-decorators/tree/v3.2.0/examples/bind-and-convert).
 
 The value of the *source property* can be manipulated or converted in a binding using a converter function.
 
@@ -236,7 +236,7 @@ This results in `'Hello Peter!'` initially, and falls back to `'No one here?'` i
 
 ### Notes on type safety
 
-> See example app ["tri-state-button"](https://github.com/eclipsesource/tabris-decorators/tree/v3.2/examples/tri-state-button).
+> See example app ["tri-state-button"](https://github.com/eclipsesource/tabris-decorators/tree/v3.2.0/examples/tri-state-button).
 
 The data binding enabled by `@component` can not rely on the TypeScript compiler to ensure type safety. Therefore runtime type value checks need to be performed.
 

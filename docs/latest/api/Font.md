@@ -2,19 +2,23 @@
 ---
 # Class "Font"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`Font`](Font.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="#" >Font</a>
 
 Represents a font. See also [FontValue](../types.html#fontvalue)
 
 
-Constructor | *public*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | *No*
+Type: | <code style="white-space: nowrap">Font extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a></code>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | No
 
 
-## Example
+## Examples
+### JavaScript
+
+
 ```js
 import {Font} from 'tabris';
 
@@ -22,20 +26,21 @@ const font = Font.from('bold 24px');
 console.log(font.size); // 24
 ```
 
+
 See also:
   
-[<span class='language js'>JS</span> Applying multiple font styles to TextViews](https://playground.tabris.com/?gitref=v3.1.0&snippet=textview-font-bundled.js)
+[<span class='language js'>JS</span> Applying multiple font styles to TextViews](https://playground.tabris.com/?gitref=vundefined&snippet=textview-font-bundled.js)
 
 ## Constructor
 
 ### new Font(size, family?, weight?, style?)
 
-Parameter|Type|Optional|Description
--|-|-|-
-size | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Positive number in dip
-family | <span style="white-space:nowrap;">[`string[]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | Yes | Prioritized list of font families
-weight | <span style="white-space:nowrap;">`'black'` \| `'bold'` \| `'medium'` \| `'thin'` \| `'light'` \| `'normal'`</span> | Yes | Boldness of the font
-style | <span style="white-space:nowrap;">`'italic'` \| `'normal'`</span> | Yes | Face of the font family to be used
+Parameter|Type|Description
+-|-|-
+size | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Positive number in dip
+family | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>[]</code> | Prioritized list of font families *Optional.*
+weight | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'black'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'bold'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'medium'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'thin'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'light'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'normal'</a></code> | Boldness of the font *Optional.*
+style | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'italic'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'normal'</a></code> | Face of the font family to be used *Optional.*
 
 ## Methods
 
@@ -45,7 +50,7 @@ style | <span style="white-space:nowrap;">`'italic'` \| `'normal'`</span> | Yes 
 
 Returns a string representation of the font using the CSS font shorthand syntax.
 
-Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 
 ## Static Methods
 
@@ -56,12 +61,12 @@ Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.o
 Creates a new instance of Font using any valid font expression. For any other value, including `null` and `'initial'` the method throws.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-fontValue | <span style="white-space:nowrap;">[`FontValue`](../types.md#fontvalue)</span> | No | The value to create a Font instance from
+Parameter|Type|Description
+-|-|-
+fontValue | <code style="white-space: nowrap"><a href="../types.html#fontvalue" title="FontValue Type Reference">FontValue</a></code> | The value to create a Font instance from
 
 
-Returns <span style="white-space:nowrap;">[`Font`](Font.md)</span>
+Returns: <code style="white-space: nowrap"><a href="#" >Font</a></code>
 
 ### isFontValue(value)
 
@@ -70,12 +75,12 @@ Returns <span style="white-space:nowrap;">[`Font`](Font.md)</span>
 Returns true if value is a FontValue. This includes `null` and `'initial'`. Use this to check if a value will be accepted by a font property. This is also a valid TypeScript type guard function.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-value | <span style="white-space:nowrap;">[`any`](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)</span> | No | The value to test
+Parameter|Type|Description
+-|-|-
+value | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code> | The value to test
 
 
-Returns <span style="white-space:nowrap;">`value is FontValue`</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 ### isValidFontValue(value)
 
@@ -84,12 +89,12 @@ Returns <span style="white-space:nowrap;">`value is FontValue`</span>
 Returns true if value is a valid FontValue. This excludes `null` and `'initial'`. Use this to check if a value will be accepted by Font.from. This is also a valid TypeScript type guard function.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-value | <span style="white-space:nowrap;">[`any`](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)</span> | No | The value to test
+Parameter|Type|Description
+-|-|-
+value | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code> | The value to test
 
 
-Returns <span style="white-space:nowrap;">`value is FontValue`</span>
+Returns: <code style="white-space: nowrap">value is FontValue</code>
 
 
 ## Properties
@@ -99,10 +104,8 @@ Returns <span style="white-space:nowrap;">`value is FontValue`</span>
 
 Prioritized list of font families
 
-Type | <span style="white-space:nowrap;">[`string[]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>[]</code>
+Settable: | No
 
 
 
@@ -115,10 +118,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 Positive number in dip
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Settable: | No
 
 
 
@@ -131,10 +132,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 Face of the font family to be used
 
-Type | <span style="white-space:nowrap;">`'italic'` \| `'normal'`</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'italic'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'normal'</a></code>
+Settable: | No
 
 
 
@@ -147,10 +146,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 Boldness of the font
 
-Type | <span style="white-space:nowrap;">`'black'` \| `'bold'` \| `'medium'` \| `'thin'` \| `'light'` \| `'normal'`</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'black'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'bold'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'medium'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'thin'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'light'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'normal'</a></code>
+Settable: | No
 
 
 
@@ -164,10 +161,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 
 
-Type | <span style="white-space:nowrap;">`"condensed"`</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">"condensed"</a></code>
+Settable: | No
 
 
 
@@ -175,10 +170,8 @@ Change events | *No*
 
 
 
-Type | <span style="white-space:nowrap;">`"monospace"`</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">"monospace"</a></code>
+Settable: | No
 
 
 
@@ -186,10 +179,8 @@ Change events | *No*
 
 
 
-Type | <span style="white-space:nowrap;">`"sans-serif"`</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">"sans-serif"</a></code>
+Settable: | No
 
 
 
@@ -197,10 +188,8 @@ Change events | *No*
 
 
 
-Type | <span style="white-space:nowrap;">`"serif"`</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">"serif"</a></code>
+Settable: | No
 
 
 

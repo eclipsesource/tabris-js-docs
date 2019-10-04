@@ -17,9 +17,26 @@ JSX Support: | No
 
 See also:
   
-[<span class='language jsx'>JSX</span> Reading various device properties](https://playground.tabris.com/?gitref=vundefined&snippet=device.jsx)
+[<span class='language jsx'>JSX</span> Reading various device properties](https://playground.tabris.com/?gitref=vundefined&snippet=device.jsx)  
+[<span class='language tsx'>TSX</span> device.tsx](https://playground.tabris.com/?gitref=vundefined&snippet=device.tsx)
 
 ## Properties
+
+### cameras
+
+
+An array of `Camera` objects ordered by priority. The first entry is considered the primary camera of the device.
+
+Type: |<code style="white-space: nowrap">Camera[]</code>
+Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
+Change Event: | Not supported
+
+
+
+
+This property can only be set via constructor. Once set, it cannot change anymore.
+
+
 
 ### language
 

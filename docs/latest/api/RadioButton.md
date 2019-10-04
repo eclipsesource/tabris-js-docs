@@ -2,20 +2,24 @@
 ---
 # Class "RadioButton"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> > <span style="white-space:nowrap;">[`RadioButton`](RadioButton.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a> > <a href="Widget.html" title="Widget Class Reference">Widget</a> > <a href="#" >RadioButton</a>
 
 A radio button. Selecting a radio button de-selects all its siblings (i.e. all radio buttons within the same parent).
 
 
 <div class="tabris-image"><figure><div><img srcset="img/android/RadioButton.png 2x" src="img/android/RadioButton.png" alt="RadioButton on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/RadioButton.png 2x" src="img/ios/RadioButton.png" alt="RadioButton on iOS"/></div><figcaption>iOS</figcaption></figure></div>
 
-Constructor | *public*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | Element: `<RadioButton/>`<br/>Parent element: [`<Composite/>`](Composite.md) *and any widget extending* <span style="white-space:nowrap;">[`Composite`](Composite.md)</span><br/>Child elements: *None*<br/>Text content: *Sets [text](#text) property*<br/>
+Type: | <code style="white-space: nowrap">RadioButton extends <a href="Widget.html" title="Widget Class Reference">Widget</a></code>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | Element: <code style="white-space: nowrap"><a href="RadioButton.html" title="RadioButton Class Reference">&lt;RadioButton/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="Canvas.html" title="Canvas Class Reference">&lt;Canvas/&gt;</a></code>, <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">&lt;Composite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Page.html" title="Page Class Reference">&lt;Page/&gt;</a></code>, <code style="white-space: nowrap"><a href="RefreshComposite.html" title="RefreshComposite Class Reference">&lt;RefreshComposite/&gt;</a></code>, <code style="white-space: nowrap"><a href="ScrollView.html" title="ScrollView Class Reference">&lt;ScrollView/&gt;</a></code>, <code style="white-space: nowrap"><a href="Stack.html" title="Stack Class Reference">&lt;Stack/&gt;</a></code>, <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Child Elements: *Not Supported*<br/>Text Content: [<code style="white-space: nowrap">text</code>](#text)
 
-## Example
+## Examples
+### JavaScript
+
+
 ```js
 import {RadioButton, contentView} from 'tabris';
 
@@ -28,17 +32,18 @@ new RadioButton({text: 'Two'})
   .appendTo(contentView);
 ```
 
+
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a set of `RadioButtons`](https://playground.tabris.com/?gitref=v3.1.0&snippet=radiobutton.jsx)
+[<span class='language jsx'>JSX</span> Creating a set of `RadioButtons`](https://playground.tabris.com/?gitref=vundefined&snippet=radiobutton.jsx)
 
 ## Constructor
 
 ### new RadioButton(properties?)
 
-Parameter|Type|Optional|Description
--|-|-|-
-properties | <span style="white-space:nowrap;">`Properties<RadioButton>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
+Parameter|Type|Description
+-|-|-
+properties | <code style="white-space: nowrap"><a href="../types.html#propertieswidget" title="Properties&lt;Widget&gt;">Properties</a>&lt;<a href="#" >RadioButton</a>&gt;</code> | Sets all key-value pairs in the properties object as widget properties. *Optional.*
 
 ## Properties
 
@@ -47,10 +52,10 @@ properties | <span style="white-space:nowrap;">`Properties<RadioButton>`</span> 
 
 The checked state of the radio button.
 
-Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
-Default | `false`
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">false</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`checkedChanged`](#checkedchanged)
 
 
 
@@ -60,9 +65,9 @@ Change events | *Yes*
 
 The color of the selectable area in checked state. Will fall back to `tintColor` if not set.
 
-Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`checkedTintColorChanged`](#checkedtintcolorchanged)
 
 
 
@@ -72,9 +77,9 @@ Change events | *Yes*
 
 The font used for the text.
 
-Type | <span style="white-space:nowrap;">[`FontValue`](../types.md#fontvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#fontvalue" title="FontValue Type Reference">FontValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`fontChanged`](#fontchanged)
 
 
 
@@ -84,32 +89,24 @@ Change events | *Yes*
 
 The label text of the radio button.
 
-Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
-Settable | *Yes*
-Change events | *Yes*
-JSX content type | `string`
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`textChanged`](#textchanged)
+JSX Text Property: | [Yes](../JSX.md)
 
 
 
 
-When using RadioButton as an JSX element the element content is mapped to this property. Therefore
-```jsx
-<RadioButton>Hello World</RadioButton>
-```
- has the same effect as:
-```jsx
-<RadioButton text='Hello World' />
-```
-
+When using RadioButton as an JSX element the elements Text content is mapped to this property.
 
 ### textColor
 
 
 The color of the text.
 
-Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`textColorChanged`](#textcolorchanged)
 
 
 
@@ -119,9 +116,9 @@ Change events | *Yes*
 
 The color of the selectable area.
 
-Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`tintColorChanged`](#tintcolorchanged)
 
 
 
@@ -133,57 +130,71 @@ Change events | *Yes*
 
 Fired when the radio button is selected or deselected by the user.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap">RadioButtonSelectEvent&lt;<a href="#" >RadioButton</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-checked | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of *[checked](#checked)*.
+checked | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The new value of *[checked](#checked)*.
 
 ## Change Events
 
 ### checkedChanged
 
-Fired when the [*checked*](#checked) property has changed.
+Fired when the [checked](#checked) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >RadioButton</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of [*checked*](#checked).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The new value of [checked](#checked).
 
 ### textChanged
 
-Fired when the [*text*](#text) property has changed.
+Fired when the [text](#text) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >RadioButton</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*text*](#text).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The new value of [text](#text).
 
 ### textColorChanged
 
-Fired when the [*textColor*](#textcolor) property has changed.
+Fired when the [textColor](#textcolor) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >RadioButton</a>, <a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*textColor*](#textcolor).
+value | <code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code> | The new value of [textColor](#textcolor).
 
 ### tintColorChanged
 
-Fired when the [*tintColor*](#tintcolor) property has changed.
+Fired when the [tintColor](#tintcolor) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >RadioButton</a>, <a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*tintColor*](#tintcolor).
+value | <code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code> | The new value of [tintColor](#tintcolor).
 
 ### checkedTintColorChanged
 
-Fired when the [*checkedTintColor*](#checkedtintcolor) property has changed.
+Fired when the [checkedTintColor](#checkedtintcolor) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >RadioButton</a>, <a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*checkedTintColor*](#checkedtintcolor).
+value | <code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code> | The new value of [checkedTintColor](#checkedtintcolor).
 
 ### fontChanged
 
-Fired when the [*font*](#font) property has changed.
+Fired when the [font](#font) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >RadioButton</a>, <a href="../types.html#fontvalue" title="FontValue Type Reference">FontValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`FontValue`](../types.md#fontvalue)</span> | The new value of [*font*](#font).
+value | <code style="white-space: nowrap"><a href="../types.html#fontvalue" title="FontValue Type Reference">FontValue</a></code> | The new value of [font](#font).
 

@@ -2,20 +2,24 @@
 ---
 # Class "Button"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> > <span style="white-space:nowrap;">[`Button`](Button.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a> > <a href="Widget.html" title="Widget Class Reference">Widget</a> > <a href="#" >Button</a>
 
 A push button. Can contain a text or an image.
 
 
 <div class="tabris-image"><figure><div><img srcset="img/android/Button.png 2x" src="img/android/Button.png" alt="Button on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/Button.png 2x" src="img/ios/Button.png" alt="Button on iOS"/></div><figcaption>iOS</figcaption></figure></div>
 
-Constructor | *public*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | Element: `<Button/>`<br/>Parent element: [`<Composite/>`](Composite.md) *and any widget extending* <span style="white-space:nowrap;">[`Composite`](Composite.md)</span><br/>Child elements: *None*<br/>Text content: *Sets [text](#text) property*<br/>
+Type: | <code style="white-space: nowrap">Button extends <a href="Widget.html" title="Widget Class Reference">Widget</a></code>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | Element: <code style="white-space: nowrap"><a href="Button.html" title="Button Class Reference">&lt;Button/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="Canvas.html" title="Canvas Class Reference">&lt;Canvas/&gt;</a></code>, <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">&lt;Composite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Page.html" title="Page Class Reference">&lt;Page/&gt;</a></code>, <code style="white-space: nowrap"><a href="RefreshComposite.html" title="RefreshComposite Class Reference">&lt;RefreshComposite/&gt;</a></code>, <code style="white-space: nowrap"><a href="ScrollView.html" title="ScrollView Class Reference">&lt;ScrollView/&gt;</a></code>, <code style="white-space: nowrap"><a href="Stack.html" title="Stack Class Reference">&lt;Stack/&gt;</a></code>, <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Child Elements: *Not Supported*<br/>Text Content: [<code style="white-space: nowrap">text</code>](#text)
 
-## Example
+## Examples
+### JavaScript
+
+
 ```js
 import {Button, contentView} from 'tabris';
 
@@ -24,18 +28,19 @@ new Button({text: 'Save'})
   .appendTo(contentView);
 ```
 
+
 See also:
   
-[<span class='language jsx'>JSX</span> Create a simple `Button`](https://playground.tabris.com/?gitref=v3.1.0&snippet=button.jsx)  
-[<span class='language jsx'>JSX</span> Create buttons with different styles](https://playground.tabris.com/?gitref=v3.1.0&snippet=button-style.jsx)
+[<span class='language jsx'>JSX</span> Create a simple `Button`](https://playground.tabris.com/?gitref=vundefined&snippet=button.jsx)  
+[<span class='language jsx'>JSX</span> Create buttons with different styles](https://playground.tabris.com/?gitref=vundefined&snippet=button-style.jsx)
 
 ## Constructor
 
 ### new Button(properties?)
 
-Parameter|Type|Optional|Description
--|-|-|-
-properties | <span style="white-space:nowrap;">`Properties<Button>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
+Parameter|Type|Description
+-|-|-
+properties | <code style="white-space: nowrap"><a href="../types.html#propertieswidget" title="Properties&lt;Widget&gt;">Properties</a>&lt;<a href="#" >Button</a>&gt;</code> | Sets all key-value pairs in the properties object as widget properties. *Optional.*
 
 ## Properties
 
@@ -44,10 +49,10 @@ properties | <span style="white-space:nowrap;">`Properties<Button>`</span> | Yes
 
 The horizontal alignment of the button text.
 
-Type | `'left'` \| `'right'` \| `'centerX'`
-Default | `'centerX'`
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'left'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'right'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'centerX'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'centerX'</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`alignmentChanged`](#alignmentchanged)
 
 
 
@@ -57,9 +62,9 @@ Change events | *Yes*
 
 The font used for the button text.
 
-Type | <span style="white-space:nowrap;">[`FontValue`](../types.md#fontvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#fontvalue" title="FontValue Type Reference">FontValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`fontChanged`](#fontchanged)
 
 
 
@@ -69,9 +74,9 @@ Change events | *Yes*
 
 An image to be displayed on the button.
 
-Type | <span style="white-space:nowrap;">[`ImageValue`](../types.md#imagevalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#imagevalue" title="ImageValue Type Reference">ImageValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`imageChanged`](#imagechanged)
 
 
 
@@ -81,9 +86,9 @@ Change events | *Yes*
 
 A color to change the `image` appearance. All opaque parts of the image will be tinted with the given color. Set to `initial` to remove the effect.
 
-Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`imageTintColorChanged`](#imagetintcolorchanged)
 
 
 
@@ -93,9 +98,9 @@ Change events | *Yes*
 
 Controls the line width of a button with the `style` _outline_.
 
-Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`strokeColorChanged`](#strokecolorchanged)
 
 
 
@@ -103,11 +108,12 @@ Change events | *Yes*
 ### strokeWidth
 
 
-Controls the line color of a button with the `style` _outline_.
+Controls the line color of a button with the `style` _outline_. Uses a platform-specific default if set to `null`.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">null</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`strokeWidthChanged`](#strokewidthchanged)
 
 
 
@@ -122,10 +128,10 @@ The `style` controls the appearance of a `Button` and has to be provided in its 
 - `outline` A button with a transparent background and an outline stroke which can be controlled via the properties `strokeWidth` and `strokeColor`
 - `text` A button with no background and only consisting of its text label.
 
-Type | `'default'` \| `'elevate'` \| `'flat'` \| `'outline'` \| `'text'`
-Default | `'default'`
-Settable | *On creation*
-Change events | *No*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'default'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'elevate'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'flat'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'outline'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'text'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'default'</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >By Constructor or JSX</a>
+Change Event: | Not supported
 
 
 
@@ -134,7 +140,7 @@ This property can only be set via constructor or JSX. Once set, it cannot change
 
 See also:
   
-[<span class='language jsx'>JSX</span> button-style.jsx](https://playground.tabris.com/?gitref=v3.1.0&snippet=button-style.jsx)
+[<span class='language jsx'>JSX</span> button-style.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=button-style.jsx)
 
 
 ### text
@@ -142,32 +148,24 @@ See also:
 
 The button's label text.
 
-Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
-Settable | *Yes*
-Change events | *Yes*
-JSX content type | `string`
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`textChanged`](#textchanged)
+JSX Text Property: | [Yes](../JSX.md)
 
 
 
 
-When using Button as an JSX element the element content is mapped to this property. Therefore
-```jsx
-<Button>Hello World</Button>
-```
- has the same effect as:
-```jsx
-<Button text='Hello World' />
-```
-
+When using Button as an JSX element the elements Text content is mapped to this property.
 
 ### textColor
 
 
 The color of the text.
 
-Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`textColorChanged`](#textcolorchanged)
 
 
 
@@ -179,69 +177,88 @@ Change events | *Yes*
 
 Fired when the button is pressed.
 
+EventObject Type: <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a>&lt;<a href="#" >Button</a>&gt;</code>
+
+This event has no additional parameter.
 ## Change Events
 
 ### strokeColorChanged
 
-Fired when the [*strokeColor*](#strokecolor) property has changed.
+Fired when the [strokeColor](#strokecolor) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Button</a>, <a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*strokeColor*](#strokecolor).
+value | <code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code> | The new value of [strokeColor](#strokecolor).
 
 ### strokeWidthChanged
 
-Fired when the [*strokeWidth*](#strokewidth) property has changed.
+Fired when the [strokeWidth](#strokewidth) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Button</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*strokeWidth*](#strokewidth).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a></code> | The new value of [strokeWidth](#strokewidth).
 
 ### alignmentChanged
 
-Fired when the [*alignment*](#alignment) property has changed.
+Fired when the [alignment](#alignment) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Button</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*alignment*](#alignment).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The new value of [alignment](#alignment).
 
 ### fontChanged
 
-Fired when the [*font*](#font) property has changed.
+Fired when the [font](#font) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Button</a>, <a href="../types.html#fontvalue" title="FontValue Type Reference">FontValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`FontValue`](../types.md#fontvalue)</span> | The new value of [*font*](#font).
+value | <code style="white-space: nowrap"><a href="../types.html#fontvalue" title="FontValue Type Reference">FontValue</a></code> | The new value of [font](#font).
 
 ### imageChanged
 
-Fired when the [*image*](#image) property has changed.
+Fired when the [image](#image) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Button</a>, <a href="../types.html#imagevalue" title="ImageValue Type Reference">ImageValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`ImageValue`](../types.md#imagevalue)</span> | The new value of [*image*](#image).
+value | <code style="white-space: nowrap"><a href="../types.html#imagevalue" title="ImageValue Type Reference">ImageValue</a></code> | The new value of [image](#image).
 
 ### imageTintColorChanged
 
-Fired when the [*imageTintColor*](#imagetintcolor) property has changed.
+Fired when the [imageTintColor](#imagetintcolor) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Button</a>, <a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*imageTintColor*](#imagetintcolor).
+value | <code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code> | The new value of [imageTintColor](#imagetintcolor).
 
 ### textChanged
 
-Fired when the [*text*](#text) property has changed.
+Fired when the [text](#text) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Button</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*text*](#text).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The new value of [text](#text).
 
 ### textColorChanged
 
-Fired when the [*textColor*](#textcolor) property has changed.
+Fired when the [textColor](#textcolor) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Button</a>, <a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*textColor*](#textcolor).
+value | <code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code> | The new value of [textColor](#textcolor).
 

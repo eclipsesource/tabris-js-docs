@@ -2,33 +2,40 @@
 ---
 # Class "WidgetCollection"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`WidgetCollection`](WidgetCollection.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="#" >WidgetCollection</a>
 
 A `WidgetCollection` is an array-like object representing a set of widgets, as returned by the widget methods `children` and `find`. It combines a subset of the JavaScript Array API with a subset of the Tabris.js Widget API. Like an array, the widgets within the collection may be accessed directly using the `[index]` syntax. The number of widgets is stored in the `length` field. Instances of *WidgetCollection* are immutable.
 
 Calls to `set` or `animate` change the given properties for all widgets in the collection. Similarly, the `on`, `off` and `once` methods will add/remove the given listener to/from all widgets. When `get` is used, the value of the first widget in the collection is returned.
 
-WidgetCollection can also in JSX as a means of creating a group of widgets to append to the same parent. To shorten this common use case the `WidgetCollection` is also available as the alias `$`. This alias still needs to be imported from the tabris module though.
+WidgetCollection can also in JSX as a means of creating a group of widgets to append to the same parent. To shorten this common use case the `WidgetCollection` is also available as the alias ["$"](./$.md). This alias still needs to be imported from the tabris module though.
 
 
-TypeScript type | `WidgetCollection<T extends Widget = Widget> extends Object`
-Constructor | *public*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | *No*
+Type: | <code style="white-space: nowrap">WidgetCollection&lt;WidgetType&gt; extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a></code>
+Generics: | <span id="generics">WidgetType: *The common type of all widgets in this collection. Must be a subclass of <code style="white-space: nowrap"><a href="Widget.html" title="Widget Class Reference">Widget</a></code> and defaults to <code style="white-space: nowrap"><a href="Widget.html" title="Widget Class Reference">Widget</a></code>.*<br/></span>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | Element: <code style="white-space: nowrap"><a href="WidgetCollection.html" title="WidgetCollection Class Reference">&lt;WidgetCollection/&gt;</a></code><br/>Parent Elements: *Not supported*<br/>Child Elements: *Not Supported*<br/>Text Content: *Not supported*
+
+## Examples
+### JavaScript
 
 
-## Example
 ```js
-let children = page.children();
-for (let child of children) {
+import {Page} from 'tabris';
+
+const children = $(Page).first().children();
+for (const child of children) {
   console.log(child.id);
 }
 ```
 
-As a JSX element via the `$` alias:
 
+### JSX
+
+WidgetCollection as a JSX element via the `$` alias:
 ```jsx
 import {contentView, $, TextView} from 'tabris';
 
@@ -40,13 +47,14 @@ contentView.append(
 );
 ```
 
+
 ## Constructor
 
 ### new WidgetCollection(widgets?)
 
-Parameter|Type|Optional|Description
--|-|-|-
-widgets | <span style="white-space:nowrap;">`Widget[]`</span> | Yes | Array of widgets to include in the WidgetCollection
+Parameter|Type|Description
+-|-|-
+widgets | <code style="white-space: nowrap"><a href="Widget.html" title="Widget Class Reference">Widget</a>[]</code> | Array of widgets to include in the WidgetCollection *Optional.*
 
 ## Methods
 
@@ -57,13 +65,13 @@ widgets | <span style="white-space:nowrap;">`Widget[]`</span> | Yes | Array of w
 Animates all widgets in this collection.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-properties | <span style="white-space:nowrap;">`{transform?: Transformation, opacity?: number}`</span> | No | The properties and target values to animate.
-options | <span style="white-space:nowrap;">[`AnimationOptions`](../types.md#animationoptions)</span> | No | Configures the animation itself.
+Parameter|Type|Description
+-|-|-
+properties | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;transform: <a href="../types.html#transformation" title="Transformation Type Reference">Transformation</a>, // optional<br/>&nbsp;&nbsp;opacity: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a> // optional<br/>}</code> | The properties and target values to animate.
+options | <code style="white-space: nowrap"><a href="../types.html#animationoptions" title="AnimationOptions Type Reference">AnimationOptions</a></code> | Configures the animation itself.
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### appendTo(parent)
 
@@ -72,12 +80,12 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Appends all widgets in this collection to the given parent widget.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-parent | <span style="white-space:nowrap;">[`Composite`](Composite.md)</span> | No | The parent widget to append to.
+Parameter|Type|Description
+-|-|-
+parent | <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">Composite</a></code> | The parent widget to append to.
 
 
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
 ### children(selector?)
 
@@ -86,12 +94,20 @@ Returns <span style="white-space:nowrap;">[`this`](#)</span>
 Returns a collection containing all children of all widgets in this collection that match the given selector.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-selector | <span style="white-space:nowrap;">[`Selector`](../types.md#selector)</span> | Yes | A selector expression or a predicate function to filter the results.
+Parameter|Type|Description
+-|-|-
+selector | <code style="white-space: nowrap"><a href="../selector.html" title="More about selectors">Selector</a></code> | A selector expression or a predicate function to filter the results. *Optional.*
 
 
-Returns <span style="white-space:nowrap;">[`WidgetCollection`](WidgetCollection.md)</span>
+Returns: <code style="white-space: nowrap"><a href="#" >WidgetCollection</a></code>
+
+### concat()
+
+
+
+Returns a clone of this *WidgetCollection* containing all widgets in this collection.
+
+Returns: <code style="white-space: nowrap"><a href="#" >WidgetCollection</a>&lt;<a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">WidgetType</a>&gt;</code>
 
 ### concat(...items)
 
@@ -100,12 +116,12 @@ Returns <span style="white-space:nowrap;">[`WidgetCollection`](WidgetCollection.
 Returns a new *WidgetCollection* containing all widgets in this collection and those given as arguments.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-...items | <span style="white-space:nowrap;">`Array<T` \| `T[]` \| `WidgetCollection<T>>`</span> | No | 
+Parameter|Type|Description
+-|-|-
+...items | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="View &quot;Array&quot; on MDN">Array</a>&lt;<a href="Widget.html" title="Widget Class Reference">Widget</a> &#124; <a href="Widget.html" title="Widget Class Reference">Widget</a>[] &#124; <a href="#" >WidgetCollection</a>&gt;</code> | 
 
 
-Returns <span style="white-space:nowrap;">[`WidgetCollection`](WidgetCollection.md)</span>
+Returns: <code style="white-space: nowrap"><a href="#" >WidgetCollection</a>&lt;<a href="Widget.html" title="Widget Class Reference">Widget</a>&gt;</code>
 
 ### detach()
 
@@ -113,7 +129,7 @@ Returns <span style="white-space:nowrap;">[`WidgetCollection`](WidgetCollection.
 
 Detaches all widgets in this collection from their parent.
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### dispose()
 
@@ -121,7 +137,7 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 
 Disposes all widgets in this collection.
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### filter(selector)
 
@@ -130,12 +146,12 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Returns a new *WidgetCollection* containing all widgets in this collection that match the given selector.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-selector | <span style="white-space:nowrap;">`Selector<T, Result>`</span> | No | A selector expression or a predicate function to filter the results.
+Parameter|Type|Description
+-|-|-
+selector | <code style="white-space: nowrap"><a href="../selector.html" title="More about selectors">Selector</a>&lt;WidgetType, Result&gt;</code> | A selector expression or a predicate function to filter the results.
 
 
-Returns <span style="white-space:nowrap;">[`WidgetCollection`](WidgetCollection.md)</span>
+Returns: <code style="white-space: nowrap"><a href="#" >WidgetCollection</a>&lt;<a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">WidgetType</a>&gt;</code>
 
 ### first(selector?)
 
@@ -144,12 +160,12 @@ Returns <span style="white-space:nowrap;">[`WidgetCollection`](WidgetCollection.
 Returns the first widget in the collection that is matched by the selector. Without selector, it is the same as `collection[0]`.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-selector | <span style="white-space:nowrap;">[`Selector`](../types.md#selector)</span> | Yes | A selector expression or a predicate function to filter the results.
+Parameter|Type|Description
+-|-|-
+selector | <code style="white-space: nowrap"><a href="../selector.html" title="More about selectors">Selector</a></code> | A selector expression or a predicate function to filter the results. *Optional.*
 
 
-Returns <span style="white-space:nowrap;">[`Widget`](Widget.md)</span>
+Returns: <code style="white-space: nowrap"><a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">WidgetType</a></code>
 
 ### forEach(callback)
 
@@ -158,12 +174,12 @@ Returns <span style="white-space:nowrap;">[`Widget`](Widget.md)</span>
 Calls the given callback function once for each widget in the collection.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-callback | <span style="white-space:nowrap;">`(widget: Widget, index: number, collection: WidgetCollection) => void`</span> | No | The function to call for each widget. The arguments are: *widget*, *index*, *collection*
+Parameter|Type|Description
+-|-|-
+callback | <code style="white-space: nowrap">(<a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">widget</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">index</a>, <a href="#" >WidgetCollection</a>&lt;<a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">WidgetType</a>&gt;) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">void</a></code> | The function to call.
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### includes(widget)
 
@@ -172,12 +188,12 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Returns `true` if the given widget is included in the collection, `false` otherwise.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-widget | <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> | No | The widget to search in the collection.
+Parameter|Type|Description
+-|-|-
+widget | <code style="white-space: nowrap"><a href="Widget.html" title="Widget Class Reference">Widget</a></code> | The widget to search in the collection.
 
 
-Returns <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 ### indexOf(widget)
 
@@ -186,12 +202,12 @@ Returns <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.
 Returns the index of the given widget within the collection, or `-1` if the widget is not present.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-widget | <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> | No | The widget to locate in the collection.
+Parameter|Type|Description
+-|-|-
+widget | <code style="white-space: nowrap"><a href="Widget.html" title="Widget Class Reference">Widget</a></code> | The widget to locate in the collection.
 
 
-Returns <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
 
 ### last(selector?)
 
@@ -200,26 +216,12 @@ Returns <span style="white-space:nowrap;">[`number`](https://developer.mozilla.o
 Returns the last widget in the collection that is matched by the selector. Without selector, it is the same as `collection[collection.length - 1]`.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-selector | <span style="white-space:nowrap;">[`Selector`](../types.md#selector)</span> | Yes | A selector expression or a predicate function to filter the results.
+Parameter|Type|Description
+-|-|-
+selector | <code style="white-space: nowrap"><a href="../selector.html" title="More about selectors">Selector</a></code> | A selector expression or a predicate function to filter the results. *Optional.*
 
 
-Returns <span style="white-space:nowrap;">[`Widget`](Widget.md)</span>
-
-### last(constructor)
-
-
-
-Returns the last widget in the collection that is an instance of the given class.
-
-
-Parameter|Type|Optional|Description
--|-|-|-
-constructor | <span style="white-space:nowrap;">`{ new (...args: any[]): U }` \| [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type)</span> | No | A class to filter the results.
-
-
-Returns <span style="white-space:nowrap;">`U`</span>
+Returns: <code style="white-space: nowrap"><a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">WidgetType</a></code>
 
 ### map(callback)
 
@@ -228,12 +230,12 @@ Returns <span style="white-space:nowrap;">`U`</span>
 Calls the given callback function once for each widget in the collection and returns an array with the return values of each call.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-callback | <span style="white-space:nowrap;">`(widget: Widget, index: number, collection: WidgetCollection) => void`</span> | No | The function to call for each widget. The arguments are: *widget*, *index*, *collection*
+Parameter|Type|Description
+-|-|-
+callback | <code style="white-space: nowrap">(<a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">widget</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">index</a>, <a href="#" >WidgetCollection</a>&lt;<a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">WidgetType</a>&gt;) => <a title="Literally any JavaScript value">any</a></code> | The function to call for each widget.
 
 
-Returns <span style="white-space:nowrap;">`Array`</span>
+Returns: <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a>[]</code>
 
 ### off(event, listener, context?)
 
@@ -242,14 +244,14 @@ Returns <span style="white-space:nowrap;">`Array`</span>
 Removes the given listener from all widgets in this collection. See also `Widget.off()`.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-event | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
-listener | <span style="white-space:nowrap;">`Function`</span> | No | 
-context | <span style="white-space:nowrap;">[`this`](#)</span> | Yes | 
+Parameter|Type|Description
+-|-|-
+event | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+listener | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a></code> | 
+context | <code style="white-space: nowrap"><a href="#" title="This object">this</a></code> | *Optional.*
 
 
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
 ### on(event, listener, context?)
 
@@ -258,14 +260,14 @@ Returns <span style="white-space:nowrap;">[`this`](#)</span>
 Adds the given listener to all widgets in this collection. See also `Widget.on()`.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-event | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
-listener | <span style="white-space:nowrap;">`Function`</span> | No | 
-context | <span style="white-space:nowrap;">[`this`](#)</span> | Yes | In the listener function, `this` will point to this object.
+Parameter|Type|Description
+-|-|-
+event | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+listener | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a></code> | 
+context | <code style="white-space: nowrap"><a href="#" title="This object">this</a></code> | In the listener function, `this` will point to this object. *Optional.*
 
 
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
 ### once(event, listener, context?)
 
@@ -274,14 +276,14 @@ Returns <span style="white-space:nowrap;">[`this`](#)</span>
 Adds the given listener for single execution on all widgets in this collection. See also `Widget.once()`.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-event | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
-listener | <span style="white-space:nowrap;">`Function`</span> | No | 
-context | <span style="white-space:nowrap;">[`this`](#)</span> | Yes | In the listener function, `this` will point to this object.
+Parameter|Type|Description
+-|-|-
+event | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+listener | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a></code> | 
+context | <code style="white-space: nowrap"><a href="#" title="This object">this</a></code> | In the listener function, `this` will point to this object. *Optional.*
 
 
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
 ### only(selector?)
 
@@ -290,12 +292,12 @@ Returns <span style="white-space:nowrap;">[`this`](#)</span>
 Returns the only widget in the collection that is matched by the selector. If there is more or less than one match the method throws en Error. Without a selector the widget collection needs to have exactly one entry.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-selector | <span style="white-space:nowrap;">[`Selector`](../types.md#selector)</span> | Yes | A selector expression or a predicate function to filter the results.
+Parameter|Type|Description
+-|-|-
+selector | <code style="white-space: nowrap"><a href="../selector.html" title="More about selectors">Selector</a></code> | A selector expression or a predicate function to filter the results. *Optional.*
 
 
-Returns <span style="white-space:nowrap;">[`Widget`](Widget.md)</span>
+Returns: <code style="white-space: nowrap"><a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">WidgetType</a></code>
 
 ### parent()
 
@@ -303,7 +305,7 @@ Returns <span style="white-space:nowrap;">[`Widget`](Widget.md)</span>
 
 Returns a collection containing all direct parents of the widgets in this collection.
 
-Returns <span style="white-space:nowrap;">[`WidgetCollection`](WidgetCollection.md)</span>
+Returns: <code style="white-space: nowrap"><a href="#" >WidgetCollection</a></code>
 
 ### set(properties)
 
@@ -312,12 +314,12 @@ Returns <span style="white-space:nowrap;">[`WidgetCollection`](WidgetCollection.
 Sets all key-value pairs in the properties object on all widgets in this collection. See also `Widget.set()`.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-properties | <span style="white-space:nowrap;">[`object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> | No | 
+Parameter|Type|Description
+-|-|-
+properties | <code style="white-space: nowrap"><a href="../types.html#propertieswidget" title="Properties&lt;Widget&gt;">Properties</a>&lt;<a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">WidgetType</a>&gt;</code> | 
 
 
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
 ### slice(start?, end?)
 
@@ -326,13 +328,13 @@ Returns <span style="white-space:nowrap;">[`this`](#)</span>
 Returns a new *WidgetCollection* containing a section of this collection.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-start | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | Yes | The beginning of the specified portion of the collection.
-end | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | Yes | The end of the specified portion of the collection.
+Parameter|Type|Description
+-|-|-
+start | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The beginning of the specified portion of the collection. *Optional.*
+end | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The end of the specified portion of the collection. *Optional.*
 
 
-Returns <span style="white-space:nowrap;">[`WidgetCollection`](WidgetCollection.md)</span>
+Returns: <code style="white-space: nowrap"><a href="#" >WidgetCollection</a>&lt;<a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">WidgetType</a>&gt;</code>
 
 ### toArray()
 
@@ -340,22 +342,22 @@ Returns <span style="white-space:nowrap;">[`WidgetCollection`](WidgetCollection.
 
 Returns an Array containing all widgets in the collection.
 
-Returns <span style="white-space:nowrap;">`Widget[]`</span>
+Returns: <code style="white-space: nowrap"><a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">WidgetType</a>[]</code>
 
-### trigger(event, ...params)
-
-
-
-Triggers an event of the given type on all widgets in this collection. See also `Widget.trigger()`
+### trigger(type, eventData?)
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-event | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
-...params | <span style="white-space:nowrap;">`any[]`</span> | No | 
+
+Triggers an event of the given type on all widgets in this collection and passes the fields of the given *object* to all listeners`
 
 
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
+Parameter|Type|Description
+-|-|-
+type | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The type of event to trigger
+eventData | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a></code> | The data to pass to listener functions. *Optional.*
+
+
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
 
 ## Properties
@@ -365,10 +367,8 @@ Returns <span style="white-space:nowrap;">[`this`](#)</span>
 
 The widget this WidgetCollection was created from. Corresponds to the ':host' selector.
 
-Type | <span style="white-space:nowrap;">[`Widget`](Widget.md)</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="Widget.html" title="Widget Class Reference">Widget</a></code>
+Settable: | No
 
 
 
@@ -381,10 +381,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 Contains the number of widgets in the collection.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Settable: | No
 
 
 

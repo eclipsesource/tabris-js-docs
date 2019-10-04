@@ -2,14 +2,18 @@
 ---
 # Timer
 
-## Example
+## Examples
+### JavaScript
+
+
 ```js
 setTimeout(() => console.log('Timer finished after 2 seconds'), 2000);
 ```
 
+
 See also:
   
-[<span class='language tsx'>TSX</span> timer.tsx](https://playground.tabris.com/?gitref=v3.1.0&snippet=timer.tsx)
+[<span class='language jsx'>JSX</span> timer.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=timer.jsx)
 
 ## Methods
 
@@ -20,12 +24,12 @@ See also:
 Cancels the running interval associated with the given ID. When given an invalid ID, nothing happens.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-id | <span style="white-space:nowrap;">[`any`](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)</span> | No | The ID that was returned by `setInterval`.
+Parameter|Type|Description
+-|-|-
+id | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code> | The ID that was returned by `setInterval`.
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### clearTimeout(id)
 
@@ -34,12 +38,12 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Cancels the running timeout associated with the given ID. When given an invalid ID, nothing happens.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-id | <span style="white-space:nowrap;">[`any`](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)</span> | No | The ID that was returned by `setTimeout`.
+Parameter|Type|Description
+-|-|-
+id | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code> | The ID that was returned by `setTimeout`.
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### setInterval(callback, delay?, ...params)
 
@@ -48,14 +52,14 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Calls the given function repeatedly, each times waiting the given delay. The actual delay may be slightly longer than the given one.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-callback | <span style="white-space:nowrap;">`Function`</span> | No | The function to call.
-delay | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | Yes | The delay in milliseconds.
-...params | <span style="white-space:nowrap;">`any[]`</span> | No | One or more values passed on to the callback.
+Parameter|Type|Description
+-|-|-
+callback | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a></code> | The function to call.
+delay | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The delay in milliseconds. *Optional.*
+...params | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a>[]</code> | One or more values passed on to the callback.
 
 
-Returns <span style="white-space:nowrap;">[`any`](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)</span>
+Returns: <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code>
 
 ### setTimeout(callback, delay?, ...params)
 
@@ -64,12 +68,12 @@ Returns <span style="white-space:nowrap;">[`any`](https://www.typescriptlang.org
 Calls the given function with `param` (and all following parameters) after the specified delay. The actual delay may be slightly longer than the given one.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-callback | <span style="white-space:nowrap;">`Function`</span> | No | The function to call.
-delay | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | Yes | The delay in milliseconds.
-...params | <span style="white-space:nowrap;">`any[]`</span> | No | One or more values passed on to the callback.
+Parameter|Type|Description
+-|-|-
+callback | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a></code> | The function to call.
+delay | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The delay in milliseconds. *Optional.*
+...params | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a>[]</code> | One or more values passed on to the callback.
 
 
-Returns <span style="white-space:nowrap;">[`any`](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)</span>
+Returns: <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code>
 

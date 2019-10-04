@@ -2,21 +2,25 @@
 ---
 # Class "TabFolder"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> > <span style="white-space:nowrap;">[`Composite`](Composite.md)</span> > <span style="white-space:nowrap;">[`TabFolder`](TabFolder.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a> > <a href="Widget.html" title="Widget Class Reference">Widget</a> > <a href="Composite.html" title="Composite Class Reference">Composite</a> > <a href="#" >TabFolder</a>
 
 A widget that can switch between [tabs](Tab). Only children of type `Tab` are supported. Since the TabFolder does not compute its own size, the width and height must be defined by the respective layout properties (e.g. either `width` or `left` and `right` must be specified).
 
 
 <div class="tabris-image"><figure><div><img srcset="img/android/TabFolder.png 2x" src="img/android/TabFolder.png" alt="TabFolder on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/TabFolder.png 2x" src="img/ios/TabFolder.png" alt="TabFolder on iOS"/></div><figcaption>iOS</figcaption></figure></div>
 
-TypeScript type | `TabFolder<ChildType extends Tab = Tab> extends Composite<ChildType>`
-Constructor | *public*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | Element: `<TabFolder/>`<br/>Parent element: [`<Composite/>`](Composite.md) *and any widget extending* <span style="white-space:nowrap;">[`Composite`](Composite.md)</span><br/>Child elements: `<ChildType/>`<br/>Text content: *Not supported*<br/>
+Type: | <code style="white-space: nowrap">TabFolder&lt;TabType&gt; extends <a href="Composite.html" title="Composite Class Reference">Composite</a>&lt;<a href="#generics" title="Generic Parameter&quot;TabType&quot;">TabType</a>&gt;</code>
+Generics: | <span id="generics">TabType: *The common widget class of the children this TabFolder can contain. Must be a subclass of <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">Tab</a></code> and defaults to <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">Tab</a></code>.*<br/></span>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | Element: <code style="white-space: nowrap"><a href="TabFolder.html" title="TabFolder Class Reference">&lt;TabFolder/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="Canvas.html" title="Canvas Class Reference">&lt;Canvas/&gt;</a></code>, <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">&lt;Composite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Page.html" title="Page Class Reference">&lt;Page/&gt;</a></code>, <code style="white-space: nowrap"><a href="RefreshComposite.html" title="RefreshComposite Class Reference">&lt;RefreshComposite/&gt;</a></code>, <code style="white-space: nowrap"><a href="ScrollView.html" title="ScrollView Class Reference">&lt;ScrollView/&gt;</a></code>, <code style="white-space: nowrap"><a href="Stack.html" title="Stack Class Reference">&lt;Stack/&gt;</a></code>, <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Child Elements: <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Text Content: *Not supported*
 
-## Example
+## Examples
+### JavaScript
+
+
 ```js
 import {Tab, TabFolder, contentView} from 'tabris';
 
@@ -27,19 +31,20 @@ new TabFolder({left: 0, top: 0, right: 0, bottom: 0})
   .appendTo(contentView);
 ```
 
+
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a `TabFolder` containing a set of tabs](https://playground.tabris.com/?gitref=v3.1.0&snippet=tabfolder.jsx)  
-[<span class='language js'>JS</span> tabfolder-swipe-parallax.js](https://playground.tabris.com/?gitref=v3.1.0&snippet=tabfolder-swipe-parallax.js)  
-[<span class='language jsx'>JSX</span> tabfolder-swipe.jsx](https://playground.tabris.com/?gitref=v3.1.0&snippet=tabfolder-swipe.jsx)
+[<span class='language jsx'>JSX</span> Creating a `TabFolder` containing a set of tabs](https://playground.tabris.com/?gitref=vundefined&snippet=tabfolder.jsx)  
+[<span class='language js'>JS</span> tabfolder-swipe-parallax.js](https://playground.tabris.com/?gitref=vundefined&snippet=tabfolder-swipe-parallax.js)  
+[<span class='language jsx'>JSX</span> tabfolder-swipe.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=tabfolder-swipe.jsx)
 
 ## Constructor
 
 ### new TabFolder(properties?)
 
-Parameter|Type|Optional|Description
--|-|-|-
-properties | <span style="white-space:nowrap;">`Properties<TabFolder>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
+Parameter|Type|Description
+-|-|-
+properties | <code style="white-space: nowrap"><a href="../types.html#propertieswidget" title="Properties&lt;Widget&gt;">Properties</a>&lt;<a href="#" >TabFolder</a>&gt;</code> | Sets all key-value pairs in the properties object as widget properties. *Optional.*
 
 ## Properties
 
@@ -48,9 +53,9 @@ properties | <span style="white-space:nowrap;">`Properties<TabFolder>`</span> | 
 
 Enables swiping through tabs.
 
-Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`pagingChanged`](#pagingchanged)
 
 
 
@@ -60,9 +65,9 @@ Change events | *Yes*
 
 The color used for the underline strip of the selected tab. Only applies on Android when the `tabBarLocation` is `top`.
 
-Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`selectedTabIndicatorTintColorChanged`](#selectedtabindicatortintcolorchanged)
 
 
 
@@ -72,9 +77,9 @@ Change events | *Yes*
 
 The color used for the text and icon of a selected tab.
 
-Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`selectedTabTintColorChanged`](#selectedtabtintcolorchanged)
 
 
 
@@ -84,9 +89,9 @@ Change events | *Yes*
 
 The currently selected tab.
 
-Type | <span style="white-space:nowrap;">[`Tab`](Tab.md)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="#generics" title="Generic Parameter&quot;TabType&quot;">TabType</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`selectionChanged`](#selectionchanged)
 
 
 
@@ -96,9 +101,9 @@ Change events | *Yes*
 
 The index of the currently selected tab.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`selectionIndexChanged`](#selectionindexchanged)
 
 
 
@@ -108,9 +113,9 @@ Change events | *Yes*
 
 The color used for the background of the bar containing the tabs.
 
-Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`tabBarBackgroundChanged`](#tabbarbackgroundchanged)
 
 
 
@@ -120,9 +125,9 @@ Change events | *Yes*
 
 The elevation of the tab bar. Depending on the `tabBarLocation` different defaults are applied.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`tabBarElevationChanged`](#tabbarelevationchanged)
 
 
 
@@ -132,10 +137,10 @@ Change events | *Yes*
 
 The placement of the tab titles. When set to `"hidden"`, the tab bar will not be visible. When set to `"auto"`, the position is platform dependent.
 
-Type | `'top'` \| `'bottom'` \| `'hidden'` \| `'auto'`
-Default | `'auto'`
-Settable | *On creation*
-Change events | *No*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'top'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'bottom'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'hidden'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >By Constructor or JSX</a>
+Change Event: | Not supported
 
 
 
@@ -149,10 +154,10 @@ This property can only be set via constructor or JSX. Once set, it cannot change
 
 Controls how the tabs make use of the available horizontal space. Setting the `tabMode` to `"fixed"` makes the tabs span the entire available space. In case of a very wide `TabFolder` the `"fixed"` mode centers the tabs. The mode `"scrollable"` left aligns the tabs and allows to scroll the tabs if there are more tabs than would fit in the available space. Available on Android only.
 
-Type | `'fixed'` \| `'scrollable'`
-Default | `'fixed'`
-Settable | *On creation*
-Change events | *No*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'fixed'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'scrollable'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'fixed'</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >By Constructor or JSX</a>
+Change Event: | Not supported
 
 
 
@@ -168,9 +173,9 @@ The color used for the text and icon of a tab.
 
 When the `tabBarLocation` is `top` on iOS, this property affects the entire appearance of the bar. No other color properties have an effect in that configuration.
 
-Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`tabTintColorChanged`](#tabtintcolorchanged)
 
 
 
@@ -182,82 +187,102 @@ Change events | *Yes*
 
 Fired when the user taps on a tab. The event also fires when the same tab is tapped multiple times.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap">TabFolderSelectEvent&lt;<a href="#" >TabFolder</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-selection | <span style="white-space:nowrap;">[`Tab`](Tab.md)</span> | The `Tap` selected by the user.
+selection | <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">Tab</a></code> | The `Tap` selected by the user.
 
 ### scroll
 
 Fired when `paging` is enabled and a tab is scrolled. The `event` parameter contains position information relative to the currently selected `Tab`. Eg.: scrolling a 500px wide tab 10% to the left sets `offset` to `50`. Scrolling 10% to the right sets `offset` to `-50`.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap">TabFolderScrollEvent&lt;<a href="#" >TabFolder</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-offset | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | Number of pixels the current tab has scrolled horizontally.
-selection | <span style="white-space:nowrap;">[`Tab`](Tab.md)</span> | The current value of the `selection` property.
+offset | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Number of pixels the current tab has scrolled horizontally.
+selection | <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">Tab</a></code> | The current value of the `selection` property.
 
 ## Change Events
 
 ### pagingChanged
 
-Fired when the [*paging*](#paging) property has changed.
+Fired when the [paging](#paging) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >TabFolder</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of [*paging*](#paging).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The new value of [paging](#paging).
 
 ### selectionChanged
 
-Fired when the [*selection*](#selection) property has changed.
+Fired when the [selection](#selection) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >TabFolder</a>, <a href="#generics" title="Generic Parameter&quot;TabType&quot;">TabType</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`Tab`](Tab.md)</span> | The new value of [*selection*](#selection).
+value | <code style="white-space: nowrap"><a href="#generics" title="Generic Parameter&quot;TabType&quot;">TabType</a></code> | The new value of [selection](#selection).
 
 ### selectionIndexChanged
 
-Fired when the [*selectionIndex*](#selectionindex) property has changed.
+Fired when the [selectionIndex](#selectionindex) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >TabFolder</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*selectionIndex*](#selectionindex).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The new value of [selectionIndex](#selectionindex).
 
 ### tabTintColorChanged
 
-Fired when the [*tabTintColor*](#tabtintcolor) property has changed.
+Fired when the [tabTintColor](#tabtintcolor) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >TabFolder</a>, <a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*tabTintColor*](#tabtintcolor).
+value | <code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code> | The new value of [tabTintColor](#tabtintcolor).
 
 ### selectedTabTintColorChanged
 
-Fired when the [*selectedTabTintColor*](#selectedtabtintcolor) property has changed.
+Fired when the [selectedTabTintColor](#selectedtabtintcolor) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >TabFolder</a>, <a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*selectedTabTintColor*](#selectedtabtintcolor).
+value | <code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code> | The new value of [selectedTabTintColor](#selectedtabtintcolor).
 
 ### tabBarBackgroundChanged
 
-Fired when the [*tabBarBackground*](#tabbarbackground) property has changed.
+Fired when the [tabBarBackground](#tabbarbackground) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >TabFolder</a>, <a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*tabBarBackground*](#tabbarbackground).
+value | <code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code> | The new value of [tabBarBackground](#tabbarbackground).
 
 ### selectedTabIndicatorTintColorChanged
 
-Fired when the [*selectedTabIndicatorTintColor*](#selectedtabindicatortintcolor) property has changed.
+Fired when the [selectedTabIndicatorTintColor](#selectedtabindicatortintcolor) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >TabFolder</a>, <a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*selectedTabIndicatorTintColor*](#selectedtabindicatortintcolor).
+value | <code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code> | The new value of [selectedTabIndicatorTintColor](#selectedtabindicatortintcolor).
 
 ### tabBarElevationChanged
 
-Fired when the [*tabBarElevation*](#tabbarelevation) property has changed.
+Fired when the [tabBarElevation](#tabbarelevation) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >TabFolder</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*tabBarElevation*](#tabbarelevation).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The new value of [tabBarElevation](#tabbarelevation).
 

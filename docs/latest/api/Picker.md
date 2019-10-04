@@ -2,20 +2,24 @@
 ---
 # Class "Picker"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> > <span style="white-space:nowrap;">[`Picker`](Picker.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a> > <a href="Widget.html" title="Widget Class Reference">Widget</a> > <a href="#" >Picker</a>
 
 A widget with a drop-down list of items to choose from.
 
 
 <div class="tabris-image"><figure><div><img srcset="img/android/Picker.png 2x" src="img/android/Picker.png" alt="Picker on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/Picker.png 2x" src="img/ios/Picker.png" alt="Picker on iOS"/></div><figcaption>iOS</figcaption></figure></div>
 
-Constructor | *public*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | Element: `<Picker/>`<br/>Parent element: [`<Composite/>`](Composite.md) *and any widget extending* <span style="white-space:nowrap;">[`Composite`](Composite.md)</span><br/>Child elements: *None*<br/>Text content: *Not supported*<br/>
+Type: | <code style="white-space: nowrap">Picker extends <a href="Widget.html" title="Widget Class Reference">Widget</a></code>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | Element: <code style="white-space: nowrap"><a href="Picker.html" title="Picker Class Reference">&lt;Picker/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="Canvas.html" title="Canvas Class Reference">&lt;Canvas/&gt;</a></code>, <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">&lt;Composite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Page.html" title="Page Class Reference">&lt;Page/&gt;</a></code>, <code style="white-space: nowrap"><a href="RefreshComposite.html" title="RefreshComposite Class Reference">&lt;RefreshComposite/&gt;</a></code>, <code style="white-space: nowrap"><a href="ScrollView.html" title="ScrollView Class Reference">&lt;ScrollView/&gt;</a></code>, <code style="white-space: nowrap"><a href="Stack.html" title="Stack Class Reference">&lt;Stack/&gt;</a></code>, <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Child Elements: *Not Supported*<br/>Text Content: *Not supported*
 
-## Example
+## Examples
+### JavaScript
+
+
 ```js
 import {contentView, Picker} from 'tabris';
 
@@ -28,37 +32,19 @@ new Picker({
   .appendTo(contentView);
 ```
 
+
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `Picker`](https://playground.tabris.com/?gitref=v3.1.0&snippet=picker.jsx)  
-[<span class='language jsx'>JSX</span> picker-style.jsx](https://playground.tabris.com/?gitref=v3.1.0&snippet=picker-style.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `Picker`](https://playground.tabris.com/?gitref=vundefined&snippet=picker.jsx)  
+[<span class='language jsx'>JSX</span> picker-style.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=picker-style.jsx)
 
 ## Constructor
 
 ### new Picker(properties?)
 
-Parameter|Type|Optional|Description
--|-|-|-
-properties | <span style="white-space:nowrap;">`Properties<Picker> & Partial<Pick<Picker, 'itemText'>>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
-
-## Methods
-
-### set(properties)
-
-
-
-Sets all key-value pairs in the properties object as widget properties.
-
-**Important TypeScript note:** When called on `this` you may need to specify your custom type like this: `this.set<MyComponent>({propA: valueA});`
-
-
-Parameter|Type|Optional|Description
--|-|-|-
-properties | <span style="white-space:nowrap;">`Properties<T> & Partial<Pick<this, 'itemText'>>`</span> | No | 
-
-
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
-
+Parameter|Type|Description
+-|-|-
+properties | <code style="white-space: nowrap"><a href="../types.html#propertieswidget" title="Properties&lt;Widget&gt;">Properties</a>&lt;<a href="#" >Picker</a>&gt;</code> | Sets all key-value pairs in the properties object as widget properties. *Optional.*
 
 ## Properties
 
@@ -67,9 +53,9 @@ Returns <span style="white-space:nowrap;">[`this`](#)</span>
 
 The color of the Picker border. This can be the surrounding line or the underline of the Picker depending on the `style` property.
 
-Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`borderColorChanged`](#bordercolorchanged)
 
 
 
@@ -79,10 +65,10 @@ Change events | *Yes*
 
 Whether the hint message should float above the Picker when focus is gained.
 
-Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
-Default | `true`
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">true</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`floatMessageChanged`](#floatmessagechanged)
 
 
 
@@ -92,9 +78,9 @@ Change events | *Yes*
 
 The font used for the text inside the Picker.
 
-Type | <span style="white-space:nowrap;">[`FontValue`](../types.md#fontvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#fontvalue" title="FontValue Type Reference">FontValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`fontChanged`](#fontchanged)
 
 
 
@@ -104,9 +90,9 @@ Change events | *Yes*
 
 The number of items to display.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`itemCountChanged`](#itemcountchanged)
 
 
 
@@ -116,9 +102,9 @@ Change events | *Yes*
 
 A function that returns the string to display for a given index.
 
-Type | <span style="white-space:nowrap;">`(index: number) => string`</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap">(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">index</a>) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`itemTextChanged`](#itemtextchanged)
 
 
 
@@ -128,9 +114,9 @@ Change events | *Yes*
 
 A hint text that is displayed when the picker has no selection.
 
-Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`messageChanged`](#messagechanged)
 
 
 
@@ -140,9 +126,9 @@ Change events | *Yes*
 
 The index of the currently selected item.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`selectionIndexChanged`](#selectionindexchanged)
 
 
 
@@ -154,10 +140,10 @@ The visual appearance of the `Picker` widget.
 
 With the `style` _outline_, _fill_ or _underline_ the message hint will float above the `Picker` on Android. This behavior can be controlled with the property `floatMessage`. The `style` _none_ will remove any background visualization, allowing to create a custom background. 
 
-Type | `'default'` \| `'outline'` \| `'fill'` \| `'underline'` \| `'none'`
-Default | `'default'`
-Settable | *On creation*
-Change events | *No*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'default'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'outline'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'fill'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'underline'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'none'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'default'</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >By Constructor or JSX</a>
+Change Event: | Not supported
 
 
 
@@ -166,7 +152,7 @@ This property can only be set via constructor or JSX. Once set, it cannot change
 
 See also:
   
-[<span class='language jsx'>JSX</span> picker-style.jsx](https://playground.tabris.com/?gitref=v3.1.0&snippet=picker-style.jsx)
+[<span class='language jsx'>JSX</span> picker-style.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=picker-style.jsx)
 
 
 ### textColor
@@ -174,9 +160,9 @@ See also:
 
 The color of the text.
 
-Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`textColorChanged`](#textcolorchanged)
 
 
 
@@ -188,73 +174,91 @@ Change events | *Yes*
 
 Fired when an item was selected by the user.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap">PickerSelectEvent&lt;<a href="#" >Picker</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-index | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | Contains the index of the selected item.
+index | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Contains the index of the selected item.
 
 ## Change Events
 
 ### messageChanged
 
-Fired when the [*message*](#message) property has changed.
+Fired when the [message](#message) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Picker</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*message*](#message).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The new value of [message](#message).
 
 ### floatMessageChanged
 
-Fired when the [*floatMessage*](#floatmessage) property has changed.
+Fired when the [floatMessage](#floatmessage) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Picker</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of [*floatMessage*](#floatmessage).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The new value of [floatMessage](#floatmessage).
 
 ### itemCountChanged
 
-Fired when the [*itemCount*](#itemcount) property has changed.
+Fired when the [itemCount](#itemcount) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Picker</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*itemCount*](#itemcount).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The new value of [itemCount](#itemcount).
 
 ### itemTextChanged
 
-Fired when the [*itemText*](#itemtext) property has changed.
+Fired when the [itemText](#itemtext) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Picker</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">`(index: number) => string`</span> | The new value of [*itemText*](#itemtext).
+value | <code style="white-space: nowrap">(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">index</a>) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The new value of [itemText](#itemtext).
 
 ### selectionIndexChanged
 
-Fired when the [*selectionIndex*](#selectionindex) property has changed.
+Fired when the [selectionIndex](#selectionindex) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Picker</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*selectionIndex*](#selectionindex).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The new value of [selectionIndex](#selectionindex).
 
 ### borderColorChanged
 
-Fired when the [*borderColor*](#bordercolor) property has changed.
+Fired when the [borderColor](#bordercolor) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Picker</a>, <a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*borderColor*](#bordercolor).
+value | <code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code> | The new value of [borderColor](#bordercolor).
 
 ### textColorChanged
 
-Fired when the [*textColor*](#textcolor) property has changed.
+Fired when the [textColor](#textcolor) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Picker</a>, <a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*textColor*](#textcolor).
+value | <code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code> | The new value of [textColor](#textcolor).
 
 ### fontChanged
 
-Fired when the [*font*](#font) property has changed.
+Fired when the [font](#font) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Picker</a>, <a href="../types.html#fontvalue" title="FontValue Type Reference">FontValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`FontValue`](../types.md#fontvalue)</span> | The new value of [*font*](#font).
+value | <code style="white-space: nowrap"><a href="../types.html#fontvalue" title="FontValue Type Reference">FontValue</a></code> | The new value of [font](#font).
 

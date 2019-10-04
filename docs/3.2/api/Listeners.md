@@ -99,6 +99,20 @@ eventData | <code style="white-space: nowrap"><a href="#generics" title="Generic
 
 Returns: <code style="white-space: nowrap">this.target</code>
 
+### triggerAsync(eventData?)
+
+
+
+Like `trigger`, but returns a promise. The promise will resolve when all asynchronous listeners (if any) have resolved. If none of the listeners are asynchronous (return a promise) this method works just like `trigger()`. Useful for unit testing.
+
+
+Parameter|Type|Description
+-|-|-
+eventData | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a></code> | *Optional.*
+
+
+Returns: <code style="white-space: nowrap">Promise<this.target></code>
+
 
 ## Properties
 

@@ -2,20 +2,24 @@
 ---
 # Class "Tab"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> > <span style="white-space:nowrap;">[`Composite`](Composite.md)</span> > <span style="white-space:nowrap;">[`Tab`](Tab.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a> > <a href="Widget.html" title="Widget Class Reference">Widget</a> > <a href="Composite.html" title="Composite Class Reference">Composite</a> > <a href="#" >Tab</a>
 
 A container representing a single tab of a TabFolder widget.
 
 
 <div class="tabris-image"><figure><div><img srcset="img/android/Tab.png 2x" src="img/android/Tab.png" alt="Tab on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/Tab.png 2x" src="img/ios/Tab.png" alt="Tab on iOS"/></div><figcaption>iOS</figcaption></figure></div>
 
-Constructor | *public*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | Element: `<Tab/>`<br/>Parent element: [`<TabFolder/>`](TabFolder.md)<br/>Child elements: *Widgets*<br/>Text content: *Not supported*<br/>
+Type: | <code style="white-space: nowrap">Tab extends <a href="Composite.html" title="Composite Class Reference">Composite</a></code>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | Element: <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="TabFolder.html" title="TabFolder Class Reference">&lt;TabFolder/&gt;</a></code><br/>Child Elements: *Any standalone widget element*<br/>Text Content: *Not supported*
 
-## Example
+## Examples
+### JavaScript
+
+
 ```js
 import {Tab, TabFolder, contentView} from 'tabris';
 
@@ -26,17 +30,18 @@ new TabFolder({left: 0, top: 0, right: 0, bottom: 0})
   .appendTo(contentView);
 ```
 
+
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a `Tab` inside a `TabFolder`](https://playground.tabris.com/?gitref=v3.1.0&snippet=tabfolder.jsx)
+[<span class='language jsx'>JSX</span> Creating a `Tab` inside a `TabFolder`](https://playground.tabris.com/?gitref=vundefined&snippet=tabfolder.jsx)
 
 ## Constructor
 
 ### new Tab(properties?)
 
-Parameter|Type|Optional|Description
--|-|-|-
-properties | <span style="white-space:nowrap;">`Properties<Tab>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
+Parameter|Type|Description
+-|-|-
+properties | <code style="white-space: nowrap"><a href="../types.html#propertieswidget" title="Properties&lt;Widget&gt;">Properties</a>&lt;<a href="#" >Tab</a>&gt;</code> | Sets all key-value pairs in the properties object as widget properties. *Optional.*
 
 ## Methods
 
@@ -47,12 +52,12 @@ properties | <span style="white-space:nowrap;">`Properties<Tab>`</span> | Yes | 
 Inserts this widget directly before the given `Tab`.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-widget | <span style="white-space:nowrap;">[`Tab`](Tab.md)</span> | No | 
+Parameter|Type|Description
+-|-|-
+widget | <code style="white-space: nowrap"><a href="#" >Tab</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
 
 ## Properties
@@ -62,9 +67,9 @@ Returns <span style="white-space:nowrap;">[`this`](#)</span>
 
 A badge to attach on the tab. The property only has an effect when the parent `TabFolder` has its `tabBarLocation` set to `bottom`. Setting the `badge` to `0` hides the badge. The background color of the badge can be controlled with the `badgeColor` property.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`badgeChanged`](#badgechanged)
 
 
 
@@ -74,9 +79,9 @@ Change events | *Yes*
 
 The background color used for the `badge` indicator.
 
-Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`badgeColorChanged`](#badgecolorchanged)
 
 
 
@@ -86,9 +91,9 @@ Change events | *Yes*
 
 An image to be displayed on the tab.  Will not be shown on iOS if the `TabFolder`'s `tabBarLocation` is set to `top`
 
-Type | <span style="white-space:nowrap;">[`ImageValue`](../types.md#imagevalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#imagevalue" title="ImageValue Type Reference">ImageValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`imageChanged`](#imagechanged)
 
 
 
@@ -98,9 +103,9 @@ Change events | *Yes*
 
 An image to be displayed on the currently active tab.
 
-Type | <span style="white-space:nowrap;">[`ImageValue`](../types.md#imagevalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#imagevalue" title="ImageValue Type Reference">ImageValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`selectedImageChanged`](#selectedimagechanged)
 
 
 
@@ -110,9 +115,9 @@ Change events | *Yes*
 
 The title to be displayed on the tab.
 
-Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`titleChanged`](#titlechanged)
 
 
 
@@ -124,57 +129,79 @@ Change events | *Yes*
 
 Fired when the tab will become visible, i.e. the selection of its TabFolder.
 
+EventObject Type: <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a>&lt;<a href="#" >Tab</a>&gt;</code>
+
+This event has no additional parameter.
 ### disappear
 
 Fired when the tab is no longer visible, i.e. it no longer is the selection of its TabFolder.
 
+EventObject Type: <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a>&lt;<a href="#" >Tab</a>&gt;</code>
+
+This event has no additional parameter.
 ### select
 
 Fired when the tab is tapped by the user. The event is fired either when the tab is first selected or when it is already visible and tapped.
 
+EventObject Type: <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a>&lt;<a href="#" >Tab</a>&gt;</code>
+
+This event has no additional parameter.
 ### reselect
 
 Fired when the tab is tapped by the user while it is already visible.
 
+EventObject Type: <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a>&lt;<a href="#" >Tab</a>&gt;</code>
+
+This event has no additional parameter.
 ## Change Events
 
 ### titleChanged
 
-Fired when the [*title*](#title) property has changed.
+Fired when the [title](#title) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Tab</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*title*](#title).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The new value of [title](#title).
 
 ### imageChanged
 
-Fired when the [*image*](#image) property has changed.
+Fired when the [image](#image) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Tab</a>, <a href="../types.html#imagevalue" title="ImageValue Type Reference">ImageValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`ImageValue`](../types.md#imagevalue)</span> | The new value of [*image*](#image).
+value | <code style="white-space: nowrap"><a href="../types.html#imagevalue" title="ImageValue Type Reference">ImageValue</a></code> | The new value of [image](#image).
 
 ### selectedImageChanged
 
-Fired when the [*selectedImage*](#selectedimage) property has changed.
+Fired when the [selectedImage](#selectedimage) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Tab</a>, <a href="../types.html#imagevalue" title="ImageValue Type Reference">ImageValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`ImageValue`](../types.md#imagevalue)</span> | The new value of [*selectedImage*](#selectedimage).
+value | <code style="white-space: nowrap"><a href="../types.html#imagevalue" title="ImageValue Type Reference">ImageValue</a></code> | The new value of [selectedImage](#selectedimage).
 
 ### badgeChanged
 
-Fired when the [*badge*](#badge) property has changed.
+Fired when the [badge](#badge) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Tab</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*badge*](#badge).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The new value of [badge](#badge).
 
 ### badgeColorChanged
 
-Fired when the [*badgeColor*](#badgecolor) property has changed.
+Fired when the [badgeColor](#badgecolor) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Tab</a>, <a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*badgeColor*](#badgecolor).
+value | <code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code> | The new value of [badgeColor](#badgecolor).
 

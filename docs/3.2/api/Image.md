@@ -113,9 +113,11 @@ This property can only be set via constructor. Once set, it cannot change anymor
 ### src
 
 
-File system path, relative path or URL. Android and iOS also support [data URI](https://en.wikipedia.org/wiki/Data_URI_scheme). Relative paths are resolved **relative to ‘package.json’**. On Android the name of a bundled [drawable resource](https://developer.android.com/guide/topics/resources/drawable-resource) can be provided with the url scheme android-drawable, e.g. android-drawable://ic_info_black.
+As a string this is a file system path, relative path or URL. [Data URIs](https://en.wikipedia.org/wiki/Data_URI_scheme) are also supported. Relative paths are resolved **relative to ‘package.json’**. On Android the name of a bundled [drawable resource](https://developer.android.com/guide/topics/resources/drawable-resource) can be provided with the url scheme android-drawable, e.g. android-drawable://ic_info_black.
+If a closed ImageBitmap is given the constructor will throw.
+A given Blob must contain an encoded image.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a><br/> &#124; <a href="ImageBitmap.html" title="ImageBitmap Class Reference">ImageBitmap</a><br/> &#124; <a href="Blob.html" title="Blob Class Reference">Blob</a></code>
 Settable: | No
 
 

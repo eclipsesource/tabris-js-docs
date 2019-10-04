@@ -2,7 +2,7 @@
 ---
 # Global object "localStorage"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`Storage`](localStorage.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="#" >Storage</a>
 
 The `localStorage` object allows storing key-value pairs in a persistent store. Both keys and values are stored as strings.
 
@@ -11,22 +11,27 @@ On iOS, there is an additional object `secureStorage` available in the global sc
 The `localStorage` is only meant to store relatively short strings. To store larger amounts of data it is recommended to use the [FileSystem](./fs.html) API.
 
 
-Constructor | *private*
-Singleton | `localStorage`
-Namespace |`global`
-Direct subclasses | *None*
-JSX support | *No*
+Type: | <code style="white-space: nowrap">Storage extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a></code>
+Constructor: | private
+Singleton: | `localStorage`
+Namespace: |<a href="../modules.html#startup" >global</a>
+Direct subclasses: | None
+JSX Support: | No
 
 
-## Example
+## Examples
+### JavaScript
+
+
 ```js
-localStorage.setItem("message", "Hello World!");
-console.log(localStorage.getItem("message")); // "Hello World!"
+localStorage.setItem('message', 'Hello World!');
+console.log(localStorage.getItem('message')); // "Hello World!"
 ```
+
 
 See also:
   
-[<span class='language jsx'>JSX</span> A example how to read and write from the `localStorage`](https://playground.tabris.com/?gitref=v3.1.0&snippet=local-storage.jsx)
+[<span class='language jsx'>JSX</span> A example how to read and write from the `localStorage`](https://playground.tabris.com/?gitref=vundefined&snippet=local-storage.jsx)
 
 ## Methods
 
@@ -36,7 +41,7 @@ See also:
 
 Remove all key/value pairs from the storage.
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### getItem(key)
 
@@ -45,12 +50,12 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Retrieves the value associated with the given key.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-key | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+key | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 
 ### key(index)
 
@@ -59,12 +64,12 @@ Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.o
 Returns the name of the key at the given index in the storage. The order of keys is platform dependent, you should not rely on it to be deterministic
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-index | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+index | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 
 ### removeItem(key)
 
@@ -73,12 +78,12 @@ Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.o
 Removes the given key/value pair from the storage.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-key | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+key | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### setItem(key, value)
 
@@ -87,13 +92,13 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Stores a string value using the given key.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-key | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
-value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+key | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 
 ## Properties
@@ -103,10 +108,8 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 
 The number of items in the storage.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Settable: | No
 
 
 

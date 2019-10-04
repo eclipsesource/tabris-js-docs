@@ -2,25 +2,26 @@
 ---
 # Class "Percent"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`Percent`](Percent.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="#" >Percent</a>
 
 Represents a percentage. See also [PercentValue](../types.html#percentvalue)
 
 
-Constructor | *public*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | *No*
+Type: | <code style="white-space: nowrap">Percent extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a></code>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | No
 
 
 ## Constructor
 
 ### new Percent(value)
 
-Parameter|Type|Optional|Description
--|-|-|-
-value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | A number between and including 0 and 100
+Parameter|Type|Description
+-|-|-
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | A number between and including 0 and 100
 
 ## Methods
 
@@ -30,7 +31,7 @@ value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.o
 
 Returns a string representation of the percent (a number followed by '%').
 
-Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 
 ### valueOf()
 
@@ -38,7 +39,7 @@ Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.o
 
 Returns the percent number
 
-Returns <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
 
 ## Static Methods
 
@@ -49,12 +50,12 @@ Returns <span style="white-space:nowrap;">[`number`](https://developer.mozilla.o
 Creates a new instance of Percent using any valid percent expression. For any other value, including `null` the method throws.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-percentValue | <span style="white-space:nowrap;">[`PercentValue`](../types.md#percentvalue)</span> | No | The value to create a Percent instance from
+Parameter|Type|Description
+-|-|-
+percentValue | <code style="white-space: nowrap"><a href="../types.html#percentvalue" title="PercentValue Type Reference">PercentValue</a></code> | The value to create a Percent instance from
 
 
-Returns <span style="white-space:nowrap;">[`Percent`](Percent.md)</span>
+Returns: <code style="white-space: nowrap"><a href="#" >Percent</a></code>
 
 ### isValidPercentValue(value)
 
@@ -63,12 +64,12 @@ Returns <span style="white-space:nowrap;">[`Percent`](Percent.md)</span>
 Returns true if value is a valid PercentValue. This excludes `null`. Use this to check if a value will be accepted by Percent.from. This is also a valid TypeScript type guard function.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-value | <span style="white-space:nowrap;">[`any`](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)</span> | No | The value to test
+Parameter|Type|Description
+-|-|-
+value | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code> | The value to test
 
 
-Returns <span style="white-space:nowrap;">`value is PercentValue`</span>
+Returns: <code style="white-space: nowrap">value</code>
 
 
 ## Properties
@@ -78,10 +79,8 @@ Returns <span style="white-space:nowrap;">`value is PercentValue`</span>
 
 A number between and including 0 and 100
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Settable: | No
 
 
 

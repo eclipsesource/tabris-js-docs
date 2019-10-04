@@ -2,16 +2,17 @@
 ---
 # Class "NativeObject"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="#" >NativeObject</a>
 
 Base class for all objects with a native implementation.
 
 
-Constructor | *protected*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | <span style="white-space:nowrap;">[`App`](app.md)</span>, <span style="white-space:nowrap;">[`Device`](device.md)</span>, <span style="white-space:nowrap;">[`FileSystem`](fs.md)</span>, <span style="white-space:nowrap;">[`InactivityTimer`](InactivityTimer.md)</span>, <span style="white-space:nowrap;">[`NavigationBar`](NavigationBar.md)</span>, <span style="white-space:nowrap;">[`Permission`](permission.md)</span>, <span style="white-space:nowrap;">[`Popup`](Popup.md)</span>, <span style="white-space:nowrap;">[`Printer`](printer.md)</span>, <span style="white-space:nowrap;">[`StatusBar`](StatusBar.md)</span>, <span style="white-space:nowrap;">[`Tabris`](Tabris.md)</span>, <span style="white-space:nowrap;">[`Widget`](Widget.md)</span>
-JSX support | *No*
+Type: | <code style="white-space: nowrap">NativeObject extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a></code>
+Constructor: | protected
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | <code style="white-space: nowrap"><a href="app.html" title="App Object Reference">App</a></code>, <code style="white-space: nowrap"><a href="Camera.html" title="Camera Class Reference">Camera</a></code>, <code style="white-space: nowrap"><a href="device.html" title="Device Object Reference">Device</a></code>, <code style="white-space: nowrap"><a href="fs.html" title="FileSystem Object Reference">FileSystem</a></code>, <code style="white-space: nowrap"><a href="InactivityTimer.html" title="InactivityTimer Class Reference">InactivityTimer</a></code>, <code style="white-space: nowrap"><a href="NavigationBar.html" title="NavigationBar Object Reference">NavigationBar</a></code>, <code style="white-space: nowrap"><a href="permission.html" title="Permission Object Reference">Permission</a></code>, <code style="white-space: nowrap"><a href="Popup.html" title="Popup Class Reference">Popup</a></code>, <code style="white-space: nowrap"><a href="printer.html" title="Printer Object Reference">Printer</a></code>, <code style="white-space: nowrap"><a href="StatusBar.html" title="StatusBar Object Reference">StatusBar</a></code>, <code style="white-space: nowrap"><a href="Tabris.html" title="Tabris Object Reference">Tabris</a></code>, <code style="white-space: nowrap"><a href="Widget.html" title="Widget Class Reference">Widget</a></code>
+JSX Support: | No
 
 
 ## Methods
@@ -25,14 +26,14 @@ Removes all occurrences of *listener* that are bound to *type* and *context* fro
 In TypeScript you should use the alternative `Listeners` API, e.g. `widget.onResize.off(listener);` instead of `widget.off('resize', listener});` The former provides more type information.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The type of events to remove listeners for.
-listener | <span style="white-space:nowrap;">`(event: EventObject<NativeObject>) => void`</span> | No | The listener function to remove.
-context | <span style="white-space:nowrap;">[`object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> | Yes | The context of the bound listener to remove.
+Parameter|Type|Description
+-|-|-
+type | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The type of events to remove listeners for.
+listener | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a></code> | The listener function to remove.
+context | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a></code> | The context of the bound listener to remove. *Optional.*
 
 
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
 ### off(listeners)
 
@@ -43,12 +44,12 @@ Removes all listeners in the given object from the event type indicated by their
 In TypeScript you should use the alternative `Listeners` API, e.g. `widget.onResize.off(listener);` instead of `widget.off({resize: listener});` The former provides more type information.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-listeners | <span style="white-space:nowrap;">`EventsObject`</span> | No | A key-value map where the keys are event types and the values are the listeners to deregister from these events, e.g. `{tap: onTap, scroll: onScroll}`.
+Parameter|Type|Description
+-|-|-
+listeners | <code style="white-space: nowrap">{[eventType]: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a>}</code> | A key-value map where the keys are event types and the values are the listeners to deregister from these events, e.g. `{tap: onTap, scroll: onScroll}`.
 
 
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
 ### on(type, listener, context?)
 
@@ -57,16 +58,16 @@ Returns <span style="white-space:nowrap;">[`this`](#)</span>
 Registers a *listener* function to be notified of events of the given *type*.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The type of events to listen for.
-listener | <span style="white-space:nowrap;">`(event: EventObject) => void`</span> | No | The listener function to register. This function will be called with an event object.
+Parameter|Type|Description
+-|-|-
+type | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The type of events to listen for.
+listener | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a></code> | The listener function to register. This function will be called with an [event object](./EventObject.md).
 
 In TypeScript you should use the alternative `Listeners` API, e.g. `widget.onResize(listener);` instead of `widget.on({resize: listener});` The former provides more type information.
-context | <span style="white-space:nowrap;">[`object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> | Yes | In the listener function, `this` will point to this object. If not present, the listener will be called in the context of this object.
+context | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a></code> | In the listener function, `this` will point to this object. If not present, the listener will be called in the context of this object. *Optional.*
 
 
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
 ### on(listeners)
 
@@ -77,12 +78,12 @@ Registers all listeners in the given object for the event type indicated by thei
 In TypeScript you should use the alternative `Listeners` API, e.g. `widget.onResize(listener);` instead of `widget.on('resize', listener);` The former provides more type information.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-listeners | <span style="white-space:nowrap;">`{event: Listener}`</span> | No | A key-value map where the keys are event types and the values are the listeners to register for these events, e.g. `{tap: onTap, scroll: onScroll}`.
+Parameter|Type|Description
+-|-|-
+listeners | <code style="white-space: nowrap">{[eventType]: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a>}</code> | A key-value map where the keys are event types and the values are the listeners to register for these events, e.g. `{tap: onTap, scroll: onScroll}`.
 
 
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
 ### once(type, listener, context?)
 
@@ -93,14 +94,14 @@ Same as `on`, but removes the listener after it has been invoked by an event.
 In TypeScript you should use the alternative `Listeners` API, e.g. `widget.onResize.once(listener);` instead of `widget.once('resize', listener);` The former provides more type information.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The type of the event to listen for.
-listener | <span style="white-space:nowrap;">`(event: EventObject<NativeObject>) => void`</span> | No | The listener function to register. This function will be called with an event object.
-context | <span style="white-space:nowrap;">[`object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> | Yes | In the listener function, `this` will point to this object. If not present, the listener will be called in the context of this object.
+Parameter|Type|Description
+-|-|-
+type | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The type of the event to listen for.
+listener | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a></code> | The listener function to register. This function will be called with an [event object](./EventObject.md).
+context | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a></code> | In the listener function, `this` will point to this object. If not present, the listener will be called in the context of this object. *Optional.*
 
 
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
 ### once(listeners)
 
@@ -111,12 +112,12 @@ Same as `on`, but removes the listener after it has been invoked by an event.
 In TypeScript you should use the alternative `Listeners` API, e.g. `widget.onResize.once(listener);` instead of `widget.once({resize: listener});` The former provides more type information.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-listeners | <span style="white-space:nowrap;">`EventsObject`</span> | No | A key-value map where the keys are event types and the values are the listeners to register for these events, e.g. `{tap: onTap, scroll: onScroll}`.
+Parameter|Type|Description
+-|-|-
+listeners | <code style="white-space: nowrap">{[eventType]: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a>}</code> | A key-value map where the keys are event types and the values are the listeners to register for these events, e.g. `{tap: onTap, scroll: onScroll}`.
 
 
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
 ### set(properties)
 
@@ -124,15 +125,15 @@ Returns <span style="white-space:nowrap;">[`this`](#)</span>
 
 Sets all key-value pairs in the properties object as widget properties.
 
-**Important TypeScript note:** When called on `this` you may need to specify your custom type like this: `this.set<MyComponent>({propA: valueA});`
+**TypeScript note:** When called on `this` from within a subclass constructor (i.e. a custom component/widget) you may have to use the generic version of this method: `this.set<MySubclass>(...);`
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-properties | <span style="white-space:nowrap;">`Properties<T>`</span> | No | 
+Parameter|Type|Description
+-|-|-
+properties | <code style="white-space: nowrap"><a href="../types.html#propertieswidget" title="Properties&lt;Widget&gt;">Properties</a>&lt;<a href="#" title="This object">this</a>&gt;</code> | 
 
 
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
 ### trigger(type)
 
@@ -143,14 +144,14 @@ Notifies all registered listeners for the given *type*.
 In TypeScript you should use the alternative `Listeners` API, e.g. `widget.myEvent.trigger();` instead of `widget.trigger('myEvent');` The former provides more type information.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The type of event to trigger
+Parameter|Type|Description
+-|-|-
+type | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The type of event to trigger
 
 
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
-### trigger(type, object)
+### trigger(type, eventData)
 
 
 
@@ -159,13 +160,13 @@ Passes the fields of the given *object* to all listeners registered for this eve
 In TypeScript you should use the alternative `Listeners` API, e.g. `widget.myEvent.trigger(eventData);` instead of `widget.trigger('myEvent', eventData});` The former provides more type information.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The type of event to trigger
-object | <span style="white-space:nowrap;">[`object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> | No | The data to pass to listener functions.
+Parameter|Type|Description
+-|-|-
+type | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The type of event to trigger
+eventData | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a></code> | The data to pass to listener functions.
 
 
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
 ### trigger(type, eventObject)
 
@@ -176,17 +177,65 @@ Initializes the given *eventObject* and passes it to all listeners registered fo
 In TypeScript you should use the alternative `Listeners` API, e.g. `widget.myEvent.trigger(eventObject);` instead of `widget.trigger('myEvent', eventObject});` The former provides more type information.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The type of event to trigger
-eventObject | <span style="white-space:nowrap;">[`EventObject`](EventObject.md)</span> | No | An instance of `EventObject` (or a subclass) to pass to listener functions.
+Parameter|Type|Description
+-|-|-
+type | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The type of event to trigger
+eventObject | <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a></code> | An instance of `EventObject` (or a subclass) to pass to listener functions.
 
 
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
+
+### triggerAsync(type)
+
+
+
+Like `trigger`, but returns a promise. The promise will resolve when all asynchronous listeners (if any) have resolved. If none of the listeners are asynchronous (return a promise) this method works just like `trigger()`. Useful for unit testing.
+
+
+Parameter|Type|Description
+-|-|-
+type | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The type of event to trigger
+
+
+Returns: <code style="white-space: nowrap">Promise<this></code>
+
+### triggerAsync(type, object)
+
+
+
+Notifies all registered listeners for the given *type* with the given data. Unlike `trigger` each asynchronous listener will be awaited, meaning that if a listener returns a promise that will pause event processing until it resolves. Returns a promise that resolves once all listeners have been notified. If any listener returns a rejecting promise the even processing is aborted and the returned promise rejects with the error value. If none of the listeners return a promise this method works just like `trigger()`. 
+
+In TypeScript you should use `widget.myEvent.triggerAsync();` instead
+
+
+Parameter|Type|Description
+-|-|-
+type | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The type of event to trigger
+object | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a></code> | The data to pass to listener functions.
+
+
+Returns: <code style="white-space: nowrap">Promise<this></code>
+
+### triggerAsync(type, eventObject)
+
+
+
+Notifies all registered listeners for the given *type* with the given `EventObject`. Unlike `trigger` each asynchronous listener will be awaited, meaning that if a listener returns a promise that will pause event processing until it resolves. Returns a promise that resolves once all listeners have been notified. If any listener returns a rejecting promise the even processing is aborted and the returned promise rejects with the error value. If none of the listeners return a promise this method works just like `trigger()`. 
+
+In TypeScript you should use `widget.myEvent.triggerAsync();` instead
+
+
+Parameter|Type|Description
+-|-|-
+type | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The type of event to trigger
+eventObject | <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a></code> | An instance of `EventObject` (or a subclass) to pass to listener functions.
+
+
+Returns: <code style="white-space: nowrap">Promise<this></code>
 
 ## Protected Methods
 
-These methods are accessible only in classes extending *NativeObject*.
+These methods are accessible only in classes extending <code style="white-space: nowrap">NativeObject</code>.
 
 ### _checkDisposed()
 
@@ -194,7 +243,7 @@ These methods are accessible only in classes extending *NativeObject*.
 
 A helper function that throws if the instance has already been marked as disposed.
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### _dispose(skipNative?)
 
@@ -203,12 +252,12 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Called by the framework to dispose a `NativeObject` instance. (The `dispose` is only used by application code.) The method should never be called directly, but it may be overwritten to prevent dispose for objects that are not disposable.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-skipNative | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | Yes | 
+Parameter|Type|Description
+-|-|-
+skipNative | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | *Optional.*
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### _getStoredProperty(propertyName)
 
@@ -217,12 +266,12 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Returns a value stored via `_storeProperty`, or undefined.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-propertyName | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+propertyName | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">`unknown`</span>
+Returns: <code style="white-space: nowrap">unknown</code>
 
 ### _getXMLAttributes()
 
@@ -230,7 +279,7 @@ Returns <span style="white-space:nowrap;">`unknown`</span>
 
 Used by `console.dirxml()` to produce part of the XML representation of this object. May be overwritten to modify the output. The return value should be an array of tuples consisting of the attribute name and string representation. The new implementation may make a super call to obtain the default list of attributes printed for this object.
 
-Returns <span style="white-space:nowrap;">`Array<[string, any]>`</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="View &quot;Array&quot; on MDN">Array</a>&lt;[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, <a title="Literally any JavaScript value">any</a>]&gt;</code>
 
 ### _getXMLContent()
 
@@ -238,7 +287,7 @@ Returns <span style="white-space:nowrap;">`Array<[string, any]>`</span>
 
 Used by `console.dirxml()` to produce part of the XML representation of this object. May be overwritten to modify the output. The return value should be an array of strings each representing on of the children of this instance.
 
-Returns <span style="white-space:nowrap;">[`string[]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Returns: <code style="white-space: nowrap">string[]</code>
 
 ### _getXMLElementName()
 
@@ -246,7 +295,7 @@ Returns <span style="white-space:nowrap;">[`string[]`](https://developer.mozilla
 
 Used by `console.dirxml()` to produce part of the XML representation of this object. May be overwritten to modify the output. The default implementation returns the name of the constructor of this object.
 
-Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 
 ### _getXMLFooter(hasChild)
 
@@ -255,12 +304,12 @@ Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.o
 Used by `console.dirxml()` to produce part of the XML representation of this object. May be overwritten to modify the output. The default implementation the closing tag if `hasChild` is true, otherwise returns an empty string. The `hasChild` parameter is `true` if `_getXMLContent` returns a non-empty array. It is usually not necessary to call or override this method.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-hasChild | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+hasChild | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 
 ### _getXMLHeader(hasChild)
 
@@ -269,12 +318,12 @@ Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.o
 Used by `console.dirxml()` to produce part of the XML representation of this object. May be overwritten to modify the output. The default implementation crates the opening tag including the element name given by `_getXMLElementName` and attributes given by `_getXMLAttributes`. The `hasChild` parameter is `true` if `_getXMLContent` returns a non-empty array in which case the tag is not self-closing. It is preferable to override these individual method instead of this one.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-hasChild | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+hasChild | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 
 ### _isListening(eventType)
 
@@ -283,12 +332,12 @@ Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.o
 Returns `true` if there is currently one or more listeners registers for the given event type.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-eventType | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+eventType | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 ### _listen(eventName, listening)
 
@@ -297,13 +346,13 @@ Returns <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.
 Called by the framework when the first listener of a given event type is registered on the instance (`listening` is `true`), and when the last listener of a given event type is removed (`listening` is `false`). Typically overwritten to make calls to `_nativeListen` when the given event type is issues by native code. The new implementation must make a super call if it does not handle the given event type itself.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-eventName | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
-listening | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+eventName | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+listening | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### _nativeCall(methodName, parameters)
 
@@ -312,13 +361,13 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Sends a 'call' operation to the native client and returns the result.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-methodName | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
-parameters | <span style="white-space:nowrap;">[`object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> | No | 
+Parameter|Type|Description
+-|-|-
+methodName | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+parameters | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">`unknown`</span>
+Returns: <code style="white-space: nowrap">unknown</code>
 
 ### _nativeCreate(param?)
 
@@ -327,12 +376,12 @@ Returns <span style="white-space:nowrap;">`unknown`</span>
 Sends a 'create' operation to the native client. Called once by the constructor and should not be called again. May be overwritten to check the constructor parameter or perform any kind of initialization code prior to creating the native object. The new implementation must make a super call.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-param | <span style="white-space:nowrap;">`{[prop: string]: any}`</span> | Yes | The first argument (if any) given in the constructor call. Will be forwarded to the `set` method after the native object was created.
+Parameter|Type|Description
+-|-|-
+param | <code style="white-space: nowrap">{[property]: <a title="Literally any JavaScript value">any</a>}</code> | The first argument (if any) given in the constructor call. Will be forwarded to the `set` method after the native object was created. *Optional.*
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### _nativeGet(propertyName)
 
@@ -341,12 +390,12 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Sends a 'get' operation to the native client and returns the result.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-propertyName | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+propertyName | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">`unknown`</span>
+Returns: <code style="white-space: nowrap">unknown</code>
 
 ### _nativeListen(eventType)
 
@@ -355,12 +404,12 @@ Returns <span style="white-space:nowrap;">`unknown`</span>
 Sends a 'listen' operation to the native client.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-eventType | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+eventType | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### _nativeSet(propertyName, value)
 
@@ -369,13 +418,13 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Sends a 'set' operation to the native client.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-propertyName | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
-value | <span style="white-space:nowrap;">[`any`](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)</span> | No | 
+Parameter|Type|Description
+-|-|-
+propertyName | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+value | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### _onoff(eventType, listening, listener)
 
@@ -384,14 +433,14 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 A helper function that register the given listener if `listening` is true and de-registers it if `listening` is false.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-eventType | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
-listening | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | No | 
-listener | <span style="white-space:nowrap;">`Function`</span> | No | 
+Parameter|Type|Description
+-|-|-
+eventType | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+listening | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | 
+listener | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### _release()
 
@@ -399,7 +448,7 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 
 Called during the dispose process, after the 'dispose' event has fired, but before the native code has be executed. Native operations (`_nativeSet`, `_nativeGet`, `_nativeCall`, `_nativeListen`) on this object are still possible at this point. May be overwritten to perform any kind of clean-up code. The new implementation must perform a super call at some point, typically at the last command.
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### _reorderProperties(propertyNames)
 
@@ -408,12 +457,12 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Used by the `set` method to determined in which order the given property values are applied. May be overwritten, but the new implementation must pass the propertyNames through a super call at one point.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-propertyNames | <span style="white-space:nowrap;">[`string[]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | List of properties to be set to a new value
+Parameter|Type|Description
+-|-|-
+propertyNames | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>[]</code> | List of properties to be set to a new value
 
 
-Returns <span style="white-space:nowrap;">[`string[]`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>[]</code>
 
 ### _storeProperty(propertyName, encodedValue)
 
@@ -422,13 +471,13 @@ Returns <span style="white-space:nowrap;">[`string[]`](https://developer.mozilla
 Stores the given value internally and triggers a matching change event.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-propertyName | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
-encodedValue | <span style="white-space:nowrap;">[`any`](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)</span> | No | 
+Parameter|Type|Description
+-|-|-
+propertyName | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+encodedValue | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### _trigger(eventType, eventData?)
 
@@ -437,13 +486,13 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Called by the native client to trigger a JavaScript event on this instance. May be overwritten to pre-process the eventData object. The return value indicates whether `defaultPrevented` on the event object was set to `true`. The new implementation must forward the parameters to a super call and return that calls return value.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-eventType | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
-eventData | <span style="white-space:nowrap;">[`object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> | Yes | 
+Parameter|Type|Description
+-|-|-
+eventType | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+eventData | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a></code> | *Optional.*
 
 
-Returns <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 ### _wasSet(propertyName)
 
@@ -452,12 +501,12 @@ Returns <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.
 Returns `true` if _storeProperty was ever called with the given property propertyName
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-propertyName | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+propertyName | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 
 ## Properties
@@ -467,9 +516,9 @@ Returns <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.
 
 An application-wide unique identifier automatically assigned to all native objects on creation. It follows the pattern '$<number>', where the number is incremented for each new NativeObject instance.
 
-Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
-Settable | *No*
-Change events | *No*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
+Change Event: | Not supported
 
 
 
@@ -483,9 +532,9 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 When using JSX with TypeScript (`.tsx` files), the type of this property determines which JSX attributes are valid for this object.
 
-Type | <span style="white-space:nowrap;">`JSXAttributes<this>`</span>
-Settable | *No*
-Change events | *No*
+Type: |<code style="white-space: nowrap">JSXAttributes<this></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
+Change Event: | Not supported
 
 
 
@@ -496,15 +545,15 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 ## Protected Properties
 
-These properties are accessible only in classes extending *NativeObject*.
+These properties are accessible only in classes extending <code style="white-space: nowrap">NativeObject</code>.
 
 ### _isDisposed
 
 
 
-Type | <span style="white-space:nowrap;">`true` \| [`undefined`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type)</span>
-Settable | *Yes*
-Change events | *No*
+Type: |<code style="white-space: nowrap">true &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | Not supported
 
 
 
@@ -513,9 +562,9 @@ Change events | *No*
 
 
 
-Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
-Settable | *No*
-Change events | *No*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
+Change Event: | Not supported
 
 
 

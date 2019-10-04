@@ -2,19 +2,23 @@
 ---
 # Class "LinearGradient"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`LinearGradient`](LinearGradient.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="#" >LinearGradient</a>
 
 Represents a linear gradient. See also [LinearGradientValue](../types.html#lineargradientvalue)
 
 
-Constructor | *public*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | *No*
+Type: | <code style="white-space: nowrap">LinearGradient extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a></code>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | No
 
 
-## Example
+## Examples
+### JavaScript
+
+
 ```js
 import {LinearGradient} from 'tabris';
 
@@ -22,18 +26,19 @@ const linearGradient = LinearGradient.from('linear-gradient(90deg, red, blue 50%
 console.log(linearGradient.direction); // "90"
 ```
 
+
 See also:
   
-[<span class='language js'>JS</span> Creating various types of linear gradients](https://playground.tabris.com/?gitref=v3.1.0&snippet=widget-lineargradient.js)
+[<span class='language js'>JS</span> Creating various types of linear gradients](https://playground.tabris.com/?gitref=vundefined&snippet=widget-lineargradient.js)
 
 ## Constructor
 
 ### new LinearGradient(colorStops, direction?)
 
-Parameter|Type|Optional|Description
--|-|-|-
-colorStops | <span style="white-space:nowrap;">`(Color` \| `[Color, Percent])[]`</span> | No | An array with at least one color stop. Defines the position and the offset of the gradient color stop.
-direction | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | Yes | The direction of the gradient line in degrees.
+Parameter|Type|Description
+-|-|-
+colorStops | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="View &quot;Array&quot; on MDN">Array</a>&lt;<a href="Color.html" title="Color Class Reference">Color</a> &#124; [<a href="Color.html" title="Color Class Reference">Color</a>, <a href="Percent.html" title="Percent Class Reference">Percent</a>]&gt;</code> | An array with at least one color stop. Defines the position and the offset of the gradient color stop.
+direction | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The direction of the gradient line in degrees. *Optional.*
 
 ## Methods
 
@@ -43,7 +48,7 @@ direction | <span style="white-space:nowrap;">[`number`](https://developer.mozil
 
 Returns a CSS string representation of the linear gradient.
 
-Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 
 ## Static Methods
 
@@ -54,12 +59,12 @@ Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.o
 Creates a new instance of LinearGradient using any valid linear gradient expression. For any other value, including `null` and `'initial'` the method throws.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-linearGradientValue | <span style="white-space:nowrap;">[`LinearGradientValue`](../types.md#lineargradientvalue)</span> | No | The value to create a LinearGradient instance from
+Parameter|Type|Description
+-|-|-
+linearGradientValue | <code style="white-space: nowrap"><a href="../types.html#lineargradientvalue" title="LinearGradientValue Type Reference">LinearGradientValue</a></code> | The value to create a LinearGradient instance from
 
 
-Returns <span style="white-space:nowrap;">[`LinearGradient`](LinearGradient.md)</span>
+Returns: <code style="white-space: nowrap"><a href="#" >LinearGradient</a></code>
 
 ### isLinearGradientValue(value)
 
@@ -68,12 +73,12 @@ Returns <span style="white-space:nowrap;">[`LinearGradient`](LinearGradient.md)<
 Returns true if value is a LinearGradientValue. This includes `null` and `'initial'`. Use this to check if a value will be accepted by a linear gradient property. This is also a valid TypeScript type guard function.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-value | <span style="white-space:nowrap;">[`any`](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)</span> | No | The value to test
+Parameter|Type|Description
+-|-|-
+value | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code> | The value to test
 
 
-Returns <span style="white-space:nowrap;">`value is LinearGradientValue`</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 ### isValidLinearGradientValue(value)
 
@@ -82,12 +87,12 @@ Returns <span style="white-space:nowrap;">`value is LinearGradientValue`</span>
 Returns true if value is a valid LinearGradientValue. This excludes `null` and `'initial'`. Use this to check if a value will be accepted by LinearGradient.from. This is also a valid TypeScript type guard function.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-value | <span style="white-space:nowrap;">[`any`](https://www.typescriptlang.org/docs/handbook/basic-types.html#any)</span> | No | The value to test
+Parameter|Type|Description
+-|-|-
+value | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code> | The value to test
 
 
-Returns <span style="white-space:nowrap;">`value is LinearGradientValue`</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 
 ## Properties
@@ -97,10 +102,8 @@ Returns <span style="white-space:nowrap;">`value is LinearGradientValue`</span>
 
 An array with the gradient color stops. Defines the position and the offset of the gradient color stop.
 
-Type | <span style="white-space:nowrap;">`(Color` \| `[Color, Percent])[]`</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="View &quot;Array&quot; on MDN">Array</a>&lt;<a href="Color.html" title="Color Class Reference">Color</a> &#124; [<a href="Color.html" title="Color Class Reference">Color</a>, <a href="Percent.html" title="Percent Class Reference">Percent</a>]&gt;</code>
+Settable: | No
 
 
 
@@ -113,10 +116,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 The direction of the gradient line in degrees.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Settable: | No
 
 
 

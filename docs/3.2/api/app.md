@@ -127,6 +127,21 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 
 
+### idleTimeoutEnabled
+
+
+Allows to control the device idle timout. When disabled the device will not go into sleep mode and turn off the screen to safe battery power.
+
+The `idleTimeoutEnabled` will disable any system wide enabled idle settings while the app is in the foreground.
+
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">true</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`idleTimeoutEnabledChanged`](#idletimeoutenabledchanged)
+
+
+
+
 ### pinnedCertificates
 
 
@@ -266,4 +281,14 @@ EventObject Type: <code style="white-space: nowrap"><a href="../types.html#prope
 Property|Type|Description
 -|-|-
 value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer" title="View &quot;ArrayBuffer&quot; on MDN">ArrayBuffer</a>[]</code> | The new value of [trustedCertificates](#trustedcertificates).
+
+### idleTimeoutEnabledChanged
+
+Fired when the [idleTimeoutEnabled](#idletimeoutenabled) property has changed.
+
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >App</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a>&gt;</code>
+
+Property|Type|Description
+-|-|-
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The new value of [idleTimeoutEnabled](#idletimeoutenabled).
 

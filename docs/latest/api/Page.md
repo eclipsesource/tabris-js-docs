@@ -2,20 +2,24 @@
 ---
 # Class "Page"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> > <span style="white-space:nowrap;">[`Composite`](Composite.md)</span> > <span style="white-space:nowrap;">[`Page`](Page.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a> > <a href="Widget.html" title="Widget Class Reference">Widget</a> > <a href="Composite.html" title="Composite Class Reference">Composite</a> > <a href="#" >Page</a>
 
 A container representing a single page of a NavigationView widget.
 
 
 <div class="tabris-image"><figure><div><img srcset="img/android/Page.png 2x" src="img/android/Page.png" alt="Page on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/Page.png 2x" src="img/ios/Page.png" alt="Page on iOS"/></div><figcaption>iOS</figcaption></figure></div>
 
-Constructor | *public*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | Element: `<Page/>`<br/>Parent element: [`<NavigationView/>`](NavigationView.md)<br/>Child elements: *Widgets*<br/>Text content: *Not supported*<br/>
+Type: | <code style="white-space: nowrap">Page extends <a href="Composite.html" title="Composite Class Reference">Composite</a></code>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | Element: <code style="white-space: nowrap"><a href="Page.html" title="Page Class Reference">&lt;Page/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="NavigationView.html" title="NavigationView Class Reference">&lt;NavigationView/&gt;</a></code><br/>Child Elements: *Any standalone widget element*<br/>Text Content: *Not supported*
 
-## Example
+## Examples
+### JavaScript
+
+
 ```js
 import {NavigationView, Page, contentView} from 'tabris';
 
@@ -24,17 +28,18 @@ new NavigationView({layoutData: 'stretch'})
   .appendTo(contentView);
 ```
 
+
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a stack of pages](https://playground.tabris.com/?gitref=v3.1.0&snippet=navigationview-page-stacked.jsx)
+[<span class='language jsx'>JSX</span> Creating a stack of pages](https://playground.tabris.com/?gitref=vundefined&snippet=navigationview-page-stacked.jsx)
 
 ## Constructor
 
 ### new Page(properties?)
 
-Parameter|Type|Optional|Description
--|-|-|-
-properties | <span style="white-space:nowrap;">`Properties<Page>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
+Parameter|Type|Description
+-|-|-
+properties | <code style="white-space: nowrap"><a href="../types.html#propertieswidget" title="Properties&lt;Widget&gt;">Properties</a>&lt;<a href="#" >Page</a>&gt;</code> | Sets all key-value pairs in the properties object as widget properties. *Optional.*
 
 ## Methods
 
@@ -45,12 +50,12 @@ properties | <span style="white-space:nowrap;">`Properties<Page>`</span> | Yes |
 Inserts this widget directly before the given `Page`.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-widget | <span style="white-space:nowrap;">[`Page`](Page.md)</span> | No | 
+Parameter|Type|Description
+-|-|-
+widget | <code style="white-space: nowrap"><a href="#" >Page</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
 
 ## Properties
@@ -60,10 +65,10 @@ Returns <span style="white-space:nowrap;">[`this`](#)</span>
 
 Defines whether this page will be automatically disposed when popped from the NavigationView, e.g. using native back navigation.
 
-Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
-Default | `true`
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">true</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`autoDisposeChanged`](#autodisposechanged)
 
 
 
@@ -73,9 +78,9 @@ Change events | *Yes*
 
 An image to be displayed in the navigation bar
 
-Type | <span style="white-space:nowrap;">[`ImageValue`](../types.md#imagevalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#imagevalue" title="ImageValue Type Reference">ImageValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`imageChanged`](#imagechanged)
 
 
 
@@ -85,9 +90,9 @@ Change events | *Yes*
 
 The page title to be displayed in the navigation bar.
 
-Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`titleChanged`](#titlechanged)
 
 
 
@@ -99,33 +104,45 @@ Change events | *Yes*
 
 Fired when the page is about to become visible, i.e. it has become the active page.
 
+EventObject Type: <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a>&lt;<a href="#" >Page</a>&gt;</code>
+
+This event has no additional parameter.
 ### disappear
 
 Fired when the page is no longer visible, i.e. another page has become the active page.
 
+EventObject Type: <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a>&lt;<a href="#" >Page</a>&gt;</code>
+
+This event has no additional parameter.
 ## Change Events
 
 ### imageChanged
 
-Fired when the [*image*](#image) property has changed.
+Fired when the [image](#image) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Page</a>, <a href="../types.html#imagevalue" title="ImageValue Type Reference">ImageValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`ImageValue`](../types.md#imagevalue)</span> | The new value of [*image*](#image).
+value | <code style="white-space: nowrap"><a href="../types.html#imagevalue" title="ImageValue Type Reference">ImageValue</a></code> | The new value of [image](#image).
 
 ### titleChanged
 
-Fired when the [*title*](#title) property has changed.
+Fired when the [title](#title) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Page</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*title*](#title).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The new value of [title](#title).
 
 ### autoDisposeChanged
 
-Fired when the [*autoDispose*](#autodispose) property has changed.
+Fired when the [autoDispose](#autodispose) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Page</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of [*autoDispose*](#autodispose).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The new value of [autoDispose](#autodispose).
 

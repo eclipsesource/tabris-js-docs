@@ -2,32 +2,39 @@
 ---
 # Class "ConstraintLayout"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`Layout`](Layout.md)</span> > <span style="white-space:nowrap;">[`ConstraintLayout`](ConstraintLayout.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="Layout.html" title="Layout Class Reference">Layout</a> > <a href="#" >ConstraintLayout</a>
 
 The default, constraints-based layout.
 
 
-Constructor | *public*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | *No*
+Type: | <code style="white-space: nowrap">ConstraintLayout extends <a href="Layout.html" title="Layout Class Reference">Layout</a></code>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | No
 
 
-## Example
+## Examples
+### JavaScript
+
+
 ```js
-import {Composite, ConstraintLayout} from 'tabris';
+import {Composite, ConstraintLayout, contentView} from 'tabris';
 
-new Composite({layout: new ConstraintLayout()});
+contentView.append(
+  new Composite({layout: new ConstraintLayout()})
+);
 ```
+
 
 ## Constructor
 
-### new ConstraintLayout(parameterObject?)
+### new ConstraintLayout(options?)
 
-Parameter|Type|Optional|Description
--|-|-|-
-parameterObject | <span style="white-space:nowrap;">`{}`</span> | Yes | 
+Parameter|Type|Description
+-|-|-
+options | <code style="white-space: nowrap">{}</code> | *Optional.*
 
 ## Static Properties
 
@@ -36,10 +43,8 @@ parameterObject | <span style="white-space:nowrap;">`{}`</span> | Yes |
 
 Instance of ConstraintLayout used as the default `layout` property value of `Composite`, `Page`, `Tab` and `Canvas`. Equivalent to `new ConstraintLayout()`
 
-Type | <span style="white-space:nowrap;">[`ConstraintLayout`](ConstraintLayout.md)</span>
-Settable | *Yes*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="#" >ConstraintLayout</a></code>
+Settable: | Yes
 
 
 

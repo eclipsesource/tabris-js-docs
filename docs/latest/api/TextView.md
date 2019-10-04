@@ -2,20 +2,24 @@
 ---
 # Class "TextView"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> > <span style="white-space:nowrap;">[`TextView`](TextView.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a> > <a href="Widget.html" title="Widget Class Reference">Widget</a> > <a href="#" >TextView</a>
 
 A widget to display a text. For images, use ImageView.
 
 
 <div class="tabris-image"><figure><div><img srcset="img/android/TextView.png 2x" src="img/android/TextView.png" alt="TextView on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/TextView.png 2x" src="img/ios/TextView.png" alt="TextView on iOS"/></div><figcaption>iOS</figcaption></figure></div>
 
-Constructor | *public*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | Element: `<TextView/>`<br/>Parent element: [`<Composite/>`](Composite.md) *and any widget extending* <span style="white-space:nowrap;">[`Composite`](Composite.md)</span><br/>Child elements: *None*<br/>Text content: *Sets [text](#text) property*<br/>
+Type: | <code style="white-space: nowrap">TextView extends <a href="Widget.html" title="Widget Class Reference">Widget</a></code>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | Element: <code style="white-space: nowrap"><a href="TextView.html" title="TextView Class Reference">&lt;TextView/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="Canvas.html" title="Canvas Class Reference">&lt;Canvas/&gt;</a></code>, <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">&lt;Composite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Page.html" title="Page Class Reference">&lt;Page/&gt;</a></code>, <code style="white-space: nowrap"><a href="RefreshComposite.html" title="RefreshComposite Class Reference">&lt;RefreshComposite/&gt;</a></code>, <code style="white-space: nowrap"><a href="ScrollView.html" title="ScrollView Class Reference">&lt;ScrollView/&gt;</a></code>, <code style="white-space: nowrap"><a href="Stack.html" title="Stack Class Reference">&lt;Stack/&gt;</a></code>, <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Child Elements: *Not Supported*<br/>Text Content: [<code style="white-space: nowrap">text</code>](#text)
 
-## Example
+## Examples
+### JavaScript
+
+
 ```js
 import {TextView, contentView} from 'tabris';
 
@@ -25,23 +29,24 @@ new TextView({
 }).appendTo(contentView);
 ```
 
+
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `TextView`](https://playground.tabris.com/?gitref=v3.1.0&snippet=textview.jsx)  
-[<span class='language jsx'>JSX</span> Creating a `TextView` with support for markup](https://playground.tabris.com/?gitref=v3.1.0&snippet=textview-markupenabled.jsx)  
-[<span class='language jsx'>JSX</span> Creating a `TextView` with support for text links](https://playground.tabris.com/?gitref=v3.1.0&snippet=textview-link.jsx)  
-[<span class='language jsx'>JSX</span> Demonstrating various line spacing values on a `TextView`](https://playground.tabris.com/?gitref=v3.1.0&snippet=textview-link.jsx)  
-[<span class='language js'>JS</span> Creating a `TextView` with an external font](https://playground.tabris.com/?gitref=v3.1.0&snippet=textview-font-external.js)  
-[<span class='language js'>JS</span> textview-font-bundled.js](https://playground.tabris.com/?gitref=v3.1.0&snippet=textview-font-bundled.js)  
-[<span class='language js'>JS</span> textview-linespacing.js](https://playground.tabris.com/?gitref=v3.1.0&snippet=textview-linespacing.js)
+[<span class='language jsx'>JSX</span> Creating a simple `TextView`](https://playground.tabris.com/?gitref=vundefined&snippet=textview.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `TextView` with support for markup](https://playground.tabris.com/?gitref=vundefined&snippet=textview-markupenabled.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `TextView` with support for text links](https://playground.tabris.com/?gitref=vundefined&snippet=textview-link.jsx)  
+[<span class='language jsx'>JSX</span> Demonstrating various line spacing values on a `TextView`](https://playground.tabris.com/?gitref=vundefined&snippet=textview-link.jsx)  
+[<span class='language js'>JS</span> Creating a `TextView` with an external font](https://playground.tabris.com/?gitref=vundefined&snippet=textview-font-external.js)  
+[<span class='language js'>JS</span> textview-font-bundled.js](https://playground.tabris.com/?gitref=vundefined&snippet=textview-font-bundled.js)  
+[<span class='language js'>JS</span> textview-linespacing.js](https://playground.tabris.com/?gitref=vundefined&snippet=textview-linespacing.js)
 
 ## Constructor
 
 ### new TextView(properties?)
 
-Parameter|Type|Optional|Description
--|-|-|-
-properties | <span style="white-space:nowrap;">`Properties<TextView>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
+Parameter|Type|Description
+-|-|-
+properties | <code style="white-space: nowrap"><a href="../types.html#propertieswidget" title="Properties&lt;Widget&gt;">Properties</a>&lt;<a href="#" >TextView</a>&gt;</code> | Sets all key-value pairs in the properties object as widget properties. *Optional.*
 
 ## Properties
 
@@ -50,10 +55,10 @@ properties | <span style="white-space:nowrap;">`Properties<TextView>`</span> | Y
 
 The horizontal alignment of the text.
 
-Type | `'left'` \| `'right'` \| `'centerX'`
-Default | `'left'`
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'left'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'right'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'centerX'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'left'</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`alignmentChanged`](#alignmentchanged)
 
 
 
@@ -63,15 +68,15 @@ Change events | *Yes*
 
 The font used for the text.
 
-Type | <span style="white-space:nowrap;">[`FontValue`](../types.md#fontvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#fontvalue" title="FontValue Type Reference">FontValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`fontChanged`](#fontchanged)
 
 
 See also:
   
-[<span class='language js'>JS</span> textview-font-bundled.js](https://playground.tabris.com/?gitref=v3.1.0&snippet=textview-font-bundled.js)  
-[<span class='language js'>JS</span> textview-font-external.js](https://playground.tabris.com/?gitref=v3.1.0&snippet=textview-font-external.js)
+[<span class='language js'>JS</span> textview-font-bundled.js](https://playground.tabris.com/?gitref=vundefined&snippet=textview-font-bundled.js)  
+[<span class='language js'>JS</span> textview-font-external.js](https://playground.tabris.com/?gitref=vundefined&snippet=textview-font-external.js)
 
 
 ### lineSpacing
@@ -79,15 +84,15 @@ See also:
 
 The amount of space between each line of text. The `lineSpacing` property is a factor with a default value of `1.0`.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Default | `1.0`
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">1.0</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`lineSpacingChanged`](#linespacingchanged)
 
 
 See also:
   
-[<span class='language js'>JS</span> textview-linespacing.js](https://playground.tabris.com/?gitref=v3.1.0&snippet=textview-linespacing.js)
+[<span class='language js'>JS</span> textview-linespacing.js](https://playground.tabris.com/?gitref=vundefined&snippet=textview-linespacing.js)
 
 
 ### markupEnabled
@@ -95,14 +100,14 @@ See also:
 
 Allows for a subset of HTML tags in the text. Supported tags are: `a`, `del`, `ins`, `b`, `i`, `strong`, `em`, `big`, `small`, `br`. All tags must be closed (e.g. use `<br/>` instead of `<br>`). Nesting tags is not supported on iOS. A platform might allow to use additional tags but cross-platform compatibility is only guaranteed for the tags listed above. When the text is given as the content of a `<TextView>` JSX element, `markupEnabled` will parse the text more like HTML, i.e. consecutive white spaces will be merged.
 
-Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`markupEnabledChanged`](#markupenabledchanged)
 
 
 See also:
   
-[<span class='language jsx'>JSX</span> textview-markupenabled.jsx](https://playground.tabris.com/?gitref=v3.1.0&snippet=textview-markupenabled.jsx)
+[<span class='language jsx'>JSX</span> textview-markupenabled.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=textview-markupenabled.jsx)
 
 
 ### maxLines
@@ -110,10 +115,10 @@ See also:
 
 Limit the number of lines to be displayed to the given maximum. `null` disables this limit.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type) \| [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type)</span>
-Default | `null`
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">null</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`maxLinesChanged`](#maxlineschanged)
 
 
 
@@ -123,9 +128,9 @@ Change events | *Yes*
 
 Whether the text can be selected or not.
 
-Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`selectableChanged`](#selectablechanged)
 
 
 
@@ -135,32 +140,24 @@ Change events | *Yes*
 
 The text to display.
 
-Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
-Settable | *Yes*
-Change events | *Yes*
-JSX content type | `string`
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`textChanged`](#textchanged)
+JSX Text Property: | [Yes](../JSX.md)
 
 
 
 
-When using TextView as an JSX element the element content is mapped to this property. Therefore
-```jsx
-<TextView>Hello World</TextView>
-```
- has the same effect as:
-```jsx
-<TextView text='Hello World' />
-```
-
+When using TextView as an JSX element the elements Text content is mapped to this property.
 
 ### textColor
 
 
 The color of the text.
 
-Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`textColorChanged`](#textcolorchanged)
 
 
 
@@ -172,73 +169,91 @@ Change events | *Yes*
 
 Fires when the user clicks on a link in an html text. Requires to set `markupEnabled` to true and to provide a text containing an anchor (`<a>`) with an `href` attribute. Eg. `textView.text = 'Website: <a href="http://example.com>example.com</a>'`. The event object contains a property `url` which provides the anchors `href` url.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap">TextViewTapLinkEvent&lt;<a href="#" >TextView</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-url | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The url referenced by the `href` attribute of the anchor.
+url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The url referenced by the `href` attribute of the anchor.
 
 ## Change Events
 
 ### alignmentChanged
 
-Fired when the [*alignment*](#alignment) property has changed.
+Fired when the [alignment](#alignment) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >TextView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*alignment*](#alignment).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The new value of [alignment](#alignment).
 
 ### selectableChanged
 
-Fired when the [*selectable*](#selectable) property has changed.
+Fired when the [selectable](#selectable) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >TextView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of [*selectable*](#selectable).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The new value of [selectable](#selectable).
 
 ### markupEnabledChanged
 
-Fired when the [*markupEnabled*](#markupenabled) property has changed.
+Fired when the [markupEnabled](#markupenabled) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >TextView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of [*markupEnabled*](#markupenabled).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The new value of [markupEnabled](#markupenabled).
 
 ### textChanged
 
-Fired when the [*text*](#text) property has changed.
+Fired when the [text](#text) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >TextView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*text*](#text).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The new value of [text](#text).
 
 ### textColorChanged
 
-Fired when the [*textColor*](#textcolor) property has changed.
+Fired when the [textColor](#textcolor) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >TextView</a>, <a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*textColor*](#textcolor).
+value | <code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code> | The new value of [textColor](#textcolor).
 
 ### maxLinesChanged
 
-Fired when the [*maxLines*](#maxlines) property has changed.
+Fired when the [maxLines](#maxlines) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >TextView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type) \| [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type)</span> | The new value of [*maxLines*](#maxlines).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a></code> | The new value of [maxLines](#maxlines).
 
 ### lineSpacingChanged
 
-Fired when the [*lineSpacing*](#linespacing) property has changed.
+Fired when the [lineSpacing](#linespacing) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >TextView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*lineSpacing*](#linespacing).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The new value of [lineSpacing](#linespacing).
 
 ### fontChanged
 
-Fired when the [*font*](#font) property has changed.
+Fired when the [font](#font) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >TextView</a>, <a href="../types.html#fontvalue" title="FontValue Type Reference">FontValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`FontValue`](../types.md#fontvalue)</span> | The new value of [*font*](#font).
+value | <code style="white-space: nowrap"><a href="../types.html#fontvalue" title="FontValue Type Reference">FontValue</a></code> | The new value of [font](#font).
 

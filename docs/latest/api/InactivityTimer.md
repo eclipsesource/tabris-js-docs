@@ -2,19 +2,23 @@
 ---
 # Class "InactivityTimer"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`InactivityTimer`](InactivityTimer.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a> > <a href="#" >InactivityTimer</a>
 
 A timer that triggers when the app has not been interacted with for a configurable interval.
 
 
-Constructor | *public*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | *No*
+Type: | <code style="white-space: nowrap">InactivityTimer extends <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a></code>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | No
 
 
-## Example
+## Examples
+### JavaScript
+
+
 ```js
 import {InactivityTimer} from 'tabris';
 
@@ -22,17 +26,18 @@ new InactivityTimer({delay: 2000})
   .onTimeout(() => console.log('Inactive'));
 ```
 
+
 See also:
   
-[<span class='language js'>JS</span> inactivitytimer.js](https://playground.tabris.com/?gitref=v3.1.0&snippet=inactivitytimer.js)
+[<span class='language js'>JS</span> inactivitytimer.js](https://playground.tabris.com/?gitref=vundefined&snippet=inactivitytimer.js)
 
 ## Constructor
 
 ### new InactivityTimer(properties?)
 
-Parameter|Type|Optional|Description
--|-|-|-
-properties | <span style="white-space:nowrap;">`Properties<InactivityTimer>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
+Parameter|Type|Description
+-|-|-
+properties | <code style="white-space: nowrap"><a href="../types.html#propertieswidget" title="Properties&lt;Widget&gt;">Properties</a>&lt;<a href="#" >InactivityTimer</a>&gt;</code> | Sets all key-value pairs in the properties object as widget properties. *Optional.*
 
 ## Methods
 
@@ -42,7 +47,7 @@ properties | <span style="white-space:nowrap;">`Properties<InactivityTimer>`</sp
 
 Stops and resets the timer.
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### start()
 
@@ -50,7 +55,7 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 
 Starts the timer with the currently configured delay. After the first `timeout` event, the timer will stop but it can be started again.
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 
 ## Properties
@@ -60,10 +65,10 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 
 The interval of user inactivity that will trigger the timer. Given in milliseconds. Changes to this property will not affect a running timer.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Default | `0`
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">0</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`delayChanged`](#delaychanged)
 
 
 
@@ -75,13 +80,18 @@ Change events | *Yes*
 
 Fired when the app has not been interacted with since the configured delay.
 
+EventObject Type: <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a>&lt;<a href="#" >InactivityTimer</a>&gt;</code>
+
+This event has no additional parameter.
 ## Change Events
 
 ### delayChanged
 
-Fired when the [*delay*](#delay) property has changed.
+Fired when the [delay](#delay) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >InactivityTimer</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*delay*](#delay).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The new value of [delay](#delay).
 

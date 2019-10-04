@@ -25,6 +25,15 @@ A push button. Can contain a text or an image.
 <div><a style="text-decoration: none" href="Button.html"><div class="tabris-image"><figure><div><img srcset="img/android/Button.png 2x" src="img/android/Button.png" alt="Button on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/Button.png 2x" src="img/ios/Button.png" alt="Button on iOS"/></div><figcaption>iOS</figcaption></figure></div>
 </a></div>
 
+## [CameraView](CameraView.html)
+
+A widget to preview a `Camera` feed.
+
+In order to show a camera preview image the app has to hold the `'camera'` permission.
+
+<div><a style="text-decoration: none" href="CameraView.html"><div class="tabris-image"><figure><div><img srcset="img/android/CameraView.png 2x" src="img/android/CameraView.png" alt="CameraView on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/CameraView.png 2x" src="img/ios/CameraView.png" alt="CameraView on iOS"/></div><figcaption>iOS</figcaption></figure></div>
+</a></div>
+
 ## [Canvas](Canvas.html)
 
 Canvas is a widget that can be used to draw graphics using a [canvas context](./CanvasContext.md).

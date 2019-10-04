@@ -27,7 +27,7 @@
       url: touch.html
     - title: Permissions
       url: permissions.html
-    - title: W3C Compatibility
+    - title: W3C/WHATWG Compatibility
       url: w3c-api.html
     - title: Cordova Support
       url: cordova.html
@@ -63,6 +63,8 @@
       url: api/app.html
     - title: console
       url: api/Console.html
+    - title: crypto
+      url: w3c-api.html#random-source-crypto
     - title: device
       url: api/device.html
     - title: fs
@@ -79,10 +81,14 @@
       url: api/StatusBar.html
     - title: tabris
       url: api/Tabris.html
+    - title: Camera
+      url: api/Camera.html
     - title: InactivityTimer
       url: api/InactivityTimer.html
     - title: Timer
       url: api/timer.html
+    - title: Worker
+      url: w3c-api.html#worker
 
 - title: Widgets
   pages:
@@ -100,6 +106,8 @@
       url: api/ActivityIndicator.html
     - title: Button
       url: api/Button.html
+    - title: CameraView
+      url: api/CameraView.html
     - title: Canvas
       url: api/Canvas.html
     - title: CanvasContext
@@ -182,6 +190,10 @@
       url: api/Request.html
     - title: Response
       url: api/Response.html
+    - title: WebSocket
+      url: w3c-api.html#websocket
+    - title: XMLHttpRequest
+      url: w3c-api.html#xmlhttprequest
 
 - title: Data Types
   pages:

@@ -2,20 +2,24 @@
 ---
 # Class "Stack"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> > <span style="white-space:nowrap;">[`Composite`](Composite.md)</span> > <span style="white-space:nowrap;">[`Stack`](Stack.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a> > <a href="Widget.html" title="Widget Class Reference">Widget</a> > <a href="Composite.html" title="Composite Class Reference">Composite</a> > <a href="#" >Stack</a>
 
 A composite with the `layout` property initialized with a `Stack`. All children are automatically arranged in one vertical stack, starting from the top. The `layoutData` on the children is ignored.
 
 
-Constructor | *public*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | Element: `<Stack/>`<br/>Parent element: [`<Composite/>`](Composite.md) *and any widget extending* <span style="white-space:nowrap;">[`Composite`](Composite.md)</span><br/>Child elements: *Widgets*<br/>Text content: *Not supported*<br/>
+Type: | <code style="white-space: nowrap">Stack extends <a href="Composite.html" title="Composite Class Reference">Composite</a></code>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | Element: <code style="white-space: nowrap"><a href="Stack.html" title="Stack Class Reference">&lt;Stack/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="Canvas.html" title="Canvas Class Reference">&lt;Canvas/&gt;</a></code>, <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">&lt;Composite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Page.html" title="Page Class Reference">&lt;Page/&gt;</a></code>, <code style="white-space: nowrap"><a href="RefreshComposite.html" title="RefreshComposite Class Reference">&lt;RefreshComposite/&gt;</a></code>, <code style="white-space: nowrap"><a href="ScrollView.html" title="ScrollView Class Reference">&lt;ScrollView/&gt;</a></code>, <code style="white-space: nowrap"><a href="Stack.html" title="Stack Class Reference">&lt;Stack/&gt;</a></code>, <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Child Elements: *Any standalone widget element*<br/>Text Content: *Not supported*
 
-## Example
+## Examples
+### JavaScript
+
+
 ```js
-import {Stack, contentView} from 'tabris';
+import {Stack, contentView, TextView} from 'tabris';
 
 const stack = new Stack({
   layoutData: 'stretch',
@@ -23,25 +27,26 @@ const stack = new Stack({
 }).appendTo(contentView);
 
 stack.append(
-   new TextView({text: 'top'}),
-   new TextView({text: 'center'}),
-   new TextView({text: 'bottom'})
+  new TextView({text: 'top'}),
+  new TextView({text: 'center'}),
+  new TextView({text: 'bottom'})
 );
 ```
 
+
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `Stack`](https://playground.tabris.com/?gitref=v3.1.0&snippet=stack.jsx)  
-[<span class='language jsx'>JSX</span> Creating a `Stack` with horizontal alignment](https://playground.tabris.com/?gitref=v3.1.0&snippet=stack-alignment.jsx)  
-[<span class='language jsx'>JSX</span> Creating a `Stack` with vertical alignment](https://playground.tabris.com/?gitref=v3.1.0&snippet=stack-valign.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `Stack`](https://playground.tabris.com/?gitref=vundefined&snippet=stack.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `Stack` with horizontal alignment](https://playground.tabris.com/?gitref=vundefined&snippet=stack-alignment.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `Stack` with vertical alignment](https://playground.tabris.com/?gitref=vundefined&snippet=stack-valign.jsx)
 
 ## Constructor
 
 ### new Stack(properties?)
 
-Parameter|Type|Optional|Description
--|-|-|-
-properties | <span style="white-space:nowrap;">`Properties<Stack>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
+Parameter|Type|Description
+-|-|-
+properties | <code style="white-space: nowrap"><a href="../types.html#propertieswidget" title="Properties&lt;Widget&gt;">Properties</a>&lt;<a href="#" >Stack</a>&gt;</code> | Sets all key-value pairs in the properties object as widget properties. *Optional.*
 
 ## Properties
 
@@ -50,10 +55,10 @@ properties | <span style="white-space:nowrap;">`Properties<Stack>`</span> | Yes 
 
 Determines the horizontal placement of the children. For the `stretchX` value to work correctly the `Stack` needs to be given a width either by setting `width` or by setting `left` and `right`.
 
-Type | <span style="white-space:nowrap;">`'left'` \| `'centerX'` \| `'stretchX'` \| `'right'`</span>
-Default | `'left'`
-Settable | *On creation*
-Change events | *No*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'left'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'centerX'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'stretchX'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'right'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'left'</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >By Constructor or JSX</a>
+Change Event: | Not supported
 
 
 
@@ -62,7 +67,7 @@ This property can only be set via constructor or JSX. Once set, it cannot change
 
 See also:
   
-[<span class='language jsx'>JSX</span> stack-alignment.jsx](https://playground.tabris.com/?gitref=v3.1.0&snippet=stack-alignment.jsx)
+[<span class='language jsx'>JSX</span> stack-alignment.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=stack-alignment.jsx)
 
 
 ### layout
@@ -70,10 +75,10 @@ See also:
 
 The stack layout manager responsible for interpreting the [`layoutData`](./Widget.md#layoutdata) of the child widgets of this Composite.
 
-Type | <span style="white-space:nowrap;">[`StackLayout`](StackLayout.md)</span>
-Default | `StackLayout`
-Settable | *On creation*
-Change events | *No*
+Type: |<code style="white-space: nowrap"><a href="StackLayout.html" title="StackLayout Class Reference">StackLayout</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">StackLayout</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >By Constructor or JSX</a>
+Change Event: | Not supported
 
 
 
@@ -87,10 +92,10 @@ This property can only be set via constructor or JSX. Once set, it cannot change
 
 Additional space to add between the children in device independent pixel.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Default | `16`
-Settable | *On creation*
-Change events | *No*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">16</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >By Constructor or JSX</a>
+Change Event: | Not supported
 
 
 

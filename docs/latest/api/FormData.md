@@ -2,16 +2,17 @@
 ---
 # Class "FormData"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`FormData`](FormData.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="#" >FormData</a>
 
 FormData provides a way to construct a set of key/value pairs which can then be sent using fetch() or XMLHttpRequest. It uses the same format a HTML form would use if the encoding type were set to `multipart/form-data`.
 
 
-Constructor | *public*
-Singleton | *No*
-Namespace |`global`
-Direct subclasses | *None*
-JSX support | *No*
+Type: | <code style="white-space: nowrap">FormData extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a></code>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >global</a>
+Direct subclasses: | None
+JSX Support: | No
 
 
 ## Constructor
@@ -28,13 +29,13 @@ JSX support | *No*
 Adds a string value associated with a given key. Any existing values for that key will be retained.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-key | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
-value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+key | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### append(key, value, filename?)
 
@@ -43,14 +44,14 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Adds binary data associated with a given key. Will be stored as an instance of `File` with its `name` set to the given `filename` parameter. If no `filename` is given and the value is not already a named `File` instance it will default to `'blob'`. Any existing values for that key will be retained.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-key | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
-value | <span style="white-space:nowrap;">[`Blob`](Blob.md) \| [`File`](File.md)</span> | No | 
-filename | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | Yes | 
+Parameter|Type|Description
+-|-|-
+key | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+value | <code style="white-space: nowrap"><a href="Blob.html" title="Blob Class Reference">Blob</a> &#124; <a href="File.html" title="File Class Reference">File</a></code> | 
+filename | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | *Optional.*
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### delete(key)
 
@@ -59,18 +60,18 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Removes all values associated with a given key.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-key | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+key | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### entries()
 
 
 
-Returns <span style="white-space:nowrap;">`IterableIterator<[string, string` \| `File]>`</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol" title="View &quot;IterableIterator&quot; on MDN">IterableIterator</a>&lt;[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a> &#124; <a href="File.html" title="File Class Reference">File</a>]&gt;</code>
 
 ### get(key)
 
@@ -79,12 +80,12 @@ Returns <span style="white-space:nowrap;">`IterableIterator<[string, string` \| 
 Returns the first value associated with a given key.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-key | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+key | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type) \| [`File`](File.md) \| [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a> &#124; <a href="File.html" title="File Class Reference">File</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a></code>
 
 ### getAll(key)
 
@@ -93,12 +94,12 @@ Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.o
 Returns all the values associated with a given key.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-key | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+key | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">`Array<string` \| `File>`</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>[]</code>
 
 ### has(key)
 
@@ -107,18 +108,18 @@ Returns <span style="white-space:nowrap;">`Array<string` \| `File>`</span>
 Returns true if there are any values associated with a given key.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-key | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+key | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 ### keys()
 
 
 
-Returns <span style="white-space:nowrap;">`IterableIterator<string>`</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol" title="View &quot;IterableIterator&quot; on MDN">IterableIterator</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
 
 ### set(key, value)
 
@@ -127,13 +128,13 @@ Returns <span style="white-space:nowrap;">`IterableIterator<string>`</span>
 Adds a string value associated with a given key. Any existing values for that key will be replaced.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-key | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
-value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+key | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### set(key, value, filename?)
 
@@ -142,18 +143,18 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Adds binary data associated with a given key. Will be stored as an instance of `File` with its `name` set to the given `filename` parameter. If no `filename` is given and the value is not already a named `File` instance it will default to `'blob'`. Any existing values for that key will be replaced.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-key | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
-value | <span style="white-space:nowrap;">[`Blob`](Blob.md) \| [`File`](File.md)</span> | No | 
-filename | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | Yes | 
+Parameter|Type|Description
+-|-|-
+key | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+value | <code style="white-space: nowrap"><a href="Blob.html" title="Blob Class Reference">Blob</a> &#124; <a href="File.html" title="File Class Reference">File</a></code> | 
+filename | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | *Optional.*
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### values()
 
 
 
-Returns <span style="white-space:nowrap;">`IterableIterator<string` \| `File>`</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols#The_iterator_protocol" title="View &quot;IterableIterator&quot; on MDN">IterableIterator</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a> &#124; <a href="File.html" title="File Class Reference">File</a>&gt;</code>
 

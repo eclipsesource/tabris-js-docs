@@ -2,24 +2,25 @@
 ---
 # Object "app"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`App`](app.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a> > <a href="#" >App</a>
 
 Provides information about the application.
 
 
-Constructor | *private*
-Singleton | `app`
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | *No*
+Type: | <code style="white-space: nowrap">App extends <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a></code>
+Constructor: | private
+Singleton: | `app`
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | No
 
 
 See also:
   
-[<span class='language jsx'>JSX</span> Displaying app properties](https://playground.tabris.com/?gitref=v3.1.0&snippet=app-info.jsx)  
-[<span class='language jsx'>JSX</span> Displaying app events](https://playground.tabris.com/?gitref=v3.1.0&snippet=app-events.jsx)  
-[<span class='language jsx'>JSX</span> Launching an url](https://playground.tabris.com/?gitref=v3.1.0&snippet=app-launch.jsx)  
-[<span class='language js'>JS</span> Register and use an external font](https://playground.tabris.com/?gitref=v3.1.0&snippet=textview-font-external.js)
+[<span class='language jsx'>JSX</span> Displaying app properties](https://playground.tabris.com/?gitref=vundefined&snippet=app-info.jsx)  
+[<span class='language jsx'>JSX</span> Displaying app events](https://playground.tabris.com/?gitref=vundefined&snippet=app-events.jsx)  
+[<span class='language jsx'>JSX</span> Launching an url](https://playground.tabris.com/?gitref=vundefined&snippet=app-launch.jsx)  
+[<span class='language js'>JS</span> Register and use an external font](https://playground.tabris.com/?gitref=vundefined&snippet=textview-font-external.js)
 
 ## Methods
 
@@ -29,7 +30,7 @@ See also:
 
 Shuts down the running application and closes the UI.
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### getResourceLocation(path)
 
@@ -38,12 +39,12 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Returns the URL for a given resource that is bundled with the app. Can be used to access app resources like images, videos, etc. Note that these resources can only be accessed in read-only mode.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-path | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The path of a resource relative to the application root.
+Parameter|Type|Description
+-|-|-
+path | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The path of a resource relative to the application root.
 
 
-Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 
 ### launch(url)
 
@@ -52,15 +53,15 @@ Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.o
 Asks the operating system to open the given URL in an external app. Operating systems usually support a variety of URL schemes including `http`, `https`, `mailto`, `tel`, and `sms`. Apps can also register for custom URL schemes.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-url | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The URL to launch.
+Parameter|Type|Description
+-|-|-
+url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The URL to launch.
 
 
-Returns <span style="white-space:nowrap;">`Promise<void>`</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="View &quot;Promise&quot; on MDN">Promise</a></code>
 See also:
   
-[<span class='language jsx'>JSX</span> app-launch.jsx](https://playground.tabris.com/?gitref=v3.1.0&snippet=app-launch.jsx)
+[<span class='language jsx'>JSX</span> app-launch.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=app-launch.jsx)
 
 ### registerFont(alias, file)
 
@@ -69,13 +70,13 @@ See also:
 Allows to register a font to use throughout the app. Once a font is registered its alias can be used to apply the font where ever a font can be configured, e.g. in `TextView` or `GraphicalContext`. Tabris.js supports TrueType fonts (*.ttf) and OpenType fonts (*.otf).
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-alias | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | An identifier for the registered font. The alias can be used as a font family, e.g. in the `font` properties of `TextView` and `Button`.
-file | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The font file to register for later use. Similar to images paths, the file path can be absolute, relative or an URL.
+Parameter|Type|Description
+-|-|-
+alias | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | An identifier for the registered font. The alias can be used as a font family, e.g. in the `font` properties of `TextView` and `Button`.
+file | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The font file to register for later use. Similar to images paths, the file path can be absolute, relative or an URL.
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### reload(url?)
 
@@ -84,12 +85,12 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Closes the running application and either loads a different app at the given `url` or reloads the current app when no `url` is given.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-url | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | Yes | An optional url to an app to launch
+Parameter|Type|Description
+-|-|-
+url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | An optional url to an app to launch *Optional.*
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 
 ## Properties
@@ -99,9 +100,9 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 
 Returns `false` if this app was build build in production mode, otherwise `true`. In production mode no debugger can be attached to the JavaScript VM.
 
-Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
-Settable | *No*
-Change events | *No*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
+Change Event: | Not supported
 
 
 
@@ -115,14 +116,29 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 Uniquely identifies the app.
 
-Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
-Settable | *No*
-Change events | *No*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
+Change Event: | Not supported
 
 
 
 
 This property can only be set via constructor. Once set, it cannot change anymore.
+
+
+
+### idleTimeoutEnabled
+
+
+Allows to control the device idle timout. When disabled the device will not go into sleep mode and turn off the screen to safe battery power.
+
+The `idleTimeoutEnabled` will disable any system wide enabled idle settings while the app is in the foreground.
+
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">true</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`idleTimeoutEnabledChanged`](#idletimeoutenabledchanged)
+
 
 
 
@@ -143,9 +159,9 @@ Example: `[{host: 'freegeoip.net', hash: 'sha256/+SVYjThgePRQxQ0e8bWTQDRtPYR/xBR
 
 For further details see https://www.owasp.org/index.php/Certificate_and_Public_Key_Pinning.
 
-Type | <span style="white-space:nowrap;">`any[]`</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a>[]</code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`pinnedCertificatesChanged`](#pinnedcertificateschanged)
 
 
 
@@ -157,9 +173,9 @@ Adds a set of certificates to validated ssl connections against. The certificate
 
 The `ArrayBuffer` entries of the `trustedCertificates` array consist of the bytes of the certificate files. On Android the certificate file has to be a _*.pem_ (Privacy Enhanced Mail) file whereas on iOS  it has to be _*.der_ (Distinguished Encoding Rules) file.
 
-Type | <span style="white-space:nowrap;">`ArrayBuffer[]`</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer" title="View &quot;ArrayBuffer&quot; on MDN">ArrayBuffer</a>[]</code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`trustedCertificatesChanged`](#trustedcertificateschanged)
 
 
 
@@ -169,9 +185,9 @@ Change events | *Yes*
 
 The user facing version number, e.g. '2.1-beta3'.
 
-Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
-Settable | *No*
-Change events | *No*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
+Change Event: | Not supported
 
 
 
@@ -185,9 +201,9 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 An alternative version number used in app stores to identify different versions of an app. Usually incremented with each release. This property reflects the `versionCode` on Android and `CFBundleVersion` on iOS.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Settable | *No*
-Change events | *No*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
+Change Event: | Not supported
 
 
 
@@ -203,45 +219,76 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 The event is fired when the app starts or when it returns from the background.
 
+EventObject Type: <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a>&lt;<a href="#" >App</a>&gt;</code>
+
+This event has no additional parameter.
 ### resume
 
 Fired when the app is visible and ready to interact with the user. The event is preceded by either `foreground` (the app becomes visible again) or `pause` (the app regains ability to interact with user).
 
+EventObject Type: <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a>&lt;<a href="#" >App</a>&gt;</code>
+
+This event has no additional parameter.
 ### pause
 
 Fired when the app is not the interaction target of the user anymore. Usually preceded by `resume`.
 
+EventObject Type: <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a>&lt;<a href="#" >App</a>&gt;</code>
+
+This event has no additional parameter.
 ### background
 
 Fired when the app becomes invisible. Either because another app is in the foreground or the user has returned to the home screen.
 
+EventObject Type: <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a>&lt;<a href="#" >App</a>&gt;</code>
+
+This event has no additional parameter.
 ### terminate
 
 Fired when the app is being destroyed. After this callback no more interaction with the app is possible.
 
+EventObject Type: <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a>&lt;<a href="#" >App</a>&gt;</code>
+
+This event has no additional parameter.
 ### backNavigation
 
 Fired when the back button is pressed on Android.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap">AppBackNavigationEvent&lt;<a href="#" >App</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-preventDefault | <span style="white-space:nowrap;">`() => void`</span> | Call to suppress the default back navigation behavior.
+preventDefault | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a></code> | Call to suppress the default back navigation behavior.
 
 ## Change Events
 
 ### pinnedCertificatesChanged
 
-Fired when the [*pinnedCertificates*](#pinnedcertificates) property has changed.
+Fired when the [pinnedCertificates](#pinnedcertificates) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >App</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="View &quot;Array&quot; on MDN">Array</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">`any[]`</span> | The new value of [*pinnedCertificates*](#pinnedcertificates).
+value | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a>[]</code> | The new value of [pinnedCertificates](#pinnedcertificates).
 
 ### trustedCertificatesChanged
 
-Fired when the [*trustedCertificates*](#trustedcertificates) property has changed.
+Fired when the [trustedCertificates](#trustedcertificates) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >App</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="View &quot;Array&quot; on MDN">Array</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">`ArrayBuffer[]`</span> | The new value of [*trustedCertificates*](#trustedcertificates).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer" title="View &quot;ArrayBuffer&quot; on MDN">ArrayBuffer</a>[]</code> | The new value of [trustedCertificates](#trustedcertificates).
+
+### idleTimeoutEnabledChanged
+
+Fired when the [idleTimeoutEnabled](#idletimeoutenabled) property has changed.
+
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >App</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a>&gt;</code>
+
+Property|Type|Description
+-|-|-
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The new value of [idleTimeoutEnabled](#idletimeoutenabled).
 

@@ -2,29 +2,34 @@
 ---
 # Class "CanvasContext"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`CanvasContext`](CanvasContext.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="#" >CanvasContext</a>
 
 The CanvasContext is used for drawing onto the [canvas](./Canvas.md). It is a subset of the HTML5 [CanvasRenderingContext2D](https://developer.mozilla.org/en/docs/Web/API/CanvasRenderingContext2D).
 
 
-Constructor | *private*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | *No*
+Type: | <code style="white-space: nowrap">CanvasContext extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a></code>
+Constructor: | private
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | No
 
 
-## Example
+## Examples
+### JavaScript
+
+
 ```js
 import {Canvas, contentView} from 'tabris';
 
 new Canvas({layoutData: 'stretch'})
   .onResize(({target: canvas, width, height}) => {
-    let context = canvas.getContext("2d", width, height);
+    const context = canvas.getContext('2d', width, height);
     context.moveTo(0, 0);
     // ...
   }).appendTo(contentView);
 ```
+
 
 ## Methods
 
@@ -35,17 +40,17 @@ new Canvas({layoutData: 'stretch'})
 Adds an arc to the path which is centered at *(x, y)* position with radius *r* starting at *startAngle* and ending at *endAngle* going in the given direction by *anticlockwise* (defaulting to clockwise).
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-x | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The x coordinate of the arc's center.
-y | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The y coordinate of the arc's center.
-radius | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The arc's radius.
-startAngle | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The angle in radians at which the arc starts, measured clockwise from the positive x axis.
-endAngle | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The angle in radians at which the arc ends, measured clockwise from the positive x axis.
-anticlockwise | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | Yes | if true, causes the arc to be drawn counter-clockwise between the two angles.
+Parameter|Type|Description
+-|-|-
+x | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The x coordinate of the arc's center.
+y | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The y coordinate of the arc's center.
+radius | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The arc's radius.
+startAngle | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The angle in radians at which the arc starts, measured clockwise from the positive x axis.
+endAngle | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The angle in radians at which the arc ends, measured clockwise from the positive x axis.
+anticlockwise | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | if true, causes the arc to be drawn counter-clockwise between the two angles. *Optional.*
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### beginPath()
 
@@ -53,7 +58,7 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 
 Starts a new path by emptying the list of sub-paths.
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
 
@@ -62,17 +67,17 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Adds a cubic Bézier curve to the path. The starting point is the last point in the current path.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-cp1x | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The x axis of the coordinate for the first control point.
-cp1y | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The y axis of the coordinate for the first control point.
-cp2x | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The x axis of the coordinate for the second control point.
-cp2y | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The y axis of the coordinate for the second control point.
-x | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The x axis of the coordinate for the end point.
-y | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The y axis of the coordinate for the end point.
+Parameter|Type|Description
+-|-|-
+cp1x | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The x axis of the coordinate for the first control point.
+cp1y | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The y axis of the coordinate for the first control point.
+cp2x | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The x axis of the coordinate for the second control point.
+cp2y | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The y axis of the coordinate for the second control point.
+x | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The x axis of the coordinate for the end point.
+y | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The y axis of the coordinate for the end point.
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### clearRect(x, y, width, height)
 
@@ -81,15 +86,15 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Sets all pixels in the rectangle defined by starting point *(x, y)* and size *(width, height)* to transparent, erasing any previously drawn content.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-x | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The x axis of the rectangle's upper-left corner.
-y | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The y axis of the rectangle's upper-left corner.
-width | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The rectangle's width.
-height | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The rectangles height.
+Parameter|Type|Description
+-|-|-
+x | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The x axis of the rectangle's upper-left corner.
+y | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The y axis of the rectangle's upper-left corner.
+width | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The rectangle's width.
+height | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The rectangles height.
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### closePath()
 
@@ -97,7 +102,7 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 
 Adds a straight line from the current point to the start of the current sub-path.
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### createImageData(width, height)
 
@@ -106,13 +111,13 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 creates a new, blank ImageData object with the specified dimensions. All of the pixels in the new object are transparent black.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-width | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The width of the new ImageData object.
-height | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The height of the new ImageData object.
+Parameter|Type|Description
+-|-|-
+width | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The width of the new ImageData object.
+height | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The height of the new ImageData object.
 
 
-Returns <span style="white-space:nowrap;">[`ImageData`](../types.md#imagedata)</span>
+Returns: <code style="white-space: nowrap"><a href="../types.html#imagedata" title="ImageData Type Reference">ImageData</a></code>
 
 ### createImageData(imageData)
 
@@ -121,12 +126,12 @@ Returns <span style="white-space:nowrap;">[`ImageData`](../types.md#imagedata)</
 creates a new, blank ImageData object with the same dimensions as the specified existing ImageData object. All of the pixels in the new object are transparent black.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-imageData | <span style="white-space:nowrap;">[`ImageData`](../types.md#imagedata)</span> | No | An existing ImageData object from which to copy the width and height.
+Parameter|Type|Description
+-|-|-
+imageData | <code style="white-space: nowrap"><a href="../types.html#imagedata" title="ImageData Type Reference">ImageData</a></code> | An existing ImageData object from which to copy the width and height.
 
 
-Returns <span style="white-space:nowrap;">[`ImageData`](../types.md#imagedata)</span>
+Returns: <code style="white-space: nowrap"><a href="../types.html#imagedata" title="ImageData Type Reference">ImageData</a></code>
 
 ### drawImage(image, dx, dy)
 
@@ -135,14 +140,14 @@ Returns <span style="white-space:nowrap;">[`ImageData`](../types.md#imagedata)</
 Draws the entire given ImageBitmap at the given coordinates (dx, dy) in its natural size.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-image | <span style="white-space:nowrap;">[`ImageBitmap`](ImageBitmap.md)</span> | No | An ImageBitmap object that has not been closed yet.
-dx | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Destination x-coordinate of the upper-left corner of the image
-dy | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Destination y-coordinate of the upper-left corner of the image
+Parameter|Type|Description
+-|-|-
+image | <code style="white-space: nowrap"><a href="ImageBitmap.html" title="ImageBitmap Class Reference">ImageBitmap</a></code> | An ImageBitmap object that has not been closed yet.
+dx | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Destination x-coordinate of the upper-left corner of the image
+dy | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Destination y-coordinate of the upper-left corner of the image
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### drawImage(image, dx, dy, dWidth, dHeight)
 
@@ -151,16 +156,16 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Draws the entire given ImageBitmap at the given coordinates (dx, dy) in the given dimension (dWidth, dHeight).
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-image | <span style="white-space:nowrap;">[`ImageBitmap`](ImageBitmap.md)</span> | No | An ImageBitmap object that has not been closed yet.
-dx | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Destination x-coordinate of the upper-left corner of the image
-dy | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Destination y-coordinate of the upper-left corner of the image
-dWidth | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Destination width of the image
-dHeight | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Destination height of the image
+Parameter|Type|Description
+-|-|-
+image | <code style="white-space: nowrap"><a href="ImageBitmap.html" title="ImageBitmap Class Reference">ImageBitmap</a></code> | An ImageBitmap object that has not been closed yet.
+dx | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Destination x-coordinate of the upper-left corner of the image
+dy | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Destination y-coordinate of the upper-left corner of the image
+dWidth | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Destination width of the image
+dHeight | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Destination height of the image
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)
 
@@ -169,20 +174,20 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Draws a section (sx, sy, sWidth, sHeight) of the given ImageBitmap at the given coordinates (dx, dy) in the given dimension (dWidth, dHeight).
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-image | <span style="white-space:nowrap;">[`ImageBitmap`](ImageBitmap.md)</span> | No | An ImageBitmap object that has not been closed yet.
-sx | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Source x-coordinate of the upper-left corner of the image
-sy | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Source y-coordinate of the upper-left corner of the image
-sWidth | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Source width of the image
-sHeight | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Source height of the image
-dx | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Destination x-coordinate of the upper-left corner of the image
-dy | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Destination y-coordinate of the upper-left corner of the image
-dWidth | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Destination width of the image
-dHeight | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Destination height of the image
+Parameter|Type|Description
+-|-|-
+image | <code style="white-space: nowrap"><a href="ImageBitmap.html" title="ImageBitmap Class Reference">ImageBitmap</a></code> | An ImageBitmap object that has not been closed yet.
+sx | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Source x-coordinate of the upper-left corner of the image
+sy | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Source y-coordinate of the upper-left corner of the image
+sWidth | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Source width of the image
+sHeight | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Source height of the image
+dx | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Destination x-coordinate of the upper-left corner of the image
+dy | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Destination y-coordinate of the upper-left corner of the image
+dWidth | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Destination width of the image
+dHeight | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Destination height of the image
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### fill()
 
@@ -190,7 +195,7 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 
 Fills the current or path with the current fill style.
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### fillRect(x, y, width, height)
 
@@ -199,15 +204,15 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 draws a filled rectangle at *(x, y)* position whose size is determined by *width* and *height*. and whose color is determined by the fillStyle attribute.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-x | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The x axis of the rectangle's upper-left corner.
-y | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The y axis of the rectangle's upper-left corner.
-width | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The rectangle's width.
-height | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The rectangles height.
+Parameter|Type|Description
+-|-|-
+x | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The x axis of the rectangle's upper-left corner.
+y | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The y axis of the rectangle's upper-left corner.
+width | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The rectangle's width.
+height | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The rectangles height.
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### fillText(text, x, y)
 
@@ -216,14 +221,14 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Fills a given text at the given *(x, y)* position using the current *textAlign* and *textBaseline* values.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-text | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The text to render.
-x | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The x axis of the coordinate for the text starting point.
-y | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The y axis of the coordinate for the text starting point.
+Parameter|Type|Description
+-|-|-
+text | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The text to render.
+x | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The x axis of the coordinate for the text starting point.
+y | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The y axis of the coordinate for the text starting point.
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### getImageData(x, y, width, height)
 
@@ -232,15 +237,15 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Returns an ImageData object representing the underlying pixel data for the area of the canvas denoted by the given rectangle.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-x | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The x axis of the rectangle's upper-left corner.
-y | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The y axis of the rectangle's upper-left corner.
-width | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The rectangle's width.
-height | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The rectangle's height.
+Parameter|Type|Description
+-|-|-
+x | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The x axis of the rectangle's upper-left corner.
+y | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The y axis of the rectangle's upper-left corner.
+width | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The rectangle's width.
+height | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The rectangle's height.
 
 
-Returns <span style="white-space:nowrap;">[`ImageData`](../types.md#imagedata)</span>
+Returns: <code style="white-space: nowrap"><a href="../types.html#imagedata" title="ImageData Type Reference">ImageData</a></code>
 
 ### lineTo(x, y)
 
@@ -249,13 +254,13 @@ Returns <span style="white-space:nowrap;">[`ImageData`](../types.md#imagedata)</
 Connects the last point in the sub-path to the *(x, y)* coordinates with a straight line.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-x | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The x axis of the coordinate for the end of the line.
-y | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The y axis of the coordinate for the end of the line.
+Parameter|Type|Description
+-|-|-
+x | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The x axis of the coordinate for the end of the line.
+y | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The y axis of the coordinate for the end of the line.
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### moveTo(x, y)
 
@@ -264,13 +269,13 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Moves the starting point of a new sub-path to the *(x, y)* coordinates.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-x | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The x axis of the point.
-y | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The y axis of the point.
+Parameter|Type|Description
+-|-|-
+x | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The x axis of the point.
+y | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The y axis of the point.
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### putImageData(imageData, x, y)
 
@@ -279,14 +284,14 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Paints data from the given ImageData object onto the bitmap at coordinates (x, y).
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-imageData | <span style="white-space:nowrap;">[`ImageData`](../types.md#imagedata)</span> | No | An ImageData object containing the array of pixel values.
-x | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | x-coordinate of the upper-left corner of the image data rectangle
-y | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | y-coordinate of the upper-left corner of the image data rectangle
+Parameter|Type|Description
+-|-|-
+imageData | <code style="white-space: nowrap"><a href="../types.html#imagedata" title="ImageData Type Reference">ImageData</a></code> | An ImageData object containing the array of pixel values.
+x | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | x-coordinate of the upper-left corner of the image data rectangle
+y | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | y-coordinate of the upper-left corner of the image data rectangle
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### quadraticCurveTo(cpx, cpy, x, y)
 
@@ -295,15 +300,15 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Adds a quadratic Bézier curve to the path. The starting point is the last point in the current path.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-cpx | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The x axis of the coordinate for the control point.
-cpy | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The y axis of the coordinate for the control point.
-x | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The x axis of the coordinate for the end point.
-y | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The y axis of the coordinate for the end point.
+Parameter|Type|Description
+-|-|-
+cpx | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The x axis of the coordinate for the control point.
+cpy | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The y axis of the coordinate for the control point.
+x | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The x axis of the coordinate for the end point.
+y | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The y axis of the coordinate for the end point.
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### rect(x, y, width, height)
 
@@ -312,15 +317,15 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Creates a path for a rectangle with the top-left corner at *(x, y)*
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-x | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The x axis of the rectangle's upper-left corner.
-y | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The y axis of the rectangle's upper-left corner.
-width | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The rectangle's width.
-height | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The rectangles height.
+Parameter|Type|Description
+-|-|-
+x | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The x axis of the rectangle's upper-left corner.
+y | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The y axis of the rectangle's upper-left corner.
+width | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The rectangle's width.
+height | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The rectangles height.
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### restore()
 
@@ -328,7 +333,7 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 
 Restores the most recently saved canvas state by popping the top entry in the drawing state stack.
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### rotate(angle)
 
@@ -337,12 +342,12 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Adds a rotation to the transformation matrix.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-angle | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No |  The angle to rotate clockwise in radians.
+Parameter|Type|Description
+-|-|-
+angle | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> |  The angle to rotate clockwise in radians.
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### save()
 
@@ -350,7 +355,7 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 
 Saves the entire state of the canvas by pushing the current state onto a stack.
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### scale(x, y)
 
@@ -359,13 +364,13 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Adds a scaling transformation to the canvas units by x horizontally and by y vertically.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-x | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Scaling factor in the horizontal direction.
-y | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Scaling factor in the vertical direction.
+Parameter|Type|Description
+-|-|-
+x | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Scaling factor in the horizontal direction.
+y | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Scaling factor in the vertical direction.
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### setTransform(a, b, c, d, e, f)
 
@@ -377,17 +382,17 @@ resets (overrides) the current transformation to the identity matrix and then in
  [0, 0, 1]]
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-a | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Horizontal scaling.
-b | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Horizontal skewing.
-c | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Vertical skewing.
-d | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Vertical scaling.
-e | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Horizontal moving.
-f | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Vertical moving.
+Parameter|Type|Description
+-|-|-
+a | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Horizontal scaling.
+b | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Horizontal skewing.
+c | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Vertical skewing.
+d | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Vertical scaling.
+e | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Horizontal moving.
+f | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Vertical moving.
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### stroke()
 
@@ -395,7 +400,7 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 
 Strokes the current path with the current stroke style.
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### strokeRect(x, y, width, height)
 
@@ -404,15 +409,15 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 draws the outline of a rectangle at *(x, y)* position whose size is determined by *width* and *height* using the current stroke style.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-x | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The x axis of the rectangle's upper-left corner.
-y | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The y axis of the rectangle's upper-left corner.
-width | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The rectangle's width.
-height | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The rectangles height.
+Parameter|Type|Description
+-|-|-
+x | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The x axis of the rectangle's upper-left corner.
+y | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The y axis of the rectangle's upper-left corner.
+width | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The rectangle's width.
+height | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The rectangles height.
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### strokeText(text, x, y)
 
@@ -421,14 +426,14 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Strokes a given text at the given *(x, y)* position using the current *textAlign* and *textBaseline* values.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-text | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The text to render.
-x | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The x axis of the coordinate for the text starting point.
-y | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The y axis of the coordinate for the text starting point.
+Parameter|Type|Description
+-|-|-
+text | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The text to render.
+x | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The x axis of the coordinate for the text starting point.
+y | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The y axis of the coordinate for the text starting point.
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### transform(a, b, c, d, e, f)
 
@@ -440,17 +445,17 @@ Multiplies the current transformation with the matrix described by the arguments
  [0, 0, 1]]
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-a | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Horizontal scaling.
-b | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Horizontal skewing.
-c | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Vertical skewing.
-d | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Vertical scaling.
-e | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Horizontal moving.
-f | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | Vertical moving.
+Parameter|Type|Description
+-|-|-
+a | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Horizontal scaling.
+b | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Horizontal skewing.
+c | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Vertical skewing.
+d | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Vertical scaling.
+e | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Horizontal moving.
+f | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Vertical moving.
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### translate(x, y)
 
@@ -459,13 +464,13 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Adds a translation transformation by moving the canvas and its origin *x* horizontally and *y* vertically on the grid.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-x | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The distance to move in the horizontal direction.
-y | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The distance to move in the vertical direction.
+Parameter|Type|Description
+-|-|-
+x | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The distance to move in the horizontal direction.
+y | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The distance to move in the vertical direction.
 
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 
 ## Properties
@@ -475,10 +480,8 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 
 Specifies the color to use inside shapes.
 
-Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
-
+Type: |<code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code>
+Settable: | Yes
 
 
 
@@ -487,10 +490,8 @@ Change events | *Yes*
 
 Specifies the current text style being used when drawing text.
 
-Type | <span style="white-space:nowrap;">[`FontValue`](../types.md#fontvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
-
+Type: |<code style="white-space: nowrap"><a href="../types.html#fontvalue" title="FontValue Type Reference">FontValue</a></code>
+Settable: | Yes
 
 
 
@@ -499,10 +500,8 @@ Change events | *Yes*
 
 Determines how the end points of every line are drawn.
 
-Type | `'butt'` \| `'round'` \| `'square'`
-Settable | *Yes*
-Change events | *Yes*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'butt'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'round'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'square'</a></code>
+Settable: | Yes
 
 
 
@@ -511,10 +510,8 @@ Change events | *Yes*
 
 Determines how two connecting segments in a shape are joined together.
 
-Type | `'bevel'` \| `'round'` \| `'miter'`
-Settable | *Yes*
-Change events | *Yes*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'bevel'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'round'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'miter'</a></code>
+Settable: | Yes
 
 
 
@@ -523,10 +520,8 @@ Change events | *Yes*
 
 The thickness of lines in space units.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Settable | *Yes*
-Change events | *Yes*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Settable: | Yes
 
 
 
@@ -535,10 +530,8 @@ Change events | *Yes*
 
 Specifies the color to use for the lines around shapes.
 
-Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
-
+Type: |<code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code>
+Settable: | Yes
 
 
 
@@ -547,10 +540,8 @@ Change events | *Yes*
 
 Specifies the current text alignment being used when drawing text.
 
-Type | `'left'` \| `'right'` \| `'center'` \| `'start'` \| `'end'`
-Settable | *Yes*
-Change events | *Yes*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'left'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'right'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'center'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'start'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'end'</a></code>
+Settable: | Yes
 
 
 
@@ -559,77 +550,8 @@ Change events | *Yes*
 
 Specifies the current text baseline being used when drawing text.
 
-Type | `'top'` \| `'hanging'` \| `'middle'` \| `'alphabetic'` \| `'ideographic'` \| `'bottom'`
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'top'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'hanging'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'middle'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'alphabetic'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'ideographic'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'bottom'</a></code>
+Settable: | Yes
 
 
-
-
-
-## Change Events
-
-### lineWidthChanged
-
-Fired when the [*lineWidth*](#linewidth) property has changed.
-
-Parameter|Type|Description
--|-|-
-value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*lineWidth*](#linewidth).
-
-### lineCapChanged
-
-Fired when the [*lineCap*](#linecap) property has changed.
-
-Parameter|Type|Description
--|-|-
-value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*lineCap*](#linecap).
-
-### lineJoinChanged
-
-Fired when the [*lineJoin*](#linejoin) property has changed.
-
-Parameter|Type|Description
--|-|-
-value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*lineJoin*](#linejoin).
-
-### fillStyleChanged
-
-Fired when the [*fillStyle*](#fillstyle) property has changed.
-
-Parameter|Type|Description
--|-|-
-value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*fillStyle*](#fillstyle).
-
-### fontChanged
-
-Fired when the [*font*](#font) property has changed.
-
-Parameter|Type|Description
--|-|-
-value | <span style="white-space:nowrap;">[`FontValue`](../types.md#fontvalue)</span> | The new value of [*font*](#font).
-
-### strokeStyleChanged
-
-Fired when the [*strokeStyle*](#strokestyle) property has changed.
-
-Parameter|Type|Description
--|-|-
-value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*strokeStyle*](#strokestyle).
-
-### textAlignChanged
-
-Fired when the [*textAlign*](#textalign) property has changed.
-
-Parameter|Type|Description
--|-|-
-value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*textAlign*](#textalign).
-
-### textBaselineChanged
-
-Fired when the [*textBaseline*](#textbaseline) property has changed.
-
-Parameter|Type|Description
--|-|-
-value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*textBaseline*](#textbaseline).
 

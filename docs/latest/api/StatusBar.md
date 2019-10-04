@@ -2,21 +2,25 @@
 ---
 # Object "statusBar"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`StatusBar`](StatusBar.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a> > <a href="#" >StatusBar</a>
 
 The status bar is the area where notifications, status icons and device time are displayed. The singleton instance can be accessed via `statusBar`.
 
 
 <div class="tabris-image"><figure><div><img srcset="img/android/StatusBar.png 2x" src="img/android/StatusBar.png" alt="StatusBar on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/StatusBar.png 2x" src="img/ios/StatusBar.png" alt="StatusBar on iOS"/></div><figcaption>iOS</figcaption></figure></div>
 
-Constructor | *private*
-Singleton | `statusBar`
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | *No*
+Type: | <code style="white-space: nowrap">StatusBar extends <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a></code>
+Constructor: | private
+Singleton: | `statusBar`
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | No
 
 
-## Example
+## Examples
+### JavaScript
+
+
 ```js
 import {statusBar} from 'tabris';
 
@@ -24,9 +28,10 @@ statusBar.background = 'red';
 statusBar.displayMode = 'float';
 ```
 
+
 See also:
   
-[<span class='language js'>JS</span> Demonstrating various `StatusBar` properties](https://playground.tabris.com/?gitref=v3.1.0&snippet=statusbar.js)
+[<span class='language js'>JS</span> Demonstrating various `StatusBar` properties](https://playground.tabris.com/?gitref=vundefined&snippet=statusbar.js)
 
 ## Properties
 
@@ -35,9 +40,9 @@ See also:
 
 Background color of the status bar. Should be used in conjunction with the `theme` property to keep the status bar icons legible.
 
-Type | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span>
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`backgroundChanged`](#backgroundchanged)
 
 
 
@@ -47,10 +52,10 @@ Change events | *Yes*
 
 Controls how the status bar is positioned relative to the `contentView`. The value `default` places the content below the status bar. The `hide` option lets the status bar disappear, making more room for the content. The `float` option lets the content flow underneath the status bar.
 
-Type | `'default'` \| `'hide'` \| `'float'`
-Default | `'default'`
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'default'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'hide'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'float'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'default'</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`displayModeChanged`](#displaymodechanged)
 
 
 
@@ -60,9 +65,9 @@ Change events | *Yes*
 
 The height of the status bar in device independent pixel. Can be used in conjunction with the `displayMode` `'float'` to offset the content as to not have it covered by the status bar.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Settable | *No*
-Change events | *No*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
+Change Event: | Not supported
 
 
 
@@ -76,10 +81,10 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 Defines the shade used on the status bar. A `dark` theme sets the foreground icons to be of a light color, whereas `light` sets the icons to a dark color. The theme should be set in conjunction with the `background` property for contrast. The value `default` selects the default theme that depends on the device and on the app. Available on iOS and Android 6+.
 
-Type | `'default'` \| `'light'` \| `'dark'`
-Default | `'default'`
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'default'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'light'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'dark'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'default'</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`themeChanged`](#themechanged)
 
 
 
@@ -91,33 +96,41 @@ Change events | *Yes*
 
 <p class="platforms"><span class='ios-tag' title='supported on iOS'>iOS</span></p>Fired when status bar is tapped.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap">StatusBarTapEvent&lt;<a href="#" >StatusBar</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-touches | <span style="white-space:nowrap;">`{x: number, y: number}[]`</span> | Touch coordinates relative to the origin coordinates of the widget.
+touches | <code style="white-space: nowrap">{x: number, y: number}[]</code> | Touch coordinates relative to the origin coordinates of the widget.
 
 ## Change Events
 
 ### themeChanged
 
-Fired when the [*theme*](#theme) property has changed.
+Fired when the [theme](#theme) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >StatusBar</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*theme*](#theme).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The new value of [theme](#theme).
 
 ### displayModeChanged
 
-Fired when the [*displayMode*](#displaymode) property has changed.
+Fired when the [displayMode](#displaymode) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >StatusBar</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*displayMode*](#displaymode).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The new value of [displayMode](#displaymode).
 
 ### backgroundChanged
 
-Fired when the [*background*](#background) property has changed.
+Fired when the [background](#background) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >StatusBar</a>, <a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`ColorValue`](../types.md#colorvalue)</span> | The new value of [*background*](#background).
+value | <code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code> | The new value of [background](#background).
 

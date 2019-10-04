@@ -92,9 +92,10 @@ This property can only be set via constructor or JSX. Once set, it cannot change
 ### height
 
 
-The height of the `Popover` when shown in windowed mode on large screen devices
+The height of the `Popover` when shown in windowed mode on large screen devices. Will be a platform specific default if set to null.
 
 Type: |<code style="white-space: nowrap"><a href="../types.html#dimension" title="Dimension Type Reference">Dimension</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">null</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`heightChanged`](#heightchanged)
 
@@ -104,9 +105,10 @@ Change Event: | [`heightChanged`](#heightchanged)
 ### width
 
 
-The width of the `Popover` when shown in windowed mode on large screen devices.
+The width of the `Popover` when shown in windowed mode on large screen devices. Will be a platform specific default if set to null.
 
 Type: |<code style="white-space: nowrap"><a href="../types.html#dimension" title="Dimension Type Reference">Dimension</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">null</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`widthChanged`](#widthchanged)
 

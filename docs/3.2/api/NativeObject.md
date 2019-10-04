@@ -11,7 +11,7 @@ Type: | <code style="white-space: nowrap">NativeObject extends <a href="https://
 Constructor: | protected
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
-Direct subclasses: | <code style="white-space: nowrap"><a href="app.html" title="App Object Reference">App</a></code>, <code style="white-space: nowrap"><a href="device.html" title="Device Object Reference">Device</a></code>, <code style="white-space: nowrap"><a href="fs.html" title="FileSystem Object Reference">FileSystem</a></code>, <code style="white-space: nowrap"><a href="InactivityTimer.html" title="InactivityTimer Class Reference">InactivityTimer</a></code>, <code style="white-space: nowrap"><a href="NavigationBar.html" title="NavigationBar Object Reference">NavigationBar</a></code>, <code style="white-space: nowrap"><a href="permission.html" title="Permission Object Reference">Permission</a></code>, <code style="white-space: nowrap"><a href="Popup.html" title="Popup Class Reference">Popup</a></code>, <code style="white-space: nowrap"><a href="printer.html" title="Printer Object Reference">Printer</a></code>, <code style="white-space: nowrap"><a href="StatusBar.html" title="StatusBar Object Reference">StatusBar</a></code>, <code style="white-space: nowrap"><a href="Tabris.html" title="Tabris Object Reference">Tabris</a></code>, <code style="white-space: nowrap"><a href="Widget.html" title="Widget Class Reference">Widget</a></code>
+Direct subclasses: | <code style="white-space: nowrap"><a href="app.html" title="App Object Reference">App</a></code>, <code style="white-space: nowrap"><a href="Camera.html" title="Camera Class Reference">Camera</a></code>, <code style="white-space: nowrap"><a href="device.html" title="Device Object Reference">Device</a></code>, <code style="white-space: nowrap"><a href="fs.html" title="FileSystem Object Reference">FileSystem</a></code>, <code style="white-space: nowrap"><a href="InactivityTimer.html" title="InactivityTimer Class Reference">InactivityTimer</a></code>, <code style="white-space: nowrap"><a href="NavigationBar.html" title="NavigationBar Object Reference">NavigationBar</a></code>, <code style="white-space: nowrap"><a href="permission.html" title="Permission Object Reference">Permission</a></code>, <code style="white-space: nowrap"><a href="Popup.html" title="Popup Class Reference">Popup</a></code>, <code style="white-space: nowrap"><a href="printer.html" title="Printer Object Reference">Printer</a></code>, <code style="white-space: nowrap"><a href="StatusBar.html" title="StatusBar Object Reference">StatusBar</a></code>, <code style="white-space: nowrap"><a href="Tabris.html" title="Tabris Object Reference">Tabris</a></code>, <code style="white-space: nowrap"><a href="Widget.html" title="Widget Class Reference">Widget</a></code>
 JSX Support: | No
 
 
@@ -184,6 +184,54 @@ eventObject | <code style="white-space: nowrap"><a href="EventObject.html" title
 
 
 Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
+
+### triggerAsync(type)
+
+
+
+Like `trigger`, but returns a promise. The promise will resolve when all asynchronous listeners (if any) have resolved. If none of the listeners are asynchronous (return a promise) this method works just like `trigger()`. Useful for unit testing.
+
+
+Parameter|Type|Description
+-|-|-
+type | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The type of event to trigger
+
+
+Returns: <code style="white-space: nowrap">Promise<this></code>
+
+### triggerAsync(type, object)
+
+
+
+Notifies all registered listeners for the given *type* with the given data. Unlike `trigger` each asynchronous listener will be awaited, meaning that if a listener returns a promise that will pause event processing until it resolves. Returns a promise that resolves once all listeners have been notified. If any listener returns a rejecting promise the even processing is aborted and the returned promise rejects with the error value. If none of the listeners return a promise this method works just like `trigger()`. 
+
+In TypeScript you should use `widget.myEvent.triggerAsync();` instead
+
+
+Parameter|Type|Description
+-|-|-
+type | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The type of event to trigger
+object | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a></code> | The data to pass to listener functions.
+
+
+Returns: <code style="white-space: nowrap">Promise<this></code>
+
+### triggerAsync(type, eventObject)
+
+
+
+Notifies all registered listeners for the given *type* with the given `EventObject`. Unlike `trigger` each asynchronous listener will be awaited, meaning that if a listener returns a promise that will pause event processing until it resolves. Returns a promise that resolves once all listeners have been notified. If any listener returns a rejecting promise the even processing is aborted and the returned promise rejects with the error value. If none of the listeners return a promise this method works just like `trigger()`. 
+
+In TypeScript you should use `widget.myEvent.triggerAsync();` instead
+
+
+Parameter|Type|Description
+-|-|-
+type | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The type of event to trigger
+eventObject | <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a></code> | An instance of `EventObject` (or a subclass) to pass to listener functions.
+
+
+Returns: <code style="white-space: nowrap">Promise<this></code>
 
 ## Protected Methods
 

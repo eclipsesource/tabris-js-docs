@@ -2,28 +2,29 @@
 ---
 # Class "File"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`Blob`](Blob.md)</span> > <span style="white-space:nowrap;">[`File`](File.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="Blob.html" title="Blob Class Reference">Blob</a> > <a href="#" >File</a>
 
 Represents raw data of a given type and name.
 
 
-Constructor | *public*
-Singleton | *No*
-Namespace |`global`
-Direct subclasses | *None*
-JSX support | *No*
+Type: | <code style="white-space: nowrap">File extends <a href="Blob.html" title="Blob Class Reference">Blob</a></code>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >global</a>
+Direct subclasses: | None
+JSX Support: | No
 
 
 ## Constructor
 
 ### new File(blobParts, name, options?)
 
-Parameter|Type|Optional|Description
--|-|-|-
-blobParts | <span style="white-space:nowrap;">`any[]`</span> | No | Array of ArrayBuffer, Blob, string, or any typed array. Any other type will be stringified. Strings are encoded as UTF-8.
-name | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The name or path of the file
-options | <span style="white-space:nowrap;">`{type?: string, lastModified?: number}`</span> | Yes | `type` represents the MIME type of the blob content. Defaults to empty string.
-`lastModified` is a unix timestamp of the last known modification of the file. Defaults to the current time.
+Parameter|Type|Description
+-|-|-
+blobParts | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a>[]</code> | Array of ArrayBuffer, Blob, string, or any typed array. Any other type will be stringified. Strings are encoded as UTF-8.
+name | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The name or path of the file
+options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;type: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, // optional<br/>&nbsp;&nbsp;lastModified: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a> // optional<br/>}</code> | `type` represents the MIME type of the blob content. Defaults to empty string.
+`lastModified` is a unix timestamp of the last known modification of the file. Defaults to the current time. *Optional.*
 
 ## Properties
 
@@ -32,10 +33,8 @@ options | <span style="white-space:nowrap;">`{type?: string, lastModified?: numb
 
 Unix timestamp of the last known modification of the file
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Settable: | No
 
 
 
@@ -48,10 +47,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 The name or path of the file
 
-Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Settable: | No
 
 
 

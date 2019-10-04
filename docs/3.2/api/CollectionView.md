@@ -146,7 +146,7 @@ count | <code style="white-space: nowrap"><a href="https://developer.mozilla.org
 
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
-### reveal(index)
+### reveal(index, options?)
 
 
 
@@ -156,6 +156,7 @@ Scrolls the item with the given index into view.
 Parameter|Type|Description
 -|-|-
 index | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The index of the item to reveal. If this is negative, it is interpreted as relative to the end
+options | <code style="white-space: nowrap">{animate?: boolean}</code> | An additional object to control the animation. Set to `{animate: false}` to scroll without an animation. The `animate` property defaults to `true` when no options object is given. *Optional.*
 
 
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>

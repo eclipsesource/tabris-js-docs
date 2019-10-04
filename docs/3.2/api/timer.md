@@ -13,7 +13,7 @@ setTimeout(() => console.log('Timer finished after 2 seconds'), 2000);
 
 See also:
   
-[<span class='language tsx'>TSX</span> timer.tsx](https://playground.tabris.com/?gitref=vundefined&snippet=timer.tsx)
+[<span class='language jsx'>JSX</span> timer.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=timer.jsx)
 
 ## Methods
 

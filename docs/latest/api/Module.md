@@ -2,16 +2,17 @@
 ---
 # Class "Module"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`Module`](Module.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="#" >Module</a>
 
 Represents a JavaScript module as outlined in the commonJS standard.
 
 
-Constructor | *public*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | *No*
+Type: | <code style="white-space: nowrap">Module extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a></code>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | No
 
 
 See also:
@@ -22,11 +23,11 @@ See also:
 
 ### new Module(id, parent, content)
 
-Parameter|Type|Optional|Description
--|-|-|-
-id | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
-parent | <span style="white-space:nowrap;">[`Module`](Module.md) \| [`null`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type)</span> | No | 
-content | <span style="white-space:nowrap;">`ModuleLoader` \| [`object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> | No | 
+Parameter|Type|Description
+-|-|-
+id | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+parent | <code style="white-space: nowrap"><a href="#" >Module</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a></code> | 
+content | <code style="white-space: nowrap">ModuleLoader &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a></code> | 
 
 ## Methods
 
@@ -37,12 +38,12 @@ content | <span style="white-space:nowrap;">`ModuleLoader` \| [`object`](https:/
 Finds a module relative to the id of this module and returns the exports object of that module. Throws if no matching module can be found.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-request | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+request | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a></code>
 
 ## Static Methods
 
@@ -53,12 +54,12 @@ Returns <span style="white-space:nowrap;">[`object`](https://developer.mozilla.o
 Loads the given JavaScript file from the given (local or http) url and wraps it as a module loader function.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-url | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">`ModuleLoader`</span>
+Returns: <code style="white-space: nowrap">ModuleLoader</code>
 
 ### execute(code, url)
 
@@ -67,13 +68,13 @@ Returns <span style="white-space:nowrap;">`ModuleLoader`</span>
 Evaluates the given JavaScript code and returns the result of the last expression. The url is used to identify the source in stack traces.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-code | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
-url | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+code | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">`unknown`</span>
+Returns: <code style="white-space: nowrap">unknown</code>
 
 ### getSourceMap(url)
 
@@ -82,12 +83,12 @@ Returns <span style="white-space:nowrap;">`unknown`</span>
 Returns the source map object (decoded from base64 and parsed from JSON) for the JavaScript file of the given url. Returns `null` if no source map can be found. This method only works with code side-loaded via the tabris CLI `serve` command.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-url | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">`unknown`</span>
+Returns: <code style="white-space: nowrap">unknown</code>
 
 ### load(url)
 
@@ -96,12 +97,12 @@ Returns <span style="white-space:nowrap;">`unknown`</span>
 Loads a text from the given (local or http) url and returns its content. File is expected to be utf-8 encoded. This is a blocking operation, in almost all cases it is preferable to use `fetch()` or the file system API to read a text file.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-url | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 
 ### readJSON(url)
 
@@ -110,12 +111,12 @@ Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.o
 Loads the JSON file from the given (local or http) url, parses it and returns the result. This is a blocking operation, in almost all cases it is preferable to use `fetch()` or the file system API to obtain and parse a JSON file.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-url | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | 
+Parameter|Type|Description
+-|-|-
+url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns <span style="white-space:nowrap;">`unknown`</span>
+Returns: <code style="white-space: nowrap">unknown</code>
 
 
 ## Properties
@@ -124,10 +125,8 @@ Returns <span style="white-space:nowrap;">`unknown`</span>
 
 
 
-Type | <span style="white-space:nowrap;">[`object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a></code>
+Settable: | No
 
 
 
@@ -140,10 +139,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 Full id (path) of the module
 
-Type | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Settable: | No
 
 
 
@@ -156,10 +153,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 The module that first required this module
 
-Type | <span style="white-space:nowrap;">[`Module`](Module.md)</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="#" >Module</a></code>
+Settable: | No
 
 
 

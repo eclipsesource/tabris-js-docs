@@ -47,7 +47,7 @@ properties | <code style="white-space: nowrap"><a href="../types.html#properties
 ### maximum
 
 
-The value that represents a progress of 100%.
+The value that represents a progress of 100%. May be negative.
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
 Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">100</a></code>
@@ -60,7 +60,7 @@ Change Event: | [`maximumChanged`](#maximumchanged)
 ### minimum
 
 
-The value that represents a progress of 0%.
+The value that represents a progress of 0%. May be negative.
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
 Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">0</a></code>

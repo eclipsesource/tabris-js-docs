@@ -2,16 +2,17 @@
 ---
 # Class "ImageBitmap"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`ImageBitmap`](ImageBitmap.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="#" >ImageBitmap</a>
 
 Represents an in-memory Image. Unlike ImageData it is immutable, but can be created from a number of sources via [createImageBitmap](#createimagebitmapimage).
 
 
-Constructor | *private*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | *No*
+Type: | <code style="white-space: nowrap">ImageBitmap extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a></code>
+Constructor: | private
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | No
 
 
 ## Methods
@@ -22,7 +23,7 @@ JSX support | *No*
 
 Disposes the resources associated with this ImageBitmap. Should be called once the image is no longer needed to free up memory.
 
-Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.org/docs/handbook/basic-types.html#void)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ## Static Methods
 
@@ -33,12 +34,12 @@ Returns <span style="white-space:nowrap;">[`void`](https://www.typescriptlang.or
 Creates a promise that resolves to a new instance of ImageBitmap. Also available in global scope.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-image | <span style="white-space:nowrap;">[`Blob`](Blob.md) \| [`ImageData`](../types.md#imagedata) \| [`ImageBitmap`](ImageBitmap.md)</span> | No | The data source to create an ImageBitmap instance from.
+Parameter|Type|Description
+-|-|-
+image | <code style="white-space: nowrap"><a href="Blob.html" title="Blob Class Reference">Blob</a><br/> &#124; <a href="../types.html#imagedata" title="ImageData Type Reference">ImageData</a><br/> &#124; <a href="#" >ImageBitmap</a></code> | The data source to create an ImageBitmap instance from.
 
 
-Returns <span style="white-space:nowrap;">`Promise<ImageBitmap>`</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="View &quot;Promise&quot; on MDN">Promise</a>&lt;<a href="#" >ImageBitmap</a>&gt;</code>
 
 
 ## Properties
@@ -48,10 +49,8 @@ Returns <span style="white-space:nowrap;">`Promise<ImageBitmap>`</span>
 
 Native image height in pixel
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Settable: | No
 
 
 
@@ -64,10 +63,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 Native image width in pixel
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Settable: | No
 
 
 

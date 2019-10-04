@@ -148,7 +148,18 @@ Change Event: | [`speedChanged`](#speedchanged)
 ### state
 
 
-The current state of the widget.
+The current video playback state of the widget.
+
+![Video widget states](./img/Video-state.png)
+
+- `'empty'` -  No `url` has been set.
+- `'open'` - The `url` has been set to a valid value but the widget is not yet ready to play.
+- `'ready'` - The widget has loaded enough content to be ready to play, but is not yet playing.
+- `'play'` - A video is currently playing.
+- `'stale'` - The video is paused because it is buffering more content and will resume playback once it has enough content.
+- `'pause'` - Playback is paused because of user input or `pause()` has been called.
+- `'finish'` - Playback stopped at the end of the video.
+- `'fail'` - An error occurred preventing video playback.
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'empty'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'open'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'ready'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'play'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'stale'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'pause'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'finish'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'fail'</a></code>
 Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'empty'</a></code>

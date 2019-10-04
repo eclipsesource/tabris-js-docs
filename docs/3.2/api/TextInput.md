@@ -221,6 +221,25 @@ See also:
 [<span class='language ts'>TS</span> textinput-keyboard.ts](https://playground.tabris.com/?gitref=vundefined&snippet=textinput-keyboard.ts)
 
 
+### keyboardAppearanceMode
+<p class="platforms"><span class='android-tag' title='supported on Android'>Android</span></p>
+
+Allows to control when to show the virtual keyboard.
+
+- `'never'` - The keyboard is never shown when focus is gained.
+
+- `'ontouch'` - The keyboard is not shown when the `focused` property is set to `true` programmatically. Only the blinking cursor will be shown. Touching the `TextInput` will show the keyboard.
+
+- `'onfocus'` - The keyboard is always shown when the `TextInput` gains focus.
+
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'never'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'ontouch'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'onfocus'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'onfocus'</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`keyboardAppearanceModeChanged`](#keyboardappearancemodechanged)
+
+
+
+
 ### maxChars
 
 
@@ -242,6 +261,18 @@ A hint text that is displayed when the input field is empty. Does not apply on i
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`messageChanged`](#messagechanged)
+
+
+
+
+### messageColor
+
+
+Color of the `message` text.
+
+Type: |<code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`messageColorChanged`](#messagecolorchanged)
 
 
 
@@ -430,6 +461,16 @@ Property|Type|Description
 -|-|-
 value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The new value of [message](#message).
 
+### messageColorChanged
+
+Fired when the [messageColor](#messagecolor) property has changed.
+
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >TextInput</a>, <a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a>&gt;</code>
+
+Property|Type|Description
+-|-|-
+value | <code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code> | The new value of [messageColor](#messagecolor).
+
 ### editableChanged
 
 Fired when the [editable](#editable) property has changed.
@@ -579,4 +620,14 @@ EventObject Type: <code style="white-space: nowrap"><a href="../types.html#prope
 Property|Type|Description
 -|-|-
 value | <code style="white-space: nowrap"><a href="../types.html#fontvalue" title="FontValue Type Reference">FontValue</a></code> | The new value of [font](#font).
+
+### keyboardAppearanceModeChanged
+
+Fired when the [keyboardAppearanceMode](#keyboardappearancemode) property has changed.
+
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >TextInput</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'never'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'ontouch'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'onfocus'</a>&gt;</code>
+
+Property|Type|Description
+-|-|-
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'never'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'ontouch'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'onfocus'</a></code> | The new value of [keyboardAppearanceMode](#keyboardappearancemode).
 

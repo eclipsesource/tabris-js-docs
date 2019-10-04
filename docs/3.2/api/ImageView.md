@@ -36,7 +36,9 @@ See also:
 [<span class='language jsx'>JSX</span> Creating an `ImageView` with a tint color applied](https://playground.tabris.com/?gitref=vundefined&snippet=imageview-tintcolor.jsx)  
 [<span class='language jsx'>JSX</span> Creating an `ImageView` with a load event callback](https://playground.tabris.com/?gitref=vundefined&snippet=imageview-load.jsx)  
 [<span class='language jsx'>JSX</span> Using an `ImageView` to show a Base64 encoded image](https://playground.tabris.com/?gitref=vundefined&snippet=imageview-base64.jsx)  
+[<span class='language jsx'>JSX</span> imageview-blob.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=imageview-blob.jsx)  
 [<span class='language tsx'>TSX</span> imageview-gallery.tsx](https://playground.tabris.com/?gitref=vundefined&snippet=imageview-gallery.tsx)  
+[<span class='language jsx'>JSX</span> imageview-imagebitmap.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=imageview-imagebitmap.jsx)  
 [<span class='language jsx'>JSX</span> imageview-scalemode-auto.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=imageview-scalemode-auto.jsx)  
 [<span class='language jsx'>JSX</span> imageview.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=imageview.jsx)
 

@@ -2,42 +2,47 @@
 ---
 # Class "ScrollView"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> > <span style="white-space:nowrap;">[`Composite`](Composite.md)</span> > <span style="white-space:nowrap;">[`ScrollView`](ScrollView.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a> > <a href="Widget.html" title="Widget Class Reference">Widget</a> > <a href="Composite.html" title="Composite Class Reference">Composite</a> > <a href="#" >ScrollView</a>
 
 A composite that allows its content to overflow either vertically (default) or horizontally. Since the ScrollView does not compute its own size, the width and height must be defined by the respective layout properties (e.g. either `width` or `left` and `right` must be specified).
 
 
 <div class="tabris-image"><figure><div><img srcset="img/android/ScrollView.png 2x" src="img/android/ScrollView.png" alt="ScrollView on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/ScrollView.png 2x" src="img/ios/ScrollView.png" alt="ScrollView on iOS"/></div><figcaption>iOS</figcaption></figure></div>
 
-Constructor | *public*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | Element: `<ScrollView/>`<br/>Parent element: [`<Composite/>`](Composite.md) *and any widget extending* <span style="white-space:nowrap;">[`Composite`](Composite.md)</span><br/>Child elements: *Widgets*<br/>Text content: *Not supported*<br/>
+Type: | <code style="white-space: nowrap">ScrollView extends <a href="Composite.html" title="Composite Class Reference">Composite</a></code>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | Element: <code style="white-space: nowrap"><a href="ScrollView.html" title="ScrollView Class Reference">&lt;ScrollView/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="Canvas.html" title="Canvas Class Reference">&lt;Canvas/&gt;</a></code>, <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">&lt;Composite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Page.html" title="Page Class Reference">&lt;Page/&gt;</a></code>, <code style="white-space: nowrap"><a href="RefreshComposite.html" title="RefreshComposite Class Reference">&lt;RefreshComposite/&gt;</a></code>, <code style="white-space: nowrap"><a href="ScrollView.html" title="ScrollView Class Reference">&lt;ScrollView/&gt;</a></code>, <code style="white-space: nowrap"><a href="Stack.html" title="Stack Class Reference">&lt;Stack/&gt;</a></code>, <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Child Elements: *Any standalone widget element*<br/>Text Content: *Not supported*
 
-## Example
+## Examples
+### JavaScript
+
+
 ```js
 import {ScrollView, TextView, contentView} from 'tabris';
 
 const scrollView = new ScrollView({layoutData: 'stretch'})
   .appendTo(contentView);
 
-new Textview({text: 'Scrollable content'}
-  .appendTo(scrollView));
+new TextView({text: 'Scrollable content'})
+  .appendTo(scrollView);
 ```
+
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `ScrollView`](https://playground.tabris.com/?gitref=v3.1.0&snippet=scrollview.jsx)  
-[<span class='language jsx'>JSX</span> How to implement parallax scrolling with a `ScrollView`](https://playground.tabris.com/?gitref=v3.1.0&snippet=scrollview-parallax.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `ScrollView`](https://playground.tabris.com/?gitref=vundefined&snippet=scrollview.jsx)  
+[<span class='language jsx'>JSX</span> How to implement parallax scrolling with a `ScrollView`](https://playground.tabris.com/?gitref=vundefined&snippet=scrollview-parallax.jsx)
 
 ## Constructor
 
 ### new ScrollView(properties?)
 
-Parameter|Type|Optional|Description
--|-|-|-
-properties | <span style="white-space:nowrap;">`Properties<ScrollView>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
+Parameter|Type|Description
+-|-|-
+properties | <code style="white-space: nowrap"><a href="../types.html#propertieswidget" title="Properties&lt;Widget&gt;">Properties</a>&lt;<a href="#" >ScrollView</a>&gt;</code> | Sets all key-value pairs in the properties object as widget properties. *Optional.*
 
 ## Methods
 
@@ -48,13 +53,13 @@ properties | <span style="white-space:nowrap;">`Properties<ScrollView>`</span> |
 Scrolls to the given horizontal offset. Give `{animate: false}` as the second parameter to suppress the animation.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-offset | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The offset to scroll to in dip.
-options | <span style="white-space:nowrap;">`{animate?: boolean}`</span> | Yes | An additional object to control the animation. Set to `{animate: false}` to scroll without an animation.
+Parameter|Type|Description
+-|-|-
+offset | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The offset to scroll to in dip.
+options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;animate: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a> // defaults to true<br/>}</code> | An additional parameter object to control the animation. *Optional.*
 
 
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
 ### scrollToY(offset, options?)
 
@@ -63,13 +68,13 @@ Returns <span style="white-space:nowrap;">[`this`](#)</span>
 Scrolls to the given vertical offset. Give `{animate: false}` as the second parameter to suppress the animation.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-offset | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | The offset to scroll to in dip.
-options | <span style="white-space:nowrap;">`{animate?: boolean}`</span> | Yes | An additional object to control the animation. Set to `{animate: false}` to scroll without an animation.
+Parameter|Type|Description
+-|-|-
+offset | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The offset to scroll to in dip.
+options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;animate: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a> // defaults to true<br/>}</code> | An parameter object to control the animation. *Optional.*
 
 
-Returns <span style="white-space:nowrap;">[`this`](#)</span>
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
 
 ## Properties
@@ -79,10 +84,10 @@ Returns <span style="white-space:nowrap;">[`this`](#)</span>
 
 Specifies the scrolling direction of the scroll composite.
 
-Type | `'vertical'` \| `'horizontal'`
-Default | `'vertical'`
-Settable | *On creation*
-Change events | *No*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'vertical'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'horizontal'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'vertical'</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >By Constructor or JSX</a>
+Change Event: | Not supported
 
 
 
@@ -96,9 +101,9 @@ This property can only be set via constructor or JSX. Once set, it cannot change
 
 The horizontal scrolling position in dip.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Settable | *No*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
+Change Event: | [`offsetXChanged`](#offsetxchanged)
 
 
 
@@ -108,9 +113,9 @@ Change events | *Yes*
 
 The vertical scrolling position in dip.
 
-Type | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span>
-Settable | *No*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
+Change Event: | [`offsetYChanged`](#offsetychanged)
 
 
 
@@ -124,10 +129,10 @@ The scroll state of the `ScrollView` in horizontal direction. The following stat
 * `drag` the user moves the `ScrollView` content with his finger
 * `scroll` the user has flinged the content with his finger or the `ScrollView` is scrolling programmatically
 
-Type | `'rest'` \| `'drag'` \| `'scroll'`
-Default | `'rest'`
-Settable | *No*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'rest'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'drag'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'scroll'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'rest'</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
+Change Event: | [`scrollXStateChanged`](#scrollxstatechanged)
 
 
 
@@ -141,10 +146,10 @@ The scroll state of the `ScrollView` in vertical direction. The following states
 * `drag` the user moves the `ScrollView` content with his finger
 * `scroll` the user has flinged the `ScrollView` content with his finger or the `ScrollView` is scrolling programmatically
 
-Type | `'rest'` \| `'drag'` \| `'scroll'`
-Default | `'rest'`
-Settable | *No*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'rest'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'drag'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'scroll'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'rest'</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
+Change Event: | [`scrollYStateChanged`](#scrollystatechanged)
 
 
 
@@ -154,10 +159,10 @@ Change events | *Yes*
 
 Allows to show or hide scroll bar for current direction.
 
-Type | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span>
-Default | `true`
-Settable | *Yes*
-Change events | *Yes*
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">true</a></code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`scrollbarVisibleChanged`](#scrollbarvisiblechanged)
 
 
 
@@ -169,57 +174,71 @@ Change events | *Yes*
 
 Fired while scrolling horizontally.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap">ScrollViewScrollEvent&lt;<a href="#" >ScrollView</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-offset | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | Indicates the current horizontal scrolling position.
+offset | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Indicates the current horizontal scrolling position.
 
 ### scrollY
 
 Fired while scrolling vertically.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap">ScrollViewScrollEvent&lt;<a href="#" >ScrollView</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-offset | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | Indicates the current vertical scrolling position.
+offset | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Indicates the current vertical scrolling position.
 
 ## Change Events
 
 ### offsetXChanged
 
-Fired when the [*offsetX*](#offsetx) property has changed.
+Fired when the [offsetX](#offsetx) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >ScrollView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*offsetX*](#offsetx).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The new value of [offsetX](#offsetx).
 
 ### offsetYChanged
 
-Fired when the [*offsetY*](#offsety) property has changed.
+Fired when the [offsetY](#offsety) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >ScrollView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | The new value of [*offsetY*](#offsety).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The new value of [offsetY](#offsety).
 
 ### scrollbarVisibleChanged
 
-Fired when the [*scrollbarVisible*](#scrollbarvisible) property has changed.
+Fired when the [scrollbarVisible](#scrollbarvisible) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >ScrollView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`boolean`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type)</span> | The new value of [*scrollbarVisible*](#scrollbarvisible).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The new value of [scrollbarVisible](#scrollbarvisible).
 
 ### scrollXStateChanged
 
-Fired when the [*scrollXState*](#scrollxstate) property has changed.
+Fired when the [scrollXState](#scrollxstate) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >ScrollView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*scrollXState*](#scrollxstate).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The new value of [scrollXState](#scrollxstate).
 
 ### scrollYStateChanged
 
-Fired when the [*scrollYState*](#scrollystate) property has changed.
+Fired when the [scrollYState](#scrollystate) property has changed.
 
-Parameter|Type|Description
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >ScrollView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
+
+Property|Type|Description
 -|-|-
-value | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | The new value of [*scrollYState*](#scrollystate).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The new value of [scrollYState](#scrollystate).
 

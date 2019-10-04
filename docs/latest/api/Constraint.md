@@ -2,26 +2,27 @@
 ---
 # Class "Constraint"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`Constraint`](Constraint.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="#" >Constraint</a>
 
 Represents a constraint on the layout of a widget that the parent uses to determine the position of one of its edges. See also [ConstraintValue](../types.md#constraintvalue)
 
 
-Constructor | *public*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | *No*
+Type: | <code style="white-space: nowrap">Constraint extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a></code>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | No
 
 
 ## Constructor
 
 ### new Constraint(reference, offset)
 
-Parameter|Type|Optional|Description
--|-|-|-
-reference | <span style="white-space:nowrap;">[`Percent`](Percent.md) \| [`SiblingReference`](../types.md#siblingreference)</span> | No | Sets the `reference` property.
-offset | <span style="white-space:nowrap;">[`Offset`](../types.md#offset)</span> | No | Sets the `offset` property.
+Parameter|Type|Description
+-|-|-
+reference | <code style="white-space: nowrap"><a href="Percent.html" title="Percent Class Reference">Percent</a> &#124; <a href="../types.html#siblingreference" title="SiblingReference Type Reference">SiblingReference</a></code> | Sets the `reference` property.
+offset | <code style="white-space: nowrap"><a href="../types.html#offset" title="Offset Type Reference">Offset</a></code> | Sets the `offset` property.
 
 ## Methods
 
@@ -31,7 +32,7 @@ offset | <span style="white-space:nowrap;">[`Offset`](../types.md#offset)</span>
 
 A tuple consisting of the values of the `reference` and `offset` properties, i.e. `[reference, offset]`.
 
-Returns <span style="white-space:nowrap;">`ConstraintArray`</span>
+Returns: <code style="white-space: nowrap">ConstraintArray</code>
 
 ### toString()
 
@@ -39,7 +40,7 @@ Returns <span style="white-space:nowrap;">`ConstraintArray`</span>
 
 A string representation of the constraint as a space separated string in the pattern of `'reference offset'`.
 
-Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 
 ## Static Methods
 
@@ -50,12 +51,12 @@ Returns <span style="white-space:nowrap;">[`string`](https://developer.mozilla.o
 Creates a new instance of Constraint using [any valid constraint expression](../types.md#constraintvalue). For any other value, including `null` and `'auto'`, the method throws.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-constraintValue | <span style="white-space:nowrap;">[`ConstraintValue`](../types.md#constraintvalue)</span> | No | The value to create an Constraint instance from.
+Parameter|Type|Description
+-|-|-
+constraintValue | <code style="white-space: nowrap"><a href="../types.html#constraintvalue" title="ConstraintValue Type Reference">ConstraintValue</a></code> | The value to create an Constraint instance from.
 
 
-Returns <span style="white-space:nowrap;">[`Constraint`](Constraint.md)</span>
+Returns: <code style="white-space: nowrap"><a href="#" >Constraint</a></code>
 
 
 ## Properties
@@ -65,10 +66,8 @@ Returns <span style="white-space:nowrap;">[`Constraint`](Constraint.md)</span>
 
 An additional distance between the reference point and the edge of the widget itself.
 
-Type | <span style="white-space:nowrap;">[`Offset`](../types.md#offset)</span>
-Settable | *On creation*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="../types.html#offset" title="Offset Type Reference">Offset</a></code>
+Settable: | Yes
 
 
 
@@ -83,10 +82,8 @@ A reference point from which the offset is added. Either a [SiblingReference](..
 
 If the sibling reference is a string it will be a valid selector string and not contain any pseudo selectors   (`'next()'`/`'prev()'`).
 
-Type | <span style="white-space:nowrap;">[`Percent`](Percent.md) \| [`SiblingReference`](../types.md#siblingreference)</span>
-Settable | *On creation*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap"><a href="Percent.html" title="Percent Class Reference">Percent</a> &#124; <a href="../types.html#siblingreference" title="SiblingReference Type Reference">SiblingReference</a></code>
+Settable: | Yes
 
 
 
@@ -101,10 +98,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 A [SiblingReference](../types.md#siblingreference) indicating the next widget in the list of children attached to the same parent. Used by the [`reference`](#reference) property. Also available as `LayoutData.next`.
 
-Type | <span style="white-space:nowrap;">`unique symbol`</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap">unique symbol</code>
+Settable: | No
 
 
 
@@ -113,10 +108,8 @@ Change events | *No*
 
 A [SiblingReference](../types.md#siblingreference) indicating the previous widget in the list of children attached to the same parent. Used by the [`reference`](#reference) property. Also available as `LayoutData.prev`.
 
-Type | <span style="white-space:nowrap;">`unique symbol`</span>
-Settable | *No*
-Change events | *No*
-
+Type: |<code style="white-space: nowrap">unique symbol</code>
+Settable: | No
 
 
 

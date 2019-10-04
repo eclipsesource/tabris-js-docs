@@ -2,47 +2,52 @@
 ---
 # Class "Canvas"
 
-<span style="white-space:nowrap;">[`Object`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)</span> > <span style="white-space:nowrap;">[`NativeObject`](NativeObject.md)</span> > <span style="white-space:nowrap;">[`Widget`](Widget.md)</span> > <span style="white-space:nowrap;">[`Composite`](Composite.md)</span> > <span style="white-space:nowrap;">[`Canvas`](Canvas.md)</span>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a> > <a href="Widget.html" title="Widget Class Reference">Widget</a> > <a href="Composite.html" title="Composite Class Reference">Composite</a> > <a href="#" >Canvas</a>
 
 Canvas is a widget that can be used to draw graphics using a [canvas context](./CanvasContext.md).
 
 
 <div class="tabris-image"><figure><div><img srcset="img/android/Canvas.png 2x" src="img/android/Canvas.png" alt="Canvas on Android"/></div><figcaption>Android</figcaption></figure><figure><div><img srcset="img/ios/Canvas.png 2x" src="img/ios/Canvas.png" alt="Canvas on iOS"/></div><figcaption>iOS</figcaption></figure></div>
 
-Constructor | *public*
-Singleton | *No*
-Namespace |`tabris`
-Direct subclasses | *None*
-JSX support | Element: `<Canvas/>`<br/>Parent element: [`<Composite/>`](Composite.md) *and any widget extending* <span style="white-space:nowrap;">[`Composite`](Composite.md)</span><br/>Child elements: *Widgets*<br/>Text content: *Not supported*<br/>
+Type: | <code style="white-space: nowrap">Canvas extends <a href="Composite.html" title="Composite Class Reference">Composite</a></code>
+Constructor: | public
+Singleton: | No
+Namespace: |<a href="../modules.html#startup" >tabris</a>
+Direct subclasses: | None
+JSX Support: | Element: <code style="white-space: nowrap"><a href="Canvas.html" title="Canvas Class Reference">&lt;Canvas/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="Canvas.html" title="Canvas Class Reference">&lt;Canvas/&gt;</a></code>, <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">&lt;Composite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Page.html" title="Page Class Reference">&lt;Page/&gt;</a></code>, <code style="white-space: nowrap"><a href="RefreshComposite.html" title="RefreshComposite Class Reference">&lt;RefreshComposite/&gt;</a></code>, <code style="white-space: nowrap"><a href="ScrollView.html" title="ScrollView Class Reference">&lt;ScrollView/&gt;</a></code>, <code style="white-space: nowrap"><a href="Stack.html" title="Stack Class Reference">&lt;Stack/&gt;</a></code>, <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Child Elements: *Any standalone widget element*<br/>Text Content: *Not supported*
 
-## Example
+## Examples
+### JavaScript
+
+
 ```js
 import {Canvas, contentView} from 'tabris';
 
 new Canvas({layoutData: 'stretch'})
   .onResize(({target: canvas, width, height}) => {
-    let context = canvas.getContext("2d", width, height);
+    const context = canvas.getContext('2d', width, height);
     context.moveTo(0, 0);
     // ...
   }).appendTo(contentView);
 ```
 
+
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a `Canvas` with simple shapes](https://playground.tabris.com/?gitref=v3.1.0&snippet=canvas-shapes.jsx)  
-[<span class='language jsx'>JSX</span> Creating a `Canvas` and working with `ImageData`](https://playground.tabris.com/?gitref=v3.1.0&snippet=canvas-imagedata.jsx)  
-[<span class='language jsx'>JSX</span> How to show text on a `Canvas`](https://playground.tabris.com/?gitref=v3.1.0&snippet=canvas-text.jsx)  
-[<span class='language jsx'>JSX</span> How to use animations on a `Canvas`](https://playground.tabris.com/?gitref=v3.1.0&snippet=canvas-animation.jsx)  
-[<span class='language jsx'>JSX</span> canvas-arc.jsx](https://playground.tabris.com/?gitref=v3.1.0&snippet=canvas-arc.jsx)  
-[<span class='language jsx'>JSX</span> canvas-imagebitmap.jsx](https://playground.tabris.com/?gitref=v3.1.0&snippet=canvas-imagebitmap.jsx)
+[<span class='language jsx'>JSX</span> Creating a `Canvas` with simple shapes](https://playground.tabris.com/?gitref=vundefined&snippet=canvas-shapes.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `Canvas` and working with `ImageData`](https://playground.tabris.com/?gitref=vundefined&snippet=canvas-imagedata.jsx)  
+[<span class='language jsx'>JSX</span> How to show text on a `Canvas`](https://playground.tabris.com/?gitref=vundefined&snippet=canvas-text.jsx)  
+[<span class='language jsx'>JSX</span> How to use animations on a `Canvas`](https://playground.tabris.com/?gitref=vundefined&snippet=canvas-animation.jsx)  
+[<span class='language jsx'>JSX</span> canvas-arc.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=canvas-arc.jsx)  
+[<span class='language jsx'>JSX</span> canvas-imagebitmap.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=canvas-imagebitmap.jsx)
 
 ## Constructor
 
 ### new Canvas(properties?)
 
-Parameter|Type|Optional|Description
--|-|-|-
-properties | <span style="white-space:nowrap;">`Properties<Canvas>`</span> | Yes | Sets all key-value pairs in the properties object as widget properties.
+Parameter|Type|Description
+-|-|-
+properties | <code style="white-space: nowrap"><a href="../types.html#propertieswidget" title="Properties&lt;Widget&gt;">Properties</a>&lt;<a href="#" >Canvas</a>&gt;</code> | Sets all key-value pairs in the properties object as widget properties. *Optional.*
 
 ## Methods
 
@@ -53,12 +58,12 @@ properties | <span style="white-space:nowrap;">`Properties<Canvas>`</span> | Yes
 Returns the drawing context with the given size.
 
 
-Parameter|Type|Optional|Description
--|-|-|-
-contextType | <span style="white-space:nowrap;">[`string`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type)</span> | No | The context identifier. Only `"2d"` is supported.
-width | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | the width of the canvas context to create
-height | <span style="white-space:nowrap;">[`number`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type)</span> | No | the height of the canvas context to create
+Parameter|Type|Description
+-|-|-
+contextType | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The context identifier. Only `"2d"` is supported.
+width | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | the width of the canvas context to create
+height | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | the height of the canvas context to create
 
 
-Returns <span style="white-space:nowrap;">[`CanvasContext`](CanvasContext.md)</span>
+Returns: <code style="white-space: nowrap"><a href="CanvasContext.html" title="CanvasContext Class Reference">CanvasContext</a></code>
 
