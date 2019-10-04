@@ -34,7 +34,7 @@ const preRelease = process.argv[2] === 'pre-release';
   const targetDataBindingDir = path.join(targetDir, 'databinding');
   const targetDiDir = path.join(targetDir, 'di');
   const sourceYml = path.join(targetDir, 'toc.yml');
-  const examplesRepl = '](' + DECORATORS_GITHUB + 'tree/v' + version + '/examples/';
+  const examplesRepl = '](' + DECORATORS_GITHUB + 'tree/v' + version + '.0/examples/';
   console.log('Prepare...');
   if (release) {
     console.log('This is a release update');
