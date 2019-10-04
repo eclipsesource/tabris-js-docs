@@ -18,7 +18,8 @@ const whitelist = [
   /www\.linkedin\.com\/company\/eclipsesource/,
   /cordova\.apache\.org\/docs\/en\/6\.x\/reference\/cordova-cli\/index\.html/,
   /example\.com/, // used in example code
-  /marketplace\.visualstudio\.com/ // returns 404 in node only for some reason
+  /marketplace\.visualstudio\.com/, // returns 404 in node only for some reason,
+  /cordova\.io/ // certificate issues
 ];
 
 const preReleaseWhitelist = [
