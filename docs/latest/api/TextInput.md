@@ -33,16 +33,16 @@ new TextInput({
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `TextInput`](https://playground.tabris.com/?gitref=vundefined&snippet=textinput.jsx)  
-[<span class='language js'>JS</span> Handling selection on a `TextInput`](https://playground.tabris.com/?gitref=vundefined&snippet=textinput-selection.js)  
-[<span class='language jsx'>JSX</span> Handling focus changes on a `TextInput`](https://playground.tabris.com/?gitref=vundefined&snippet=textinput.jsx)  
-[<span class='language js'>JS</span> Creating `TextInputs` with various enter key types](https://playground.tabris.com/?gitref=vundefined&snippet=textinput-enterkeytype.js)  
-[<span class='language js'>JS</span> Creating `TextInputs` with various keyboards](https://playground.tabris.com/?gitref=vundefined&snippet=textinput-keyboard.js)  
-[<span class='language js'>JS</span> Showing password in clear text on a `TextInput`](https://playground.tabris.com/?gitref=vundefined&snippet=textinput-revealpassword.js)  
-[<span class='language jsx'>JSX</span> A form using `TextInput` and other input controls](https://playground.tabris.com/?gitref=vundefined&snippet=input.jsx)  
-[<span class='language tsx'>TSX</span> textinput-focus.tsx](https://playground.tabris.com/?gitref=vundefined&snippet=textinput-focus.tsx)  
-[<span class='language ts'>TS</span> textinput-keyboard.ts](https://playground.tabris.com/?gitref=vundefined&snippet=textinput-keyboard.ts)  
-[<span class='language tsx'>TSX</span> textinput-style.tsx](https://playground.tabris.com/?gitref=vundefined&snippet=textinput-style.tsx)
+[<span class='language jsx'>JSX</span> Creating a simple `TextInput`](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput.jsx)  
+[<span class='language js'>JS</span> Handling selection on a `TextInput`](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-selection.js)  
+[<span class='language jsx'>JSX</span> Handling focus changes on a `TextInput`](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput.jsx)  
+[<span class='language js'>JS</span> Creating `TextInputs` with various enter key types](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-enterkeytype.js)  
+[<span class='language js'>JS</span> Creating `TextInputs` with various keyboards](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-keyboard.js)  
+[<span class='language js'>JS</span> Showing password in clear text on a `TextInput`](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-revealpassword.js)  
+[<span class='language jsx'>JSX</span> A form using `TextInput` and other input controls](https://playground.tabris.com/?gitref=v3.2.0&snippet=input.jsx)  
+[<span class='language tsx'>TSX</span> textinput-focus.tsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-focus.tsx)  
+[<span class='language ts'>TS</span> textinput-keyboard.ts](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-keyboard.ts)  
+[<span class='language tsx'>TSX</span> textinput-style.tsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-style.tsx)
 
 ## Constructor
 
@@ -150,7 +150,7 @@ Change Event: | [`enterKeyTypeChanged`](#enterkeytypechanged)
 
 See also:
   
-[<span class='language js'>JS</span> textinput-enterkeytype.js](https://playground.tabris.com/?gitref=vundefined&snippet=textinput-enterkeytype.js)
+[<span class='language js'>JS</span> textinput-enterkeytype.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-enterkeytype.js)
 
 
 ### floatMessage
@@ -217,8 +217,8 @@ Change Event: | [`keyboardChanged`](#keyboardchanged)
 
 See also:
   
-[<span class='language js'>JS</span> textinput-keyboard.js](https://playground.tabris.com/?gitref=vundefined&snippet=textinput-keyboard.js)  
-[<span class='language ts'>TS</span> textinput-keyboard.ts](https://playground.tabris.com/?gitref=vundefined&snippet=textinput-keyboard.ts)
+[<span class='language js'>JS</span> textinput-keyboard.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-keyboard.js)  
+[<span class='language ts'>TS</span> textinput-keyboard.ts](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-keyboard.ts)
 
 
 ### keyboardAppearanceMode
@@ -289,7 +289,7 @@ Change Event: | [`revealPasswordChanged`](#revealpasswordchanged)
 
 See also:
   
-[<span class='language js'>JS</span> textinput-revealpassword.js](https://playground.tabris.com/?gitref=vundefined&snippet=textinput-revealpassword.js)
+[<span class='language js'>JS</span> textinput-revealpassword.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-revealpassword.js)
 
 
 ### selection
@@ -308,7 +308,7 @@ Change Event: | [`selectionChanged`](#selectionchanged)
 
 See also:
   
-[<span class='language js'>JS</span> textinput-selection.js](https://playground.tabris.com/?gitref=vundefined&snippet=textinput-selection.js)
+[<span class='language js'>JS</span> textinput-selection.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-selection.js)
 
 
 ### style
@@ -330,7 +330,7 @@ This property can only be set via constructor or JSX. Once set, it cannot change
 
 See also:
   
-[<span class='language tsx'>TSX</span> textinput-style.tsx](https://playground.tabris.com/?gitref=vundefined&snippet=textinput-style.tsx)
+[<span class='language tsx'>TSX</span> textinput-style.tsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-style.tsx)
 
 
 ### text
@@ -418,7 +418,7 @@ EventObject Type: <code style="white-space: nowrap"><a href="EventObject.html" t
 This event has no additional parameter.
 See also:
   
-[<span class='language tsx'>TSX</span> textinput-focus.tsx](https://playground.tabris.com/?gitref=vundefined&snippet=textinput-focus.tsx)
+[<span class='language tsx'>TSX</span> textinput-focus.tsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-focus.tsx)
 ### input
 
 Fired when the text was changed by the user.

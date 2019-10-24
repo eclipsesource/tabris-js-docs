@@ -32,8 +32,8 @@ drawer
 
 See also:
   
-[<span class='language jsx'>JSX</span> Simple example of using a `Drawer`](https://playground.tabris.com/?gitref=vundefined&snippet=drawer.jsx)  
-[<span class='language tsx'>TSX</span> Using a `Drawer` for app navigation](https://playground.tabris.com/?gitref=vundefined&snippet=drawer-pages.tsx)
+[<span class='language jsx'>JSX</span> Simple example of using a `Drawer`](https://playground.tabris.com/?gitref=v3.2.0&snippet=drawer.jsx)  
+[<span class='language tsx'>TSX</span> Using a `Drawer` for app navigation](https://playground.tabris.com/?gitref=v3.2.0&snippet=drawer-pages.tsx)
 
 ## Methods
 

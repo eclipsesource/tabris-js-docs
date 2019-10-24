@@ -32,7 +32,7 @@ new AlertDialog({
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating various types of alert dialogs](https://playground.tabris.com/?gitref=vundefined&snippet=alertdialog.jsx)
+[<span class='language jsx'>JSX</span> Creating various types of alert dialogs](https://playground.tabris.com/?gitref=v3.2.0&snippet=alertdialog.jsx)
 
 ## Constructor
 

@@ -39,8 +39,8 @@ if (permission.isAuthorized('camera')) {
 
 See also:
   
-[<span class='language jsx'>JSX</span> Simple approach to check and request permissions](https://playground.tabris.com/?gitref=vundefined&snippet=permission.jsx)  
-[<span class='language tsx'>TSX</span> Full featured example with multiple permissions and states](https://playground.tabris.com/?gitref=vundefined&snippet=permission-advanced.tsx)
+[<span class='language jsx'>JSX</span> Simple approach to check and request permissions](https://playground.tabris.com/?gitref=v3.2.0&snippet=permission.jsx)  
+[<span class='language tsx'>TSX</span> Full featured example with multiple permissions and states](https://playground.tabris.com/?gitref=v3.2.0&snippet=permission-advanced.tsx)
 
 ## Methods
 

@@ -33,7 +33,7 @@ printer.print(imageData, {jobName: 'Image', contentType: 'image/jpg'})
 
 See also:
   
-[<span class='language js'>JS</span> How to print a PDF document bundled with an app](https://playground.tabris.com/?gitref=vundefined&snippet=printer.js)
+[<span class='language js'>JS</span> How to print a PDF document bundled with an app](https://playground.tabris.com/?gitref=v3.2.0&snippet=printer.js)
 
 ## Methods
 

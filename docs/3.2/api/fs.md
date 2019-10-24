@@ -30,7 +30,7 @@ fs.writeFile(fs.cacheDir + '/file.txt', 'Hello World!')
 
 See also:
   
-[<span class='language jsx'>JSX</span> Using the file system to read and write files](https://playground.tabris.com/?gitref=vundefined&snippet=fs.jsx)
+[<span class='language jsx'>JSX</span> Using the file system to read and write files](https://playground.tabris.com/?gitref=v3.2.0&snippet=fs.jsx)
 
 ## Methods
 

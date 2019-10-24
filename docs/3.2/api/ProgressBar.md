@@ -32,7 +32,7 @@ new ProgressBar({
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `ProgressBar`](https://playground.tabris.com/?gitref=vundefined&snippet=progressbar.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `ProgressBar`](https://playground.tabris.com/?gitref=v3.2.0&snippet=progressbar.jsx)
 
 ## Constructor
 

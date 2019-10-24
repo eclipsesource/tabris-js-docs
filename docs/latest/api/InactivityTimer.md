@@ -29,7 +29,7 @@ new InactivityTimer({delay: 2000})
 
 See also:
   
-[<span class='language js'>JS</span> inactivitytimer.js](https://playground.tabris.com/?gitref=vundefined&snippet=inactivitytimer.js)
+[<span class='language js'>JS</span> inactivitytimer.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=inactivitytimer.js)
 
 ## Constructor
 

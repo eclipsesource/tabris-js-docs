@@ -30,7 +30,7 @@ contentView.append(
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `Stack` with an included `StackLayout`](https://playground.tabris.com/?gitref=vundefined&snippet=stack.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `Stack` with an included `StackLayout`](https://playground.tabris.com/?gitref=v3.2.0&snippet=stack.jsx)
 
 ## Constructor
 

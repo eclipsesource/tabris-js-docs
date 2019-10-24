@@ -39,16 +39,16 @@ new CollectionView({
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple CollectionView](https://playground.tabris.com/?gitref=vundefined&snippet=collectionview.jsx)  
-[<span class='language jsx'>JSX</span> Creating a CollectionView with multiple cell types](https://playground.tabris.com/?gitref=vundefined&snippet=collectionview-celltype.jsx)  
-[<span class='language jsx'>JSX</span> Creating a CollectionView with pull-to-refresh support](https://playground.tabris.com/?gitref=vundefined&snippet=collectionview-refreshenabled.jsx)  
-[<span class='language jsx'>JSX</span> Creating a CollectionView with sticky headers](https://playground.tabris.com/?gitref=vundefined&snippet=collectionview-scroll.jsx)  
-[<span class='language jsx'>JSX</span> Creating a CollectionView with dynamic column count](https://playground.tabris.com/?gitref=vundefined&snippet=collectionview-columncount.jsx)  
-[<span class='language jsx'>JSX</span> collectionview-cellheightauto.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=collectionview-cellheightauto.jsx)  
-[<span class='language tsx'>TSX</span> collectionview-celltype-ts.tsx](https://playground.tabris.com/?gitref=vundefined&snippet=collectionview-celltype-ts.tsx)  
-[<span class='language tsx'>TSX</span> collectionview-scroll-ts.tsx](https://playground.tabris.com/?gitref=vundefined&snippet=collectionview-scroll-ts.tsx)  
-[<span class='language jsx'>JSX</span> collectionview-swipe-to-dismiss.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=collectionview-swipe-to-dismiss.jsx)  
-[<span class='language tsx'>TSX</span> collectionview-ts.tsx](https://playground.tabris.com/?gitref=vundefined&snippet=collectionview-ts.tsx)
+[<span class='language jsx'>JSX</span> Creating a simple CollectionView](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview.jsx)  
+[<span class='language jsx'>JSX</span> Creating a CollectionView with multiple cell types](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-celltype.jsx)  
+[<span class='language jsx'>JSX</span> Creating a CollectionView with pull-to-refresh support](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-refreshenabled.jsx)  
+[<span class='language jsx'>JSX</span> Creating a CollectionView with sticky headers](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-scroll.jsx)  
+[<span class='language jsx'>JSX</span> Creating a CollectionView with dynamic column count](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-columncount.jsx)  
+[<span class='language jsx'>JSX</span> collectionview-cellheightauto.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-cellheightauto.jsx)  
+[<span class='language tsx'>TSX</span> collectionview-celltype-ts.tsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-celltype-ts.tsx)  
+[<span class='language tsx'>TSX</span> collectionview-scroll-ts.tsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-scroll-ts.tsx)  
+[<span class='language jsx'>JSX</span> collectionview-swipe-to-dismiss.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-swipe-to-dismiss.jsx)  
+[<span class='language tsx'>TSX</span> collectionview-ts.tsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-ts.tsx)
 
 ## Constructor
 
@@ -74,7 +74,7 @@ itemIndex | <code style="white-space: nowrap"><a href="https://developer.mozilla
 
 Returns: <code style="white-space: nowrap"><a href="#generics" title="Generic Parameter&quot;CellWidgetType&quot;">CellWidgetType</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a></code>
 
-### insert(itemIndex, count?)
+### insert(index, count?)
 
 
 
@@ -83,7 +83,7 @@ Inserts one or more items at the given index. When no *count* is specified, a si
 
 Parameter|Type|Description
 -|-|-
-itemIndex | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | 
+index | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | 
 count | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The position to insert the items at. A negative index is interpreted as relative to the end. If the given index is greater than the item count, new items will be appended at the end. *Optional.*
 
 
@@ -117,7 +117,7 @@ itemCount | <code style="white-space: nowrap"><a href="https://developer.mozilla
 
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
-### refresh(itemIndex?)
+### refresh(index?)
 
 
 
@@ -126,12 +126,12 @@ Triggers an update of the item at the given *index* by calling the `updateCell` 
 
 Parameter|Type|Description
 -|-|-
-itemIndex | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The index of the item that was changed. *Optional.*
+index | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The index of the item that was changed. *Optional.*
 
 
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
-### remove(itemIndex, count?)
+### remove(index, count?)
 
 
 
@@ -140,13 +140,13 @@ Removes one or more items beginning with the given index. When no *count* is giv
 
 Parameter|Type|Description
 -|-|-
-itemIndex | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The index of the first item to remove. A negative value is interpreted as relative to the end.
+index | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The index of the first item to remove. A negative value is interpreted as relative to the end.
 count | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The number of items to remove. *Optional.*
 
 
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
-### reveal(itemIndex, options?)
+### reveal(index, options?)
 
 
 
@@ -155,7 +155,7 @@ Scrolls the item with the given index into view.
 
 Parameter|Type|Description
 -|-|-
-itemIndex | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The index of the item to reveal. If this is negative, it is interpreted as relative to the end
+index | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The index of the item to reveal. If this is negative, it is interpreted as relative to the end
 options | <code style="white-space: nowrap">{animate?: boolean}</code> | An additional object to control the animation. Set to `{animate: false}` to scroll without an animation. The `animate` property defaults to `true` when no options object is given. *Optional.*
 
 
@@ -170,7 +170,7 @@ Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.or
 The height of a collection cell. If set to `'auto'`, the cell height will be calculated individually for each cell. If set to a function, this function will be called for every item, providing the item index and the cell type as parameters, and must return the cell height for the given item.
 Note: On iOS `"auto"` may cause significant performance downgrade as it requires additional layouting passes to calculate cell height internally. If possible please use a combination of fixed `itemHeight` and `cellType` properties to specify different height for different cells.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a><br/> &#124; (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">itemIndex</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">cellType</a>) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a><br/> &#124; (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">index</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">cellType</a>) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`cellHeightChanged`](#cellheightchanged)
@@ -183,15 +183,15 @@ Change Event: | [`cellHeightChanged`](#cellheightchanged)
 
 The name of the cell type to use for the item at the given index. This name will be passed to the `createCell` and `cellHeight` callbacks. Cells will be reused only for those items that map to the same cell type. If set to a function, this function will be called for every item, providing the item index as a parameter, and must return a unique name for the cell type to use for the given item.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a><br/> &#124; (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">itemIndex</a>) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">cellType</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a><br/> &#124; (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">index</a>) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">cellType</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`cellTypeChanged`](#celltypechanged)
 
 
 See also:
   
-[<span class='language tsx'>TSX</span> collectionview-celltype-ts.tsx](https://playground.tabris.com/?gitref=vundefined&snippet=collectionview-celltype-ts.tsx)  
-[<span class='language jsx'>JSX</span> collectionview-celltype.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=collectionview-celltype.jsx)
+[<span class='language tsx'>TSX</span> collectionview-celltype-ts.tsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-celltype-ts.tsx)  
+[<span class='language jsx'>JSX</span> collectionview-celltype.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-celltype.jsx)
 
 
 ### columnCount
@@ -207,7 +207,7 @@ Change Event: | [`columnCountChanged`](#columncountchanged)
 
 See also:
   
-[<span class='language jsx'>JSX</span> collectionview-columncount.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=collectionview-columncount.jsx)
+[<span class='language jsx'>JSX</span> collectionview-columncount.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-columncount.jsx)
 
 
 ### createCell
@@ -271,7 +271,7 @@ Change Event: | [`refreshEnabledChanged`](#refreshenabledchanged)
 
 See also:
   
-[<span class='language jsx'>JSX</span> collectionview-refreshenabled.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=collectionview-refreshenabled.jsx)
+[<span class='language jsx'>JSX</span> collectionview-refreshenabled.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-refreshenabled.jsx)
 
 
 ### refreshIndicator
@@ -316,15 +316,9 @@ Change Event: | [`scrollbarVisibleChanged`](#scrollbarvisiblechanged)
 ### updateCell
 
 
-This callback will be called by the framework to update a given cell widget (created by [`createCell`](#createcell)) to display the item at the given item index. The callback should modify the cell and its children to represent the item. For the best performance only properties should be modified, adding or removing children is not advisable. Different [cell types](#celltype) can be used to avoid this scenario.
+A callback used to update a given cell widget to display the item with the given index. This callback will be called by the framework.
 
- Note that the callback will be called with the same cell for different items, and the cell may therefore not be in its initial state. Consequently, a property set in a previous call must be set again in the next.
-
-Good: `cell.background = index % 2 === 0 ? 'blue' : 'initial';`
-
-Bad: `if (index % 2 === 0) { cell.background = 'blue'; }`
-
-Type: |<code style="white-space: nowrap">(<a href="#generics" title="Generic Parameter&quot;CellWidgetType&quot;">cell</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">itemIndex</a>) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">void</a></code>
+Type: |<code style="white-space: nowrap">(<a href="#generics" title="Generic Parameter&quot;CellWidgetType&quot;">cell</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">index</a>) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">void</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`updateCellChanged`](#updatecellchanged)
 
@@ -354,8 +348,8 @@ deltaY | <code style="white-space: nowrap"><a href="https://developer.mozilla.or
 
 See also:
   
-[<span class='language tsx'>TSX</span> collectionview-scroll-ts.tsx](https://playground.tabris.com/?gitref=vundefined&snippet=collectionview-scroll-ts.tsx)  
-[<span class='language jsx'>JSX</span> collectionview-scroll.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=collectionview-scroll.jsx)
+[<span class='language tsx'>TSX</span> collectionview-scroll-ts.tsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-scroll-ts.tsx)  
+[<span class='language jsx'>JSX</span> collectionview-scroll.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-scroll.jsx)
 ## Change Events
 
 ### scrollbarVisibleChanged
@@ -376,7 +370,7 @@ EventObject Type: <code style="white-space: nowrap"><a href="../types.html#prope
 
 Property|Type|Description
 -|-|-
-value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a><br/> &#124; (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">itemIndex</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">cellType</a>) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code> | The new value of [cellHeight](#cellheight).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a><br/> &#124; (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">index</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">cellType</a>) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code> | The new value of [cellHeight](#cellheight).
 
 ### itemCountChanged
 
@@ -406,7 +400,7 @@ EventObject Type: <code style="white-space: nowrap"><a href="../types.html#prope
 
 Property|Type|Description
 -|-|-
-value | <code style="white-space: nowrap">(<a href="#generics" title="Generic Parameter&quot;CellWidgetType&quot;">cell</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">itemIndex</a>) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">void</a></code> | The new value of [updateCell](#updatecell).
+value | <code style="white-space: nowrap">(<a href="#generics" title="Generic Parameter&quot;CellWidgetType&quot;">cell</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">index</a>) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">void</a></code> | The new value of [updateCell](#updatecell).
 
 ### cellTypeChanged
 
@@ -416,7 +410,7 @@ EventObject Type: <code style="white-space: nowrap"><a href="../types.html#prope
 
 Property|Type|Description
 -|-|-
-value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a><br/> &#124; (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">itemIndex</a>) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">cellType</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a></code> | The new value of [cellType](#celltype).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a><br/> &#124; (<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">index</a>) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">cellType</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a></code> | The new value of [cellType](#celltype).
 
 ### refreshEnabledChanged
 

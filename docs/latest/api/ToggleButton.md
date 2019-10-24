@@ -31,7 +31,7 @@ new ToggleButton({text: 'Toggle button'})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `ToggleButton`](https://playground.tabris.com/?gitref=vundefined&snippet=togglebutton.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `ToggleButton`](https://playground.tabris.com/?gitref=v3.2.0&snippet=togglebutton.jsx)
 
 ## Constructor
 

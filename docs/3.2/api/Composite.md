@@ -31,7 +31,7 @@ new Composite({left: 0, top: 0, width: 128, height: 256})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `Composite`](https://playground.tabris.com/?gitref=vundefined&snippet=composite.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `Composite`](https://playground.tabris.com/?gitref=v3.2.0&snippet=composite.jsx)
 
 ## Constructor
 

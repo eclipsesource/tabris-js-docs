@@ -33,7 +33,7 @@ new ActionSheet({
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `ActionSheet`](https://playground.tabris.com/?gitref=vundefined&snippet=actionsheet.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `ActionSheet`](https://playground.tabris.com/?gitref=v3.2.0&snippet=actionsheet.jsx)
 
 ## Constructor
 

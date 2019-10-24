@@ -34,9 +34,9 @@ camera.captureImage()
 
 See also:
   
-[<span class='language jsx'>JSX</span> Simple example to capture an image](https://playground.tabris.com/?gitref=vundefined&snippet=camera.jsx)  
-[<span class='language tsx'>TSX</span> Control `Camera` and `CameraView` to capture an image](https://playground.tabris.com/?gitref=vundefined&snippet=camera-advanced.tsx)  
-[<span class='language jsx'>JSX</span> Check and request camera permissions](https://playground.tabris.com/?gitref=vundefined&snippet=permission.jsx)
+[<span class='language tsx'>TSX</span> Simple example to capture an image](https://playground.tabris.com/?gitref=v3.2.0&snippet=camera.tsx)  
+[<span class='language tsx'>TSX</span> Control `Camera` and `CameraView` to capture an image](https://playground.tabris.com/?gitref=v3.2.0&snippet=camera-advanced.tsx)  
+[<span class='language jsx'>JSX</span> Check and request camera permissions](https://playground.tabris.com/?gitref=v3.2.0&snippet=permission.jsx)
 
 ## Methods
 

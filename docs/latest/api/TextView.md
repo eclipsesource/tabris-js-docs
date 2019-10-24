@@ -32,13 +32,13 @@ new TextView({
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `TextView`](https://playground.tabris.com/?gitref=vundefined&snippet=textview.jsx)  
-[<span class='language jsx'>JSX</span> Creating a `TextView` with support for markup](https://playground.tabris.com/?gitref=vundefined&snippet=textview-markupenabled.jsx)  
-[<span class='language jsx'>JSX</span> Creating a `TextView` with support for text links](https://playground.tabris.com/?gitref=vundefined&snippet=textview-link.jsx)  
-[<span class='language jsx'>JSX</span> Demonstrating various line spacing values on a `TextView`](https://playground.tabris.com/?gitref=vundefined&snippet=textview-link.jsx)  
-[<span class='language js'>JS</span> Creating a `TextView` with an external font](https://playground.tabris.com/?gitref=vundefined&snippet=textview-font-external.js)  
-[<span class='language js'>JS</span> textview-font-bundled.js](https://playground.tabris.com/?gitref=vundefined&snippet=textview-font-bundled.js)  
-[<span class='language js'>JS</span> textview-linespacing.js](https://playground.tabris.com/?gitref=vundefined&snippet=textview-linespacing.js)
+[<span class='language jsx'>JSX</span> Creating a simple `TextView`](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `TextView` with support for markup](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-markupenabled.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `TextView` with support for text links](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-link.jsx)  
+[<span class='language jsx'>JSX</span> Demonstrating various line spacing values on a `TextView`](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-link.jsx)  
+[<span class='language js'>JS</span> Creating a `TextView` with an external font](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-font-external.js)  
+[<span class='language js'>JS</span> textview-font-bundled.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-font-bundled.js)  
+[<span class='language js'>JS</span> textview-linespacing.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-linespacing.js)
 
 ## Constructor
 
@@ -75,8 +75,8 @@ Change Event: | [`fontChanged`](#fontchanged)
 
 See also:
   
-[<span class='language js'>JS</span> textview-font-bundled.js](https://playground.tabris.com/?gitref=vundefined&snippet=textview-font-bundled.js)  
-[<span class='language js'>JS</span> textview-font-external.js](https://playground.tabris.com/?gitref=vundefined&snippet=textview-font-external.js)
+[<span class='language js'>JS</span> textview-font-bundled.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-font-bundled.js)  
+[<span class='language js'>JS</span> textview-font-external.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-font-external.js)
 
 
 ### lineSpacing
@@ -92,7 +92,7 @@ Change Event: | [`lineSpacingChanged`](#linespacingchanged)
 
 See also:
   
-[<span class='language js'>JS</span> textview-linespacing.js](https://playground.tabris.com/?gitref=vundefined&snippet=textview-linespacing.js)
+[<span class='language js'>JS</span> textview-linespacing.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-linespacing.js)
 
 
 ### markupEnabled
@@ -107,7 +107,7 @@ Change Event: | [`markupEnabledChanged`](#markupenabledchanged)
 
 See also:
   
-[<span class='language jsx'>JSX</span> textview-markupenabled.jsx](https://playground.tabris.com/?gitref=vundefined&snippet=textview-markupenabled.jsx)
+[<span class='language jsx'>JSX</span> textview-markupenabled.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-markupenabled.jsx)
 
 
 ### maxLines
