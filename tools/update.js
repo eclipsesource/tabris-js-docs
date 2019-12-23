@@ -67,7 +67,7 @@ const preRelease = process.argv[2] === 'pre-release';
   copyDir(DECO_DI_DIR, targetDiDir);
   console.log('Fix tabris-decorators example links');
   replaceInAll(targetDataBindingDir, EXAMPLES_NEEDLE, examplesRepl);
-  replaceInAll(targetDiDir, EXAMPLES_NEEDLE, + examplesRepl);
+  replaceInAll(targetDiDir, EXAMPLES_NEEDLE, examplesRepl);
   console.log(`Update ${targetYml}`);
   updateTargetYml(targetYml, 'Data Binding', targetDataBindingDir);
   updateTargetYml(targetYml, 'Dependency Injection', targetDiDir);
