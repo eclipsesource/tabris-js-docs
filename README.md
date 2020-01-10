@@ -11,8 +11,13 @@ The content of this repository will be published on the [docs.tabris.com](https:
 - node.js
 - Grunt
 
-The documentation is created from a cloned Tabris git repository.
-This clone is expected to be available in `../tabris`.
+The documentation is created from various git repositories, that are expected to be available locally at following locations:
+
+|Repository|Location|
+|---|---|
+|https://github.com/eclipsesource/tabris-js|`../tabris-js`|
+|https://github.com/eclipsesource/tabris-decorators|`../tabris-decorators`|
+|https://github.com/eclipsesource/tabris-js-cli|`../tabris-js-cli`|
 
 ### Local setup
 

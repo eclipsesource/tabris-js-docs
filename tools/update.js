@@ -6,6 +6,7 @@ const fs = require('fs');
 
 const DECORATORS_GITHUB = 'https://github.com/eclipsesource/tabris-decorators/';
 const TABRIS_REPO_DIR = path.join(__dirname, '../../tabris-js');
+const TABRIS_CLI_README_MD = path.join(__dirname, '../../tabris-js-cli/README.md');
 const DECO_DOCS_DIR = path.join(__dirname, '../../tabris-decorators/doc');
 const DOC_OUT_DIR = path.join(TABRIS_REPO_DIR, 'build', 'doc');
 const DOCS_TARGET_DIR = path.join(__dirname, '..', 'docs');
@@ -30,10 +31,11 @@ const preRelease = process.argv[2] === 'pre-release';
   await preChecks();
   const version = getTargetVersion();
   const targetDir = path.join(DOCS_TARGET_DIR, version);
-  const targetYml = path.join(DATA_DIR, `toc-${version.replace(/\./g, '-')}.yml`);
+  const targetTocYml = path.join(DATA_DIR, `toc-${version.replace(/\./g, '-')}.yml`);
   const targetDataBindingDir = path.join(targetDir, 'databinding');
   const targetDiDir = path.join(targetDir, 'di');
-  const sourceYml = path.join(targetDir, 'toc.yml');
+  const targetTabrisCliArticle = path.join(targetDir, 'tabris-cli.md');
+  const sourceTocYml = path.join(targetDir, 'toc.yml');
   const examplesRepl = '](' + DECORATORS_GITHUB + 'tree/v' + version + '.0/examples/';
   console.log('Prepare...');
   if (release) {
@@ -53,24 +55,30 @@ const preRelease = process.argv[2] === 'pre-release';
     updated = true;
   }
   clean(targetDir);
-  clean(targetYml);
+  clean(targetTocYml);
   clean(LATEST_DIR);
   clean(SITE_DIR);
   await generateDocs();
   console.log(`Copy files from ${DOC_OUT_DIR} to ${targetDir}...`);
   copyDir(DOC_OUT_DIR, targetDir);
-  console.log(`Move ${sourceYml} to ${targetYml}`);
-  fs.renameSync(sourceYml, targetYml);
+  console.log(`Move ${sourceTocYml} to ${targetTocYml}`);
+  fs.renameSync(sourceTocYml, targetTocYml);
   console.log(`Copy files from ${DECO_DATABINDING_DIR} to ${targetDataBindingDir}...`);
   copyDir(DECO_DATABINDING_DIR, targetDataBindingDir);
   console.log(`Copy files from ${DECO_DI_DIR} to ${targetDiDir}...`);
   copyDir(DECO_DI_DIR, targetDiDir);
+  console.log(`Copy Tabris CLI README from ${TABRIS_CLI_README_MD} to ${targetTabrisCliArticle}`);
+  fs.copyFileSync(TABRIS_CLI_README_MD, targetTabrisCliArticle)
+  console.log(`Convert Tabris CLI README to a documentation article ...`);
+  convertTabrisCliReadmeToDocArticle(targetTabrisCliArticle);
   console.log('Fix tabris-decorators example links');
   replaceInAll(targetDataBindingDir, EXAMPLES_NEEDLE, examplesRepl);
   replaceInAll(targetDiDir, EXAMPLES_NEEDLE, examplesRepl);
-  console.log(`Update ${targetYml}`);
-  updateTargetYml(targetYml, 'Data Binding', targetDataBindingDir);
-  updateTargetYml(targetYml, 'Dependency Injection', targetDiDir);
+  console.log(`Update ${targetTocYml}`);
+  insertTocSection(targetTocYml, 'Data Binding', targetDataBindingDir);
+  insertTocSection(targetTocYml, 'Dependency Injection', targetDiDir);
+  console.log(`Add Tabris CLI README to TOC...`);
+  appendPageToTocSection(targetTocYml, 'Developer Guide', {title: 'Tabris CLI', url: 'tabris-cli.html'});
   console.log('Write main.yml');
   fs.writeFileSync(MAIN_YML, `latest: ${version}\n`)
   console.log(`Copy files from ${targetDir} to ${LATEST_DIR}...`);
@@ -161,16 +169,32 @@ async function generateDocs() {
   }
 }
 
-function updateTargetYml(yml, title, extensionDir) {
+function insertTocSection(yml, title, extensionDir) {
   const orgContent = fs.readFileSync(yml).toString();
   const sections = orgContent.split('\n\n');
-  const decoYml = generateYml(extensionDir, title);
+  const decoYml = generateTocSection(extensionDir, title);
   sections.splice(sections.length - 1, 0, decoYml);
   const newContent = sections.join('\n\n');
   fs.writeFileSync(yml, newContent);
 }
 
-function generateYml(dir, title) {
+function appendPageToTocSection(yml, sectionName, {title, url}) {
+  const orgContent = fs.readFileSync(yml).toString();
+  const sections = orgContent.split('\n\n');
+  const sectionIndex = sections.findIndex(section => section.match(`- title: ${sectionName}`))
+  let section = sections[sectionIndex];
+  if (!section) {
+    throw new Error(`Cannot find section ${sectionName} to insert page "${title}" in.`);
+  }
+  section += `
+    - title: "${title}"
+      url: ${url}`;
+  sections[sectionIndex] = section;
+  const newContent = sections.join('\n\n');
+  fs.writeFileSync(yml, newContent);
+}
+
+function generateTocSection(dir, title) {
   const subDir = path.basename(dir);
   const files = fs.readdirSync(dir).map(docPath => path.basename(docPath));
   const pages = ['index.md'].concat(files.filter(file => file !== 'index.md'));
@@ -196,6 +220,18 @@ function updateIndex() {
     .join('\n');
   fs.writeFileSync(INDEX_MD, INDEX_HEAD + toc);
 }
+
+function convertTabrisCliReadmeToDocArticle(yml) {
+  let content = fs.readFileSync(yml).toString();
+  content = '---\n---\n' + content;
+  content = content.replace(/^\[!\[Build Status\]\(https:.*/m, '');
+  const match = /#* License/.exec(content);
+  if (!match) {
+    throw new Error("Cannot strip License section from Tabris CLI README.");
+  }
+  content = content.slice(0, match.index);
+  fs.writeFileSync(yml, content);
+};
 
 async function startJekyll() {
   return new Promise((resolve, reject) => {
