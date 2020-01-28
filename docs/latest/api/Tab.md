@@ -14,7 +14,7 @@ Constructor: | public
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
 Direct subclasses: | None
-JSX Support: | Element: <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="TabFolder.html" title="TabFolder Class Reference">&lt;TabFolder/&gt;</a></code><br/>Child Elements: *Any standalone widget element*<br/>Text Content: *Not supported*
+JSX Support: | Element: <code style="white-space: nowrap"><a href="#" >&lt;Tab/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="TabFolder.html" title="TabFolder Class Reference">&lt;TabFolder/&gt;</a></code><br/>Child Elements: *Any standalone widget element*<br/>
 
 ## Examples
 ### JavaScript
@@ -33,7 +33,7 @@ new TabFolder({left: 0, top: 0, right: 0, bottom: 0})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a `Tab` inside a `TabFolder`](https://playground.tabris.com/?gitref=v3.2.0&snippet=tabfolder.jsx)
+[<span class='language jsx'>JSX</span> Creating a `Tab` inside a `TabFolder`](https://playground.tabris.com/?gitref=v3.3.0&snippet=tabfolder.jsx)
 
 ## Constructor
 

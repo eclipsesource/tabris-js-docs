@@ -14,7 +14,7 @@ Constructor: | public
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
 Direct subclasses: | None
-JSX Support: | Element: <code style="white-space: nowrap"><a href="#" >&lt;ActionSheet/&gt;</a></code><br/>Parent Elements: *Not supported*<br/>Child Elements: <code style="white-space: nowrap"><a href="ActionSheetItem.html" title="ActionSheetItem Class Reference">&lt;ActionSheetItem/&gt;</a></code><br/>Element Content Property: [<code style="white-space: nowrap">message</code>](#message), [<code style="white-space: nowrap">actions</code>](#actions)
+JSX Support: | Element: <code style="white-space: nowrap"><a href="#" >&lt;ActionSheet/&gt;</a></code><br/>Parent Elements: *Not supported*<br/>Child Elements: <code style="white-space: nowrap"><a href="ActionSheetItem.html" title="ActionSheetItem Class Reference">&lt;ActionSheetItem/&gt;</a></code><br/>Element content sets: [<code style="white-space: nowrap">message</code>](#message), [<code style="white-space: nowrap">actions</code>](#actions)
 
 ## Examples
 ### JavaScript

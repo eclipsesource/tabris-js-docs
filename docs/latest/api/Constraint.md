@@ -26,6 +26,20 @@ offset | <code style="white-space: nowrap"><a href="../types.html#offset" title=
 
 ## Methods
 
+### equals(value)
+
+
+
+Tests if the given value is a `Constraint` instance that is deeply equal to this one.
+
+
+Parameter|Type|Description
+-|-|-
+value | <code style="white-space: nowrap"><a href="#" >Constraint</a></code> | 
+
+
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+
 ### toArray()
 
 
@@ -71,6 +85,7 @@ Settable: | Yes
 
 
 
+
 This property can only be set via constructor. Once set, it cannot change anymore.
 
 
@@ -84,6 +99,7 @@ If the sibling reference is a string it will be a valid selector string and not 
 
 Type: |<code style="white-space: nowrap"><a href="Percent.html" title="Percent Class Reference">Percent</a> &#124; <a href="../types.html#siblingreference" title="SiblingReference Type Reference">SiblingReference</a></code>
 Settable: | Yes
+
 
 
 
@@ -103,6 +119,7 @@ Settable: | No
 
 
 
+
 ### prev
 
 
@@ -110,6 +127,7 @@ A [SiblingReference](../types.md#siblingreference) indicating the previous widge
 
 Type: |<code style="white-space: nowrap">unique symbol</code>
 Settable: | No
+
 
 
 

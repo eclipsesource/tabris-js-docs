@@ -14,7 +14,7 @@ Constructor: | public
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
 Direct subclasses: | None
-JSX Support: | Element: <code style="white-space: nowrap"><a href="TimeDialog.html" title="TimeDialog Class Reference">&lt;TimeDialog/&gt;</a></code><br/>Parent Elements: *Not supported*<br/>Child Elements: *Not Supported*<br/>Text Content: *Not supported*
+JSX Support: | Element: <code style="white-space: nowrap"><a href="#" >&lt;TimeDialog/&gt;</a></code><br/>Parent Elements: *Not supported*<br/>Child Elements: *Not Supported*<br/>
 
 ## Examples
 ### JavaScript
@@ -31,7 +31,7 @@ new TimeDialog()
 
 See also:
   
-[<span class='language tsx'>TSX</span> Creating a simple `TimeDialog`](https://playground.tabris.com/?gitref=v3.2.0&snippet=timedialog.tsx)
+[<span class='language tsx'>TSX</span> Creating a simple `TimeDialog`](https://playground.tabris.com/?gitref=v3.3.0&snippet=timedialog.tsx)
 
 ## Constructor
 

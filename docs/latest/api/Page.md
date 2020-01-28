@@ -14,7 +14,7 @@ Constructor: | public
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
 Direct subclasses: | None
-JSX Support: | Element: <code style="white-space: nowrap"><a href="Page.html" title="Page Class Reference">&lt;Page/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="NavigationView.html" title="NavigationView Class Reference">&lt;NavigationView/&gt;</a></code><br/>Child Elements: *Any standalone widget element*<br/>Text Content: *Not supported*
+JSX Support: | Element: <code style="white-space: nowrap"><a href="#" >&lt;Page/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="NavigationView.html" title="NavigationView Class Reference">&lt;NavigationView/&gt;</a></code><br/>Child Elements: *Any standalone widget element*<br/>
 
 ## Examples
 ### JavaScript
@@ -31,7 +31,7 @@ new NavigationView({layoutData: 'stretch'})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a stack of pages](https://playground.tabris.com/?gitref=v3.2.0&snippet=navigationview-page-stacked.jsx)
+[<span class='language jsx'>JSX</span> Creating a stack of pages](https://playground.tabris.com/?gitref=v3.3.0&snippet=navigationview-page-stacked.jsx)
 
 ## Constructor
 

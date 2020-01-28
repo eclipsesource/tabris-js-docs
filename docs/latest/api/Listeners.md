@@ -126,6 +126,7 @@ Settable: | No
 
 
 
+
 ### type
 
 
@@ -133,6 +134,7 @@ The event type. This value will be set in the `type` field of the event object g
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | No
+
 
 
 

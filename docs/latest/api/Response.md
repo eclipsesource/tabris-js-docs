@@ -71,12 +71,14 @@ Settable: | No
 
 
 
+
 ### headers
 
 
 
 Type: |<code style="white-space: nowrap"><a href="Headers.html" title="Headers Class Reference">Headers</a></code>
 Settable: | No
+
 
 
 
@@ -89,12 +91,14 @@ Settable: | No
 
 
 
+
 ### status
 
 
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
 Settable: | No
+
 
 
 
@@ -107,6 +111,7 @@ Settable: | No
 
 
 
+
 ### type
 
 
@@ -116,12 +121,14 @@ Settable: | No
 
 
 
+
 ### url
 
 
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | No
+
 
 
 

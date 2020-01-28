@@ -93,6 +93,17 @@ Change Event: | [`startedChanged`](#startedchanged)
 
 
 
+### symbols
+
+
+
+Type: |<code style="white-space: nowrap">{[symbol]: Symbol}</code>
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`symbolsChanged`](#symbolschanged)
+
+
+
+
 ### version
 
 
@@ -102,10 +113,6 @@ Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
-
-
-
-This property can only be set via constructor. Once set, it cannot change anymore.
 
 
 
@@ -155,4 +162,14 @@ EventObject Type: <code style="white-space: nowrap"><a href="../types.html#prope
 Property|Type|Description
 -|-|-
 value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The new value of [started](#started).
+
+### symbolsChanged
+
+Fired when the [symbols](#symbols) property has changed.
+
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Tabris</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a>&gt;</code>
+
+Property|Type|Description
+-|-|-
+value | <code style="white-space: nowrap">{[symbol]: Symbol}</code> | The new value of [symbols](#symbols).
 

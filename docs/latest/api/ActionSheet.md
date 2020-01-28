@@ -14,7 +14,7 @@ Constructor: | public
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
 Direct subclasses: | None
-JSX Support: | Element: <code style="white-space: nowrap"><a href="ActionSheet.html" title="ActionSheet Class Reference">&lt;ActionSheet/&gt;</a></code><br/>Parent Elements: *Not supported*<br/>Child Elements: <code style="white-space: nowrap"><a href="ActionSheetItem.html" title="ActionSheetItem Class Reference">&lt;ActionSheetItem/&gt;</a></code><br/>Text Content: [<code style="white-space: nowrap">message</code>](#message)
+JSX Support: | Element: <code style="white-space: nowrap"><a href="#" >&lt;ActionSheet/&gt;</a></code><br/>Parent Elements: *Not supported*<br/>Child Elements: <code style="white-space: nowrap"><a href="ActionSheetItem.html" title="ActionSheetItem Class Reference">&lt;ActionSheetItem/&gt;</a></code><br/>Element content sets: [<code style="white-space: nowrap">message</code>](#message), [<code style="white-space: nowrap">actions</code>](#actions)
 
 ## Examples
 ### JavaScript
@@ -33,7 +33,7 @@ new ActionSheet({
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `ActionSheet`](https://playground.tabris.com/?gitref=v3.2.0&snippet=actionsheet.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `ActionSheet`](https://playground.tabris.com/?gitref=v3.3.0&snippet=actionsheet.jsx)
 
 ## Constructor
 
@@ -70,7 +70,8 @@ An array of objects describing the actions to be displayed. The entries may be i
 Type: |<code style="white-space: nowrap"><a href="ActionSheetItem.html" title="ActionSheetItem Class Reference">ActionSheetItem</a>[]</code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`actionsChanged`](#actionschanged)
-JSX Child Element: | <code style="white-space: nowrap"><a href="ActionSheetItem.html" title="ActionSheetItem Class Reference">&lt;ActionSheetItem/&gt;</a></code>
+JSX Content Type: | <code style="white-space: nowrap"><a href="ActionSheetItem.html" title="ActionSheetItem Class Reference">&lt;ActionSheetItem/&gt;</a></code>
+
 
 
 
@@ -85,7 +86,8 @@ A descriptive message for the available actions.
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`messageChanged`](#messagechanged)
-JSX Text Property: | [Yes](../JSX.md)
+JSX Content Type: | [Text](../JSX.md)
+
 
 
 

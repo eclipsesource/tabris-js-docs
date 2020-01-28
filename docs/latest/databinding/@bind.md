@@ -23,11 +23,11 @@ public myNumber: number = 50;
 
 This establishes a two-way binding from the `myNumber` property to the property `selection` of the child with the id `'source'`. The binding is established after `append` is called the first time on the component, there needs to be exactly one descendant widget with the given id, and it has to have a property of the same type.
 
-> See example app ["bind-two-way"](https://github.com/eclipsesource/tabris-decorators/tree/v3.2.0/examples/bind-two-way).
+> See example app ["bind-two-way"](https://github.com/eclipsesource/tabris-decorators/tree/v3.3.0/examples/bind-two-way).
 
 Change events are fired for the decorated *component property* when the *target element* fires change events.
 
-> See example app ["bind-two-way-change-events"](https://github.com/eclipsesource/tabris-decorators/tree/v3.2.0/examples/bind-two-way-change-events).
+> See example app ["bind-two-way-change-events"](https://github.com/eclipsesource/tabris-decorators/tree/v3.3.0/examples/bind-two-way-change-events).
 
 A [`typeGuard`](./@property.md#propertytypeguard) may be given to perform value checks.
 
@@ -66,7 +66,7 @@ This establishes 2 two-way bindings:
 * One between the `myText` property of the assigned `Model` object and the property `text` of the child with the id `input1`.
 * And one between the `myNumber` property of the assigned `Model` object and the property `selection` of the child with the id `input2`.
 
-> See example app ["bind-two-way-model"](https://github.com/eclipsesource/tabris-decorators/tree/v3.2.0/examples/bind-two-way-model).
+> See example app ["bind-two-way-model"](https://github.com/eclipsesource/tabris-decorators/tree/v3.3.0/examples/bind-two-way-model).
 
 The bindings are first established when `append` is called the first time on the component. Again, the bindings are established after `append` is called the first time on the component, there needs to be exactly one descendant widget with the given id for each binding, and they have to have a property of the same type as the source property.
 

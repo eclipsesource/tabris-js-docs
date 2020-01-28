@@ -33,10 +33,6 @@ Change Event: | Not supported
 
 
 
-This property can only be set via constructor. Once set, it cannot change anymore.
-
-
-
 ### language
 
 
@@ -46,10 +42,6 @@ Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
-
-
-
-This property can only be set via constructor. Once set, it cannot change anymore.
 
 
 
@@ -65,10 +57,6 @@ Change Event: | Not supported
 
 
 
-This property can only be set via constructor. Once set, it cannot change anymore.
-
-
-
 ### name
 
 
@@ -80,10 +68,6 @@ Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
-
-
-
-This property can only be set via constructor. Once set, it cannot change anymore.
 
 
 
@@ -111,10 +95,6 @@ Change Event: | Not supported
 
 
 
-This property can only be set via constructor. Once set, it cannot change anymore.
-
-
-
 ### scaleFactor
 
 
@@ -124,10 +104,6 @@ Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
-
-
-
-This property can only be set via constructor. Once set, it cannot change anymore.
 
 
 
@@ -143,10 +119,6 @@ Change Event: | Not supported
 
 
 
-This property can only be set via constructor. Once set, it cannot change anymore.
-
-
-
 ### screenWidth
 
 
@@ -156,10 +128,6 @@ Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
-
-
-
-This property can only be set via constructor. Once set, it cannot change anymore.
 
 
 
@@ -175,10 +143,6 @@ Change Event: | Not supported
 
 
 
-This property can only be set via constructor. Once set, it cannot change anymore.
-
-
-
 ### version
 
 
@@ -188,10 +152,6 @@ Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
-
-
-
-This property can only be set via constructor. Once set, it cannot change anymore.
 
 
 

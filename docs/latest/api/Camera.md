@@ -34,9 +34,9 @@ camera.captureImage()
 
 See also:
   
-[<span class='language tsx'>TSX</span> Simple example to capture an image](https://playground.tabris.com/?gitref=v3.2.0&snippet=camera.tsx)  
-[<span class='language tsx'>TSX</span> Control `Camera` and `CameraView` to capture an image](https://playground.tabris.com/?gitref=v3.2.0&snippet=camera-advanced.tsx)  
-[<span class='language jsx'>JSX</span> Check and request camera permissions](https://playground.tabris.com/?gitref=v3.2.0&snippet=permission.jsx)
+[<span class='language tsx'>TSX</span> Simple example to capture an image](https://playground.tabris.com/?gitref=v3.3.0&snippet=camera.tsx)  
+[<span class='language tsx'>TSX</span> Control `Camera` and `CameraView` to capture an image](https://playground.tabris.com/?gitref=v3.3.0&snippet=camera-advanced.tsx)  
+[<span class='language jsx'>JSX</span> Check and request camera permissions](https://playground.tabris.com/?gitref=v3.3.0&snippet=permission.jsx)
 
 ## Methods
 
@@ -98,10 +98,6 @@ Change Event: | Not supported
 
 
 
-This property can only be set via constructor. Once set, it cannot change anymore.
-
-
-
 ### captureResolution
 
 
@@ -127,10 +123,6 @@ Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
-
-
-
-This property can only be set via constructor. Once set, it cannot change anymore.
 
 
 

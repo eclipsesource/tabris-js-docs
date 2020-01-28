@@ -14,7 +14,7 @@ Constructor: | public
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
 Direct subclasses: | None
-JSX Support: | Element: <code style="white-space: nowrap"><a href="ImageView.html" title="ImageView Class Reference">&lt;ImageView/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="Canvas.html" title="Canvas Class Reference">&lt;Canvas/&gt;</a></code>, <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">&lt;Composite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Page.html" title="Page Class Reference">&lt;Page/&gt;</a></code>, <code style="white-space: nowrap"><a href="RefreshComposite.html" title="RefreshComposite Class Reference">&lt;RefreshComposite/&gt;</a></code>, <code style="white-space: nowrap"><a href="ScrollView.html" title="ScrollView Class Reference">&lt;ScrollView/&gt;</a></code>, <code style="white-space: nowrap"><a href="Stack.html" title="Stack Class Reference">&lt;Stack/&gt;</a></code>, <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Child Elements: *Not Supported*<br/>Text Content: *Not supported*
+JSX Support: | Element: <code style="white-space: nowrap"><a href="#" >&lt;ImageView/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="Canvas.html" title="Canvas Class Reference">&lt;Canvas/&gt;</a></code>, <code style="white-space: nowrap"><a href="Cell.html" title="Cell Class Reference">&lt;Cell/&gt;</a></code>, <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">&lt;Composite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Page.html" title="Page Class Reference">&lt;Page/&gt;</a></code>, <code style="white-space: nowrap"><a href="RefreshComposite.html" title="RefreshComposite Class Reference">&lt;RefreshComposite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Row.html" title="Row Class Reference">&lt;Row/&gt;</a></code>, <code style="white-space: nowrap"><a href="ScrollView.html" title="ScrollView Class Reference">&lt;ScrollView/&gt;</a></code>, <code style="white-space: nowrap"><a href="Stack.html" title="Stack Class Reference">&lt;Stack/&gt;</a></code>, <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Child Elements: *Not Supported*<br/>
 
 ## Examples
 ### JavaScript
@@ -30,17 +30,17 @@ new ImageView({image: 'resources/image.png'})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Using an `ImageView` as a button](https://playground.tabris.com/?gitref=v3.2.0&snippet=imageview-as-a-button.jsx)  
-[<span class='language jsx'>JSX</span> Creating `ImageView`s with various scale modes](https://playground.tabris.com/?gitref=v3.2.0&snippet=imageview-scalemode.jsx)  
-[<span class='language jsx'>JSX</span> Creating an `ImageView` with support for pinch-to-zoom](https://playground.tabris.com/?gitref=v3.2.0&snippet=imageview-zoom.jsx)  
-[<span class='language jsx'>JSX</span> Creating an `ImageView` with a tint color applied](https://playground.tabris.com/?gitref=v3.2.0&snippet=imageview-tintcolor.jsx)  
-[<span class='language jsx'>JSX</span> Creating an `ImageView` with a load event callback](https://playground.tabris.com/?gitref=v3.2.0&snippet=imageview-load.jsx)  
-[<span class='language jsx'>JSX</span> Using an `ImageView` to show a Base64 encoded image](https://playground.tabris.com/?gitref=v3.2.0&snippet=imageview-base64.jsx)  
-[<span class='language jsx'>JSX</span> imageview-blob.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=imageview-blob.jsx)  
-[<span class='language tsx'>TSX</span> imageview-gallery.tsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=imageview-gallery.tsx)  
-[<span class='language jsx'>JSX</span> imageview-imagebitmap.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=imageview-imagebitmap.jsx)  
-[<span class='language jsx'>JSX</span> imageview-scalemode-auto.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=imageview-scalemode-auto.jsx)  
-[<span class='language jsx'>JSX</span> imageview.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=imageview.jsx)
+[<span class='language jsx'>JSX</span> Using an `ImageView` as a button](https://playground.tabris.com/?gitref=v3.3.0&snippet=imageview-as-a-button.jsx)  
+[<span class='language jsx'>JSX</span> Creating `ImageView`s with various scale modes](https://playground.tabris.com/?gitref=v3.3.0&snippet=imageview-scalemode.jsx)  
+[<span class='language jsx'>JSX</span> Creating an `ImageView` with support for pinch-to-zoom](https://playground.tabris.com/?gitref=v3.3.0&snippet=imageview-zoom.jsx)  
+[<span class='language jsx'>JSX</span> Creating an `ImageView` with a tint color applied](https://playground.tabris.com/?gitref=v3.3.0&snippet=imageview-tintcolor.jsx)  
+[<span class='language jsx'>JSX</span> Creating an `ImageView` with a load event callback](https://playground.tabris.com/?gitref=v3.3.0&snippet=imageview-load.jsx)  
+[<span class='language jsx'>JSX</span> Using an `ImageView` to show a Base64 encoded image](https://playground.tabris.com/?gitref=v3.3.0&snippet=imageview-base64.jsx)  
+[<span class='language jsx'>JSX</span> imageview-blob.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=imageview-blob.jsx)  
+[<span class='language tsx'>TSX</span> imageview-gallery.tsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=imageview-gallery.tsx)  
+[<span class='language jsx'>JSX</span> imageview-imagebitmap.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=imageview-imagebitmap.jsx)  
+[<span class='language jsx'>JSX</span> imageview-scalemode-auto.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=imageview-scalemode-auto.jsx)  
+[<span class='language jsx'>JSX</span> imageview.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=imageview.jsx)
 
 ## Constructor
 
@@ -109,8 +109,8 @@ Change Event: | [`scaleModeChanged`](#scalemodechanged)
 
 See also:
   
-[<span class='language jsx'>JSX</span> imageview-scalemode-auto.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=imageview-scalemode-auto.jsx)  
-[<span class='language jsx'>JSX</span> imageview-scalemode.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=imageview-scalemode.jsx)
+[<span class='language jsx'>JSX</span> imageview-scalemode-auto.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=imageview-scalemode-auto.jsx)  
+[<span class='language jsx'>JSX</span> imageview-scalemode.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=imageview-scalemode.jsx)
 
 
 ### tintColor
@@ -125,7 +125,7 @@ Change Event: | [`tintColorChanged`](#tintcolorchanged)
 
 See also:
   
-[<span class='language jsx'>JSX</span> imageview-tintcolor.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=imageview-tintcolor.jsx)
+[<span class='language jsx'>JSX</span> imageview-tintcolor.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=imageview-tintcolor.jsx)
 
 
 ### zoomEnabled
@@ -169,7 +169,7 @@ error | <code style="white-space: nowrap"><a href="https://developer.mozilla.org
 
 See also:
   
-[<span class='language jsx'>JSX</span> imageview-load.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=imageview-load.jsx)
+[<span class='language jsx'>JSX</span> imageview-load.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=imageview-load.jsx)
 ### zoom
 
 Fired when the user zooms the image in or out. The `zoom` event indicates a change to the `zoomLevel` property.
@@ -182,7 +182,7 @@ zoomLevel | <code style="white-space: nowrap"><a href="https://developer.mozilla
 
 See also:
   
-[<span class='language jsx'>JSX</span> imageview-zoom.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=imageview-zoom.jsx)
+[<span class='language jsx'>JSX</span> imageview-zoom.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=imageview-zoom.jsx)
 ## Change Events
 
 ### imageChanged

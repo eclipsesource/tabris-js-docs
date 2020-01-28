@@ -37,6 +37,20 @@ parameters | <code style="white-space: nowrap">LayoutDataProperties</code> | An 
 
 ## Methods
 
+### equals(value)
+
+
+
+Tests if the given value is a `LayoutData` instance that is deeply equal to this one.
+
+
+Parameter|Type|Description
+-|-|-
+value | <code style="white-space: nowrap"><a href="#" >LayoutData</a></code> | 
+
+
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+
 ### toString()
 
 
@@ -75,6 +89,7 @@ Settable: | No
 
 
 
+
 This property can only be set via constructor. Once set, it cannot change anymore.
 
 
@@ -87,6 +102,7 @@ The position of the widget's bottom edge relative to the parent or a sibling wid
 Type: |<code style="white-space: nowrap"><a href="Constraint.html" title="Constraint Class Reference">Constraint</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Settable: | No
+
 
 
 
@@ -105,6 +121,7 @@ Settable: | No
 
 
 
+
 This property can only be set via constructor. Once set, it cannot change anymore.
 
 
@@ -117,6 +134,7 @@ The vertical position of the widget's center relative to the parent's center.
 Type: |<code style="white-space: nowrap"><a href="../types.html#offset" title="Offset Type Reference">Offset</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Settable: | No
+
 
 
 
@@ -135,6 +153,7 @@ Settable: | No
 
 
 
+
 This property can only be set via constructor. Once set, it cannot change anymore.
 
 
@@ -147,6 +166,7 @@ The position of the widget's left edge relative to the parent or a sibling widge
 Type: |<code style="white-space: nowrap"><a href="Constraint.html" title="Constraint Class Reference">Constraint</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Settable: | No
+
 
 
 
@@ -165,6 +185,7 @@ Settable: | No
 
 
 
+
 This property can only be set via constructor. Once set, it cannot change anymore.
 
 
@@ -180,6 +201,7 @@ Settable: | No
 
 
 
+
 This property can only be set via constructor. Once set, it cannot change anymore.
 
 
@@ -192,6 +214,7 @@ The width of the widget.
 Type: |<code style="white-space: nowrap"><a href="../types.html#dimension" title="Dimension Type Reference">Dimension</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Settable: | No
+
 
 
 
@@ -211,6 +234,7 @@ Settable: | No
 
 
 
+
 ### next
 
 
@@ -218,6 +242,7 @@ A [SiblingReference](../types.md#siblingreference) indicating the next widget in
 
 Type: |<code style="white-space: nowrap">typeof Constraint.next</code>
 Settable: | No
+
 
 
 
@@ -231,6 +256,7 @@ Settable: | No
 
 
 
+
 ### stretch
 
 
@@ -238,6 +264,7 @@ An instance of LayoutData that makes a widget fill the inner width and height of
 
 Type: |<code style="white-space: nowrap"><a href="#" >LayoutData</a></code>
 Settable: | No
+
 
 
 
@@ -251,6 +278,7 @@ Settable: | No
 
 
 
+
 ### stretchY
 
 
@@ -258,6 +286,7 @@ An instance of LayoutData that makes a widget as high as its parent (padding exc
 
 Type: |<code style="white-space: nowrap"><a href="#" >LayoutData</a></code>
 Settable: | No
+
 
 
 

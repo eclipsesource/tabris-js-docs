@@ -15,7 +15,7 @@ Constructor: | public
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
 Direct subclasses: | None
-JSX Support: | Element: <code style="white-space: nowrap"><a href="CollectionView.html" title="CollectionView Class Reference">&lt;CollectionView/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="Canvas.html" title="Canvas Class Reference">&lt;Canvas/&gt;</a></code>, <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">&lt;Composite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Page.html" title="Page Class Reference">&lt;Page/&gt;</a></code>, <code style="white-space: nowrap"><a href="RefreshComposite.html" title="RefreshComposite Class Reference">&lt;RefreshComposite/&gt;</a></code>, <code style="white-space: nowrap"><a href="ScrollView.html" title="ScrollView Class Reference">&lt;ScrollView/&gt;</a></code>, <code style="white-space: nowrap"><a href="Stack.html" title="Stack Class Reference">&lt;Stack/&gt;</a></code>, <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Child Elements: *Not Supported*<br/>Text Content: *Not supported*
+JSX Support: | Element: <code style="white-space: nowrap"><a href="#" >&lt;CollectionView/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="Canvas.html" title="Canvas Class Reference">&lt;Canvas/&gt;</a></code>, <code style="white-space: nowrap"><a href="Cell.html" title="Cell Class Reference">&lt;Cell/&gt;</a></code>, <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">&lt;Composite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Page.html" title="Page Class Reference">&lt;Page/&gt;</a></code>, <code style="white-space: nowrap"><a href="RefreshComposite.html" title="RefreshComposite Class Reference">&lt;RefreshComposite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Row.html" title="Row Class Reference">&lt;Row/&gt;</a></code>, <code style="white-space: nowrap"><a href="ScrollView.html" title="ScrollView Class Reference">&lt;ScrollView/&gt;</a></code>, <code style="white-space: nowrap"><a href="Stack.html" title="Stack Class Reference">&lt;Stack/&gt;</a></code>, <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Child Elements: *Not Supported*<br/>
 
 ## Examples
 ### JavaScript
@@ -39,16 +39,16 @@ new CollectionView({
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple CollectionView](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview.jsx)  
-[<span class='language jsx'>JSX</span> Creating a CollectionView with multiple cell types](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-celltype.jsx)  
-[<span class='language jsx'>JSX</span> Creating a CollectionView with pull-to-refresh support](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-refreshenabled.jsx)  
-[<span class='language jsx'>JSX</span> Creating a CollectionView with sticky headers](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-scroll.jsx)  
-[<span class='language jsx'>JSX</span> Creating a CollectionView with dynamic column count](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-columncount.jsx)  
-[<span class='language jsx'>JSX</span> collectionview-cellheightauto.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-cellheightauto.jsx)  
-[<span class='language tsx'>TSX</span> collectionview-celltype-ts.tsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-celltype-ts.tsx)  
-[<span class='language tsx'>TSX</span> collectionview-scroll-ts.tsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-scroll-ts.tsx)  
-[<span class='language jsx'>JSX</span> collectionview-swipe-to-dismiss.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-swipe-to-dismiss.jsx)  
-[<span class='language tsx'>TSX</span> collectionview-ts.tsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-ts.tsx)
+[<span class='language jsx'>JSX</span> Creating a simple CollectionView](https://playground.tabris.com/?gitref=v3.3.0&snippet=collectionview.jsx)  
+[<span class='language jsx'>JSX</span> Creating a CollectionView with multiple cell types](https://playground.tabris.com/?gitref=v3.3.0&snippet=collectionview-celltype.jsx)  
+[<span class='language jsx'>JSX</span> Creating a CollectionView with pull-to-refresh support](https://playground.tabris.com/?gitref=v3.3.0&snippet=collectionview-refreshenabled.jsx)  
+[<span class='language jsx'>JSX</span> Creating a CollectionView with sticky headers](https://playground.tabris.com/?gitref=v3.3.0&snippet=collectionview-scroll.jsx)  
+[<span class='language jsx'>JSX</span> Creating a CollectionView with dynamic column count](https://playground.tabris.com/?gitref=v3.3.0&snippet=collectionview-columncount.jsx)  
+[<span class='language jsx'>JSX</span> collectionview-cellheightauto.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=collectionview-cellheightauto.jsx)  
+[<span class='language tsx'>TSX</span> collectionview-celltype-ts.tsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=collectionview-celltype-ts.tsx)  
+[<span class='language tsx'>TSX</span> collectionview-scroll-ts.tsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=collectionview-scroll-ts.tsx)  
+[<span class='language jsx'>JSX</span> collectionview-swipe-to-dismiss.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=collectionview-swipe-to-dismiss.jsx)  
+[<span class='language tsx'>TSX</span> collectionview-ts.tsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=collectionview-ts.tsx)
 
 ## Constructor
 
@@ -190,8 +190,8 @@ Change Event: | [`cellTypeChanged`](#celltypechanged)
 
 See also:
   
-[<span class='language tsx'>TSX</span> collectionview-celltype-ts.tsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-celltype-ts.tsx)  
-[<span class='language jsx'>JSX</span> collectionview-celltype.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-celltype.jsx)
+[<span class='language tsx'>TSX</span> collectionview-celltype-ts.tsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=collectionview-celltype-ts.tsx)  
+[<span class='language jsx'>JSX</span> collectionview-celltype.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=collectionview-celltype.jsx)
 
 
 ### columnCount
@@ -207,7 +207,7 @@ Change Event: | [`columnCountChanged`](#columncountchanged)
 
 See also:
   
-[<span class='language jsx'>JSX</span> collectionview-columncount.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-columncount.jsx)
+[<span class='language jsx'>JSX</span> collectionview-columncount.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=collectionview-columncount.jsx)
 
 
 ### createCell
@@ -271,7 +271,7 @@ Change Event: | [`refreshEnabledChanged`](#refreshenabledchanged)
 
 See also:
   
-[<span class='language jsx'>JSX</span> collectionview-refreshenabled.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-refreshenabled.jsx)
+[<span class='language jsx'>JSX</span> collectionview-refreshenabled.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=collectionview-refreshenabled.jsx)
 
 
 ### refreshIndicator
@@ -348,8 +348,8 @@ deltaY | <code style="white-space: nowrap"><a href="https://developer.mozilla.or
 
 See also:
   
-[<span class='language tsx'>TSX</span> collectionview-scroll-ts.tsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-scroll-ts.tsx)  
-[<span class='language jsx'>JSX</span> collectionview-scroll.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=collectionview-scroll.jsx)
+[<span class='language tsx'>TSX</span> collectionview-scroll-ts.tsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=collectionview-scroll-ts.tsx)  
+[<span class='language jsx'>JSX</span> collectionview-scroll.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=collectionview-scroll.jsx)
 ## Change Events
 
 ### scrollbarVisibleChanged

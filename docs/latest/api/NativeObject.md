@@ -11,7 +11,7 @@ Type: | <code style="white-space: nowrap">NativeObject extends <a href="https://
 Constructor: | protected
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
-Direct subclasses: | <code style="white-space: nowrap"><a href="app.html" title="App Object Reference">App</a></code>, <code style="white-space: nowrap"><a href="Camera.html" title="Camera Class Reference">Camera</a></code>, <code style="white-space: nowrap"><a href="device.html" title="Device Object Reference">Device</a></code>, <code style="white-space: nowrap"><a href="fs.html" title="FileSystem Object Reference">FileSystem</a></code>, <code style="white-space: nowrap"><a href="InactivityTimer.html" title="InactivityTimer Class Reference">InactivityTimer</a></code>, <code style="white-space: nowrap"><a href="NavigationBar.html" title="NavigationBar Object Reference">NavigationBar</a></code>, <code style="white-space: nowrap"><a href="permission.html" title="Permission Object Reference">Permission</a></code>, <code style="white-space: nowrap"><a href="Popup.html" title="Popup Class Reference">Popup</a></code>, <code style="white-space: nowrap"><a href="printer.html" title="Printer Object Reference">Printer</a></code>, <code style="white-space: nowrap"><a href="StatusBar.html" title="StatusBar Object Reference">StatusBar</a></code>, <code style="white-space: nowrap"><a href="Tabris.html" title="Tabris Object Reference">Tabris</a></code>, <code style="white-space: nowrap"><a href="Widget.html" title="Widget Class Reference">Widget</a></code>
+Direct subclasses: | <code style="white-space: nowrap"><a href="app.html" title="App Object Reference">App</a></code>, <code style="white-space: nowrap"><a href="Camera.html" title="Camera Class Reference">Camera</a></code>, <code style="white-space: nowrap"><a href="device.html" title="Device Object Reference">Device</a></code>, <code style="white-space: nowrap"><a href="fs.html" title="FileSystem Object Reference">FileSystem</a></code>, <code style="white-space: nowrap"><a href="InactivityTimer.html" title="InactivityTimer Class Reference">InactivityTimer</a></code>, <code style="white-space: nowrap"><a href="NavigationBar.html" title="NavigationBar Object Reference">NavigationBar</a></code>, <code style="white-space: nowrap"><a href="permission.html" title="Permission Object Reference">Permission</a></code>, <code style="white-space: nowrap"><a href="Popup.html" title="Popup Class Reference">Popup</a></code>, <code style="white-space: nowrap"><a href="printer.html" title="Printer Object Reference">Printer</a></code>, <code style="white-space: nowrap"><a href="sizeMeasurement.html" title="SizeMeasurement Object Reference">SizeMeasurement</a></code>, <code style="white-space: nowrap"><a href="StatusBar.html" title="StatusBar Object Reference">StatusBar</a></code>, <code style="white-space: nowrap"><a href="Tabris.html" title="Tabris Object Reference">Tabris</a></code>, <code style="white-space: nowrap"><a href="Widget.html" title="Widget Class Reference">Widget</a></code>
 JSX Support: | No
 
 
@@ -523,10 +523,6 @@ Change Event: | Not supported
 
 
 
-This property can only be set via constructor. Once set, it cannot change anymore.
-
-
-
 ### jsxAttributes
 
 
@@ -536,10 +532,6 @@ Type: |<code style="white-space: nowrap">JSXAttributes<this></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
-
-
-
-This property can only be set via constructor. Once set, it cannot change anymore.
 
 
 

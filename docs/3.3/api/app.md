@@ -107,10 +107,6 @@ Change Event: | Not supported
 
 
 
-This property can only be set via constructor. Once set, it cannot change anymore.
-
-
-
 ### id
 
 
@@ -120,10 +116,6 @@ Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
-
-
-
-This property can only be set via constructor. Once set, it cannot change anymore.
 
 
 
@@ -192,10 +184,6 @@ Change Event: | Not supported
 
 
 
-This property can only be set via constructor. Once set, it cannot change anymore.
-
-
-
 ### versionCode
 
 
@@ -205,10 +193,6 @@ Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
-
-
-
-This property can only be set via constructor. Once set, it cannot change anymore.
 
 
 

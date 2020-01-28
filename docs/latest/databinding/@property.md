@@ -8,7 +8,7 @@ Makes the decorated object property fire change events and perform runtime value
 
 ## @property (no parameter)
 
-> See example app ["property-change-events"](https://github.com/eclipsesource/tabris-decorators/tree/v3.2.0/examples/property-change-events).
+> See example app ["property-change-events"](https://github.com/eclipsesource/tabris-decorators/tree/v3.3.0/examples/property-change-events).
 
 Triggers change events and performs implicit runtime checks on any value the property is set to.
 
@@ -42,7 +42,7 @@ In these cases it is recommended to use a type guard:
 
 Where `typeGuard` is of the type `(value: any) => boolean`.
 
-> See example app ["property-value-checks"](https://github.com/eclipsesource/tabris-decorators/tree/v3.2.0/examples/property-value-checks).
+> See example app ["property-value-checks"](https://github.com/eclipsesource/tabris-decorators/tree/v3.3.0/examples/property-value-checks).
 
 Like `@property`, but uses the given function (type guard) to perform type checks. The type guard may be more strict than the TypeScript compiler (e.g. allowing only positive numbers where the compiler allows any number), but should never be less strict.
 

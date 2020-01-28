@@ -17,7 +17,7 @@ Constructor: | public
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
 Direct subclasses: | None
-JSX Support: | Element: <code style="white-space: nowrap"><a href="WidgetCollection.html" title="WidgetCollection Class Reference">&lt;WidgetCollection/&gt;</a></code><br/>Parent Elements: *Not supported*<br/>Child Elements: *Not Supported*<br/>Text Content: *Not supported*
+JSX Support: | Element: <code style="white-space: nowrap"><a href="#" >&lt;WidgetCollection/&gt;</a></code><br/>Parent Elements: *Not supported*<br/>Child Elements: *Not Supported*<br/>
 
 ## Examples
 ### JavaScript
@@ -372,6 +372,7 @@ Settable: | No
 
 
 
+
 This property can only be set via constructor. Once set, it cannot change anymore.
 
 
@@ -383,6 +384,7 @@ Contains the number of widgets in the collection.
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
 Settable: | No
+
 
 
 

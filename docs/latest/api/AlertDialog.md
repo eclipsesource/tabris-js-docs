@@ -14,7 +14,7 @@ Constructor: | public
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
 Direct subclasses: | None
-JSX Support: | Element: <code style="white-space: nowrap"><a href="AlertDialog.html" title="AlertDialog Class Reference">&lt;AlertDialog/&gt;</a></code><br/>Parent Elements: *Not supported*<br/>Child Elements: *Not Supported*<br/>Text Content: [<code style="white-space: nowrap">message</code>](#message)
+JSX Support: | Element: <code style="white-space: nowrap"><a href="#" >&lt;AlertDialog/&gt;</a></code><br/>Parent Elements: *Not supported*<br/>Child Elements: *Not Supported*<br/>Element content sets: [<code style="white-space: nowrap">message</code>](#message)
 
 ## Examples
 ### JavaScript
@@ -32,7 +32,7 @@ new AlertDialog({
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating various types of alert dialogs](https://playground.tabris.com/?gitref=v3.2.0&snippet=alertdialog.jsx)
+[<span class='language jsx'>JSX</span> Creating various types of alert dialogs](https://playground.tabris.com/?gitref=v3.3.0&snippet=alertdialog.jsx)
 
 ## Constructor
 
@@ -95,7 +95,8 @@ The message to display inside the dialog.
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`messageChanged`](#messagechanged)
-JSX Text Property: | [Yes](../JSX.md)
+JSX Content Type: | [Text](../JSX.md)
+
 
 
 

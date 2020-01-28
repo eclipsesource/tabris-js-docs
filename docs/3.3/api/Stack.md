@@ -4,7 +4,7 @@
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a> > <a href="Widget.html" title="Widget Class Reference">Widget</a> > <a href="Composite.html" title="Composite Class Reference">Composite</a> > <a href="#" >Stack</a>
 
-A composite with the `layout` property initialized with a `Stack`. All children are automatically arranged in one vertical stack, starting from the top. The `layoutData` on the children is ignored.
+A composite with the `layout` property initialized with a `StackLayout`. All children are automatically arranged in one vertical stack, starting from the top. The `layoutData` on the children is ignored.
 
 
 Type: | <code style="white-space: nowrap">Stack extends <a href="Composite.html" title="Composite Class Reference">Composite</a></code>

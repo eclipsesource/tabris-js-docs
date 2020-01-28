@@ -30,7 +30,7 @@ fs.writeFile(fs.cacheDir + '/file.txt', 'Hello World!')
 
 See also:
   
-[<span class='language jsx'>JSX</span> Using the file system to read and write files](https://playground.tabris.com/?gitref=v3.2.0&snippet=fs.jsx)
+[<span class='language jsx'>JSX</span> Using the file system to read and write files](https://playground.tabris.com/?gitref=v3.3.0&snippet=fs.jsx)
 
 ## Methods
 
@@ -137,10 +137,6 @@ Change Event: | Not supported
 
 
 
-This property can only be set via constructor. Once set, it cannot change anymore.
-
-
-
 ### filesDir
 
 
@@ -150,10 +146,6 @@ Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
-
-
-
-This property can only be set via constructor. Once set, it cannot change anymore.
 
 
 

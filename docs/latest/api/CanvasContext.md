@@ -485,6 +485,7 @@ Settable: | Yes
 
 
 
+
 ### font
 
 
@@ -492,6 +493,7 @@ Specifies the current text style being used when drawing text.
 
 Type: |<code style="white-space: nowrap"><a href="../types.html#fontvalue" title="FontValue Type Reference">FontValue</a></code>
 Settable: | Yes
+
 
 
 
@@ -505,6 +507,7 @@ Settable: | Yes
 
 
 
+
 ### lineJoin
 
 
@@ -512,6 +515,7 @@ Determines how two connecting segments in a shape are joined together.
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'bevel'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'round'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'miter'</a></code>
 Settable: | Yes
+
 
 
 
@@ -525,6 +529,7 @@ Settable: | Yes
 
 
 
+
 ### strokeStyle
 
 
@@ -532,6 +537,7 @@ Specifies the color to use for the lines around shapes.
 
 Type: |<code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code>
 Settable: | Yes
+
 
 
 
@@ -545,6 +551,7 @@ Settable: | Yes
 
 
 
+
 ### textBaseline
 
 
@@ -552,6 +559,7 @@ Specifies the current text baseline being used when drawing text.
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'top'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'hanging'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'middle'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'alphabetic'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'ideographic'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'bottom'</a></code>
 Settable: | Yes
+
 
 
 

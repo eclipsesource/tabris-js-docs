@@ -19,14 +19,14 @@ See also:
   
 [Understanding layouts in Tabris.js](../layout.md)  
 [Understanding gesture events in Tabris.js](../touch.md)  
-[<span class='language jsx'>JSX</span> A `Widget` with padding](https://playground.tabris.com/?gitref=v3.2.0&snippet=widget-padding.jsx)  
-[<span class='language jsx'>JSX</span> A card style `Widget` with corner radius and elevation](https://playground.tabris.com/?gitref=v3.2.0&snippet=widget-cornerradius.jsx)  
-[<span class='language js'>JS</span> A `Widget` with a linear-gradient background](https://playground.tabris.com/?gitref=v3.2.0&snippet=widget-lineargradient.js)  
-[<span class='language js'>JS</span> Using touch events on a `Widget`](https://playground.tabris.com/?gitref=v3.2.0&snippet=widget-longpress-to-drag.js)  
-[<span class='language jsx'>JSX</span> widget-elevation.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=widget-elevation.jsx)  
-[<span class='language jsx'>JSX</span> widget-exclude-from-layout.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=widget-exclude-from-layout.jsx)  
-[<span class='language jsx'>JSX</span> widget-highlightontouch.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=widget-highlightontouch.jsx)  
-[<span class='language js'>JS</span> widget-touch.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=widget-touch.js)
+[<span class='language jsx'>JSX</span> A `Widget` with padding](https://playground.tabris.com/?gitref=v3.3.0&snippet=widget-padding.jsx)  
+[<span class='language jsx'>JSX</span> A card style `Widget` with corner radius and elevation](https://playground.tabris.com/?gitref=v3.3.0&snippet=widget-cornerradius.jsx)  
+[<span class='language js'>JS</span> A `Widget` with a linear-gradient background](https://playground.tabris.com/?gitref=v3.3.0&snippet=widget-lineargradient.js)  
+[<span class='language js'>JS</span> Using touch events on a `Widget`](https://playground.tabris.com/?gitref=v3.3.0&snippet=widget-longpress-to-drag.js)  
+[<span class='language jsx'>JSX</span> widget-elevation.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=widget-elevation.jsx)  
+[<span class='language jsx'>JSX</span> widget-exclude-from-layout.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=widget-exclude-from-layout.jsx)  
+[<span class='language jsx'>JSX</span> widget-highlightontouch.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=widget-highlightontouch.jsx)  
+[<span class='language js'>JS</span> widget-touch.js](https://playground.tabris.com/?gitref=v3.3.0&snippet=widget-touch.js)
 
 ## Methods
 
@@ -293,7 +293,7 @@ Change Event: | [`cornerRadiusChanged`](#cornerradiuschanged)
 
 See also:
   
-[<span class='language jsx'>JSX</span> widget-cornerradius.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=widget-cornerradius.jsx)
+[<span class='language jsx'>JSX</span> widget-cornerradius.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=widget-cornerradius.jsx)
 
 
 ### data
@@ -305,10 +305,6 @@ Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
-
-
-
-This property can only be set via constructor or JSX. Once set, it cannot change anymore.
 
 
 
@@ -326,7 +322,7 @@ Change Event: | [`elevationChanged`](#elevationchanged)
 
 See also:
   
-[<span class='language jsx'>JSX</span> widget-elevation.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=widget-elevation.jsx)
+[<span class='language jsx'>JSX</span> widget-elevation.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=widget-elevation.jsx)
 
 
 ### enabled
@@ -381,7 +377,7 @@ Change Event: | [`highlightOnTouchChanged`](#highlightontouchchanged)
 
 See also:
   
-[<span class='language jsx'>JSX</span> widget-highlightontouch.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=widget-highlightontouch.jsx)
+[<span class='language jsx'>JSX</span> widget-highlightontouch.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=widget-highlightontouch.jsx)
 
 
 ### id
@@ -449,13 +445,9 @@ Settable: | <a href="../widget-basics.html#widget-properties" >By Constructor or
 Change Event: | Not supported
 
 
-
-
-This property can only be set via constructor or JSX. Once set, it cannot change anymore.
-
 See also:
   
-[<span class='language jsx'>JSX</span> widget-padding.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=widget-padding.jsx)
+[<span class='language jsx'>JSX</span> widget-padding.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=widget-padding.jsx)
 
 
 ### right
@@ -548,7 +540,7 @@ touches | <code style="white-space: nowrap">[{x: <a href="https://developer.mozi
 
 See also:
   
-[<span class='language js'>JS</span> widget-longpress-to-drag.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=widget-longpress-to-drag.js)
+[<span class='language js'>JS</span> widget-longpress-to-drag.js](https://playground.tabris.com/?gitref=v3.3.0&snippet=widget-longpress-to-drag.js)
 ### pan
 
 Fired continuously after a finger touching the widget moved for a certain distance.

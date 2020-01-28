@@ -15,7 +15,7 @@ Constructor: | public
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
 Direct subclasses: | None
-JSX Support: | Element: <code style="white-space: nowrap"><a href="TabFolder.html" title="TabFolder Class Reference">&lt;TabFolder/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="Canvas.html" title="Canvas Class Reference">&lt;Canvas/&gt;</a></code>, <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">&lt;Composite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Page.html" title="Page Class Reference">&lt;Page/&gt;</a></code>, <code style="white-space: nowrap"><a href="RefreshComposite.html" title="RefreshComposite Class Reference">&lt;RefreshComposite/&gt;</a></code>, <code style="white-space: nowrap"><a href="ScrollView.html" title="ScrollView Class Reference">&lt;ScrollView/&gt;</a></code>, <code style="white-space: nowrap"><a href="Stack.html" title="Stack Class Reference">&lt;Stack/&gt;</a></code>, <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Child Elements: <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Text Content: *Not supported*
+JSX Support: | Element: <code style="white-space: nowrap"><a href="#" >&lt;TabFolder/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="Canvas.html" title="Canvas Class Reference">&lt;Canvas/&gt;</a></code>, <code style="white-space: nowrap"><a href="Cell.html" title="Cell Class Reference">&lt;Cell/&gt;</a></code>, <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">&lt;Composite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Page.html" title="Page Class Reference">&lt;Page/&gt;</a></code>, <code style="white-space: nowrap"><a href="RefreshComposite.html" title="RefreshComposite Class Reference">&lt;RefreshComposite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Row.html" title="Row Class Reference">&lt;Row/&gt;</a></code>, <code style="white-space: nowrap"><a href="ScrollView.html" title="ScrollView Class Reference">&lt;ScrollView/&gt;</a></code>, <code style="white-space: nowrap"><a href="Stack.html" title="Stack Class Reference">&lt;Stack/&gt;</a></code>, <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Child Elements: <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>
 
 ## Examples
 ### JavaScript
@@ -34,9 +34,9 @@ new TabFolder({left: 0, top: 0, right: 0, bottom: 0})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a `TabFolder` containing a set of tabs](https://playground.tabris.com/?gitref=v3.2.0&snippet=tabfolder.jsx)  
-[<span class='language js'>JS</span> tabfolder-swipe-parallax.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=tabfolder-swipe-parallax.js)  
-[<span class='language jsx'>JSX</span> tabfolder-swipe.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=tabfolder-swipe.jsx)
+[<span class='language jsx'>JSX</span> Creating a `TabFolder` containing a set of tabs](https://playground.tabris.com/?gitref=v3.3.0&snippet=tabfolder.jsx)  
+[<span class='language js'>JS</span> tabfolder-swipe-parallax.js](https://playground.tabris.com/?gitref=v3.3.0&snippet=tabfolder-swipe-parallax.js)  
+[<span class='language jsx'>JSX</span> tabfolder-swipe.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=tabfolder-swipe.jsx)
 
 ## Constructor
 

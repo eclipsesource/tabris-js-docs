@@ -31,7 +31,7 @@ console.log(localStorage.getItem('message')); // "Hello World!"
 
 See also:
   
-[<span class='language jsx'>JSX</span> A example how to read and write from the `localStorage`](https://playground.tabris.com/?gitref=v3.2.0&snippet=local-storage.jsx)
+[<span class='language jsx'>JSX</span> A example how to read and write from the `localStorage`](https://playground.tabris.com/?gitref=v3.3.0&snippet=local-storage.jsx)
 
 ## Methods
 
@@ -111,9 +111,6 @@ The number of items in the storage.
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
 Settable: | No
 
-
-
-This property can only be set via constructor. Once set, it cannot change anymore.
 
 
 

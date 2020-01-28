@@ -14,7 +14,7 @@ Constructor: | public
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
 Direct subclasses: | None
-JSX Support: | Element: <code style="white-space: nowrap"><a href="TextView.html" title="TextView Class Reference">&lt;TextView/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="Canvas.html" title="Canvas Class Reference">&lt;Canvas/&gt;</a></code>, <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">&lt;Composite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Page.html" title="Page Class Reference">&lt;Page/&gt;</a></code>, <code style="white-space: nowrap"><a href="RefreshComposite.html" title="RefreshComposite Class Reference">&lt;RefreshComposite/&gt;</a></code>, <code style="white-space: nowrap"><a href="ScrollView.html" title="ScrollView Class Reference">&lt;ScrollView/&gt;</a></code>, <code style="white-space: nowrap"><a href="Stack.html" title="Stack Class Reference">&lt;Stack/&gt;</a></code>, <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Child Elements: *Not Supported*<br/>Text Content: [<code style="white-space: nowrap">text</code>](#text)
+JSX Support: | Element: <code style="white-space: nowrap"><a href="#" >&lt;TextView/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="Canvas.html" title="Canvas Class Reference">&lt;Canvas/&gt;</a></code>, <code style="white-space: nowrap"><a href="Cell.html" title="Cell Class Reference">&lt;Cell/&gt;</a></code>, <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">&lt;Composite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Page.html" title="Page Class Reference">&lt;Page/&gt;</a></code>, <code style="white-space: nowrap"><a href="RefreshComposite.html" title="RefreshComposite Class Reference">&lt;RefreshComposite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Row.html" title="Row Class Reference">&lt;Row/&gt;</a></code>, <code style="white-space: nowrap"><a href="ScrollView.html" title="ScrollView Class Reference">&lt;ScrollView/&gt;</a></code>, <code style="white-space: nowrap"><a href="Stack.html" title="Stack Class Reference">&lt;Stack/&gt;</a></code>, <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Child Elements: *Not Supported*<br/>Element content sets: [<code style="white-space: nowrap">text</code>](#text)
 
 ## Examples
 ### JavaScript
@@ -32,13 +32,13 @@ new TextView({
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `TextView`](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview.jsx)  
-[<span class='language jsx'>JSX</span> Creating a `TextView` with support for markup](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-markupenabled.jsx)  
-[<span class='language jsx'>JSX</span> Creating a `TextView` with support for text links](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-link.jsx)  
-[<span class='language jsx'>JSX</span> Demonstrating various line spacing values on a `TextView`](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-link.jsx)  
-[<span class='language js'>JS</span> Creating a `TextView` with an external font](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-font-external.js)  
-[<span class='language js'>JS</span> textview-font-bundled.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-font-bundled.js)  
-[<span class='language js'>JS</span> textview-linespacing.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-linespacing.js)
+[<span class='language jsx'>JSX</span> Creating a simple `TextView`](https://playground.tabris.com/?gitref=v3.3.0&snippet=textview.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `TextView` with support for markup](https://playground.tabris.com/?gitref=v3.3.0&snippet=textview-markupenabled.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `TextView` with support for text links](https://playground.tabris.com/?gitref=v3.3.0&snippet=textview-link.jsx)  
+[<span class='language jsx'>JSX</span> Demonstrating various line spacing values on a `TextView`](https://playground.tabris.com/?gitref=v3.3.0&snippet=textview-link.jsx)  
+[<span class='language js'>JS</span> Creating a `TextView` with an external font](https://playground.tabris.com/?gitref=v3.3.0&snippet=textview-font-external.js)  
+[<span class='language js'>JS</span> textview-font-bundled.js](https://playground.tabris.com/?gitref=v3.3.0&snippet=textview-font-bundled.js)  
+[<span class='language js'>JS</span> textview-linespacing.js](https://playground.tabris.com/?gitref=v3.3.0&snippet=textview-linespacing.js)
 
 ## Constructor
 
@@ -75,8 +75,8 @@ Change Event: | [`fontChanged`](#fontchanged)
 
 See also:
   
-[<span class='language js'>JS</span> textview-font-bundled.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-font-bundled.js)  
-[<span class='language js'>JS</span> textview-font-external.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-font-external.js)
+[<span class='language js'>JS</span> textview-font-bundled.js](https://playground.tabris.com/?gitref=v3.3.0&snippet=textview-font-bundled.js)  
+[<span class='language js'>JS</span> textview-font-external.js](https://playground.tabris.com/?gitref=v3.3.0&snippet=textview-font-external.js)
 
 
 ### lineSpacing
@@ -92,7 +92,7 @@ Change Event: | [`lineSpacingChanged`](#linespacingchanged)
 
 See also:
   
-[<span class='language js'>JS</span> textview-linespacing.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-linespacing.js)
+[<span class='language js'>JS</span> textview-linespacing.js](https://playground.tabris.com/?gitref=v3.3.0&snippet=textview-linespacing.js)
 
 
 ### markupEnabled
@@ -107,7 +107,7 @@ Change Event: | [`markupEnabledChanged`](#markupenabledchanged)
 
 See also:
   
-[<span class='language jsx'>JSX</span> textview-markupenabled.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-markupenabled.jsx)
+[<span class='language jsx'>JSX</span> textview-markupenabled.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=textview-markupenabled.jsx)
 
 
 ### maxLines
@@ -143,7 +143,8 @@ The text to display.
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`textChanged`](#textchanged)
-JSX Text Property: | [Yes](../JSX.md)
+JSX Content Type: | [Text](../JSX.md)
+
 
 
 

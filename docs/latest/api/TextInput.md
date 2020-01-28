@@ -14,7 +14,7 @@ Constructor: | public
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
 Direct subclasses: | None
-JSX Support: | Element: <code style="white-space: nowrap"><a href="TextInput.html" title="TextInput Class Reference">&lt;TextInput/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="Canvas.html" title="Canvas Class Reference">&lt;Canvas/&gt;</a></code>, <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">&lt;Composite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Page.html" title="Page Class Reference">&lt;Page/&gt;</a></code>, <code style="white-space: nowrap"><a href="RefreshComposite.html" title="RefreshComposite Class Reference">&lt;RefreshComposite/&gt;</a></code>, <code style="white-space: nowrap"><a href="ScrollView.html" title="ScrollView Class Reference">&lt;ScrollView/&gt;</a></code>, <code style="white-space: nowrap"><a href="Stack.html" title="Stack Class Reference">&lt;Stack/&gt;</a></code>, <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Child Elements: *Not Supported*<br/>Text Content: [<code style="white-space: nowrap">text</code>](#text)
+JSX Support: | Element: <code style="white-space: nowrap"><a href="#" >&lt;TextInput/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="Canvas.html" title="Canvas Class Reference">&lt;Canvas/&gt;</a></code>, <code style="white-space: nowrap"><a href="Cell.html" title="Cell Class Reference">&lt;Cell/&gt;</a></code>, <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">&lt;Composite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Page.html" title="Page Class Reference">&lt;Page/&gt;</a></code>, <code style="white-space: nowrap"><a href="RefreshComposite.html" title="RefreshComposite Class Reference">&lt;RefreshComposite/&gt;</a></code>, <code style="white-space: nowrap"><a href="Row.html" title="Row Class Reference">&lt;Row/&gt;</a></code>, <code style="white-space: nowrap"><a href="ScrollView.html" title="ScrollView Class Reference">&lt;ScrollView/&gt;</a></code>, <code style="white-space: nowrap"><a href="Stack.html" title="Stack Class Reference">&lt;Stack/&gt;</a></code>, <code style="white-space: nowrap"><a href="Tab.html" title="Tab Class Reference">&lt;Tab/&gt;</a></code><br/>Child Elements: *Not Supported*<br/>Element content sets: [<code style="white-space: nowrap">text</code>](#text)
 
 ## Examples
 ### JavaScript
@@ -33,16 +33,16 @@ new TextInput({
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `TextInput`](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput.jsx)  
-[<span class='language js'>JS</span> Handling selection on a `TextInput`](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-selection.js)  
-[<span class='language jsx'>JSX</span> Handling focus changes on a `TextInput`](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput.jsx)  
-[<span class='language js'>JS</span> Creating `TextInputs` with various enter key types](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-enterkeytype.js)  
-[<span class='language js'>JS</span> Creating `TextInputs` with various keyboards](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-keyboard.js)  
-[<span class='language js'>JS</span> Showing password in clear text on a `TextInput`](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-revealpassword.js)  
-[<span class='language jsx'>JSX</span> A form using `TextInput` and other input controls](https://playground.tabris.com/?gitref=v3.2.0&snippet=input.jsx)  
-[<span class='language tsx'>TSX</span> textinput-focus.tsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-focus.tsx)  
-[<span class='language ts'>TS</span> textinput-keyboard.ts](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-keyboard.ts)  
-[<span class='language tsx'>TSX</span> textinput-style.tsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-style.tsx)
+[<span class='language jsx'>JSX</span> Creating a simple `TextInput`](https://playground.tabris.com/?gitref=v3.3.0&snippet=textinput.jsx)  
+[<span class='language js'>JS</span> Handling selection on a `TextInput`](https://playground.tabris.com/?gitref=v3.3.0&snippet=textinput-selection.js)  
+[<span class='language jsx'>JSX</span> Handling focus changes on a `TextInput`](https://playground.tabris.com/?gitref=v3.3.0&snippet=textinput.jsx)  
+[<span class='language js'>JS</span> Creating `TextInputs` with various enter key types](https://playground.tabris.com/?gitref=v3.3.0&snippet=textinput-enterkeytype.js)  
+[<span class='language js'>JS</span> Creating `TextInputs` with various keyboards](https://playground.tabris.com/?gitref=v3.3.0&snippet=textinput-keyboard.js)  
+[<span class='language js'>JS</span> Showing password in clear text on a `TextInput`](https://playground.tabris.com/?gitref=v3.3.0&snippet=textinput-revealpassword.js)  
+[<span class='language jsx'>JSX</span> A form using `TextInput` and other input controls](https://playground.tabris.com/?gitref=v3.3.0&snippet=input.jsx)  
+[<span class='language tsx'>TSX</span> textinput-focus.tsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=textinput-focus.tsx)  
+[<span class='language ts'>TS</span> textinput-keyboard.ts](https://playground.tabris.com/?gitref=v3.3.0&snippet=textinput-keyboard.ts)  
+[<span class='language tsx'>TSX</span> textinput-style.tsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=textinput-style.tsx)
 
 ## Constructor
 
@@ -150,7 +150,7 @@ Change Event: | [`enterKeyTypeChanged`](#enterkeytypechanged)
 
 See also:
   
-[<span class='language js'>JS</span> textinput-enterkeytype.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-enterkeytype.js)
+[<span class='language js'>JS</span> textinput-enterkeytype.js](https://playground.tabris.com/?gitref=v3.3.0&snippet=textinput-enterkeytype.js)
 
 
 ### floatMessage
@@ -217,8 +217,8 @@ Change Event: | [`keyboardChanged`](#keyboardchanged)
 
 See also:
   
-[<span class='language js'>JS</span> textinput-keyboard.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-keyboard.js)  
-[<span class='language ts'>TS</span> textinput-keyboard.ts](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-keyboard.ts)
+[<span class='language js'>JS</span> textinput-keyboard.js](https://playground.tabris.com/?gitref=v3.3.0&snippet=textinput-keyboard.js)  
+[<span class='language ts'>TS</span> textinput-keyboard.ts](https://playground.tabris.com/?gitref=v3.3.0&snippet=textinput-keyboard.ts)
 
 
 ### keyboardAppearanceMode
@@ -289,7 +289,7 @@ Change Event: | [`revealPasswordChanged`](#revealpasswordchanged)
 
 See also:
   
-[<span class='language js'>JS</span> textinput-revealpassword.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-revealpassword.js)
+[<span class='language js'>JS</span> textinput-revealpassword.js](https://playground.tabris.com/?gitref=v3.3.0&snippet=textinput-revealpassword.js)
 
 
 ### selection
@@ -308,7 +308,7 @@ Change Event: | [`selectionChanged`](#selectionchanged)
 
 See also:
   
-[<span class='language js'>JS</span> textinput-selection.js](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-selection.js)
+[<span class='language js'>JS</span> textinput-selection.js](https://playground.tabris.com/?gitref=v3.3.0&snippet=textinput-selection.js)
 
 
 ### style
@@ -330,7 +330,7 @@ This property can only be set via constructor or JSX. Once set, it cannot change
 
 See also:
   
-[<span class='language tsx'>TSX</span> textinput-style.tsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-style.tsx)
+[<span class='language tsx'>TSX</span> textinput-style.tsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=textinput-style.tsx)
 
 
 ### text
@@ -341,7 +341,8 @@ The text in the input field.
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`textChanged`](#textchanged)
-JSX Text Property: | [Yes](../JSX.md)
+JSX Content Type: | [Text](../JSX.md)
+
 
 
 
@@ -418,7 +419,7 @@ EventObject Type: <code style="white-space: nowrap"><a href="EventObject.html" t
 This event has no additional parameter.
 See also:
   
-[<span class='language tsx'>TSX</span> textinput-focus.tsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=textinput-focus.tsx)
+[<span class='language tsx'>TSX</span> textinput-focus.tsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=textinput-focus.tsx)
 ### input
 
 Fired when the text was changed by the user.

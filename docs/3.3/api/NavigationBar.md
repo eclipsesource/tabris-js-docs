@@ -72,10 +72,6 @@ Change Event: | Not supported
 
 
 
-This property can only be set via constructor. Once set, it cannot change anymore.
-
-
-
 ### theme
 <p class="platforms"><span class='android-tag' title='supported on Android'>Android</span></p>
 

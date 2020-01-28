@@ -14,7 +14,7 @@ Constructor: | public
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
 Direct subclasses: | None
-JSX Support: | Element: <code style="white-space: nowrap"><a href="#" >&lt;AlertDialog/&gt;</a></code><br/>Parent Elements: *Not supported*<br/>Child Elements: *Not Supported*<br/>Element Content Properties: [<code style="white-space: nowrap">message</code>](#message)
+JSX Support: | Element: <code style="white-space: nowrap"><a href="#" >&lt;AlertDialog/&gt;</a></code><br/>Parent Elements: *Not supported*<br/>Child Elements: *Not Supported*<br/>Element content sets: [<code style="white-space: nowrap">message</code>](#message)
 
 ## Examples
 ### JavaScript

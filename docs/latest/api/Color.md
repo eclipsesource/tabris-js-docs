@@ -40,6 +40,20 @@ alpha | <code style="white-space: nowrap"><a href="https://developer.mozilla.org
 
 ## Methods
 
+### equals(value)
+
+
+
+Tests if the given value is a `Color` instance that is deeply equal to this one.
+
+
+Parameter|Type|Description
+-|-|-
+value | <code style="white-space: nowrap"><a href="#" >Color</a></code> | 
+
+
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+
 ### toArray()
 
 
@@ -113,6 +127,7 @@ Settable: | No
 
 
 
+
 This property can only be set via constructor. Once set, it cannot change anymore.
 
 
@@ -124,6 +139,7 @@ A number between and including 0 and 255
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
 Settable: | No
+
 
 
 
@@ -141,6 +157,7 @@ Settable: | No
 
 
 
+
 This property can only be set via constructor. Once set, it cannot change anymore.
 
 
@@ -152,6 +169,7 @@ A number between and including 0 and 255
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
 Settable: | No
+
 
 
 
@@ -170,12 +188,14 @@ Settable: | No
 
 
 
+
 ### black
 
 
 
 Type: |<code style="white-space: nowrap"><a href="#" >Color</a></code>
 Settable: | No
+
 
 
 
@@ -188,12 +208,14 @@ Settable: | No
 
 
 
+
 ### fuchsia
 
 
 
 Type: |<code style="white-space: nowrap"><a href="#" >Color</a></code>
 Settable: | No
+
 
 
 
@@ -206,12 +228,14 @@ Settable: | No
 
 
 
+
 ### green
 
 
 
 Type: |<code style="white-space: nowrap"><a href="#" >Color</a></code>
 Settable: | No
+
 
 
 
@@ -224,12 +248,14 @@ Settable: | No
 
 
 
+
 ### maroon
 
 
 
 Type: |<code style="white-space: nowrap"><a href="#" >Color</a></code>
 Settable: | No
+
 
 
 
@@ -242,12 +268,14 @@ Settable: | No
 
 
 
+
 ### olive
 
 
 
 Type: |<code style="white-space: nowrap"><a href="#" >Color</a></code>
 Settable: | No
+
 
 
 
@@ -260,12 +288,14 @@ Settable: | No
 
 
 
+
 ### red
 
 
 
 Type: |<code style="white-space: nowrap"><a href="#" >Color</a></code>
 Settable: | No
+
 
 
 
@@ -278,12 +308,14 @@ Settable: | No
 
 
 
+
 ### teal
 
 
 
 Type: |<code style="white-space: nowrap"><a href="#" >Color</a></code>
 Settable: | No
+
 
 
 
@@ -296,6 +328,7 @@ Settable: | No
 
 
 
+
 ### white
 
 
@@ -305,12 +338,14 @@ Settable: | No
 
 
 
+
 ### yellow
 
 
 
 Type: |<code style="white-space: nowrap"><a href="#" >Color</a></code>
 Settable: | No
+
 
 
 

@@ -308,10 +308,6 @@ Change Event: | Not supported
 
 
 
-This property can only be set via constructor or JSX. Once set, it cannot change anymore.
-
-
-
 ### elevation
 
 
@@ -448,10 +444,6 @@ Type: |<code style="white-space: nowrap"><a href="../types.html#boxdimensions" t
 Settable: | <a href="../widget-basics.html#widget-properties" >By Constructor or JSX</a>
 Change Event: | Not supported
 
-
-
-
-This property can only be set via constructor or JSX. Once set, it cannot change anymore.
 
 See also:
   

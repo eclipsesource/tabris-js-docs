@@ -13,7 +13,7 @@ See also:
 [Class `Request`](./Request.md)  
 [Class `Response`](./Response.md)  
 [Class `Headers`](./Headers.md)  
-[<span class='language jsx'>JSX</span> fetch.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=fetch.jsx)
+[<span class='language jsx'>JSX</span> fetch.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=fetch.jsx)
 
 ## Methods
 

@@ -12,7 +12,7 @@ Constructor: | public
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
 Direct subclasses: | None
-JSX Support: | Element: <code style="white-space: nowrap"><a href="ActionSheetItem.html" title="ActionSheetItem Class Reference">&lt;ActionSheetItem/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="ActionSheet.html" title="ActionSheet Class Reference">&lt;ActionSheet/&gt;</a></code><br/>Child Elements: *Not Supported*<br/>Text Content: [<code style="white-space: nowrap">title</code>](#title)
+JSX Support: | Element: <code style="white-space: nowrap"><a href="#" >&lt;ActionSheetItem/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="ActionSheet.html" title="ActionSheet Class Reference">&lt;ActionSheet/&gt;</a></code><br/>Child Elements: *Not Supported*<br/>Element content sets: [<code style="white-space: nowrap">title</code>](#title)
 
 ## Constructor
 
@@ -34,6 +34,7 @@ Settable: | Yes
 
 
 
+
 This property can only be set via constructor. Once set, it cannot change anymore.
 
 
@@ -50,6 +51,7 @@ Settable: | Yes
 
 
 
+
 This property can only be set via constructor. Once set, it cannot change anymore.
 
 
@@ -60,7 +62,9 @@ This property can only be set via constructor. Once set, it cannot change anymor
 The text to be displayed for this item in the `ActionSheet`.
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
-Settable: | YesJSX Text Property: | [Yes](../JSX.md)
+Settable: | Yes
+JSX Content Type: | [Text](../JSX.md)
+
 
 
 

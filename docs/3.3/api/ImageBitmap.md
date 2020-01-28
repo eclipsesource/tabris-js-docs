@@ -4,7 +4,7 @@
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="#" >ImageBitmap</a>
 
-Represents an in-memory Image. Unlike ImageData it is immutable, but can be created from a number of sources via [createImageBitmap](#createimagebitmapimage).
+Represents an in-memory Image. Unlike ImageData it is immutable, but can be created from a number of sources via [createImageBitmap](#createimagebitmapimagesource).
 
 
 Type: | <code style="white-space: nowrap">ImageBitmap extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a></code>
@@ -55,10 +55,6 @@ Settable: | No
 
 
 
-This property can only be set via constructor. Once set, it cannot change anymore.
-
-
-
 ### width
 
 
@@ -67,10 +63,6 @@ Native image width in pixel
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
 Settable: | No
 
-
-
-
-This property can only be set via constructor. Once set, it cannot change anymore.
 
 
 

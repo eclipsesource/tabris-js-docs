@@ -14,7 +14,7 @@ Constructor: | public
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
 Direct subclasses: | <code style="white-space: nowrap"><a href="SearchAction.html" title="SearchAction Class Reference">SearchAction</a></code>
-JSX Support: | Element: <code style="white-space: nowrap"><a href="Action.html" title="Action Class Reference">&lt;Action/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="NavigationView.html" title="NavigationView Class Reference">&lt;NavigationView/&gt;</a></code><br/>Child Elements: *Not Supported*<br/>Text Content: [<code style="white-space: nowrap">title</code>](#title)
+JSX Support: | Element: <code style="white-space: nowrap"><a href="#" >&lt;Action/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="NavigationView.html" title="NavigationView Class Reference">&lt;NavigationView/&gt;</a></code><br/>Child Elements: *Not Supported*<br/>Element content sets: [<code style="white-space: nowrap">title</code>](#title)
 
 ## Examples
 ### JavaScript
@@ -36,8 +36,8 @@ new Action({
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `Action`](https://playground.tabris.com/?gitref=v3.2.0&snippet=navigationview-action.jsx)  
-[<span class='language jsx'>JSX</span> Using placement property](https://playground.tabris.com/?gitref=v3.2.0&snippet=navigationview-action-placement.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `Action`](https://playground.tabris.com/?gitref=v3.3.0&snippet=navigationview-action.jsx)  
+[<span class='language jsx'>JSX</span> Using placement property](https://playground.tabris.com/?gitref=v3.3.0&snippet=navigationview-action-placement.jsx)
 
 ## Constructor
 
@@ -66,7 +66,7 @@ Change Event: | [`imageChanged`](#imagechanged)
 ### placement
 
 
-Actions with 'default' placement will be visible in the toolbar if enough space is available, otherwise moved to the overflow section. Setting the property to 'overflow' makes the action appear there exclusively. Lastly, 'navigation' puts the action in the position normally occupied by the drawer/back button. If multiple actions have this value only the first one is displayed.
+Actions with 'default' placement will be visible in the toolbar if enough space is available, otherwise moved to the overflow section. Setting the property to 'overflow' makes the action appear there exclusively. Lastly, 'navigation' puts the action in the position normally occupied by the drawer/back button. When 'navigation' is used, only the `Action` image will be shown. If multiple actions have this value only the first one is displayed.
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'default'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'overflow'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'navigation'</a></code>
 Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'default'</a></code>
@@ -86,7 +86,8 @@ When an action is placed into a `NavigationView`, the `NavigationView` property 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`titleChanged`](#titlechanged)
-JSX Text Property: | [Yes](../JSX.md)
+JSX Content Type: | [Text](../JSX.md)
+
 
 
 

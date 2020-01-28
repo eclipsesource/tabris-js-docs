@@ -4,7 +4,7 @@
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a> > <a href="#" >App</a>
 
-Provides information about the application.
+Provides information about the application and allows to handle global application ui events.
 
 
 Type: | <code style="white-space: nowrap">App extends <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a></code>
@@ -17,10 +17,10 @@ JSX Support: | No
 
 See also:
   
-[<span class='language jsx'>JSX</span> Displaying app properties](https://playground.tabris.com/?gitref=v3.2.0&snippet=app-info.jsx)  
-[<span class='language jsx'>JSX</span> Displaying app events](https://playground.tabris.com/?gitref=v3.2.0&snippet=app-events.jsx)  
-[<span class='language jsx'>JSX</span> Launching an url](https://playground.tabris.com/?gitref=v3.2.0&snippet=app-launch.jsx)  
-[<span class='language js'>JS</span> Register and use an external font](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-font-external.js)
+[<span class='language jsx'>JSX</span> Displaying app properties](https://playground.tabris.com/?gitref=v3.3.0&snippet=app-info.jsx)  
+[<span class='language jsx'>JSX</span> Displaying app events](https://playground.tabris.com/?gitref=v3.3.0&snippet=app-events.jsx)  
+[<span class='language jsx'>JSX</span> Launching an url](https://playground.tabris.com/?gitref=v3.3.0&snippet=app-launch.jsx)  
+[<span class='language js'>JS</span> Register and use an external font](https://playground.tabris.com/?gitref=v3.3.0&snippet=textview-font-external.js)
 
 ## Methods
 
@@ -61,7 +61,7 @@ url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/e
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="View &quot;Promise&quot; on MDN">Promise</a></code>
 See also:
   
-[<span class='language jsx'>JSX</span> app-launch.jsx](https://playground.tabris.com/?gitref=v3.2.0&snippet=app-launch.jsx)
+[<span class='language jsx'>JSX</span> app-launch.jsx](https://playground.tabris.com/?gitref=v3.3.0&snippet=app-launch.jsx)
 
 ### registerFont(alias, file)
 
@@ -98,16 +98,12 @@ Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.or
 ### debugBuild
 
 
-Returns `false` if this app was build build in production mode, otherwise `true`. In production mode no debugger can be attached to the JavaScript VM.
+Returns `false` if this app was build build in production mode, otherwise `true`. In production mode no debugger can be attached to the JavaScript VM or native runtime.
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
-
-
-
-This property can only be set via constructor. Once set, it cannot change anymore.
 
 
 
@@ -120,10 +116,6 @@ Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
-
-
-
-This property can only be set via constructor. Once set, it cannot change anymore.
 
 
 
@@ -183,16 +175,12 @@ Change Event: | [`trustedCertificatesChanged`](#trustedcertificateschanged)
 ### version
 
 
-The user facing version number, e.g. '2.1-beta3'.
+The user facing version number of the app.
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
-
-
-
-This property can only be set via constructor. Once set, it cannot change anymore.
 
 
 
@@ -205,10 +193,6 @@ Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
-
-
-
-This property can only be set via constructor. Once set, it cannot change anymore.
 
 
 
@@ -250,9 +234,30 @@ Fired when the app is being destroyed. After this callback no more interaction w
 EventObject Type: <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a>&lt;<a href="#" >App</a>&gt;</code>
 
 This event has no additional parameter.
+### keyPress
+
+<p class="platforms"><span class='android-tag' title='supported on Android'>Android</span></p>Fired when a hardware key is pressed. Note that these events stem from physical hardware, not from the virtual keyboard.
+
+When invoking `event.preventDefault()` the key event is not propagated to the widget hierarchy. However, a `TextInput` with focus will still receive the key event.
+
+EventObject Type: <code style="white-space: nowrap">AppKeyPressEvent&lt;<a href="#" >App</a>&gt;</code>
+
+Property|Type|Description
+-|-|-
+action | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'up'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'down'</a></code> | The action of this key event.
+altKey | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The pressed state of the ALT key.
+character | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The character generated by the specified key and modifier key state combination.
+ctrlKey | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The pressed state of the CTRL key.
+deviceId | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The id for the device that this event came from. An id of zero indicates that the event didn't come from a physical device and maps to the default keymap. The other numbers are arbitrary and you shouldn't depend on the values.
+functionKey | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The pressed state of the FUNCTION key.
+keyCode | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The key code of the key event. It represents the physical key that was pressed, not the Unicode character.
+preventDefault | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a></code> | Call to suppress the key events to be dispatched to the apps widget hierarchy. Note that a `TextInput` with focus will still receive the event and add a character to its text accordingly.
+shiftKey | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The pressed state of the SHIFT key.
+time | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The time this event occurred, in the android.os.SystemClock#uptimeMillis time base.
+
 ### backNavigation
 
-Fired when the back button is pressed on Android.
+<p class="platforms"><span class='android-tag' title='supported on Android'>Android</span></p>Fired when a back navigation is invoked by the user.
 
 EventObject Type: <code style="white-space: nowrap">AppBackNavigationEvent&lt;<a href="#" >App</a>&gt;</code>
 

@@ -29,7 +29,7 @@ console.log(font.size); // 24
 
 See also:
   
-[<span class='language js'>JS</span> Applying multiple font styles to TextViews](https://playground.tabris.com/?gitref=v3.2.0&snippet=textview-font-bundled.js)
+[<span class='language js'>JS</span> Applying multiple font styles to TextViews](https://playground.tabris.com/?gitref=v3.3.0&snippet=textview-font-bundled.js)
 
 ## Constructor
 
@@ -43,6 +43,20 @@ weight | <code style="white-space: nowrap"><a href="https://developer.mozilla.or
 style | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'italic'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'normal'</a></code> | Face of the font family to be used *Optional.*
 
 ## Methods
+
+### equals(value)
+
+
+
+Tests if the given value is a `Font` instance that is deeply equal to this one.
+
+
+Parameter|Type|Description
+-|-|-
+value | <code style="white-space: nowrap"><a href="#" >Font</a></code> | 
+
+
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 ### toString()
 
@@ -109,6 +123,7 @@ Settable: | No
 
 
 
+
 This property can only be set via constructor. Once set, it cannot change anymore.
 
 
@@ -120,6 +135,7 @@ Positive number in dip
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
 Settable: | No
+
 
 
 
@@ -137,6 +153,7 @@ Settable: | No
 
 
 
+
 This property can only be set via constructor. Once set, it cannot change anymore.
 
 
@@ -148,6 +165,7 @@ Boldness of the font
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'black'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'bold'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'medium'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'thin'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'light'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'normal'</a></code>
 Settable: | No
+
 
 
 
@@ -166,12 +184,14 @@ Settable: | No
 
 
 
+
 ### monospace
 
 
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">"monospace"</a></code>
 Settable: | No
+
 
 
 
@@ -184,12 +204,14 @@ Settable: | No
 
 
 
+
 ### serif
 
 
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">"serif"</a></code>
 Settable: | No
+
 
 
 

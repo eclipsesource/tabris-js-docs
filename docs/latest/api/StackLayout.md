@@ -4,7 +4,7 @@
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="Layout.html" title="Layout Class Reference">Layout</a> > <a href="#" >StackLayout</a>
 
-Stack based layout manager. Can be set on the `layout` property of any `Composite` or widget extending `Composite` like `Page` or `Tab` widget. The `Stack` uses it as the default `layout`.<br/><br/> All children of the composite are automatically arranged in one vertical stack, starting from the top. The `layoutData` on the children is currently ignored.
+Stack based layout manager. Can be set on the `layout` property of any `Composite` or widget extending `Composite` like `Page` or `Tab` widget. The `Stack` uses it as the default `layout`.<br/><br/> All children of the composite are automatically arranged in one vertical stack, starting from the top.
 
 
 Type: | <code style="white-space: nowrap">StackLayout extends <a href="Layout.html" title="Layout Class Reference">Layout</a></code>
@@ -30,7 +30,7 @@ contentView.append(
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `Stack` with an included `StackLayout`](https://playground.tabris.com/?gitref=v3.2.0&snippet=stack.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `Stack` with an included `StackLayout`](https://playground.tabris.com/?gitref=v3.3.0&snippet=stack.jsx)
 
 ## Constructor
 
@@ -53,6 +53,7 @@ Settable: | No
 
 
 
+
 This property can only be set via constructor. Once set, it cannot change anymore.
 
 
@@ -60,11 +61,12 @@ This property can only be set via constructor. Once set, it cannot change anymor
 ### spacing
 
 
-Additional space to add between the children in device independent pixel.
+The space between the children in device independent pixel.
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
 Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">0</a></code>
 Settable: | No
+
 
 
 
@@ -81,6 +83,7 @@ Instance of StackLayout used as the default `layout` property value of `Stack` w
 
 Type: |<code style="white-space: nowrap"><a href="#" >StackLayout</a></code>
 Settable: | Yes
+
 
 
 

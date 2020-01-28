@@ -35,6 +35,22 @@ Parameter|Type|Description
 -|-|-
 imageLike | <code style="white-space: nowrap">ImageLikeObject</code> | An image configuration. See [ImageLikeObject](../types.html#imagelikeobject)
 
+## Methods
+
+### equals(value)
+
+
+
+Tests if the given value is a `Image` instance that is deeply equal to this one.
+
+
+Parameter|Type|Description
+-|-|-
+value | <code style="white-space: nowrap"><a href="#" >Image</a></code> | 
+
+
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+
 ## Static Methods
 
 ### from(imageValue)
@@ -92,6 +108,7 @@ Settable: | No
 
 
 
+
 This property can only be set via constructor. Once set, it cannot change anymore.
 
 
@@ -103,6 +120,7 @@ Image scale factor - the image will be scaled down by this factor. See [ImageLik
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Settable: | No
+
 
 
 
@@ -122,6 +140,7 @@ Settable: | No
 
 
 
+
 This property can only be set via constructor. Once set, it cannot change anymore.
 
 
@@ -133,6 +152,7 @@ Image width in dip. Extracted from the image file when 'auto'.
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Settable: | No
+
 
 
 

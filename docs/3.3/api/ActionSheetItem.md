@@ -12,7 +12,7 @@ Constructor: | public
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
 Direct subclasses: | None
-JSX Support: | Element: <code style="white-space: nowrap"><a href="#" >&lt;ActionSheetItem/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="ActionSheet.html" title="ActionSheet Class Reference">&lt;ActionSheet/&gt;</a></code><br/>Child Elements: *Not Supported*<br/>Element Content Properties: [<code style="white-space: nowrap">title</code>](#title)
+JSX Support: | Element: <code style="white-space: nowrap"><a href="#" >&lt;ActionSheetItem/&gt;</a></code><br/>Parent Elements: <code style="white-space: nowrap"><a href="ActionSheet.html" title="ActionSheet Class Reference">&lt;ActionSheet/&gt;</a></code><br/>Child Elements: *Not Supported*<br/>Element content sets: [<code style="white-space: nowrap">title</code>](#title)
 
 ## Constructor
 

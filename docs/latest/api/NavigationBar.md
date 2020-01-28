@@ -31,7 +31,7 @@ navigationBar.displayMode = 'float';
 
 See also:
   
-[<span class='language jsx'>JSX</span> Demonstrating various properties of the `NavigationBar`](https://playground.tabris.com/?gitref=v3.2.0&snippet=navigationbar.jsx)
+[<span class='language jsx'>JSX</span> Demonstrating various properties of the `NavigationBar`](https://playground.tabris.com/?gitref=v3.3.0&snippet=navigationbar.jsx)
 
 ## Properties
 
@@ -69,10 +69,6 @@ Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
-
-
-
-This property can only be set via constructor. Once set, it cannot change anymore.
 
 
 

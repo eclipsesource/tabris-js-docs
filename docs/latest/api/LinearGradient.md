@@ -29,7 +29,7 @@ console.log(linearGradient.direction); // "90"
 
 See also:
   
-[<span class='language js'>JS</span> Creating various types of linear gradients](https://playground.tabris.com/?gitref=v3.2.0&snippet=widget-lineargradient.js)
+[<span class='language js'>JS</span> Creating various types of linear gradients](https://playground.tabris.com/?gitref=v3.3.0&snippet=widget-lineargradient.js)
 
 ## Constructor
 
@@ -41,6 +41,20 @@ colorStops | <code style="white-space: nowrap"><a href="https://developer.mozill
 direction | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The direction of the gradient line in degrees. *Optional.*
 
 ## Methods
+
+### equals(value)
+
+
+
+Tests if the given value is a `LinearGradient` instance that is deeply equal to this one.
+
+
+Parameter|Type|Description
+-|-|-
+value | <code style="white-space: nowrap"><a href="#" >LinearGradient</a></code> | 
+
+
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 ### toString()
 
@@ -107,6 +121,7 @@ Settable: | No
 
 
 
+
 This property can only be set via constructor. Once set, it cannot change anymore.
 
 
@@ -118,6 +133,7 @@ The direction of the gradient line in degrees.
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
 Settable: | No
+
 
 
 
