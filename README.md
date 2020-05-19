@@ -23,6 +23,8 @@ The documentation is created from various git repositories, that are expected to
 
 See: https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/
 
+> Note: The `jekyll` dependency of the `github-pages` gem is not yet compatible with Ruby 2.7. Make sure Ruby 2.6 is used in your environment.
+
 Update:
 
     bundle update
