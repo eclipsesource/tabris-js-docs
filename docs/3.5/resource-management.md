@@ -65,8 +65,8 @@ The following snippet shows how to define a font resource:
     "ios": {
       "size": 22,
       "family": ["sans-serif"],
-       "weight": "black"  
-    },    
+       "weight": "black"
+    },
   }
 }
 ```
