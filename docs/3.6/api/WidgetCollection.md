@@ -118,7 +118,7 @@ Returns a new *WidgetCollection* containing all widgets in this collection and t
 
 Parameter|Type|Description
 -|-|-
-...items | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="View &quot;Array&quot; on MDN">Array</a>&lt;<a href="Widget.html" title="Widget Class Reference">Widget</a> &#124; <a href="Widget.html" title="Widget Class Reference">Widget</a>[] &#124; <a href="#" >WidgetCollection</a>&gt;</code> | 
+...items | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="View &quot;Array&quot; on MDN">Array</a>&lt;<a href="Widget.html" title="Widget Class Reference">Widget</a><br/>&#124; <a href="Widget.html" title="Widget Class Reference">Widget</a>[]<br/>&#124; <a href="#" >WidgetCollection</a>&gt;</code> | 
 
 
 Returns: <code style="white-space: nowrap"><a href="#" >WidgetCollection</a>&lt;<a href="Widget.html" title="Widget Class Reference">Widget</a>&gt;</code>

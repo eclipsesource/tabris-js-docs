@@ -135,7 +135,7 @@ As a string this is a file system path, relative path or URL. [Data URIs](https:
 If a closed ImageBitmap is given the constructor will throw.
 A given Blob must contain an encoded image.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a><br/> &#124; <a href="ImageBitmap.html" title="ImageBitmap Class Reference">ImageBitmap</a><br/> &#124; <a href="Blob.html" title="Blob Class Reference">Blob</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a><br/>&#124; <a href="ImageBitmap.html" title="ImageBitmap Class Reference">ImageBitmap</a><br/>&#124; <a href="Blob.html" title="Blob Class Reference">Blob</a></code>
 Settable: | No
 
 
