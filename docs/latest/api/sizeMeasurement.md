@@ -17,7 +17,7 @@ JSX Support: | No
 
 See also:
   
-[<span class='language jsx'>JSX</span> How to measure text with various parameters](https://playground.tabris.com/?gitref=v3.5.0&snippet=sizemeasurement.jsx)
+[<span class='language jsx'>JSX</span> How to measure text with various parameters](https://playground.tabris.com/?gitref=v3.6.0&snippet=sizemeasurement.jsx)
 
 ## Methods
 

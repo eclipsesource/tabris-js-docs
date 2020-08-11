@@ -32,7 +32,7 @@ new AlertDialog({
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating various types of alert dialogs](https://playground.tabris.com/?gitref=v3.5.0&snippet=alertdialog.jsx)
+[<span class='language jsx'>JSX</span> Creating various types of alert dialogs](https://playground.tabris.com/?gitref=v3.6.0&snippet=alertdialog.jsx)
 
 ## Constructor
 
@@ -95,7 +95,7 @@ The message to display inside the dialog.
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`messageChanged`](#messagechanged)
-JSX Content Type: | [Text](../JSX.md)
+JSX Content Type: | [Text](../declarative-ui.md#jsx-specifics)
 
 
 

@@ -31,7 +31,7 @@ new ToggleButton({text: 'Toggle button'})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `ToggleButton`](https://playground.tabris.com/?gitref=v3.5.0&snippet=togglebutton.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `ToggleButton`](https://playground.tabris.com/?gitref=v3.6.0&snippet=togglebutton.jsx)
 
 ## Constructor
 
@@ -101,7 +101,7 @@ The button's label text.
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`textChanged`](#textchanged)
-JSX Content Type: | [Text](../JSX.md)
+JSX Content Type: | [Text](../declarative-ui.md#jsx-specifics)
 
 
 

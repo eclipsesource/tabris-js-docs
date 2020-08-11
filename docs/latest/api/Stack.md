@@ -36,9 +36,9 @@ stack.append(
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `Stack`](https://playground.tabris.com/?gitref=v3.5.0&snippet=stack.jsx)  
-[<span class='language jsx'>JSX</span> Creating a `Stack` with horizontal alignment](https://playground.tabris.com/?gitref=v3.5.0&snippet=stack-alignment.jsx)  
-[<span class='language jsx'>JSX</span> Creating a `Stack` with vertical alignment](https://playground.tabris.com/?gitref=v3.5.0&snippet=stack-valign.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `Stack`](https://playground.tabris.com/?gitref=v3.6.0&snippet=stack.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `Stack` with horizontal alignment](https://playground.tabris.com/?gitref=v3.6.0&snippet=stack-alignment.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `Stack` with vertical alignment](https://playground.tabris.com/?gitref=v3.6.0&snippet=stack-valign.jsx)
 
 ## Constructor
 
@@ -67,7 +67,7 @@ This property can only be set via constructor or JSX. Once set, it cannot change
 
 See also:
   
-[<span class='language jsx'>JSX</span> stack-alignment.jsx](https://playground.tabris.com/?gitref=v3.5.0&snippet=stack-alignment.jsx)
+[<span class='language jsx'>JSX</span> stack-alignment.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=stack-alignment.jsx)
 
 
 ### layout

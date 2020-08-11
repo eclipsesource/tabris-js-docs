@@ -31,7 +31,7 @@ console.dirxml({});
 
 See also:
   
-[<span class='language jsx'>JSX</span> Logging to the `console` with various log levels](https://playground.tabris.com/?gitref=v3.5.0&snippet=console.jsx)
+[<span class='language jsx'>JSX</span> Logging to the `console` with various log levels](https://playground.tabris.com/?gitref=v3.6.0&snippet=console.jsx)
 
 ## Methods
 
@@ -96,7 +96,7 @@ Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.or
 
 
 
-XML tree representation of a given object, if available. Supported types include all widgets and `localStorage`. 
+XML tree representation of a given object, if available. Supported types include all widgets `localStorage` and `secureStorage`. 
 
 *The output is NOT JSX, it is a human-readable summary that displays XML-conforming string representations of some select property values.
 

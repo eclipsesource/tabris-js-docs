@@ -10,7 +10,7 @@ The `@property` decorator can be used in any class, not just subclasses of `Widg
 
 ## @property (no parameter)
 
-> See example apps ["property-change-events"](https://github.com/eclipsesource/tabris-decorators/tree/v3.5.0/examples/property-change-events) (TypeScript) and ["property-change-events-jsx"](https://github.com/eclipsesource/tabris-decorators/tree/v3.5.0/examples/property-change-events) (JavaScript/JSX).
+> See example apps ["property-change-events"](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/property-change-events) (TypeScript) and ["property-change-events-jsx"](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/property-change-events) (JavaScript/JSX).
 
 Triggers change events and (in TypeScript) performs implicit runtime checks on any value the property is set to.
 
@@ -91,7 +91,7 @@ It is currently not possible to use `type` to describe interfaces (for "duck typ
 
 Where `typeGuard` is of the type `(value: any) => boolean`.
 
-> See example app ["property-value-checks"](https://github.com/eclipsesource/tabris-decorators/tree/v3.5.0/examples/property-value-checks).
+> See example app ["property-value-checks"](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/property-value-checks).
 
 Uses the given function (type guard) to perform type checks. The type guard may be more strict than the TypeScript compiler (e.g. allowing only positive numbers for a `number` property), but should never be less strict.
 

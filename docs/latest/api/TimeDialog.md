@@ -31,7 +31,7 @@ new TimeDialog()
 
 See also:
   
-[<span class='language tsx'>TSX</span> Creating a simple `TimeDialog`](https://playground.tabris.com/?gitref=v3.5.0&snippet=timedialog.tsx)
+[<span class='language tsx'>TSX</span> Creating a simple `TimeDialog`](https://playground.tabris.com/?gitref=v3.6.0&snippet=timedialog.tsx)
 
 ## Constructor
 

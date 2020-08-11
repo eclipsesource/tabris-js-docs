@@ -31,8 +31,8 @@ new Button({text: 'Save'})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Create a simple `Button`](https://playground.tabris.com/?gitref=v3.5.0&snippet=button.jsx)  
-[<span class='language jsx'>JSX</span> Create buttons with different styles](https://playground.tabris.com/?gitref=v3.5.0&snippet=button-style.jsx)
+[<span class='language jsx'>JSX</span> Create a simple `Button`](https://playground.tabris.com/?gitref=v3.6.0&snippet=button.jsx)  
+[<span class='language jsx'>JSX</span> Create buttons with different styles](https://playground.tabris.com/?gitref=v3.6.0&snippet=button-style.jsx)
 
 ## Constructor
 
@@ -157,7 +157,7 @@ This property can only be set via constructor or JSX. Once set, it cannot change
 
 See also:
   
-[<span class='language jsx'>JSX</span> button-style.jsx](https://playground.tabris.com/?gitref=v3.5.0&snippet=button-style.jsx)
+[<span class='language jsx'>JSX</span> button-style.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=button-style.jsx)
 
 
 ### text
@@ -168,7 +168,7 @@ The button's label text.
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`textChanged`](#textchanged)
-JSX Content Type: | [Text](../JSX.md)
+JSX Content Type: | [Text](../declarative-ui.md#jsx-specifics)
 
 
 

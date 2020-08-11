@@ -31,7 +31,7 @@ new Composite({left: 0, top: 0, width: 128, height: 256})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `Composite`](https://playground.tabris.com/?gitref=v3.5.0&snippet=composite.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `Composite`](https://playground.tabris.com/?gitref=v3.6.0&snippet=composite.jsx)
 
 ## Constructor
 
@@ -85,18 +85,62 @@ widgets | <code style="white-space: nowrap"><a href="WidgetCollection.html" titl
 
 Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
-### apply(properties)
+### apply(options, rules)
 
 
 
-Applies the given properties to all descendants that match the associated selector(s).
+Applies the given attributes to all descendants that match the associated selector(s). Each attributes object may contain properties to be set and listeners to be registered. An entry will be treated as a listener if it follows the naming scheme "onEventType". IMPORTANT: Listeners previously registered (for the same type) via the `apply` method, a [JSX](../declarative-ui.md) element attribute or a [widget factory](./utils.md#asfactoryconstructor) call will be de-registered. This means you can call apply repeatedly and have a deterministic outcome. Listeners registered programmatically (e.g. `widget.onTap(...)` are not affected by this.)<br/><br/>For better type safety enable [strict mode](#applymode-rules) and use the [`Set`](./utils.md#settarget-attributes) to create properties objects.
 
-If you wish to always exclude specific "internal" children from this, overwrite the `children` method on their parent. See `children` for details.
+If you wish to always exclude specific "internal" children from this, overwrite the `children` method on their parent. See "[Encapsulation](../selector.md#encapsulation)".
 
 
 Parameter|Type|Description
 -|-|-
-properties | <code style="white-space: nowrap">{[selector]: <a href="../types.html#propertieswidget" title="Properties&lt;Widget&gt;">Properties</a>&lt;<a href="Widget.html" title="Widget Class Reference">Widget</a>&gt;}</code> | 
+options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;mode?: 'default'&#124;'strict',<br/>&nbsp;&nbsp;trigger?: string<br/>}</code> | If mode is set to `'strict'` the function checks that all selector match at least one widget, and that id selector match exactly one widget.<br/>A `trigger` is string to be associated with the given rulset. If set to `'update'`, the ruleset will be applied once immediately and then again every time `apply('update')` is called. If set to any event-attribute name, such as `'onTap'`, it will automatically re-apply the ruleset when this event is triggered.
+rules | <code style="white-space: nowrap">{[selector]: Attributes} <br/>&#124; (widget) => {[selector]: Attributes}</code> | The ruleset to apply. May also be given as a callback which is passed to the widget instance and must return the actual ruleset. This parameter can also be `null` if the `trigger` option is set. This will stop re-applying the ruleset previously associated with that trigger.
+
+
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
+
+### apply(rules)
+
+
+
+Shorthand for `apply({mode: 'default'}, rules)`
+
+
+Parameter|Type|Description
+-|-|-
+rules | <code style="white-space: nowrap">{[selector]: Attributes} <br/>&#124; (widget) => {[selector]: Attributes}</code> | The ruleset to apply. May also be given as a callback which is passed to the widget instance and must return the actual ruleset.
+
+
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
+
+### apply(mode, rules)
+
+
+
+Shorthand for `apply({mode: mode}, rules})`
+
+
+Parameter|Type|Description
+-|-|-
+mode | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'default'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'strict'</a></code> | If this is set to `'strict'` the function checks that all selector match at least one widget, and that id selector match exactly one widget.
+rules | <code style="white-space: nowrap">{[selector]: Attributes} <br/>&#124; (widget) => {[selector]: Attributes}</code> | The ruleset to apply. May also be given as a callback which is passed to the widget instance and must return the actual ruleset.
+
+
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
+
+### apply(trigger)
+
+
+
+Applies the ruleset from the last call with `trigger` set to `'update'`.
+
+
+Parameter|Type|Description
+-|-|-
+trigger | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'update'</a></code> | 
 
 
 Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
@@ -107,7 +151,7 @@ Returns: <code style="white-space: nowrap"><a href="#" title="This object">this<
 
 Returns a (possibly empty) collection of all children of this widget that match the given selector.
 
-When writing custom UI components it may be useful to overwrite this method to prevent access to the internal children by external code. Doing so also affects `find` and `apply`, on this widget as well as on all parents, thereby preventing accidental clashes of widget id or class values. See also `_children`, `_find` and `_apply`.
+When writing custom UI components it may be useful to overwrite this method to prevent access to the internal children by external code. Doing so also affects `find` and `apply`, on this widget as well as on all parents, thereby preventing accidental clashes of widget id or class values. See "[Encapsulation](../selector.md#encapsulation)".
 
 
 Parameter|Type|Description
@@ -123,7 +167,7 @@ Returns: <code style="white-space: nowrap"><a href="WidgetCollection.html" title
 
 Returns a collection containing all descendants of all widgets in this collection that match the given selector.
 
-If you wish to always exclude specific "internal" children from the result, overwrite the `children` method on their parent. See `children` for details.
+If you wish to always exclude specific "internal" children from the result, overwrite the [`children`](#childrenselector) method ([details](#childrenselector)) to return an empty `WidgetCollection`, or use the [`@component`](../databinding/@component.md) decorator. **These children will then only be visible via the protected `_find` method.** See "[Encapsulation](../selector.md#encapsulation)"
 
 
 Parameter|Type|Description
@@ -166,16 +210,60 @@ index | <code style="white-space: nowrap"><a href="https://developer.mozilla.org
 
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
-### _apply(properties)
+### _apply(options, rules)
 
 
 
-Identical to the `apply` method, but intended to be used by subclasses in case the `children` method was overwritten . See `children` for details.
+Identical to the `apply(options, rules)` method, but intended to be used by subclasses in case the `children` method was overwritten . See "[Encapsulation](../selector.md#encapsulation)"
 
 
 Parameter|Type|Description
 -|-|-
-properties | <code style="white-space: nowrap">{[selector]: <a href="../types.html#propertieswidget" title="Properties&lt;Widget&gt;">Properties</a>&lt;<a href="Widget.html" title="Widget Class Reference">Widget</a>&gt;}</code> | 
+options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;mode?: 'default'&#124;'strict',<br/>&nbsp;&nbsp;trigger?: string<br/>}</code> | If mode is set to `'strict'` the function checks that all selector match at least one widget, and that id selector match exactly one widget.<br/>A `trigger` is string to be associated with the given rulset. If set to `'update'`, the ruleset will be applied once immediately and then again every time `apply('update')` is called. If set to any event-attribute name, such as `'onTap'`, it will automatically re-apply the ruleset when this event is triggered.
+rules | <code style="white-space: nowrap">{[selector]: Attributes} <br/>&#124; (widget) => {[selector]: Attributes}</code> | The ruleset to apply. May also be given as a callback which is passed to the widget instance and must return the actual ruleset.
+
+
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
+
+### _apply(rules)
+
+
+
+Identical to the `apply(rules)` method, but intended to be used by subclasses in case the `children` method was overwritten . See "[Encapsulation](../selector.md#encapsulation)"
+
+
+Parameter|Type|Description
+-|-|-
+rules | <code style="white-space: nowrap">{[selector]: Attributes} <br/>&#124; (widget) => {[selector]: Attributes}</code> | The ruleset to apply. May also be given as a callback which is passed to the widget instance and must return the actual ruleset.
+
+
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
+
+### _apply(mode, rules)
+
+
+
+Identical to the `apply(mode, rules)` method, but intended to be used by subclasses in case the `children` method was overwritten . See "[Encapsulation](../selector.md#encapsulation)"
+
+
+Parameter|Type|Description
+-|-|-
+mode | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'default'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'strict'</a></code> | If this is set to `'strict'` the function checks that all selector match at least one widget, and that id selector match exactly one widget.
+rules | <code style="white-space: nowrap">{[selector]: Attributes} <br/>&#124; (widget) => {[selector]: Attributes}</code> | The ruleset to apply. May also be given as a callback which is passed to the widget instance and must return the actual ruleset.
+
+
+Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
+
+### _apply(trigger)
+
+
+
+Applies the ruleset from the last call with `trigger` set to `'update'`.
+
+
+Parameter|Type|Description
+-|-|-
+trigger | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'update'</a></code> | 
 
 
 Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
@@ -198,7 +286,7 @@ Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.or
 
 
 
-Identical to the `children` method, but intended to be used by subclasses in case the `children` method was overwritten. See `children` for details.
+Identical to the `children` method, but intended to be used by subclasses in case the `children` method was overwritten. See "[Encapsulation](../selector.md#encapsulation)".
 
 
 Parameter|Type|Description
@@ -212,7 +300,7 @@ Returns: <code style="white-space: nowrap"><a href="WidgetCollection.html" title
 
 
 
-Identical to the `find` method, but intended to be used by subclasses in case the `children` method was overwritten. See `children` for details.
+Identical to the `find` method, but intended to be used only by subclasses (custom components) that encapsulate their children. This is the case if the `children` method was overwritten or the `@component` decorator is used on the subclass.
 
 
 Parameter|Type|Description

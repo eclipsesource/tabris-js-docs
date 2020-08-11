@@ -6,7 +6,7 @@
 
 The `localStorage` object allows storing key-value pairs in a persistent store. Both keys and values are stored as strings.
 
-On iOS, there is an additional object `secureStorage` available in the global scope. This is a drop-in replacement for `localStorage` that keeps data in the encrypted iOS Keychain.
+In addition Tabris.js adds support for a `secureStorage` available in the global scope. This is a drop-in replacement for `localStorage` that keeps data encrypted using the Keychain on iOS and the AndroidKeyStore on Android 6+. Note that on Android 5 the store is encrypted but does not use hardware encryption.
 
 The `localStorage` is only meant to store relatively short strings. To store larger amounts of data it is recommended to use the [FileSystem](./fs.html) API.
 
@@ -31,7 +31,7 @@ console.log(localStorage.getItem('message')); // "Hello World!"
 
 See also:
   
-[<span class='language jsx'>JSX</span> A example how to read and write from the `localStorage`](https://playground.tabris.com/?gitref=v3.5.0&snippet=local-storage.jsx)
+[<span class='language jsx'>JSX</span> A example how to read and write from the `localStorage`](https://playground.tabris.com/?gitref=v3.6.0&snippet=local-storage.jsx)
 
 ## Methods
 

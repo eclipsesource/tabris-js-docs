@@ -32,7 +32,7 @@ new Video({
 
 See also:
   
-[<span class='language js'>JS</span> Creating a `Video` widget](https://playground.tabris.com/?gitref=v3.5.0&snippet=video.js)
+[<span class='language js'>JS</span> Creating a `Video` widget](https://playground.tabris.com/?gitref=v3.6.0&snippet=video.js)
 
 ## Constructor
 

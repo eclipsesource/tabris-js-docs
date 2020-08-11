@@ -29,7 +29,7 @@ console.log(linearGradient.direction); // "90"
 
 See also:
   
-[<span class='language js'>JS</span> Creating various types of linear gradients](https://playground.tabris.com/?gitref=v3.5.0&snippet=widget-lineargradient.js)
+[<span class='language js'>JS</span> Creating various types of linear gradients](https://playground.tabris.com/?gitref=v3.6.0&snippet=widget-lineargradient.js)
 
 ## Constructor
 

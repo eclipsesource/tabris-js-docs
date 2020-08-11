@@ -17,11 +17,11 @@ JSX Support: | No
 
 See also:
   
-[<span class='language jsx'>JSX</span> Displaying app properties](https://playground.tabris.com/?gitref=v3.5.0&snippet=app-info.jsx)  
-[<span class='language jsx'>JSX</span> Displaying app events](https://playground.tabris.com/?gitref=v3.5.0&snippet=app-events.jsx)  
-[<span class='language jsx'>JSX</span> Launching an url](https://playground.tabris.com/?gitref=v3.5.0&snippet=app-launch.jsx)  
-[<span class='language js'>JS</span> Register and use an external font](https://playground.tabris.com/?gitref=v3.5.0&snippet=textview-font-external.js)  
-[<span class='language jsx'>JSX</span> Share various types of data with the `share()` API](https://playground.tabris.com/?gitref=v3.5.0&snippet=share.jsx)
+[<span class='language jsx'>JSX</span> Displaying app properties](https://playground.tabris.com/?gitref=v3.6.0&snippet=app-info.jsx)  
+[<span class='language jsx'>JSX</span> Displaying app events](https://playground.tabris.com/?gitref=v3.6.0&snippet=app-events.jsx)  
+[<span class='language jsx'>JSX</span> Launching an url](https://playground.tabris.com/?gitref=v3.6.0&snippet=app-launch.jsx)  
+[<span class='language js'>JS</span> Register and use an external font](https://playground.tabris.com/?gitref=v3.6.0&snippet=textview-font-external.js)  
+[<span class='language jsx'>JSX</span> Share various types of data with the `share()` API](https://playground.tabris.com/?gitref=v3.6.0&snippet=app-share.jsx)
 
 ## Methods
 
@@ -62,7 +62,7 @@ url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/e
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="View &quot;Promise&quot; on MDN">Promise</a></code>
 See also:
   
-[<span class='language jsx'>JSX</span> app-launch.jsx](https://playground.tabris.com/?gitref=v3.5.0&snippet=app-launch.jsx)
+[<span class='language jsx'>JSX</span> app-launch.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=app-launch.jsx)
 
 ### registerFont(alias, file)
 
@@ -110,6 +110,9 @@ data | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;title: <a href="https
 
 
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="View &quot;Promise&quot; on MDN">Promise</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
+See also:
+  
+[<span class='language jsx'>JSX</span> app-share.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=app-share.jsx)
 
 
 ## Properties

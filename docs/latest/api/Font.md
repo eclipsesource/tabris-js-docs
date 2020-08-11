@@ -29,7 +29,7 @@ console.log(font.size); // 24
 
 See also:
   
-[<span class='language js'>JS</span> Applying multiple font styles to TextViews](https://playground.tabris.com/?gitref=v3.5.0&snippet=textview-font-bundled.js)
+[<span class='language js'>JS</span> Applying multiple font styles to TextViews](https://playground.tabris.com/?gitref=v3.6.0&snippet=textview-font-bundled.js)
 
 ## Constructor
 

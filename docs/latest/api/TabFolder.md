@@ -34,9 +34,9 @@ new TabFolder({left: 0, top: 0, right: 0, bottom: 0})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a `TabFolder` containing a set of tabs](https://playground.tabris.com/?gitref=v3.5.0&snippet=tabfolder.jsx)  
-[<span class='language js'>JS</span> tabfolder-swipe-parallax.js](https://playground.tabris.com/?gitref=v3.5.0&snippet=tabfolder-swipe-parallax.js)  
-[<span class='language jsx'>JSX</span> tabfolder-swipe.jsx](https://playground.tabris.com/?gitref=v3.5.0&snippet=tabfolder-swipe.jsx)
+[<span class='language jsx'>JSX</span> Creating a `TabFolder` containing a set of tabs](https://playground.tabris.com/?gitref=v3.6.0&snippet=tabfolder.jsx)  
+[<span class='language js'>JS</span> tabfolder-swipe-parallax.js](https://playground.tabris.com/?gitref=v3.6.0&snippet=tabfolder-swipe-parallax.js)  
+[<span class='language jsx'>JSX</span> tabfolder-swipe.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=tabfolder-swipe.jsx)
 
 ## Constructor
 
@@ -61,9 +61,9 @@ Change Event: | [`pagingChanged`](#pagingchanged)
 
 
 ### selectedTabIndicatorTintColor
-<p class="platforms"><span class='android-tag' title='supported on Android'>Android</span></p>
 
-The color used for the underline strip of the selected tab. Only applies on Android when the `tabBarLocation` is `top`.
+
+The color used for the indicator of the selected tab. Only applies when the `tabBarLocation` is `top`. Available on Android and iOS 13+.
 
 Type: |<code style="white-space: nowrap"><a href="../types.html#colorvalue" title="ColorValue Type Reference">ColorValue</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>

@@ -36,9 +36,9 @@ row.append(
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `Row`](https://playground.tabris.com/?gitref=v3.5.0&snippet=row.jsx)  
-[<span class='language jsx'>JSX</span> Creating a `Row` with vertical alignment](https://playground.tabris.com/?gitref=v3.5.0&snippet=row-alignment.jsx)  
-[<span class='language jsx'>JSX</span> Creating a `Row` with horizontal alignment](https://playground.tabris.com/?gitref=v3.5.0&snippet=row-halign.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `Row`](https://playground.tabris.com/?gitref=v3.6.0&snippet=row.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `Row` with vertical alignment](https://playground.tabris.com/?gitref=v3.6.0&snippet=row-alignment.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `Row` with horizontal alignment](https://playground.tabris.com/?gitref=v3.6.0&snippet=row-halign.jsx)
 
 ## Constructor
 
@@ -53,7 +53,11 @@ properties | <code style="white-space: nowrap"><a href="../types.html#properties
 ### alignment
 
 
-Determines the vertical placement of the children. For the `stretchY` value to work correctly the `Row` needs to be given a height either by setting `height` or by setting `top` and `bottom`.
+Determines the vertical placement of the children.
+
+ For `stretchY` to work correctly the `Row` needs to be given a height either by setting `height` or by setting `top` and `bottom`.
+
+If `baseline` is set the first widget in the row will determine where that baseline is. By setting `top`, `bottom` or `centerY` on that widget the baseline can be shifted.
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'top'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'centerY'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'stretchY'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'bottom'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'baseline'</a></code>
 Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'top'</a></code>
@@ -67,7 +71,7 @@ This property can only be set via constructor or JSX. Once set, it cannot change
 
 See also:
   
-[<span class='language jsx'>JSX</span> row-alignment.jsx](https://playground.tabris.com/?gitref=v3.5.0&snippet=row-alignment.jsx)
+[<span class='language jsx'>JSX</span> row-alignment.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=row-alignment.jsx)
 
 
 ### layout

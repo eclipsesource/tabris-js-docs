@@ -20,7 +20,7 @@ Where `bindings` is a plain object in the format of:
 
 > This a shorthand for [`@bind({all: bindings})`](./@bind.md#configall). It can be used for object-to-widget two-way bindings if no `typeGuard` or `type` option is needed.
 
-> See example apps ["bind-two-way-model"](https://github.com/eclipsesource/tabris-decorators/tree/v3.5.0/examples/bind-two-way-model) (TypeScript) and ["bind-two-way-model-jsx"](https://github.com/eclipsesource/tabris-decorators/tree/v3.5.0/examples/bind-two-way-model-jsx) (JavaScript/JSX).
+> See example apps ["bind-two-way-model"](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/bind-two-way-model) (TypeScript) and ["bind-two-way-model-jsx"](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/bind-two-way-model-jsx) (JavaScript/JSX).
 
 Declares a two-way binding between the property `<sourceProperty>` of the *source object* (the object assigned to the decorated property) and the property `<targetProperty>` of the *target element* (a direct or indirect child element of the component) with an `id` of `<targetElementId>`. This means both properties will be kept in sync as long as the source object is assigned to the component property. The `bindings` object may define one binding per source property.
 

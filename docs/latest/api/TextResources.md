@@ -18,9 +18,9 @@ JSX Support: | No
 See also:
   
 [Resource Management in Tabris.js](../resource-management.md)  
-[Defining raw text resource data in a separate JSON file.](https://github.com/eclipsesource/tabris-js/blob/v3.5.0/snippets/resources/texts.json)  
-[Converting raw text resource data to `TextResources` instance.](https://github.com/eclipsesource/tabris-js/blob/v3.5.0/snippets/resources/index.ts)  
-[<span class='language tsx'>TSX</span> Using a TextResources dictionary](https://playground.tabris.com/?gitref=v3.5.0&snippet=resource-management.tsx)
+[Defining raw text resource data in a separate JSON file.](https://github.com/eclipsesource/tabris-js/blob/v3.6.0/snippets/resources/texts.json)  
+[Converting raw text resource data to `TextResources` instance.](https://github.com/eclipsesource/tabris-js/blob/v3.6.0/snippets/resources/index.ts)  
+[<span class='language tsx'>TSX</span> Using a TextResources dictionary](https://playground.tabris.com/?gitref=v3.6.0&snippet=resource-management.tsx)
 
 ## Static Methods
 
@@ -36,7 +36,7 @@ Entries in the "data" object starting with "$" are considered configuration opti
 Parameter|Type|Description
 -|-|-
 base | <code style="white-space: nowrap">Base</code> | A plain object or another `TextResources` instance containing values to inherit by the new `TextResources` dictionary.
-data | <code style="white-space: nowrap">Data</code> | The raw data (plain object) to create the dictionary from. The format must match the [Tabris.js texts JSON schema](https://github.com/eclipsesource/tabris-js/blob/v3.5.0/schema/texts.json).
+data | <code style="white-space: nowrap">Data</code> | The raw data (plain object) to create the dictionary from. The format must match the [Tabris.js texts JSON schema](https://github.com/eclipsesource/tabris-js/blob/v3.6.0/schema/texts.json).
 
 
 Returns: <code style="white-space: nowrap"><a href="#" >TextResources</a></code>
@@ -45,12 +45,12 @@ Returns: <code style="white-space: nowrap"><a href="#" >TextResources</a></code>
 
 
 
-Creates a texts dictionary from the given raw "data" object. The format must match the [Tabris.js texts JSON schema](https://github.com/eclipsesource/tabris-js/blob/v3.5.0/schema/texts.json). Entries in the "data" object starting with "$" are considered configuration options and will not become entries in the final texts dictionary.
+Creates a texts dictionary from the given raw "data" object. The format must match the [Tabris.js texts JSON schema](https://github.com/eclipsesource/tabris-js/blob/v3.6.0/schema/texts.json). Entries in the "data" object starting with "$" are considered configuration options and will not become entries in the final texts dictionary.
 
 
 Parameter|Type|Description
 -|-|-
-data | <code style="white-space: nowrap">Data</code> | The raw data (plain object) to create the dictionary from. The format must match the [Tabris.js texts JSON schema](https://github.com/eclipsesource/tabris-js/blob/v3.5.0/schema/texts.json).
+data | <code style="white-space: nowrap">Data</code> | The raw data (plain object) to create the dictionary from. The format must match the [Tabris.js texts JSON schema](https://github.com/eclipsesource/tabris-js/blob/v3.6.0/schema/texts.json).
 
 
 Returns: <code style="white-space: nowrap"><a href="#" >TextResources</a></code>

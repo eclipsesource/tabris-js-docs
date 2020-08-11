@@ -36,8 +36,8 @@ new Action({
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `Action`](https://playground.tabris.com/?gitref=v3.5.0&snippet=navigationview-action.jsx)  
-[<span class='language jsx'>JSX</span> Using placement property](https://playground.tabris.com/?gitref=v3.5.0&snippet=navigationview-action-placement.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `Action`](https://playground.tabris.com/?gitref=v3.6.0&snippet=navigationview-action.jsx)  
+[<span class='language jsx'>JSX</span> Using placement property](https://playground.tabris.com/?gitref=v3.6.0&snippet=navigationview-action-placement.jsx)
 
 ## Constructor
 
@@ -86,7 +86,7 @@ When an action is placed into a `NavigationView`, the `NavigationView` property 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`titleChanged`](#titlechanged)
-JSX Content Type: | [Text](../JSX.md)
+JSX Content Type: | [Text](../declarative-ui.md#jsx-specifics)
 
 
 

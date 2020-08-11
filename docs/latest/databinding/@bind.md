@@ -12,9 +12,9 @@ This decorator creates two-way bindings within a custom component. Changes to th
 
 Where `path` is a string in the format `'#<targetElementId>.<targetProperty>'`.
 
-> This a shorthand for [`@bind({path: string})`](#config.path). It can be used for simple two-way bindings if no `typeGuard` or `type` option is needed.
+> This a shorthand for [`@bind({path: string})`](#configpath). It can be used for simple two-way bindings if no `typeGuard` or `type` option is needed.
 
-> See example apps ["bind-two-way"](https://github.com/eclipsesource/tabris-decorators/tree/v3.5.0/examples/bind-two-way) (TypeScript) and ["bind-two-way-jsx"](https://github.com/eclipsesource/tabris-decorators/tree/v3.5.0/examples/bind-two-way-jsx) (JavaScript/JSX).
+> See example apps ["bind-two-way"](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/bind-two-way) (TypeScript) and ["bind-two-way-jsx"](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/bind-two-way-jsx) (JavaScript/JSX).
 
 Binds the decorated *component property* to the property `<targetProperty>` of the *target element* (a direct or indirect child element of the component) with an `id` of `<targetElementId>`.
 
@@ -118,7 +118,7 @@ Lets the property [convert](./@property.md#configconvert) the incoming value to 
 
 Any *component property* can be used for two-way bindings, unless it's explicitly implemented with a setter and getter, or with `Object.defineProperty`. These are not supported. The target property needs to generate change events for the two-way binding to work. This is already the case for all built-in properties of Tabris.js widgets.
 
-> See example apps ["bind-two-way-change-events"](https://github.com/eclipsesource/tabris-decorators/tree/v3.5.0/examples/bind-two-way-change-events) (TypeScript) and ["bind-two-way-change-events-jsx"](https://github.com/eclipsesource/tabris-decorators/tree/v3.5.0/examples/bind-two-way-change-events-jsx) (JavaScript/JSX).
+> See example apps ["bind-two-way-change-events"](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/bind-two-way-change-events) (TypeScript) and ["bind-two-way-change-events-jsx"](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/bind-two-way-change-events-jsx) (JavaScript/JSX).
 
 If the target widget itself is a custom component the recommended way to implement change events is using [`@property`](./@property.md). Note that there is no need to [explicitly create an event API](./@event.md#event), `@bind` can 'talk' directly to `@property`. However, an explicit implementation is also possible.
 

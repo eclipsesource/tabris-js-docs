@@ -63,7 +63,7 @@ The text to be displayed for this item in the `ActionSheet`.
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | Yes
-JSX Content Type: | [Text](../JSX.md)
+JSX Content Type: | [Text](../declarative-ui.md#jsx-specifics)
 
 
 

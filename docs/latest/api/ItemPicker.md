@@ -38,10 +38,11 @@ contentView.append(
 
 See also:
   
-[<span class='language jsx'>JSX</span> Example with various item types](https://github.com/eclipsesource/tabris-decorators/tree/v3.5.0/examples/itempicker-jsx)  
-[<span class='language jsx'>JSX</span> Data Binding Example](https://github.com/eclipsesource/tabris-decorators/tree/v3.5.0/examples/bind-itempicker-list-jsx)  
-[<span class='language tsx'>TSX</span> Example with various item types (TypeScript variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.5.0/examples/itempicker)  
-[<span class='language tsx'>TSX</span> Data Binding Example (TypeScript variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.5.0/examples/bind-itempicker-list)
+[<span class='language js'>JS</span> Example with various item types](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/itempicker-js)  
+[<span class='language jsx'>JSX</span> Example with various item types (JSX variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/itempicker-jsx)  
+[<span class='language jsx'>JSX</span> Data Binding Example](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/bind-itempicker-list-jsx)  
+[<span class='language tsx'>TSX</span> Example with various item types (TypeScript/JSX variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/itempicker)  
+[<span class='language tsx'>TSX</span> Data Binding Example (TypeScript variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/bind-itempicker-list)
 
 ## Constructor
 

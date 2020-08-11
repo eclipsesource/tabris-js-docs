@@ -30,7 +30,8 @@ fs.writeFile(fs.cacheDir + '/file.txt', 'Hello World!')
 
 See also:
   
-[<span class='language jsx'>JSX</span> Using the file system to read and write files](https://playground.tabris.com/?gitref=v3.5.0&snippet=fs.jsx)
+[<span class='language jsx'>JSX</span> Using the file system to read and write files](https://playground.tabris.com/?gitref=v3.6.0&snippet=fs.jsx)  
+[<span class='language jsx'>JSX</span> Opening files and showing their properties](https://playground.tabris.com/?gitref=v3.6.0&snippet=fs-openfile-advanced.jsx)
 
 ## Methods
 
@@ -106,6 +107,22 @@ path | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/
 
 
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+
+### openFile(options?)
+
+
+
+Allows to select a file via a native file picker ui. The supplied `options` object provides additional configuration parameters to adjust the picker behavior.
+
+Once the picker ui is closed the returned promise resolves with an array of `File` objects or an empty array if no file has been selected.
+
+
+Parameter|Type|Description
+-|-|-
+options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;type: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, // A mime type to only select a certain category of files. Eg. `'image/png'` or `image/*`. defaults to */*<br/>&nbsp;&nbsp;quantity: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'single'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'multiple'</a> // The number of files to select. defaults to single<br/>}</code> | An optional set of configuration parameters. *Optional.*
+
+
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="View &quot;Promise&quot; on MDN">Promise</a>&lt;<a href="File.html" title="File Class Reference">File</a>[]&gt;</code>
 
 ### readDir(path)
 

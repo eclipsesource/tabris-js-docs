@@ -4,6 +4,9 @@
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a> > <a href="Widget.html" title="Widget Class Reference">Widget</a> > <a href="Composite.html" title="Composite Class Reference">Composite</a> > <a href="#" >Cell</a>
 
+This widget is expected by [`ListView`](./ListView.md) as a child (in JSX) or turn value of `createCell`. It's data-binding enabled by default. It's children can also [not be selected](../selector.md#encapsulation) from the outside, except for using `apply` directly on the instance. This allows using it as a function component as demonstrated in [this example](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/listview-cells-js).
+
+
 Type: | <code style="white-space: nowrap">Cell&lt;ItemType&gt; extends <a href="Composite.html" title="Composite Class Reference">Composite</a></code>
 Generics: | <span id="generics">ItemType: <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code><br/></span>
 Constructor: | public
@@ -56,6 +59,8 @@ A callback that must return `true` for any item this cell can display. This is u
 
 Setting this property also enables runtime item type checks, so it can be useful to set it even if only one `<Cell>` element is present.
 
+**This property only has an effect when `Cell` is used as an JSX child element of `ListView`.
+
 Type: |<code style="white-space: nowrap">(<a title="Literally any JavaScript value">value</a>) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">null</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
@@ -83,6 +88,8 @@ The class (constructor) or name (`typeof` value) of the item type this cell can 
 
 Setting this property also enables runtime item type checks, so it can be useful to set it even if only one `<Cell>` element is present.
 
+**This property only has an effect when `Cell` is used as an JSX child element of `ListView`.
+
 Type: |<code style="white-space: nowrap">Constructor<br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'string'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'number'</a><br/> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'boolean'</a></code>
 Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">null</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >By Constructor or JSX</a>
@@ -101,6 +108,8 @@ This property can only be set via constructor or JSX. Once set, it cannot change
 If set to true (e.g. `<Cell selectable>`), the cell will trigger the `select` event of [`ListView`](./ListView.md) when tapped.
 
 Alternatively, any of the static `ListView` [`select`](./ListView.md#selectprimaryev) trigger methods can be registered as listeners of any event of `Cell` or its child elements. This allows `select` events to be triggered on more specific user interactions.
+
+**This property only has an effect when `Cell` is used as an JSX child element of `ListView`.
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">false</a></code>

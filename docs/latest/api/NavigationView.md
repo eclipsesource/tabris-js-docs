@@ -32,12 +32,12 @@ new NavigationView({layoutData: 'stretch'})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `NavigationView` with pages](https://playground.tabris.com/?gitref=v3.5.0&snippet=navigationview-page-stacked.jsx)  
-[<span class='language jsx'>JSX</span> Demonstrating a `NavigationView` with various interactive properties](https://playground.tabris.com/?gitref=v3.5.0&snippet=navigationview-properties.jsx)  
-[<span class='language js'>JS</span> Using multiple `NavigationViews` in `TabFolder` `Tabs`](https://playground.tabris.com/?gitref=v3.5.0&snippet=navigationview-tabfolder.js)  
-[<span class='language jsx'>JSX</span> navigationview-action-placement.jsx](https://playground.tabris.com/?gitref=v3.5.0&snippet=navigationview-action-placement.jsx)  
-[<span class='language jsx'>JSX</span> navigationview-action.jsx](https://playground.tabris.com/?gitref=v3.5.0&snippet=navigationview-action.jsx)  
-[<span class='language jsx'>JSX</span> navigationview-searchaction.jsx](https://playground.tabris.com/?gitref=v3.5.0&snippet=navigationview-searchaction.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `NavigationView` with pages](https://playground.tabris.com/?gitref=v3.6.0&snippet=navigationview-page-stacked.jsx)  
+[<span class='language jsx'>JSX</span> Demonstrating a `NavigationView` with various interactive properties](https://playground.tabris.com/?gitref=v3.6.0&snippet=navigationview-properties.jsx)  
+[<span class='language js'>JS</span> Using multiple `NavigationViews` in `TabFolder` `Tabs`](https://playground.tabris.com/?gitref=v3.6.0&snippet=navigationview-tabfolder.js)  
+[<span class='language jsx'>JSX</span> navigationview-action-placement.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=navigationview-action-placement.jsx)  
+[<span class='language jsx'>JSX</span> navigationview-action.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=navigationview-action.jsx)  
+[<span class='language jsx'>JSX</span> navigationview-searchaction.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=navigationview-searchaction.jsx)
 
 ## Constructor
 

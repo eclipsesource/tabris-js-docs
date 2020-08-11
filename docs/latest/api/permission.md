@@ -39,8 +39,8 @@ if (permission.isAuthorized('camera')) {
 
 See also:
   
-[<span class='language jsx'>JSX</span> Simple approach to check and request permissions](https://playground.tabris.com/?gitref=v3.5.0&snippet=permission.jsx)  
-[<span class='language tsx'>TSX</span> Full featured example with multiple permissions and states](https://playground.tabris.com/?gitref=v3.5.0&snippet=permission-advanced.tsx)
+[<span class='language jsx'>JSX</span> Simple approach to check and request permissions](https://playground.tabris.com/?gitref=v3.6.0&snippet=permission.jsx)  
+[<span class='language tsx'>TSX</span> Full featured example with multiple permissions and states](https://playground.tabris.com/?gitref=v3.6.0&snippet=permission-advanced.tsx)
 
 ## Methods
 
@@ -108,7 +108,7 @@ Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.or
 
 
 
-Tries to authorize access to the given permissions, either by already holding the permissions or by requesting authorization for the given permissions. When the result is `'granted' the `onAuthorized` callback will be invoked. If any other state is determined the `onUnauthorized` callback will be invoked. In case of an `Error` the `onError` callback will be invoked.
+Tries to authorize access to the given permissions, either by already holding the permissions or by requesting authorization for the given permissions. When the result is `'granted'` the `onAuthorized` callback will be invoked. If any other state is determined the `onUnauthorized` callback will be invoked. In case of an `Error` the `onError` callback will be invoked.
 
 
 Parameter|Type|Description

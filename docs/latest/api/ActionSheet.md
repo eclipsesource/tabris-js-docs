@@ -33,7 +33,7 @@ new ActionSheet({
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `ActionSheet`](https://playground.tabris.com/?gitref=v3.5.0&snippet=actionsheet.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `ActionSheet`](https://playground.tabris.com/?gitref=v3.6.0&snippet=actionsheet.jsx)
 
 ## Constructor
 
@@ -86,7 +86,7 @@ A descriptive message for the available actions.
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`messageChanged`](#messagechanged)
-JSX Content Type: | [Text](../JSX.md)
+JSX Content Type: | [Text](../declarative-ui.md#jsx-specifics)
 
 
 

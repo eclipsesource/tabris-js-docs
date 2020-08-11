@@ -11,7 +11,7 @@ Type: | <code style="white-space: nowrap">Widget extends <a href="NativeObject.h
 Constructor: | protected
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
-Direct subclasses: | <code style="white-space: nowrap"><a href="Action.html" title="Action Class Reference">Action</a></code>, <code style="white-space: nowrap"><a href="ActivityIndicator.html" title="ActivityIndicator Class Reference">ActivityIndicator</a></code>, <code style="white-space: nowrap"><a href="Button.html" title="Button Class Reference">Button</a></code>, <code style="white-space: nowrap"><a href="CameraView.html" title="CameraView Class Reference">CameraView</a></code>, <code style="white-space: nowrap"><a href="CheckBox.html" title="CheckBox Class Reference">CheckBox</a></code>, <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">Composite</a></code>, <code style="white-space: nowrap"><a href="ImageView.html" title="ImageView Class Reference">ImageView</a></code>, <code style="white-space: nowrap"><a href="Picker.html" title="Picker Class Reference">Picker</a></code>, <code style="white-space: nowrap"><a href="ProgressBar.html" title="ProgressBar Class Reference">ProgressBar</a></code>, <code style="white-space: nowrap"><a href="RadioButton.html" title="RadioButton Class Reference">RadioButton</a></code>, <code style="white-space: nowrap"><a href="Slider.html" title="Slider Class Reference">Slider</a></code>, <code style="white-space: nowrap"><a href="Switch.html" title="Switch Class Reference">Switch</a></code>, <code style="white-space: nowrap"><a href="TextInput.html" title="TextInput Class Reference">TextInput</a></code>, <code style="white-space: nowrap"><a href="TextView.html" title="TextView Class Reference">TextView</a></code>, <code style="white-space: nowrap"><a href="ToggleButton.html" title="ToggleButton Class Reference">ToggleButton</a></code>, <code style="white-space: nowrap"><a href="Video.html" title="Video Class Reference">Video</a></code>, <code style="white-space: nowrap"><a href="WebView.html" title="WebView Class Reference">WebView</a></code>
+Direct subclasses: | <code style="white-space: nowrap"><a href="Action.html" title="Action Class Reference">Action</a></code>, <code style="white-space: nowrap"><a href="ActivityIndicator.html" title="ActivityIndicator Class Reference">ActivityIndicator</a></code>, <code style="white-space: nowrap"><a href="Button.html" title="Button Class Reference">Button</a></code>, <code style="white-space: nowrap"><a href="CameraView.html" title="CameraView Class Reference">CameraView</a></code>, <code style="white-space: nowrap"><a href="CheckBox.html" title="CheckBox Class Reference">CheckBox</a></code>, <code style="white-space: nowrap"><a href="Composite.html" title="Composite Class Reference">Composite</a></code>, <code style="white-space: nowrap"><a href="ImageView.html" title="ImageView Class Reference">ImageView</a></code>, <code style="white-space: nowrap"><a href="PdfView.html" title="PdfView Class Reference">PdfView</a></code>, <code style="white-space: nowrap"><a href="Picker.html" title="Picker Class Reference">Picker</a></code>, <code style="white-space: nowrap"><a href="ProgressBar.html" title="ProgressBar Class Reference">ProgressBar</a></code>, <code style="white-space: nowrap"><a href="RadioButton.html" title="RadioButton Class Reference">RadioButton</a></code>, <code style="white-space: nowrap"><a href="Slider.html" title="Slider Class Reference">Slider</a></code>, <code style="white-space: nowrap"><a href="Switch.html" title="Switch Class Reference">Switch</a></code>, <code style="white-space: nowrap"><a href="TextInput.html" title="TextInput Class Reference">TextInput</a></code>, <code style="white-space: nowrap"><a href="TextView.html" title="TextView Class Reference">TextView</a></code>, <code style="white-space: nowrap"><a href="ToggleButton.html" title="ToggleButton Class Reference">ToggleButton</a></code>, <code style="white-space: nowrap"><a href="Video.html" title="Video Class Reference">Video</a></code>, <code style="white-space: nowrap"><a href="WebView.html" title="WebView Class Reference">WebView</a></code>
 JSX Support: | No
 
 
@@ -19,14 +19,14 @@ See also:
   
 [Understanding layouts in Tabris.js](../layout.md)  
 [Understanding gesture events in Tabris.js](../touch.md)  
-[<span class='language jsx'>JSX</span> A `Widget` with padding](https://playground.tabris.com/?gitref=v3.5.0&snippet=widget-padding.jsx)  
-[<span class='language jsx'>JSX</span> A card style `Widget` with corner radius and elevation](https://playground.tabris.com/?gitref=v3.5.0&snippet=widget-cornerradius.jsx)  
-[<span class='language js'>JS</span> A `Widget` with a linear-gradient background](https://playground.tabris.com/?gitref=v3.5.0&snippet=widget-lineargradient.js)  
-[<span class='language js'>JS</span> Using touch events on a `Widget`](https://playground.tabris.com/?gitref=v3.5.0&snippet=widget-longpress-to-drag.js)  
-[<span class='language jsx'>JSX</span> widget-elevation.jsx](https://playground.tabris.com/?gitref=v3.5.0&snippet=widget-elevation.jsx)  
-[<span class='language jsx'>JSX</span> widget-exclude-from-layout.jsx](https://playground.tabris.com/?gitref=v3.5.0&snippet=widget-exclude-from-layout.jsx)  
-[<span class='language jsx'>JSX</span> widget-highlightontouch.jsx](https://playground.tabris.com/?gitref=v3.5.0&snippet=widget-highlightontouch.jsx)  
-[<span class='language js'>JS</span> widget-touch.js](https://playground.tabris.com/?gitref=v3.5.0&snippet=widget-touch.js)
+[<span class='language jsx'>JSX</span> A `Widget` with padding](https://playground.tabris.com/?gitref=v3.6.0&snippet=widget-padding.jsx)  
+[<span class='language jsx'>JSX</span> A card style `Widget` with corner radius and elevation](https://playground.tabris.com/?gitref=v3.6.0&snippet=widget-cornerradius.jsx)  
+[<span class='language js'>JS</span> A `Widget` with a linear-gradient background](https://playground.tabris.com/?gitref=v3.6.0&snippet=widget-lineargradient.js)  
+[<span class='language js'>JS</span> Using touch events on a `Widget`](https://playground.tabris.com/?gitref=v3.6.0&snippet=widget-longpress-to-drag.js)  
+[<span class='language jsx'>JSX</span> widget-elevation.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=widget-elevation.jsx)  
+[<span class='language jsx'>JSX</span> widget-exclude-from-layout.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=widget-exclude-from-layout.jsx)  
+[<span class='language jsx'>JSX</span> widget-highlightontouch.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=widget-highlightontouch.jsx)  
+[<span class='language js'>JS</span> widget-touch.js](https://playground.tabris.com/?gitref=v3.6.0&snippet=widget-touch.js)
 
 ## Methods
 
@@ -293,17 +293,17 @@ Change Event: | [`cornerRadiusChanged`](#cornerradiuschanged)
 
 See also:
   
-[<span class='language jsx'>JSX</span> widget-cornerradius.jsx](https://playground.tabris.com/?gitref=v3.5.0&snippet=widget-cornerradius.jsx)
+[<span class='language jsx'>JSX</span> widget-cornerradius.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=widget-cornerradius.jsx)
 
 
 ### data
 
 
-A general-purpose object that allows the application to attach arbitrary data to the widget. Manipulations on this object have no effect on the widget itself in any way. Example: `widget.data.myData = myData;`
+A general-purpose property that may be set to any object. It is initialized with an empty object for historical reasons (backwards compatibility).
 
 Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a></code>
-Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
-Change Event: | Not supported
+Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
+Change Event: | [`dataChanged`](#datachanged)
 
 
 
@@ -322,7 +322,7 @@ Change Event: | [`elevationChanged`](#elevationchanged)
 
 See also:
   
-[<span class='language jsx'>JSX</span> widget-elevation.jsx](https://playground.tabris.com/?gitref=v3.5.0&snippet=widget-elevation.jsx)
+[<span class='language jsx'>JSX</span> widget-elevation.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=widget-elevation.jsx)
 
 
 ### enabled
@@ -377,7 +377,7 @@ Change Event: | [`highlightOnTouchChanged`](#highlightontouchchanged)
 
 See also:
   
-[<span class='language jsx'>JSX</span> widget-highlightontouch.jsx](https://playground.tabris.com/?gitref=v3.5.0&snippet=widget-highlightontouch.jsx)
+[<span class='language jsx'>JSX</span> widget-highlightontouch.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=widget-highlightontouch.jsx)
 
 
 ### id
@@ -447,7 +447,7 @@ Change Event: | Not supported
 
 See also:
   
-[<span class='language jsx'>JSX</span> widget-padding.jsx](https://playground.tabris.com/?gitref=v3.5.0&snippet=widget-padding.jsx)
+[<span class='language jsx'>JSX</span> widget-padding.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=widget-padding.jsx)
 
 
 ### right
@@ -540,7 +540,7 @@ touches | <code style="white-space: nowrap">[{x: <a href="https://developer.mozi
 
 See also:
   
-[<span class='language js'>JS</span> widget-longpress-to-drag.js](https://playground.tabris.com/?gitref=v3.5.0&snippet=widget-longpress-to-drag.js)
+[<span class='language js'>JS</span> widget-longpress-to-drag.js](https://playground.tabris.com/?gitref=v3.6.0&snippet=widget-longpress-to-drag.js)
 ### pan
 
 Fired continuously after a finger touching the widget moved for a certain distance.
@@ -977,4 +977,14 @@ EventObject Type: <code style="white-space: nowrap"><a href="../types.html#prope
 Property|Type|Description
 -|-|-
 value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The new value of [highlightOnTouch](#highlightontouch).
+
+### dataChanged
+
+Fired when the [data](#data) property has changed.
+
+EventObject Type: <code style="white-space: nowrap"><a href="../types.html#propertychangedeventtargettype-valuetype" title="PropertyChangedEvent&lt;TargetType, ValueType&gt;">PropertyChangedEvent</a>&lt;<a href="#" >Widget</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a>&gt;</code>
+
+Property|Type|Description
+-|-|-
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a></code> | The new value of [data](#data).
 

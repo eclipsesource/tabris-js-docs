@@ -31,7 +31,7 @@ new Switch()
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a Switch](https://playground.tabris.com/?gitref=v3.5.0&snippet=switch.jsx)
+[<span class='language jsx'>JSX</span> Creating a Switch](https://playground.tabris.com/?gitref=v3.6.0&snippet=switch.jsx)
 
 ## Constructor
 

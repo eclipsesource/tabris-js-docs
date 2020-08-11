@@ -8,13 +8,13 @@ Tabris.js offers APIs to find and manipulate widgets anywhere in the UI tree usi
 
 ### Type Selectors
 
-The simplest method to select widgets is to refer to their type. For example, the following statement would select all instances of `CheckBox`. [This also works with JSX element names](./JSX.md#stateless-functional-components).
+The simplest method to select widgets is to refer to their type. For example, the following statement would select all instances of `CheckBox`. [This also works with JSX element names](./declarative-ui.md#stateless-functional-components).
 
 ```js
 page.find('CheckBox')
 ```
 
-You may also give the type via the constructor or [JSX Element](./JSX.md#stateless-functional-components) instead of a string:
+You may also give the type via the constructor or [JSX Element](./declarative-ui.md#stateless-functional-components) instead of a string:
 
 ```js
 page.find(CheckBox)
@@ -194,7 +194,7 @@ Such a collection is created implicitly whenever a constructor is used as a [typ
 
 ### composite.children()
 
-The method `composite.children(selector)` method returns a new widget collection containing the composite's current children that match the given selector. This includes only first generation descendants, so children of children are not part of the result.
+The method `composite.children(selector)` method returns a new widget collection containing the composite's current children that match the given selector. This includes only first generation descendants, so children of children are not part of the result. If the composite is a custom component (user defined subclass) that [encapsulates](#encapsulation) its children **the method will always return an empty `WidgetCollection`.
 
 The selector parameter defaults to `*`, so `children()` is the same as `children('*')`.
 
@@ -214,7 +214,7 @@ This will modify the first two children of the given composite since these are `
 
 ### composite.find()
 
-The method `composite.find(selector)` returns a new widget collection containing all descendants that match the given selector. This excludes the widget the method was called on, and any descendants that are [encapsulated](#encapsulation).
+The method `composite.find(selector)` returns a new widget collection containing all descendants that match the given selector. **This excludes** the widget the method was called on, **and any descendants of [encapsulated](#encapsulation) components**.
 
 The selector parameter defaults to `*`, so `find()` is the same as `find('*')`.
 
@@ -232,15 +232,83 @@ The selector parameter defaults to `*`, so `find()` is the same as `find('*')`.
 
 This will modify all `TextView` elements in the tree.
 
+### composite.apply()
+
+__Note: Within [encapsulated](#encapsulation) components, use `_apply()` instead.__
+
+A shortcut for setting different sets of properties for different selections in one method call. The method takes a plain object with selectors as keys and property objects as values. This object is called a "ruleset":
+
+```js
+page.apply({
+  '#okbutton': {text: 'OK!', background: 'yellow'},
+  '#cancelbutton': {text: 'Cancel!', textColor: 'red'}
+});
+```
+__The scope includes the widget it is called on__:
+
+```js
+page.apply({':host': {background: 'green'}}); // same as "page.background = green";
+```
+
+The order in which the property objects are applied depends on the type of selectors being used. The order is:
+
+- `'*'` > `'Type'` > `'.class'` > `'#id'`
+
+For example, the following call would make all widgets within the page blue, except for the buttons, which would be green, except for `'#mybutton'`, which would be red:
+
+```js
+page.apply({
+  '#mybutton': {background: 'red'},
+  'Button': {background: 'green'},
+  '*': {background: 'blue'}
+});
+```
+
+When using child selectors, the more specific selector wins. In this example, all buttons are green except for those directly attached to `page`, which are red.
+
+```js
+page.apply({
+  ':host > Button': {background: 'red'},
+  'Button': {background: 'green'}
+});
+```
+
+> :point_right: The order of the properties in the object literal is meaningless. According to the EcmaScript standard the members of a JavaScript object do not have a defined order. The priority of two selectors with the same specificity is undefined.
+
+To ensure `apply` addresses the right widgets it can be executed in 'strict' mode and use the [`Set`](./api/utils.md#settarget-attributes) helper function to create the properties object. The kind of the selector then determines how many widgets must match (exactly one for id, at least one for any other), and `Set` determines what type the widget must have. If these conditions are not met an error will be thrown.
+
+```js
+page.apply('strict', {
+  '#foo': Set(Button, {textColor: 'red'}), // must match exactly one Button
+  '.bar': Set(TextView, {background: 'green'}) // must match one ore more TextViews
+});
+```
+
+Listeners can also be registered via `apply`:
+```js
+
+page.apply('strict', {
+  '#foo': Set(Button, {onSelect: listener})
+});
+```
+
+> :point_right: Unlike listener registration via methods (e.g. `button.onSelect(listener)`), `apply` *replaces* any listener previously registered via apply for the same event type. These "attached" listeners work like properties. In the above example, if apply previously registered another listener for `onSelect` on the 'foo' button, that listener will be de-registered before the new one is registered. It will also de-register any listener for that event type that was registered via [declarative UI](./declarative-ui.md).
+
+Finally, `apply` can also take a callback instead of a ruleset object. That callback is given the host widget and must return a ruleset that may be derived from the widget state. If a "trigger" event is given the ruleset will be applied again when that event is fired. For more information see ["Functional Components"](./declarative-ui.md#functional-components).
+
 ### $()
 
-This function is a global alias for `tabris.contentView.find()`, and it there accepts the same selector parameters.
+This function is a global alias for `tabris.contentView.find()`, and it therefore accepts the same selector parameters.
 
 ```js
 $('.foo > .bar').set({background: 'blue'});
 // same thing:
 tabris.contentView.find('.foo > .bar').set({background: 'blue'});
 ```
+
+Note that `$()` will **not** search through *all* widgets in the UI tree. It's scope does *not* include any widgets in the drawer, a popover, or an [encapsulated](#encapsulation) custom component. A component is encapsulated if it overrides the [`children()`](#compositechildren) method or uses the `@component` decorator.
+
+Due to it's scope it is mainly intended to be used in snippets, for debugging and when bootstrapping your application.
 
 ### widgetCollection.filter()
 
@@ -295,46 +363,8 @@ widget.children('.foo').children('.bar'); // same result
 
 While this method is longer, it allows using non-string selector, i.e. functions/constructors.
 
-### composite.apply()
+When subclassing a `Composite` (including `Page`, `Tab` and `Canvas`), it is recommended to overwrite the `children` method to [encapsulate](#encapsulation) the component. The method will then always return an empty `WidgetCollection`, even when the composite/component contains children. The `_children()` method will still work the same way.
 
-A shortcut for setting different sets of properties for different selections in one method call. The method takes a plain object with selectors as keys and property objects as values:
-
-```js
-page.apply({
-  '#okbutton': {text: 'OK!', background: 'yellow'},
-  '#cancelbutton': {text: 'Cancel!', textColor: 'red'}
-});
-```
-__The scope includes the widget it is called on__:
-
-```js
-page.apply({':host': {background: 'green'}}); // same as "page.background = green";
-```
-
-The order in which the property objects are applied depends on the type of selectors being used. The order is:
-
-- `'*'` > `'Type'` > `'.class'` > `'#id'`
-
-For example, the following call would make all widgets within the page blue, except for the buttons, which would be green, except for `'#mybutton'`, which would be red:
-
-```js
-page.apply({
-  '#mybutton': {background: 'red'},
-  'Button': {background: 'green'},
-  '*': {background: 'blue'}
-});
-```
-
-When using child selectors, the more specific selector wins. In this example, all buttons are green except for those directly attached to `page`, which are red.
-
-```js
-page.apply({
-  ':host > Button': {background: 'red'},
-  'Button': {background: 'green'}
-});
-```
-
-> :point_right: The order of the properties in the object literal is meaningless. According to the EcmaScript standard the members of a JavaScript object do not have a defined order. The priority of two selectors with the same specificity is undefined.
 
 ## Encapsulation
 

@@ -17,7 +17,7 @@ JSX Support: | No
 
 See also:
   
-[<span class='language jsx'>JSX</span> Reading various device properties](https://playground.tabris.com/?gitref=v3.5.0&snippet=device.jsx)
+[<span class='language jsx'>JSX</span> Reading various device properties](https://playground.tabris.com/?gitref=v3.6.0&snippet=device.jsx)
 
 ## Properties
 

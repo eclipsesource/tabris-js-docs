@@ -31,7 +31,7 @@ statusBar.displayMode = 'float';
 
 See also:
   
-[<span class='language js'>JS</span> Demonstrating various `StatusBar` properties](https://playground.tabris.com/?gitref=v3.5.0&snippet=statusbar.js)
+[<span class='language js'>JS</span> Demonstrating various `StatusBar` properties](https://playground.tabris.com/?gitref=v3.6.0&snippet=statusbar.js)
 
 ## Properties
 

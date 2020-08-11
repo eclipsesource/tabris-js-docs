@@ -41,11 +41,11 @@ This approach does not necessarily require any Tabris.js specific API, plain obj
 
 ## Basics
 
-Resource dictionaries are instances of the class `Resources`, which contains the logic for selecting and converting its values. However, instances are not created by calling its constructor but via various factories. These always take one raw "data" object (see [Selector Syntax Reference](#selectorsyntaxreference)) and optionally an existing "base" resource dictionary object to inherit from. The "base" object, if present, will be the first parameter and "data" the second. The raw data consists of a plain object containing one entry for each of the resource values, plus some configuration keys prefixed with `'$'`. Entries must start with a lower case letter.
+Resource dictionaries are instances of the class `Resources`, which contains the logic for selecting and converting its values. However, instances are not created by calling its constructor but via various factories. These always take one raw "data" object (see [Selector Syntax Reference](#selector-syntax-reference)) and optionally an existing "base" resource dictionary object to inherit from. The "base" object, if present, will be the first parameter and "data" the second. The raw data consists of a plain object containing one entry for each of the resource values, plus some configuration keys prefixed with `'$'`. Entries must start with a lower case letter.
 
 For [font](#fontresources), [color](#colorresources) or [string](#textresources) dictionaries, use the pre-defined [`FontResources.from()`](./api/FontResources.md#fromdata), [`ColorResources.from()`](./api/ColorResources.md#fromdata) and [`TextResources.from()`](./api/TextResources.md#fromdata) methods. Tabris.js also provides corresponding JSON schema for the data object parameters. This makes it convenient to extract the object in to a separate _.json_ file with comprehensive IDE tooling support. The [FontResources](#fontresources) section below exemplifies this for all explicitly supported resource types.
 
-For creating dictionaries of arbitrary resource types the `Resources.build()` method is used. This is covered in the section [Custom Resource Dictionaries](#customresourcedictionaries).
+For creating dictionaries of arbitrary resource types the `Resources.build()` method is used. This is covered in the section [Custom Resource Dictionaries](#custom-resource-dictionaries).
 
 ## Setup
 
@@ -64,13 +64,13 @@ Create a separate directory dedicated to your resource dictionaries. The example
 
 If your project has a `tsconfig.json` or `jsconfig.json` make sure it contains the compiler option `"resolveJsonModule": true`. This makes it possible to consume the _.json_ files as modules without loosing type safety.
 
-The `index.js` (or `index.ts`) module will take care of converting the raw data to resources dictionaries and exporting them from the `resources` directory. (Hint: A file named "index.js" allows [treating an entire directory as a single module](https://nodejs.org/api/modules.html#modules_folders_as_modules).) An example for this can be found [here](https://github.com/eclipsesource/tabris-js/blob/v${moduleversion}/snippets/resources/index.ts).
+The `index.js` (or `index.ts`) module will take care of converting the raw data to resources dictionaries and exporting them from the `resources` directory. (Hint: A file named "index.js" allows [treating an entire directory as a single module](https://nodejs.org/api/modules.html#modules_folders_as_modules).) An example for this can be found [here](https://github.com/eclipsesource/tabris-js/blob/v3.6.0/snippets/resources/index.ts).
 
 > Note: You don't need to follow this exact layout of course, but it is the assumed configuration used in all examples below.
 
 ## FontResources
 
-A font may be defined as a [string or object](./api/types.md#fontvalue). In the resource dictionary both will be converted to an instance of [Font](./api/Font.md).
+A font may be defined as a [string or object](./types.md#fontvalue). In the resource dictionary both will be converted to an instance of [Font](./api/Font.md).
 
 The following snippet shows an example _fonts.json_ file that defines two fonts aliased as "buttonLabel" and "counter". It also showcases selecting a resource based on the platform (operating system) of the device:
 
@@ -117,9 +117,9 @@ myTextView.font = fonts.counter;
 
 ## ColorResources
 
-A color may be defined as a [string or array](./api/types.md#colorvalue). In the resource dictionary both will be converted to an instance of [Color](./api/Color.md).
+A color may be defined as a [string or array](./types.md#colorvalue). In the resource dictionary both will be converted to an instance of [Color](./api/Color.md).
 
-The following snippet shows an example _colors.json_ file that defines colors via hex notation, in some cases based on the device platform. It also shows how to [back reference](#resourcereference) an already defined resource in the case of the `tint` entry.
+The following snippet shows an example _colors.json_ file that defines colors via hex notation, in some cases based on the device platform. It also shows how to [back reference](#resource-reference) an already defined resource in the case of the `tint` entry.
 
 ```json
 {
@@ -222,7 +222,7 @@ const imageResourceBuilder = Resources.build({
   converter: Image.from
 });
 ```
-The resulting `ResourceBuilder` has only one method `from()`, which takes either just the raw resource data, or a "base" dictionary and the resource data. It will create a dictionary of `Image` objects, where the input object may take any valid [`ImageValue`](./types.md#ImageValue) such as strings.
+The resulting `ResourceBuilder` has only one method `from()`, which takes either just the raw resource data, or a "base" dictionary and the resource data. It will create a dictionary of `Image` objects, where the input object may take any valid [`ImageValue`](./types.md#imagevalue) such as strings.
 
 Since there is no JSON schema provided by Tabris.js for this data type there is not much benefit to extracting a _.json_ file. If we don't want to re-used the builder either the entire process of creating an image resource dictionary can be condensed like this:
 
