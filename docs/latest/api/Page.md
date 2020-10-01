@@ -31,7 +31,7 @@ new NavigationView({layoutData: 'stretch'})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a stack of pages](https://playground.tabris.com/?gitref=v3.6.0&snippet=navigationview-page-stacked.jsx)
+[<span class='language jsx'>JSX</span> Creating a stack of pages](https://playground.tabris.com/?gitref=v3.6.1&snippet=navigationview-page-stacked.jsx)
 
 ## Constructor
 

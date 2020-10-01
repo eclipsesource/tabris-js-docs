@@ -13,7 +13,7 @@ See also:
 [Class `Request`](./Request.md)  
 [Class `Response`](./Response.md)  
 [Class `Headers`](./Headers.md)  
-[<span class='language jsx'>JSX</span> fetch.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=fetch.jsx)
+[<span class='language jsx'>JSX</span> fetch.jsx](https://playground.tabris.com/?gitref=v3.6.1&snippet=fetch.jsx)
 
 ## Methods
 
@@ -32,6 +32,7 @@ init.credentials | <code style="white-space: nowrap"><a href="https://developer.
 init.headers | <code style="white-space: nowrap"><a href="Headers.html" title="Headers Class Reference">Headers</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="View &quot;Array&quot; on MDN">Array</a>&lt;[<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>]&gt;<br/>&#124; {[header]: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>}</code> | The headers to add to the request. *Optional.*
 init.method | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The request method, e.g., `'GET'`, `'POST'`. *Optional.*
 init.mode | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | *Optional.*
+init.timeout | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The network request timeout in milliseconds *Optional.*
 
 
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="View &quot;Promise&quot; on MDN">Promise</a>&lt;<a href="Response.html" title="Response Class Reference">Response</a>&gt;</code>

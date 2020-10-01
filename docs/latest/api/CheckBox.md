@@ -31,7 +31,7 @@ new CheckBox({text: 'Checkbox'})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `Checkbox`](https://playground.tabris.com/?gitref=v3.6.0&snippet=checkbox.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `Checkbox`](https://playground.tabris.com/?gitref=v3.6.1&snippet=checkbox.jsx)
 
 ## Constructor
 

@@ -36,9 +36,9 @@ row.append(
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `Row`](https://playground.tabris.com/?gitref=v3.6.0&snippet=row.jsx)  
-[<span class='language jsx'>JSX</span> Creating a `Row` with vertical alignment](https://playground.tabris.com/?gitref=v3.6.0&snippet=row-alignment.jsx)  
-[<span class='language jsx'>JSX</span> Creating a `Row` with horizontal alignment](https://playground.tabris.com/?gitref=v3.6.0&snippet=row-halign.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `Row`](https://playground.tabris.com/?gitref=v3.6.1&snippet=row.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `Row` with vertical alignment](https://playground.tabris.com/?gitref=v3.6.1&snippet=row-alignment.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `Row` with horizontal alignment](https://playground.tabris.com/?gitref=v3.6.1&snippet=row-halign.jsx)
 
 ## Constructor
 
@@ -71,7 +71,7 @@ This property can only be set via constructor or JSX. Once set, it cannot change
 
 See also:
   
-[<span class='language jsx'>JSX</span> row-alignment.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=row-alignment.jsx)
+[<span class='language jsx'>JSX</span> row-alignment.jsx](https://playground.tabris.com/?gitref=v3.6.1&snippet=row-alignment.jsx)
 
 
 ### layout

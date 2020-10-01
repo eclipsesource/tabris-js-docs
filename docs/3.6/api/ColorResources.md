@@ -18,9 +18,9 @@ JSX Support: | No
 See also:
   
 [Resource Management in Tabris.js](../resource-management.md)  
-[Defining raw color resource data in a separate JSON file.](https://github.com/eclipsesource/tabris-js/blob/v3.6.0/snippets/resources/colors.json)  
-[Converting raw color resource data to `ColorResources` instance.](https://github.com/eclipsesource/tabris-js/blob/v3.6.0/snippets/resources/index.ts)  
-[<span class='language tsx'>TSX</span> Using a ColorResources dictionary](https://playground.tabris.com/?gitref=v3.6.0&snippet=resource-management.tsx)
+[Defining raw color resource data in a separate JSON file.](https://github.com/eclipsesource/tabris-js/blob/v3.6.1/snippets/resources/colors.json)  
+[Converting raw color resource data to `ColorResources` instance.](https://github.com/eclipsesource/tabris-js/blob/v3.6.1/snippets/resources/index.ts)  
+[<span class='language tsx'>TSX</span> Using a ColorResources dictionary](https://playground.tabris.com/?gitref=v3.6.1&snippet=resource-management.tsx)
 
 ## Static Methods
 
@@ -36,7 +36,7 @@ Entries in the "data" object starting with "$" are considered configuration opti
 Parameter|Type|Description
 -|-|-
 base | <code style="white-space: nowrap">Base</code> | A plain object or another `ColorResources` instance containing values to inherit by the new `ColorResources` dictionary.
-data | <code style="white-space: nowrap">Data</code> | The raw data (plain object) to create the dictionary from. The format must match the [Tabris.js colors JSON schema](https://github.com/eclipsesource/tabris-js/blob/v3.6.0/schema/colors.json).
+data | <code style="white-space: nowrap">Data</code> | The raw data (plain object) to create the dictionary from. The format must match the [Tabris.js colors JSON schema](https://github.com/eclipsesource/tabris-js/blob/v3.6.1/schema/colors.json).
 
 
 Returns: <code style="white-space: nowrap"><a href="#" >ColorResources</a></code>
@@ -45,12 +45,12 @@ Returns: <code style="white-space: nowrap"><a href="#" >ColorResources</a></code
 
 
 
-Creates a colors dictionary from the given raw "data" object. The format must match the [Tabris.js colors JSON schema](https://github.com/eclipsesource/tabris-js/blob/v3.6.0/schema/colors.json). Entries in the "data" object starting with "$" are considered configuration options and will not become entries in the final colors dictionary.
+Creates a colors dictionary from the given raw "data" object. The format must match the [Tabris.js colors JSON schema](https://github.com/eclipsesource/tabris-js/blob/v3.6.1/schema/colors.json). Entries in the "data" object starting with "$" are considered configuration options and will not become entries in the final colors dictionary.
 
 
 Parameter|Type|Description
 -|-|-
-data | <code style="white-space: nowrap">Data</code> | The raw data (plain object) to create the dictionary from. The format must match the [Tabris.js colors JSON schema](https://github.com/eclipsesource/tabris-js/blob/v3.6.0/schema/colors.json).
+data | <code style="white-space: nowrap">Data</code> | The raw data (plain object) to create the dictionary from. The format must match the [Tabris.js colors JSON schema](https://github.com/eclipsesource/tabris-js/blob/v3.6.1/schema/colors.json).
 
 
 Returns: <code style="white-space: nowrap"><a href="#" >ColorResources</a></code>

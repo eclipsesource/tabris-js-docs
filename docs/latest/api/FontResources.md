@@ -18,9 +18,9 @@ JSX Support: | No
 See also:
   
 [Resource Management in Tabris.js](../resource-management.md)  
-[Defining raw font resource data in a separate JSON file.](https://github.com/eclipsesource/tabris-js/blob/v3.6.0/snippets/resources/fonts.json)  
-[Converting raw font resource data to `FontResources` instance.](https://github.com/eclipsesource/tabris-js/blob/v3.6.0/snippets/resources/index.ts)  
-[<span class='language tsx'>TSX</span> Using a FontResources dictionary](https://playground.tabris.com/?gitref=v3.6.0&snippet=resource-management.tsx)
+[Defining raw font resource data in a separate JSON file.](https://github.com/eclipsesource/tabris-js/blob/v3.6.1/snippets/resources/fonts.json)  
+[Converting raw font resource data to `FontResources` instance.](https://github.com/eclipsesource/tabris-js/blob/v3.6.1/snippets/resources/index.ts)  
+[<span class='language tsx'>TSX</span> Using a FontResources dictionary](https://playground.tabris.com/?gitref=v3.6.1&snippet=resource-management.tsx)
 
 ## Static Methods
 
@@ -36,7 +36,7 @@ Entries in the "data" object starting with "$" are considered configuration opti
 Parameter|Type|Description
 -|-|-
 base | <code style="white-space: nowrap">Base</code> | A plain object or another `FontResources` instance containing values to inherit by the new `FontResources` dictionary.
-data | <code style="white-space: nowrap">Data</code> | The raw data (plain object) to create the dictionary from. The format must match the [Tabris.js fonts JSON schema](https://github.com/eclipsesource/tabris-js/blob/v3.6.0/schema/fonts.json).
+data | <code style="white-space: nowrap">Data</code> | The raw data (plain object) to create the dictionary from. The format must match the [Tabris.js fonts JSON schema](https://github.com/eclipsesource/tabris-js/blob/v3.6.1/schema/fonts.json).
 
 
 Returns: <code style="white-space: nowrap"><a href="#" >FontResources</a></code>
@@ -45,12 +45,12 @@ Returns: <code style="white-space: nowrap"><a href="#" >FontResources</a></code>
 
 
 
-Creates a fonts dictionary from the given raw "data" object. The format must match the [Tabris.js fonts JSON schema](https://github.com/eclipsesource/tabris-js/blob/v3.6.0/schema/fonts.json). Entries in the "data" object starting with "$" are considered configuration options and will not become entries in the final fonts dictionary.
+Creates a fonts dictionary from the given raw "data" object. The format must match the [Tabris.js fonts JSON schema](https://github.com/eclipsesource/tabris-js/blob/v3.6.1/schema/fonts.json). Entries in the "data" object starting with "$" are considered configuration options and will not become entries in the final fonts dictionary.
 
 
 Parameter|Type|Description
 -|-|-
-data | <code style="white-space: nowrap">Data</code> | The raw data (plain object) to create the dictionary from. The format must match the [Tabris.js fonts JSON schema](https://github.com/eclipsesource/tabris-js/blob/v3.6.0/schema/fonts.json).
+data | <code style="white-space: nowrap">Data</code> | The raw data (plain object) to create the dictionary from. The format must match the [Tabris.js fonts JSON schema](https://github.com/eclipsesource/tabris-js/blob/v3.6.1/schema/fonts.json).
 
 
 Returns: <code style="white-space: nowrap"><a href="#" >FontResources</a></code>

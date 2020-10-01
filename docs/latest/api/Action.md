@@ -36,8 +36,8 @@ new Action({
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `Action`](https://playground.tabris.com/?gitref=v3.6.0&snippet=navigationview-action.jsx)  
-[<span class='language jsx'>JSX</span> Using placement property](https://playground.tabris.com/?gitref=v3.6.0&snippet=navigationview-action-placement.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `Action`](https://playground.tabris.com/?gitref=v3.6.1&snippet=navigationview-action.jsx)  
+[<span class='language jsx'>JSX</span> Using placement property](https://playground.tabris.com/?gitref=v3.6.1&snippet=navigationview-action-placement.jsx)
 
 ## Constructor
 

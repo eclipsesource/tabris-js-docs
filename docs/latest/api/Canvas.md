@@ -34,13 +34,13 @@ new Canvas({layoutData: 'stretch'})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a `Canvas` with simple shapes](https://playground.tabris.com/?gitref=v3.6.0&snippet=canvas-shapes.jsx)  
-[<span class='language jsx'>JSX</span> Creating a `Canvas` and working with `ImageData`](https://playground.tabris.com/?gitref=v3.6.0&snippet=canvas-imagedata.jsx)  
-[<span class='language jsx'>JSX</span> How to show text on a `Canvas`](https://playground.tabris.com/?gitref=v3.6.0&snippet=canvas-text.jsx)  
-[<span class='language jsx'>JSX</span> How to use animations on a `Canvas`](https://playground.tabris.com/?gitref=v3.6.0&snippet=canvas-animation.jsx)  
-[<span class='language jsx'>JSX</span> canvas-arc.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=canvas-arc.jsx)  
-[<span class='language jsx'>JSX</span> canvas-imagebitmap.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=canvas-imagebitmap.jsx)  
-[<span class='language jsx'>JSX</span> canvas-to-image.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=canvas-to-image.jsx)
+[<span class='language jsx'>JSX</span> Creating a `Canvas` with simple shapes](https://playground.tabris.com/?gitref=v3.6.1&snippet=canvas-shapes.jsx)  
+[<span class='language jsx'>JSX</span> Creating a `Canvas` and working with `ImageData`](https://playground.tabris.com/?gitref=v3.6.1&snippet=canvas-imagedata.jsx)  
+[<span class='language jsx'>JSX</span> How to show text on a `Canvas`](https://playground.tabris.com/?gitref=v3.6.1&snippet=canvas-text.jsx)  
+[<span class='language jsx'>JSX</span> How to use animations on a `Canvas`](https://playground.tabris.com/?gitref=v3.6.1&snippet=canvas-animation.jsx)  
+[<span class='language jsx'>JSX</span> canvas-arc.jsx](https://playground.tabris.com/?gitref=v3.6.1&snippet=canvas-arc.jsx)  
+[<span class='language jsx'>JSX</span> canvas-imagebitmap.jsx](https://playground.tabris.com/?gitref=v3.6.1&snippet=canvas-imagebitmap.jsx)  
+[<span class='language jsx'>JSX</span> canvas-to-image.jsx](https://playground.tabris.com/?gitref=v3.6.1&snippet=canvas-to-image.jsx)
 
 ## Constructor
 

@@ -4,7 +4,7 @@
 
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a> > <a href="NativeObject.html" title="NativeObject Class Reference">NativeObject</a> > <a href="Widget.html" title="Widget Class Reference">Widget</a> > <a href="Composite.html" title="Composite Class Reference">Composite</a> > <a href="#" >Cell</a>
 
-This widget is expected by [`ListView`](./ListView.md) as a child (in JSX) or turn value of `createCell`. It's data-binding enabled by default. It's children can also [not be selected](../selector.md#encapsulation) from the outside, except for using `apply` directly on the instance. This allows using it as a function component as demonstrated in [this example](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/listview-cells-js).
+This widget is expected by [`ListView`](./ListView.md) as a child (in JSX) or return value of `createCell`. It supports data-binding via JSX by default. Its children can also [not be selected](../selector.md#encapsulation) from the outside, except for using `apply` directly on the instance. This allows using it as a function component as demonstrated in [this example](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.1/examples/listview-cells-js).
 
 
 Type: | <code style="white-space: nowrap">Cell&lt;ItemType&gt; extends <a href="Composite.html" title="Composite Class Reference">Composite</a></code>

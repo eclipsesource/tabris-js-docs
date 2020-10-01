@@ -397,7 +397,7 @@ propertyName | <code style="white-space: nowrap"><a href="https://developer.mozi
 
 Returns: <code style="white-space: nowrap">unknown</code>
 
-### _nativeListen(eventType)
+### _nativeListen(eventType, listen)
 
 
 
@@ -407,6 +407,7 @@ Sends a 'listen' operation to the native client.
 Parameter|Type|Description
 -|-|-
 eventType | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+listen | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | 
 
 
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>

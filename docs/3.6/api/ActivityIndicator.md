@@ -30,7 +30,7 @@ new ActivityIndicator()
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `ActivityIndicator`](https://playground.tabris.com/?gitref=v3.6.0&snippet=activityindicator.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `ActivityIndicator`](https://playground.tabris.com/?gitref=v3.6.1&snippet=activityindicator.jsx)
 
 ## Constructor
 

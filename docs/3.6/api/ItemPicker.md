@@ -37,12 +37,16 @@ contentView.append(
 
 
 See also:
-  
-[<span class='language js'>JS</span> Example with various item types](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/itempicker-js)  
-[<span class='language jsx'>JSX</span> Example with various item types (JSX variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/itempicker-jsx)  
-[<span class='language jsx'>JSX</span> Data Binding Example](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/bind-itempicker-list-jsx)  
-[<span class='language tsx'>TSX</span> Example with various item types (TypeScript/JSX variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/itempicker)  
-[<span class='language tsx'>TSX</span> Data Binding Example (TypeScript variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/bind-itempicker-list)
+
+[<span class='language js'>JS</span> Example with various item types](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.1/examples/itempicker-js)
+
+[<span class='language jsx'>JSX</span> Example with various item types (JSX variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.1/examples/itempicker-jsx)
+
+[<span class='language jsx'>JSX</span> Data Binding Example](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.1/examples/bind-itempicker-list-jsx)
+
+[<span class='language tsx'>TSX</span> Example with various item types (TypeScript/JSX variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.1/examples/itempicker)
+
+[<span class='language tsx'>TSX</span> Data Binding Example (TypeScript variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.1/examples/bind-itempicker-list)
 
 ## Constructor
 
@@ -116,9 +120,9 @@ EventObject Type: <code style="white-space: nowrap">ItemPickerItemSelectEvent&lt
 
 Property|Type|Description
 -|-|-
-item | <code style="white-space: nowrap"><a href="#generics" title="Generic Parameter&quot;ItemType&quot;">ItemType</a></code> | 
-itemIndex | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | 
-itemText | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+item | <code style="white-space: nowrap"><a href="#generics" title="Generic Parameter&quot;ItemType&quot;">ItemType</a></code> |
+itemIndex | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> |
+itemText | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> |
 
 ## Change Events
 

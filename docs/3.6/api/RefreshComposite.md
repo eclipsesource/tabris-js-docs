@@ -31,7 +31,7 @@ new RefreshComposite({layoutData: 'stretch'})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `RefreshComposite`](https://playground.tabris.com/?gitref=v3.6.0&snippet=refreshcomposite.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `RefreshComposite`](https://playground.tabris.com/?gitref=v3.6.1&snippet=refreshcomposite.jsx)
 
 ## Constructor
 

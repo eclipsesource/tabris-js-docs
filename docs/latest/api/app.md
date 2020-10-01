@@ -17,11 +17,11 @@ JSX Support: | No
 
 See also:
   
-[<span class='language jsx'>JSX</span> Displaying app properties](https://playground.tabris.com/?gitref=v3.6.0&snippet=app-info.jsx)  
-[<span class='language jsx'>JSX</span> Displaying app events](https://playground.tabris.com/?gitref=v3.6.0&snippet=app-events.jsx)  
-[<span class='language jsx'>JSX</span> Launching an url](https://playground.tabris.com/?gitref=v3.6.0&snippet=app-launch.jsx)  
-[<span class='language js'>JS</span> Register and use an external font](https://playground.tabris.com/?gitref=v3.6.0&snippet=textview-font-external.js)  
-[<span class='language jsx'>JSX</span> Share various types of data with the `share()` API](https://playground.tabris.com/?gitref=v3.6.0&snippet=app-share.jsx)
+[<span class='language jsx'>JSX</span> Displaying app properties](https://playground.tabris.com/?gitref=v3.6.1&snippet=app-info.jsx)  
+[<span class='language jsx'>JSX</span> Displaying app events](https://playground.tabris.com/?gitref=v3.6.1&snippet=app-events.jsx)  
+[<span class='language jsx'>JSX</span> Launching an url](https://playground.tabris.com/?gitref=v3.6.1&snippet=app-launch.jsx)  
+[<span class='language js'>JS</span> Register and use an external font](https://playground.tabris.com/?gitref=v3.6.1&snippet=textview-font-external.js)  
+[<span class='language jsx'>JSX</span> Share various types of data with the `share()` API](https://playground.tabris.com/?gitref=v3.6.1&snippet=app-share.jsx)
 
 ## Methods
 
@@ -62,7 +62,7 @@ url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/e
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="View &quot;Promise&quot; on MDN">Promise</a></code>
 See also:
   
-[<span class='language jsx'>JSX</span> app-launch.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=app-launch.jsx)
+[<span class='language jsx'>JSX</span> app-launch.jsx](https://playground.tabris.com/?gitref=v3.6.1&snippet=app-launch.jsx)
 
 ### registerFont(alias, file)
 
@@ -106,13 +106,13 @@ In order to be able to share an image to the photo app on iOS, the Tabris.js app
 
 Parameter|Type|Description
 -|-|-
-data | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, // An informative text to show in the share dialog. optional<br/>&nbsp;&nbsp;text: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, // A piece of text to share with another app. optional<br/>&nbsp;&nbsp;url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, // A url to share with another app. On iOS the content of the `url` is previewed in the native share dialog. On Android it is treated as regular text. When both `text` and `url` are given on Android the two strings are concatenated with a blank space as defined in the [W3C Web Share API](https://www.w3.org/TR/web-share/). optional<br/>&nbsp;&nbsp;files: <a href="File.html" title="File Class Reference">File</a>[] // An array of `File` objects to share with another app. The files need to have a `name` and mime `type` set. optional<br/>}</code> | The data to share. The object must contain at least one of the properties: `title`, `text`, `url` or `files`.
+data | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, // Text to show in the share dialog. optional<br/>&nbsp;&nbsp;text: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, // A piece of text to share with another app. optional<br/>&nbsp;&nbsp;url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, // A url to share with another app. optional<br/>&nbsp;&nbsp;files: <a href="File.html" title="File Class Reference">File</a>[] // An array of `File` objects to share with another app. optional<br/>}</code> | The data to share. The object must contain at least one of the properties: `title`, `text`, `url` or `files`. The files need to have a `name` and mime `type` set. <br/><br/>On iOS the content of the `url` is previewed in the native share dialog. On Android it is treated as regular text. When both `text` and `url` are given on Android the two strings are concatenated with a blank space as defined in the [W3C Web Share API](https://www.w3.org/TR/web-share/).
 
 
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="View &quot;Promise&quot; on MDN">Promise</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
 See also:
   
-[<span class='language jsx'>JSX</span> app-share.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=app-share.jsx)
+[<span class='language jsx'>JSX</span> app-share.jsx](https://playground.tabris.com/?gitref=v3.6.1&snippet=app-share.jsx)
 
 
 ## Properties

@@ -16,7 +16,7 @@ JSX Support: | Element: <code style="white-space: nowrap"><a href="#" >&lt;PdfVi
 
 See also:
   
-[<span class='language jsx'>JSX</span> pdfview.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=pdfview.jsx)
+[<span class='language jsx'>JSX</span> pdfview.jsx](https://playground.tabris.com/?gitref=v3.6.1&snippet=pdfview.jsx)
 
 ## Constructor
 

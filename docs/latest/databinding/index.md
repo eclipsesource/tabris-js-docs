@@ -18,7 +18,7 @@ npm install tabris-decorators
 
 Data binding in the context of Tabris.js/`tabris-decorators` refers to a set of APIs that assists you in writing [custom UI components](./@component.md) like forms, lists or custom input elements. They provide a declarative syntax to synchronize data between the component and its internal child widgets. This is done either with [one-way bindings](./@component.md#one-way-bindings) in which a value derived from a component property is applied to a child element, or [two-way bindings](./@bind.md) that also do the reverse.
 
-A very simple example app using both, one-way and two-way bindings, can be found [here](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/labeled-input).
+A very simple example app using both, one-way and two-way bindings, can be found [here](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.1/examples/labeled-input).
 
 Bindings can also be established with [properties of non-widget object](./@component.md#binding-to-nested-properties) that are attached to a component. In one-way bindings the values may also be be [converted or transformed](./@component.md#conversion) before they are applied to the child element.
 

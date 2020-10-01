@@ -11,7 +11,7 @@ A collection of general-purpose utilities. These can be imported directly form t
 
 
 
-Creates a attributes object for the given widget type. This is meant to be used to creates rule sets for the [`apply`](./Composite##applyrules) method. The benefit of using this method as opposed to passing the object directly is twofold:<br/><br/>1 - The IDE and/or TypeScript compiler can check that the attributes are matching the given widget type.<br/>2 - The `apply` method will only set the attributes if the selected widget matches the type given here. If there is a mismatch an error will be thrown.
+Creates a attributes object for the given widget type. This is meant to be used to creates rule sets for the [`apply`](./Composite##applyrules) method. The benefit of using this method as opposed to passing the object directly is twofold: <br/><br/>1 - The IDE and/or TypeScript compiler can check that the attributes are matching the given widget type. <br/>2 - The `apply` method will only set the attributes if the selected widget matches the type given here. If there is a mismatch an error will be thrown.
 
 
 Parameter|Type|Description

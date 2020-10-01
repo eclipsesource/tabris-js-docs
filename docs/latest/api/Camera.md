@@ -34,9 +34,9 @@ camera.captureImage()
 
 See also:
   
-[<span class='language tsx'>TSX</span> Simple example to capture an image](https://playground.tabris.com/?gitref=v3.6.0&snippet=camera.tsx)  
-[<span class='language tsx'>TSX</span> Control `Camera` and `CameraView` to capture an image](https://playground.tabris.com/?gitref=v3.6.0&snippet=camera-advanced.tsx)  
-[<span class='language jsx'>JSX</span> Check and request camera permissions](https://playground.tabris.com/?gitref=v3.6.0&snippet=permission.jsx)
+[<span class='language tsx'>TSX</span> Simple example to capture an image](https://playground.tabris.com/?gitref=v3.6.1&snippet=camera.tsx)  
+[<span class='language tsx'>TSX</span> Control `Camera` and `CameraView` to capture an image](https://playground.tabris.com/?gitref=v3.6.1&snippet=camera-advanced.tsx)  
+[<span class='language jsx'>JSX</span> Check and request camera permissions](https://playground.tabris.com/?gitref=v3.6.1&snippet=permission.jsx)
 
 ## Methods
 
@@ -49,7 +49,7 @@ Captures an image and returns a result object when the returned promise resolves
 
 Parameter|Type|Description
 -|-|-
-options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;flash: // Whether to enable or disable the device flashlight. If set to `'auto'` the device will decide (based on the lighting conditions) whether to activate the flashlight. defaults to off<br/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'on'</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'off'</a><br/>}</code> | A set of capture options to apply when taking a picture. *Optional.*
+options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;flash: // Whether to enable or disable the device flashlight. defaults to off<br/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'on'</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'off'</a><br/>}</code> | A set of capture options to apply when taking a picture. <br/><br/>If `flash` is set to `'auto'` the device will decide (based on the lighting conditions) whether to activate the flashlight. *Optional.*
 
 
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="View &quot;Promise&quot; on MDN">Promise</a>&lt;{image: <a href="Blob.html" title="Blob Class Reference">Blob</a>, width: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>, height: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>}&gt;</code>

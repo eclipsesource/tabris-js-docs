@@ -31,8 +31,8 @@ new Button({text: 'Save'})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Create a simple `Button`](https://playground.tabris.com/?gitref=v3.6.0&snippet=button.jsx)  
-[<span class='language jsx'>JSX</span> Create buttons with different styles](https://playground.tabris.com/?gitref=v3.6.0&snippet=button-style.jsx)
+[<span class='language jsx'>JSX</span> Create a simple `Button`](https://playground.tabris.com/?gitref=v3.6.1&snippet=button.jsx)  
+[<span class='language jsx'>JSX</span> Create buttons with different styles](https://playground.tabris.com/?gitref=v3.6.1&snippet=button-style.jsx)
 
 ## Constructor
 
@@ -157,7 +157,7 @@ This property can only be set via constructor or JSX. Once set, it cannot change
 
 See also:
   
-[<span class='language jsx'>JSX</span> button-style.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=button-style.jsx)
+[<span class='language jsx'>JSX</span> button-style.jsx](https://playground.tabris.com/?gitref=v3.6.1&snippet=button-style.jsx)
 
 
 ### text

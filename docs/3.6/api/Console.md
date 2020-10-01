@@ -31,7 +31,7 @@ console.dirxml({});
 
 See also:
   
-[<span class='language jsx'>JSX</span> Logging to the `console` with various log levels](https://playground.tabris.com/?gitref=v3.6.0&snippet=console.jsx)
+[<span class='language jsx'>JSX</span> Logging to the `console` with various log levels](https://playground.tabris.com/?gitref=v3.6.1&snippet=console.jsx)
 
 ## Methods
 

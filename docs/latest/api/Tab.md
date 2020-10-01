@@ -33,7 +33,7 @@ new TabFolder({left: 0, top: 0, right: 0, bottom: 0})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a `Tab` inside a `TabFolder`](https://playground.tabris.com/?gitref=v3.6.0&snippet=tabfolder.jsx)
+[<span class='language jsx'>JSX</span> Creating a `Tab` inside a `TabFolder`](https://playground.tabris.com/?gitref=v3.6.1&snippet=tabfolder.jsx)
 
 ## Constructor
 

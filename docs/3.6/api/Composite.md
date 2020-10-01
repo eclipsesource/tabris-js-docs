@@ -31,7 +31,7 @@ new Composite({left: 0, top: 0, width: 128, height: 256})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `Composite`](https://playground.tabris.com/?gitref=v3.6.0&snippet=composite.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `Composite`](https://playground.tabris.com/?gitref=v3.6.1&snippet=composite.jsx)
 
 ## Constructor
 
@@ -89,14 +89,14 @@ Returns: <code style="white-space: nowrap"><a href="#" title="This object">this<
 
 
 
-Applies the given attributes to all descendants that match the associated selector(s). Each attributes object may contain properties to be set and listeners to be registered. An entry will be treated as a listener if it follows the naming scheme "onEventType". IMPORTANT: Listeners previously registered (for the same type) via the `apply` method, a [JSX](../declarative-ui.md) element attribute or a [widget factory](./utils.md#asfactoryconstructor) call will be de-registered. This means you can call apply repeatedly and have a deterministic outcome. Listeners registered programmatically (e.g. `widget.onTap(...)` are not affected by this.)<br/><br/>For better type safety enable [strict mode](#applymode-rules) and use the [`Set`](./utils.md#settarget-attributes) to create properties objects.
+Applies the given attributes to all descendants that match the associated selector(s). Each attributes object may contain properties to be set and listeners to be registered. An entry will be treated as a listener if it follows the naming scheme "onEventType". IMPORTANT: Listeners previously registered (for the same type) via the `apply` method, a [JSX](../declarative-ui.md) element attribute or a [widget factory](./utils.md#asfactoryconstructor) call will be de-registered. This means you can call apply repeatedly and have a deterministic outcome. Listeners registered programmatically (e.g. `widget.onTap(...)` are not affected by this.) <br/><br/>For better type safety enable [strict mode](#applymode-rules) and use the [`Set`](./utils.md#settarget-attributes) to create properties objects.
 
 If you wish to always exclude specific "internal" children from this, overwrite the `children` method on their parent. See "[Encapsulation](../selector.md#encapsulation)".
 
 
 Parameter|Type|Description
 -|-|-
-options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;mode?: 'default'&#124;'strict',<br/>&nbsp;&nbsp;trigger?: string<br/>}</code> | If mode is set to `'strict'` the function checks that all selector match at least one widget, and that id selector match exactly one widget.<br/>A `trigger` is string to be associated with the given rulset. If set to `'update'`, the ruleset will be applied once immediately and then again every time `apply('update')` is called. If set to any event-attribute name, such as `'onTap'`, it will automatically re-apply the ruleset when this event is triggered.
+options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;mode?: 'default'&#124;'strict',<br/>&nbsp;&nbsp;trigger?: string<br/>}</code> | If mode is set to `'strict'` the function checks that all selector match at least one widget, and that id selector match exactly one widget. <br/>A `trigger` is string to be associated with the given rulset. If set to `'update'`, the ruleset will be applied once immediately and then again every time `apply('update')` is called. If set to any event-attribute name, such as `'onTap'`, it will automatically re-apply the ruleset when this event is triggered.
 rules | <code style="white-space: nowrap">{[selector]: Attributes} <br/>&#124; (widget) => {[selector]: Attributes}</code> | The ruleset to apply. May also be given as a callback which is passed to the widget instance and must return the actual ruleset. This parameter can also be `null` if the `trigger` option is set. This will stop re-applying the ruleset previously associated with that trigger.
 
 
@@ -219,7 +219,7 @@ Identical to the `apply(options, rules)` method, but intended to be used by subc
 
 Parameter|Type|Description
 -|-|-
-options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;mode?: 'default'&#124;'strict',<br/>&nbsp;&nbsp;trigger?: string<br/>}</code> | If mode is set to `'strict'` the function checks that all selector match at least one widget, and that id selector match exactly one widget.<br/>A `trigger` is string to be associated with the given rulset. If set to `'update'`, the ruleset will be applied once immediately and then again every time `apply('update')` is called. If set to any event-attribute name, such as `'onTap'`, it will automatically re-apply the ruleset when this event is triggered.
+options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;mode?: 'default'&#124;'strict',<br/>&nbsp;&nbsp;trigger?: string<br/>}</code> | If mode is set to `'strict'` the function checks that all selector match at least one widget, and that id selector match exactly one widget. <br/>A `trigger` is string to be associated with the given rulset. If set to `'update'`, the ruleset will be applied once immediately and then again every time `apply('update')` is called. If set to any event-attribute name, such as `'onTap'`, it will automatically re-apply the ruleset when this event is triggered.
 rules | <code style="white-space: nowrap">{[selector]: Attributes} <br/>&#124; (widget) => {[selector]: Attributes}</code> | The ruleset to apply. May also be given as a callback which is passed to the widget instance and must return the actual ruleset.
 
 

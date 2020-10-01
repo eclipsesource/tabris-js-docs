@@ -31,7 +31,7 @@ navigationBar.displayMode = 'float';
 
 See also:
   
-[<span class='language jsx'>JSX</span> Demonstrating various properties of the `NavigationBar`](https://playground.tabris.com/?gitref=v3.6.0&snippet=navigationbar.jsx)
+[<span class='language jsx'>JSX</span> Demonstrating various properties of the `NavigationBar`](https://playground.tabris.com/?gitref=v3.6.1&snippet=navigationbar.jsx)
 
 ## Properties
 

@@ -33,18 +33,3 @@ Makes the popup visible.
 
 Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
-
-## Properties
-
-### [JSX.jsxFactory]
-
-
-This function is called to create JSX popup elements. You may override it in your own subclass to create custom JSX behavior. **The function is not called with any context, i.e. `this` is not available.**
-
-Type: |<code style="white-space: nowrap">JSX.JsxFactory</code>
-Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
-Change Event: | Not supported
-
-
-
-

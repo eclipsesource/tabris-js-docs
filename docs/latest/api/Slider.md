@@ -33,7 +33,7 @@ new Slider({
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `Slider`](https://playground.tabris.com/?gitref=v3.6.0&snippet=slider.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `Slider`](https://playground.tabris.com/?gitref=v3.6.1&snippet=slider.jsx)
 
 ## Constructor
 

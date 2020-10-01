@@ -41,12 +41,16 @@ contentView.append(
 
 
 See also:
-  
-[<span class='language jsx'>JSX</span> Examples with various cell types and selection events](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/listview-cells-jsx)  
-[<span class='language jsx'>JSX</span> Data Binding Example](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/bind-listview-list-jsx)  
-[<span class='language tsx'>TSX</span> Examples with various cell types and selection events (TypeScript variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/listview-cells)  
-[<span class='language tsx'>TSX</span> Data Binding Example (TypeScript variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/bind-listview-list)  
-[<span class='language js'>JS</span> Examples with various cell types and selection events (Plain JavaScript - some features not supported)](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.0/examples/listview-cells-js)
+
+[<span class='language jsx'>JSX</span> Examples with various cell types and selection events](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.1/examples/listview-cells-jsx)
+
+[<span class='language jsx'>JSX</span> Data Binding Example](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.1/examples/bind-listview-list-jsx)
+
+[<span class='language tsx'>TSX</span> Examples with various cell types and selection events (TypeScript variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.1/examples/listview-cells)
+
+[<span class='language tsx'>TSX</span> Data Binding Example (TypeScript variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.1/examples/bind-listview-list)
+
+[<span class='language js'>JS</span> Examples with various cell types and selection events (Plain JavaScript - some features not supported)](https://github.com/eclipsesource/tabris-decorators/tree/v3.6.1/examples/listview-cells-js)
 
 ## Constructor
 
@@ -71,7 +75,7 @@ Example usage: `onTap={ev => ListView.select(ev, someNumber)}`.
 
 Parameter|Type|Description
 -|-|-
-ev | <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a></code> | 
+ev | <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a></code> |
 action | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | A numeric value passed on to the `select` event object, defaults to `0`. *Optional.*
 
 
@@ -88,7 +92,7 @@ Example usage:`onSomeEvent={ListView.selectDismiss}`.
 
 Parameter|Type|Description
 -|-|-
-ev | <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a></code> | 
+ev | <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a></code> |
 
 
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
@@ -104,7 +108,7 @@ Example usage: `onTap={ListView.selectPrimary}`.
 
 Parameter|Type|Description
 -|-|-
-ev | <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a></code> | 
+ev | <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a></code> |
 
 
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
@@ -120,7 +124,7 @@ Example usage: `onSomeEvent={ListView.selectSecondary}`.
 
 Parameter|Type|Description
 -|-|-
-ev | <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a></code> | 
+ev | <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a></code> |
 
 
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
@@ -136,7 +140,7 @@ Example usage: `onSomeEvent={ListView.selectToggle}`.
 
 Parameter|Type|Description
 -|-|-
-ev | <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a></code> | 
+ev | <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a></code> |
 
 
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
@@ -167,9 +171,7 @@ EventObject Type: <code style="white-space: nowrap">ListViewSelectEvent&lt;<a hr
 
 Property|Type|Description
 -|-|-
-action | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | A general-purpose parameter passed on when the event was triggered by one of the [static `select` methods](#selectev-action). This is meant to be used by the application to differentiate between different kind of interactions. It can be safely ignored if there is only one kind of selection, such as tapping a cell.
-
-`tabris-decorators` exports a `ItemAction` enum defining 4 pre-defined values for use with this property: `Primary`, `Secondary`, `Toggle` and `Dismiss`. These are set when using the corresponding [trigger methods](#selectprimaryev).
+action | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | A general-purpose parameter passed on when the event was triggered by one of the [static `select` methods](#selectev-action). This is meant to be used by the application to differentiate between different kind of interactions. It can be safely ignored if there is only one kind of selection, such as tapping a cell. <br/><br/>`tabris-decorators` exports a `ItemAction` enum defining 4 pre-defined values for use with this property: `Primary`, `Secondary`, `Toggle` and `Dismiss`. These are set when using the corresponding [trigger methods](#selectprimaryev).
 item | <code style="white-space: nowrap"><a href="#generics" title="Generic Parameter&quot;ItemType&quot;">ItemType</a></code> | The item currently associated with the Cell that triggered the event.
 itemIndex | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The index of the item within the `items` list/array.
 originalEvent | <code style="white-space: nowrap"><a href="EventObject.html" title="EventObject Class Reference">EventObject</a></code> | The event that was the cause of this select event.

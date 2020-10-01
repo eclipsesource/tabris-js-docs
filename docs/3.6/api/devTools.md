@@ -17,7 +17,7 @@ JSX Support: | No
 
 See also:
   
-[<span class='language jsx'>JSX</span> devtools.jsx](https://playground.tabris.com/?gitref=v3.6.0&snippet=devtools.jsx)
+[<span class='language jsx'>JSX</span> devtools.jsx](https://playground.tabris.com/?gitref=v3.6.1&snippet=devtools.jsx)
 
 ## Methods
 
