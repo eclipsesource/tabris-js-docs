@@ -16,14 +16,22 @@ const githubRepo = /github\.com\/eclipsesource\/tabris-js\/tree\/([^\/]+)/;
 const whitelist = [
   /developer\.apple\.com/,
   /www\.linkedin\.com\/company\/eclipsesource/,
-  /cordova\.apache\.org\/docs\/en\/6\.x\/reference\/cordova-cli\/index\.html/,
+  /cordova\.apache\.org\/docs\/.+\#[a-z]/,
   /example\.com/, // used in example code
-  /marketplace\.visualstudio\.com/, // returns 404 in node only for some reason,
-  /cordova\.io/ // certificate issues
+  /marketplace\.visualstudio\.com/, // returns 404 in node only for some reason
+  /cordova\.io/, // certificate issues
+  /tabrisjs\.herokuapp\.com/,
+  /devtools\:\/\//,
+  /http\:\/\/www\.typescriptlang\.org\/docs\/handbook\/advanced-types\.html\#type-guards-and-differentiating-types/,
+  /redux\.js\.org/,
+
 ];
 
 const preReleaseWhitelist = [
-  /tabrisjs\.com\/downloads\/ebook\/tabrisjs-3.\d.0.pdf/
+  /tabrisjs\.com\/downloads\/ebook\/tabrisjs-3.\d.\d.pdf/,
+  /github\.com\/eclipsesource\/tabris-decorators\/tree\/v3.\d.\d/,
+  /github\.com\/eclipsesource\/tabris-js\/blob\/v3.\d.\d/,
+  /github\.com\/eclipsesource\/tabris-js-reddit-viewer\/tree\/3.\d.\d/
 ];
 
 if (process.argv[1].endsWith('check-links.js')) {
