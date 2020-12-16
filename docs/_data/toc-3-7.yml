@@ -301,10 +301,6 @@
       url: di/@injectionHandler.html
     - title: "@shared"
       url: di/@shared.html
-    - title: "circular-dependency-injection-resolved.png"
-      url: di/circular-dependency-injection-resolved.png
-    - title: "circular-dependency-injection.png"
-      url: di/circular-dependency-injection.png
     - title: "Injector"
       url: di/Injector.html
 
