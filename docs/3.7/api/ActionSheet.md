@@ -34,7 +34,7 @@ new ActionSheet({
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `ActionSheet`](https://playground.tabris.com/?gitref=v3.7.0&snippet=actionsheet.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `ActionSheet`](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/actionsheet.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=actionsheet.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ## Constructor
 
@@ -84,7 +84,7 @@ When using ActionSheet as an JSX element <code style="white-space: nowrap"><a hr
 
 A descriptive message for the available actions.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`messageChanged`](#messagechanged)
 JSX Content Type: | [Text](../declarative-ui.md#jsx-specifics)
@@ -100,7 +100,7 @@ When using ActionSheet as an JSX element the elements Text content is mapped to 
 
 The title of the action sheet.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`titleChanged`](#titlechanged)
 
@@ -118,8 +118,8 @@ EventObject Type: <code style="white-space: nowrap">ActionSheetCloseEvent&lt;<a 
 
 Property|Type|Description
 -|-|-
-action | <code style="white-space: nowrap"><a href="ActionSheetItem.html" title="ActionSheetItem Class Reference">ActionSheetItem</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a></code> | A copy of the selected action as an instance of ActionSheetItem. If no action was selected the value is `null`.
-index | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a></code> | The index of the selected action. If no action was selected the value is `null`.
+action | <code style="white-space: nowrap"><a href="ActionSheetItem.html" title="ActionSheetItem Class Reference">ActionSheetItem</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#null_type" title="View &quot;null&quot; on MDN">null</a></code> | A copy of the selected action as an instance of ActionSheetItem. If no action was selected the value is `null`.
+index | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#null_type" title="View &quot;null&quot; on MDN">null</a></code> | The index of the selected action. If no action was selected the value is `null`.
 
 ### select
 
@@ -130,7 +130,7 @@ EventObject Type: <code style="white-space: nowrap">ActionSheetSelectEvent&lt;<a
 Property|Type|Description
 -|-|-
 action | <code style="white-space: nowrap"><a href="ActionSheetItem.html" title="ActionSheetItem Class Reference">ActionSheetItem</a></code> | A copy of the selected action as an instance of ActionSheetItem.
-index | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The index of the selected action.
+index | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code> | The index of the selected action.
 
 ## Change Events
 
@@ -138,21 +138,21 @@ index | <code style="white-space: nowrap"><a href="https://developer.mozilla.org
 
 Fired when the [title](#title) property has changed.
 
-EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.html#propertychangedeventtargettype-valuetype" title="ChangeListeners Class Type">PropertyChangedEvent</a>&lt;<a href="#" >ActionSheet</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
+EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.html#propertychangedeventtargettype-valuetype" title="ChangeListeners Class Type">PropertyChangedEvent</a>&lt;<a href="#" >ActionSheet</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
 
 Property|Type|Description
 -|-|-
-value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The new value of [title](#title).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | The new value of [title](#title).
 
 ### messageChanged
 
 Fired when the [message](#message) property has changed.
 
-EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.html#propertychangedeventtargettype-valuetype" title="ChangeListeners Class Type">PropertyChangedEvent</a>&lt;<a href="#" >ActionSheet</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
+EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.html#propertychangedeventtargettype-valuetype" title="ChangeListeners Class Type">PropertyChangedEvent</a>&lt;<a href="#" >ActionSheet</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
 
 Property|Type|Description
 -|-|-
-value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The new value of [message](#message).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | The new value of [message](#message).
 
 ### actionsChanged
 

@@ -39,7 +39,7 @@ authentication.authenticate()
 
 See also:
   
-[<span class='language jsx'>JSX</span> Require user to authenticate](https://playground.tabris.com/?gitref=v3.7.0&snippet=authentication.jsx)
+[<span class='language jsx'>JSX</span> Require user to authenticate](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/authentication.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=authentication.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ## Methods
 
@@ -52,10 +52,10 @@ Request the user to authenticate using the device default mechanism. The resolve
 
 Parameter|Type|Description
 -|-|-
-options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, // The title shown in the authentication ui. optional<br/>&nbsp;&nbsp;subtitle: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, // The subtitle shown in the authentication ui. optional<br/>&nbsp;&nbsp;message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, // The message shown in the authentication ui. optional<br/>&nbsp;&nbsp;allowCredentials: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a>, // Configure whether to allow another authentication mechanism other than biometric authentication. For example, when a fingerprint would be the device default, the user could choose to fallback to use a pin instead. When non-biometric credentials are used, no fallback is available. . defaults to true<br/>&nbsp;&nbsp;confirmationRequired: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a> // When a fast authentication mechanism like face unlock is used, this option allows to configure whether a successful authorization has to be confirmed by the user via a button press. defaults to true<br/>}</code> | A set of options to apply when authenticating. *Optional.*
+options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a>, // The title shown in the authentication ui. optional<br/>&nbsp;&nbsp;subtitle: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a>, // The subtitle shown in the authentication ui. optional<br/>&nbsp;&nbsp;message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a>, // The message shown in the authentication ui. optional<br/>&nbsp;&nbsp;allowCredentials: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a>, // Configure whether to allow another authentication mechanism other than biometric authentication. For example, when a fingerprint would be the device default, the user could choose to fallback to use a pin instead. When non-biometric credentials are used, no fallback is available. . defaults to true<br/>&nbsp;&nbsp;confirmationRequired: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a> // When a fast authentication mechanism like face unlock is used, this option allows to configure whether a successful authorization has to be confirmed by the user via a button press. defaults to true<br/>}</code> | A set of options to apply when authenticating. *Optional.*
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="View &quot;Promise&quot; on MDN">Promise</a>&lt;{status: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'success'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'canceled'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'userCanceled'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'limitExceeded'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'lockout'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'biometricsNotEnrolled'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'credentialsNotEnrolled'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'error'</a>, message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>}&gt;</code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="View &quot;Promise&quot; on MDN">Promise</a>&lt;{status: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'success'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'canceled'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'userCanceled'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'limitExceeded'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'lockout'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'biometricsNotEnrolled'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'credentialsNotEnrolled'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'error'</a>, message: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a>}&gt;</code>
 
 ### canAuthenticate(options?)
 
@@ -66,10 +66,10 @@ Checks whether the device has any authentication mechanism configured. If the de
 
 Parameter|Type|Description
 -|-|-
-options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;allowCredentials: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a> // Configure whether to check another authentication mechanism other than biometric authentication. For example, when a fingerprint would be the device default, the user could choose to fallback to use a pin instead. When non-biometric credentials are used, no fallback is available. . defaults to true<br/>}</code> | A set of options to apply when authenticating. *Optional.*
+options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;allowCredentials: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a> // Configure whether to check another authentication mechanism other than biometric authentication. For example, when a fingerprint would be the device default, the user could choose to fallback to use a pin instead. When non-biometric credentials are used, no fallback is available. . defaults to true<br/>}</code> | A set of options to apply when authenticating. *Optional.*
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 ### cancel()
 
@@ -77,7 +77,7 @@ Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.or
 
 Closes a potentially open authentication ui.
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 
 ## Properties
@@ -87,7 +87,7 @@ Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.or
 
 The biometric authentication mechanisms available on the device. Currently supported values are `'fingerprint'` and `'face'`.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>[]</code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a>[]</code>
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | [`availableBiometricsChanged`](#availablebiometricschanged)
 
@@ -105,6 +105,6 @@ EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.htm
 
 Property|Type|Description
 -|-|-
-value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>[]</code> | The new value of [availableBiometrics](#availablebiometrics).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a>[]</code> | The new value of [availableBiometrics](#availablebiometrics).
 
 

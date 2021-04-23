@@ -19,8 +19,8 @@ JSX Support: | No
 See also:
   
 [Modules](../modules.md)  
-[<span class='language tsx'>TSX</span> module-addpath.tsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=module-addpath.tsx)  
-[<span class='language tsx'>TSX</span> module-define.tsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=module-define.tsx)
+[<span class='language tsx'>TSX</span> module-addpath.tsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/module-addpath.tsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=module-addpath.tsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language tsx'>TSX</span> module-define.tsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/module-define.tsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=module-define.tsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ## Constructor
 
@@ -28,8 +28,8 @@ See also:
 
 Parameter|Type|Description
 -|-|-
-id | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
-parent | <code style="white-space: nowrap"><a href="#" >Module</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a></code> | 
+id | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+parent | <code style="white-space: nowrap"><a href="#" >Module</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#null_type" title="View &quot;null&quot; on MDN">null</a></code> | 
 content | <code style="white-space: nowrap">ModuleLoader &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a></code> | 
 
 ## Methods
@@ -43,7 +43,7 @@ Finds a module relative to the id of this module and returns the exports object 
 
 Parameter|Type|Description
 -|-|-
-request | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+request | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a></code>
@@ -59,14 +59,14 @@ Maps imports matching the given patterns to the associated paths. Patterns may c
 
 Parameter|Type|Description
 -|-|-
-options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;baseUrl: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, // optional<br/>&nbsp;&nbsp;paths: {[pattern]: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>[]}<br/>}</code> | Contains the paths and baseUrl. If omitted, 'baseUrl' defaults to '/'.
+options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;baseUrl: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a>, // optional<br/>&nbsp;&nbsp;paths: {[pattern]: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a>[]}<br/>}</code> | Contains the paths and baseUrl. If omitted, 'baseUrl' defaults to '/'.
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 See also:
   
-[<span class='language tsx'>TSX</span> module-addpath.tsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=module-addpath.tsx)
+[<span class='language tsx'>TSX</span> module-addpath.tsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/module-addpath.tsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=module-addpath.tsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ### addPath(pattern, paths)
 
@@ -77,15 +77,15 @@ Maps imports matching the given patterns to the associated paths. Short for `add
 
 Parameter|Type|Description
 -|-|-
-pattern | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | That import pattern to match.
-paths | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>[]</code> | The module paths to look up for the given pattern
+pattern | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | That import pattern to match.
+paths | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a>[]</code> | The module paths to look up for the given pattern
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 See also:
   
-[<span class='language tsx'>TSX</span> module-addpath.tsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=module-addpath.tsx)
+[<span class='language tsx'>TSX</span> module-addpath.tsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/module-addpath.tsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=module-addpath.tsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ### createLoader(url)
 
@@ -96,7 +96,7 @@ Loads the given JavaScript file from the given (local or http) url and wraps it 
 
 Parameter|Type|Description
 -|-|-
-url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
 Returns: <code style="white-space: nowrap">ModuleLoader</code>
@@ -110,10 +110,10 @@ Creates a "require" function that finds a module relative to the given path. If 
 
 Parameter|Type|Description
 -|-|-
-path | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | An absolute path, beginning with "/". The path does not have to point to an existing file.
+path | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | An absolute path, beginning with "/". The path does not have to point to an existing file.
 
 
-Returns: <code style="white-space: nowrap">(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">request</a>) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">exports</a></code>
+Returns: <code style="white-space: nowrap">(<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">request</a>) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">exports</a></code>
 
 ### define(path, exports)
 
@@ -124,15 +124,15 @@ Defines a module at the given path. It will be available for import as though th
 
 Parameter|Type|Description
 -|-|-
-path | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The path of the new module. Must start with a `/`, which is the directory of the project's `package.json`. Keep in mind that the source directory may not be the same at runtime if the code is pre-processed.
+path | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | The path of the new module. Must start with a `/`, which is the directory of the project's `package.json`. Keep in mind that the source directory may not be the same at runtime if the code is pre-processed.
 exports | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code> | The exports of the new module. This can be any type, though typically it is an object.
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 See also:
   
-[<span class='language tsx'>TSX</span> module-define.tsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=module-define.tsx)
+[<span class='language tsx'>TSX</span> module-define.tsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/module-define.tsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=module-define.tsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ### execute(code, url)
 
@@ -143,8 +143,8 @@ Evaluates the given JavaScript code and returns the result of the last expressio
 
 Parameter|Type|Description
 -|-|-
-code | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
-url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+code | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
 Returns: <code style="white-space: nowrap">unknown</code>
@@ -158,7 +158,7 @@ Returns the source map object (decoded from base64 and parsed from JSON) for the
 
 Parameter|Type|Description
 -|-|-
-url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
 Returns: <code style="white-space: nowrap">unknown</code>
@@ -172,10 +172,10 @@ Loads a text from the given (local or http) url and returns its content. File is
 
 Parameter|Type|Description
 -|-|-
-url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code>
 
 ### readJSON(url)
 
@@ -186,7 +186,7 @@ Loads the JSON file from the given (local or http) url, parses it and returns th
 
 Parameter|Type|Description
 -|-|-
-url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 
 Returns: <code style="white-space: nowrap">unknown</code>
@@ -213,7 +213,7 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 Full id (path) of the module
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | No
 
 

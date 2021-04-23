@@ -18,7 +18,7 @@ JSX Support: | No
 
 See also:
   
-[<span class='language ts'>TS</span> crypto.ts](https://playground.tabris.com/?gitref=v3.7.0&snippet=crypto.ts)
+[<span class='language ts'>TS</span> crypto.ts](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/crypto.ts) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=crypto.ts" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ## Methods
 

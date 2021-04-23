@@ -39,11 +39,11 @@ contentView.append(
 
 See also:
   
-[<span class='language js'>JS</span> Example with various item types](https://github.com/eclipsesource/tabris-decorators/tree/v3.7.0/examples/itempicker-js)  
-[<span class='language jsx'>JSX</span> Example with various item types (JSX variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.7.0/examples/itempicker-jsx)  
-[<span class='language jsx'>JSX</span> Data Binding Example](https://github.com/eclipsesource/tabris-decorators/tree/v3.7.0/examples/bind-itempicker-list-jsx)  
-[<span class='language tsx'>TSX</span> Example with various item types (TypeScript/JSX variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.7.0/examples/itempicker)  
-[<span class='language tsx'>TSX</span> Data Binding Example (TypeScript variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.7.0/examples/bind-itempicker-list)
+[<span class='language js'>JS</span> Example with various item types](https://github.com/eclipsesource/tabris-decorators/tree/v3.7.2/examples/itempicker-js)  
+[<span class='language jsx'>JSX</span> Example with various item types (JSX variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.7.2/examples/itempicker-jsx)  
+[<span class='language jsx'>JSX</span> Data Binding Example](https://github.com/eclipsesource/tabris-decorators/tree/v3.7.2/examples/bind-itempicker-list-jsx)  
+[<span class='language tsx'>TSX</span> Example with various item types (TypeScript/JSX variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.7.2/examples/itempicker)  
+[<span class='language tsx'>TSX</span> Data Binding Example (TypeScript variant)](https://github.com/eclipsesource/tabris-decorators/tree/v3.7.2/examples/bind-itempicker-list)
 
 ## Constructor
 
@@ -98,7 +98,7 @@ If the value is a string, it is interpreted as the name of a property of the ite
 
 Lastly, a `path` string can be combined with a `converter` function in a plain object.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a><br/>&#124; {path: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, converter: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a>}</code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#null_type" title="View &quot;null&quot; on MDN">null</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a><br/>&#124; {path: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a>, converter: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a>}</code>
 Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">null</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`textSourceChanged`](#textsourcechanged)
@@ -118,8 +118,8 @@ EventObject Type: <code style="white-space: nowrap">ItemPickerItemSelectEvent&lt
 Property|Type|Description
 -|-|-
 item | <code style="white-space: nowrap"><a href="#generics" title="Generic Parameter&quot;ItemType&quot;">ItemType</a></code> | 
-itemIndex | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | 
-itemText | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+itemIndex | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code> | 
+itemText | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 ## Change Events
 
@@ -147,10 +147,10 @@ value | <code style="white-space: nowrap"><a href="#generics" title="Generic Par
 
 Fired when the [textSource](#textsource) property has changed.
 
-EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.html#propertychangedeventtargettype-valuetype" title="ChangeListeners Class Type">PropertyChangedEvent</a>&lt;<a href="#" >ItemPicker</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a>&gt;</code>
+EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.html#propertychangedeventtargettype-valuetype" title="ChangeListeners Class Type">PropertyChangedEvent</a>&lt;<a href="#" >ItemPicker</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#null_type" title="View &quot;null&quot; on MDN">null</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a>&gt;</code>
 
 Property|Type|Description
 -|-|-
-value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a><br/>&#124; {path: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, converter: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a>}</code> | The new value of [textSource](#textsource).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#null_type" title="View &quot;null&quot; on MDN">null</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a><br/>&#124; {path: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a>, converter: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a>}</code> | The new value of [textSource](#textsource).
 
 

@@ -30,7 +30,7 @@ console.log(linearGradient.direction); // "90"
 
 See also:
   
-[<span class='language js'>JS</span> Creating various types of linear gradients](https://playground.tabris.com/?gitref=v3.7.0&snippet=widget-lineargradient.js)
+[<span class='language js'>JS</span> Creating various types of linear gradients](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/widget-lineargradient.js) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=widget-lineargradient.js" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ## Constructor
 
@@ -39,7 +39,7 @@ See also:
 Parameter|Type|Description
 -|-|-
 colorStops | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="View &quot;Array&quot; on MDN">Array</a>&lt;<a href="Color.html" title="Color Class Reference">Color</a> &#124; [<a href="Color.html" title="Color Class Reference">Color</a>, <a href="Percent.html" title="Percent Class Reference">Percent</a>]&gt;</code> | An array with at least one color stop. Defines the position and the offset of the gradient color stop.
-direction | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The direction of the gradient line in degrees. *Optional.*
+direction | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code> | The direction of the gradient line in degrees. *Optional.*
 
 ## Methods
 
@@ -55,7 +55,7 @@ Parameter|Type|Description
 value | <code style="white-space: nowrap"><a href="#" >LinearGradient</a></code> | 
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 ### toString()
 
@@ -63,7 +63,7 @@ Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.or
 
 Returns a CSS string representation of the linear gradient.
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code>
 
 ## Static Methods
 
@@ -93,7 +93,7 @@ Parameter|Type|Description
 value | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code> | The value to test
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 ### isValidLinearGradientValue(value)
 
@@ -107,7 +107,7 @@ Parameter|Type|Description
 value | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code> | The value to test
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 
 ## Properties
@@ -132,7 +132,7 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 The direction of the gradient line in degrees.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code>
 Settable: | No
 
 

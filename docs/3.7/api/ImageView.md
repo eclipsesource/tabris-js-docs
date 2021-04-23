@@ -31,17 +31,17 @@ new ImageView({image: 'resources/image.png'})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Using an `ImageView` as a button](https://playground.tabris.com/?gitref=v3.7.0&snippet=imageview-as-a-button.jsx)  
-[<span class='language jsx'>JSX</span> Creating `ImageView`s with various scale modes](https://playground.tabris.com/?gitref=v3.7.0&snippet=imageview-scalemode.jsx)  
-[<span class='language jsx'>JSX</span> Creating an `ImageView` with support for pinch-to-zoom](https://playground.tabris.com/?gitref=v3.7.0&snippet=imageview-zoom.jsx)  
-[<span class='language jsx'>JSX</span> Creating an `ImageView` with a tint color applied](https://playground.tabris.com/?gitref=v3.7.0&snippet=imageview-tintcolor.jsx)  
-[<span class='language jsx'>JSX</span> Creating an `ImageView` with a load event callback](https://playground.tabris.com/?gitref=v3.7.0&snippet=imageview-load.jsx)  
-[<span class='language jsx'>JSX</span> Using an `ImageView` to show a Base64 encoded image](https://playground.tabris.com/?gitref=v3.7.0&snippet=imageview-base64.jsx)  
-[<span class='language jsx'>JSX</span> imageview-blob.jsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=imageview-blob.jsx)  
-[<span class='language tsx'>TSX</span> imageview-gallery.tsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=imageview-gallery.tsx)  
-[<span class='language jsx'>JSX</span> imageview-imagebitmap.jsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=imageview-imagebitmap.jsx)  
-[<span class='language jsx'>JSX</span> imageview-scalemode-auto.jsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=imageview-scalemode-auto.jsx)  
-[<span class='language jsx'>JSX</span> imageview.jsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=imageview.jsx)
+[<span class='language jsx'>JSX</span> Using an `ImageView` as a button](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/imageview-as-a-button.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=imageview-as-a-button.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> Creating `ImageView`s with various scale modes](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/imageview-scalemode.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=imageview-scalemode.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> Creating an `ImageView` with support for pinch-to-zoom](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/imageview-zoom.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=imageview-zoom.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> Creating an `ImageView` with a tint color applied](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/imageview-tintcolor.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=imageview-tintcolor.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> Creating an `ImageView` with a load event callback](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/imageview-load.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=imageview-load.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> Using an `ImageView` to show a Base64 encoded image](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/imageview-base64.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=imageview-base64.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> imageview-blob.jsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/imageview-blob.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=imageview-blob.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language tsx'>TSX</span> imageview-gallery.tsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/imageview-gallery.tsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=imageview-gallery.tsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> imageview-imagebitmap.jsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/imageview-imagebitmap.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=imageview-imagebitmap.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> imageview-scalemode-auto.jsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/imageview-scalemode-auto.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=imageview-scalemode-auto.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> imageview.jsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/imageview.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=imageview.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ## Constructor
 
@@ -70,8 +70,8 @@ Change Event: | [`imageChanged`](#imagechanged)
 
 The highest amount the image can be zoomed in to. Setting the `maxZoomLevel` to a level smaller than the current `zoomLevel` changes the `zoomLevel` to be the same as the new `maxZoomLevel`.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
-Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">3</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">3</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`maxZoomLevelChanged`](#maxzoomlevelchanged)
 
@@ -83,8 +83,8 @@ Change Event: | [`maxZoomLevelChanged`](#maxzoomlevelchanged)
 
 The lowest amount the image can be zoomed out to. Setting the `minZoomLevel` to a level larger than the current `zoomLevel` changes the `zoomLevel` to be the same as the new `minZoomLevel`. 
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
-Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">1</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">1</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`minZoomLevelChanged`](#minzoomlevelchanged)
 
@@ -102,8 +102,8 @@ How to scale the image.
 - `stretch` will resize the image to the actual bounds of the image view.
 - `none` will not resize the image at all. The image will be displayed in its original size.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'fit'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'fill'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'stretch'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'none'</a></code>
-Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'fit'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'fill'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'stretch'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'none'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`scaleModeChanged`](#scalemodechanged)
 
@@ -111,8 +111,8 @@ Change Event: | [`scaleModeChanged`](#scalemodechanged)
 
 See also:
   
-[<span class='language jsx'>JSX</span> imageview-scalemode-auto.jsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=imageview-scalemode-auto.jsx)  
-[<span class='language jsx'>JSX</span> imageview-scalemode.jsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=imageview-scalemode.jsx)
+[<span class='language jsx'>JSX</span> imageview-scalemode-auto.jsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/imageview-scalemode-auto.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=imageview-scalemode-auto.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> imageview-scalemode.jsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/imageview-scalemode.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=imageview-scalemode.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 
 ### tintColor
@@ -128,7 +128,7 @@ Change Event: | [`tintColorChanged`](#tintcolorchanged)
 
 See also:
   
-[<span class='language jsx'>JSX</span> imageview-tintcolor.jsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=imageview-tintcolor.jsx)
+[<span class='language jsx'>JSX</span> imageview-tintcolor.jsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/imageview-tintcolor.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=imageview-tintcolor.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 
 ### zoomEnabled
@@ -136,8 +136,8 @@ See also:
 
 Enables the pinch-to-zoom gesture on the `ImageView` and makes the properties `zoomLevel`, `minZoomLevel` and `maxZoomLevel` available. Setting `zoomEnabled` to `false` also resets the `zoomLevel`, `minZoomLevel`, `maxZoomLevel` to their respective defaults.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
-Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">false</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">false</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`zoomEnabledChanged`](#zoomenabledchanged)
 
@@ -149,8 +149,8 @@ Change Event: | [`zoomEnabledChanged`](#zoomenabledchanged)
 
 The amount that the image is zoomed in or out. The default position without any zooming has the value 1.0.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
-Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">1</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">1</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`zoomLevelChanged`](#zoomlevelchanged)
 
@@ -168,12 +168,12 @@ EventObject Type: <code style="white-space: nowrap">ImageViewLoadEvent&lt;<a hre
 
 Property|Type|Description
 -|-|-
-error | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | Contains the final status of the loading process
+error | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | Contains the final status of the loading process
 
 
 See also:
   
-[<span class='language jsx'>JSX</span> imageview-load.jsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=imageview-load.jsx)
+[<span class='language jsx'>JSX</span> imageview-load.jsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/imageview-load.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=imageview-load.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 ### zoom
 
 Fired when the user zooms the image in or out. The `zoom` event indicates a change to the `zoomLevel` property.
@@ -182,12 +182,12 @@ EventObject Type: <code style="white-space: nowrap">ImageViewZoomEvent&lt;<a hre
 
 Property|Type|Description
 -|-|-
-zoomLevel | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The new value of *[zoomLevel](#zoomlevel)*.
+zoomLevel | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code> | The new value of *[zoomLevel](#zoomlevel)*.
 
 
 See also:
   
-[<span class='language jsx'>JSX</span> imageview-zoom.jsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=imageview-zoom.jsx)
+[<span class='language jsx'>JSX</span> imageview-zoom.jsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/imageview-zoom.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=imageview-zoom.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 ## Change Events
 
 ### imageChanged
@@ -204,11 +204,11 @@ value | <code style="white-space: nowrap"><a href="Image.html#imagevalue" title=
 
 Fired when the [scaleMode](#scalemode) property has changed.
 
-EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.html#propertychangedeventtargettype-valuetype" title="ChangeListeners Class Type">PropertyChangedEvent</a>&lt;<a href="#" >ImageView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
+EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.html#propertychangedeventtargettype-valuetype" title="ChangeListeners Class Type">PropertyChangedEvent</a>&lt;<a href="#" >ImageView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
 
 Property|Type|Description
 -|-|-
-value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The new value of [scaleMode](#scalemode).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | The new value of [scaleMode](#scalemode).
 
 ### tintColorChanged
 
@@ -224,40 +224,40 @@ value | <code style="white-space: nowrap"><a href="Color.html#colorvalue" title=
 
 Fired when the [zoomEnabled](#zoomenabled) property has changed.
 
-EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.html#propertychangedeventtargettype-valuetype" title="ChangeListeners Class Type">PropertyChangedEvent</a>&lt;<a href="#" >ImageView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a>&gt;</code>
+EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.html#propertychangedeventtargettype-valuetype" title="ChangeListeners Class Type">PropertyChangedEvent</a>&lt;<a href="#" >ImageView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a>&gt;</code>
 
 Property|Type|Description
 -|-|-
-value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The new value of [zoomEnabled](#zoomenabled).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The new value of [zoomEnabled](#zoomenabled).
 
 ### zoomLevelChanged
 
 Fired when the [zoomLevel](#zoomlevel) property has changed.
 
-EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.html#propertychangedeventtargettype-valuetype" title="ChangeListeners Class Type">PropertyChangedEvent</a>&lt;<a href="#" >ImageView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>&gt;</code>
+EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.html#propertychangedeventtargettype-valuetype" title="ChangeListeners Class Type">PropertyChangedEvent</a>&lt;<a href="#" >ImageView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a>&gt;</code>
 
 Property|Type|Description
 -|-|-
-value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The new value of [zoomLevel](#zoomlevel).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code> | The new value of [zoomLevel](#zoomlevel).
 
 ### minZoomLevelChanged
 
 Fired when the [minZoomLevel](#minzoomlevel) property has changed.
 
-EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.html#propertychangedeventtargettype-valuetype" title="ChangeListeners Class Type">PropertyChangedEvent</a>&lt;<a href="#" >ImageView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>&gt;</code>
+EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.html#propertychangedeventtargettype-valuetype" title="ChangeListeners Class Type">PropertyChangedEvent</a>&lt;<a href="#" >ImageView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a>&gt;</code>
 
 Property|Type|Description
 -|-|-
-value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The new value of [minZoomLevel](#minzoomlevel).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code> | The new value of [minZoomLevel](#minzoomlevel).
 
 ### maxZoomLevelChanged
 
 Fired when the [maxZoomLevel](#maxzoomlevel) property has changed.
 
-EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.html#propertychangedeventtargettype-valuetype" title="ChangeListeners Class Type">PropertyChangedEvent</a>&lt;<a href="#" >ImageView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>&gt;</code>
+EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.html#propertychangedeventtargettype-valuetype" title="ChangeListeners Class Type">PropertyChangedEvent</a>&lt;<a href="#" >ImageView</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a>&gt;</code>
 
 Property|Type|Description
 -|-|-
-value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The new value of [maxZoomLevel](#maxzoomlevel).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code> | The new value of [maxZoomLevel](#maxzoomlevel).
 
 

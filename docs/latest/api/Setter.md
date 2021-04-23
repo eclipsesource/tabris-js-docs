@@ -10,8 +10,8 @@ Defines a set attributes to use with [`apply`](./Composite.md#applyrules) or as 
 
 See also:
   
-[<span class='language jsx'>JSX</span> Example snippet using Setter with apply](https://playground.tabris.com/?gitref=v3.7.0&snippet=layout-dynamic.jsx)  
-[<span class='language jsx'>JSX</span> Example snippet using Setter as an JSX element](https://playground.tabris.com/?gitref=v3.7.0&snippet=collectionview.jsx)
+[<span class='language jsx'>JSX</span> Example snippet using Setter with apply](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/layout-dynamic.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=layout-dynamic.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> Example snippet using Setter as an JSX element](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/collectionview.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=collectionview.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ## Methods
 

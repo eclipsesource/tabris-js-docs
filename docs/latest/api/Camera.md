@@ -35,9 +35,9 @@ camera.captureImage()
 
 See also:
   
-[<span class='language tsx'>TSX</span> Simple example to capture an image](https://playground.tabris.com/?gitref=v3.7.0&snippet=camera.tsx)  
-[<span class='language tsx'>TSX</span> Control `Camera` and `CameraView` to capture an image](https://playground.tabris.com/?gitref=v3.7.0&snippet=camera-advanced.tsx)  
-[<span class='language jsx'>JSX</span> Check and request camera permissions](https://playground.tabris.com/?gitref=v3.7.0&snippet=permission.jsx)
+[<span class='language tsx'>TSX</span> Simple example to capture an image](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/camera.tsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=camera.tsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language tsx'>TSX</span> Control `Camera` and `CameraView` to capture an image](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/camera-advanced.tsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=camera-advanced.tsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> Check and request camera permissions](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/permission.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=permission.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ## Methods
 
@@ -50,10 +50,10 @@ Captures an image and returns a result object when the returned promise resolves
 
 Parameter|Type|Description
 -|-|-
-options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;flash: // Whether to enable or disable the device flashlight. defaults to off<br/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'on'</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'off'</a><br/>}</code> | A set of capture options to apply when taking a picture. <br/><br/>If `flash` is set to `'auto'` the device will decide (based on the lighting conditions) whether to activate the flashlight. *Optional.*
+options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;flash: // Whether to enable or disable the device flashlight. defaults to off<br/>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'on'</a><br/>&nbsp;&nbsp;&nbsp;&nbsp;&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'off'</a><br/>}</code> | A set of capture options to apply when taking a picture. <br/><br/>If `flash` is set to `'auto'` the device will decide (based on the lighting conditions) whether to activate the flashlight. *Optional.*
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="View &quot;Promise&quot; on MDN">Promise</a>&lt;{image: <a href="Blob.html" title="Blob Class Reference">Blob</a>, width: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>, height: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>}&gt;</code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="View &quot;Promise&quot; on MDN">Promise</a>&lt;{image: <a href="Blob.html" title="Blob Class Reference">Blob</a>, width: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a>, height: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a>}&gt;</code>
 
 
 ## Properties
@@ -67,8 +67,8 @@ Setting `active` to false stops the camera and disables any video feed shown on 
 
 It is recommended to stop the `Camera` when not in use in order to preserve battery life.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
-Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">false</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">false</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`activeChanged`](#activechanged)
 
@@ -80,7 +80,7 @@ Change Event: | [`activeChanged`](#activechanged)
 
 An array of resolutions supported by the camera. Each array entry is an object consisting of `width` and `height`. Eg.: `{width: 4000, height: 3000}
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="View &quot;Array&quot; on MDN">Array</a>&lt;{width: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>, height: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>}&gt;</code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="View &quot;Array&quot; on MDN">Array</a>&lt;{width: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a>, height: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a>}&gt;</code>
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | [`availableCaptureResolutionsChanged`](#availablecaptureresolutionschanged)
 
@@ -92,7 +92,7 @@ Change Event: | [`availableCaptureResolutionsChanged`](#availablecaptureresoluti
 
 The id of the device camera given by the native platform.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
@@ -108,7 +108,7 @@ If the given `captureResolution` is not in the list of `availableCaptureResoluti
 
 When setting the `captureResolution` on the iOS platform, a small grace period should pass before capturing an image. Otherwise the image might turn out incorrectly exposed.
 
-Type: |<code style="white-space: nowrap">{width: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>, height: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>}</code>
+Type: |<code style="white-space: nowrap">{width: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a>, height: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a>}</code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`captureResolutionChanged`](#captureresolutionchanged)
 
@@ -120,7 +120,7 @@ Change Event: | [`captureResolutionChanged`](#captureresolutionchanged)
 
 The position of the camera on the device. The `external` position is used for devices like usb cameras.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'front'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'back'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'external'</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'front'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'back'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'external'</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
@@ -134,11 +134,11 @@ Change Event: | Not supported
 
 Fired when the [active](#active) property has changed.
 
-EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.html#propertychangedeventtargettype-valuetype" title="ChangeListeners Class Type">PropertyChangedEvent</a>&lt;<a href="#" >Camera</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a>&gt;</code>
+EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.html#propertychangedeventtargettype-valuetype" title="ChangeListeners Class Type">PropertyChangedEvent</a>&lt;<a href="#" >Camera</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a>&gt;</code>
 
 Property|Type|Description
 -|-|-
-value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The new value of [active](#active).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The new value of [active](#active).
 
 ### availableCaptureResolutionsChanged
 
@@ -148,7 +148,7 @@ EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.htm
 
 Property|Type|Description
 -|-|-
-value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="View &quot;Array&quot; on MDN">Array</a>&lt;{width: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>, height: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>}&gt;</code> | The new value of [availableCaptureResolutions](#availablecaptureresolutions).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="View &quot;Array&quot; on MDN">Array</a>&lt;{width: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a>, height: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a>}&gt;</code> | The new value of [availableCaptureResolutions](#availablecaptureresolutions).
 
 ### captureResolutionChanged
 
@@ -158,6 +158,6 @@ EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.htm
 
 Property|Type|Description
 -|-|-
-value | <code style="white-space: nowrap">{width: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>, height: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a>}</code> | The new value of [captureResolution](#captureresolution).
+value | <code style="white-space: nowrap">{width: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a>, height: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a>}</code> | The new value of [captureResolution](#captureresolution).
 
 

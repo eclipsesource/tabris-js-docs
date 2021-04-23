@@ -10,7 +10,7 @@ Base class for all events fired by the framework. Instances may include addition
 
 
 Type: | <code style="white-space: nowrap">EventObject&lt;TargetType&gt; extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a></code>
-Generics: | <span id="generics">TargetType: *The type of the target. Defaults to <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>.*<br/></span>
+Generics: | <span id="generics">TargetType: *The type of the target. Defaults to <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>.*<br/></span>
 Constructor: | public
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
@@ -45,7 +45,7 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 The time at which the event was created, in milliseconds.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code>
 Settable: | No
 
 
@@ -60,7 +60,7 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 The event type.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | No
 
 

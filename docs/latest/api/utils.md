@@ -40,7 +40,7 @@ Parameter|Type|Description
 -|-|-
 value | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code> | The value to check the type of.
 type | <code style="white-space: nowrap">Constructor&lt;T&gt;</code> | The constructor function (class) of the expected type. May also be a subclass. Primitive types are represented by their respective boxed type constructors `String`, `Number` and `Boolean`.
-options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, // optional<br/>&nbsp;&nbsp;nullable: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a> // defaults to false<br/>}</code> | *Optional.*
+options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a>, // optional<br/>&nbsp;&nbsp;nullable: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a> // defaults to false<br/>}</code> | *Optional.*
 
 
 Returns: <code style="white-space: nowrap">T</code>
@@ -61,7 +61,7 @@ type | <code style="white-space: nowrap">Constructor&lt;T&gt;</code> | The const
 callback | <code style="white-space: nowrap">(value) => <a title="Literally any JavaScript value">any</a></code> | A callback called with the value if it is of the expected type.
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### format(...data)
 
@@ -75,7 +75,7 @@ Parameter|Type|Description
 ...data | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a>[]</code> | 
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code>
 
 ### format(message, ...data)
 
@@ -87,10 +87,10 @@ The any placeholders in the message are replaced by the additional data paramete
 
 Parameter|Type|Description
 -|-|-
-message | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The main message.
+message | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | The main message.
 ...data | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a>[]</code> | Data to be inserted in to the main message.
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code>
 
 

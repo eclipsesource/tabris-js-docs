@@ -32,7 +32,7 @@ new TimeDialog()
 
 See also:
   
-[<span class='language tsx'>TSX</span> Creating a simple `TimeDialog`](https://playground.tabris.com/?gitref=v3.7.0&snippet=timedialog.tsx)
+[<span class='language tsx'>TSX</span> Creating a simple `TimeDialog`](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/timedialog.tsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=timedialog.tsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ## Constructor
 
@@ -98,7 +98,7 @@ EventObject Type: <code style="white-space: nowrap">TimeDialogCloseEvent&lt;<a h
 
 Property|Type|Description
 -|-|-
-date | <code style="white-space: nowrap">Date &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a></code> | The selected time. Can be `null` when no date was selected.
+date | <code style="white-space: nowrap">Date &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#null_type" title="View &quot;null&quot; on MDN">null</a></code> | The selected time. Can be `null` when no date was selected.
 
 ### select
 

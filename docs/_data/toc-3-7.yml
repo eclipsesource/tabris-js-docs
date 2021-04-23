@@ -75,8 +75,6 @@
       url: api/Console.html
     - title: crypto
       url: api/Crypto.html
-    - title: crypto
-      url: w3c-api.html#random-source-crypto
     - title: device
       url: api/device.html
     - title: devTools

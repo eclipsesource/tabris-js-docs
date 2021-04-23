@@ -35,13 +35,13 @@ new Canvas({layoutData: 'stretch'})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a `Canvas` with simple shapes](https://playground.tabris.com/?gitref=v3.7.0&snippet=canvas-shapes.jsx)  
-[<span class='language jsx'>JSX</span> Creating a `Canvas` and working with `ImageData`](https://playground.tabris.com/?gitref=v3.7.0&snippet=canvas-imagedata.jsx)  
-[<span class='language jsx'>JSX</span> How to show text on a `Canvas`](https://playground.tabris.com/?gitref=v3.7.0&snippet=canvas-text.jsx)  
-[<span class='language jsx'>JSX</span> How to use animations on a `Canvas`](https://playground.tabris.com/?gitref=v3.7.0&snippet=canvas-animation.jsx)  
-[<span class='language jsx'>JSX</span> canvas-arc.jsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=canvas-arc.jsx)  
-[<span class='language jsx'>JSX</span> canvas-imagebitmap.jsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=canvas-imagebitmap.jsx)  
-[<span class='language jsx'>JSX</span> canvas-to-image.jsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=canvas-to-image.jsx)
+[<span class='language jsx'>JSX</span> Creating a `Canvas` with simple shapes](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/canvas-shapes.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=canvas-shapes.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> Creating a `Canvas` and working with `ImageData`](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/canvas-imagedata.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=canvas-imagedata.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> How to show text on a `Canvas`](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/canvas-text.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=canvas-text.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> How to use animations on a `Canvas`](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/canvas-animation.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=canvas-animation.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> canvas-arc.jsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/canvas-arc.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=canvas-arc.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> canvas-imagebitmap.jsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/canvas-imagebitmap.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=canvas-imagebitmap.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> canvas-to-image.jsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/canvas-to-image.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=canvas-to-image.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ## Constructor
 
@@ -62,9 +62,9 @@ Returns the drawing context with the given size.
 
 Parameter|Type|Description
 -|-|-
-contextType | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The context identifier. Only `"2d"` is supported.
-width | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | the width of the canvas context to create
-height | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | the height of the canvas context to create
+contextType | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | The context identifier. Only `"2d"` is supported.
+width | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code> | the width of the canvas context to create
+height | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code> | the height of the canvas context to create
 
 
 Returns: <code style="white-space: nowrap"><a href="CanvasContext.html" title="CanvasContext Class Reference">CanvasContext</a></code>
@@ -78,11 +78,11 @@ Creates a Blob object representing the image contained in the canvas. This is a 
 
 Parameter|Type|Description
 -|-|-
-callback | <code style="white-space: nowrap">(<a href="Blob.html" title="Blob Class Reference">blob</a>) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">void</a></code> | Callback that will be called with the resulting blob.
-mimeType | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'image/png'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'image/jpeg'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'image/webp'</a></code> | The expected image format. If `mimeType` is not specified or invalid, the image type is `image/png`. **On iOS the type `image/webp` is not supported. A png will be returned instead.** *Optional.*
-quality | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | A Number between 0 and 1 specifying the image quality. A lower number results in a smaller file size at the same resolution. If `quality` is not specified or invalid the value `0.92` is for `image/jpeg` and  `0.80` for `image/webp` respectively. The value has no effect for `image/png`. *Optional.*
+callback | <code style="white-space: nowrap">(<a href="Blob.html" title="Blob Class Reference">blob</a>) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">void</a></code> | Callback that will be called with the resulting blob.
+mimeType | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'image/png'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'image/jpeg'</a><br/>&#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'image/webp'</a></code> | The expected image format. If `mimeType` is not specified or invalid, the image type is `image/png`. **On iOS the type `image/webp` is not supported. A png will be returned instead.** *Optional.*
+quality | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code> | A Number between 0 and 1 specifying the image quality. A lower number results in a smaller file size at the same resolution. If `quality` is not specified or invalid the value `0.92` is for `image/jpeg` and  `0.80` for `image/webp` respectively. The value has no effect for `image/png`. *Optional.*
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 

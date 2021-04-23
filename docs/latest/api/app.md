@@ -18,11 +18,11 @@ JSX Support: | No
 
 See also:
   
-[<span class='language jsx'>JSX</span> Displaying app properties](https://playground.tabris.com/?gitref=v3.7.0&snippet=app-info.jsx)  
-[<span class='language jsx'>JSX</span> Displaying app events](https://playground.tabris.com/?gitref=v3.7.0&snippet=app-events.jsx)  
-[<span class='language jsx'>JSX</span> Launching an url](https://playground.tabris.com/?gitref=v3.7.0&snippet=app-launch.jsx)  
-[<span class='language js'>JS</span> Register and use an external font](https://playground.tabris.com/?gitref=v3.7.0&snippet=textview-font-external.js)  
-[<span class='language jsx'>JSX</span> Share various types of data with the `share()` API](https://playground.tabris.com/?gitref=v3.7.0&snippet=app-share.jsx)
+[<span class='language jsx'>JSX</span> Displaying app properties](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/app-info.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=app-info.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> Displaying app events](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/app-events.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=app-events.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> Launching an url](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/app-launch.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=app-launch.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language js'>JS</span> Register and use an external font](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/textview-font-external.js) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=textview-font-external.js" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language jsx'>JSX</span> Share various types of data with the `share()` API](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/app-share.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=app-share.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ## Methods
 
@@ -32,7 +32,7 @@ See also:
 
 Shuts down the running application and closes the UI.
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### getResourceLocation(path)
 
@@ -43,10 +43,10 @@ Returns the URL for a given resource that is bundled with the app. Can be used t
 
 Parameter|Type|Description
 -|-|-
-path | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The path of a resource relative to the application root.
+path | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | The path of a resource relative to the application root.
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code>
 
 ### launch(url)
 
@@ -57,14 +57,14 @@ Asks the operating system to open the given URL in an external app. Operating sy
 
 Parameter|Type|Description
 -|-|-
-url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The URL to launch.
+url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | The URL to launch.
 
 
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="View &quot;Promise&quot; on MDN">Promise</a></code>
 
 See also:
   
-[<span class='language jsx'>JSX</span> app-launch.jsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=app-launch.jsx)
+[<span class='language jsx'>JSX</span> app-launch.jsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/app-launch.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=app-launch.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ### registerFont(alias, file)
 
@@ -75,11 +75,11 @@ Allows to register a font to use throughout the app. Once a font is registered i
 
 Parameter|Type|Description
 -|-|-
-alias | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | An identifier for the registered font. The alias can be used as a font family, e.g. in the `font` properties of `TextView` and `Button`.
-file | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The font file to register for later use. Similar to images paths, the file path can be absolute, relative or an URL.
+alias | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | An identifier for the registered font. The alias can be used as a font family, e.g. in the `font` properties of `TextView` and `Button`.
+file | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | The font file to register for later use. Similar to images paths, the file path can be absolute, relative or an URL.
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### reload(url?)
 
@@ -90,10 +90,10 @@ Closes the running application and either loads a different app at the given `ur
 
 Parameter|Type|Description
 -|-|-
-url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | An optional url to an app to launch *Optional.*
+url | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | An optional url to an app to launch *Optional.*
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### share(data)
 
@@ -108,14 +108,14 @@ In order to be able to share an image to the photo app on iOS, the Tabris.js app
 
 Parameter|Type|Description
 -|-|-
-data | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, // Text to show in the share dialog. optional<br/>&nbsp;&nbsp;text: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, // A piece of text to share with another app. optional<br/>&nbsp;&nbsp;url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, // A url to share with another app. optional<br/>&nbsp;&nbsp;files: <a href="File.html" title="File Class Reference">File</a>[] // An array of `File` objects to share with another app. optional<br/>}</code> | The data to share. The object must contain at least one of the properties: `title`, `text`, `url` or `files`. The files need to have a `name` and mime `type` set. <br/><br/>On iOS the content of the `url` is previewed in the native share dialog. On Android it is treated as regular text. When both `text` and `url` are given on Android the two strings are concatenated with a blank space as defined in the [W3C Web Share API](https://www.w3.org/TR/web-share/).
+data | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;title: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a>, // Text to show in the share dialog. optional<br/>&nbsp;&nbsp;text: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a>, // A piece of text to share with another app. optional<br/>&nbsp;&nbsp;url: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a>, // A url to share with another app. optional<br/>&nbsp;&nbsp;files: <a href="File.html" title="File Class Reference">File</a>[] // An array of `File` objects to share with another app. optional<br/>}</code> | The data to share. The object must contain at least one of the properties: `title`, `text`, `url` or `files`. The files need to have a `name` and mime `type` set. <br/><br/>On iOS the content of the `url` is previewed in the native share dialog. On Android it is treated as regular text. When both `text` and `url` are given on Android the two strings are concatenated with a blank space as defined in the [W3C Web Share API](https://www.w3.org/TR/web-share/).
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="View &quot;Promise&quot; on MDN">Promise</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="View &quot;Promise&quot; on MDN">Promise</a>&lt;<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a>&gt;</code>
 
 See also:
   
-[<span class='language jsx'>JSX</span> app-share.jsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=app-share.jsx)
+[<span class='language jsx'>JSX</span> app-share.jsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/app-share.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=app-share.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 
 ## Properties
@@ -125,7 +125,7 @@ See also:
 
 Returns `false` if this app was build build in production mode, otherwise `true`. In production mode no debugger can be attached to the JavaScript VM or native runtime.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
@@ -137,7 +137,7 @@ Change Event: | Not supported
 
 Uniquely identifies the app.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
@@ -151,8 +151,8 @@ Allows to control the device idle timout. When disabled the device will not go i
 
 The `idleTimeoutEnabled` will disable any system wide enabled idle settings while the app is in the foreground.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
-Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">true</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">true</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`idleTimeoutEnabledChanged`](#idletimeoutenabledchanged)
 
@@ -202,7 +202,7 @@ Change Event: | [`trustedCertificatesChanged`](#trustedcertificateschanged)
 
 The user facing version number of the app.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
@@ -214,7 +214,7 @@ Change Event: | Not supported
 
 An alternative version number used in app stores to identify different versions of an app. Usually incremented with each release. This property reflects the `versionCode` on Android and `CFBundleVersion` on iOS.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
@@ -275,16 +275,16 @@ EventObject Type: <code style="white-space: nowrap">AppKeyPressEvent&lt;<a href=
 
 Property|Type|Description
 -|-|-
-action | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'up'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'down'</a></code> | The action of this key event.
-altKey | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The pressed state of the ALT key.
-character | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The character generated by the specified key and modifier key state combination.
-ctrlKey | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The pressed state of the CTRL key.
-deviceId | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The id for the device that this event came from. An id of zero indicates that the event didn't come from a physical device and maps to the default keymap. The other numbers are arbitrary and you shouldn't depend on the values.
-functionKey | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The pressed state of the FUNCTION key.
-keyCode | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The key code of the key event. It represents the physical key that was pressed, not the Unicode character.
+action | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'up'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'down'</a></code> | The action of this key event.
+altKey | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The pressed state of the ALT key.
+character | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | The character generated by the specified key and modifier key state combination.
+ctrlKey | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The pressed state of the CTRL key.
+deviceId | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code> | The id for the device that this event came from. An id of zero indicates that the event didn't come from a physical device and maps to the default keymap. The other numbers are arbitrary and you shouldn't depend on the values.
+functionKey | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The pressed state of the FUNCTION key.
+keyCode | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code> | The key code of the key event. It represents the physical key that was pressed, not the Unicode character.
 preventDefault | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a></code> | Call to suppress the key events to be dispatched to the apps widget hierarchy. Note that a `TextInput` with focus will still receive the event and add a character to its text accordingly.
-shiftKey | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The pressed state of the SHIFT key.
-time | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The time this event occurred, in the android.os.SystemClock#uptimeMillis time base.
+shiftKey | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The pressed state of the SHIFT key.
+time | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code> | The time this event occurred, in the android.os.SystemClock#uptimeMillis time base.
 
 ### backNavigation
 
@@ -322,10 +322,10 @@ value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org
 
 Fired when the [idleTimeoutEnabled](#idletimeoutenabled) property has changed.
 
-EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.html#propertychangedeventtargettype-valuetype" title="ChangeListeners Class Type">PropertyChangedEvent</a>&lt;<a href="#" >App</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a>&gt;</code>
+EventObject Type: <code style="white-space: nowrap"><a href="ChangeListeners.html#propertychangedeventtargettype-valuetype" title="ChangeListeners Class Type">PropertyChangedEvent</a>&lt;<a href="#" >App</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a>&gt;</code>
 
 Property|Type|Description
 -|-|-
-value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The new value of [idleTimeoutEnabled](#idletimeoutenabled).
+value | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code> | The new value of [idleTimeoutEnabled](#idletimeoutenabled).
 
 

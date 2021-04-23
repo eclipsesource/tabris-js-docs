@@ -18,7 +18,7 @@ JSX Support: | No
 
 See also:
   
-[<span class='language jsx'>JSX</span> devtools.jsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=devtools.jsx)
+[<span class='language jsx'>JSX</span> devtools.jsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/devtools.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=devtools.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ## Methods
 
@@ -28,7 +28,7 @@ See also:
 
 Hides the developer tools UI if currently visible. Note that this can cause a re-layout since the [`contentView`](./ContentView.md) grows.
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### isUiVisible()
 
@@ -36,7 +36,7 @@ Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.or
 
 Returns `true` if the developer tools UI is currently visible.
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 ### showUi()
 
@@ -46,6 +46,6 @@ Shows the developer tools UI if available and not already visible. Returns `true
 
 Note this causes a re-layout since the [`contentView`](./ContentView.md) shrinks.
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 

@@ -10,7 +10,7 @@ Do not use for resource dictionaries of the types `Color`, `Font` and `string`. 
 
 
 Type: | <code style="white-space: nowrap">ResourceBuilder&lt;ResourceType, RawType&gt;<br/>extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a></code>
-Generics: | <span id="generics">ResourceType: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code><br/>RawType: <code style="white-space: nowrap"><a href="#generics" title="Generic Parameter&quot;ResourceType&quot;">ResourceType</a></code><br/></span>
+Generics: | <span id="generics">ResourceType: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code><br/>RawType: <code style="white-space: nowrap"><a href="#generics" title="Generic Parameter&quot;ResourceType&quot;">ResourceType</a></code><br/></span>
 Constructor: | public
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>

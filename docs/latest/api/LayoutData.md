@@ -49,7 +49,7 @@ Parameter|Type|Description
 value | <code style="white-space: nowrap"><a href="#" >LayoutData</a></code> | 
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 ### toString()
 
@@ -57,7 +57,7 @@ Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.or
 
 Returns a string representation of LayoutData.
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code>
 
 ## Static Methods
 
@@ -83,8 +83,8 @@ Returns: <code style="white-space: nowrap"><a href="#" >LayoutData</a></code>
 
 The vertical position of the widget's baseline relative to a sibling widget.
 
-Type: |<code style="white-space: nowrap"><a href="Constraint.html#siblingreference" title="Constraint Class Type">SiblingReference</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
-Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Type: |<code style="white-space: nowrap"><a href="Constraint.html#siblingreference" title="Constraint Class Type">SiblingReference</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Settable: | No
 
 
@@ -99,8 +99,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 The position of the widget's bottom edge relative to the parent or a sibling widget. Must not be negative.
 
-Type: |<code style="white-space: nowrap"><a href="Constraint.html" title="Constraint Class Reference">Constraint</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
-Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Type: |<code style="white-space: nowrap"><a href="Constraint.html" title="Constraint Class Reference">Constraint</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Settable: | No
 
 
@@ -115,8 +115,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 The horizontal position of the widget's center relative to the parent's center.
 
-Type: |<code style="white-space: nowrap"><a href="Constraint.html#offset" title="Constraint Class Type">Offset</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
-Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Type: |<code style="white-space: nowrap"><a href="Constraint.html#offset" title="Constraint Class Type">Offset</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Settable: | No
 
 
@@ -131,8 +131,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 The vertical position of the widget's center relative to the parent's center.
 
-Type: |<code style="white-space: nowrap"><a href="Constraint.html#offset" title="Constraint Class Type">Offset</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
-Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Type: |<code style="white-space: nowrap"><a href="Constraint.html#offset" title="Constraint Class Type">Offset</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Settable: | No
 
 
@@ -147,8 +147,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 The height of the widget.
 
-Type: |<code style="white-space: nowrap"><a href="Widget.html#dimension" title="Widget Class Type">Dimension</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
-Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Type: |<code style="white-space: nowrap"><a href="Widget.html#dimension" title="Widget Class Type">Dimension</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Settable: | No
 
 
@@ -163,8 +163,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 The position of the widget's left edge relative to the parent or a sibling widget. Must not be negative.
 
-Type: |<code style="white-space: nowrap"><a href="Constraint.html" title="Constraint Class Reference">Constraint</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
-Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Type: |<code style="white-space: nowrap"><a href="Constraint.html" title="Constraint Class Reference">Constraint</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Settable: | No
 
 
@@ -179,8 +179,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 The position of the widget's right edge relative to the parent or a sibling widget. Must not be negative.
 
-Type: |<code style="white-space: nowrap"><a href="Constraint.html" title="Constraint Class Reference">Constraint</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
-Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Type: |<code style="white-space: nowrap"><a href="Constraint.html" title="Constraint Class Reference">Constraint</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Settable: | No
 
 
@@ -195,8 +195,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 The position of the widget's top edge relative to the parent or a sibling widget. Must not be negative.
 
-Type: |<code style="white-space: nowrap"><a href="Constraint.html" title="Constraint Class Reference">Constraint</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
-Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Type: |<code style="white-space: nowrap"><a href="Constraint.html" title="Constraint Class Reference">Constraint</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Settable: | No
 
 
@@ -211,8 +211,8 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 The width of the widget.
 
-Type: |<code style="white-space: nowrap"><a href="Widget.html#dimension" title="Widget Class Type">Dimension</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
-Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Type: |<code style="white-space: nowrap"><a href="Widget.html#dimension" title="Widget Class Type">Dimension</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'auto'</a></code>
 Settable: | No
 
 

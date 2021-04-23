@@ -8,7 +8,7 @@ An Observable represents a sequence of values which may be observed. API based o
 
 
 Type: | <code style="white-space: nowrap">Observable&lt;T&gt; extends <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">Object</a></code>
-Generics: | <span id="generics">T: *The type of the observed value. Defaults to <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>.*<br/></span>
+Generics: | <span id="generics">T: *The type of the observed value. Defaults to <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>.*<br/></span>
 Constructor: | public
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
@@ -18,10 +18,10 @@ JSX Support: | No
 
 
 See also:
-
-[<span class='language tsx'>TSX</span> observable-events.tsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=observable-events.tsx)
-[<span class='language tsx'>TSX</span> observable-mutations.tsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=observable-mutations.tsx)
-[<span class='language tsx'>TSX</span> observable.tsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=observable.tsx)
+  
+[<span class='language tsx'>TSX</span> observable-events.tsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/observable-events.tsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=observable-events.tsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language tsx'>TSX</span> observable-mutations.tsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/observable-mutations.tsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=observable-mutations.tsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language tsx'>TSX</span> observable.tsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/observable.tsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=observable.tsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ## Constructor
 
@@ -75,19 +75,19 @@ Events are aggregated, meaning multiple subsequent property changes may result i
 
 The observable completes if the source object is disposed.
 
-Limitations: The observable will not detect property changes that do not trigger change events, so plain objects, arrays, objects created by third-party libraries or instances of built-in ECMAScript types (such as Map) are not supported. Also, changes of `bounds` or any built-in property giving scroll offsets will *not* trigger the observable.
+Limitations: The observable will not detect property changes that do not trigger change events, so plain objects, arrays, objects created by third-party libraries or instances of built-in ECMAScript types (such as Map) are not supported. Also, changes of `bounds` or any built-in property giving scroll offsets will trigger the observable.
 
 
 Parameter|Type|Description
 -|-|-
-source | <code style="white-space: nowrap"><a href="#generics" title="Generic Parameter&quot;T&quot;">T</a></code> |
+source | <code style="white-space: nowrap"><a href="#generics" title="Generic Parameter&quot;T&quot;">T</a></code> | 
 
 
 Returns: <code style="white-space: nowrap"><a href="#" >Observable</a>&lt;<a href="#generics" title="Generic Parameter&quot;T&quot;">T</a>&gt;</code>
 
 See also:
-
-[<span class='language tsx'>TSX</span> observable-mutations.tsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=observable-mutations.tsx)
+  
+[<span class='language tsx'>TSX</span> observable-mutations.tsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/observable-mutations.tsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=observable-mutations.tsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 
 

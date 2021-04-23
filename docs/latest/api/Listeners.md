@@ -8,7 +8,7 @@ Objects of the type `Listeners` provide methods to manage listeners and trigger 
 
 
 Type: | <code style="white-space: nowrap">Listeners&lt;EventData&gt; extends <a href="Observable.html" title="Observable Class Reference">Observable</a>&lt;<a href="#generics" title="Generic Parameter&quot;EventData&quot;">EventData</a>&gt;</code>
-Generics: | <span id="generics">EventData: *A plain object containing the data to be passed to the listeners in addition to `target`, `type` and `timeStamp`. Must be a subclass of <code style="white-space: nowrap">{target: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a>}</code> and defaults to <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>.*<br/></span>
+Generics: | <span id="generics">EventData: *A plain object containing the data to be passed to the listeners in addition to `target`, `type` and `timeStamp`. Must be a subclass of <code style="white-space: nowrap">{target: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a>}</code> and defaults to <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>.*<br/></span>
 Constructor: | public
 Singleton: | No
 Namespace: |<a href="../modules.html#startup" >tabris</a>
@@ -23,7 +23,7 @@ JSX Support: | No
 Parameter|Type|Description
 -|-|-
 target | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a></code> | 
-type | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+type | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 
 ## Methods
 
@@ -132,7 +132,7 @@ Settable: | No
 
 The event type. This value will be set in the `type` field of the event object given to the listener. It is the same value used by the [on](./NativeObject.md#ontype-listener-context) and [trigger](./NativeObject.md#triggertype) methods.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code>
 Settable: | No
 
 

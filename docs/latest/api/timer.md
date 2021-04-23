@@ -14,7 +14,7 @@ setTimeout(() => console.log('Timer finished after 2 seconds'), 2000);
 
 See also:
   
-[<span class='language jsx'>JSX</span> timer.jsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=timer.jsx)
+[<span class='language jsx'>JSX</span> timer.jsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/timer.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=timer.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ## Methods
 
@@ -30,7 +30,7 @@ Parameter|Type|Description
 id | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code> | The ID that was returned by `setInterval`.
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### clearTimeout(id)
 
@@ -44,7 +44,7 @@ Parameter|Type|Description
 id | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code> | The ID that was returned by `setTimeout`.
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### setInterval(callback, delay?, ...params)
 
@@ -56,7 +56,7 @@ Calls the given function repeatedly, each times waiting the given delay. The act
 Parameter|Type|Description
 -|-|-
 callback | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a></code> | The function to call.
-delay | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The delay in milliseconds. *Optional.*
+delay | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code> | The delay in milliseconds. *Optional.*
 ...params | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a>[]</code> | One or more values passed on to the callback.
 
 
@@ -72,7 +72,7 @@ Calls the given function with `param` (and all following parameters) after the s
 Parameter|Type|Description
 -|-|-
 callback | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a></code> | The function to call.
-delay | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The delay in milliseconds. *Optional.*
+delay | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code> | The delay in milliseconds. *Optional.*
 ...params | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a>[]</code> | One or more values passed on to the callback.
 
 

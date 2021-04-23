@@ -32,7 +32,7 @@ popover.open();
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a `Popover` containing a `NavigationView`](https://playground.tabris.com/?gitref=v3.7.0&snippet=popover.jsx)
+[<span class='language jsx'>JSX</span> Creating a `Popover` containing a `NavigationView`](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/popover.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=popover.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ## Constructor
 
@@ -79,7 +79,7 @@ Change Event: | [`anchorChanged`](#anchorchanged)
 The root widget element containing all children of Popover.
 
 Type: |<code style="white-space: nowrap"><a href="ContentView.html" title="ContentView Object Reference">ContentView</a></code>
-Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">ContentView</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">ContentView</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >No</a>
 Change Event: | Not supported
 
@@ -96,7 +96,7 @@ This property can only be set via constructor or JSX. Once set, it cannot change
 The height of the `Popover` when shown in windowed mode on large screen devices. Will be a platform specific default if set to null.
 
 Type: |<code style="white-space: nowrap"><a href="Widget.html#dimension" title="Widget Class Type">Dimension</a></code>
-Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">null</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">null</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`heightChanged`](#heightchanged)
 
@@ -109,7 +109,7 @@ Change Event: | [`heightChanged`](#heightchanged)
 The width of the `Popover` when shown in windowed mode on large screen devices. Will be a platform specific default if set to null.
 
 Type: |<code style="white-space: nowrap"><a href="Widget.html#dimension" title="Widget Class Type">Dimension</a></code>
-Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">null</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">null</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >Yes</a>
 Change Event: | [`widthChanged`](#widthchanged)
 

@@ -31,7 +31,7 @@ new ActivityIndicator()
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `ActivityIndicator`](https://playground.tabris.com/?gitref=v3.7.0&snippet=activityindicator.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `ActivityIndicator`](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/activityindicator.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=activityindicator.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ## Constructor
 

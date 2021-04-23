@@ -67,11 +67,11 @@ Animates all widgets in this collection.
 
 Parameter|Type|Description
 -|-|-
-properties | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;transform: <a href="Widget.html#transformation" title="Widget Class Type">Transformation</a>, // optional<br/>&nbsp;&nbsp;opacity: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a> // optional<br/>}</code> | The properties and target values to animate.
+properties | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;transform: <a href="Widget.html#transformation" title="Widget Class Type">Transformation</a>, // optional<br/>&nbsp;&nbsp;opacity: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a> // optional<br/>}</code> | The properties and target values to animate.
 options | <code style="white-space: nowrap"><a href="Widget.html#animationoptions" title="Widget Class Type">AnimationOptions</a></code> | Configures the animation itself.
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### appendTo(parent)
 
@@ -129,7 +129,7 @@ Returns: <code style="white-space: nowrap"><a href="#" >WidgetCollection</a>&lt;
 
 Detaches all widgets in this collection from their parent.
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### dispose()
 
@@ -137,7 +137,7 @@ Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.or
 
 Disposes all widgets in this collection.
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### filter(selector)
 
@@ -176,10 +176,10 @@ Calls the given callback function once for each widget in the collection.
 
 Parameter|Type|Description
 -|-|-
-callback | <code style="white-space: nowrap">(<a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">widget</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">index</a>, <a href="#" >WidgetCollection</a>&lt;<a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">WidgetType</a>&gt;) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">void</a></code> | The function to call.
+callback | <code style="white-space: nowrap">(<a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">widget</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">index</a>, <a href="#" >WidgetCollection</a>&lt;<a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">WidgetType</a>&gt;) => <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">void</a></code> | The function to call.
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### includes(widget)
 
@@ -193,7 +193,7 @@ Parameter|Type|Description
 widget | <code style="white-space: nowrap"><a href="Widget.html" title="Widget Class Reference">Widget</a></code> | The widget to search in the collection.
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 ### indexOf(widget)
 
@@ -207,7 +207,7 @@ Parameter|Type|Description
 widget | <code style="white-space: nowrap"><a href="Widget.html" title="Widget Class Reference">Widget</a></code> | The widget to locate in the collection.
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code>
 
 ### last(selector?)
 
@@ -232,7 +232,7 @@ Calls the given callback function once for each widget in the collection and ret
 
 Parameter|Type|Description
 -|-|-
-callback | <code style="white-space: nowrap">(<a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">widget</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">index</a>, <a href="#" >WidgetCollection</a>&lt;<a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">WidgetType</a>&gt;) => <a title="Literally any JavaScript value">any</a></code> | The function to call for each widget.
+callback | <code style="white-space: nowrap">(<a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">widget</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">index</a>, <a href="#" >WidgetCollection</a>&lt;<a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">WidgetType</a>&gt;) => <a title="Literally any JavaScript value">any</a></code> | The function to call for each widget.
 
 
 Returns: <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a>[]</code>
@@ -246,7 +246,7 @@ Removes the given listener from all widgets in this collection. See also `Widget
 
 Parameter|Type|Description
 -|-|-
-event | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+event | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 listener | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a></code> | 
 context | <code style="white-space: nowrap"><a href="#" title="This object">this</a></code> | *Optional.*
 
@@ -262,7 +262,7 @@ Adds the given listener to all widgets in this collection. See also `Widget.on()
 
 Parameter|Type|Description
 -|-|-
-event | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+event | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 listener | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a></code> | 
 context | <code style="white-space: nowrap"><a href="#" title="This object">this</a></code> | In the listener function, `this` will point to this object. *Optional.*
 
@@ -278,7 +278,7 @@ Adds the given listener for single execution on all widgets in this collection. 
 
 Parameter|Type|Description
 -|-|-
-event | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | 
+event | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | 
 listener | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function" title="View &quot;Function&quot; on MDN">Function</a></code> | 
 context | <code style="white-space: nowrap"><a href="#" title="This object">this</a></code> | In the listener function, `this` will point to this object. *Optional.*
 
@@ -330,8 +330,8 @@ Returns a new *WidgetCollection* containing a section of this collection.
 
 Parameter|Type|Description
 -|-|-
-start | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The beginning of the specified portion of the collection. *Optional.*
-end | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The end of the specified portion of the collection. *Optional.*
+start | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code> | The beginning of the specified portion of the collection. *Optional.*
+end | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code> | The end of the specified portion of the collection. *Optional.*
 
 
 Returns: <code style="white-space: nowrap"><a href="#" >WidgetCollection</a>&lt;<a href="#generics" title="Generic Parameter&quot;WidgetType&quot;">WidgetType</a>&gt;</code>
@@ -353,7 +353,7 @@ Triggers an event of the given type on all widgets in this collection and passes
 
 Parameter|Type|Description
 -|-|-
-type | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a></code> | The type of event to trigger
+type | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a></code> | The type of event to trigger
 eventData | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" title="View &quot;Object&quot; on MDN">object</a></code> | The data to pass to listener functions. *Optional.*
 
 
@@ -382,7 +382,7 @@ This property can only be set via constructor. Once set, it cannot change anymor
 
 Contains the number of widgets in the collection.
 
-Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code>
+Type: |<code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code>
 Settable: | No
 
 

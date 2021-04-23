@@ -32,9 +32,9 @@ new Composite({left: 0, top: 0, width: 128, height: 256})
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `Composite`](https://playground.tabris.com/?gitref=v3.7.0&snippet=composite.jsx)  
-[<span class='language tsx'>TSX</span> composite-apply-jsx.tsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=composite-apply-jsx.tsx)  
-[<span class='language ts'>TS</span> composite-apply.ts](https://playground.tabris.com/?gitref=v3.7.0&snippet=composite-apply.ts)
+[<span class='language jsx'>JSX</span> Creating a simple `Composite`](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/composite.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=composite.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language tsx'>TSX</span> composite-apply-jsx.tsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/composite-apply-jsx.tsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=composite-apply-jsx.tsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language ts'>TS</span> composite-apply.ts](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/composite-apply.ts) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=composite-apply.ts" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ## Constructor
 
@@ -107,8 +107,8 @@ Returns: <code style="white-space: nowrap"><a href="#" title="This object">this<
 
 See also:
   
-[<span class='language tsx'>TSX</span> composite-apply-jsx.tsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=composite-apply-jsx.tsx)  
-[<span class='language ts'>TS</span> composite-apply.ts](https://playground.tabris.com/?gitref=v3.7.0&snippet=composite-apply.ts)
+[<span class='language tsx'>TSX</span> composite-apply-jsx.tsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/composite-apply-jsx.tsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=composite-apply-jsx.tsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language ts'>TS</span> composite-apply.ts](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/composite-apply.ts) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=composite-apply.ts" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ### apply(rules)
 
@@ -126,8 +126,8 @@ Returns: <code style="white-space: nowrap"><a href="#" title="This object">this<
 
 See also:
   
-[<span class='language tsx'>TSX</span> composite-apply-jsx.tsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=composite-apply-jsx.tsx)  
-[<span class='language ts'>TS</span> composite-apply.ts](https://playground.tabris.com/?gitref=v3.7.0&snippet=composite-apply.ts)
+[<span class='language tsx'>TSX</span> composite-apply-jsx.tsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/composite-apply-jsx.tsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=composite-apply-jsx.tsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language ts'>TS</span> composite-apply.ts](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/composite-apply.ts) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=composite-apply.ts" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ### apply(mode, rules)
 
@@ -138,7 +138,7 @@ Shorthand for `apply({mode: mode}, rules})`
 
 Parameter|Type|Description
 -|-|-
-mode | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'default'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'strict'</a></code> | If this is set to `'strict'` the function checks that all selector match at least one widget, and that id selector match exactly one widget.
+mode | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'default'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'strict'</a></code> | If this is set to `'strict'` the function checks that all selector match at least one widget, and that id selector match exactly one widget.
 rules | <code style="white-space: nowrap"><a href="Composite.html#ruleset" title="Composite Class Type">RuleSet</a></code> | The ruleset to apply. May also be given as a callback which is passed to the widget instance and must return the actual ruleset.
 
 
@@ -146,8 +146,8 @@ Returns: <code style="white-space: nowrap"><a href="#" title="This object">this<
 
 See also:
   
-[<span class='language tsx'>TSX</span> composite-apply-jsx.tsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=composite-apply-jsx.tsx)  
-[<span class='language ts'>TS</span> composite-apply.ts](https://playground.tabris.com/?gitref=v3.7.0&snippet=composite-apply.ts)
+[<span class='language tsx'>TSX</span> composite-apply-jsx.tsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/composite-apply-jsx.tsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=composite-apply-jsx.tsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language ts'>TS</span> composite-apply.ts](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/composite-apply.ts) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=composite-apply.ts" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ### apply(trigger)
 
@@ -158,15 +158,15 @@ Applies the ruleset from the last call with `trigger` set to `'update' or '*'`.
 
 Parameter|Type|Description
 -|-|-
-trigger | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'update' | '*'</a></code> | 
+trigger | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'update' | '*'</a></code> | 
 
 
 Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
 
 See also:
   
-[<span class='language tsx'>TSX</span> composite-apply-jsx.tsx](https://playground.tabris.com/?gitref=v3.7.0&snippet=composite-apply-jsx.tsx)  
-[<span class='language ts'>TS</span> composite-apply.ts](https://playground.tabris.com/?gitref=v3.7.0&snippet=composite-apply.ts)
+[<span class='language tsx'>TSX</span> composite-apply-jsx.tsx](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/composite-apply-jsx.tsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=composite-apply-jsx.tsx" style="color: cadetblue;">► Run in Playground</a>]</span>  
+[<span class='language ts'>TS</span> composite-apply.ts](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/composite-apply.ts) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=composite-apply.ts" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ### children(selector?)
 
@@ -216,7 +216,7 @@ Parameter|Type|Description
 child | <code style="white-space: nowrap"><a href="Widget.html" title="Widget Class Reference">Widget</a></code> | 
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#boolean_type" title="View &quot;boolean&quot; on MDN">boolean</a></code>
 
 ### _addChild(child, index?)
 
@@ -228,10 +228,10 @@ Called by the framework with a child to be assigned to this composite. Triggers 
 Parameter|Type|Description
 -|-|-
 child | <code style="white-space: nowrap"><a href="Widget.html" title="Widget Class Reference">Widget</a></code> | 
-index | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | *Optional.*
+index | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code> | *Optional.*
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### _apply(options, rules)
 
@@ -271,7 +271,7 @@ Identical to the `apply(mode, rules)` method, but intended to be used by subclas
 
 Parameter|Type|Description
 -|-|-
-mode | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'default'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'strict'</a></code> | If this is set to `'strict'` the function checks that all selector match at least one widget, and that id selector match exactly one widget.
+mode | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'default'</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'strict'</a></code> | If this is set to `'strict'` the function checks that all selector match at least one widget, and that id selector match exactly one widget.
 rules | <code style="white-space: nowrap"><a href="Composite.html#ruleset" title="Composite Class Type">RuleSet</a></code> | The ruleset to apply. May also be given as a callback which is passed to the widget instance and must return the actual ruleset.
 
 
@@ -286,7 +286,7 @@ Applies the ruleset from the last call with `trigger` set to `'update' or '*'`.
 
 Parameter|Type|Description
 -|-|-
-trigger | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">'update' | '*'</a></code> | 
+trigger | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">'update' | '*'</a></code> | 
 
 
 Returns: <code style="white-space: nowrap"><a href="#" title="This object">this</a></code>
@@ -303,7 +303,7 @@ Parameter|Type|Description
 value | <code style="white-space: nowrap"><a href="Layout.html" title="Layout Class Reference">Layout</a></code> | 
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### _children(selector?)
 
@@ -345,7 +345,7 @@ Parameter|Type|Description
 props | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;layout: <a href="Layout.html" title="Layout Class Reference">Layout</a> // optional<br/>}</code> | *Optional.*
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 ### _removeChild(child)
 
@@ -359,7 +359,7 @@ Parameter|Type|Description
 child | <code style="white-space: nowrap"><a href="Widget.html" title="Widget Class Reference">Widget</a></code> | 
 
 
-Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
+Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#undefined_type" title="View &quot;undefined&quot; on MDN">undefined</a></code>
 
 
 ## Properties
@@ -369,8 +369,8 @@ Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.or
 
 The layout manager responsible for interpreting the [`layoutData`](./Widget.md#layoutdata) of the child widgets of this Composite.
 
-Type: |<code style="white-space: nowrap"><a href="Layout.html" title="Layout Class Reference">Layout</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a></code>
-Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">Layout</a></code>
+Type: |<code style="white-space: nowrap"><a href="Layout.html" title="Layout Class Reference">Layout</a> &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#null_type" title="View &quot;null&quot; on MDN">null</a></code>
+Default: | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">Layout</a></code>
 Settable: | <a href="../widget-basics.html#widget-properties" >By Constructor or JSX</a>
 Change Event: | Not supported
 
@@ -393,7 +393,7 @@ EventObject Type: <code style="white-space: nowrap">CompositeAddChildEvent&lt;<a
 Property|Type|Description
 -|-|-
 child | <code style="white-space: nowrap"><a href="Widget.html" title="Widget Class Reference">Widget</a></code> | The widget that is added as a child.
-index | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | Denotes the position in the children list at which the child widget is added.
+index | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code> | Denotes the position in the children list at which the child widget is added.
 
 ### removeChild
 
@@ -404,7 +404,7 @@ EventObject Type: <code style="white-space: nowrap">CompositeRemoveChildEvent&lt
 Property|Type|Description
 -|-|-
 child | <code style="white-space: nowrap"><a href="Widget.html" title="Widget Class Reference">Widget</a></code> | The widget that is removed.
-index | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type" title="View &quot;number&quot; on MDN">number</a></code> | The property `index` denotes the removed child widget's position in the children list.`
+index | <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#number_type" title="View &quot;number&quot; on MDN">number</a></code> | The property `index` denotes the removed child widget's position in the children list.`
 
 
 

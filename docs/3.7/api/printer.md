@@ -34,7 +34,7 @@ printer.print(imageData, {jobName: 'Image', contentType: 'image/jpg'})
 
 See also:
   
-[<span class='language js'>JS</span> How to print a PDF document bundled with an app](https://playground.tabris.com/?gitref=v3.7.0&snippet=printer.js)
+[<span class='language js'>JS</span> How to print a PDF document bundled with an app](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/printer.js) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=printer.js" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ## Methods
 
@@ -48,7 +48,7 @@ Prints a PDF document using the native printing capabilities of the device. The 
 Parameter|Type|Description
 -|-|-
 data | <code style="white-space: nowrap"><a title="Literally any JavaScript value">any</a></code> | The bytes of the document to print. The value can either be an ArrayBuffer or a typed array containing the bytes of a PDF document or image.
-options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;jobName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a>, // The document name shown the user. optional<br/>&nbsp;&nbsp;contentType: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type" title="View &quot;string&quot; on MDN">string</a> // Format of the document. Should be set to `image/*` when printing an image. defaults to application/pdf<br/>}</code> | An optional set of configuration parameters. *Optional.*
+options | <code style="white-space: nowrap">{<br/>&nbsp;&nbsp;jobName: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a>, // The document name shown the user. optional<br/>&nbsp;&nbsp;contentType: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#string_type" title="View &quot;string&quot; on MDN">string</a> // Format of the document. Should be set to `image/*` when printing an image. defaults to application/pdf<br/>}</code> | An optional set of configuration parameters. *Optional.*
 
 
 Returns: <code style="white-space: nowrap"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="View &quot;Promise&quot; on MDN">Promise</a></code>

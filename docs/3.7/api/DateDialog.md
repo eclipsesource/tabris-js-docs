@@ -32,7 +32,7 @@ new DateDialog()
 
 See also:
   
-[<span class='language jsx'>JSX</span> Creating a simple `DateDialog`](https://playground.tabris.com/?gitref=v3.7.0&snippet=datedialog.jsx)
+[<span class='language jsx'>JSX</span> Creating a simple `DateDialog`](https://github.com/eclipsesource/tabris-js/tree/v3.7.2/snippets/datedialog.jsx) <span style="font-size: 75%;">[<a href="https://playground.tabris.com/?gitref=v3.7.2&snippet=datedialog.jsx" style="color: cadetblue;">► Run in Playground</a>]</span>
 
 ## Constructor
 
@@ -122,7 +122,7 @@ EventObject Type: <code style="white-space: nowrap">DateDialogCloseEvent&lt;<a h
 
 Property|Type|Description
 -|-|-
-date | <code style="white-space: nowrap">Date &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Null_type" title="View &quot;null&quot; on MDN">null</a></code> | The selected date. Can be `null` when no date was selected.
+date | <code style="white-space: nowrap">Date &#124; <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#null_type" title="View &quot;null&quot; on MDN">null</a></code> | The selected date. Can be `null` when no date was selected.
 
 ### select
 
