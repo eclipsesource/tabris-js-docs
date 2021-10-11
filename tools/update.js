@@ -5,9 +5,9 @@ const path = require('path');
 const fs = require('fs');
 
 const DECORATORS_GITHUB = 'https://github.com/eclipsesource/tabris-decorators/';
-const TABRIS_REPO_DIR = path.join(__dirname, '../../tabris-js-3');
+const TABRIS_REPO_DIR = path.join(__dirname, '../../tabris-js');
 const TABRIS_CLI_README_MD = path.join(__dirname, '../../tabris-js-cli/README.md');
-const DECO_DOCS_DIR = path.join(__dirname, '../../tabris-decorators-3/doc');
+const DECO_DOCS_DIR = path.join(__dirname, '../../tabris-decorators/doc');
 const DOC_OUT_DIR = path.join(TABRIS_REPO_DIR, 'build', 'doc');
 const DOCS_TARGET_DIR = path.join(__dirname, '..', 'docs');
 const LATEST_DIR = path.join(__dirname, '..', 'docs', 'latest');
@@ -193,7 +193,7 @@ function appendPageToTocSection(yml, sectionName, {title, url}) {
     throw new Error(`Cannot find section ${sectionName} to insert page "${title}" in.`);
   }
   section += `
-    - title: "${title}"
+    - title: ${title}
       url: ${url}`;
   sections[sectionIndex] = section;
   const newContent = sections.join('\n\n');
