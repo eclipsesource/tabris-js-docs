@@ -116,6 +116,10 @@ async function checkLinks(options) {
       if (ex.message.indexOf('self signed certificate') !== -1) {
         cache[resolvedLink] = {error: null, html: null};
       } else {
+        if (!href.length) {
+          console.error(`In ${url}: [Empty String] : ${ex.message}`);
+          continue;
+        }
         cache[resolvedLink] = {error: ex.message, html: null};
         if (ex.message.indexOf('HTTP') === -1 && ex.message.indexOf('URL') === -1) {
           console.error(`In ${url}: ${href} : ${ex.stack}`);
