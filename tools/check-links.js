@@ -24,6 +24,7 @@ const whitelist = [
   /devtools\:\/\//,
   /http\:\/\/www\.typescriptlang\.org\/docs\/handbook\/advanced-types\.html\#type-guards-and-differentiating-types/,
   /redux\.js\.org/,
+  /play\.google\.com/
 
 ];
 

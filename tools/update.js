@@ -203,7 +203,7 @@ function appendPageToTocSection(yml, sectionName, {title, url}) {
 function generateTocSection(dir, title) {
   const subDir = path.basename(dir);
   const files = fs.readdirSync(dir).map(docPath => path.basename(docPath));
-  const pages = ['index.md'].concat(files.filter(file => file !== 'index.md'));
+  const pages = ['index.md'].concat(files.filter(file => file.endsWith('.md') && (file !== 'index.md')));
   const head = '- title: ' + title + '\n  pages:\n';
   const body = pages
     .map(file =>
@@ -220,8 +220,9 @@ function filenameToTitle(file) {
 function updateIndex() {
   const toc = fs.readdirSync(DOCS_TARGET_DIR)
     .filter(entry => /^[1-9]\..*$/.test(entry))
-    .sort(entry => parseInt(entry.split('.').join('')))
-    .reverse()
+    .map(versionStr => versionStr.split('.').map(str => parseInt(str)))
+    .sort((a, b) => (b[0] * 100 + b[1]) - (a[0] * 100 + a[1]))
+    .map(version => version.join('.'))
     .map(version => `* [${version}](${version}/)`)
     .join('\n');
   fs.writeFileSync(INDEX_MD, INDEX_HEAD + toc);
@@ -312,6 +313,9 @@ function rmDir(target) {
 
 function replaceInAll(dir, needle, insert) {
   fs.readdirSync(dir).forEach(entry => {
+    if (!entry.endsWith('.md')) {
+      return;
+    }
     const file = path.join(dir, entry);
     const content = fs.readFileSync(file, {encoding: 'utf-8'});
     fs.writeFileSync(file, content.replace(needle, insert));

@@ -6,7 +6,7 @@ The content of this repository will be published on the [docs.tabris.com](https:
 
 ### Dependencies
 
-- Ruby
+- Ruby 2.x
 - Bundler
 - node.js
 - Grunt
