@@ -1,0 +1,333 @@
+- title: Getting Started
+  pages:
+    - title: Introduction
+      url: index.html
+    - title: Quick Start Guide
+      url: getting-started.html
+    - title: The Tabris.js Developer App
+      url: developer-app.html
+    - title: Tabris 2.x to 3.x Migration Guide
+      url: migration-guide.html
+    - title: Examples
+      url: examples.html
+
+- title: Developer Guide
+  pages:
+    - title: Runtime
+      url: runtime.html
+    - title: Module System
+      url: modules.html
+    - title: Widget Basics
+      url: widget-basics.html
+    - title: UI Model
+      url: ui.html
+    - title: Using Selectors
+      url: selector.html
+    - title: JSX/Declarative UI
+      url: declarative-ui.html
+    - title: Functional Components
+      url: functional-components.html
+    - title: Layouts
+      url: layout.html
+    - title: Touch Events
+      url: touch.html
+    - title: Permissions
+      url: permissions.html
+    - title: W3C/WHATWG Compatibility
+      url: w3c-api.html
+    - title: Cordova Support
+      url: cordova.html
+    - title: TypeScript Support
+      url: typescript.html
+    - title: Resource Management
+      url: resource-management.html
+    - title: Debugging
+      url: debug.html
+    - title: Testing
+      url: testing.html
+    - title: Theming Android
+      url: theming-android.html
+    - title: Build your app
+      url: build.html
+    - title: Tabris CLI
+      url: tabris-cli.html
+
+- title: Core Classes
+  pages:
+    - title: ChangeListeners
+      url: api/ChangeListeners.html
+    - title: EventObject
+      url: api/EventObject.html
+    - title: Listeners
+      url: api/Listeners.html
+    - title: Module
+      url: api/Module.html
+    - title: NativeObject
+      url: api/NativeObject.html
+    - title: Observable
+      url: api/Observable.html
+    - title: ObservableData
+      url: api/ObservableData.html
+
+- title: Services
+  pages:
+    - title: app
+      url: api/app.html
+    - title: authentication
+      url: api/authentication.html
+    - title: console
+      url: api/Console.html
+    - title: crypto
+      url: api/Crypto.html
+    - title: device
+      url: api/device.html
+    - title: devTools
+      url: api/devTools.html
+    - title: fs
+      url: api/fs.html
+    - title: input
+      url: api/input.html
+    - title: localStorage
+      url: api/localStorage.html
+    - title: navigationBar
+      url: api/NavigationBar.html
+    - title: permission
+      url: api/permission.html
+    - title: printer
+      url: api/printer.html
+    - title: sizeMeasurement
+      url: api/sizeMeasurement.html
+    - title: statusBar
+      url: api/StatusBar.html
+    - title: tabris
+      url: api/Tabris.html
+    - title: Camera
+      url: api/Camera.html
+    - title: CryptoKey
+      url: api/CryptoKey.html
+    - title: InactivityTimer
+      url: api/InactivityTimer.html
+    - title: SubtleCrypto
+      url: api/SubtleCrypto.html
+    - title: Timer
+      url: api/timer.html
+    - title: Utility Functions
+      url: api/utils.html
+    - title: Worker
+      url: w3c-api.html#worker
+
+- title: Widgets
+  pages:
+    - title: Overview
+      url: api/widget-overview.html
+    - title: $
+      url: api/$.html
+    - title: contentView
+      url: api/ContentView.html
+    - title: drawer
+      url: api/Drawer.html
+    - title: Action
+      url: api/Action.html
+    - title: ActivityIndicator
+      url: api/ActivityIndicator.html
+    - title: Button
+      url: api/Button.html
+    - title: CameraView
+      url: api/CameraView.html
+    - title: Canvas
+      url: api/Canvas.html
+    - title: CanvasContext
+      url: api/CanvasContext.html
+    - title: Cell
+      url: api/Cell.html
+    - title: CheckBox
+      url: api/CheckBox.html
+    - title: CollectionView
+      url: api/CollectionView.html
+    - title: Composite
+      url: api/Composite.html
+    - title: ImageView
+      url: api/ImageView.html
+    - title: ItemPicker
+      url: api/ItemPicker.html
+    - title: ListView
+      url: api/ListView.html
+    - title: NavigationView
+      url: api/NavigationView.html
+    - title: Page
+      url: api/Page.html
+    - title: PdfView
+      url: api/PdfView.html
+    - title: Picker
+      url: api/Picker.html
+    - title: ProgressBar
+      url: api/ProgressBar.html
+    - title: RadioButton
+      url: api/RadioButton.html
+    - title: RefreshComposite
+      url: api/RefreshComposite.html
+    - title: Row
+      url: api/Row.html
+    - title: RowLayout
+      url: api/RowLayout.html
+    - title: ScrollView
+      url: api/ScrollView.html
+    - title: SearchAction
+      url: api/SearchAction.html
+    - title: Slider
+      url: api/Slider.html
+    - title: Stack
+      url: api/Stack.html
+    - title: StackLayout
+      url: api/StackLayout.html
+    - title: Switch
+      url: api/Switch.html
+    - title: Tab
+      url: api/Tab.html
+    - title: TabFolder
+      url: api/TabFolder.html
+    - title: TextInput
+      url: api/TextInput.html
+    - title: TextView
+      url: api/TextView.html
+    - title: ToggleButton
+      url: api/ToggleButton.html
+    - title: Video
+      url: api/Video.html
+    - title: WebView
+      url: api/WebView.html
+    - title: Widget
+      url: api/Widget.html
+    - title: WidgetCollection
+      url: api/WidgetCollection.html
+
+- title: Popups
+  pages:
+    - title: ActionSheet
+      url: api/ActionSheet.html
+    - title: ActionSheetItem
+      url: api/ActionSheetItem.html
+    - title: AlertDialog
+      url: api/AlertDialog.html
+    - title: DateDialog
+      url: api/DateDialog.html
+    - title: Popover
+      url: api/Popover.html
+    - title: Popup
+      url: api/Popup.html
+    - title: TimeDialog
+      url: api/TimeDialog.html
+
+- title: Network
+  pages:
+    - title: fetch
+      url: api/fetch.html
+    - title: Headers
+      url: api/Headers.html
+    - title: Request
+      url: api/Request.html
+    - title: Response
+      url: api/Response.html
+    - title: WebSocket
+      url: w3c-api.html#websocket
+    - title: XMLHttpRequest
+      url: w3c-api.html#xmlhttprequest
+
+- title: Data Types
+  pages:
+    - title: Blob
+      url: api/Blob.html
+    - title: Color
+      url: api/Color.html
+    - title: ColorResources
+      url: api/ColorResources.html
+    - title: Constraint
+      url: api/Constraint.html
+    - title: ConstraintLayout
+      url: api/ConstraintLayout.html
+    - title: File
+      url: api/File.html
+    - title: Font
+      url: api/Font.html
+    - title: FontResources
+      url: api/FontResources.html
+    - title: FormData
+      url: api/FormData.html
+    - title: Image
+      url: api/Image.html
+    - title: ImageBitmap
+      url: api/ImageBitmap.html
+    - title: Layout
+      url: api/Layout.html
+    - title: LayoutData
+      url: api/LayoutData.html
+    - title: LinearGradient
+      url: api/LinearGradient.html
+    - title: List
+      url: api/List.html
+    - title: Percent
+      url: api/Percent.html
+    - title: ResourceBuilder
+      url: api/ResourceBuilder.html
+    - title: Resources
+      url: api/Resources.html
+    - title: Setter
+      url: api/Setter.html
+    - title: TextResources
+      url: api/TextResources.html
+
+- title: Data Binding
+  pages:
+    - title: "Introduction"
+      url: databinding/index.html
+    - title: "@bind"
+      url: databinding/@bind.html
+    - title: "@bindAll"
+      url: databinding/@bindAll.html
+    - title: "@component"
+      url: databinding/@component.html
+    - title: "@event"
+      url: databinding/@event.html
+    - title: "@getById"
+      url: databinding/@getById.html
+    - title: "@prop"
+      url: databinding/@prop.html
+    - title: "@property"
+      url: databinding/@property.html
+    - title: "Conversion"
+      url: databinding/Conversion.html
+
+- title: Dependency Injection
+  pages:
+    - title: "Introduction"
+      url: di/index.html
+    - title: "@inject"
+      url: di/@inject.html
+    - title: "@injectable"
+      url: di/@injectable.html
+    - title: "@injectionHandler"
+      url: di/@injectionHandler.html
+    - title: "@shared"
+      url: di/@shared.html
+    - title: "Injector"
+      url: di/Injector.html
+
+- title: Redux
+  pages:
+    - title: "Introduction"
+      url: redux/index.html
+    - title: "@connect"
+      url: redux/@connect.html
+    - title: "StateProvider"
+      url: redux/StateProvider.html
+    - title: "types"
+      url: redux/types.html
+
+- title: Native Custom Widgets
+  pages:
+    - title: Custom Widgets
+      url: custom-widgets.html
+    - title: Custom Widgets - Android
+      url: custom-widgets-android.html
+    - title: Custom Widgets - iOS
+      url: custom-widgets-ios.html
