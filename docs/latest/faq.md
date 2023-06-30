@@ -59,7 +59,7 @@ One way to put it is "Tabris.js is Cordova with native widgets instead of HTML".
 
 ### Is Tabris.js based on Java?
 
-No, that would be ["Tabris for RAP"](https://eclipsesource.com/products/tabris), the sister project of Tabris.js.
+No, that would be ["Tabris for RAP"](https://eclipsesource.com/tabris/#mobile-apps-in-java-with-tabris-for-eclipse-rap), the sister project of Tabris.js.
 
 ### What kind of apps can be developed with Tabris.js?
 
