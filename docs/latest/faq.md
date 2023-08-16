@@ -26,7 +26,7 @@ The following table shows the minimum supported version of each supported platfo
 |---------------|---------|-----|------------|
 | Tabris.js 1.x | 4.1     | 8   | N/A        |
 | Tabris.js 2.x | 4.2     | 9   | 10         |
-| Tabris.js 3.x | 5.0     | 11  | on request |
+| Tabris.js 3.x | 5.0     | 11  | N/A        |
 
 ### Can the same Tabris.js app really run on both iOS and Android?
 
@@ -34,7 +34,7 @@ Yes. Tabris.js maps JavaScript widgets to native widgets which lets you create a
 
 ### Can I create "modern" (UWP) Windows / Windows Mobile apps with Tabris.js?
 
-You can with Tabris.js 2.x. Tabris.js 3.x currently does not provide free support for the Universal Windows Platform. If you represent an organization interested in Windows app development based on Tabris.js, please [contact our support](https://tabris.com/contact/).
+You can with Tabris.js 2.x. Tabris.js 3.x does not provide support for the Universal Windows Platform. If you represent an organization interested in Windows app development based on Tabris.js, please [contact our support](https://tabris.com/contact/).
 
 ### Does Tabris.js compile JavaScript to native code?
 
@@ -51,11 +51,11 @@ One way to put it is "Tabris.js is Cordova with native widgets instead of HTML".
 
 ### What Cordova platform versions is Tabris.js based on?
 
-|               | Android   | iOS           | Windows |
-|---------------|-----------|---------------|---------|
-| Tabris.js 1.x | 5.2.2     | 4.5.4         | N/A     |
-| Tabris.js 2.x | 6.2 - 6.3 | 4.5.4 - 5.0.0 | 5.0.0   |
-| Tabris.js 3.x | 8.0       | 5.0.0         | N/A     |
+|               | Android    | iOS           | Windows |
+|---------------|------------|---------------|---------|
+| Tabris.js 1.x | 5.2.2      | 4.5.4         | N/A     |
+| Tabris.js 2.x | 6.2 - 6.3  | 4.5.4 - 6.2.0 | 5.0.0   |
+| Tabris.js 3.x | 8.0 - 11.0 | 6.2.0         | N/A     |
 
 ### Is Tabris.js based on Java?
 
@@ -85,13 +85,12 @@ Yes, [via JSX](../latest/declarative-ui.md).
 
 ### How to use the "nightly" Tabris.js build?
 
-If you want to keep up with the latest developments in Tabris.js, you can consume Tabris.js from the dist tag `"nightly"`. In your `package.json`, set the dependency for the `tabris` module to `"nightly"` or run `npm install tabris@nightly`. You then have to build the app using the [build service or Tabris CLI](../latest/build.md). The [Developer Apps](../latest/developer-app.md) from the stores may not work with nightly builds of the `tabris` module.
+If you want to keep up with the latest developments in Tabris.js, you can consume Tabris.js from the dist tag `"nightly"`. In your `package.json`, set the dependency for the `tabris` module to `"nightly"` or run `npm install tabris@nightly`. You then have to build the app using the [Tabris CLI](../latest/build.md). The [Developer Apps](../latest/developer-app.md) from the stores may not work with nightly builds of the `tabris` module.
 
 ### How can I build my apps locally?
 
 You can use the [Tabris CLI](https://www.npmjs.com/package/tabris-cli) to build Tabris.js apps on your machine.
 This also requires the SDKs for the respective platform (e.g. the Android SDK for Android).
-See [Local Build](../latest/build.md#local-build) for a detailed guide.
 
 ### Is Tabris.js 100% compatible with Cordova plug-ins?
 
@@ -106,17 +105,13 @@ In order to test additional plug-ins you will need to [add them to your `config.
 
 ### Can I create my own native plugins?
 
-Yes. The [downloadable](https://tabrisjs.com/download) Tabris.js platforms (sign-in required) for Android and iOS allow you to create native plugins. See the respective docs for [Android](../latest/custom-widgets-android.md) and [iOS](../latest/custom-widgets-ios.md) for technical details.
+Yes. If your plugin has no need for UI elements you may want to develop a conventional cordova plug-in first and then install it your Tabris.js app. If is needs UI elements, see [Custom Widget Development](../latest/custom-widgets.html).
 
 ## Payment
 
 ### Is Tabris.js free?
 
-Yes, you can get the Cordova platforms that you need to build a fully-fledged Tabris.js app for free. However, [the build service is limited for free users](https://tabrisjs.com/pricing/).
-
-### Is my credit card data safe with you?
-
-We don't store your credit card data. We use [Braintree](https://www.braintreepayments.com/) to process all payments, and it never passes your credit card information to us. Braintree is a certified Level 1 PCI DSS provider.
+Yes, you can get the Cordova platforms that you need to build a fully-fledged Tabris.js app for free.
 
 ## Android-specific Questions
 
