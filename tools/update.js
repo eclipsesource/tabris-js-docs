@@ -51,7 +51,7 @@ const preRelease = process.argv[2] === 'pre-release';
   for (let i = 0; (i < 4) && !updated; i++) {
     try {
       await exec('bundle update'); // randomly fails for no apparent reason, just try again
-    } catch (ex) {
+    } catch (_ex) {
       // try again
     }
     updated = true;
@@ -86,7 +86,7 @@ const preRelease = process.argv[2] === 'pre-release';
   console.log(`Add Tabris CLI README to TOC...`);
   appendPageToTocSection(targetTocYml, 'Developer Guide', {title: 'Tabris CLI', url: 'tabris-cli.html'});
   console.log('Write main.yml');
-  fs.writeFileSync(MAIN_YML, `latest: ${version}\n`)
+  fs.writeFileSync(MAIN_YML, `latest: "${version}"\n`)
   console.log(`Copy files from ${targetDir} to ${LATEST_DIR}...`);
   copyDir(targetDir, LATEST_DIR);
   console.log('Update index');
@@ -240,7 +240,7 @@ function convertTabrisCliReadmeToDocArticle(yml) {
   fs.writeFileSync(yml, content);
 };
 
-async function startJekyll() {
+function startJekyll() {
   return new Promise((resolve, reject) => {
     console.log('Starting Jekyll, this may take a while...');
     const proc = child_process.exec('bundle exec jekyll serve --incremental --host 0.0.0.0', {cwd: DOCS_TARGET_DIR});
@@ -322,7 +322,7 @@ function replaceInAll(dir, needle, insert) {
   });
 }
 
-async function exec(command) {
+function exec(command) {
   const cwd = path.join(__dirname, '..');
   return new Promise((resolve, reject) => {
     try {
