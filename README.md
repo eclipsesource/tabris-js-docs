@@ -6,10 +6,9 @@ The content of this repository will be published on the [docs.tabris.com](https:
 
 ### Dependencies
 
-- Ruby 2.x
-- Bundler
-- node.js
-- Grunt
+- Ruby 3.x & Bundler (`sudo apt install ruby`)
+- node.js (`nvm install v16.20.2`)
+- Grunt (`npm i grunt -g`)
 
 The documentation is created from various git repositories, that are expected to be available locally at following locations:
 
@@ -22,8 +21,6 @@ The documentation is created from various git repositories, that are expected to
 ### Local setup
 
 See: https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/
-
-> Note: The `jekyll` dependency of the `github-pages` gem is not yet compatible with Ruby 2.7. Make sure Ruby 2.6 is used in your environment.
 
 Update:
 
@@ -49,9 +46,9 @@ Now you can open http://localhost:4000 in your browser to see the docs.
 ### Updating
 
 - `node tools/update` generates documentation for the currently checked out branch of tabris-js. The server keeps running after the link checks for manual inspection
-- `node tools/update release` as above, but exists with appropriate exit code after link checks
+- `node tools/update release` as above, but exits with appropriate exit code after link checks
 - `node tools/update pre-release` as above, but skips links not expected to work before a full release
 
-### Checking links
+### Manual link check
 
 - Run `node tools/check-links.js http://127.0.0.1:4000/`

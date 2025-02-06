@@ -114,8 +114,8 @@ async function preChecks() {
   console.log('Pre-checks');
   const ruby = await exec('ruby -v');
   console.log(ruby);
-  if (!/^ruby\s2\.[0-9]\..*/.test(ruby)) {
-    throw new Error('ruby 2.x not found, please install from ruby-lang.org');
+  if (!/^ruby\s3\.[0-9]\..*/.test(ruby)) {
+    throw new Error('ruby 3.x not found, please install from ruby-lang.org');
   }
   const bundler = await exec('bundler -v');
   console.log(bundler);
